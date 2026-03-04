@@ -43,6 +43,8 @@ export interface SimulatorContext {
   maxLineLength: number; // Track max line length for auto-width
   maxLines: number; // Track max lines for auto-height
   isExecutingCommand: boolean; // True when running a command (don't show prompt)
+  scroll: boolean; // Enable scrolling when content exceeds terminal height
+  scrollOffset: number; // Current scroll offset (first visible line)
 }
 
 export interface CDExecutorOptions {
@@ -85,7 +87,40 @@ export class CDExecutor {
       maxLineLength: 0,
       maxLines: 0,
       isExecutingCommand: false,
+      scroll: false, // Default: no scrolling (content grows)
+      scrollOffset: 0,
     };
+  }
+
+  /**
+   * Calculate the number of visible lines based on terminal height
+   */
+  private getVisibleLineCount(): number {
+    const headerHeight = this.context.template === 'minimal' ? 0 : 39;
+    const padding = 16;
+    const lineHeight = this.context.fontSize * 1.4;
+    const watermarkHeight = this.context.watermark ? lineHeight : 0;
+    const contentHeight = this.context.height - headerHeight - padding - watermarkHeight - padding;
+    return Math.floor(contentHeight / lineHeight);
+  }
+
+  /**
+   * Update scroll offset to keep cursor visible
+   */
+  private updateScrollOffset(): void {
+    if (!this.context.scroll) return;
+
+    const visibleLines = this.getVisibleLineCount();
+    const cursorY = this.context.cursorY;
+
+    // If cursor is below visible area, scroll down
+    if (cursorY >= this.context.scrollOffset + visibleLines) {
+      this.context.scrollOffset = cursorY - visibleLines + 1;
+    }
+    // If cursor is above visible area, scroll up
+    else if (cursorY < this.context.scrollOffset) {
+      this.context.scrollOffset = cursorY;
+    }
   }
 
   /**
@@ -122,8 +157,8 @@ export class CDExecutor {
 
     buffer[this.context.cursorY] = displayLine;
 
-    // Track max dimensions for auto-sizing
-    if (this.context.autoWidth || this.context.autoHeight) {
+    // Track max dimensions for auto-sizing (only when not scrolling)
+    if (!this.context.scroll && (this.context.autoWidth || this.context.autoHeight)) {
       for (const line of buffer) {
         const lineLength = this.stripAnsi(line).length;
         if (lineLength > this.context.maxLineLength) {
@@ -135,10 +170,26 @@ export class CDExecutor {
       }
     }
 
+    // Handle scrolling: only show visible lines
+    let visibleBuffer: string[];
+    let visibleCursorY: number;
+
+    if (this.context.scroll) {
+      this.updateScrollOffset();
+      const visibleLines = this.getVisibleLineCount();
+      const startLine = this.context.scrollOffset;
+      const endLine = Math.min(startLine + visibleLines, buffer.length);
+      visibleBuffer = buffer.slice(startLine, endLine);
+      visibleCursorY = this.context.cursorY - this.context.scrollOffset;
+    } else {
+      visibleBuffer = buffer;
+      visibleCursorY = this.context.cursorY;
+    }
+
     const state = createTerminalState(
-      buffer.join('\n'),
+      visibleBuffer.join('\n'),
       adjustedCursorX,
-      this.context.cursorY,
+      visibleCursorY,
       this.context.width,
       this.context.height,
       this.context.fontSize,
@@ -809,6 +860,13 @@ export class CDExecutor {
       }
       if (key === 'CursorBlink') {
         this.context.cursorBlink = value.toLowerCase() !== 'false';
+      }
+      if (key === 'Scroll') {
+        this.context.scroll = value.toLowerCase() === 'true';
+        // When scroll is enabled, disable auto-height since height is fixed
+        if (this.context.scroll) {
+          this.context.autoHeight = false;
+        }
       }
     }
 

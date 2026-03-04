@@ -1,0 +1,833 @@
+<svg width="659" height="340" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    
+    @keyframes frame-0-anim {
+      0% { opacity: 1; }
+      2.04% { opacity: 1; }
+      2.05% { opacity: 0; }
+      100% { opacity: 0; }
+    }@keyframes frame-1-anim {
+      0% { opacity: 0; }
+      0.04% { opacity: 0; }
+      2.04% { opacity: 1; }
+      4.05% { opacity: 1; }
+      4.06% { opacity: 0; }
+      100% { opacity: 0; }
+    }
+    @keyframes frame-2-anim {
+      0% { opacity: 0; }
+      2.04% { opacity: 0; }
+      4.05% { opacity: 1; }
+      6.13% { opacity: 1; }
+      6.14% { opacity: 0; }
+      100% { opacity: 0; }
+    }
+    @keyframes frame-3-anim {
+      0% { opacity: 0; }
+      4.05% { opacity: 0; }
+      6.13% { opacity: 1; }
+      8.14% { opacity: 1; }
+      8.15% { opacity: 0; }
+      100% { opacity: 0; }
+    }
+    @keyframes frame-4-anim {
+      0% { opacity: 0; }
+      6.13% { opacity: 0; }
+      8.14% { opacity: 1; }
+      10.14% { opacity: 1; }
+      10.15% { opacity: 0; }
+      100% { opacity: 0; }
+    }
+    @keyframes frame-5-anim {
+      0% { opacity: 0; }
+      8.14% { opacity: 0; }
+      10.14% { opacity: 1; }
+      12.15% { opacity: 1; }
+      12.16% { opacity: 0; }
+      100% { opacity: 0; }
+    }
+    @keyframes frame-6-anim {
+      0% { opacity: 0; }
+      10.14% { opacity: 0; }
+      12.15% { opacity: 1; }
+      14.11% { opacity: 1; }
+      14.12% { opacity: 0; }
+      100% { opacity: 0; }
+    }
+    @keyframes frame-7-anim {
+      0% { opacity: 0; }
+      12.15% { opacity: 0; }
+      14.11% { opacity: 1; }
+      16.12% { opacity: 1; }
+      16.13% { opacity: 0; }
+      100% { opacity: 0; }
+    }
+    @keyframes frame-8-anim {
+      0% { opacity: 0; }
+      14.11% { opacity: 0; }
+      16.12% { opacity: 1; }
+      35.81% { opacity: 1; }
+      35.82% { opacity: 0; }
+      100% { opacity: 0; }
+    }
+    @keyframes frame-9-anim {
+      0% { opacity: 0; }
+      16.12% { opacity: 0; }
+      35.81% { opacity: 1; }
+      39.78% { opacity: 1; }
+      39.79% { opacity: 0; }
+      100% { opacity: 0; }
+    }
+    @keyframes frame-10-anim {
+      0% { opacity: 0; }
+      35.81% { opacity: 0; }
+      39.78% { opacity: 1; }
+      44.14% { opacity: 1; }
+      44.15% { opacity: 0; }
+      100% { opacity: 0; }
+    }
+    @keyframes frame-11-anim {
+      0% { opacity: 0; }
+      39.78% { opacity: 0; }
+      44.14% { opacity: 1; }
+      49.96% { opacity: 1; }
+      49.97% { opacity: 0; }
+      100% { opacity: 0; }
+    }
+    @keyframes frame-12-anim {
+      0% { opacity: 0; }
+      44.14% { opacity: 0; }
+      49.96% { opacity: 1; }
+      54.83% { opacity: 1; }
+      54.84% { opacity: 0; }
+      100% { opacity: 0; }
+    }
+    @keyframes frame-13-anim {
+      0% { opacity: 0; }
+      49.96% { opacity: 0; }
+      54.83% { opacity: 1; }
+      60.65% { opacity: 1; }
+      60.66% { opacity: 0; }
+      100% { opacity: 0; }
+    }
+    @keyframes frame-14-anim {
+      0% { opacity: 0; }
+      54.83% { opacity: 0; }
+      60.65% { opacity: 1; }
+      100.00% { opacity: 1; }
+      100.01% { opacity: 0; }
+      100% { opacity: 0; }
+    }
+    @keyframes frame-15-anim {
+      0% { opacity: 0; }
+      60.65% { opacity: 0; }
+      100.00% { opacity: 1; }
+      100.00% { opacity: 1; }
+      100.01% { opacity: 0; }
+      100% { opacity: 0; }
+    }
+    @keyframes frame-16-anim {
+      0% { opacity: 0; }
+      100.00% { opacity: 0; }
+      100.00% { opacity: 1; }
+      100.00% { opacity: 1; }
+      100.01% { opacity: 0; }
+      100% { opacity: 0; }
+    }
+
+    .frame {
+      animation-duration: 3.54s;
+      animation-timing-function: step-end;
+      animation-iteration-count: infinite;
+      animation-fill-mode: forwards;
+    }
+
+    
+    .frame-0 {
+      animation-name: frame-0-anim;
+    }
+    .frame-1 {
+      animation-name: frame-1-anim;
+    }
+    .frame-2 {
+      animation-name: frame-2-anim;
+    }
+    .frame-3 {
+      animation-name: frame-3-anim;
+    }
+    .frame-4 {
+      animation-name: frame-4-anim;
+    }
+    .frame-5 {
+      animation-name: frame-5-anim;
+    }
+    .frame-6 {
+      animation-name: frame-6-anim;
+    }
+    .frame-7 {
+      animation-name: frame-7-anim;
+    }
+    .frame-8 {
+      animation-name: frame-8-anim;
+    }
+    .frame-9 {
+      animation-name: frame-9-anim;
+    }
+    .frame-10 {
+      animation-name: frame-10-anim;
+    }
+    .frame-11 {
+      animation-name: frame-11-anim;
+    }
+    .frame-12 {
+      animation-name: frame-12-anim;
+    }
+    .frame-13 {
+      animation-name: frame-13-anim;
+    }
+    .frame-14 {
+      animation-name: frame-14-anim;
+    }
+    .frame-15 {
+      animation-name: frame-15-anim;
+    }
+    .frame-16 {
+      animation-name: frame-16-anim;
+    }
+  </style>
+
+  <defs>
+    
+    <g id="frame-0">
+      
+  <style>
+    .cursor {
+      animation: blink 1s step-end infinite;
+    }
+    .cursor-active {
+      /* No animation - solid cursor during typing/movement */
+    }
+    @keyframes blink {
+      0%, 50% { opacity: 1; }
+      50.01%, 100% { opacity: 0; }
+    }
+  </style>
+  <rect width="659" height="340" fill="#1e1e1e" rx="10" ry="10"/>
+  <g class="title-bar f0">
+    <rect width="659" height="39" fill="#1e1e1e" rx="10" ry="10"/>
+    <rect y="29" width="659" height="10" fill="#1e1e1e"/>
+    <line x1="0" y1="39.5" x2="659" y2="39.5" stroke="#d4d4d41a" stroke-width="1"/>
+    <circle cx="16" cy="19.5" r="6" fill="#ff5f56"/>
+    <circle cx="36" cy="19.5" r="6" fill="#ffbd2e"/>
+    <circle cx="56" cy="19.5" r="6" fill="#27c93f"/>
+  </g>
+  <g class="content f0">
+    <text x="16" y="67" fill="#d670d6" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="12" xml:space="preserve">❯</text>
+    <text x="23.2" y="67" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="12" xml:space="preserve"> </text>
+    <rect class="cursor f0" x="30.4" y="55" width="7.199999999999999" height="16.799999999999997" fill="#ffffff" opacity="0.7"/>
+  </g>
+
+    </g>
+    <g id="frame-1">
+      
+  <style>
+    .cursor {
+      animation: blink 1s step-end infinite;
+    }
+    .cursor-active {
+      /* No animation - solid cursor during typing/movement */
+    }
+    @keyframes blink {
+      0%, 50% { opacity: 1; }
+      50.01%, 100% { opacity: 0; }
+    }
+  </style>
+  <rect width="659" height="340" fill="#1e1e1e" rx="10" ry="10"/>
+  <g class="title-bar f1">
+    <rect width="659" height="39" fill="#1e1e1e" rx="10" ry="10"/>
+    <rect y="29" width="659" height="10" fill="#1e1e1e"/>
+    <line x1="0" y1="39.5" x2="659" y2="39.5" stroke="#d4d4d41a" stroke-width="1"/>
+    <circle cx="16" cy="19.5" r="6" fill="#ff5f56"/>
+    <circle cx="36" cy="19.5" r="6" fill="#ffbd2e"/>
+    <circle cx="56" cy="19.5" r="6" fill="#27c93f"/>
+  </g>
+  <g class="content f1">
+    <text x="16" y="67" fill="#d670d6" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="12" xml:space="preserve">❯</text>
+    <text x="23.2" y="67" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="12" xml:space="preserve"> n</text>
+    <rect class="cursor-active f1" x="37.599999999999994" y="55" width="7.199999999999999" height="16.799999999999997" fill="#ffffff" opacity="0.7"/>
+  </g>
+
+    </g>
+    <g id="frame-2">
+      
+  <style>
+    .cursor {
+      animation: blink 1s step-end infinite;
+    }
+    .cursor-active {
+      /* No animation - solid cursor during typing/movement */
+    }
+    @keyframes blink {
+      0%, 50% { opacity: 1; }
+      50.01%, 100% { opacity: 0; }
+    }
+  </style>
+  <rect width="659" height="340" fill="#1e1e1e" rx="10" ry="10"/>
+  <g class="title-bar f2">
+    <rect width="659" height="39" fill="#1e1e1e" rx="10" ry="10"/>
+    <rect y="29" width="659" height="10" fill="#1e1e1e"/>
+    <line x1="0" y1="39.5" x2="659" y2="39.5" stroke="#d4d4d41a" stroke-width="1"/>
+    <circle cx="16" cy="19.5" r="6" fill="#ff5f56"/>
+    <circle cx="36" cy="19.5" r="6" fill="#ffbd2e"/>
+    <circle cx="56" cy="19.5" r="6" fill="#27c93f"/>
+  </g>
+  <g class="content f2">
+    <text x="16" y="67" fill="#d670d6" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="12" xml:space="preserve">❯</text>
+    <text x="23.2" y="67" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="12" xml:space="preserve"> np</text>
+    <rect class="cursor-active f2" x="44.8" y="55" width="7.199999999999999" height="16.799999999999997" fill="#ffffff" opacity="0.7"/>
+  </g>
+
+    </g>
+    <g id="frame-3">
+      
+  <style>
+    .cursor {
+      animation: blink 1s step-end infinite;
+    }
+    .cursor-active {
+      /* No animation - solid cursor during typing/movement */
+    }
+    @keyframes blink {
+      0%, 50% { opacity: 1; }
+      50.01%, 100% { opacity: 0; }
+    }
+  </style>
+  <rect width="659" height="340" fill="#1e1e1e" rx="10" ry="10"/>
+  <g class="title-bar f3">
+    <rect width="659" height="39" fill="#1e1e1e" rx="10" ry="10"/>
+    <rect y="29" width="659" height="10" fill="#1e1e1e"/>
+    <line x1="0" y1="39.5" x2="659" y2="39.5" stroke="#d4d4d41a" stroke-width="1"/>
+    <circle cx="16" cy="19.5" r="6" fill="#ff5f56"/>
+    <circle cx="36" cy="19.5" r="6" fill="#ffbd2e"/>
+    <circle cx="56" cy="19.5" r="6" fill="#27c93f"/>
+  </g>
+  <g class="content f3">
+    <text x="16" y="67" fill="#d670d6" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="12" xml:space="preserve">❯</text>
+    <text x="23.2" y="67" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="12" xml:space="preserve"> npm</text>
+    <rect class="cursor-active f3" x="52" y="55" width="7.199999999999999" height="16.799999999999997" fill="#ffffff" opacity="0.7"/>
+  </g>
+
+    </g>
+    <g id="frame-4">
+      
+  <style>
+    .cursor {
+      animation: blink 1s step-end infinite;
+    }
+    .cursor-active {
+      /* No animation - solid cursor during typing/movement */
+    }
+    @keyframes blink {
+      0%, 50% { opacity: 1; }
+      50.01%, 100% { opacity: 0; }
+    }
+  </style>
+  <rect width="659" height="340" fill="#1e1e1e" rx="10" ry="10"/>
+  <g class="title-bar f4">
+    <rect width="659" height="39" fill="#1e1e1e" rx="10" ry="10"/>
+    <rect y="29" width="659" height="10" fill="#1e1e1e"/>
+    <line x1="0" y1="39.5" x2="659" y2="39.5" stroke="#d4d4d41a" stroke-width="1"/>
+    <circle cx="16" cy="19.5" r="6" fill="#ff5f56"/>
+    <circle cx="36" cy="19.5" r="6" fill="#ffbd2e"/>
+    <circle cx="56" cy="19.5" r="6" fill="#27c93f"/>
+  </g>
+  <g class="content f4">
+    <text x="16" y="67" fill="#d670d6" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="12" xml:space="preserve">❯</text>
+    <text x="23.2" y="67" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="12" xml:space="preserve"> npm </text>
+    <rect class="cursor-active f4" x="59.199999999999996" y="55" width="7.199999999999999" height="16.799999999999997" fill="#ffffff" opacity="0.7"/>
+  </g>
+
+    </g>
+    <g id="frame-5">
+      
+  <style>
+    .cursor {
+      animation: blink 1s step-end infinite;
+    }
+    .cursor-active {
+      /* No animation - solid cursor during typing/movement */
+    }
+    @keyframes blink {
+      0%, 50% { opacity: 1; }
+      50.01%, 100% { opacity: 0; }
+    }
+  </style>
+  <rect width="659" height="340" fill="#1e1e1e" rx="10" ry="10"/>
+  <g class="title-bar f5">
+    <rect width="659" height="39" fill="#1e1e1e" rx="10" ry="10"/>
+    <rect y="29" width="659" height="10" fill="#1e1e1e"/>
+    <line x1="0" y1="39.5" x2="659" y2="39.5" stroke="#d4d4d41a" stroke-width="1"/>
+    <circle cx="16" cy="19.5" r="6" fill="#ff5f56"/>
+    <circle cx="36" cy="19.5" r="6" fill="#ffbd2e"/>
+    <circle cx="56" cy="19.5" r="6" fill="#27c93f"/>
+  </g>
+  <g class="content f5">
+    <text x="16" y="67" fill="#d670d6" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="12" xml:space="preserve">❯</text>
+    <text x="23.2" y="67" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="12" xml:space="preserve"> npm t</text>
+    <rect class="cursor-active f5" x="66.39999999999999" y="55" width="7.199999999999999" height="16.799999999999997" fill="#ffffff" opacity="0.7"/>
+  </g>
+
+    </g>
+    <g id="frame-6">
+      
+  <style>
+    .cursor {
+      animation: blink 1s step-end infinite;
+    }
+    .cursor-active {
+      /* No animation - solid cursor during typing/movement */
+    }
+    @keyframes blink {
+      0%, 50% { opacity: 1; }
+      50.01%, 100% { opacity: 0; }
+    }
+  </style>
+  <rect width="659" height="340" fill="#1e1e1e" rx="10" ry="10"/>
+  <g class="title-bar f6">
+    <rect width="659" height="39" fill="#1e1e1e" rx="10" ry="10"/>
+    <rect y="29" width="659" height="10" fill="#1e1e1e"/>
+    <line x1="0" y1="39.5" x2="659" y2="39.5" stroke="#d4d4d41a" stroke-width="1"/>
+    <circle cx="16" cy="19.5" r="6" fill="#ff5f56"/>
+    <circle cx="36" cy="19.5" r="6" fill="#ffbd2e"/>
+    <circle cx="56" cy="19.5" r="6" fill="#27c93f"/>
+  </g>
+  <g class="content f6">
+    <text x="16" y="67" fill="#d670d6" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="12" xml:space="preserve">❯</text>
+    <text x="23.2" y="67" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="12" xml:space="preserve"> npm te</text>
+    <rect class="cursor-active f6" x="73.6" y="55" width="7.199999999999999" height="16.799999999999997" fill="#ffffff" opacity="0.7"/>
+  </g>
+
+    </g>
+    <g id="frame-7">
+      
+  <style>
+    .cursor {
+      animation: blink 1s step-end infinite;
+    }
+    .cursor-active {
+      /* No animation - solid cursor during typing/movement */
+    }
+    @keyframes blink {
+      0%, 50% { opacity: 1; }
+      50.01%, 100% { opacity: 0; }
+    }
+  </style>
+  <rect width="659" height="340" fill="#1e1e1e" rx="10" ry="10"/>
+  <g class="title-bar f7">
+    <rect width="659" height="39" fill="#1e1e1e" rx="10" ry="10"/>
+    <rect y="29" width="659" height="10" fill="#1e1e1e"/>
+    <line x1="0" y1="39.5" x2="659" y2="39.5" stroke="#d4d4d41a" stroke-width="1"/>
+    <circle cx="16" cy="19.5" r="6" fill="#ff5f56"/>
+    <circle cx="36" cy="19.5" r="6" fill="#ffbd2e"/>
+    <circle cx="56" cy="19.5" r="6" fill="#27c93f"/>
+  </g>
+  <g class="content f7">
+    <text x="16" y="67" fill="#d670d6" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="12" xml:space="preserve">❯</text>
+    <text x="23.2" y="67" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="12" xml:space="preserve"> npm tes</text>
+    <rect class="cursor-active f7" x="80.8" y="55" width="7.199999999999999" height="16.799999999999997" fill="#ffffff" opacity="0.7"/>
+  </g>
+
+    </g>
+    <g id="frame-8">
+      
+  <style>
+    .cursor {
+      animation: blink 1s step-end infinite;
+    }
+    .cursor-active {
+      /* No animation - solid cursor during typing/movement */
+    }
+    @keyframes blink {
+      0%, 50% { opacity: 1; }
+      50.01%, 100% { opacity: 0; }
+    }
+  </style>
+  <rect width="659" height="340" fill="#1e1e1e" rx="10" ry="10"/>
+  <g class="title-bar f8">
+    <rect width="659" height="39" fill="#1e1e1e" rx="10" ry="10"/>
+    <rect y="29" width="659" height="10" fill="#1e1e1e"/>
+    <line x1="0" y1="39.5" x2="659" y2="39.5" stroke="#d4d4d41a" stroke-width="1"/>
+    <circle cx="16" cy="19.5" r="6" fill="#ff5f56"/>
+    <circle cx="36" cy="19.5" r="6" fill="#ffbd2e"/>
+    <circle cx="56" cy="19.5" r="6" fill="#27c93f"/>
+  </g>
+  <g class="content f8">
+    <text x="16" y="67" fill="#d670d6" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="12" xml:space="preserve">❯</text>
+    <text x="23.2" y="67" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="12" xml:space="preserve"> npm test</text>
+    <rect class="cursor-active f8" x="88" y="55" width="7.199999999999999" height="16.799999999999997" fill="#ffffff" opacity="0.7"/>
+  </g>
+
+    </g>
+    <g id="frame-9">
+      
+  <style>
+    .cursor {
+      animation: blink 1s step-end infinite;
+    }
+    .cursor-active {
+      /* No animation - solid cursor during typing/movement */
+    }
+    @keyframes blink {
+      0%, 50% { opacity: 1; }
+      50.01%, 100% { opacity: 0; }
+    }
+  </style>
+  <rect width="659" height="340" fill="#1e1e1e" rx="10" ry="10"/>
+  <g class="title-bar f9">
+    <rect width="659" height="39" fill="#1e1e1e" rx="10" ry="10"/>
+    <rect y="29" width="659" height="10" fill="#1e1e1e"/>
+    <line x1="0" y1="39.5" x2="659" y2="39.5" stroke="#d4d4d41a" stroke-width="1"/>
+    <circle cx="16" cy="19.5" r="6" fill="#ff5f56"/>
+    <circle cx="36" cy="19.5" r="6" fill="#ffbd2e"/>
+    <circle cx="56" cy="19.5" r="6" fill="#27c93f"/>
+  </g>
+  <g class="content f9">
+    <text x="16" y="67" fill="#d670d6" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="12" xml:space="preserve">❯</text>
+    <text x="23.2" y="67" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="12" xml:space="preserve"> npm test</text>
+    <rect class="cursor f9" x="88" y="55" width="7.199999999999999" height="16.799999999999997" fill="#ffffff" opacity="0.7"/>
+  </g>
+
+    </g>
+    <g id="frame-10">
+      
+  <style>
+    .cursor {
+      animation: blink 1s step-end infinite;
+    }
+    .cursor-active {
+      /* No animation - solid cursor during typing/movement */
+    }
+    @keyframes blink {
+      0%, 50% { opacity: 1; }
+      50.01%, 100% { opacity: 0; }
+    }
+  </style>
+  <rect width="659" height="340" fill="#1e1e1e" rx="10" ry="10"/>
+  <g class="title-bar f10">
+    <rect width="659" height="39" fill="#1e1e1e" rx="10" ry="10"/>
+    <rect y="29" width="659" height="10" fill="#1e1e1e"/>
+    <line x1="0" y1="39.5" x2="659" y2="39.5" stroke="#d4d4d41a" stroke-width="1"/>
+    <circle cx="16" cy="19.5" r="6" fill="#ff5f56"/>
+    <circle cx="36" cy="19.5" r="6" fill="#ffbd2e"/>
+    <circle cx="56" cy="19.5" r="6" fill="#27c93f"/>
+  </g>
+  <g class="content f10">
+    <text x="16" y="67" fill="#d670d6" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="12" xml:space="preserve">❯</text>
+    <text x="23.2" y="67" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="12" xml:space="preserve"> npm test</text>
+  </g>
+
+    </g>
+    <g id="frame-11">
+      
+  <style>
+    .cursor {
+      animation: blink 1s step-end infinite;
+    }
+    .cursor-active {
+      /* No animation - solid cursor during typing/movement */
+    }
+    @keyframes blink {
+      0%, 50% { opacity: 1; }
+      50.01%, 100% { opacity: 0; }
+    }
+  </style>
+  <rect width="659" height="340" fill="#1e1e1e" rx="10" ry="10"/>
+  <g class="title-bar f11">
+    <rect width="659" height="39" fill="#1e1e1e" rx="10" ry="10"/>
+    <rect y="29" width="659" height="10" fill="#1e1e1e"/>
+    <line x1="0" y1="39.5" x2="659" y2="39.5" stroke="#d4d4d41a" stroke-width="1"/>
+    <circle cx="16" cy="19.5" r="6" fill="#ff5f56"/>
+    <circle cx="36" cy="19.5" r="6" fill="#ffbd2e"/>
+    <circle cx="56" cy="19.5" r="6" fill="#27c93f"/>
+  </g>
+  <g class="content f11">
+    <text x="16" y="67" fill="#d670d6" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="12" xml:space="preserve">❯</text>
+    <text x="23.2" y="67" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="12" xml:space="preserve"> npm test</text>
+  </g>
+
+    </g>
+    <g id="frame-12">
+      
+  <style>
+    .cursor {
+      animation: blink 1s step-end infinite;
+    }
+    .cursor-active {
+      /* No animation - solid cursor during typing/movement */
+    }
+    @keyframes blink {
+      0%, 50% { opacity: 1; }
+      50.01%, 100% { opacity: 0; }
+    }
+  </style>
+  <rect width="659" height="340" fill="#1e1e1e" rx="10" ry="10"/>
+  <g class="title-bar f12">
+    <rect width="659" height="39" fill="#1e1e1e" rx="10" ry="10"/>
+    <rect y="29" width="659" height="10" fill="#1e1e1e"/>
+    <line x1="0" y1="39.5" x2="659" y2="39.5" stroke="#d4d4d41a" stroke-width="1"/>
+    <circle cx="16" cy="19.5" r="6" fill="#ff5f56"/>
+    <circle cx="36" cy="19.5" r="6" fill="#ffbd2e"/>
+    <circle cx="56" cy="19.5" r="6" fill="#27c93f"/>
+  </g>
+  <g class="content f12">
+    <text x="16" y="67" fill="#d670d6" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="12" xml:space="preserve">❯</text>
+    <text x="23.2" y="67" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="12" xml:space="preserve"> npm test</text>
+    <text x="16" y="100.6" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="12" xml:space="preserve">&gt; dvd-cli@1.0.0 test</text>
+    <text x="16" y="117.39999999999999" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="12" xml:space="preserve">&gt; vitest run</text>
+  </g>
+
+    </g>
+    <g id="frame-13">
+      
+  <style>
+    .cursor {
+      animation: blink 1s step-end infinite;
+    }
+    .cursor-active {
+      /* No animation - solid cursor during typing/movement */
+    }
+    @keyframes blink {
+      0%, 50% { opacity: 1; }
+      50.01%, 100% { opacity: 0; }
+    }
+  </style>
+  <rect width="659" height="340" fill="#1e1e1e" rx="10" ry="10"/>
+  <g class="title-bar f13">
+    <rect width="659" height="39" fill="#1e1e1e" rx="10" ry="10"/>
+    <rect y="29" width="659" height="10" fill="#1e1e1e"/>
+    <line x1="0" y1="39.5" x2="659" y2="39.5" stroke="#d4d4d41a" stroke-width="1"/>
+    <circle cx="16" cy="19.5" r="6" fill="#ff5f56"/>
+    <circle cx="36" cy="19.5" r="6" fill="#ffbd2e"/>
+    <circle cx="56" cy="19.5" r="6" fill="#27c93f"/>
+  </g>
+  <g class="content f13">
+    <text x="16" y="67" fill="#d670d6" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="12" xml:space="preserve">❯</text>
+    <text x="23.2" y="67" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="12" xml:space="preserve"> npm test</text>
+    <text x="16" y="100.6" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="12" xml:space="preserve">&gt; dvd-cli@1.0.0 test</text>
+    <text x="16" y="117.39999999999999" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="12" xml:space="preserve">&gt; vitest run</text>
+    <rect x="16" y="155.79999999999998" width="36" height="16.799999999999997" fill="#11a8cd"/>
+    <text x="16" y="167.79999999999998" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="12" font-weight="bold" xml:space="preserve"> RUN </text>
+    <text x="52" y="167.79999999999998" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="12" xml:space="preserve"> </text>
+    <text x="59.2" y="167.79999999999998" fill="#11a8cd" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="12" xml:space="preserve">v4.0.18 </text>
+    <text x="116.8" y="167.79999999999998" fill="#666666" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="12" xml:space="preserve">/Users/talhayut/projects/dvd</text>
+    <text x="16" y="201.39999999999998" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="12" xml:space="preserve"> </text>
+    <text x="23.2" y="201.39999999999998" fill="#0dbc79" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="12" xml:space="preserve">✓</text>
+    <text x="30.4" y="201.39999999999998" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="12" xml:space="preserve"> src/parser/cd-parser.test.ts </text>
+    <text x="246.39999999999998" y="201.39999999999998" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="12" xml:space="preserve">(</text>
+    <text x="253.59999999999997" y="201.39999999999998" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="12" xml:space="preserve">33 tests</text>
+    <text x="311.19999999999993" y="201.39999999999998" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="12" xml:space="preserve">)</text>
+    <text x="318.3999999999999" y="201.39999999999998" fill="#0dbc79" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="12" xml:space="preserve"> 5</text>
+    <text x="332.7999999999999" y="201.39999999999998" fill="#0dbc79" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="12" xml:space="preserve">ms</text>
+  </g>
+
+    </g>
+    <g id="frame-14">
+      
+  <style>
+    .cursor {
+      animation: blink 1s step-end infinite;
+    }
+    .cursor-active {
+      /* No animation - solid cursor during typing/movement */
+    }
+    @keyframes blink {
+      0%, 50% { opacity: 1; }
+      50.01%, 100% { opacity: 0; }
+    }
+  </style>
+  <rect width="659" height="340" fill="#1e1e1e" rx="10" ry="10"/>
+  <g class="title-bar f14">
+    <rect width="659" height="39" fill="#1e1e1e" rx="10" ry="10"/>
+    <rect y="29" width="659" height="10" fill="#1e1e1e"/>
+    <line x1="0" y1="39.5" x2="659" y2="39.5" stroke="#d4d4d41a" stroke-width="1"/>
+    <circle cx="16" cy="19.5" r="6" fill="#ff5f56"/>
+    <circle cx="36" cy="19.5" r="6" fill="#ffbd2e"/>
+    <circle cx="56" cy="19.5" r="6" fill="#27c93f"/>
+  </g>
+  <g class="content f14">
+    <text x="16" y="67" fill="#d670d6" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="12" xml:space="preserve">❯</text>
+    <text x="23.2" y="67" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="12" xml:space="preserve"> npm test</text>
+    <text x="16" y="100.6" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="12" xml:space="preserve">&gt; dvd-cli@1.0.0 test</text>
+    <text x="16" y="117.39999999999999" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="12" xml:space="preserve">&gt; vitest run</text>
+    <rect x="16" y="155.79999999999998" width="36" height="16.799999999999997" fill="#11a8cd"/>
+    <text x="16" y="167.79999999999998" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="12" font-weight="bold" xml:space="preserve"> RUN </text>
+    <text x="52" y="167.79999999999998" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="12" xml:space="preserve"> </text>
+    <text x="59.2" y="167.79999999999998" fill="#11a8cd" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="12" xml:space="preserve">v4.0.18 </text>
+    <text x="116.8" y="167.79999999999998" fill="#666666" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="12" xml:space="preserve">/Users/talhayut/projects/dvd</text>
+    <text x="16" y="201.39999999999998" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="12" xml:space="preserve"> </text>
+    <text x="23.2" y="201.39999999999998" fill="#0dbc79" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="12" xml:space="preserve">✓</text>
+    <text x="30.4" y="201.39999999999998" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="12" xml:space="preserve"> src/parser/cd-parser.test.ts </text>
+    <text x="246.39999999999998" y="201.39999999999998" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="12" xml:space="preserve">(</text>
+    <text x="253.59999999999997" y="201.39999999999998" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="12" xml:space="preserve">33 tests</text>
+    <text x="311.19999999999993" y="201.39999999999998" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="12" xml:space="preserve">)</text>
+    <text x="318.3999999999999" y="201.39999999999998" fill="#0dbc79" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="12" xml:space="preserve"> 5</text>
+    <text x="332.7999999999999" y="201.39999999999998" fill="#0dbc79" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="12" xml:space="preserve">ms</text>
+    <text x="16" y="234.99999999999997" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="12" xml:space="preserve"> Test Files </text>
+    <text x="102.39999999999999" y="234.99999999999997" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="12" xml:space="preserve"> </text>
+    <text x="109.6" y="234.99999999999997" fill="#0dbc79" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="12" font-weight="bold" xml:space="preserve">1 passed</text>
+    <text x="167.2" y="234.99999999999997" fill="#666666" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="12" xml:space="preserve"> (1)</text>
+    <text x="16" y="251.79999999999995" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="12" xml:space="preserve">      Tests </text>
+    <text x="102.39999999999999" y="251.79999999999995" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="12" xml:space="preserve"> </text>
+    <text x="109.6" y="251.79999999999995" fill="#0dbc79" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="12" font-weight="bold" xml:space="preserve">33 passed</text>
+    <text x="174.39999999999998" y="251.79999999999995" fill="#666666" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="12" xml:space="preserve"> (33)</text>
+    <text x="16" y="268.59999999999997" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="12" xml:space="preserve">   Start at </text>
+    <text x="102.39999999999999" y="268.59999999999997" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="12" xml:space="preserve"> 15:00:17</text>
+    <text x="16" y="285.4" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="12" xml:space="preserve">   Duration </text>
+    <text x="102.39999999999999" y="285.4" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="12" xml:space="preserve"> 122ms</text>
+    <text x="145.6" y="285.4" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="12" xml:space="preserve"> (transform 51ms, setup 0ms, import 58ms, tests 5ms, environment 0ms)</text>
+    <text x="16" y="318.99999999999994" fill="#d670d6" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="12" xml:space="preserve">❯</text>
+    <text x="23.2" y="318.99999999999994" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="12" xml:space="preserve"> </text>
+    <rect class="cursor f14" x="30.4" y="306.99999999999994" width="7.199999999999999" height="16.799999999999997" fill="#ffffff" opacity="0.7"/>
+  </g>
+
+    </g>
+    <g id="frame-15">
+      
+  <style>
+    .cursor {
+      animation: blink 1s step-end infinite;
+    }
+    .cursor-active {
+      /* No animation - solid cursor during typing/movement */
+    }
+    @keyframes blink {
+      0%, 50% { opacity: 1; }
+      50.01%, 100% { opacity: 0; }
+    }
+  </style>
+  <rect width="659" height="340" fill="#1e1e1e" rx="10" ry="10"/>
+  <g class="title-bar f15">
+    <rect width="659" height="39" fill="#1e1e1e" rx="10" ry="10"/>
+    <rect y="29" width="659" height="10" fill="#1e1e1e"/>
+    <line x1="0" y1="39.5" x2="659" y2="39.5" stroke="#d4d4d41a" stroke-width="1"/>
+    <circle cx="16" cy="19.5" r="6" fill="#ff5f56"/>
+    <circle cx="36" cy="19.5" r="6" fill="#ffbd2e"/>
+    <circle cx="56" cy="19.5" r="6" fill="#27c93f"/>
+  </g>
+  <g class="content f15">
+    <text x="16" y="67" fill="#d670d6" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="12" xml:space="preserve">❯</text>
+    <text x="23.2" y="67" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="12" xml:space="preserve"> npm test</text>
+    <text x="16" y="100.6" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="12" xml:space="preserve">&gt; dvd-cli@1.0.0 test</text>
+    <text x="16" y="117.39999999999999" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="12" xml:space="preserve">&gt; vitest run</text>
+    <rect x="16" y="155.79999999999998" width="36" height="16.799999999999997" fill="#11a8cd"/>
+    <text x="16" y="167.79999999999998" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="12" font-weight="bold" xml:space="preserve"> RUN </text>
+    <text x="52" y="167.79999999999998" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="12" xml:space="preserve"> </text>
+    <text x="59.2" y="167.79999999999998" fill="#11a8cd" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="12" xml:space="preserve">v4.0.18 </text>
+    <text x="116.8" y="167.79999999999998" fill="#666666" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="12" xml:space="preserve">/Users/talhayut/projects/dvd</text>
+    <text x="16" y="201.39999999999998" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="12" xml:space="preserve"> </text>
+    <text x="23.2" y="201.39999999999998" fill="#0dbc79" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="12" xml:space="preserve">✓</text>
+    <text x="30.4" y="201.39999999999998" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="12" xml:space="preserve"> src/parser/cd-parser.test.ts </text>
+    <text x="246.39999999999998" y="201.39999999999998" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="12" xml:space="preserve">(</text>
+    <text x="253.59999999999997" y="201.39999999999998" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="12" xml:space="preserve">33 tests</text>
+    <text x="311.19999999999993" y="201.39999999999998" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="12" xml:space="preserve">)</text>
+    <text x="318.3999999999999" y="201.39999999999998" fill="#0dbc79" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="12" xml:space="preserve"> 5</text>
+    <text x="332.7999999999999" y="201.39999999999998" fill="#0dbc79" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="12" xml:space="preserve">ms</text>
+    <text x="16" y="234.99999999999997" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="12" xml:space="preserve"> Test Files </text>
+    <text x="102.39999999999999" y="234.99999999999997" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="12" xml:space="preserve"> </text>
+    <text x="109.6" y="234.99999999999997" fill="#0dbc79" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="12" font-weight="bold" xml:space="preserve">1 passed</text>
+    <text x="167.2" y="234.99999999999997" fill="#666666" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="12" xml:space="preserve"> (1)</text>
+    <text x="16" y="251.79999999999995" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="12" xml:space="preserve">      Tests </text>
+    <text x="102.39999999999999" y="251.79999999999995" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="12" xml:space="preserve"> </text>
+    <text x="109.6" y="251.79999999999995" fill="#0dbc79" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="12" font-weight="bold" xml:space="preserve">33 passed</text>
+    <text x="174.39999999999998" y="251.79999999999995" fill="#666666" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="12" xml:space="preserve"> (33)</text>
+    <text x="16" y="268.59999999999997" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="12" xml:space="preserve">   Start at </text>
+    <text x="102.39999999999999" y="268.59999999999997" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="12" xml:space="preserve"> 15:00:17</text>
+    <text x="16" y="285.4" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="12" xml:space="preserve">   Duration </text>
+    <text x="102.39999999999999" y="285.4" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="12" xml:space="preserve"> 122ms</text>
+    <text x="145.6" y="285.4" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="12" xml:space="preserve"> (transform 51ms, setup 0ms, import 58ms, tests 5ms, environment 0ms)</text>
+    <text x="16" y="318.99999999999994" fill="#d670d6" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="12" xml:space="preserve">❯</text>
+    <text x="23.2" y="318.99999999999994" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="12" xml:space="preserve"> </text>
+    <rect class="cursor f15" x="30.4" y="306.99999999999994" width="7.199999999999999" height="16.799999999999997" fill="#ffffff" opacity="0.7"/>
+  </g>
+
+    </g>
+    <g id="frame-16">
+      
+  <style>
+    .cursor {
+      animation: blink 1s step-end infinite;
+    }
+    .cursor-active {
+      /* No animation - solid cursor during typing/movement */
+    }
+    @keyframes blink {
+      0%, 50% { opacity: 1; }
+      50.01%, 100% { opacity: 0; }
+    }
+  </style>
+  <rect width="659" height="340" fill="#1e1e1e" rx="10" ry="10"/>
+  <g class="title-bar f16">
+    <rect width="659" height="39" fill="#1e1e1e" rx="10" ry="10"/>
+    <rect y="29" width="659" height="10" fill="#1e1e1e"/>
+    <line x1="0" y1="39.5" x2="659" y2="39.5" stroke="#d4d4d41a" stroke-width="1"/>
+    <circle cx="16" cy="19.5" r="6" fill="#ff5f56"/>
+    <circle cx="36" cy="19.5" r="6" fill="#ffbd2e"/>
+    <circle cx="56" cy="19.5" r="6" fill="#27c93f"/>
+  </g>
+  <g class="content f16">
+    <text x="16" y="67" fill="#d670d6" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="12" xml:space="preserve">❯</text>
+    <text x="23.2" y="67" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="12" xml:space="preserve"> npm test</text>
+    <text x="16" y="100.6" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="12" xml:space="preserve">&gt; dvd-cli@1.0.0 test</text>
+    <text x="16" y="117.39999999999999" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="12" xml:space="preserve">&gt; vitest run</text>
+    <rect x="16" y="155.79999999999998" width="36" height="16.799999999999997" fill="#11a8cd"/>
+    <text x="16" y="167.79999999999998" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="12" font-weight="bold" xml:space="preserve"> RUN </text>
+    <text x="52" y="167.79999999999998" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="12" xml:space="preserve"> </text>
+    <text x="59.2" y="167.79999999999998" fill="#11a8cd" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="12" xml:space="preserve">v4.0.18 </text>
+    <text x="116.8" y="167.79999999999998" fill="#666666" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="12" xml:space="preserve">/Users/talhayut/projects/dvd</text>
+    <text x="16" y="201.39999999999998" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="12" xml:space="preserve"> </text>
+    <text x="23.2" y="201.39999999999998" fill="#0dbc79" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="12" xml:space="preserve">✓</text>
+    <text x="30.4" y="201.39999999999998" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="12" xml:space="preserve"> src/parser/cd-parser.test.ts </text>
+    <text x="246.39999999999998" y="201.39999999999998" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="12" xml:space="preserve">(</text>
+    <text x="253.59999999999997" y="201.39999999999998" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="12" xml:space="preserve">33 tests</text>
+    <text x="311.19999999999993" y="201.39999999999998" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="12" xml:space="preserve">)</text>
+    <text x="318.3999999999999" y="201.39999999999998" fill="#0dbc79" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="12" xml:space="preserve"> 5</text>
+    <text x="332.7999999999999" y="201.39999999999998" fill="#0dbc79" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="12" xml:space="preserve">ms</text>
+    <text x="16" y="234.99999999999997" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="12" xml:space="preserve"> Test Files </text>
+    <text x="102.39999999999999" y="234.99999999999997" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="12" xml:space="preserve"> </text>
+    <text x="109.6" y="234.99999999999997" fill="#0dbc79" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="12" font-weight="bold" xml:space="preserve">1 passed</text>
+    <text x="167.2" y="234.99999999999997" fill="#666666" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="12" xml:space="preserve"> (1)</text>
+    <text x="16" y="251.79999999999995" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="12" xml:space="preserve">      Tests </text>
+    <text x="102.39999999999999" y="251.79999999999995" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="12" xml:space="preserve"> </text>
+    <text x="109.6" y="251.79999999999995" fill="#0dbc79" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="12" font-weight="bold" xml:space="preserve">33 passed</text>
+    <text x="174.39999999999998" y="251.79999999999995" fill="#666666" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="12" xml:space="preserve"> (33)</text>
+    <text x="16" y="268.59999999999997" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="12" xml:space="preserve">   Start at </text>
+    <text x="102.39999999999999" y="268.59999999999997" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="12" xml:space="preserve"> 15:00:17</text>
+    <text x="16" y="285.4" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="12" xml:space="preserve">   Duration </text>
+    <text x="102.39999999999999" y="285.4" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="12" xml:space="preserve"> 122ms</text>
+    <text x="145.6" y="285.4" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="12" xml:space="preserve"> (transform 51ms, setup 0ms, import 58ms, tests 5ms, environment 0ms)</text>
+    <text x="16" y="318.99999999999994" fill="#d670d6" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="12" xml:space="preserve">❯</text>
+    <text x="23.2" y="318.99999999999994" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="12" xml:space="preserve"> </text>
+  </g>
+
+    </g>
+  </defs>
+
+  
+  <use href="#frame-0" class="frame frame-0" />
+  <use href="#frame-1" class="frame frame-1" />
+  <use href="#frame-2" class="frame frame-2" />
+  <use href="#frame-3" class="frame frame-3" />
+  <use href="#frame-4" class="frame frame-4" />
+  <use href="#frame-5" class="frame frame-5" />
+  <use href="#frame-6" class="frame frame-6" />
+  <use href="#frame-7" class="frame frame-7" />
+  <use href="#frame-8" class="frame frame-8" />
+  <use href="#frame-9" class="frame frame-9" />
+  <use href="#frame-10" class="frame frame-10" />
+  <use href="#frame-11" class="frame frame-11" />
+  <use href="#frame-12" class="frame frame-12" />
+  <use href="#frame-13" class="frame frame-13" />
+  <use href="#frame-14" class="frame frame-14" />
+  <use href="#frame-15" class="frame frame-15" />
+  <use href="#frame-16" class="frame frame-16" />
+</svg>

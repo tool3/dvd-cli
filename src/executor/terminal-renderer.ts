@@ -1,9 +1,10 @@
 /**
  * Terminal Renderer
  * Renders terminal state with cursor and fixed dimensions
+ * Uses shellfie's templates for shell chrome styling
  */
 
-import { parseAnsi, type ParsedLine, type TextSpan, type RGB, darkTheme, type Theme } from 'shellfie';
+import { parseAnsi, type ParsedLine, type TextSpan, type RGB, darkTheme, type Theme, templates, type Template } from 'shellfie';
 
 export interface TerminalState {
   lines: string[];
@@ -28,6 +29,19 @@ export interface RenderOptions {
 }
 
 /**
+ * Get shellfie template by name
+ */
+function getTemplate(templateName?: 'macos' | 'windows' | 'minimal'): Template {
+  if (!templateName || templateName === 'macos') {
+    return templates.macos;
+  }
+  if (templateName === 'windows') {
+    return templates.windows;
+  }
+  return templates.minimal;
+}
+
+/**
  * Render terminal state as SVG
  */
 export function renderTerminalSVG(state: TerminalState, options: RenderOptions = {}): string {
@@ -42,9 +56,14 @@ export function renderTerminalSVG(state: TerminalState, options: RenderOptions =
     showCursor,
   } = state;
 
-  const padding = options.padding || 16;
-  const headerHeight = options.template === 'minimal' ? 0 : 39;
+  // Get template configuration from shellfie
+  const template = getTemplate(options.template);
+  const shell = template.shell;
+
+  const padding = options.padding || shell.padding;
+  const headerHeight = shell.titleBar ? shell.titleBarHeight : 0;
   const lineHeight = fontSize * 1.4;
+  const borderRadius = shell.borderRadius;
 
   // Calculate character width (monospace approximation)
   const charWidth = fontSize * 0.6;
@@ -63,7 +82,6 @@ export function renderTerminalSVG(state: TerminalState, options: RenderOptions =
   let svg = `<svg width="${svgWidth}" height="${svgHeight}" xmlns="http://www.w3.org/2000/svg">`;
 
   // Add styles
-  const cursorClass = state.activeCursor ? 'cursor-active' : 'cursor';
   svg += `
   <style>
     .cursor {
@@ -80,51 +98,59 @@ export function renderTerminalSVG(state: TerminalState, options: RenderOptions =
 
   // Background
   svg += `
-  <rect width="${svgWidth}" height="${svgHeight}" fill="${bgColor}" rx="10" ry="10"/>`;
+  <rect width="${svgWidth}" height="${svgHeight}" fill="${bgColor}" rx="${borderRadius}" ry="${borderRadius}"/>`;
 
-  // Header (if not minimal)
-  if (options.template !== 'minimal') {
+  // Border (if template has it)
+  if (shell.border && shell.borderWidth > 0) {
+    svg += `
+  <rect width="${svgWidth}" height="${svgHeight}" fill="none" stroke="${shell.borderColor}" stroke-width="${shell.borderWidth}" rx="${borderRadius}" ry="${borderRadius}"/>`;
+  }
+
+  // Header/title bar (if template has it)
+  if (shell.titleBar && shell.controls) {
+    const controlStyle = shell.controlStyle;
+    const controlY = headerHeight / 2;
+
     svg += `
   <g class="title-bar">
-    <rect width="${svgWidth}" height="${headerHeight}" fill="${bgColor}" rx="10" ry="10"/>
-    <rect y="29" width="${svgWidth}" height="10" fill="${bgColor}"/>
-    <line x1="0" y1="39.5" x2="${svgWidth}" y2="39.5" stroke="#d4d4d41a" stroke-width="1"/>`;
+    <rect width="${svgWidth}" height="${headerHeight}" fill="${bgColor}" rx="${borderRadius}" ry="${borderRadius}"/>
+    <rect y="${headerHeight - 10}" width="${svgWidth}" height="10" fill="${bgColor}"/>
+    <line x1="0" y1="${headerHeight + 0.5}" x2="${svgWidth}" y2="${headerHeight + 0.5}" stroke="#d4d4d41a" stroke-width="1"/>`;
 
-    if (options.template === 'windows') {
+    if (shell.controlsPosition === 'right') {
       // Windows-style controls (right side): minimize, maximize, close
-      const controlY = 19.5;
-      const controlSpacing = 46;
-      const startX = svgWidth - 16;
+      const startX = svgWidth - padding - controlStyle.size / 2;
 
       // Close button (X)
       svg += `
     <g transform="translate(${startX}, ${controlY})">
-      <line x1="-5" y1="-5" x2="5" y2="5" stroke="#e81123" stroke-width="1.5"/>
-      <line x1="5" y1="-5" x2="-5" y2="5" stroke="#e81123" stroke-width="1.5"/>
+      <line x1="-5" y1="-5" x2="5" y2="5" stroke="${controlStyle.close}" stroke-width="1.5"/>
+      <line x1="5" y1="-5" x2="-5" y2="5" stroke="${controlStyle.close}" stroke-width="1.5"/>
     </g>`;
 
       // Maximize button (square)
       svg += `
-    <g transform="translate(${startX - controlSpacing}, ${controlY})">
+    <g transform="translate(${startX - controlStyle.spacing}, ${controlY})">
       <rect x="-5" y="-5" width="10" height="10" fill="none" stroke="${textColor}" stroke-width="1" opacity="0.6"/>
     </g>`;
 
       // Minimize button (line)
       svg += `
-    <g transform="translate(${startX - controlSpacing * 2}, ${controlY})">
+    <g transform="translate(${startX - controlStyle.spacing * 2}, ${controlY})">
       <line x1="-5" y1="0" x2="5" y2="0" stroke="${textColor}" stroke-width="1.5" opacity="0.6"/>
     </g>`;
     } else {
       // macOS-style traffic lights (left side)
+      const startX = padding + controlStyle.radius;
       svg += `
-    <circle cx="16" cy="19.5" r="6" fill="#ff5f56"/>
-    <circle cx="36" cy="19.5" r="6" fill="#ffbd2e"/>
-    <circle cx="56" cy="19.5" r="6" fill="#27c93f"/>`;
+    <circle cx="${startX}" cy="${controlY}" r="${controlStyle.radius}" fill="${controlStyle.close}"/>
+    <circle cx="${startX + controlStyle.spacing}" cy="${controlY}" r="${controlStyle.radius}" fill="${controlStyle.minimize}"/>
+    <circle cx="${startX + controlStyle.spacing * 2}" cy="${controlY}" r="${controlStyle.radius}" fill="${controlStyle.maximize}"/>`;
     }
 
     if (options.title) {
       svg += `
-    <text x="${svgWidth / 2}" y="24.2" fill="${textColor}" font-family="${fontFamily}" font-size="12" text-anchor="middle" opacity="0.8">${escapeXml(options.title)}</text>`;
+    <text x="${svgWidth / 2}" y="${controlY + 4}" fill="${textColor}" font-family="${fontFamily}" font-size="12" text-anchor="middle" opacity="0.8">${escapeXml(options.title)}</text>`;
     }
 
     svg += `
