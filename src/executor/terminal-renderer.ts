@@ -357,8 +357,43 @@ function resolveColor(color: string | RGB | undefined, theme: Theme): string {
     return theme[themeKey] as string;
   }
 
+  // Handle 256-color codes (ansi256-X)
+  if (color.startsWith('ansi256-')) {
+    const colorNum = parseInt(color.substring(8), 10);
+    return ansi256ToHex(colorNum, theme);
+  }
+
   // Already a hex color
   return color;
+}
+
+/**
+ * Convert ANSI 256-color code to hex
+ */
+function ansi256ToHex(colorNum: number, theme: Theme): string {
+  // 0-15: Standard colors (map to theme)
+  if (colorNum < 16) {
+    const standardColors: (keyof Theme)[] = [
+      'black', 'red', 'green', 'yellow', 'blue', 'magenta', 'cyan', 'white',
+      'brightBlack', 'brightRed', 'brightGreen', 'brightYellow', 'brightBlue', 'brightMagenta', 'brightCyan', 'brightWhite',
+    ];
+    return theme[standardColors[colorNum]] as string || theme.foreground;
+  }
+
+  // 16-231: 6x6x6 color cube
+  if (colorNum < 232) {
+    const index = colorNum - 16;
+    const r = Math.floor(index / 36);
+    const g = Math.floor((index % 36) / 6);
+    const b = index % 6;
+    // Convert 0-5 to 0-255 (0, 95, 135, 175, 215, 255)
+    const toHex = (v: number) => (v === 0 ? 0 : 55 + v * 40);
+    return `rgb(${toHex(r)}, ${toHex(g)}, ${toHex(b)})`;
+  }
+
+  // 232-255: Grayscale
+  const gray = 8 + (colorNum - 232) * 10;
+  return `rgb(${gray}, ${gray}, ${gray})`;
 }
 
 /**

@@ -9,6 +9,7 @@ import { resolve } from 'node:path';
 import type { CDCommand, CDScript } from '../parser/cd-parser';
 import { renderTerminalSVG, createTerminalState, type TerminalState } from './terminal-renderer';
 import { themes, type Theme, shellfie, templates } from 'shellfie';
+import { TerminalBuffer } from './terminal-buffer';
 
 export interface TerminalFrame {
   timestamp: number;
@@ -94,7 +95,9 @@ export class CDExecutor {
       maxLineLength: 0,
       maxLines: 0,
       isExecutingCommand: false,
-      scroll: true, // Default: scrolling enabled (like a real terminal)
+      // Scroll is only enabled when explicit dimensions are set
+      // Auto-sizing (no width/height) requires scroll to be off to measure content
+      scroll: !!(options.width && options.height),
       scrollOffset: 0,
     };
   }
@@ -306,6 +309,7 @@ export class CDExecutor {
 
   /**
    * Execute command with streaming output support
+   * Uses TerminalBuffer to properly handle ANSI cursor positioning (for neofetch, etc.)
    */
   private async executeCommandStreaming(command: string): Promise<void> {
     return new Promise((resolve) => {
@@ -314,28 +318,40 @@ export class CDExecutor {
         env: { ...process.env, FORCE_COLOR: '1', CLICOLOR_FORCE: '1' },
       });
 
-      let outputBuffer = '';
+      // Use terminal buffer to handle cursor positioning escape sequences
+      const termBuffer = new TerminalBuffer();
       let lastFrameTime = Date.now();
       const FRAME_INTERVAL = 100; // Capture frame every 100ms when output is streaming
 
+      // Save the starting line position once at the beginning
+      const outputStartLine = this.context.cursorY;
+
       const processOutput = (data: string) => {
-        outputBuffer += data;
+        // Write data to terminal buffer (handles cursor movement)
+        termBuffer.write(data);
 
-        // Process complete lines
-        const lines = outputBuffer.split('\n');
-        outputBuffer = lines.pop() || ''; // Keep incomplete line in buffer
+        // Update context lines from buffer
+        const bufferLines = termBuffer.getLines();
 
-        for (const line of lines) {
-          this.context.lines[this.context.cursorY] = line;
-          this.context.cursorY++;
-          this.context.lines[this.context.cursorY] = '';
+        // Replace lines starting from the fixed output start position
+        for (let i = 0; i < bufferLines.length; i++) {
+          this.context.lines[outputStartLine + i] = bufferLines[i];
+        }
 
-          // Capture frame if enough time has passed (for animations)
-          const now = Date.now();
-          if (now - lastFrameTime >= FRAME_INTERVAL) {
-            this.captureFrame(false); // No cursor during output
-            lastFrameTime = now;
-          }
+        // Update cursor position relative to output start
+        const bufferCursor = termBuffer.getCursor();
+        this.context.cursorY = outputStartLine + bufferCursor.y;
+
+        // Ensure we have enough lines
+        while (this.context.lines.length <= this.context.cursorY) {
+          this.context.lines.push('');
+        }
+
+        // Capture frame if enough time has passed (for animations)
+        const now = Date.now();
+        if (now - lastFrameTime >= FRAME_INTERVAL) {
+          this.captureFrame(false); // No cursor during output
+          lastFrameTime = now;
         }
       };
 
@@ -348,17 +364,25 @@ export class CDExecutor {
       });
 
       child.on('close', () => {
-        // Process any remaining buffered output
-        if (outputBuffer) {
-          this.context.lines[this.context.cursorY] = outputBuffer;
-          this.context.cursorY++;
-          this.context.lines[this.context.cursorY] = '';
+        // Final update from buffer
+        const bufferLines = termBuffer.getLines();
+
+        for (let i = 0; i < bufferLines.length; i++) {
+          this.context.lines[outputStartLine + i] = bufferLines[i];
+        }
+
+        // Move cursor to after the output
+        this.context.cursorY = outputStartLine + bufferLines.length;
+        this.context.cursorX = 0;
+
+        // Ensure we have a line for the cursor
+        while (this.context.lines.length <= this.context.cursorY) {
+          this.context.lines.push('');
         }
 
         // Command finished - show prompt again
         this.context.isExecutingCommand = false;
         this.context.currentLine = '';
-        this.context.cursorX = 0;
 
         // Capture final frame with cursor on new line (prompt now visible)
         setTimeout(() => {

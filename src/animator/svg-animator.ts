@@ -13,12 +13,18 @@ export interface AnimationOptions {
 
 /**
  * Extract SVG body content (everything inside <svg>)
+ * Optionally strip <style> blocks to avoid duplication
  */
-function extractSVGBody(svg: string, frameId: string): string {
+function extractSVGBody(svg: string, frameId: string, stripStyles: boolean = false): string {
   const contentMatch = svg.match(/<svg[^>]*>([\s\S]*)<\/svg>/);
   if (!contentMatch) return '';
 
   let content = contentMatch[1];
+
+  // Strip style blocks if requested (to avoid duplication across frames)
+  if (stripStyles) {
+    content = content.replace(/<style>[\s\S]*?<\/style>/g, '');
+  }
 
   // Make IDs unique
   content = content
@@ -105,10 +111,10 @@ export async function createAnimatedSVG(
   // Create keyframes
   const keyframes = createKeyframes(frames);
 
-  // Extract frame contents
+  // Extract frame contents - strip styles from all frames since we use shared keyframes
   const frameBodies = frames.map((frame, i) => ({
     id: `frame-${i}`,
-    content: extractSVGBody(frame.svg, `f${i}`),
+    content: extractSVGBody(frame.svg, `f${i}`, true), // Strip duplicate <style> blocks
   }));
 
   // Build animated SVG
@@ -127,6 +133,18 @@ export async function createAnimatedSVG(
     .frame-${i} {
       animation-name: frame-${i}-anim;
     }`).join('')}
+
+    /* Cursor blink animation (shared across all frames) */
+    .cursor {
+      animation: blink 1s step-end infinite;
+    }
+    .cursor-active {
+      /* No animation - solid cursor during typing/movement */
+    }
+    @keyframes blink {
+      0%, 50% { opacity: 1; }
+      50.01%, 100% { opacity: 0; }
+    }
   </style>
 
   <defs>
