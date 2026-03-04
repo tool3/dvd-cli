@@ -234,13 +234,46 @@ export function renderTerminalSVG(state: TerminalState, options: RenderOptions =
     }
   }
 
-  // Render cursor
+  // Render cursor with character inversion
   if (showCursor) {
     const cursorXPos = padding + (cursorX * charWidth);
     const cursorYPos = contentY + (cursorY * lineHeight);
     const cursorClass = state.activeCursor ? 'cursor-active' : 'cursor';
+
+    // Draw cursor block
     svg += `
-    <rect class="${cursorClass}" x="${cursorXPos}" y="${cursorYPos}" width="${charWidth}" height="${lineHeight}" fill="${cursorColor}" opacity="0.7"/>`;
+    <rect class="${cursorClass}" x="${cursorXPos}" y="${cursorYPos}" width="${charWidth}" height="${lineHeight}" fill="${cursorColor}"/>`;
+
+    // Find and render the character under the cursor with inverted color
+    const cursorLine = lines[cursorY] || '';
+    if (cursorLine) {
+      const parsedCursorLine = parseAnsi(cursorLine);
+      if (parsedCursorLine.length > 0 && parsedCursorLine[0].spans.length > 0) {
+        let charIndex = 0;
+        for (const span of parsedCursorLine[0].spans) {
+          for (let i = 0; i < span.text.length; i++) {
+            if (charIndex === cursorX) {
+              // Found the character under cursor - render it with inverted color
+              const char = span.text[i];
+              const charY = contentY + (cursorY * lineHeight) + fontSize;
+              // Invert: use background color for the character (since cursor is foreground/cursor color)
+              const invertedColor = bgColor;
+
+              // Build style attributes
+              let styleAttr = '';
+              if (span.style.bold) styleAttr += ' font-weight="bold"';
+              if (span.style.italic) styleAttr += ' font-style="italic"';
+
+              svg += `
+    <text class="${cursorClass}" x="${cursorXPos}" y="${charY}" fill="${invertedColor}" font-family="${fontFamily}" font-size="${fontSize}"${styleAttr} xml:space="preserve">${escapeXml(char)}</text>`;
+              break;
+            }
+            charIndex++;
+          }
+          if (charIndex > cursorX) break;
+        }
+      }
+    }
   }
 
   svg += `
