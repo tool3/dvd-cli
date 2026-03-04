@@ -1,0 +1,976 @@
+<svg width="695" height="226" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    
+    @keyframes frame-0-anim {
+      0% { opacity: 1; }
+      0.76% { opacity: 1; }
+      0.77% { opacity: 0; }
+      100% { opacity: 0; }
+    }@keyframes frame-1-anim {
+      0% { opacity: 0; }
+      0.00% { opacity: 0; }
+      0.76% { opacity: 1; }
+      1.51% { opacity: 1; }
+      1.52% { opacity: 0; }
+      100% { opacity: 0; }
+    }
+    @keyframes frame-2-anim {
+      0% { opacity: 0; }
+      0.76% { opacity: 0; }
+      1.51% { opacity: 1; }
+      2.27% { opacity: 1; }
+      2.28% { opacity: 0; }
+      100% { opacity: 0; }
+    }
+    @keyframes frame-3-anim {
+      0% { opacity: 0; }
+      1.51% { opacity: 0; }
+      2.27% { opacity: 1; }
+      3.01% { opacity: 1; }
+      3.02% { opacity: 0; }
+      100% { opacity: 0; }
+    }
+    @keyframes frame-4-anim {
+      0% { opacity: 0; }
+      2.27% { opacity: 0; }
+      3.01% { opacity: 1; }
+      3.74% { opacity: 1; }
+      3.75% { opacity: 0; }
+      100% { opacity: 0; }
+    }
+    @keyframes frame-5-anim {
+      0% { opacity: 0; }
+      3.01% { opacity: 0; }
+      3.74% { opacity: 1; }
+      4.50% { opacity: 1; }
+      4.51% { opacity: 0; }
+      100% { opacity: 0; }
+    }
+    @keyframes frame-6-anim {
+      0% { opacity: 0; }
+      3.74% { opacity: 0; }
+      4.50% { opacity: 1; }
+      5.23% { opacity: 1; }
+      5.24% { opacity: 0; }
+      100% { opacity: 0; }
+    }
+    @keyframes frame-7-anim {
+      0% { opacity: 0; }
+      4.50% { opacity: 0; }
+      5.23% { opacity: 1; }
+      5.99% { opacity: 1; }
+      6.00% { opacity: 0; }
+      100% { opacity: 0; }
+    }
+    @keyframes frame-8-anim {
+      0% { opacity: 0; }
+      5.23% { opacity: 0; }
+      5.99% { opacity: 1; }
+      6.74% { opacity: 1; }
+      6.75% { opacity: 0; }
+      100% { opacity: 0; }
+    }
+    @keyframes frame-9-anim {
+      0% { opacity: 0; }
+      5.99% { opacity: 0; }
+      6.74% { opacity: 1; }
+      7.46% { opacity: 1; }
+      7.47% { opacity: 0; }
+      100% { opacity: 0; }
+    }
+    @keyframes frame-10-anim {
+      0% { opacity: 0; }
+      6.74% { opacity: 0; }
+      7.46% { opacity: 1; }
+      8.20% { opacity: 1; }
+      8.21% { opacity: 0; }
+      100% { opacity: 0; }
+    }
+    @keyframes frame-11-anim {
+      0% { opacity: 0; }
+      7.46% { opacity: 0; }
+      8.20% { opacity: 1; }
+      8.96% { opacity: 1; }
+      8.97% { opacity: 0; }
+      100% { opacity: 0; }
+    }
+    @keyframes frame-12-anim {
+      0% { opacity: 0; }
+      8.20% { opacity: 0; }
+      8.96% { opacity: 1; }
+      9.69% { opacity: 1; }
+      9.70% { opacity: 0; }
+      100% { opacity: 0; }
+    }
+    @keyframes frame-13-anim {
+      0% { opacity: 0; }
+      8.96% { opacity: 0; }
+      9.69% { opacity: 1; }
+      10.44% { opacity: 1; }
+      10.45% { opacity: 0; }
+      100% { opacity: 0; }
+    }
+    @keyframes frame-14-anim {
+      0% { opacity: 0; }
+      9.69% { opacity: 0; }
+      10.44% { opacity: 1; }
+      11.17% { opacity: 1; }
+      11.18% { opacity: 0; }
+      100% { opacity: 0; }
+    }
+    @keyframes frame-15-anim {
+      0% { opacity: 0; }
+      10.44% { opacity: 0; }
+      11.17% { opacity: 1; }
+      11.97% { opacity: 1; }
+      11.98% { opacity: 0; }
+      100% { opacity: 0; }
+    }
+    @keyframes frame-16-anim {
+      0% { opacity: 0; }
+      11.17% { opacity: 0; }
+      11.97% { opacity: 1; }
+      12.70% { opacity: 1; }
+      12.71% { opacity: 0; }
+      100% { opacity: 0; }
+    }
+    @keyframes frame-17-anim {
+      0% { opacity: 0; }
+      11.97% { opacity: 0; }
+      12.70% { opacity: 1; }
+      13.46% { opacity: 1; }
+      13.47% { opacity: 0; }
+      100% { opacity: 0; }
+    }
+    @keyframes frame-18-anim {
+      0% { opacity: 0; }
+      12.70% { opacity: 0; }
+      13.46% { opacity: 1; }
+      14.21% { opacity: 1; }
+      14.22% { opacity: 0; }
+      100% { opacity: 0; }
+    }
+    @keyframes frame-19-anim {
+      0% { opacity: 0; }
+      13.46% { opacity: 0; }
+      14.21% { opacity: 1; }
+      14.97% { opacity: 1; }
+      14.98% { opacity: 0; }
+      100% { opacity: 0; }
+    }
+    @keyframes frame-20-anim {
+      0% { opacity: 0; }
+      14.21% { opacity: 0; }
+      14.97% { opacity: 1; }
+      15.72% { opacity: 1; }
+      15.73% { opacity: 0; }
+      100% { opacity: 0; }
+    }
+    @keyframes frame-21-anim {
+      0% { opacity: 0; }
+      14.97% { opacity: 0; }
+      15.72% { opacity: 1; }
+      16.46% { opacity: 1; }
+      16.47% { opacity: 0; }
+      100% { opacity: 0; }
+    }
+    @keyframes frame-22-anim {
+      0% { opacity: 0; }
+      15.72% { opacity: 0; }
+      16.46% { opacity: 1; }
+      23.82% { opacity: 1; }
+      23.83% { opacity: 0; }
+      100% { opacity: 0; }
+    }
+    @keyframes frame-23-anim {
+      0% { opacity: 0; }
+      16.46% { opacity: 0; }
+      23.82% { opacity: 1; }
+      25.32% { opacity: 1; }
+      25.33% { opacity: 0; }
+      100% { opacity: 0; }
+    }
+    @keyframes frame-24-anim {
+      0% { opacity: 0; }
+      23.82% { opacity: 0; }
+      25.32% { opacity: 1; }
+      26.89% { opacity: 1; }
+      26.90% { opacity: 0; }
+      100% { opacity: 0; }
+    }
+    @keyframes frame-25-anim {
+      0% { opacity: 0; }
+      25.32% { opacity: 0; }
+      26.89% { opacity: 1; }
+      100.00% { opacity: 1; }
+      100.01% { opacity: 0; }
+      100% { opacity: 0; }
+    }
+    @keyframes frame-26-anim {
+      0% { opacity: 0; }
+      26.89% { opacity: 0; }
+      100.00% { opacity: 1; }
+      100.00% { opacity: 1; }
+      100.01% { opacity: 0; }
+      100% { opacity: 0; }
+    }
+    @keyframes frame-27-anim {
+      0% { opacity: 0; }
+      100.00% { opacity: 0; }
+      100.00% { opacity: 1; }
+      100.00% { opacity: 1; }
+      100.01% { opacity: 0; }
+      100% { opacity: 0; }
+    }
+
+    .frame {
+      animation-duration: 7.84s;
+      animation-timing-function: step-end;
+      animation-iteration-count: infinite;
+      animation-fill-mode: forwards;
+    }
+
+    
+    .frame-0 {
+      animation-name: frame-0-anim;
+    }
+    .frame-1 {
+      animation-name: frame-1-anim;
+    }
+    .frame-2 {
+      animation-name: frame-2-anim;
+    }
+    .frame-3 {
+      animation-name: frame-3-anim;
+    }
+    .frame-4 {
+      animation-name: frame-4-anim;
+    }
+    .frame-5 {
+      animation-name: frame-5-anim;
+    }
+    .frame-6 {
+      animation-name: frame-6-anim;
+    }
+    .frame-7 {
+      animation-name: frame-7-anim;
+    }
+    .frame-8 {
+      animation-name: frame-8-anim;
+    }
+    .frame-9 {
+      animation-name: frame-9-anim;
+    }
+    .frame-10 {
+      animation-name: frame-10-anim;
+    }
+    .frame-11 {
+      animation-name: frame-11-anim;
+    }
+    .frame-12 {
+      animation-name: frame-12-anim;
+    }
+    .frame-13 {
+      animation-name: frame-13-anim;
+    }
+    .frame-14 {
+      animation-name: frame-14-anim;
+    }
+    .frame-15 {
+      animation-name: frame-15-anim;
+    }
+    .frame-16 {
+      animation-name: frame-16-anim;
+    }
+    .frame-17 {
+      animation-name: frame-17-anim;
+    }
+    .frame-18 {
+      animation-name: frame-18-anim;
+    }
+    .frame-19 {
+      animation-name: frame-19-anim;
+    }
+    .frame-20 {
+      animation-name: frame-20-anim;
+    }
+    .frame-21 {
+      animation-name: frame-21-anim;
+    }
+    .frame-22 {
+      animation-name: frame-22-anim;
+    }
+    .frame-23 {
+      animation-name: frame-23-anim;
+    }
+    .frame-24 {
+      animation-name: frame-24-anim;
+    }
+    .frame-25 {
+      animation-name: frame-25-anim;
+    }
+    .frame-26 {
+      animation-name: frame-26-anim;
+    }
+    .frame-27 {
+      animation-name: frame-27-anim;
+    }
+  </style>
+
+  <defs>
+    
+    <g id="frame-0">
+      
+  <style>
+    .cursor {
+      animation: blink 1s step-end infinite;
+    }
+    .cursor-active {
+      /* No animation - solid cursor during typing/movement */
+    }
+    @keyframes blink {
+      0%, 50% { opacity: 1; }
+      50.01%, 100% { opacity: 0; }
+    }
+  </style>
+  <rect width="695" height="226" fill="#1e1e1e" rx="6" ry="6"/>
+  <g class="content f0">
+    <text x="16" y="62" fill="#d670d6" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="46" xml:space="preserve">❯</text>
+    <text x="43.599999999999994" y="62" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="46" xml:space="preserve"> </text>
+    <rect class="cursor f0" x="71.19999999999999" y="16" width="27.599999999999998" height="64.39999999999999" fill="#ffffff" opacity="0.7"/>
+  </g>
+
+    </g>
+    <g id="frame-1">
+      
+  <style>
+    .cursor {
+      animation: blink 1s step-end infinite;
+    }
+    .cursor-active {
+      /* No animation - solid cursor during typing/movement */
+    }
+    @keyframes blink {
+      0%, 50% { opacity: 1; }
+      50.01%, 100% { opacity: 0; }
+    }
+  </style>
+  <rect width="695" height="226" fill="#1e1e1e" rx="6" ry="6"/>
+  <g class="content f1">
+    <text x="16" y="62" fill="#d670d6" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="46" xml:space="preserve">❯</text>
+    <text x="43.599999999999994" y="62" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="46" xml:space="preserve"> e</text>
+    <rect class="cursor-active f1" x="98.8" y="16" width="27.599999999999998" height="64.39999999999999" fill="#ffffff" opacity="0.7"/>
+  </g>
+
+    </g>
+    <g id="frame-2">
+      
+  <style>
+    .cursor {
+      animation: blink 1s step-end infinite;
+    }
+    .cursor-active {
+      /* No animation - solid cursor during typing/movement */
+    }
+    @keyframes blink {
+      0%, 50% { opacity: 1; }
+      50.01%, 100% { opacity: 0; }
+    }
+  </style>
+  <rect width="695" height="226" fill="#1e1e1e" rx="6" ry="6"/>
+  <g class="content f2">
+    <text x="16" y="62" fill="#d670d6" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="46" xml:space="preserve">❯</text>
+    <text x="43.599999999999994" y="62" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="46" xml:space="preserve"> ec</text>
+    <rect class="cursor-active f2" x="126.39999999999999" y="16" width="27.599999999999998" height="64.39999999999999" fill="#ffffff" opacity="0.7"/>
+  </g>
+
+    </g>
+    <g id="frame-3">
+      
+  <style>
+    .cursor {
+      animation: blink 1s step-end infinite;
+    }
+    .cursor-active {
+      /* No animation - solid cursor during typing/movement */
+    }
+    @keyframes blink {
+      0%, 50% { opacity: 1; }
+      50.01%, 100% { opacity: 0; }
+    }
+  </style>
+  <rect width="695" height="226" fill="#1e1e1e" rx="6" ry="6"/>
+  <g class="content f3">
+    <text x="16" y="62" fill="#d670d6" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="46" xml:space="preserve">❯</text>
+    <text x="43.599999999999994" y="62" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="46" xml:space="preserve"> ech</text>
+    <rect class="cursor-active f3" x="154" y="16" width="27.599999999999998" height="64.39999999999999" fill="#ffffff" opacity="0.7"/>
+  </g>
+
+    </g>
+    <g id="frame-4">
+      
+  <style>
+    .cursor {
+      animation: blink 1s step-end infinite;
+    }
+    .cursor-active {
+      /* No animation - solid cursor during typing/movement */
+    }
+    @keyframes blink {
+      0%, 50% { opacity: 1; }
+      50.01%, 100% { opacity: 0; }
+    }
+  </style>
+  <rect width="695" height="226" fill="#1e1e1e" rx="6" ry="6"/>
+  <g class="content f4">
+    <text x="16" y="62" fill="#d670d6" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="46" xml:space="preserve">❯</text>
+    <text x="43.599999999999994" y="62" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="46" xml:space="preserve"> echo</text>
+    <rect class="cursor-active f4" x="181.6" y="16" width="27.599999999999998" height="64.39999999999999" fill="#ffffff" opacity="0.7"/>
+  </g>
+
+    </g>
+    <g id="frame-5">
+      
+  <style>
+    .cursor {
+      animation: blink 1s step-end infinite;
+    }
+    .cursor-active {
+      /* No animation - solid cursor during typing/movement */
+    }
+    @keyframes blink {
+      0%, 50% { opacity: 1; }
+      50.01%, 100% { opacity: 0; }
+    }
+  </style>
+  <rect width="695" height="226" fill="#1e1e1e" rx="6" ry="6"/>
+  <g class="content f5">
+    <text x="16" y="62" fill="#d670d6" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="46" xml:space="preserve">❯</text>
+    <text x="43.599999999999994" y="62" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="46" xml:space="preserve"> echo </text>
+    <rect class="cursor-active f5" x="209.2" y="16" width="27.599999999999998" height="64.39999999999999" fill="#ffffff" opacity="0.7"/>
+  </g>
+
+    </g>
+    <g id="frame-6">
+      
+  <style>
+    .cursor {
+      animation: blink 1s step-end infinite;
+    }
+    .cursor-active {
+      /* No animation - solid cursor during typing/movement */
+    }
+    @keyframes blink {
+      0%, 50% { opacity: 1; }
+      50.01%, 100% { opacity: 0; }
+    }
+  </style>
+  <rect width="695" height="226" fill="#1e1e1e" rx="6" ry="6"/>
+  <g class="content f6">
+    <text x="16" y="62" fill="#d670d6" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="46" xml:space="preserve">❯</text>
+    <text x="43.599999999999994" y="62" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="46" xml:space="preserve"> echo &apos;</text>
+    <rect class="cursor-active f6" x="236.79999999999998" y="16" width="27.599999999999998" height="64.39999999999999" fill="#ffffff" opacity="0.7"/>
+  </g>
+
+    </g>
+    <g id="frame-7">
+      
+  <style>
+    .cursor {
+      animation: blink 1s step-end infinite;
+    }
+    .cursor-active {
+      /* No animation - solid cursor during typing/movement */
+    }
+    @keyframes blink {
+      0%, 50% { opacity: 1; }
+      50.01%, 100% { opacity: 0; }
+    }
+  </style>
+  <rect width="695" height="226" fill="#1e1e1e" rx="6" ry="6"/>
+  <g class="content f7">
+    <text x="16" y="62" fill="#d670d6" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="46" xml:space="preserve">❯</text>
+    <text x="43.599999999999994" y="62" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="46" xml:space="preserve"> echo &apos;W</text>
+    <rect class="cursor-active f7" x="264.4" y="16" width="27.599999999999998" height="64.39999999999999" fill="#ffffff" opacity="0.7"/>
+  </g>
+
+    </g>
+    <g id="frame-8">
+      
+  <style>
+    .cursor {
+      animation: blink 1s step-end infinite;
+    }
+    .cursor-active {
+      /* No animation - solid cursor during typing/movement */
+    }
+    @keyframes blink {
+      0%, 50% { opacity: 1; }
+      50.01%, 100% { opacity: 0; }
+    }
+  </style>
+  <rect width="695" height="226" fill="#1e1e1e" rx="6" ry="6"/>
+  <g class="content f8">
+    <text x="16" y="62" fill="#d670d6" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="46" xml:space="preserve">❯</text>
+    <text x="43.599999999999994" y="62" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="46" xml:space="preserve"> echo &apos;We</text>
+    <rect class="cursor-active f8" x="292" y="16" width="27.599999999999998" height="64.39999999999999" fill="#ffffff" opacity="0.7"/>
+  </g>
+
+    </g>
+    <g id="frame-9">
+      
+  <style>
+    .cursor {
+      animation: blink 1s step-end infinite;
+    }
+    .cursor-active {
+      /* No animation - solid cursor during typing/movement */
+    }
+    @keyframes blink {
+      0%, 50% { opacity: 1; }
+      50.01%, 100% { opacity: 0; }
+    }
+  </style>
+  <rect width="695" height="226" fill="#1e1e1e" rx="6" ry="6"/>
+  <g class="content f9">
+    <text x="16" y="62" fill="#d670d6" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="46" xml:space="preserve">❯</text>
+    <text x="43.599999999999994" y="62" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="46" xml:space="preserve"> echo &apos;Wel</text>
+    <rect class="cursor-active f9" x="319.59999999999997" y="16" width="27.599999999999998" height="64.39999999999999" fill="#ffffff" opacity="0.7"/>
+  </g>
+
+    </g>
+    <g id="frame-10">
+      
+  <style>
+    .cursor {
+      animation: blink 1s step-end infinite;
+    }
+    .cursor-active {
+      /* No animation - solid cursor during typing/movement */
+    }
+    @keyframes blink {
+      0%, 50% { opacity: 1; }
+      50.01%, 100% { opacity: 0; }
+    }
+  </style>
+  <rect width="695" height="226" fill="#1e1e1e" rx="6" ry="6"/>
+  <g class="content f10">
+    <text x="16" y="62" fill="#d670d6" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="46" xml:space="preserve">❯</text>
+    <text x="43.599999999999994" y="62" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="46" xml:space="preserve"> echo &apos;Welc</text>
+    <rect class="cursor-active f10" x="347.2" y="16" width="27.599999999999998" height="64.39999999999999" fill="#ffffff" opacity="0.7"/>
+  </g>
+
+    </g>
+    <g id="frame-11">
+      
+  <style>
+    .cursor {
+      animation: blink 1s step-end infinite;
+    }
+    .cursor-active {
+      /* No animation - solid cursor during typing/movement */
+    }
+    @keyframes blink {
+      0%, 50% { opacity: 1; }
+      50.01%, 100% { opacity: 0; }
+    }
+  </style>
+  <rect width="695" height="226" fill="#1e1e1e" rx="6" ry="6"/>
+  <g class="content f11">
+    <text x="16" y="62" fill="#d670d6" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="46" xml:space="preserve">❯</text>
+    <text x="43.599999999999994" y="62" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="46" xml:space="preserve"> echo &apos;Welco</text>
+    <rect class="cursor-active f11" x="374.79999999999995" y="16" width="27.599999999999998" height="64.39999999999999" fill="#ffffff" opacity="0.7"/>
+  </g>
+
+    </g>
+    <g id="frame-12">
+      
+  <style>
+    .cursor {
+      animation: blink 1s step-end infinite;
+    }
+    .cursor-active {
+      /* No animation - solid cursor during typing/movement */
+    }
+    @keyframes blink {
+      0%, 50% { opacity: 1; }
+      50.01%, 100% { opacity: 0; }
+    }
+  </style>
+  <rect width="695" height="226" fill="#1e1e1e" rx="6" ry="6"/>
+  <g class="content f12">
+    <text x="16" y="62" fill="#d670d6" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="46" xml:space="preserve">❯</text>
+    <text x="43.599999999999994" y="62" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="46" xml:space="preserve"> echo &apos;Welcom</text>
+    <rect class="cursor-active f12" x="402.4" y="16" width="27.599999999999998" height="64.39999999999999" fill="#ffffff" opacity="0.7"/>
+  </g>
+
+    </g>
+    <g id="frame-13">
+      
+  <style>
+    .cursor {
+      animation: blink 1s step-end infinite;
+    }
+    .cursor-active {
+      /* No animation - solid cursor during typing/movement */
+    }
+    @keyframes blink {
+      0%, 50% { opacity: 1; }
+      50.01%, 100% { opacity: 0; }
+    }
+  </style>
+  <rect width="695" height="226" fill="#1e1e1e" rx="6" ry="6"/>
+  <g class="content f13">
+    <text x="16" y="62" fill="#d670d6" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="46" xml:space="preserve">❯</text>
+    <text x="43.599999999999994" y="62" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="46" xml:space="preserve"> echo &apos;Welcome</text>
+    <rect class="cursor-active f13" x="429.99999999999994" y="16" width="27.599999999999998" height="64.39999999999999" fill="#ffffff" opacity="0.7"/>
+  </g>
+
+    </g>
+    <g id="frame-14">
+      
+  <style>
+    .cursor {
+      animation: blink 1s step-end infinite;
+    }
+    .cursor-active {
+      /* No animation - solid cursor during typing/movement */
+    }
+    @keyframes blink {
+      0%, 50% { opacity: 1; }
+      50.01%, 100% { opacity: 0; }
+    }
+  </style>
+  <rect width="695" height="226" fill="#1e1e1e" rx="6" ry="6"/>
+  <g class="content f14">
+    <text x="16" y="62" fill="#d670d6" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="46" xml:space="preserve">❯</text>
+    <text x="43.599999999999994" y="62" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="46" xml:space="preserve"> echo &apos;Welcome </text>
+    <rect class="cursor-active f14" x="457.59999999999997" y="16" width="27.599999999999998" height="64.39999999999999" fill="#ffffff" opacity="0.7"/>
+  </g>
+
+    </g>
+    <g id="frame-15">
+      
+  <style>
+    .cursor {
+      animation: blink 1s step-end infinite;
+    }
+    .cursor-active {
+      /* No animation - solid cursor during typing/movement */
+    }
+    @keyframes blink {
+      0%, 50% { opacity: 1; }
+      50.01%, 100% { opacity: 0; }
+    }
+  </style>
+  <rect width="695" height="226" fill="#1e1e1e" rx="6" ry="6"/>
+  <g class="content f15">
+    <text x="16" y="62" fill="#d670d6" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="46" xml:space="preserve">❯</text>
+    <text x="43.599999999999994" y="62" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="46" xml:space="preserve"> echo &apos;Welcome t</text>
+    <rect class="cursor-active f15" x="485.2" y="16" width="27.599999999999998" height="64.39999999999999" fill="#ffffff" opacity="0.7"/>
+  </g>
+
+    </g>
+    <g id="frame-16">
+      
+  <style>
+    .cursor {
+      animation: blink 1s step-end infinite;
+    }
+    .cursor-active {
+      /* No animation - solid cursor during typing/movement */
+    }
+    @keyframes blink {
+      0%, 50% { opacity: 1; }
+      50.01%, 100% { opacity: 0; }
+    }
+  </style>
+  <rect width="695" height="226" fill="#1e1e1e" rx="6" ry="6"/>
+  <g class="content f16">
+    <text x="16" y="62" fill="#d670d6" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="46" xml:space="preserve">❯</text>
+    <text x="43.599999999999994" y="62" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="46" xml:space="preserve"> echo &apos;Welcome to</text>
+    <rect class="cursor-active f16" x="512.8" y="16" width="27.599999999999998" height="64.39999999999999" fill="#ffffff" opacity="0.7"/>
+  </g>
+
+    </g>
+    <g id="frame-17">
+      
+  <style>
+    .cursor {
+      animation: blink 1s step-end infinite;
+    }
+    .cursor-active {
+      /* No animation - solid cursor during typing/movement */
+    }
+    @keyframes blink {
+      0%, 50% { opacity: 1; }
+      50.01%, 100% { opacity: 0; }
+    }
+  </style>
+  <rect width="695" height="226" fill="#1e1e1e" rx="6" ry="6"/>
+  <g class="content f17">
+    <text x="16" y="62" fill="#d670d6" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="46" xml:space="preserve">❯</text>
+    <text x="43.599999999999994" y="62" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="46" xml:space="preserve"> echo &apos;Welcome to </text>
+    <rect class="cursor-active f17" x="540.4" y="16" width="27.599999999999998" height="64.39999999999999" fill="#ffffff" opacity="0.7"/>
+  </g>
+
+    </g>
+    <g id="frame-18">
+      
+  <style>
+    .cursor {
+      animation: blink 1s step-end infinite;
+    }
+    .cursor-active {
+      /* No animation - solid cursor during typing/movement */
+    }
+    @keyframes blink {
+      0%, 50% { opacity: 1; }
+      50.01%, 100% { opacity: 0; }
+    }
+  </style>
+  <rect width="695" height="226" fill="#1e1e1e" rx="6" ry="6"/>
+  <g class="content f18">
+    <text x="16" y="62" fill="#d670d6" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="46" xml:space="preserve">❯</text>
+    <text x="43.599999999999994" y="62" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="46" xml:space="preserve"> echo &apos;Welcome to V</text>
+    <rect class="cursor-active f18" x="568" y="16" width="27.599999999999998" height="64.39999999999999" fill="#ffffff" opacity="0.7"/>
+  </g>
+
+    </g>
+    <g id="frame-19">
+      
+  <style>
+    .cursor {
+      animation: blink 1s step-end infinite;
+    }
+    .cursor-active {
+      /* No animation - solid cursor during typing/movement */
+    }
+    @keyframes blink {
+      0%, 50% { opacity: 1; }
+      50.01%, 100% { opacity: 0; }
+    }
+  </style>
+  <rect width="695" height="226" fill="#1e1e1e" rx="6" ry="6"/>
+  <g class="content f19">
+    <text x="16" y="62" fill="#d670d6" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="46" xml:space="preserve">❯</text>
+    <text x="43.599999999999994" y="62" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="46" xml:space="preserve"> echo &apos;Welcome to VH</text>
+    <rect class="cursor-active f19" x="595.5999999999999" y="16" width="27.599999999999998" height="64.39999999999999" fill="#ffffff" opacity="0.7"/>
+  </g>
+
+    </g>
+    <g id="frame-20">
+      
+  <style>
+    .cursor {
+      animation: blink 1s step-end infinite;
+    }
+    .cursor-active {
+      /* No animation - solid cursor during typing/movement */
+    }
+    @keyframes blink {
+      0%, 50% { opacity: 1; }
+      50.01%, 100% { opacity: 0; }
+    }
+  </style>
+  <rect width="695" height="226" fill="#1e1e1e" rx="6" ry="6"/>
+  <g class="content f20">
+    <text x="16" y="62" fill="#d670d6" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="46" xml:space="preserve">❯</text>
+    <text x="43.599999999999994" y="62" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="46" xml:space="preserve"> echo &apos;Welcome to VHS</text>
+    <rect class="cursor-active f20" x="623.1999999999999" y="16" width="27.599999999999998" height="64.39999999999999" fill="#ffffff" opacity="0.7"/>
+  </g>
+
+    </g>
+    <g id="frame-21">
+      
+  <style>
+    .cursor {
+      animation: blink 1s step-end infinite;
+    }
+    .cursor-active {
+      /* No animation - solid cursor during typing/movement */
+    }
+    @keyframes blink {
+      0%, 50% { opacity: 1; }
+      50.01%, 100% { opacity: 0; }
+    }
+  </style>
+  <rect width="695" height="226" fill="#1e1e1e" rx="6" ry="6"/>
+  <g class="content f21">
+    <text x="16" y="62" fill="#d670d6" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="46" xml:space="preserve">❯</text>
+    <text x="43.599999999999994" y="62" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="46" xml:space="preserve"> echo &apos;Welcome to VHS!</text>
+    <rect class="cursor-active f21" x="650.8" y="16" width="27.599999999999998" height="64.39999999999999" fill="#ffffff" opacity="0.7"/>
+  </g>
+
+    </g>
+    <g id="frame-22">
+      
+  <style>
+    .cursor {
+      animation: blink 1s step-end infinite;
+    }
+    .cursor-active {
+      /* No animation - solid cursor during typing/movement */
+    }
+    @keyframes blink {
+      0%, 50% { opacity: 1; }
+      50.01%, 100% { opacity: 0; }
+    }
+  </style>
+  <rect width="695" height="226" fill="#1e1e1e" rx="6" ry="6"/>
+  <g class="content f22">
+    <text x="16" y="62" fill="#d670d6" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="46" xml:space="preserve">❯</text>
+    <text x="43.599999999999994" y="62" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="46" xml:space="preserve"> echo &apos;Welcome to VHS!&apos;</text>
+    <rect class="cursor-active f22" x="678.4" y="16" width="27.599999999999998" height="64.39999999999999" fill="#ffffff" opacity="0.7"/>
+  </g>
+
+    </g>
+    <g id="frame-23">
+      
+  <style>
+    .cursor {
+      animation: blink 1s step-end infinite;
+    }
+    .cursor-active {
+      /* No animation - solid cursor during typing/movement */
+    }
+    @keyframes blink {
+      0%, 50% { opacity: 1; }
+      50.01%, 100% { opacity: 0; }
+    }
+  </style>
+  <rect width="695" height="226" fill="#1e1e1e" rx="6" ry="6"/>
+  <g class="content f23">
+    <text x="16" y="62" fill="#d670d6" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="46" xml:space="preserve">❯</text>
+    <text x="43.599999999999994" y="62" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="46" xml:space="preserve"> echo &apos;Welcome to VHS!&apos;</text>
+    <rect class="cursor f23" x="678.4" y="16" width="27.599999999999998" height="64.39999999999999" fill="#ffffff" opacity="0.7"/>
+  </g>
+
+    </g>
+    <g id="frame-24">
+      
+  <style>
+    .cursor {
+      animation: blink 1s step-end infinite;
+    }
+    .cursor-active {
+      /* No animation - solid cursor during typing/movement */
+    }
+    @keyframes blink {
+      0%, 50% { opacity: 1; }
+      50.01%, 100% { opacity: 0; }
+    }
+  </style>
+  <rect width="695" height="226" fill="#1e1e1e" rx="6" ry="6"/>
+  <g class="content f24">
+    <text x="16" y="62" fill="#d670d6" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="46" xml:space="preserve">❯</text>
+    <text x="43.599999999999994" y="62" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="46" xml:space="preserve"> echo &apos;Welcome to VHS!&apos;</text>
+  </g>
+
+    </g>
+    <g id="frame-25">
+      
+  <style>
+    .cursor {
+      animation: blink 1s step-end infinite;
+    }
+    .cursor-active {
+      /* No animation - solid cursor during typing/movement */
+    }
+    @keyframes blink {
+      0%, 50% { opacity: 1; }
+      50.01%, 100% { opacity: 0; }
+    }
+  </style>
+  <rect width="695" height="226" fill="#1e1e1e" rx="6" ry="6"/>
+  <g class="content f25">
+    <text x="16" y="62" fill="#d670d6" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="46" xml:space="preserve">❯</text>
+    <text x="43.599999999999994" y="62" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="46" xml:space="preserve"> echo &apos;Welcome to VHS!&apos;</text>
+    <text x="16" y="126.39999999999999" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="46" xml:space="preserve">Welcome to VHS!</text>
+    <text x="16" y="190.79999999999998" fill="#d670d6" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="46" xml:space="preserve">❯</text>
+    <text x="43.599999999999994" y="190.79999999999998" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="46" xml:space="preserve"> </text>
+    <rect class="cursor f25" x="71.19999999999999" y="144.79999999999998" width="27.599999999999998" height="64.39999999999999" fill="#ffffff" opacity="0.7"/>
+  </g>
+
+    </g>
+    <g id="frame-26">
+      
+  <style>
+    .cursor {
+      animation: blink 1s step-end infinite;
+    }
+    .cursor-active {
+      /* No animation - solid cursor during typing/movement */
+    }
+    @keyframes blink {
+      0%, 50% { opacity: 1; }
+      50.01%, 100% { opacity: 0; }
+    }
+  </style>
+  <rect width="695" height="226" fill="#1e1e1e" rx="6" ry="6"/>
+  <g class="content f26">
+    <text x="16" y="62" fill="#d670d6" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="46" xml:space="preserve">❯</text>
+    <text x="43.599999999999994" y="62" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="46" xml:space="preserve"> echo &apos;Welcome to VHS!&apos;</text>
+    <text x="16" y="126.39999999999999" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="46" xml:space="preserve">Welcome to VHS!</text>
+    <text x="16" y="190.79999999999998" fill="#d670d6" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="46" xml:space="preserve">❯</text>
+    <text x="43.599999999999994" y="190.79999999999998" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="46" xml:space="preserve"> </text>
+    <rect class="cursor f26" x="71.19999999999999" y="144.79999999999998" width="27.599999999999998" height="64.39999999999999" fill="#ffffff" opacity="0.7"/>
+  </g>
+
+    </g>
+    <g id="frame-27">
+      
+  <style>
+    .cursor {
+      animation: blink 1s step-end infinite;
+    }
+    .cursor-active {
+      /* No animation - solid cursor during typing/movement */
+    }
+    @keyframes blink {
+      0%, 50% { opacity: 1; }
+      50.01%, 100% { opacity: 0; }
+    }
+  </style>
+  <rect width="695" height="226" fill="#1e1e1e" rx="6" ry="6"/>
+  <g class="content f27">
+    <text x="16" y="62" fill="#d670d6" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="46" xml:space="preserve">❯</text>
+    <text x="43.599999999999994" y="62" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="46" xml:space="preserve"> echo &apos;Welcome to VHS!&apos;</text>
+    <text x="16" y="126.39999999999999" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="46" xml:space="preserve">Welcome to VHS!</text>
+    <text x="16" y="190.79999999999998" fill="#d670d6" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="46" xml:space="preserve">❯</text>
+    <text x="43.599999999999994" y="190.79999999999998" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="46" xml:space="preserve"> </text>
+  </g>
+
+    </g>
+  </defs>
+
+  
+  <use href="#frame-0" class="frame frame-0" />
+  <use href="#frame-1" class="frame frame-1" />
+  <use href="#frame-2" class="frame frame-2" />
+  <use href="#frame-3" class="frame frame-3" />
+  <use href="#frame-4" class="frame frame-4" />
+  <use href="#frame-5" class="frame frame-5" />
+  <use href="#frame-6" class="frame frame-6" />
+  <use href="#frame-7" class="frame frame-7" />
+  <use href="#frame-8" class="frame frame-8" />
+  <use href="#frame-9" class="frame frame-9" />
+  <use href="#frame-10" class="frame frame-10" />
+  <use href="#frame-11" class="frame frame-11" />
+  <use href="#frame-12" class="frame frame-12" />
+  <use href="#frame-13" class="frame frame-13" />
+  <use href="#frame-14" class="frame frame-14" />
+  <use href="#frame-15" class="frame frame-15" />
+  <use href="#frame-16" class="frame frame-16" />
+  <use href="#frame-17" class="frame frame-17" />
+  <use href="#frame-18" class="frame frame-18" />
+  <use href="#frame-19" class="frame frame-19" />
+  <use href="#frame-20" class="frame frame-20" />
+  <use href="#frame-21" class="frame frame-21" />
+  <use href="#frame-22" class="frame frame-22" />
+  <use href="#frame-23" class="frame frame-23" />
+  <use href="#frame-24" class="frame frame-24" />
+  <use href="#frame-25" class="frame frame-25" />
+  <use href="#frame-26" class="frame frame-26" />
+  <use href="#frame-27" class="frame frame-27" />
+</svg>
