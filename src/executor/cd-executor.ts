@@ -42,6 +42,7 @@ export interface SimulatorContext {
   autoHeight: boolean; // Whether height should be auto-calculated
   maxLineLength: number; // Track max line length for auto-width
   maxLines: number; // Track max lines for auto-height
+  isExecutingCommand: boolean; // True when running a command (don't show prompt)
 }
 
 export interface CDExecutorOptions {
@@ -83,6 +84,7 @@ export class CDExecutor {
       autoHeight: !options.height,
       maxLineLength: 0,
       maxLines: 0,
+      isExecutingCommand: false,
     };
   }
 
@@ -91,8 +93,33 @@ export class CDExecutor {
    */
   private captureFrame(showCursor: boolean = true, activeCursor: boolean = false): void {
     const buffer = [...this.context.lines];
-    // Prepend prefix to current line for display only
-    const displayLine = this.context.promptPrefix + this.context.currentLine;
+
+    // Only show prefix when not executing a command (like a real terminal)
+    // During command execution, just show the current line content (output)
+    let displayLine: string;
+    let adjustedCursorX: number;
+    let adjustedSelectionStart: number | undefined;
+    let adjustedSelectionEnd: number | undefined;
+
+    if (this.context.isExecutingCommand) {
+      // During command execution, no prefix
+      displayLine = this.context.currentLine;
+      adjustedCursorX = this.context.cursorX;
+      adjustedSelectionStart = this.context.selectionStart;
+      adjustedSelectionEnd = this.context.selectionEnd;
+    } else {
+      // Normal mode: prepend prefix to current line for display
+      displayLine = this.context.promptPrefix + this.context.currentLine;
+      const prefixLength = this.stripAnsi(this.context.promptPrefix).length;
+      adjustedCursorX = this.context.cursorX + prefixLength;
+      adjustedSelectionStart = this.context.selectionStart !== undefined
+        ? this.context.selectionStart + prefixLength
+        : undefined;
+      adjustedSelectionEnd = this.context.selectionEnd !== undefined
+        ? this.context.selectionEnd + prefixLength
+        : undefined;
+    }
+
     buffer[this.context.cursorY] = displayLine;
 
     // Track max dimensions for auto-sizing
@@ -107,16 +134,6 @@ export class CDExecutor {
         this.context.maxLines = buffer.length;
       }
     }
-
-    // Adjust cursor and selection positions to account for prefix
-    const prefixLength = this.stripAnsi(this.context.promptPrefix).length;
-    const adjustedCursorX = this.context.cursorX + prefixLength;
-    const adjustedSelectionStart = this.context.selectionStart !== undefined
-      ? this.context.selectionStart + prefixLength
-      : undefined;
-    const adjustedSelectionEnd = this.context.selectionEnd !== undefined
-      ? this.context.selectionEnd + prefixLength
-      : undefined;
 
     const state = createTerminalState(
       buffer.join('\n'),
@@ -203,13 +220,20 @@ export class CDExecutor {
       this.context.lines[this.context.cursorY] = '';
     }
 
-    // Capture frame showing command was submitted (cursor on new line)
-    await new Promise((resolve) => setTimeout(resolve, 100));
-    this.captureFrame(true);
-
     // Execute the command if it's not empty
     if (command) {
+      // Set executing flag - don't show prompt during command execution
+      this.context.isExecutingCommand = true;
+
+      // Capture frame showing command was submitted (no prompt on new line)
+      await new Promise((resolve) => setTimeout(resolve, 100));
+      this.captureFrame(false); // Hide cursor during command execution
+
       await this.executeCommandStreaming(command);
+    } else {
+      // Empty command - just show the new prompt line
+      await new Promise((resolve) => setTimeout(resolve, 100));
+      this.captureFrame(true);
     }
   }
 
@@ -242,7 +266,7 @@ export class CDExecutor {
           // Capture frame if enough time has passed (for animations)
           const now = Date.now();
           if (now - lastFrameTime >= FRAME_INTERVAL) {
-            this.captureFrame(true);
+            this.captureFrame(false); // No cursor during output
             lastFrameTime = now;
           }
         }
@@ -264,11 +288,12 @@ export class CDExecutor {
           this.context.lines[this.context.cursorY] = '';
         }
 
-        // Reset for new command (prefix is added during rendering)
+        // Command finished - show prompt again
+        this.context.isExecutingCommand = false;
         this.context.currentLine = '';
         this.context.cursorX = 0;
 
-        // Capture final frame with cursor on new line
+        // Capture final frame with cursor on new line (prompt now visible)
         setTimeout(() => {
           this.captureFrame(true);
           resolve();
@@ -280,7 +305,8 @@ export class CDExecutor {
         this.context.cursorY++;
         this.context.lines[this.context.cursorY] = '';
 
-        // Reset for new command (prefix is added during rendering)
+        // Command finished - show prompt again
+        this.context.isExecutingCommand = false;
         this.context.currentLine = '';
         this.context.cursorX = 0;
 
@@ -535,11 +561,9 @@ export class CDExecutor {
 
   /**
    * Execute word deletion (Cmd/Ctrl + Backspace)
+   * Deletes entire word instantly like a real terminal
    */
   private async executeWordDelete(): Promise<void> {
-    const delay = this.context.typingSpeed;
-    const strippedLine = this.stripAnsi(this.context.currentLine);
-
     // Find word boundary to the left
     const wordStart = this.findWordBoundary('left', this.context.cursorX, this.context.currentLine);
 
@@ -548,16 +572,14 @@ export class CDExecutor {
 
     if (deleteCount <= 0) return;
 
-    // Animate deletion character by character
-    for (let i = 0; i < deleteCount; i++) {
-      if (this.context.currentLine.length > 0) {
-        this.context.currentLine = this.context.currentLine.slice(0, -1);
-        this.context.cursorX--;
+    // Delete the word instantly (not character by character)
+    const before = this.context.currentLine.substring(0, wordStart);
+    const after = this.context.currentLine.substring(this.context.cursorX);
+    this.context.currentLine = before + after;
+    this.context.cursorX = wordStart;
 
-        await new Promise((resolve) => setTimeout(resolve, delay / 2)); // Faster than regular backspace
-        this.captureFrame(true, true);
-      }
-    }
+    await new Promise((resolve) => setTimeout(resolve, 50));
+    this.captureFrame(true, true);
   }
 
   /**
@@ -756,7 +778,15 @@ export class CDExecutor {
       if (key === 'Template') this.context.template = value as any;
       if (key === 'Theme') {
         // Look up theme from shellfie themes
-        const themeName = value as keyof typeof themes;
+        // Support both camelCase (githubDark) and kebab-case (github-dark)
+        let themeName = value as keyof typeof themes;
+        if (!themes[themeName]) {
+          // Try converting kebab-case to camelCase
+          const camelCase = value.replace(/-([a-z])/g, (_, letter) => letter.toUpperCase()) as keyof typeof themes;
+          if (themes[camelCase]) {
+            themeName = camelCase;
+          }
+        }
         if (themes[themeName]) {
           this.context.theme = themes[themeName];
         }

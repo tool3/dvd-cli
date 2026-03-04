@@ -1,13 +1,13 @@
 # Rainbow Text Demo
 # Beautiful gradient color effect in terminal
 
-Output rainbow.svg
+Output examples/rainbow.svg
 
 Set Width 1000
 Set Height 400
 Set FontSize 18
 Set Title "Rainbow Colors"
-Set PromptPrefix "\x1b[95m✨\x1b[0m "
+Set PromptPrefix "\x1b[95m✨\x1b[0m  "
 
 Type "echo '\x1b[91m█\x1b[93m█\x1b[92m█\x1b[96m█\x1b[94m█\x1b[95m█\x1b[0m Rainbow!'"
 Sleep 600ms

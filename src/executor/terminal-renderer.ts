@@ -88,10 +88,39 @@ export function renderTerminalSVG(state: TerminalState, options: RenderOptions =
   <g class="title-bar">
     <rect width="${svgWidth}" height="${headerHeight}" fill="${bgColor}" rx="10" ry="10"/>
     <rect y="29" width="${svgWidth}" height="10" fill="${bgColor}"/>
-    <line x1="0" y1="39.5" x2="${svgWidth}" y2="39.5" stroke="#d4d4d41a" stroke-width="1"/>
+    <line x1="0" y1="39.5" x2="${svgWidth}" y2="39.5" stroke="#d4d4d41a" stroke-width="1"/>`;
+
+    if (options.template === 'windows') {
+      // Windows-style controls (right side): minimize, maximize, close
+      const controlY = 19.5;
+      const controlSpacing = 46;
+      const startX = svgWidth - 16;
+
+      // Close button (X)
+      svg += `
+    <g transform="translate(${startX}, ${controlY})">
+      <line x1="-5" y1="-5" x2="5" y2="5" stroke="#e81123" stroke-width="1.5"/>
+      <line x1="5" y1="-5" x2="-5" y2="5" stroke="#e81123" stroke-width="1.5"/>
+    </g>`;
+
+      // Maximize button (square)
+      svg += `
+    <g transform="translate(${startX - controlSpacing}, ${controlY})">
+      <rect x="-5" y="-5" width="10" height="10" fill="none" stroke="${textColor}" stroke-width="1" opacity="0.6"/>
+    </g>`;
+
+      // Minimize button (line)
+      svg += `
+    <g transform="translate(${startX - controlSpacing * 2}, ${controlY})">
+      <line x1="-5" y1="0" x2="5" y2="0" stroke="${textColor}" stroke-width="1.5" opacity="0.6"/>
+    </g>`;
+    } else {
+      // macOS-style traffic lights (left side)
+      svg += `
     <circle cx="16" cy="19.5" r="6" fill="#ff5f56"/>
     <circle cx="36" cy="19.5" r="6" fill="#ffbd2e"/>
     <circle cx="56" cy="19.5" r="6" fill="#27c93f"/>`;
+    }
 
     if (options.title) {
       svg += `
