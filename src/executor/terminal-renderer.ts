@@ -26,6 +26,12 @@ export interface RenderOptions {
   theme?: Theme;
   padding?: number;
   watermark?: string;
+  // Theme/style overrides
+  headerBackground?: string;
+  footerBackground?: string;
+  borderColor?: string;
+  borderWidth?: number;
+  borderRadius?: number;
 }
 
 /**
@@ -60,10 +66,13 @@ export function renderTerminalSVG(state: TerminalState, options: RenderOptions =
   const template = getTemplate(options.template);
   const shell = template.shell;
 
-  const padding = options.padding || shell.padding;
+  // Apply overrides or use template/theme defaults
+  const padding = options.padding ?? shell.padding;
   const headerHeight = shell.titleBar ? shell.titleBarHeight : 0;
   const lineHeight = fontSize * 1.4;
-  const borderRadius = shell.borderRadius;
+  const borderRadius = options.borderRadius ?? shell.borderRadius;
+  const borderWidth = options.borderWidth ?? (shell.border ? shell.borderWidth : 0);
+  const borderColor = options.borderColor ?? shell.borderColor;
 
   // Calculate character width (monospace approximation)
   const charWidth = fontSize * 0.6;
@@ -71,8 +80,10 @@ export function renderTerminalSVG(state: TerminalState, options: RenderOptions =
   // Use provided theme or default to dark theme
   const theme = options.theme || darkTheme;
 
-  // Background and chrome
+  // Background and chrome colors (with overrides)
   const bgColor = theme.background;
+  const headerBgColor = options.headerBackground ?? (theme as any).headerBackground ?? bgColor;
+  const footerBgColor = options.footerBackground ?? (theme as any).footerBackground ?? bgColor;
   const textColor = theme.foreground;
   const cursorColor = theme.cursor;
 
@@ -100,10 +111,10 @@ export function renderTerminalSVG(state: TerminalState, options: RenderOptions =
   svg += `
   <rect width="${svgWidth}" height="${svgHeight}" fill="${bgColor}" rx="${borderRadius}" ry="${borderRadius}"/>`;
 
-  // Border (if template has it)
-  if (shell.border && shell.borderWidth > 0) {
+  // Border (if template has it or override is set)
+  if (borderWidth > 0) {
     svg += `
-  <rect width="${svgWidth}" height="${svgHeight}" fill="none" stroke="${shell.borderColor}" stroke-width="${shell.borderWidth}" rx="${borderRadius}" ry="${borderRadius}"/>`;
+  <rect width="${svgWidth}" height="${svgHeight}" fill="none" stroke="${borderColor}" stroke-width="${borderWidth}" rx="${borderRadius}" ry="${borderRadius}"/>`;
   }
 
   // Header/title bar (if template has it)
@@ -113,8 +124,8 @@ export function renderTerminalSVG(state: TerminalState, options: RenderOptions =
 
     svg += `
   <g class="title-bar">
-    <rect width="${svgWidth}" height="${headerHeight}" fill="${bgColor}" rx="${borderRadius}" ry="${borderRadius}"/>
-    <rect y="${headerHeight - 10}" width="${svgWidth}" height="10" fill="${bgColor}"/>
+    <rect width="${svgWidth}" height="${headerHeight}" fill="${headerBgColor}" rx="${borderRadius}" ry="${borderRadius}"/>
+    <rect y="${headerHeight - 10}" width="${svgWidth}" height="10" fill="${headerBgColor}"/>
     <line x1="0" y1="${headerHeight + 0.5}" x2="${svgWidth}" y2="${headerHeight + 0.5}" stroke="#d4d4d41a" stroke-width="1"/>`;
 
     if (shell.controlsPosition === 'right') {
@@ -235,12 +246,19 @@ export function renderTerminalSVG(state: TerminalState, options: RenderOptions =
   svg += `
   </g>`;
 
-  // Render watermark if provided (after content, before closing svg)
+  // Render watermark/footer if provided (after content, before closing svg)
   if (options.watermark) {
     // Parse ANSI codes in watermark
     const parsedWatermark = parseAnsi(options.watermark);
     const watermarkFontSize = 12;
+    const footerHeight = lineHeight + padding;
     const watermarkY = svgHeight - padding;
+
+    // Render footer background if different from main background
+    if (footerBgColor !== bgColor) {
+      svg += `
+  <rect y="${svgHeight - footerHeight}" width="${svgWidth}" height="${footerHeight}" fill="${footerBgColor}"/>`;
+    }
 
     if (parsedWatermark.length > 0 && parsedWatermark[0].spans.length > 0) {
       // Calculate watermark width to right-align it

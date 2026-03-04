@@ -8,7 +8,7 @@ import { writeFileSync } from 'node:fs';
 import { resolve } from 'node:path';
 import type { CDCommand, CDScript } from '../parser/cd-parser';
 import { renderTerminalSVG, createTerminalState, type TerminalState } from './terminal-renderer';
-import { themes, type Theme, shellfie } from 'shellfie';
+import { themes, type Theme, shellfie, templates } from 'shellfie';
 
 export interface TerminalFrame {
   timestamp: number;
@@ -45,6 +45,13 @@ export interface SimulatorContext {
   isExecutingCommand: boolean; // True when running a command (don't show prompt)
   scroll: boolean; // Enable scrolling when content exceeds terminal height
   scrollOffset: number; // Current scroll offset (first visible line)
+  // Theme overrides
+  headerBackground?: string; // Override header/title bar background color
+  footerBackground?: string; // Override footer background color
+  borderColor?: string; // Override border color
+  borderWidth?: number; // Override border width
+  borderRadius?: number; // Override border radius
+  padding?: number; // Override content padding
 }
 
 export interface CDExecutorOptions {
@@ -78,7 +85,7 @@ export class CDExecutor {
       fontSize: options.fontSize || 14,
       typingSpeed: 50, // Default 50ms per character
       title: options.title,
-      template: options.template || 'macos',
+      template: options.template || 'minimal',
       promptPrefix: '\x1b[95m❯\x1b[0m ', // Default: pink > character
       cursorBlink: true, // Default: cursor blinks
       screenshotCounter: 0,
@@ -87,7 +94,7 @@ export class CDExecutor {
       maxLineLength: 0,
       maxLines: 0,
       isExecutingCommand: false,
-      scroll: false, // Default: no scrolling (content grows)
+      scroll: true, // Default: scrolling enabled (like a real terminal)
       scrollOffset: 0,
     };
   }
@@ -96,8 +103,11 @@ export class CDExecutor {
    * Calculate the number of visible lines based on terminal height
    */
   private getVisibleLineCount(): number {
-    const headerHeight = this.context.template === 'minimal' ? 0 : 39;
-    const padding = 16;
+    // Get template from shellfie for accurate header height
+    const templateName = this.context.template || 'minimal';
+    const template = templates[templateName as keyof typeof templates] || templates.minimal;
+    const headerHeight = template.shell.titleBar ? template.shell.titleBarHeight : 0;
+    const padding = template.shell.padding;
     const lineHeight = this.context.fontSize * 1.4;
     const watermarkHeight = this.context.watermark ? lineHeight : 0;
     const contentHeight = this.context.height - headerHeight - padding - watermarkHeight - padding;
@@ -204,6 +214,12 @@ export class CDExecutor {
       template: this.context.template,
       theme: this.context.theme,
       watermark: this.context.watermark,
+      headerBackground: this.context.headerBackground,
+      footerBackground: this.context.footerBackground,
+      borderColor: this.context.borderColor,
+      borderWidth: this.context.borderWidth,
+      borderRadius: this.context.borderRadius,
+      padding: this.context.padding,
     });
 
     const frame: TerminalFrame = {
@@ -868,6 +884,24 @@ export class CDExecutor {
           this.context.autoHeight = false;
         }
       }
+      if (key === 'HeaderBackground') {
+        this.context.headerBackground = value;
+      }
+      if (key === 'FooterBackground') {
+        this.context.footerBackground = value;
+      }
+      if (key === 'BorderColor') {
+        this.context.borderColor = value;
+      }
+      if (key === 'BorderWidth') {
+        this.context.borderWidth = parseInt(value, 10);
+      }
+      if (key === 'BorderRadius') {
+        this.context.borderRadius = parseInt(value, 10);
+      }
+      if (key === 'Padding') {
+        this.context.padding = parseInt(value, 10);
+      }
     }
 
     // Store output path for auto-naming screenshots
@@ -944,6 +978,12 @@ export class CDExecutor {
         template: this.context.template,
         theme: this.context.theme,
         watermark: this.context.watermark,
+        headerBackground: this.context.headerBackground,
+        footerBackground: this.context.footerBackground,
+        borderColor: this.context.borderColor,
+        borderWidth: this.context.borderWidth,
+        borderRadius: this.context.borderRadius,
+        padding: this.context.padding,
       });
     }
   }
