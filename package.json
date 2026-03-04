@@ -1,0 +1,54 @@
+{
+  "name": "dvd-cli",
+  "version": "1.0.0",
+  "description": "Create animated SVG terminal recordings from .cd scripts",
+  "type": "commonjs",
+  "bin": {
+    "dvd": "dist/cli.js"
+  },
+  "main": "dist/cli.js",
+  "types": "dist/cli.d.ts",
+  "files": [
+    "dist",
+    "examples"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "dev": "tsc --watch",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "terminal",
+    "animation",
+    "svg",
+    "recording",
+    "demo",
+    "terminal-recording",
+    "animated-svg",
+    "cd",
+    "cinema-display",
+    "vhs",
+    "asciinema"
+  ],
+  "dependencies": {
+    "shellfie": "^2.0.2",
+    "yargs": "^17.7.2"
+  },
+  "devDependencies": {
+    "@types/node": "^20.10.0",
+    "@types/yargs": "^17.0.32",
+    "typescript": "^5.3.0",
+    "vitest": "^4.0.18"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tool3/dvd.git"
+  },
+  "author": "tool3",
+  "license": "MIT"
+}

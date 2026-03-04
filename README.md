@@ -1,0 +1,206 @@
+# dvd - Cinema Display for Terminal Recordings
+
+Create beautiful animated SVG terminal recordings from `.cd` scripts.
+
+Inspired by [VHS](https://github.com/charmbracelet/vhs), dvd generates pure SVG animations without requiring ffmpeg, ttyd, or a browser. Perfect for documentation, demos, and showcasing CLI tools in GitHub READMEs.
+
+## Features
+
+- 🎬 **Pure SVG animations** - No video encoding, just CSS keyframes
+- 🚀 **Zero external dependencies** - No ffmpeg, ttyd, or Chromium required
+- 📝 **VHS-inspired syntax** - Familiar declarative scripting format
+- 🎨 **13 built-in themes** - Dracula, Nord, Tokyo Night, and more
+- ⌨️ **Keyboard navigation** - Full support for text selection, word movement, shortcuts
+- 📸 **Screenshots** - Capture static frames during animation
+- 🔧 **Customizable** - Fonts, dimensions, themes, templates
+
+## Installation
+
+```bash
+npm install -g dvd-cli
+```
+
+## Quick Start
+
+Create a new script:
+
+```bash
+dvd new demo
+```
+
+This creates `demo.cd`:
+
+```
+# Basic CD Script
+Output demo.svg
+
+Set Title "My Terminal Demo"
+Set Theme dracula
+Set Width 800
+Set Height 600
+
+Type "echo 'Hello, Cinema Display!'"
+Enter
+Sleep 1s
+```
+
+Render it to SVG:
+
+```bash
+dvd demo.cd
+```
+
+## Commands
+
+### dvd [file]
+
+Render a `.cd` script to animated SVG (default command).
+
+```bash
+dvd script.cd
+dvd script.cd -o output.svg
+dvd script.cd --verbose
+dvd script.cd --no-loop
+```
+
+**Options:**
+- `-o, --output <path>` - Output SVG file path
+- `-v, --verbose` - Show detailed progress
+- `-l, --loop` - Loop animation (default: true)
+- `-p, --pause-at-end <ms>` - Pause duration at end (default: 1000)
+- `-f, --fps <number>` - Frames per second
+
+### dvd new [name]
+
+Create a new `.cd` script from a template.
+
+```bash
+dvd new my-demo
+dvd new showcase --template showcase
+dvd new keyboard --template keyboard
+```
+
+**Templates:**
+- `basic` - Simple demo (default)
+- `showcase` - Feature showcase with screenshots
+- `keyboard` - Keyboard navigation demo
+
+### dvd themes
+
+List all available themes.
+
+```bash
+dvd themes
+```
+
+### dvd validate <file>
+
+Validate a `.cd` script.
+
+```bash
+dvd validate script.cd
+```
+
+## .cd Format
+
+See [FORMAT.md](FORMAT.md) for complete specification.
+
+### Basic Commands
+
+```
+# Configuration
+Output demo.svg
+Set Width 800
+Set Height 600
+Set FontSize 16
+Set Theme dracula
+Set Title "My Demo"
+Set TypingSpeed 50
+
+# Input simulation
+Type "echo 'Hello World'"
+Enter
+Backspace 5
+Space
+Tab
+
+# Arrow keys
+Left
+Right
+Up
+Down
+
+# Keyboard shortcuts
+Shift+Left
+Shift+Right
+Alt+Left
+Alt+Right
+Cmd+Left
+Cmd+Right
+Cmd+Backspace
+
+# Timing
+Sleep 1s
+Sleep 500ms
+
+# Utilities
+Screenshot frame.svg
+```
+
+## Examples
+
+See the [examples/](examples/) directory for complete working examples:
+
+- `ansi-colors.cd` - ANSI color demonstration
+- `keyboard-navigation-demo.cd` - Text selection, word movement, shortcuts
+- `themes.cd` - All available themes
+- `custom-prompt.cd` - Custom shell prompts
+- And more...
+
+## Themes
+
+Available themes:
+- catppuccinMocha
+- dracula
+- githubDark
+- githubLight
+- gruvboxDark
+- gruvboxLight
+- monokai
+- nord
+- oneDark
+- solarizedDark
+- solarizedLight
+- tokyoNight
+- terminal
+
+## Templates
+
+Available templates:
+- **macos** - macOS-style terminal with traffic light buttons (default)
+- **windows** - Windows terminal style
+- **minimal** - Clean, minimal design
+
+## Related
+
+- [shellfie](https://github.com/tool3/shellfie) - The core library for static terminal screenshots
+- [shellfie-cli](https://github.com/tool3/shellfie-cli) - CLI for static SVG generation from terminal output
+- [VHS](https://github.com/charmbracelet/vhs) - Similar tool that generates GIF/MP4 terminal recordings
+
+## Why dvd?
+
+**DVD** stands for "**D**ynamic **V**ideo **D**isplay", but we use `.cd` files (Cinema Display) because they're more fun and don't conflict with actual DVD video files.
+
+Unlike VHS which uses a browser and ffmpeg to generate video files, dvd:
+- Generates pure SVG with CSS animations (scalable, lightweight)
+- Runs anywhere without external dependencies
+- Produces smaller files (SVG vs GIF/MP4)
+- Works perfectly in GitHub READMEs
+
+## License
+
+MIT
+
+## Author
+
+tool3
