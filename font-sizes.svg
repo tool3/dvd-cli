@@ -1,0 +1,3577 @@
+<svg width="1200" height="700" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    
+    @keyframes frame-0-anim {
+      0% { opacity: 1; }
+      0.71% { opacity: 1; }
+      0.72% { opacity: 0; }
+      100% { opacity: 0; }
+    }@keyframes frame-1-anim {
+      0% { opacity: 0; }
+      0.01% { opacity: 0; }
+      0.71% { opacity: 1; }
+      1.43% { opacity: 1; }
+      1.44% { opacity: 0; }
+      100% { opacity: 0; }
+    }
+    @keyframes frame-2-anim {
+      0% { opacity: 0; }
+      0.71% { opacity: 0; }
+      1.43% { opacity: 1; }
+      2.12% { opacity: 1; }
+      2.13% { opacity: 0; }
+      100% { opacity: 0; }
+    }
+    @keyframes frame-3-anim {
+      0% { opacity: 0; }
+      1.43% { opacity: 0; }
+      2.12% { opacity: 1; }
+      2.82% { opacity: 1; }
+      2.83% { opacity: 0; }
+      100% { opacity: 0; }
+    }
+    @keyframes frame-4-anim {
+      0% { opacity: 0; }
+      2.12% { opacity: 0; }
+      2.82% { opacity: 1; }
+      3.54% { opacity: 1; }
+      3.55% { opacity: 0; }
+      100% { opacity: 0; }
+    }
+    @keyframes frame-5-anim {
+      0% { opacity: 0; }
+      2.82% { opacity: 0; }
+      3.54% { opacity: 1; }
+      4.22% { opacity: 1; }
+      4.23% { opacity: 0; }
+      100% { opacity: 0; }
+    }
+    @keyframes frame-6-anim {
+      0% { opacity: 0; }
+      3.54% { opacity: 0; }
+      4.22% { opacity: 1; }
+      4.92% { opacity: 1; }
+      4.93% { opacity: 0; }
+      100% { opacity: 0; }
+    }
+    @keyframes frame-7-anim {
+      0% { opacity: 0; }
+      4.22% { opacity: 0; }
+      4.92% { opacity: 1; }
+      5.63% { opacity: 1; }
+      5.64% { opacity: 0; }
+      100% { opacity: 0; }
+    }
+    @keyframes frame-8-anim {
+      0% { opacity: 0; }
+      4.92% { opacity: 0; }
+      5.63% { opacity: 1; }
+      6.32% { opacity: 1; }
+      6.33% { opacity: 0; }
+      100% { opacity: 0; }
+    }
+    @keyframes frame-9-anim {
+      0% { opacity: 0; }
+      5.63% { opacity: 0; }
+      6.32% { opacity: 1; }
+      7.00% { opacity: 1; }
+      7.01% { opacity: 0; }
+      100% { opacity: 0; }
+    }
+    @keyframes frame-10-anim {
+      0% { opacity: 0; }
+      6.32% { opacity: 0; }
+      7.00% { opacity: 1; }
+      7.70% { opacity: 1; }
+      7.71% { opacity: 0; }
+      100% { opacity: 0; }
+    }
+    @keyframes frame-11-anim {
+      0% { opacity: 0; }
+      7.00% { opacity: 0; }
+      7.70% { opacity: 1; }
+      8.40% { opacity: 1; }
+      8.41% { opacity: 0; }
+      100% { opacity: 0; }
+    }
+    @keyframes frame-12-anim {
+      0% { opacity: 0; }
+      7.70% { opacity: 0; }
+      8.40% { opacity: 1; }
+      9.12% { opacity: 1; }
+      9.13% { opacity: 0; }
+      100% { opacity: 0; }
+    }
+    @keyframes frame-13-anim {
+      0% { opacity: 0; }
+      8.40% { opacity: 0; }
+      9.12% { opacity: 1; }
+      9.81% { opacity: 1; }
+      9.82% { opacity: 0; }
+      100% { opacity: 0; }
+    }
+    @keyframes frame-14-anim {
+      0% { opacity: 0; }
+      9.12% { opacity: 0; }
+      9.81% { opacity: 1; }
+      10.51% { opacity: 1; }
+      10.52% { opacity: 0; }
+      100% { opacity: 0; }
+    }
+    @keyframes frame-15-anim {
+      0% { opacity: 0; }
+      9.81% { opacity: 0; }
+      10.51% { opacity: 1; }
+      11.21% { opacity: 1; }
+      11.22% { opacity: 0; }
+      100% { opacity: 0; }
+    }
+    @keyframes frame-16-anim {
+      0% { opacity: 0; }
+      10.51% { opacity: 0; }
+      11.21% { opacity: 1; }
+      11.91% { opacity: 1; }
+      11.92% { opacity: 0; }
+      100% { opacity: 0; }
+    }
+    @keyframes frame-17-anim {
+      0% { opacity: 0; }
+      11.21% { opacity: 0; }
+      11.91% { opacity: 1; }
+      12.61% { opacity: 1; }
+      12.62% { opacity: 0; }
+      100% { opacity: 0; }
+    }
+    @keyframes frame-18-anim {
+      0% { opacity: 0; }
+      11.91% { opacity: 0; }
+      12.61% { opacity: 1; }
+      13.31% { opacity: 1; }
+      13.32% { opacity: 0; }
+      100% { opacity: 0; }
+    }
+    @keyframes frame-19-anim {
+      0% { opacity: 0; }
+      12.61% { opacity: 0; }
+      13.31% { opacity: 1; }
+      14.02% { opacity: 1; }
+      14.03% { opacity: 0; }
+      100% { opacity: 0; }
+    }
+    @keyframes frame-20-anim {
+      0% { opacity: 0; }
+      13.31% { opacity: 0; }
+      14.02% { opacity: 1; }
+      14.72% { opacity: 1; }
+      14.73% { opacity: 0; }
+      100% { opacity: 0; }
+    }
+    @keyframes frame-21-anim {
+      0% { opacity: 0; }
+      14.02% { opacity: 0; }
+      14.72% { opacity: 1; }
+      15.42% { opacity: 1; }
+      15.43% { opacity: 0; }
+      100% { opacity: 0; }
+    }
+    @keyframes frame-22-anim {
+      0% { opacity: 0; }
+      14.72% { opacity: 0; }
+      15.42% { opacity: 1; }
+      16.12% { opacity: 1; }
+      16.13% { opacity: 0; }
+      100% { opacity: 0; }
+    }
+    @keyframes frame-23-anim {
+      0% { opacity: 0; }
+      15.42% { opacity: 0; }
+      16.12% { opacity: 1; }
+      21.62% { opacity: 1; }
+      21.63% { opacity: 0; }
+      100% { opacity: 0; }
+    }
+    @keyframes frame-24-anim {
+      0% { opacity: 0; }
+      16.12% { opacity: 0; }
+      21.62% { opacity: 1; }
+      23.02% { opacity: 1; }
+      23.03% { opacity: 0; }
+      100% { opacity: 0; }
+    }
+    @keyframes frame-25-anim {
+      0% { opacity: 0; }
+      21.62% { opacity: 0; }
+      23.02% { opacity: 1; }
+      24.47% { opacity: 1; }
+      24.48% { opacity: 0; }
+      100% { opacity: 0; }
+    }
+    @keyframes frame-26-anim {
+      0% { opacity: 0; }
+      23.02% { opacity: 0; }
+      24.47% { opacity: 1; }
+      31.34% { opacity: 1; }
+      31.35% { opacity: 0; }
+      100% { opacity: 0; }
+    }
+    @keyframes frame-27-anim {
+      0% { opacity: 0; }
+      24.47% { opacity: 0; }
+      31.34% { opacity: 1; }
+      32.04% { opacity: 1; }
+      32.05% { opacity: 0; }
+      100% { opacity: 0; }
+    }
+    @keyframes frame-28-anim {
+      0% { opacity: 0; }
+      31.34% { opacity: 0; }
+      32.04% { opacity: 1; }
+      32.73% { opacity: 1; }
+      32.74% { opacity: 0; }
+      100% { opacity: 0; }
+    }
+    @keyframes frame-29-anim {
+      0% { opacity: 0; }
+      32.04% { opacity: 0; }
+      32.73% { opacity: 1; }
+      33.43% { opacity: 1; }
+      33.44% { opacity: 0; }
+      100% { opacity: 0; }
+    }
+    @keyframes frame-30-anim {
+      0% { opacity: 0; }
+      32.73% { opacity: 0; }
+      33.43% { opacity: 1; }
+      34.13% { opacity: 1; }
+      34.14% { opacity: 0; }
+      100% { opacity: 0; }
+    }
+    @keyframes frame-31-anim {
+      0% { opacity: 0; }
+      33.43% { opacity: 0; }
+      34.13% { opacity: 1; }
+      34.83% { opacity: 1; }
+      34.84% { opacity: 0; }
+      100% { opacity: 0; }
+    }
+    @keyframes frame-32-anim {
+      0% { opacity: 0; }
+      34.13% { opacity: 0; }
+      34.83% { opacity: 1; }
+      35.53% { opacity: 1; }
+      35.54% { opacity: 0; }
+      100% { opacity: 0; }
+    }
+    @keyframes frame-33-anim {
+      0% { opacity: 0; }
+      34.83% { opacity: 0; }
+      35.53% { opacity: 1; }
+      36.23% { opacity: 1; }
+      36.24% { opacity: 0; }
+      100% { opacity: 0; }
+    }
+    @keyframes frame-34-anim {
+      0% { opacity: 0; }
+      35.53% { opacity: 0; }
+      36.23% { opacity: 1; }
+      36.94% { opacity: 1; }
+      36.95% { opacity: 0; }
+      100% { opacity: 0; }
+    }
+    @keyframes frame-35-anim {
+      0% { opacity: 0; }
+      36.23% { opacity: 0; }
+      36.94% { opacity: 1; }
+      37.64% { opacity: 1; }
+      37.65% { opacity: 0; }
+      100% { opacity: 0; }
+    }
+    @keyframes frame-36-anim {
+      0% { opacity: 0; }
+      36.94% { opacity: 0; }
+      37.64% { opacity: 1; }
+      38.34% { opacity: 1; }
+      38.35% { opacity: 0; }
+      100% { opacity: 0; }
+    }
+    @keyframes frame-37-anim {
+      0% { opacity: 0; }
+      37.64% { opacity: 0; }
+      38.34% { opacity: 1; }
+      39.04% { opacity: 1; }
+      39.05% { opacity: 0; }
+      100% { opacity: 0; }
+    }
+    @keyframes frame-38-anim {
+      0% { opacity: 0; }
+      38.34% { opacity: 0; }
+      39.04% { opacity: 1; }
+      39.74% { opacity: 1; }
+      39.75% { opacity: 0; }
+      100% { opacity: 0; }
+    }
+    @keyframes frame-39-anim {
+      0% { opacity: 0; }
+      39.04% { opacity: 0; }
+      39.74% { opacity: 1; }
+      40.44% { opacity: 1; }
+      40.45% { opacity: 0; }
+      100% { opacity: 0; }
+    }
+    @keyframes frame-40-anim {
+      0% { opacity: 0; }
+      39.74% { opacity: 0; }
+      40.44% { opacity: 1; }
+      41.15% { opacity: 1; }
+      41.16% { opacity: 0; }
+      100% { opacity: 0; }
+    }
+    @keyframes frame-41-anim {
+      0% { opacity: 0; }
+      40.44% { opacity: 0; }
+      41.15% { opacity: 1; }
+      41.85% { opacity: 1; }
+      41.86% { opacity: 0; }
+      100% { opacity: 0; }
+    }
+    @keyframes frame-42-anim {
+      0% { opacity: 0; }
+      41.15% { opacity: 0; }
+      41.85% { opacity: 1; }
+      42.55% { opacity: 1; }
+      42.56% { opacity: 0; }
+      100% { opacity: 0; }
+    }
+    @keyframes frame-43-anim {
+      0% { opacity: 0; }
+      41.85% { opacity: 0; }
+      42.55% { opacity: 1; }
+      43.25% { opacity: 1; }
+      43.26% { opacity: 0; }
+      100% { opacity: 0; }
+    }
+    @keyframes frame-44-anim {
+      0% { opacity: 0; }
+      42.55% { opacity: 0; }
+      43.25% { opacity: 1; }
+      43.95% { opacity: 1; }
+      43.96% { opacity: 0; }
+      100% { opacity: 0; }
+    }
+    @keyframes frame-45-anim {
+      0% { opacity: 0; }
+      43.25% { opacity: 0; }
+      43.95% { opacity: 1; }
+      44.66% { opacity: 1; }
+      44.67% { opacity: 0; }
+      100% { opacity: 0; }
+    }
+    @keyframes frame-46-anim {
+      0% { opacity: 0; }
+      43.95% { opacity: 0; }
+      44.66% { opacity: 1; }
+      45.35% { opacity: 1; }
+      45.36% { opacity: 0; }
+      100% { opacity: 0; }
+    }
+    @keyframes frame-47-anim {
+      0% { opacity: 0; }
+      44.66% { opacity: 0; }
+      45.35% { opacity: 1; }
+      46.05% { opacity: 1; }
+      46.06% { opacity: 0; }
+      100% { opacity: 0; }
+    }
+    @keyframes frame-48-anim {
+      0% { opacity: 0; }
+      45.35% { opacity: 0; }
+      46.05% { opacity: 1; }
+      46.74% { opacity: 1; }
+      46.75% { opacity: 0; }
+      100% { opacity: 0; }
+    }
+    @keyframes frame-49-anim {
+      0% { opacity: 0; }
+      46.05% { opacity: 0; }
+      46.74% { opacity: 1; }
+      47.44% { opacity: 1; }
+      47.45% { opacity: 0; }
+      100% { opacity: 0; }
+    }
+    @keyframes frame-50-anim {
+      0% { opacity: 0; }
+      46.74% { opacity: 0; }
+      47.44% { opacity: 1; }
+      48.14% { opacity: 1; }
+      48.15% { opacity: 0; }
+      100% { opacity: 0; }
+    }
+    @keyframes frame-51-anim {
+      0% { opacity: 0; }
+      47.44% { opacity: 0; }
+      48.14% { opacity: 1; }
+      48.83% { opacity: 1; }
+      48.84% { opacity: 0; }
+      100% { opacity: 0; }
+    }
+    @keyframes frame-52-anim {
+      0% { opacity: 0; }
+      48.14% { opacity: 0; }
+      48.83% { opacity: 1; }
+      49.53% { opacity: 1; }
+      49.54% { opacity: 0; }
+      100% { opacity: 0; }
+    }
+    @keyframes frame-53-anim {
+      0% { opacity: 0; }
+      48.83% { opacity: 0; }
+      49.53% { opacity: 1; }
+      50.24% { opacity: 1; }
+      50.25% { opacity: 0; }
+      100% { opacity: 0; }
+    }
+    @keyframes frame-54-anim {
+      0% { opacity: 0; }
+      49.53% { opacity: 0; }
+      50.24% { opacity: 1; }
+      50.94% { opacity: 1; }
+      50.95% { opacity: 0; }
+      100% { opacity: 0; }
+    }
+    @keyframes frame-55-anim {
+      0% { opacity: 0; }
+      50.24% { opacity: 0; }
+      50.94% { opacity: 1; }
+      51.64% { opacity: 1; }
+      51.65% { opacity: 0; }
+      100% { opacity: 0; }
+    }
+    @keyframes frame-56-anim {
+      0% { opacity: 0; }
+      50.94% { opacity: 0; }
+      51.64% { opacity: 1; }
+      52.34% { opacity: 1; }
+      52.35% { opacity: 0; }
+      100% { opacity: 0; }
+    }
+    @keyframes frame-57-anim {
+      0% { opacity: 0; }
+      51.64% { opacity: 0; }
+      52.34% { opacity: 1; }
+      53.05% { opacity: 1; }
+      53.06% { opacity: 0; }
+      100% { opacity: 0; }
+    }
+    @keyframes frame-58-anim {
+      0% { opacity: 0; }
+      52.34% { opacity: 0; }
+      53.05% { opacity: 1; }
+      53.75% { opacity: 1; }
+      53.76% { opacity: 0; }
+      100% { opacity: 0; }
+    }
+    @keyframes frame-59-anim {
+      0% { opacity: 0; }
+      53.05% { opacity: 0; }
+      53.75% { opacity: 1; }
+      54.45% { opacity: 1; }
+      54.46% { opacity: 0; }
+      100% { opacity: 0; }
+    }
+    @keyframes frame-60-anim {
+      0% { opacity: 0; }
+      53.75% { opacity: 0; }
+      54.45% { opacity: 1; }
+      55.15% { opacity: 1; }
+      55.16% { opacity: 0; }
+      100% { opacity: 0; }
+    }
+    @keyframes frame-61-anim {
+      0% { opacity: 0; }
+      54.45% { opacity: 0; }
+      55.15% { opacity: 1; }
+      55.85% { opacity: 1; }
+      55.86% { opacity: 0; }
+      100% { opacity: 0; }
+    }
+    @keyframes frame-62-anim {
+      0% { opacity: 0; }
+      55.15% { opacity: 0; }
+      55.85% { opacity: 1; }
+      56.55% { opacity: 1; }
+      56.56% { opacity: 0; }
+      100% { opacity: 0; }
+    }
+    @keyframes frame-63-anim {
+      0% { opacity: 0; }
+      55.85% { opacity: 0; }
+      56.55% { opacity: 1; }
+      57.24% { opacity: 1; }
+      57.25% { opacity: 0; }
+      100% { opacity: 0; }
+    }
+    @keyframes frame-64-anim {
+      0% { opacity: 0; }
+      56.55% { opacity: 0; }
+      57.24% { opacity: 1; }
+      57.96% { opacity: 1; }
+      57.97% { opacity: 0; }
+      100% { opacity: 0; }
+    }
+    @keyframes frame-65-anim {
+      0% { opacity: 0; }
+      57.24% { opacity: 0; }
+      57.96% { opacity: 1; }
+      58.66% { opacity: 1; }
+      58.67% { opacity: 0; }
+      100% { opacity: 0; }
+    }
+    @keyframes frame-66-anim {
+      0% { opacity: 0; }
+      57.96% { opacity: 0; }
+      58.66% { opacity: 1; }
+      59.36% { opacity: 1; }
+      59.37% { opacity: 0; }
+      100% { opacity: 0; }
+    }
+    @keyframes frame-67-anim {
+      0% { opacity: 0; }
+      58.66% { opacity: 0; }
+      59.36% { opacity: 1; }
+      60.05% { opacity: 1; }
+      60.06% { opacity: 0; }
+      100% { opacity: 0; }
+    }
+    @keyframes frame-68-anim {
+      0% { opacity: 0; }
+      59.36% { opacity: 0; }
+      60.05% { opacity: 1; }
+      60.75% { opacity: 1; }
+      60.76% { opacity: 0; }
+      100% { opacity: 0; }
+    }
+    @keyframes frame-69-anim {
+      0% { opacity: 0; }
+      60.05% { opacity: 0; }
+      60.75% { opacity: 1; }
+      61.45% { opacity: 1; }
+      61.46% { opacity: 0; }
+      100% { opacity: 0; }
+    }
+    @keyframes frame-70-anim {
+      0% { opacity: 0; }
+      60.75% { opacity: 0; }
+      61.45% { opacity: 1; }
+      62.15% { opacity: 1; }
+      62.16% { opacity: 0; }
+      100% { opacity: 0; }
+    }
+    @keyframes frame-71-anim {
+      0% { opacity: 0; }
+      61.45% { opacity: 0; }
+      62.15% { opacity: 1; }
+      62.85% { opacity: 1; }
+      62.86% { opacity: 0; }
+      100% { opacity: 0; }
+    }
+    @keyframes frame-72-anim {
+      0% { opacity: 0; }
+      62.15% { opacity: 0; }
+      62.85% { opacity: 1; }
+      63.55% { opacity: 1; }
+      63.56% { opacity: 0; }
+      100% { opacity: 0; }
+    }
+    @keyframes frame-73-anim {
+      0% { opacity: 0; }
+      62.85% { opacity: 0; }
+      63.55% { opacity: 1; }
+      64.24% { opacity: 1; }
+      64.25% { opacity: 0; }
+      100% { opacity: 0; }
+    }
+    @keyframes frame-74-anim {
+      0% { opacity: 0; }
+      63.55% { opacity: 0; }
+      64.24% { opacity: 1; }
+      69.73% { opacity: 1; }
+      69.74% { opacity: 0; }
+      100% { opacity: 0; }
+    }
+    @keyframes frame-75-anim {
+      0% { opacity: 0; }
+      64.24% { opacity: 0; }
+      69.73% { opacity: 1; }
+      71.13% { opacity: 1; }
+      71.14% { opacity: 0; }
+      100% { opacity: 0; }
+    }
+    @keyframes frame-76-anim {
+      0% { opacity: 0; }
+      69.73% { opacity: 0; }
+      71.13% { opacity: 1; }
+      72.57% { opacity: 1; }
+      72.58% { opacity: 0; }
+      100% { opacity: 0; }
+    }
+    @keyframes frame-77-anim {
+      0% { opacity: 0; }
+      71.13% { opacity: 0; }
+      72.57% { opacity: 1; }
+      100.00% { opacity: 1; }
+      100.01% { opacity: 0; }
+      100% { opacity: 0; }
+    }
+    @keyframes frame-78-anim {
+      0% { opacity: 0; }
+      72.57% { opacity: 0; }
+      100.00% { opacity: 1; }
+      100.00% { opacity: 1; }
+      100.01% { opacity: 0; }
+      100% { opacity: 0; }
+    }
+    @keyframes frame-79-anim {
+      0% { opacity: 0; }
+      100.00% { opacity: 0; }
+      100.00% { opacity: 1; }
+      100.00% { opacity: 1; }
+      100.01% { opacity: 0; }
+      100% { opacity: 0; }
+    }
+
+    .frame {
+      animation-duration: 8.29s;
+      animation-timing-function: step-end;
+      animation-iteration-count: infinite;
+      animation-fill-mode: forwards;
+    }
+
+    
+    .frame-0 {
+      animation-name: frame-0-anim;
+    }
+    .frame-1 {
+      animation-name: frame-1-anim;
+    }
+    .frame-2 {
+      animation-name: frame-2-anim;
+    }
+    .frame-3 {
+      animation-name: frame-3-anim;
+    }
+    .frame-4 {
+      animation-name: frame-4-anim;
+    }
+    .frame-5 {
+      animation-name: frame-5-anim;
+    }
+    .frame-6 {
+      animation-name: frame-6-anim;
+    }
+    .frame-7 {
+      animation-name: frame-7-anim;
+    }
+    .frame-8 {
+      animation-name: frame-8-anim;
+    }
+    .frame-9 {
+      animation-name: frame-9-anim;
+    }
+    .frame-10 {
+      animation-name: frame-10-anim;
+    }
+    .frame-11 {
+      animation-name: frame-11-anim;
+    }
+    .frame-12 {
+      animation-name: frame-12-anim;
+    }
+    .frame-13 {
+      animation-name: frame-13-anim;
+    }
+    .frame-14 {
+      animation-name: frame-14-anim;
+    }
+    .frame-15 {
+      animation-name: frame-15-anim;
+    }
+    .frame-16 {
+      animation-name: frame-16-anim;
+    }
+    .frame-17 {
+      animation-name: frame-17-anim;
+    }
+    .frame-18 {
+      animation-name: frame-18-anim;
+    }
+    .frame-19 {
+      animation-name: frame-19-anim;
+    }
+    .frame-20 {
+      animation-name: frame-20-anim;
+    }
+    .frame-21 {
+      animation-name: frame-21-anim;
+    }
+    .frame-22 {
+      animation-name: frame-22-anim;
+    }
+    .frame-23 {
+      animation-name: frame-23-anim;
+    }
+    .frame-24 {
+      animation-name: frame-24-anim;
+    }
+    .frame-25 {
+      animation-name: frame-25-anim;
+    }
+    .frame-26 {
+      animation-name: frame-26-anim;
+    }
+    .frame-27 {
+      animation-name: frame-27-anim;
+    }
+    .frame-28 {
+      animation-name: frame-28-anim;
+    }
+    .frame-29 {
+      animation-name: frame-29-anim;
+    }
+    .frame-30 {
+      animation-name: frame-30-anim;
+    }
+    .frame-31 {
+      animation-name: frame-31-anim;
+    }
+    .frame-32 {
+      animation-name: frame-32-anim;
+    }
+    .frame-33 {
+      animation-name: frame-33-anim;
+    }
+    .frame-34 {
+      animation-name: frame-34-anim;
+    }
+    .frame-35 {
+      animation-name: frame-35-anim;
+    }
+    .frame-36 {
+      animation-name: frame-36-anim;
+    }
+    .frame-37 {
+      animation-name: frame-37-anim;
+    }
+    .frame-38 {
+      animation-name: frame-38-anim;
+    }
+    .frame-39 {
+      animation-name: frame-39-anim;
+    }
+    .frame-40 {
+      animation-name: frame-40-anim;
+    }
+    .frame-41 {
+      animation-name: frame-41-anim;
+    }
+    .frame-42 {
+      animation-name: frame-42-anim;
+    }
+    .frame-43 {
+      animation-name: frame-43-anim;
+    }
+    .frame-44 {
+      animation-name: frame-44-anim;
+    }
+    .frame-45 {
+      animation-name: frame-45-anim;
+    }
+    .frame-46 {
+      animation-name: frame-46-anim;
+    }
+    .frame-47 {
+      animation-name: frame-47-anim;
+    }
+    .frame-48 {
+      animation-name: frame-48-anim;
+    }
+    .frame-49 {
+      animation-name: frame-49-anim;
+    }
+    .frame-50 {
+      animation-name: frame-50-anim;
+    }
+    .frame-51 {
+      animation-name: frame-51-anim;
+    }
+    .frame-52 {
+      animation-name: frame-52-anim;
+    }
+    .frame-53 {
+      animation-name: frame-53-anim;
+    }
+    .frame-54 {
+      animation-name: frame-54-anim;
+    }
+    .frame-55 {
+      animation-name: frame-55-anim;
+    }
+    .frame-56 {
+      animation-name: frame-56-anim;
+    }
+    .frame-57 {
+      animation-name: frame-57-anim;
+    }
+    .frame-58 {
+      animation-name: frame-58-anim;
+    }
+    .frame-59 {
+      animation-name: frame-59-anim;
+    }
+    .frame-60 {
+      animation-name: frame-60-anim;
+    }
+    .frame-61 {
+      animation-name: frame-61-anim;
+    }
+    .frame-62 {
+      animation-name: frame-62-anim;
+    }
+    .frame-63 {
+      animation-name: frame-63-anim;
+    }
+    .frame-64 {
+      animation-name: frame-64-anim;
+    }
+    .frame-65 {
+      animation-name: frame-65-anim;
+    }
+    .frame-66 {
+      animation-name: frame-66-anim;
+    }
+    .frame-67 {
+      animation-name: frame-67-anim;
+    }
+    .frame-68 {
+      animation-name: frame-68-anim;
+    }
+    .frame-69 {
+      animation-name: frame-69-anim;
+    }
+    .frame-70 {
+      animation-name: frame-70-anim;
+    }
+    .frame-71 {
+      animation-name: frame-71-anim;
+    }
+    .frame-72 {
+      animation-name: frame-72-anim;
+    }
+    .frame-73 {
+      animation-name: frame-73-anim;
+    }
+    .frame-74 {
+      animation-name: frame-74-anim;
+    }
+    .frame-75 {
+      animation-name: frame-75-anim;
+    }
+    .frame-76 {
+      animation-name: frame-76-anim;
+    }
+    .frame-77 {
+      animation-name: frame-77-anim;
+    }
+    .frame-78 {
+      animation-name: frame-78-anim;
+    }
+    .frame-79 {
+      animation-name: frame-79-anim;
+    }
+  </style>
+
+  <defs>
+    
+    <g id="frame-0">
+      
+  <style>
+    .cursor {
+      animation: blink 1s step-end infinite;
+    }
+    .cursor-active {
+      /* No animation - solid cursor during typing/movement */
+    }
+    @keyframes blink {
+      0%, 50% { opacity: 1; }
+      50.01%, 100% { opacity: 0; }
+    }
+  </style>
+  <rect width="1200" height="700" fill="#1e1e1e" rx="10" ry="10"/>
+  <g class="title-bar f0">
+    <rect width="1200" height="39" fill="#1e1e1e" rx="10" ry="10"/>
+    <rect y="29" width="1200" height="10" fill="#1e1e1e"/>
+    <line x1="0" y1="39.5" x2="1200" y2="39.5" stroke="#d4d4d41a" stroke-width="1"/>
+    <circle cx="16" cy="19.5" r="6" fill="#ff5f56"/>
+    <circle cx="36" cy="19.5" r="6" fill="#ffbd2e"/>
+    <circle cx="56" cy="19.5" r="6" fill="#27c93f"/>
+    <text x="600" y="24.2" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="12" text-anchor="middle" opacity="0.8">Large Font Demo</text>
+  </g>
+  <g class="content f0">
+    <text x="16" y="75" fill="#d670d6" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="20" xml:space="preserve">❯</text>
+    <text x="28" y="75" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="20" xml:space="preserve"> </text>
+    <rect class="cursor f0" x="40" y="55" width="12" height="28" fill="#ffffff" opacity="0.7"/>
+  </g>
+
+    </g>
+    <g id="frame-1">
+      
+  <style>
+    .cursor {
+      animation: blink 1s step-end infinite;
+    }
+    .cursor-active {
+      /* No animation - solid cursor during typing/movement */
+    }
+    @keyframes blink {
+      0%, 50% { opacity: 1; }
+      50.01%, 100% { opacity: 0; }
+    }
+  </style>
+  <rect width="1200" height="700" fill="#1e1e1e" rx="10" ry="10"/>
+  <g class="title-bar f1">
+    <rect width="1200" height="39" fill="#1e1e1e" rx="10" ry="10"/>
+    <rect y="29" width="1200" height="10" fill="#1e1e1e"/>
+    <line x1="0" y1="39.5" x2="1200" y2="39.5" stroke="#d4d4d41a" stroke-width="1"/>
+    <circle cx="16" cy="19.5" r="6" fill="#ff5f56"/>
+    <circle cx="36" cy="19.5" r="6" fill="#ffbd2e"/>
+    <circle cx="56" cy="19.5" r="6" fill="#27c93f"/>
+    <text x="600" y="24.2" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="12" text-anchor="middle" opacity="0.8">Large Font Demo</text>
+  </g>
+  <g class="content f1">
+    <text x="16" y="75" fill="#d670d6" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="20" xml:space="preserve">❯</text>
+    <text x="28" y="75" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="20" xml:space="preserve"> #</text>
+    <rect class="cursor-active f1" x="52" y="55" width="12" height="28" fill="#ffffff" opacity="0.7"/>
+  </g>
+
+    </g>
+    <g id="frame-2">
+      
+  <style>
+    .cursor {
+      animation: blink 1s step-end infinite;
+    }
+    .cursor-active {
+      /* No animation - solid cursor during typing/movement */
+    }
+    @keyframes blink {
+      0%, 50% { opacity: 1; }
+      50.01%, 100% { opacity: 0; }
+    }
+  </style>
+  <rect width="1200" height="700" fill="#1e1e1e" rx="10" ry="10"/>
+  <g class="title-bar f2">
+    <rect width="1200" height="39" fill="#1e1e1e" rx="10" ry="10"/>
+    <rect y="29" width="1200" height="10" fill="#1e1e1e"/>
+    <line x1="0" y1="39.5" x2="1200" y2="39.5" stroke="#d4d4d41a" stroke-width="1"/>
+    <circle cx="16" cy="19.5" r="6" fill="#ff5f56"/>
+    <circle cx="36" cy="19.5" r="6" fill="#ffbd2e"/>
+    <circle cx="56" cy="19.5" r="6" fill="#27c93f"/>
+    <text x="600" y="24.2" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="12" text-anchor="middle" opacity="0.8">Large Font Demo</text>
+  </g>
+  <g class="content f2">
+    <text x="16" y="75" fill="#d670d6" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="20" xml:space="preserve">❯</text>
+    <text x="28" y="75" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="20" xml:space="preserve"> # </text>
+    <rect class="cursor-active f2" x="64" y="55" width="12" height="28" fill="#ffffff" opacity="0.7"/>
+  </g>
+
+    </g>
+    <g id="frame-3">
+      
+  <style>
+    .cursor {
+      animation: blink 1s step-end infinite;
+    }
+    .cursor-active {
+      /* No animation - solid cursor during typing/movement */
+    }
+    @keyframes blink {
+      0%, 50% { opacity: 1; }
+      50.01%, 100% { opacity: 0; }
+    }
+  </style>
+  <rect width="1200" height="700" fill="#1e1e1e" rx="10" ry="10"/>
+  <g class="title-bar f3">
+    <rect width="1200" height="39" fill="#1e1e1e" rx="10" ry="10"/>
+    <rect y="29" width="1200" height="10" fill="#1e1e1e"/>
+    <line x1="0" y1="39.5" x2="1200" y2="39.5" stroke="#d4d4d41a" stroke-width="1"/>
+    <circle cx="16" cy="19.5" r="6" fill="#ff5f56"/>
+    <circle cx="36" cy="19.5" r="6" fill="#ffbd2e"/>
+    <circle cx="56" cy="19.5" r="6" fill="#27c93f"/>
+    <text x="600" y="24.2" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="12" text-anchor="middle" opacity="0.8">Large Font Demo</text>
+  </g>
+  <g class="content f3">
+    <text x="16" y="75" fill="#d670d6" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="20" xml:space="preserve">❯</text>
+    <text x="28" y="75" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="20" xml:space="preserve"> # T</text>
+    <rect class="cursor-active f3" x="76" y="55" width="12" height="28" fill="#ffffff" opacity="0.7"/>
+  </g>
+
+    </g>
+    <g id="frame-4">
+      
+  <style>
+    .cursor {
+      animation: blink 1s step-end infinite;
+    }
+    .cursor-active {
+      /* No animation - solid cursor during typing/movement */
+    }
+    @keyframes blink {
+      0%, 50% { opacity: 1; }
+      50.01%, 100% { opacity: 0; }
+    }
+  </style>
+  <rect width="1200" height="700" fill="#1e1e1e" rx="10" ry="10"/>
+  <g class="title-bar f4">
+    <rect width="1200" height="39" fill="#1e1e1e" rx="10" ry="10"/>
+    <rect y="29" width="1200" height="10" fill="#1e1e1e"/>
+    <line x1="0" y1="39.5" x2="1200" y2="39.5" stroke="#d4d4d41a" stroke-width="1"/>
+    <circle cx="16" cy="19.5" r="6" fill="#ff5f56"/>
+    <circle cx="36" cy="19.5" r="6" fill="#ffbd2e"/>
+    <circle cx="56" cy="19.5" r="6" fill="#27c93f"/>
+    <text x="600" y="24.2" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="12" text-anchor="middle" opacity="0.8">Large Font Demo</text>
+  </g>
+  <g class="content f4">
+    <text x="16" y="75" fill="#d670d6" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="20" xml:space="preserve">❯</text>
+    <text x="28" y="75" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="20" xml:space="preserve"> # Th</text>
+    <rect class="cursor-active f4" x="88" y="55" width="12" height="28" fill="#ffffff" opacity="0.7"/>
+  </g>
+
+    </g>
+    <g id="frame-5">
+      
+  <style>
+    .cursor {
+      animation: blink 1s step-end infinite;
+    }
+    .cursor-active {
+      /* No animation - solid cursor during typing/movement */
+    }
+    @keyframes blink {
+      0%, 50% { opacity: 1; }
+      50.01%, 100% { opacity: 0; }
+    }
+  </style>
+  <rect width="1200" height="700" fill="#1e1e1e" rx="10" ry="10"/>
+  <g class="title-bar f5">
+    <rect width="1200" height="39" fill="#1e1e1e" rx="10" ry="10"/>
+    <rect y="29" width="1200" height="10" fill="#1e1e1e"/>
+    <line x1="0" y1="39.5" x2="1200" y2="39.5" stroke="#d4d4d41a" stroke-width="1"/>
+    <circle cx="16" cy="19.5" r="6" fill="#ff5f56"/>
+    <circle cx="36" cy="19.5" r="6" fill="#ffbd2e"/>
+    <circle cx="56" cy="19.5" r="6" fill="#27c93f"/>
+    <text x="600" y="24.2" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="12" text-anchor="middle" opacity="0.8">Large Font Demo</text>
+  </g>
+  <g class="content f5">
+    <text x="16" y="75" fill="#d670d6" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="20" xml:space="preserve">❯</text>
+    <text x="28" y="75" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="20" xml:space="preserve"> # Thi</text>
+    <rect class="cursor-active f5" x="100" y="55" width="12" height="28" fill="#ffffff" opacity="0.7"/>
+  </g>
+
+    </g>
+    <g id="frame-6">
+      
+  <style>
+    .cursor {
+      animation: blink 1s step-end infinite;
+    }
+    .cursor-active {
+      /* No animation - solid cursor during typing/movement */
+    }
+    @keyframes blink {
+      0%, 50% { opacity: 1; }
+      50.01%, 100% { opacity: 0; }
+    }
+  </style>
+  <rect width="1200" height="700" fill="#1e1e1e" rx="10" ry="10"/>
+  <g class="title-bar f6">
+    <rect width="1200" height="39" fill="#1e1e1e" rx="10" ry="10"/>
+    <rect y="29" width="1200" height="10" fill="#1e1e1e"/>
+    <line x1="0" y1="39.5" x2="1200" y2="39.5" stroke="#d4d4d41a" stroke-width="1"/>
+    <circle cx="16" cy="19.5" r="6" fill="#ff5f56"/>
+    <circle cx="36" cy="19.5" r="6" fill="#ffbd2e"/>
+    <circle cx="56" cy="19.5" r="6" fill="#27c93f"/>
+    <text x="600" y="24.2" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="12" text-anchor="middle" opacity="0.8">Large Font Demo</text>
+  </g>
+  <g class="content f6">
+    <text x="16" y="75" fill="#d670d6" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="20" xml:space="preserve">❯</text>
+    <text x="28" y="75" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="20" xml:space="preserve"> # This</text>
+    <rect class="cursor-active f6" x="112" y="55" width="12" height="28" fill="#ffffff" opacity="0.7"/>
+  </g>
+
+    </g>
+    <g id="frame-7">
+      
+  <style>
+    .cursor {
+      animation: blink 1s step-end infinite;
+    }
+    .cursor-active {
+      /* No animation - solid cursor during typing/movement */
+    }
+    @keyframes blink {
+      0%, 50% { opacity: 1; }
+      50.01%, 100% { opacity: 0; }
+    }
+  </style>
+  <rect width="1200" height="700" fill="#1e1e1e" rx="10" ry="10"/>
+  <g class="title-bar f7">
+    <rect width="1200" height="39" fill="#1e1e1e" rx="10" ry="10"/>
+    <rect y="29" width="1200" height="10" fill="#1e1e1e"/>
+    <line x1="0" y1="39.5" x2="1200" y2="39.5" stroke="#d4d4d41a" stroke-width="1"/>
+    <circle cx="16" cy="19.5" r="6" fill="#ff5f56"/>
+    <circle cx="36" cy="19.5" r="6" fill="#ffbd2e"/>
+    <circle cx="56" cy="19.5" r="6" fill="#27c93f"/>
+    <text x="600" y="24.2" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="12" text-anchor="middle" opacity="0.8">Large Font Demo</text>
+  </g>
+  <g class="content f7">
+    <text x="16" y="75" fill="#d670d6" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="20" xml:space="preserve">❯</text>
+    <text x="28" y="75" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="20" xml:space="preserve"> # This </text>
+    <rect class="cursor-active f7" x="124" y="55" width="12" height="28" fill="#ffffff" opacity="0.7"/>
+  </g>
+
+    </g>
+    <g id="frame-8">
+      
+  <style>
+    .cursor {
+      animation: blink 1s step-end infinite;
+    }
+    .cursor-active {
+      /* No animation - solid cursor during typing/movement */
+    }
+    @keyframes blink {
+      0%, 50% { opacity: 1; }
+      50.01%, 100% { opacity: 0; }
+    }
+  </style>
+  <rect width="1200" height="700" fill="#1e1e1e" rx="10" ry="10"/>
+  <g class="title-bar f8">
+    <rect width="1200" height="39" fill="#1e1e1e" rx="10" ry="10"/>
+    <rect y="29" width="1200" height="10" fill="#1e1e1e"/>
+    <line x1="0" y1="39.5" x2="1200" y2="39.5" stroke="#d4d4d41a" stroke-width="1"/>
+    <circle cx="16" cy="19.5" r="6" fill="#ff5f56"/>
+    <circle cx="36" cy="19.5" r="6" fill="#ffbd2e"/>
+    <circle cx="56" cy="19.5" r="6" fill="#27c93f"/>
+    <text x="600" y="24.2" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="12" text-anchor="middle" opacity="0.8">Large Font Demo</text>
+  </g>
+  <g class="content f8">
+    <text x="16" y="75" fill="#d670d6" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="20" xml:space="preserve">❯</text>
+    <text x="28" y="75" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="20" xml:space="preserve"> # This u</text>
+    <rect class="cursor-active f8" x="136" y="55" width="12" height="28" fill="#ffffff" opacity="0.7"/>
+  </g>
+
+    </g>
+    <g id="frame-9">
+      
+  <style>
+    .cursor {
+      animation: blink 1s step-end infinite;
+    }
+    .cursor-active {
+      /* No animation - solid cursor during typing/movement */
+    }
+    @keyframes blink {
+      0%, 50% { opacity: 1; }
+      50.01%, 100% { opacity: 0; }
+    }
+  </style>
+  <rect width="1200" height="700" fill="#1e1e1e" rx="10" ry="10"/>
+  <g class="title-bar f9">
+    <rect width="1200" height="39" fill="#1e1e1e" rx="10" ry="10"/>
+    <rect y="29" width="1200" height="10" fill="#1e1e1e"/>
+    <line x1="0" y1="39.5" x2="1200" y2="39.5" stroke="#d4d4d41a" stroke-width="1"/>
+    <circle cx="16" cy="19.5" r="6" fill="#ff5f56"/>
+    <circle cx="36" cy="19.5" r="6" fill="#ffbd2e"/>
+    <circle cx="56" cy="19.5" r="6" fill="#27c93f"/>
+    <text x="600" y="24.2" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="12" text-anchor="middle" opacity="0.8">Large Font Demo</text>
+  </g>
+  <g class="content f9">
+    <text x="16" y="75" fill="#d670d6" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="20" xml:space="preserve">❯</text>
+    <text x="28" y="75" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="20" xml:space="preserve"> # This us</text>
+    <rect class="cursor-active f9" x="148" y="55" width="12" height="28" fill="#ffffff" opacity="0.7"/>
+  </g>
+
+    </g>
+    <g id="frame-10">
+      
+  <style>
+    .cursor {
+      animation: blink 1s step-end infinite;
+    }
+    .cursor-active {
+      /* No animation - solid cursor during typing/movement */
+    }
+    @keyframes blink {
+      0%, 50% { opacity: 1; }
+      50.01%, 100% { opacity: 0; }
+    }
+  </style>
+  <rect width="1200" height="700" fill="#1e1e1e" rx="10" ry="10"/>
+  <g class="title-bar f10">
+    <rect width="1200" height="39" fill="#1e1e1e" rx="10" ry="10"/>
+    <rect y="29" width="1200" height="10" fill="#1e1e1e"/>
+    <line x1="0" y1="39.5" x2="1200" y2="39.5" stroke="#d4d4d41a" stroke-width="1"/>
+    <circle cx="16" cy="19.5" r="6" fill="#ff5f56"/>
+    <circle cx="36" cy="19.5" r="6" fill="#ffbd2e"/>
+    <circle cx="56" cy="19.5" r="6" fill="#27c93f"/>
+    <text x="600" y="24.2" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="12" text-anchor="middle" opacity="0.8">Large Font Demo</text>
+  </g>
+  <g class="content f10">
+    <text x="16" y="75" fill="#d670d6" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="20" xml:space="preserve">❯</text>
+    <text x="28" y="75" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="20" xml:space="preserve"> # This use</text>
+    <rect class="cursor-active f10" x="160" y="55" width="12" height="28" fill="#ffffff" opacity="0.7"/>
+  </g>
+
+    </g>
+    <g id="frame-11">
+      
+  <style>
+    .cursor {
+      animation: blink 1s step-end infinite;
+    }
+    .cursor-active {
+      /* No animation - solid cursor during typing/movement */
+    }
+    @keyframes blink {
+      0%, 50% { opacity: 1; }
+      50.01%, 100% { opacity: 0; }
+    }
+  </style>
+  <rect width="1200" height="700" fill="#1e1e1e" rx="10" ry="10"/>
+  <g class="title-bar f11">
+    <rect width="1200" height="39" fill="#1e1e1e" rx="10" ry="10"/>
+    <rect y="29" width="1200" height="10" fill="#1e1e1e"/>
+    <line x1="0" y1="39.5" x2="1200" y2="39.5" stroke="#d4d4d41a" stroke-width="1"/>
+    <circle cx="16" cy="19.5" r="6" fill="#ff5f56"/>
+    <circle cx="36" cy="19.5" r="6" fill="#ffbd2e"/>
+    <circle cx="56" cy="19.5" r="6" fill="#27c93f"/>
+    <text x="600" y="24.2" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="12" text-anchor="middle" opacity="0.8">Large Font Demo</text>
+  </g>
+  <g class="content f11">
+    <text x="16" y="75" fill="#d670d6" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="20" xml:space="preserve">❯</text>
+    <text x="28" y="75" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="20" xml:space="preserve"> # This uses</text>
+    <rect class="cursor-active f11" x="172" y="55" width="12" height="28" fill="#ffffff" opacity="0.7"/>
+  </g>
+
+    </g>
+    <g id="frame-12">
+      
+  <style>
+    .cursor {
+      animation: blink 1s step-end infinite;
+    }
+    .cursor-active {
+      /* No animation - solid cursor during typing/movement */
+    }
+    @keyframes blink {
+      0%, 50% { opacity: 1; }
+      50.01%, 100% { opacity: 0; }
+    }
+  </style>
+  <rect width="1200" height="700" fill="#1e1e1e" rx="10" ry="10"/>
+  <g class="title-bar f12">
+    <rect width="1200" height="39" fill="#1e1e1e" rx="10" ry="10"/>
+    <rect y="29" width="1200" height="10" fill="#1e1e1e"/>
+    <line x1="0" y1="39.5" x2="1200" y2="39.5" stroke="#d4d4d41a" stroke-width="1"/>
+    <circle cx="16" cy="19.5" r="6" fill="#ff5f56"/>
+    <circle cx="36" cy="19.5" r="6" fill="#ffbd2e"/>
+    <circle cx="56" cy="19.5" r="6" fill="#27c93f"/>
+    <text x="600" y="24.2" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="12" text-anchor="middle" opacity="0.8">Large Font Demo</text>
+  </g>
+  <g class="content f12">
+    <text x="16" y="75" fill="#d670d6" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="20" xml:space="preserve">❯</text>
+    <text x="28" y="75" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="20" xml:space="preserve"> # This uses </text>
+    <rect class="cursor-active f12" x="184" y="55" width="12" height="28" fill="#ffffff" opacity="0.7"/>
+  </g>
+
+    </g>
+    <g id="frame-13">
+      
+  <style>
+    .cursor {
+      animation: blink 1s step-end infinite;
+    }
+    .cursor-active {
+      /* No animation - solid cursor during typing/movement */
+    }
+    @keyframes blink {
+      0%, 50% { opacity: 1; }
+      50.01%, 100% { opacity: 0; }
+    }
+  </style>
+  <rect width="1200" height="700" fill="#1e1e1e" rx="10" ry="10"/>
+  <g class="title-bar f13">
+    <rect width="1200" height="39" fill="#1e1e1e" rx="10" ry="10"/>
+    <rect y="29" width="1200" height="10" fill="#1e1e1e"/>
+    <line x1="0" y1="39.5" x2="1200" y2="39.5" stroke="#d4d4d41a" stroke-width="1"/>
+    <circle cx="16" cy="19.5" r="6" fill="#ff5f56"/>
+    <circle cx="36" cy="19.5" r="6" fill="#ffbd2e"/>
+    <circle cx="56" cy="19.5" r="6" fill="#27c93f"/>
+    <text x="600" y="24.2" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="12" text-anchor="middle" opacity="0.8">Large Font Demo</text>
+  </g>
+  <g class="content f13">
+    <text x="16" y="75" fill="#d670d6" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="20" xml:space="preserve">❯</text>
+    <text x="28" y="75" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="20" xml:space="preserve"> # This uses a</text>
+    <rect class="cursor-active f13" x="196" y="55" width="12" height="28" fill="#ffffff" opacity="0.7"/>
+  </g>
+
+    </g>
+    <g id="frame-14">
+      
+  <style>
+    .cursor {
+      animation: blink 1s step-end infinite;
+    }
+    .cursor-active {
+      /* No animation - solid cursor during typing/movement */
+    }
+    @keyframes blink {
+      0%, 50% { opacity: 1; }
+      50.01%, 100% { opacity: 0; }
+    }
+  </style>
+  <rect width="1200" height="700" fill="#1e1e1e" rx="10" ry="10"/>
+  <g class="title-bar f14">
+    <rect width="1200" height="39" fill="#1e1e1e" rx="10" ry="10"/>
+    <rect y="29" width="1200" height="10" fill="#1e1e1e"/>
+    <line x1="0" y1="39.5" x2="1200" y2="39.5" stroke="#d4d4d41a" stroke-width="1"/>
+    <circle cx="16" cy="19.5" r="6" fill="#ff5f56"/>
+    <circle cx="36" cy="19.5" r="6" fill="#ffbd2e"/>
+    <circle cx="56" cy="19.5" r="6" fill="#27c93f"/>
+    <text x="600" y="24.2" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="12" text-anchor="middle" opacity="0.8">Large Font Demo</text>
+  </g>
+  <g class="content f14">
+    <text x="16" y="75" fill="#d670d6" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="20" xml:space="preserve">❯</text>
+    <text x="28" y="75" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="20" xml:space="preserve"> # This uses a </text>
+    <rect class="cursor-active f14" x="208" y="55" width="12" height="28" fill="#ffffff" opacity="0.7"/>
+  </g>
+
+    </g>
+    <g id="frame-15">
+      
+  <style>
+    .cursor {
+      animation: blink 1s step-end infinite;
+    }
+    .cursor-active {
+      /* No animation - solid cursor during typing/movement */
+    }
+    @keyframes blink {
+      0%, 50% { opacity: 1; }
+      50.01%, 100% { opacity: 0; }
+    }
+  </style>
+  <rect width="1200" height="700" fill="#1e1e1e" rx="10" ry="10"/>
+  <g class="title-bar f15">
+    <rect width="1200" height="39" fill="#1e1e1e" rx="10" ry="10"/>
+    <rect y="29" width="1200" height="10" fill="#1e1e1e"/>
+    <line x1="0" y1="39.5" x2="1200" y2="39.5" stroke="#d4d4d41a" stroke-width="1"/>
+    <circle cx="16" cy="19.5" r="6" fill="#ff5f56"/>
+    <circle cx="36" cy="19.5" r="6" fill="#ffbd2e"/>
+    <circle cx="56" cy="19.5" r="6" fill="#27c93f"/>
+    <text x="600" y="24.2" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="12" text-anchor="middle" opacity="0.8">Large Font Demo</text>
+  </g>
+  <g class="content f15">
+    <text x="16" y="75" fill="#d670d6" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="20" xml:space="preserve">❯</text>
+    <text x="28" y="75" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="20" xml:space="preserve"> # This uses a 2</text>
+    <rect class="cursor-active f15" x="220" y="55" width="12" height="28" fill="#ffffff" opacity="0.7"/>
+  </g>
+
+    </g>
+    <g id="frame-16">
+      
+  <style>
+    .cursor {
+      animation: blink 1s step-end infinite;
+    }
+    .cursor-active {
+      /* No animation - solid cursor during typing/movement */
+    }
+    @keyframes blink {
+      0%, 50% { opacity: 1; }
+      50.01%, 100% { opacity: 0; }
+    }
+  </style>
+  <rect width="1200" height="700" fill="#1e1e1e" rx="10" ry="10"/>
+  <g class="title-bar f16">
+    <rect width="1200" height="39" fill="#1e1e1e" rx="10" ry="10"/>
+    <rect y="29" width="1200" height="10" fill="#1e1e1e"/>
+    <line x1="0" y1="39.5" x2="1200" y2="39.5" stroke="#d4d4d41a" stroke-width="1"/>
+    <circle cx="16" cy="19.5" r="6" fill="#ff5f56"/>
+    <circle cx="36" cy="19.5" r="6" fill="#ffbd2e"/>
+    <circle cx="56" cy="19.5" r="6" fill="#27c93f"/>
+    <text x="600" y="24.2" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="12" text-anchor="middle" opacity="0.8">Large Font Demo</text>
+  </g>
+  <g class="content f16">
+    <text x="16" y="75" fill="#d670d6" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="20" xml:space="preserve">❯</text>
+    <text x="28" y="75" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="20" xml:space="preserve"> # This uses a 20</text>
+    <rect class="cursor-active f16" x="232" y="55" width="12" height="28" fill="#ffffff" opacity="0.7"/>
+  </g>
+
+    </g>
+    <g id="frame-17">
+      
+  <style>
+    .cursor {
+      animation: blink 1s step-end infinite;
+    }
+    .cursor-active {
+      /* No animation - solid cursor during typing/movement */
+    }
+    @keyframes blink {
+      0%, 50% { opacity: 1; }
+      50.01%, 100% { opacity: 0; }
+    }
+  </style>
+  <rect width="1200" height="700" fill="#1e1e1e" rx="10" ry="10"/>
+  <g class="title-bar f17">
+    <rect width="1200" height="39" fill="#1e1e1e" rx="10" ry="10"/>
+    <rect y="29" width="1200" height="10" fill="#1e1e1e"/>
+    <line x1="0" y1="39.5" x2="1200" y2="39.5" stroke="#d4d4d41a" stroke-width="1"/>
+    <circle cx="16" cy="19.5" r="6" fill="#ff5f56"/>
+    <circle cx="36" cy="19.5" r="6" fill="#ffbd2e"/>
+    <circle cx="56" cy="19.5" r="6" fill="#27c93f"/>
+    <text x="600" y="24.2" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="12" text-anchor="middle" opacity="0.8">Large Font Demo</text>
+  </g>
+  <g class="content f17">
+    <text x="16" y="75" fill="#d670d6" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="20" xml:space="preserve">❯</text>
+    <text x="28" y="75" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="20" xml:space="preserve"> # This uses a 20p</text>
+    <rect class="cursor-active f17" x="244" y="55" width="12" height="28" fill="#ffffff" opacity="0.7"/>
+  </g>
+
+    </g>
+    <g id="frame-18">
+      
+  <style>
+    .cursor {
+      animation: blink 1s step-end infinite;
+    }
+    .cursor-active {
+      /* No animation - solid cursor during typing/movement */
+    }
+    @keyframes blink {
+      0%, 50% { opacity: 1; }
+      50.01%, 100% { opacity: 0; }
+    }
+  </style>
+  <rect width="1200" height="700" fill="#1e1e1e" rx="10" ry="10"/>
+  <g class="title-bar f18">
+    <rect width="1200" height="39" fill="#1e1e1e" rx="10" ry="10"/>
+    <rect y="29" width="1200" height="10" fill="#1e1e1e"/>
+    <line x1="0" y1="39.5" x2="1200" y2="39.5" stroke="#d4d4d41a" stroke-width="1"/>
+    <circle cx="16" cy="19.5" r="6" fill="#ff5f56"/>
+    <circle cx="36" cy="19.5" r="6" fill="#ffbd2e"/>
+    <circle cx="56" cy="19.5" r="6" fill="#27c93f"/>
+    <text x="600" y="24.2" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="12" text-anchor="middle" opacity="0.8">Large Font Demo</text>
+  </g>
+  <g class="content f18">
+    <text x="16" y="75" fill="#d670d6" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="20" xml:space="preserve">❯</text>
+    <text x="28" y="75" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="20" xml:space="preserve"> # This uses a 20px</text>
+    <rect class="cursor-active f18" x="256" y="55" width="12" height="28" fill="#ffffff" opacity="0.7"/>
+  </g>
+
+    </g>
+    <g id="frame-19">
+      
+  <style>
+    .cursor {
+      animation: blink 1s step-end infinite;
+    }
+    .cursor-active {
+      /* No animation - solid cursor during typing/movement */
+    }
+    @keyframes blink {
+      0%, 50% { opacity: 1; }
+      50.01%, 100% { opacity: 0; }
+    }
+  </style>
+  <rect width="1200" height="700" fill="#1e1e1e" rx="10" ry="10"/>
+  <g class="title-bar f19">
+    <rect width="1200" height="39" fill="#1e1e1e" rx="10" ry="10"/>
+    <rect y="29" width="1200" height="10" fill="#1e1e1e"/>
+    <line x1="0" y1="39.5" x2="1200" y2="39.5" stroke="#d4d4d41a" stroke-width="1"/>
+    <circle cx="16" cy="19.5" r="6" fill="#ff5f56"/>
+    <circle cx="36" cy="19.5" r="6" fill="#ffbd2e"/>
+    <circle cx="56" cy="19.5" r="6" fill="#27c93f"/>
+    <text x="600" y="24.2" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="12" text-anchor="middle" opacity="0.8">Large Font Demo</text>
+  </g>
+  <g class="content f19">
+    <text x="16" y="75" fill="#d670d6" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="20" xml:space="preserve">❯</text>
+    <text x="28" y="75" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="20" xml:space="preserve"> # This uses a 20px </text>
+    <rect class="cursor-active f19" x="268" y="55" width="12" height="28" fill="#ffffff" opacity="0.7"/>
+  </g>
+
+    </g>
+    <g id="frame-20">
+      
+  <style>
+    .cursor {
+      animation: blink 1s step-end infinite;
+    }
+    .cursor-active {
+      /* No animation - solid cursor during typing/movement */
+    }
+    @keyframes blink {
+      0%, 50% { opacity: 1; }
+      50.01%, 100% { opacity: 0; }
+    }
+  </style>
+  <rect width="1200" height="700" fill="#1e1e1e" rx="10" ry="10"/>
+  <g class="title-bar f20">
+    <rect width="1200" height="39" fill="#1e1e1e" rx="10" ry="10"/>
+    <rect y="29" width="1200" height="10" fill="#1e1e1e"/>
+    <line x1="0" y1="39.5" x2="1200" y2="39.5" stroke="#d4d4d41a" stroke-width="1"/>
+    <circle cx="16" cy="19.5" r="6" fill="#ff5f56"/>
+    <circle cx="36" cy="19.5" r="6" fill="#ffbd2e"/>
+    <circle cx="56" cy="19.5" r="6" fill="#27c93f"/>
+    <text x="600" y="24.2" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="12" text-anchor="middle" opacity="0.8">Large Font Demo</text>
+  </g>
+  <g class="content f20">
+    <text x="16" y="75" fill="#d670d6" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="20" xml:space="preserve">❯</text>
+    <text x="28" y="75" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="20" xml:space="preserve"> # This uses a 20px f</text>
+    <rect class="cursor-active f20" x="280" y="55" width="12" height="28" fill="#ffffff" opacity="0.7"/>
+  </g>
+
+    </g>
+    <g id="frame-21">
+      
+  <style>
+    .cursor {
+      animation: blink 1s step-end infinite;
+    }
+    .cursor-active {
+      /* No animation - solid cursor during typing/movement */
+    }
+    @keyframes blink {
+      0%, 50% { opacity: 1; }
+      50.01%, 100% { opacity: 0; }
+    }
+  </style>
+  <rect width="1200" height="700" fill="#1e1e1e" rx="10" ry="10"/>
+  <g class="title-bar f21">
+    <rect width="1200" height="39" fill="#1e1e1e" rx="10" ry="10"/>
+    <rect y="29" width="1200" height="10" fill="#1e1e1e"/>
+    <line x1="0" y1="39.5" x2="1200" y2="39.5" stroke="#d4d4d41a" stroke-width="1"/>
+    <circle cx="16" cy="19.5" r="6" fill="#ff5f56"/>
+    <circle cx="36" cy="19.5" r="6" fill="#ffbd2e"/>
+    <circle cx="56" cy="19.5" r="6" fill="#27c93f"/>
+    <text x="600" y="24.2" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="12" text-anchor="middle" opacity="0.8">Large Font Demo</text>
+  </g>
+  <g class="content f21">
+    <text x="16" y="75" fill="#d670d6" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="20" xml:space="preserve">❯</text>
+    <text x="28" y="75" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="20" xml:space="preserve"> # This uses a 20px fo</text>
+    <rect class="cursor-active f21" x="292" y="55" width="12" height="28" fill="#ffffff" opacity="0.7"/>
+  </g>
+
+    </g>
+    <g id="frame-22">
+      
+  <style>
+    .cursor {
+      animation: blink 1s step-end infinite;
+    }
+    .cursor-active {
+      /* No animation - solid cursor during typing/movement */
+    }
+    @keyframes blink {
+      0%, 50% { opacity: 1; }
+      50.01%, 100% { opacity: 0; }
+    }
+  </style>
+  <rect width="1200" height="700" fill="#1e1e1e" rx="10" ry="10"/>
+  <g class="title-bar f22">
+    <rect width="1200" height="39" fill="#1e1e1e" rx="10" ry="10"/>
+    <rect y="29" width="1200" height="10" fill="#1e1e1e"/>
+    <line x1="0" y1="39.5" x2="1200" y2="39.5" stroke="#d4d4d41a" stroke-width="1"/>
+    <circle cx="16" cy="19.5" r="6" fill="#ff5f56"/>
+    <circle cx="36" cy="19.5" r="6" fill="#ffbd2e"/>
+    <circle cx="56" cy="19.5" r="6" fill="#27c93f"/>
+    <text x="600" y="24.2" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="12" text-anchor="middle" opacity="0.8">Large Font Demo</text>
+  </g>
+  <g class="content f22">
+    <text x="16" y="75" fill="#d670d6" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="20" xml:space="preserve">❯</text>
+    <text x="28" y="75" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="20" xml:space="preserve"> # This uses a 20px fon</text>
+    <rect class="cursor-active f22" x="304" y="55" width="12" height="28" fill="#ffffff" opacity="0.7"/>
+  </g>
+
+    </g>
+    <g id="frame-23">
+      
+  <style>
+    .cursor {
+      animation: blink 1s step-end infinite;
+    }
+    .cursor-active {
+      /* No animation - solid cursor during typing/movement */
+    }
+    @keyframes blink {
+      0%, 50% { opacity: 1; }
+      50.01%, 100% { opacity: 0; }
+    }
+  </style>
+  <rect width="1200" height="700" fill="#1e1e1e" rx="10" ry="10"/>
+  <g class="title-bar f23">
+    <rect width="1200" height="39" fill="#1e1e1e" rx="10" ry="10"/>
+    <rect y="29" width="1200" height="10" fill="#1e1e1e"/>
+    <line x1="0" y1="39.5" x2="1200" y2="39.5" stroke="#d4d4d41a" stroke-width="1"/>
+    <circle cx="16" cy="19.5" r="6" fill="#ff5f56"/>
+    <circle cx="36" cy="19.5" r="6" fill="#ffbd2e"/>
+    <circle cx="56" cy="19.5" r="6" fill="#27c93f"/>
+    <text x="600" y="24.2" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="12" text-anchor="middle" opacity="0.8">Large Font Demo</text>
+  </g>
+  <g class="content f23">
+    <text x="16" y="75" fill="#d670d6" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="20" xml:space="preserve">❯</text>
+    <text x="28" y="75" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="20" xml:space="preserve"> # This uses a 20px font</text>
+    <rect class="cursor-active f23" x="316" y="55" width="12" height="28" fill="#ffffff" opacity="0.7"/>
+  </g>
+
+    </g>
+    <g id="frame-24">
+      
+  <style>
+    .cursor {
+      animation: blink 1s step-end infinite;
+    }
+    .cursor-active {
+      /* No animation - solid cursor during typing/movement */
+    }
+    @keyframes blink {
+      0%, 50% { opacity: 1; }
+      50.01%, 100% { opacity: 0; }
+    }
+  </style>
+  <rect width="1200" height="700" fill="#1e1e1e" rx="10" ry="10"/>
+  <g class="title-bar f24">
+    <rect width="1200" height="39" fill="#1e1e1e" rx="10" ry="10"/>
+    <rect y="29" width="1200" height="10" fill="#1e1e1e"/>
+    <line x1="0" y1="39.5" x2="1200" y2="39.5" stroke="#d4d4d41a" stroke-width="1"/>
+    <circle cx="16" cy="19.5" r="6" fill="#ff5f56"/>
+    <circle cx="36" cy="19.5" r="6" fill="#ffbd2e"/>
+    <circle cx="56" cy="19.5" r="6" fill="#27c93f"/>
+    <text x="600" y="24.2" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="12" text-anchor="middle" opacity="0.8">Large Font Demo</text>
+  </g>
+  <g class="content f24">
+    <text x="16" y="75" fill="#d670d6" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="20" xml:space="preserve">❯</text>
+    <text x="28" y="75" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="20" xml:space="preserve"> # This uses a 20px font</text>
+    <rect class="cursor f24" x="316" y="55" width="12" height="28" fill="#ffffff" opacity="0.7"/>
+  </g>
+
+    </g>
+    <g id="frame-25">
+      
+  <style>
+    .cursor {
+      animation: blink 1s step-end infinite;
+    }
+    .cursor-active {
+      /* No animation - solid cursor during typing/movement */
+    }
+    @keyframes blink {
+      0%, 50% { opacity: 1; }
+      50.01%, 100% { opacity: 0; }
+    }
+  </style>
+  <rect width="1200" height="700" fill="#1e1e1e" rx="10" ry="10"/>
+  <g class="title-bar f25">
+    <rect width="1200" height="39" fill="#1e1e1e" rx="10" ry="10"/>
+    <rect y="29" width="1200" height="10" fill="#1e1e1e"/>
+    <line x1="0" y1="39.5" x2="1200" y2="39.5" stroke="#d4d4d41a" stroke-width="1"/>
+    <circle cx="16" cy="19.5" r="6" fill="#ff5f56"/>
+    <circle cx="36" cy="19.5" r="6" fill="#ffbd2e"/>
+    <circle cx="56" cy="19.5" r="6" fill="#27c93f"/>
+    <text x="600" y="24.2" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="12" text-anchor="middle" opacity="0.8">Large Font Demo</text>
+  </g>
+  <g class="content f25">
+    <text x="16" y="75" fill="#d670d6" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="20" xml:space="preserve">❯</text>
+    <text x="28" y="75" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="20" xml:space="preserve"> # This uses a 20px font</text>
+    <text x="16" y="103" fill="#d670d6" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="20" xml:space="preserve">❯</text>
+    <text x="28" y="103" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="20" xml:space="preserve"> </text>
+    <rect class="cursor f25" x="40" y="83" width="12" height="28" fill="#ffffff" opacity="0.7"/>
+  </g>
+
+    </g>
+    <g id="frame-26">
+      
+  <style>
+    .cursor {
+      animation: blink 1s step-end infinite;
+    }
+    .cursor-active {
+      /* No animation - solid cursor during typing/movement */
+    }
+    @keyframes blink {
+      0%, 50% { opacity: 1; }
+      50.01%, 100% { opacity: 0; }
+    }
+  </style>
+  <rect width="1200" height="700" fill="#1e1e1e" rx="10" ry="10"/>
+  <g class="title-bar f26">
+    <rect width="1200" height="39" fill="#1e1e1e" rx="10" ry="10"/>
+    <rect y="29" width="1200" height="10" fill="#1e1e1e"/>
+    <line x1="0" y1="39.5" x2="1200" y2="39.5" stroke="#d4d4d41a" stroke-width="1"/>
+    <circle cx="16" cy="19.5" r="6" fill="#ff5f56"/>
+    <circle cx="36" cy="19.5" r="6" fill="#ffbd2e"/>
+    <circle cx="56" cy="19.5" r="6" fill="#27c93f"/>
+    <text x="600" y="24.2" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="12" text-anchor="middle" opacity="0.8">Large Font Demo</text>
+  </g>
+  <g class="content f26">
+    <text x="16" y="75" fill="#d670d6" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="20" xml:space="preserve">❯</text>
+    <text x="28" y="75" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="20" xml:space="preserve"> # This uses a 20px font</text>
+    <text x="16" y="103" fill="#d670d6" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="20" xml:space="preserve">❯</text>
+    <text x="28" y="103" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="20" xml:space="preserve"> </text>
+    <rect class="cursor f26" x="40" y="83" width="12" height="28" fill="#ffffff" opacity="0.7"/>
+  </g>
+
+    </g>
+    <g id="frame-27">
+      
+  <style>
+    .cursor {
+      animation: blink 1s step-end infinite;
+    }
+    .cursor-active {
+      /* No animation - solid cursor during typing/movement */
+    }
+    @keyframes blink {
+      0%, 50% { opacity: 1; }
+      50.01%, 100% { opacity: 0; }
+    }
+  </style>
+  <rect width="1200" height="700" fill="#1e1e1e" rx="10" ry="10"/>
+  <g class="title-bar f27">
+    <rect width="1200" height="39" fill="#1e1e1e" rx="10" ry="10"/>
+    <rect y="29" width="1200" height="10" fill="#1e1e1e"/>
+    <line x1="0" y1="39.5" x2="1200" y2="39.5" stroke="#d4d4d41a" stroke-width="1"/>
+    <circle cx="16" cy="19.5" r="6" fill="#ff5f56"/>
+    <circle cx="36" cy="19.5" r="6" fill="#ffbd2e"/>
+    <circle cx="56" cy="19.5" r="6" fill="#27c93f"/>
+    <text x="600" y="24.2" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="12" text-anchor="middle" opacity="0.8">Large Font Demo</text>
+  </g>
+  <g class="content f27">
+    <text x="16" y="75" fill="#d670d6" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="20" xml:space="preserve">❯</text>
+    <text x="28" y="75" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="20" xml:space="preserve"> # This uses a 20px font</text>
+    <text x="16" y="103" fill="#d670d6" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="20" xml:space="preserve">❯</text>
+    <text x="28" y="103" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="20" xml:space="preserve"> </text>
+    <rect class="cursor f27" x="40" y="83" width="12" height="28" fill="#ffffff" opacity="0.7"/>
+  </g>
+
+    </g>
+    <g id="frame-28">
+      
+  <style>
+    .cursor {
+      animation: blink 1s step-end infinite;
+    }
+    .cursor-active {
+      /* No animation - solid cursor during typing/movement */
+    }
+    @keyframes blink {
+      0%, 50% { opacity: 1; }
+      50.01%, 100% { opacity: 0; }
+    }
+  </style>
+  <rect width="1200" height="700" fill="#1e1e1e" rx="10" ry="10"/>
+  <g class="title-bar f28">
+    <rect width="1200" height="39" fill="#1e1e1e" rx="10" ry="10"/>
+    <rect y="29" width="1200" height="10" fill="#1e1e1e"/>
+    <line x1="0" y1="39.5" x2="1200" y2="39.5" stroke="#d4d4d41a" stroke-width="1"/>
+    <circle cx="16" cy="19.5" r="6" fill="#ff5f56"/>
+    <circle cx="36" cy="19.5" r="6" fill="#ffbd2e"/>
+    <circle cx="56" cy="19.5" r="6" fill="#27c93f"/>
+    <text x="600" y="24.2" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="12" text-anchor="middle" opacity="0.8">Large Font Demo</text>
+  </g>
+  <g class="content f28">
+    <text x="16" y="75" fill="#d670d6" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="20" xml:space="preserve">❯</text>
+    <text x="28" y="75" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="20" xml:space="preserve"> # This uses a 20px font</text>
+    <text x="16" y="103" fill="#d670d6" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="20" xml:space="preserve">❯</text>
+    <text x="28" y="103" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="20" xml:space="preserve"> e</text>
+    <rect class="cursor-active f28" x="52" y="83" width="12" height="28" fill="#ffffff" opacity="0.7"/>
+  </g>
+
+    </g>
+    <g id="frame-29">
+      
+  <style>
+    .cursor {
+      animation: blink 1s step-end infinite;
+    }
+    .cursor-active {
+      /* No animation - solid cursor during typing/movement */
+    }
+    @keyframes blink {
+      0%, 50% { opacity: 1; }
+      50.01%, 100% { opacity: 0; }
+    }
+  </style>
+  <rect width="1200" height="700" fill="#1e1e1e" rx="10" ry="10"/>
+  <g class="title-bar f29">
+    <rect width="1200" height="39" fill="#1e1e1e" rx="10" ry="10"/>
+    <rect y="29" width="1200" height="10" fill="#1e1e1e"/>
+    <line x1="0" y1="39.5" x2="1200" y2="39.5" stroke="#d4d4d41a" stroke-width="1"/>
+    <circle cx="16" cy="19.5" r="6" fill="#ff5f56"/>
+    <circle cx="36" cy="19.5" r="6" fill="#ffbd2e"/>
+    <circle cx="56" cy="19.5" r="6" fill="#27c93f"/>
+    <text x="600" y="24.2" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="12" text-anchor="middle" opacity="0.8">Large Font Demo</text>
+  </g>
+  <g class="content f29">
+    <text x="16" y="75" fill="#d670d6" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="20" xml:space="preserve">❯</text>
+    <text x="28" y="75" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="20" xml:space="preserve"> # This uses a 20px font</text>
+    <text x="16" y="103" fill="#d670d6" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="20" xml:space="preserve">❯</text>
+    <text x="28" y="103" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="20" xml:space="preserve"> ec</text>
+    <rect class="cursor-active f29" x="64" y="83" width="12" height="28" fill="#ffffff" opacity="0.7"/>
+  </g>
+
+    </g>
+    <g id="frame-30">
+      
+  <style>
+    .cursor {
+      animation: blink 1s step-end infinite;
+    }
+    .cursor-active {
+      /* No animation - solid cursor during typing/movement */
+    }
+    @keyframes blink {
+      0%, 50% { opacity: 1; }
+      50.01%, 100% { opacity: 0; }
+    }
+  </style>
+  <rect width="1200" height="700" fill="#1e1e1e" rx="10" ry="10"/>
+  <g class="title-bar f30">
+    <rect width="1200" height="39" fill="#1e1e1e" rx="10" ry="10"/>
+    <rect y="29" width="1200" height="10" fill="#1e1e1e"/>
+    <line x1="0" y1="39.5" x2="1200" y2="39.5" stroke="#d4d4d41a" stroke-width="1"/>
+    <circle cx="16" cy="19.5" r="6" fill="#ff5f56"/>
+    <circle cx="36" cy="19.5" r="6" fill="#ffbd2e"/>
+    <circle cx="56" cy="19.5" r="6" fill="#27c93f"/>
+    <text x="600" y="24.2" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="12" text-anchor="middle" opacity="0.8">Large Font Demo</text>
+  </g>
+  <g class="content f30">
+    <text x="16" y="75" fill="#d670d6" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="20" xml:space="preserve">❯</text>
+    <text x="28" y="75" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="20" xml:space="preserve"> # This uses a 20px font</text>
+    <text x="16" y="103" fill="#d670d6" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="20" xml:space="preserve">❯</text>
+    <text x="28" y="103" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="20" xml:space="preserve"> ech</text>
+    <rect class="cursor-active f30" x="76" y="83" width="12" height="28" fill="#ffffff" opacity="0.7"/>
+  </g>
+
+    </g>
+    <g id="frame-31">
+      
+  <style>
+    .cursor {
+      animation: blink 1s step-end infinite;
+    }
+    .cursor-active {
+      /* No animation - solid cursor during typing/movement */
+    }
+    @keyframes blink {
+      0%, 50% { opacity: 1; }
+      50.01%, 100% { opacity: 0; }
+    }
+  </style>
+  <rect width="1200" height="700" fill="#1e1e1e" rx="10" ry="10"/>
+  <g class="title-bar f31">
+    <rect width="1200" height="39" fill="#1e1e1e" rx="10" ry="10"/>
+    <rect y="29" width="1200" height="10" fill="#1e1e1e"/>
+    <line x1="0" y1="39.5" x2="1200" y2="39.5" stroke="#d4d4d41a" stroke-width="1"/>
+    <circle cx="16" cy="19.5" r="6" fill="#ff5f56"/>
+    <circle cx="36" cy="19.5" r="6" fill="#ffbd2e"/>
+    <circle cx="56" cy="19.5" r="6" fill="#27c93f"/>
+    <text x="600" y="24.2" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="12" text-anchor="middle" opacity="0.8">Large Font Demo</text>
+  </g>
+  <g class="content f31">
+    <text x="16" y="75" fill="#d670d6" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="20" xml:space="preserve">❯</text>
+    <text x="28" y="75" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="20" xml:space="preserve"> # This uses a 20px font</text>
+    <text x="16" y="103" fill="#d670d6" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="20" xml:space="preserve">❯</text>
+    <text x="28" y="103" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="20" xml:space="preserve"> echo</text>
+    <rect class="cursor-active f31" x="88" y="83" width="12" height="28" fill="#ffffff" opacity="0.7"/>
+  </g>
+
+    </g>
+    <g id="frame-32">
+      
+  <style>
+    .cursor {
+      animation: blink 1s step-end infinite;
+    }
+    .cursor-active {
+      /* No animation - solid cursor during typing/movement */
+    }
+    @keyframes blink {
+      0%, 50% { opacity: 1; }
+      50.01%, 100% { opacity: 0; }
+    }
+  </style>
+  <rect width="1200" height="700" fill="#1e1e1e" rx="10" ry="10"/>
+  <g class="title-bar f32">
+    <rect width="1200" height="39" fill="#1e1e1e" rx="10" ry="10"/>
+    <rect y="29" width="1200" height="10" fill="#1e1e1e"/>
+    <line x1="0" y1="39.5" x2="1200" y2="39.5" stroke="#d4d4d41a" stroke-width="1"/>
+    <circle cx="16" cy="19.5" r="6" fill="#ff5f56"/>
+    <circle cx="36" cy="19.5" r="6" fill="#ffbd2e"/>
+    <circle cx="56" cy="19.5" r="6" fill="#27c93f"/>
+    <text x="600" y="24.2" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="12" text-anchor="middle" opacity="0.8">Large Font Demo</text>
+  </g>
+  <g class="content f32">
+    <text x="16" y="75" fill="#d670d6" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="20" xml:space="preserve">❯</text>
+    <text x="28" y="75" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="20" xml:space="preserve"> # This uses a 20px font</text>
+    <text x="16" y="103" fill="#d670d6" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="20" xml:space="preserve">❯</text>
+    <text x="28" y="103" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="20" xml:space="preserve"> echo </text>
+    <rect class="cursor-active f32" x="100" y="83" width="12" height="28" fill="#ffffff" opacity="0.7"/>
+  </g>
+
+    </g>
+    <g id="frame-33">
+      
+  <style>
+    .cursor {
+      animation: blink 1s step-end infinite;
+    }
+    .cursor-active {
+      /* No animation - solid cursor during typing/movement */
+    }
+    @keyframes blink {
+      0%, 50% { opacity: 1; }
+      50.01%, 100% { opacity: 0; }
+    }
+  </style>
+  <rect width="1200" height="700" fill="#1e1e1e" rx="10" ry="10"/>
+  <g class="title-bar f33">
+    <rect width="1200" height="39" fill="#1e1e1e" rx="10" ry="10"/>
+    <rect y="29" width="1200" height="10" fill="#1e1e1e"/>
+    <line x1="0" y1="39.5" x2="1200" y2="39.5" stroke="#d4d4d41a" stroke-width="1"/>
+    <circle cx="16" cy="19.5" r="6" fill="#ff5f56"/>
+    <circle cx="36" cy="19.5" r="6" fill="#ffbd2e"/>
+    <circle cx="56" cy="19.5" r="6" fill="#27c93f"/>
+    <text x="600" y="24.2" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="12" text-anchor="middle" opacity="0.8">Large Font Demo</text>
+  </g>
+  <g class="content f33">
+    <text x="16" y="75" fill="#d670d6" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="20" xml:space="preserve">❯</text>
+    <text x="28" y="75" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="20" xml:space="preserve"> # This uses a 20px font</text>
+    <text x="16" y="103" fill="#d670d6" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="20" xml:space="preserve">❯</text>
+    <text x="28" y="103" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="20" xml:space="preserve"> echo &apos;</text>
+    <rect class="cursor-active f33" x="112" y="83" width="12" height="28" fill="#ffffff" opacity="0.7"/>
+  </g>
+
+    </g>
+    <g id="frame-34">
+      
+  <style>
+    .cursor {
+      animation: blink 1s step-end infinite;
+    }
+    .cursor-active {
+      /* No animation - solid cursor during typing/movement */
+    }
+    @keyframes blink {
+      0%, 50% { opacity: 1; }
+      50.01%, 100% { opacity: 0; }
+    }
+  </style>
+  <rect width="1200" height="700" fill="#1e1e1e" rx="10" ry="10"/>
+  <g class="title-bar f34">
+    <rect width="1200" height="39" fill="#1e1e1e" rx="10" ry="10"/>
+    <rect y="29" width="1200" height="10" fill="#1e1e1e"/>
+    <line x1="0" y1="39.5" x2="1200" y2="39.5" stroke="#d4d4d41a" stroke-width="1"/>
+    <circle cx="16" cy="19.5" r="6" fill="#ff5f56"/>
+    <circle cx="36" cy="19.5" r="6" fill="#ffbd2e"/>
+    <circle cx="56" cy="19.5" r="6" fill="#27c93f"/>
+    <text x="600" y="24.2" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="12" text-anchor="middle" opacity="0.8">Large Font Demo</text>
+  </g>
+  <g class="content f34">
+    <text x="16" y="75" fill="#d670d6" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="20" xml:space="preserve">❯</text>
+    <text x="28" y="75" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="20" xml:space="preserve"> # This uses a 20px font</text>
+    <text x="16" y="103" fill="#d670d6" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="20" xml:space="preserve">❯</text>
+    <text x="28" y="103" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="20" xml:space="preserve"> echo &apos;G</text>
+    <rect class="cursor-active f34" x="124" y="83" width="12" height="28" fill="#ffffff" opacity="0.7"/>
+  </g>
+
+    </g>
+    <g id="frame-35">
+      
+  <style>
+    .cursor {
+      animation: blink 1s step-end infinite;
+    }
+    .cursor-active {
+      /* No animation - solid cursor during typing/movement */
+    }
+    @keyframes blink {
+      0%, 50% { opacity: 1; }
+      50.01%, 100% { opacity: 0; }
+    }
+  </style>
+  <rect width="1200" height="700" fill="#1e1e1e" rx="10" ry="10"/>
+  <g class="title-bar f35">
+    <rect width="1200" height="39" fill="#1e1e1e" rx="10" ry="10"/>
+    <rect y="29" width="1200" height="10" fill="#1e1e1e"/>
+    <line x1="0" y1="39.5" x2="1200" y2="39.5" stroke="#d4d4d41a" stroke-width="1"/>
+    <circle cx="16" cy="19.5" r="6" fill="#ff5f56"/>
+    <circle cx="36" cy="19.5" r="6" fill="#ffbd2e"/>
+    <circle cx="56" cy="19.5" r="6" fill="#27c93f"/>
+    <text x="600" y="24.2" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="12" text-anchor="middle" opacity="0.8">Large Font Demo</text>
+  </g>
+  <g class="content f35">
+    <text x="16" y="75" fill="#d670d6" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="20" xml:space="preserve">❯</text>
+    <text x="28" y="75" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="20" xml:space="preserve"> # This uses a 20px font</text>
+    <text x="16" y="103" fill="#d670d6" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="20" xml:space="preserve">❯</text>
+    <text x="28" y="103" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="20" xml:space="preserve"> echo &apos;Gr</text>
+    <rect class="cursor-active f35" x="136" y="83" width="12" height="28" fill="#ffffff" opacity="0.7"/>
+  </g>
+
+    </g>
+    <g id="frame-36">
+      
+  <style>
+    .cursor {
+      animation: blink 1s step-end infinite;
+    }
+    .cursor-active {
+      /* No animation - solid cursor during typing/movement */
+    }
+    @keyframes blink {
+      0%, 50% { opacity: 1; }
+      50.01%, 100% { opacity: 0; }
+    }
+  </style>
+  <rect width="1200" height="700" fill="#1e1e1e" rx="10" ry="10"/>
+  <g class="title-bar f36">
+    <rect width="1200" height="39" fill="#1e1e1e" rx="10" ry="10"/>
+    <rect y="29" width="1200" height="10" fill="#1e1e1e"/>
+    <line x1="0" y1="39.5" x2="1200" y2="39.5" stroke="#d4d4d41a" stroke-width="1"/>
+    <circle cx="16" cy="19.5" r="6" fill="#ff5f56"/>
+    <circle cx="36" cy="19.5" r="6" fill="#ffbd2e"/>
+    <circle cx="56" cy="19.5" r="6" fill="#27c93f"/>
+    <text x="600" y="24.2" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="12" text-anchor="middle" opacity="0.8">Large Font Demo</text>
+  </g>
+  <g class="content f36">
+    <text x="16" y="75" fill="#d670d6" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="20" xml:space="preserve">❯</text>
+    <text x="28" y="75" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="20" xml:space="preserve"> # This uses a 20px font</text>
+    <text x="16" y="103" fill="#d670d6" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="20" xml:space="preserve">❯</text>
+    <text x="28" y="103" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="20" xml:space="preserve"> echo &apos;Gre</text>
+    <rect class="cursor-active f36" x="148" y="83" width="12" height="28" fill="#ffffff" opacity="0.7"/>
+  </g>
+
+    </g>
+    <g id="frame-37">
+      
+  <style>
+    .cursor {
+      animation: blink 1s step-end infinite;
+    }
+    .cursor-active {
+      /* No animation - solid cursor during typing/movement */
+    }
+    @keyframes blink {
+      0%, 50% { opacity: 1; }
+      50.01%, 100% { opacity: 0; }
+    }
+  </style>
+  <rect width="1200" height="700" fill="#1e1e1e" rx="10" ry="10"/>
+  <g class="title-bar f37">
+    <rect width="1200" height="39" fill="#1e1e1e" rx="10" ry="10"/>
+    <rect y="29" width="1200" height="10" fill="#1e1e1e"/>
+    <line x1="0" y1="39.5" x2="1200" y2="39.5" stroke="#d4d4d41a" stroke-width="1"/>
+    <circle cx="16" cy="19.5" r="6" fill="#ff5f56"/>
+    <circle cx="36" cy="19.5" r="6" fill="#ffbd2e"/>
+    <circle cx="56" cy="19.5" r="6" fill="#27c93f"/>
+    <text x="600" y="24.2" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="12" text-anchor="middle" opacity="0.8">Large Font Demo</text>
+  </g>
+  <g class="content f37">
+    <text x="16" y="75" fill="#d670d6" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="20" xml:space="preserve">❯</text>
+    <text x="28" y="75" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="20" xml:space="preserve"> # This uses a 20px font</text>
+    <text x="16" y="103" fill="#d670d6" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="20" xml:space="preserve">❯</text>
+    <text x="28" y="103" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="20" xml:space="preserve"> echo &apos;Grea</text>
+    <rect class="cursor-active f37" x="160" y="83" width="12" height="28" fill="#ffffff" opacity="0.7"/>
+  </g>
+
+    </g>
+    <g id="frame-38">
+      
+  <style>
+    .cursor {
+      animation: blink 1s step-end infinite;
+    }
+    .cursor-active {
+      /* No animation - solid cursor during typing/movement */
+    }
+    @keyframes blink {
+      0%, 50% { opacity: 1; }
+      50.01%, 100% { opacity: 0; }
+    }
+  </style>
+  <rect width="1200" height="700" fill="#1e1e1e" rx="10" ry="10"/>
+  <g class="title-bar f38">
+    <rect width="1200" height="39" fill="#1e1e1e" rx="10" ry="10"/>
+    <rect y="29" width="1200" height="10" fill="#1e1e1e"/>
+    <line x1="0" y1="39.5" x2="1200" y2="39.5" stroke="#d4d4d41a" stroke-width="1"/>
+    <circle cx="16" cy="19.5" r="6" fill="#ff5f56"/>
+    <circle cx="36" cy="19.5" r="6" fill="#ffbd2e"/>
+    <circle cx="56" cy="19.5" r="6" fill="#27c93f"/>
+    <text x="600" y="24.2" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="12" text-anchor="middle" opacity="0.8">Large Font Demo</text>
+  </g>
+  <g class="content f38">
+    <text x="16" y="75" fill="#d670d6" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="20" xml:space="preserve">❯</text>
+    <text x="28" y="75" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="20" xml:space="preserve"> # This uses a 20px font</text>
+    <text x="16" y="103" fill="#d670d6" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="20" xml:space="preserve">❯</text>
+    <text x="28" y="103" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="20" xml:space="preserve"> echo &apos;Great</text>
+    <rect class="cursor-active f38" x="172" y="83" width="12" height="28" fill="#ffffff" opacity="0.7"/>
+  </g>
+
+    </g>
+    <g id="frame-39">
+      
+  <style>
+    .cursor {
+      animation: blink 1s step-end infinite;
+    }
+    .cursor-active {
+      /* No animation - solid cursor during typing/movement */
+    }
+    @keyframes blink {
+      0%, 50% { opacity: 1; }
+      50.01%, 100% { opacity: 0; }
+    }
+  </style>
+  <rect width="1200" height="700" fill="#1e1e1e" rx="10" ry="10"/>
+  <g class="title-bar f39">
+    <rect width="1200" height="39" fill="#1e1e1e" rx="10" ry="10"/>
+    <rect y="29" width="1200" height="10" fill="#1e1e1e"/>
+    <line x1="0" y1="39.5" x2="1200" y2="39.5" stroke="#d4d4d41a" stroke-width="1"/>
+    <circle cx="16" cy="19.5" r="6" fill="#ff5f56"/>
+    <circle cx="36" cy="19.5" r="6" fill="#ffbd2e"/>
+    <circle cx="56" cy="19.5" r="6" fill="#27c93f"/>
+    <text x="600" y="24.2" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="12" text-anchor="middle" opacity="0.8">Large Font Demo</text>
+  </g>
+  <g class="content f39">
+    <text x="16" y="75" fill="#d670d6" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="20" xml:space="preserve">❯</text>
+    <text x="28" y="75" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="20" xml:space="preserve"> # This uses a 20px font</text>
+    <text x="16" y="103" fill="#d670d6" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="20" xml:space="preserve">❯</text>
+    <text x="28" y="103" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="20" xml:space="preserve"> echo &apos;Great </text>
+    <rect class="cursor-active f39" x="184" y="83" width="12" height="28" fill="#ffffff" opacity="0.7"/>
+  </g>
+
+    </g>
+    <g id="frame-40">
+      
+  <style>
+    .cursor {
+      animation: blink 1s step-end infinite;
+    }
+    .cursor-active {
+      /* No animation - solid cursor during typing/movement */
+    }
+    @keyframes blink {
+      0%, 50% { opacity: 1; }
+      50.01%, 100% { opacity: 0; }
+    }
+  </style>
+  <rect width="1200" height="700" fill="#1e1e1e" rx="10" ry="10"/>
+  <g class="title-bar f40">
+    <rect width="1200" height="39" fill="#1e1e1e" rx="10" ry="10"/>
+    <rect y="29" width="1200" height="10" fill="#1e1e1e"/>
+    <line x1="0" y1="39.5" x2="1200" y2="39.5" stroke="#d4d4d41a" stroke-width="1"/>
+    <circle cx="16" cy="19.5" r="6" fill="#ff5f56"/>
+    <circle cx="36" cy="19.5" r="6" fill="#ffbd2e"/>
+    <circle cx="56" cy="19.5" r="6" fill="#27c93f"/>
+    <text x="600" y="24.2" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="12" text-anchor="middle" opacity="0.8">Large Font Demo</text>
+  </g>
+  <g class="content f40">
+    <text x="16" y="75" fill="#d670d6" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="20" xml:space="preserve">❯</text>
+    <text x="28" y="75" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="20" xml:space="preserve"> # This uses a 20px font</text>
+    <text x="16" y="103" fill="#d670d6" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="20" xml:space="preserve">❯</text>
+    <text x="28" y="103" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="20" xml:space="preserve"> echo &apos;Great f</text>
+    <rect class="cursor-active f40" x="196" y="83" width="12" height="28" fill="#ffffff" opacity="0.7"/>
+  </g>
+
+    </g>
+    <g id="frame-41">
+      
+  <style>
+    .cursor {
+      animation: blink 1s step-end infinite;
+    }
+    .cursor-active {
+      /* No animation - solid cursor during typing/movement */
+    }
+    @keyframes blink {
+      0%, 50% { opacity: 1; }
+      50.01%, 100% { opacity: 0; }
+    }
+  </style>
+  <rect width="1200" height="700" fill="#1e1e1e" rx="10" ry="10"/>
+  <g class="title-bar f41">
+    <rect width="1200" height="39" fill="#1e1e1e" rx="10" ry="10"/>
+    <rect y="29" width="1200" height="10" fill="#1e1e1e"/>
+    <line x1="0" y1="39.5" x2="1200" y2="39.5" stroke="#d4d4d41a" stroke-width="1"/>
+    <circle cx="16" cy="19.5" r="6" fill="#ff5f56"/>
+    <circle cx="36" cy="19.5" r="6" fill="#ffbd2e"/>
+    <circle cx="56" cy="19.5" r="6" fill="#27c93f"/>
+    <text x="600" y="24.2" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="12" text-anchor="middle" opacity="0.8">Large Font Demo</text>
+  </g>
+  <g class="content f41">
+    <text x="16" y="75" fill="#d670d6" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="20" xml:space="preserve">❯</text>
+    <text x="28" y="75" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="20" xml:space="preserve"> # This uses a 20px font</text>
+    <text x="16" y="103" fill="#d670d6" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="20" xml:space="preserve">❯</text>
+    <text x="28" y="103" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="20" xml:space="preserve"> echo &apos;Great fo</text>
+    <rect class="cursor-active f41" x="208" y="83" width="12" height="28" fill="#ffffff" opacity="0.7"/>
+  </g>
+
+    </g>
+    <g id="frame-42">
+      
+  <style>
+    .cursor {
+      animation: blink 1s step-end infinite;
+    }
+    .cursor-active {
+      /* No animation - solid cursor during typing/movement */
+    }
+    @keyframes blink {
+      0%, 50% { opacity: 1; }
+      50.01%, 100% { opacity: 0; }
+    }
+  </style>
+  <rect width="1200" height="700" fill="#1e1e1e" rx="10" ry="10"/>
+  <g class="title-bar f42">
+    <rect width="1200" height="39" fill="#1e1e1e" rx="10" ry="10"/>
+    <rect y="29" width="1200" height="10" fill="#1e1e1e"/>
+    <line x1="0" y1="39.5" x2="1200" y2="39.5" stroke="#d4d4d41a" stroke-width="1"/>
+    <circle cx="16" cy="19.5" r="6" fill="#ff5f56"/>
+    <circle cx="36" cy="19.5" r="6" fill="#ffbd2e"/>
+    <circle cx="56" cy="19.5" r="6" fill="#27c93f"/>
+    <text x="600" y="24.2" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="12" text-anchor="middle" opacity="0.8">Large Font Demo</text>
+  </g>
+  <g class="content f42">
+    <text x="16" y="75" fill="#d670d6" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="20" xml:space="preserve">❯</text>
+    <text x="28" y="75" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="20" xml:space="preserve"> # This uses a 20px font</text>
+    <text x="16" y="103" fill="#d670d6" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="20" xml:space="preserve">❯</text>
+    <text x="28" y="103" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="20" xml:space="preserve"> echo &apos;Great for</text>
+    <rect class="cursor-active f42" x="220" y="83" width="12" height="28" fill="#ffffff" opacity="0.7"/>
+  </g>
+
+    </g>
+    <g id="frame-43">
+      
+  <style>
+    .cursor {
+      animation: blink 1s step-end infinite;
+    }
+    .cursor-active {
+      /* No animation - solid cursor during typing/movement */
+    }
+    @keyframes blink {
+      0%, 50% { opacity: 1; }
+      50.01%, 100% { opacity: 0; }
+    }
+  </style>
+  <rect width="1200" height="700" fill="#1e1e1e" rx="10" ry="10"/>
+  <g class="title-bar f43">
+    <rect width="1200" height="39" fill="#1e1e1e" rx="10" ry="10"/>
+    <rect y="29" width="1200" height="10" fill="#1e1e1e"/>
+    <line x1="0" y1="39.5" x2="1200" y2="39.5" stroke="#d4d4d41a" stroke-width="1"/>
+    <circle cx="16" cy="19.5" r="6" fill="#ff5f56"/>
+    <circle cx="36" cy="19.5" r="6" fill="#ffbd2e"/>
+    <circle cx="56" cy="19.5" r="6" fill="#27c93f"/>
+    <text x="600" y="24.2" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="12" text-anchor="middle" opacity="0.8">Large Font Demo</text>
+  </g>
+  <g class="content f43">
+    <text x="16" y="75" fill="#d670d6" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="20" xml:space="preserve">❯</text>
+    <text x="28" y="75" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="20" xml:space="preserve"> # This uses a 20px font</text>
+    <text x="16" y="103" fill="#d670d6" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="20" xml:space="preserve">❯</text>
+    <text x="28" y="103" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="20" xml:space="preserve"> echo &apos;Great for </text>
+    <rect class="cursor-active f43" x="232" y="83" width="12" height="28" fill="#ffffff" opacity="0.7"/>
+  </g>
+
+    </g>
+    <g id="frame-44">
+      
+  <style>
+    .cursor {
+      animation: blink 1s step-end infinite;
+    }
+    .cursor-active {
+      /* No animation - solid cursor during typing/movement */
+    }
+    @keyframes blink {
+      0%, 50% { opacity: 1; }
+      50.01%, 100% { opacity: 0; }
+    }
+  </style>
+  <rect width="1200" height="700" fill="#1e1e1e" rx="10" ry="10"/>
+  <g class="title-bar f44">
+    <rect width="1200" height="39" fill="#1e1e1e" rx="10" ry="10"/>
+    <rect y="29" width="1200" height="10" fill="#1e1e1e"/>
+    <line x1="0" y1="39.5" x2="1200" y2="39.5" stroke="#d4d4d41a" stroke-width="1"/>
+    <circle cx="16" cy="19.5" r="6" fill="#ff5f56"/>
+    <circle cx="36" cy="19.5" r="6" fill="#ffbd2e"/>
+    <circle cx="56" cy="19.5" r="6" fill="#27c93f"/>
+    <text x="600" y="24.2" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="12" text-anchor="middle" opacity="0.8">Large Font Demo</text>
+  </g>
+  <g class="content f44">
+    <text x="16" y="75" fill="#d670d6" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="20" xml:space="preserve">❯</text>
+    <text x="28" y="75" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="20" xml:space="preserve"> # This uses a 20px font</text>
+    <text x="16" y="103" fill="#d670d6" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="20" xml:space="preserve">❯</text>
+    <text x="28" y="103" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="20" xml:space="preserve"> echo &apos;Great for p</text>
+    <rect class="cursor-active f44" x="244" y="83" width="12" height="28" fill="#ffffff" opacity="0.7"/>
+  </g>
+
+    </g>
+    <g id="frame-45">
+      
+  <style>
+    .cursor {
+      animation: blink 1s step-end infinite;
+    }
+    .cursor-active {
+      /* No animation - solid cursor during typing/movement */
+    }
+    @keyframes blink {
+      0%, 50% { opacity: 1; }
+      50.01%, 100% { opacity: 0; }
+    }
+  </style>
+  <rect width="1200" height="700" fill="#1e1e1e" rx="10" ry="10"/>
+  <g class="title-bar f45">
+    <rect width="1200" height="39" fill="#1e1e1e" rx="10" ry="10"/>
+    <rect y="29" width="1200" height="10" fill="#1e1e1e"/>
+    <line x1="0" y1="39.5" x2="1200" y2="39.5" stroke="#d4d4d41a" stroke-width="1"/>
+    <circle cx="16" cy="19.5" r="6" fill="#ff5f56"/>
+    <circle cx="36" cy="19.5" r="6" fill="#ffbd2e"/>
+    <circle cx="56" cy="19.5" r="6" fill="#27c93f"/>
+    <text x="600" y="24.2" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="12" text-anchor="middle" opacity="0.8">Large Font Demo</text>
+  </g>
+  <g class="content f45">
+    <text x="16" y="75" fill="#d670d6" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="20" xml:space="preserve">❯</text>
+    <text x="28" y="75" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="20" xml:space="preserve"> # This uses a 20px font</text>
+    <text x="16" y="103" fill="#d670d6" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="20" xml:space="preserve">❯</text>
+    <text x="28" y="103" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="20" xml:space="preserve"> echo &apos;Great for pr</text>
+    <rect class="cursor-active f45" x="256" y="83" width="12" height="28" fill="#ffffff" opacity="0.7"/>
+  </g>
+
+    </g>
+    <g id="frame-46">
+      
+  <style>
+    .cursor {
+      animation: blink 1s step-end infinite;
+    }
+    .cursor-active {
+      /* No animation - solid cursor during typing/movement */
+    }
+    @keyframes blink {
+      0%, 50% { opacity: 1; }
+      50.01%, 100% { opacity: 0; }
+    }
+  </style>
+  <rect width="1200" height="700" fill="#1e1e1e" rx="10" ry="10"/>
+  <g class="title-bar f46">
+    <rect width="1200" height="39" fill="#1e1e1e" rx="10" ry="10"/>
+    <rect y="29" width="1200" height="10" fill="#1e1e1e"/>
+    <line x1="0" y1="39.5" x2="1200" y2="39.5" stroke="#d4d4d41a" stroke-width="1"/>
+    <circle cx="16" cy="19.5" r="6" fill="#ff5f56"/>
+    <circle cx="36" cy="19.5" r="6" fill="#ffbd2e"/>
+    <circle cx="56" cy="19.5" r="6" fill="#27c93f"/>
+    <text x="600" y="24.2" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="12" text-anchor="middle" opacity="0.8">Large Font Demo</text>
+  </g>
+  <g class="content f46">
+    <text x="16" y="75" fill="#d670d6" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="20" xml:space="preserve">❯</text>
+    <text x="28" y="75" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="20" xml:space="preserve"> # This uses a 20px font</text>
+    <text x="16" y="103" fill="#d670d6" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="20" xml:space="preserve">❯</text>
+    <text x="28" y="103" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="20" xml:space="preserve"> echo &apos;Great for pre</text>
+    <rect class="cursor-active f46" x="268" y="83" width="12" height="28" fill="#ffffff" opacity="0.7"/>
+  </g>
+
+    </g>
+    <g id="frame-47">
+      
+  <style>
+    .cursor {
+      animation: blink 1s step-end infinite;
+    }
+    .cursor-active {
+      /* No animation - solid cursor during typing/movement */
+    }
+    @keyframes blink {
+      0%, 50% { opacity: 1; }
+      50.01%, 100% { opacity: 0; }
+    }
+  </style>
+  <rect width="1200" height="700" fill="#1e1e1e" rx="10" ry="10"/>
+  <g class="title-bar f47">
+    <rect width="1200" height="39" fill="#1e1e1e" rx="10" ry="10"/>
+    <rect y="29" width="1200" height="10" fill="#1e1e1e"/>
+    <line x1="0" y1="39.5" x2="1200" y2="39.5" stroke="#d4d4d41a" stroke-width="1"/>
+    <circle cx="16" cy="19.5" r="6" fill="#ff5f56"/>
+    <circle cx="36" cy="19.5" r="6" fill="#ffbd2e"/>
+    <circle cx="56" cy="19.5" r="6" fill="#27c93f"/>
+    <text x="600" y="24.2" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="12" text-anchor="middle" opacity="0.8">Large Font Demo</text>
+  </g>
+  <g class="content f47">
+    <text x="16" y="75" fill="#d670d6" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="20" xml:space="preserve">❯</text>
+    <text x="28" y="75" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="20" xml:space="preserve"> # This uses a 20px font</text>
+    <text x="16" y="103" fill="#d670d6" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="20" xml:space="preserve">❯</text>
+    <text x="28" y="103" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="20" xml:space="preserve"> echo &apos;Great for pres</text>
+    <rect class="cursor-active f47" x="280" y="83" width="12" height="28" fill="#ffffff" opacity="0.7"/>
+  </g>
+
+    </g>
+    <g id="frame-48">
+      
+  <style>
+    .cursor {
+      animation: blink 1s step-end infinite;
+    }
+    .cursor-active {
+      /* No animation - solid cursor during typing/movement */
+    }
+    @keyframes blink {
+      0%, 50% { opacity: 1; }
+      50.01%, 100% { opacity: 0; }
+    }
+  </style>
+  <rect width="1200" height="700" fill="#1e1e1e" rx="10" ry="10"/>
+  <g class="title-bar f48">
+    <rect width="1200" height="39" fill="#1e1e1e" rx="10" ry="10"/>
+    <rect y="29" width="1200" height="10" fill="#1e1e1e"/>
+    <line x1="0" y1="39.5" x2="1200" y2="39.5" stroke="#d4d4d41a" stroke-width="1"/>
+    <circle cx="16" cy="19.5" r="6" fill="#ff5f56"/>
+    <circle cx="36" cy="19.5" r="6" fill="#ffbd2e"/>
+    <circle cx="56" cy="19.5" r="6" fill="#27c93f"/>
+    <text x="600" y="24.2" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="12" text-anchor="middle" opacity="0.8">Large Font Demo</text>
+  </g>
+  <g class="content f48">
+    <text x="16" y="75" fill="#d670d6" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="20" xml:space="preserve">❯</text>
+    <text x="28" y="75" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="20" xml:space="preserve"> # This uses a 20px font</text>
+    <text x="16" y="103" fill="#d670d6" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="20" xml:space="preserve">❯</text>
+    <text x="28" y="103" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="20" xml:space="preserve"> echo &apos;Great for prese</text>
+    <rect class="cursor-active f48" x="292" y="83" width="12" height="28" fill="#ffffff" opacity="0.7"/>
+  </g>
+
+    </g>
+    <g id="frame-49">
+      
+  <style>
+    .cursor {
+      animation: blink 1s step-end infinite;
+    }
+    .cursor-active {
+      /* No animation - solid cursor during typing/movement */
+    }
+    @keyframes blink {
+      0%, 50% { opacity: 1; }
+      50.01%, 100% { opacity: 0; }
+    }
+  </style>
+  <rect width="1200" height="700" fill="#1e1e1e" rx="10" ry="10"/>
+  <g class="title-bar f49">
+    <rect width="1200" height="39" fill="#1e1e1e" rx="10" ry="10"/>
+    <rect y="29" width="1200" height="10" fill="#1e1e1e"/>
+    <line x1="0" y1="39.5" x2="1200" y2="39.5" stroke="#d4d4d41a" stroke-width="1"/>
+    <circle cx="16" cy="19.5" r="6" fill="#ff5f56"/>
+    <circle cx="36" cy="19.5" r="6" fill="#ffbd2e"/>
+    <circle cx="56" cy="19.5" r="6" fill="#27c93f"/>
+    <text x="600" y="24.2" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="12" text-anchor="middle" opacity="0.8">Large Font Demo</text>
+  </g>
+  <g class="content f49">
+    <text x="16" y="75" fill="#d670d6" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="20" xml:space="preserve">❯</text>
+    <text x="28" y="75" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="20" xml:space="preserve"> # This uses a 20px font</text>
+    <text x="16" y="103" fill="#d670d6" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="20" xml:space="preserve">❯</text>
+    <text x="28" y="103" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="20" xml:space="preserve"> echo &apos;Great for presen</text>
+    <rect class="cursor-active f49" x="304" y="83" width="12" height="28" fill="#ffffff" opacity="0.7"/>
+  </g>
+
+    </g>
+    <g id="frame-50">
+      
+  <style>
+    .cursor {
+      animation: blink 1s step-end infinite;
+    }
+    .cursor-active {
+      /* No animation - solid cursor during typing/movement */
+    }
+    @keyframes blink {
+      0%, 50% { opacity: 1; }
+      50.01%, 100% { opacity: 0; }
+    }
+  </style>
+  <rect width="1200" height="700" fill="#1e1e1e" rx="10" ry="10"/>
+  <g class="title-bar f50">
+    <rect width="1200" height="39" fill="#1e1e1e" rx="10" ry="10"/>
+    <rect y="29" width="1200" height="10" fill="#1e1e1e"/>
+    <line x1="0" y1="39.5" x2="1200" y2="39.5" stroke="#d4d4d41a" stroke-width="1"/>
+    <circle cx="16" cy="19.5" r="6" fill="#ff5f56"/>
+    <circle cx="36" cy="19.5" r="6" fill="#ffbd2e"/>
+    <circle cx="56" cy="19.5" r="6" fill="#27c93f"/>
+    <text x="600" y="24.2" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="12" text-anchor="middle" opacity="0.8">Large Font Demo</text>
+  </g>
+  <g class="content f50">
+    <text x="16" y="75" fill="#d670d6" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="20" xml:space="preserve">❯</text>
+    <text x="28" y="75" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="20" xml:space="preserve"> # This uses a 20px font</text>
+    <text x="16" y="103" fill="#d670d6" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="20" xml:space="preserve">❯</text>
+    <text x="28" y="103" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="20" xml:space="preserve"> echo &apos;Great for present</text>
+    <rect class="cursor-active f50" x="316" y="83" width="12" height="28" fill="#ffffff" opacity="0.7"/>
+  </g>
+
+    </g>
+    <g id="frame-51">
+      
+  <style>
+    .cursor {
+      animation: blink 1s step-end infinite;
+    }
+    .cursor-active {
+      /* No animation - solid cursor during typing/movement */
+    }
+    @keyframes blink {
+      0%, 50% { opacity: 1; }
+      50.01%, 100% { opacity: 0; }
+    }
+  </style>
+  <rect width="1200" height="700" fill="#1e1e1e" rx="10" ry="10"/>
+  <g class="title-bar f51">
+    <rect width="1200" height="39" fill="#1e1e1e" rx="10" ry="10"/>
+    <rect y="29" width="1200" height="10" fill="#1e1e1e"/>
+    <line x1="0" y1="39.5" x2="1200" y2="39.5" stroke="#d4d4d41a" stroke-width="1"/>
+    <circle cx="16" cy="19.5" r="6" fill="#ff5f56"/>
+    <circle cx="36" cy="19.5" r="6" fill="#ffbd2e"/>
+    <circle cx="56" cy="19.5" r="6" fill="#27c93f"/>
+    <text x="600" y="24.2" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="12" text-anchor="middle" opacity="0.8">Large Font Demo</text>
+  </g>
+  <g class="content f51">
+    <text x="16" y="75" fill="#d670d6" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="20" xml:space="preserve">❯</text>
+    <text x="28" y="75" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="20" xml:space="preserve"> # This uses a 20px font</text>
+    <text x="16" y="103" fill="#d670d6" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="20" xml:space="preserve">❯</text>
+    <text x="28" y="103" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="20" xml:space="preserve"> echo &apos;Great for presenta</text>
+    <rect class="cursor-active f51" x="328" y="83" width="12" height="28" fill="#ffffff" opacity="0.7"/>
+  </g>
+
+    </g>
+    <g id="frame-52">
+      
+  <style>
+    .cursor {
+      animation: blink 1s step-end infinite;
+    }
+    .cursor-active {
+      /* No animation - solid cursor during typing/movement */
+    }
+    @keyframes blink {
+      0%, 50% { opacity: 1; }
+      50.01%, 100% { opacity: 0; }
+    }
+  </style>
+  <rect width="1200" height="700" fill="#1e1e1e" rx="10" ry="10"/>
+  <g class="title-bar f52">
+    <rect width="1200" height="39" fill="#1e1e1e" rx="10" ry="10"/>
+    <rect y="29" width="1200" height="10" fill="#1e1e1e"/>
+    <line x1="0" y1="39.5" x2="1200" y2="39.5" stroke="#d4d4d41a" stroke-width="1"/>
+    <circle cx="16" cy="19.5" r="6" fill="#ff5f56"/>
+    <circle cx="36" cy="19.5" r="6" fill="#ffbd2e"/>
+    <circle cx="56" cy="19.5" r="6" fill="#27c93f"/>
+    <text x="600" y="24.2" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="12" text-anchor="middle" opacity="0.8">Large Font Demo</text>
+  </g>
+  <g class="content f52">
+    <text x="16" y="75" fill="#d670d6" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="20" xml:space="preserve">❯</text>
+    <text x="28" y="75" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="20" xml:space="preserve"> # This uses a 20px font</text>
+    <text x="16" y="103" fill="#d670d6" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="20" xml:space="preserve">❯</text>
+    <text x="28" y="103" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="20" xml:space="preserve"> echo &apos;Great for presentat</text>
+    <rect class="cursor-active f52" x="340" y="83" width="12" height="28" fill="#ffffff" opacity="0.7"/>
+  </g>
+
+    </g>
+    <g id="frame-53">
+      
+  <style>
+    .cursor {
+      animation: blink 1s step-end infinite;
+    }
+    .cursor-active {
+      /* No animation - solid cursor during typing/movement */
+    }
+    @keyframes blink {
+      0%, 50% { opacity: 1; }
+      50.01%, 100% { opacity: 0; }
+    }
+  </style>
+  <rect width="1200" height="700" fill="#1e1e1e" rx="10" ry="10"/>
+  <g class="title-bar f53">
+    <rect width="1200" height="39" fill="#1e1e1e" rx="10" ry="10"/>
+    <rect y="29" width="1200" height="10" fill="#1e1e1e"/>
+    <line x1="0" y1="39.5" x2="1200" y2="39.5" stroke="#d4d4d41a" stroke-width="1"/>
+    <circle cx="16" cy="19.5" r="6" fill="#ff5f56"/>
+    <circle cx="36" cy="19.5" r="6" fill="#ffbd2e"/>
+    <circle cx="56" cy="19.5" r="6" fill="#27c93f"/>
+    <text x="600" y="24.2" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="12" text-anchor="middle" opacity="0.8">Large Font Demo</text>
+  </g>
+  <g class="content f53">
+    <text x="16" y="75" fill="#d670d6" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="20" xml:space="preserve">❯</text>
+    <text x="28" y="75" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="20" xml:space="preserve"> # This uses a 20px font</text>
+    <text x="16" y="103" fill="#d670d6" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="20" xml:space="preserve">❯</text>
+    <text x="28" y="103" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="20" xml:space="preserve"> echo &apos;Great for presentati</text>
+    <rect class="cursor-active f53" x="352" y="83" width="12" height="28" fill="#ffffff" opacity="0.7"/>
+  </g>
+
+    </g>
+    <g id="frame-54">
+      
+  <style>
+    .cursor {
+      animation: blink 1s step-end infinite;
+    }
+    .cursor-active {
+      /* No animation - solid cursor during typing/movement */
+    }
+    @keyframes blink {
+      0%, 50% { opacity: 1; }
+      50.01%, 100% { opacity: 0; }
+    }
+  </style>
+  <rect width="1200" height="700" fill="#1e1e1e" rx="10" ry="10"/>
+  <g class="title-bar f54">
+    <rect width="1200" height="39" fill="#1e1e1e" rx="10" ry="10"/>
+    <rect y="29" width="1200" height="10" fill="#1e1e1e"/>
+    <line x1="0" y1="39.5" x2="1200" y2="39.5" stroke="#d4d4d41a" stroke-width="1"/>
+    <circle cx="16" cy="19.5" r="6" fill="#ff5f56"/>
+    <circle cx="36" cy="19.5" r="6" fill="#ffbd2e"/>
+    <circle cx="56" cy="19.5" r="6" fill="#27c93f"/>
+    <text x="600" y="24.2" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="12" text-anchor="middle" opacity="0.8">Large Font Demo</text>
+  </g>
+  <g class="content f54">
+    <text x="16" y="75" fill="#d670d6" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="20" xml:space="preserve">❯</text>
+    <text x="28" y="75" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="20" xml:space="preserve"> # This uses a 20px font</text>
+    <text x="16" y="103" fill="#d670d6" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="20" xml:space="preserve">❯</text>
+    <text x="28" y="103" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="20" xml:space="preserve"> echo &apos;Great for presentatio</text>
+    <rect class="cursor-active f54" x="364" y="83" width="12" height="28" fill="#ffffff" opacity="0.7"/>
+  </g>
+
+    </g>
+    <g id="frame-55">
+      
+  <style>
+    .cursor {
+      animation: blink 1s step-end infinite;
+    }
+    .cursor-active {
+      /* No animation - solid cursor during typing/movement */
+    }
+    @keyframes blink {
+      0%, 50% { opacity: 1; }
+      50.01%, 100% { opacity: 0; }
+    }
+  </style>
+  <rect width="1200" height="700" fill="#1e1e1e" rx="10" ry="10"/>
+  <g class="title-bar f55">
+    <rect width="1200" height="39" fill="#1e1e1e" rx="10" ry="10"/>
+    <rect y="29" width="1200" height="10" fill="#1e1e1e"/>
+    <line x1="0" y1="39.5" x2="1200" y2="39.5" stroke="#d4d4d41a" stroke-width="1"/>
+    <circle cx="16" cy="19.5" r="6" fill="#ff5f56"/>
+    <circle cx="36" cy="19.5" r="6" fill="#ffbd2e"/>
+    <circle cx="56" cy="19.5" r="6" fill="#27c93f"/>
+    <text x="600" y="24.2" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="12" text-anchor="middle" opacity="0.8">Large Font Demo</text>
+  </g>
+  <g class="content f55">
+    <text x="16" y="75" fill="#d670d6" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="20" xml:space="preserve">❯</text>
+    <text x="28" y="75" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="20" xml:space="preserve"> # This uses a 20px font</text>
+    <text x="16" y="103" fill="#d670d6" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="20" xml:space="preserve">❯</text>
+    <text x="28" y="103" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="20" xml:space="preserve"> echo &apos;Great for presentation</text>
+    <rect class="cursor-active f55" x="376" y="83" width="12" height="28" fill="#ffffff" opacity="0.7"/>
+  </g>
+
+    </g>
+    <g id="frame-56">
+      
+  <style>
+    .cursor {
+      animation: blink 1s step-end infinite;
+    }
+    .cursor-active {
+      /* No animation - solid cursor during typing/movement */
+    }
+    @keyframes blink {
+      0%, 50% { opacity: 1; }
+      50.01%, 100% { opacity: 0; }
+    }
+  </style>
+  <rect width="1200" height="700" fill="#1e1e1e" rx="10" ry="10"/>
+  <g class="title-bar f56">
+    <rect width="1200" height="39" fill="#1e1e1e" rx="10" ry="10"/>
+    <rect y="29" width="1200" height="10" fill="#1e1e1e"/>
+    <line x1="0" y1="39.5" x2="1200" y2="39.5" stroke="#d4d4d41a" stroke-width="1"/>
+    <circle cx="16" cy="19.5" r="6" fill="#ff5f56"/>
+    <circle cx="36" cy="19.5" r="6" fill="#ffbd2e"/>
+    <circle cx="56" cy="19.5" r="6" fill="#27c93f"/>
+    <text x="600" y="24.2" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="12" text-anchor="middle" opacity="0.8">Large Font Demo</text>
+  </g>
+  <g class="content f56">
+    <text x="16" y="75" fill="#d670d6" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="20" xml:space="preserve">❯</text>
+    <text x="28" y="75" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="20" xml:space="preserve"> # This uses a 20px font</text>
+    <text x="16" y="103" fill="#d670d6" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="20" xml:space="preserve">❯</text>
+    <text x="28" y="103" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="20" xml:space="preserve"> echo &apos;Great for presentations</text>
+    <rect class="cursor-active f56" x="388" y="83" width="12" height="28" fill="#ffffff" opacity="0.7"/>
+  </g>
+
+    </g>
+    <g id="frame-57">
+      
+  <style>
+    .cursor {
+      animation: blink 1s step-end infinite;
+    }
+    .cursor-active {
+      /* No animation - solid cursor during typing/movement */
+    }
+    @keyframes blink {
+      0%, 50% { opacity: 1; }
+      50.01%, 100% { opacity: 0; }
+    }
+  </style>
+  <rect width="1200" height="700" fill="#1e1e1e" rx="10" ry="10"/>
+  <g class="title-bar f57">
+    <rect width="1200" height="39" fill="#1e1e1e" rx="10" ry="10"/>
+    <rect y="29" width="1200" height="10" fill="#1e1e1e"/>
+    <line x1="0" y1="39.5" x2="1200" y2="39.5" stroke="#d4d4d41a" stroke-width="1"/>
+    <circle cx="16" cy="19.5" r="6" fill="#ff5f56"/>
+    <circle cx="36" cy="19.5" r="6" fill="#ffbd2e"/>
+    <circle cx="56" cy="19.5" r="6" fill="#27c93f"/>
+    <text x="600" y="24.2" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="12" text-anchor="middle" opacity="0.8">Large Font Demo</text>
+  </g>
+  <g class="content f57">
+    <text x="16" y="75" fill="#d670d6" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="20" xml:space="preserve">❯</text>
+    <text x="28" y="75" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="20" xml:space="preserve"> # This uses a 20px font</text>
+    <text x="16" y="103" fill="#d670d6" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="20" xml:space="preserve">❯</text>
+    <text x="28" y="103" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="20" xml:space="preserve"> echo &apos;Great for presentations </text>
+    <rect class="cursor-active f57" x="400" y="83" width="12" height="28" fill="#ffffff" opacity="0.7"/>
+  </g>
+
+    </g>
+    <g id="frame-58">
+      
+  <style>
+    .cursor {
+      animation: blink 1s step-end infinite;
+    }
+    .cursor-active {
+      /* No animation - solid cursor during typing/movement */
+    }
+    @keyframes blink {
+      0%, 50% { opacity: 1; }
+      50.01%, 100% { opacity: 0; }
+    }
+  </style>
+  <rect width="1200" height="700" fill="#1e1e1e" rx="10" ry="10"/>
+  <g class="title-bar f58">
+    <rect width="1200" height="39" fill="#1e1e1e" rx="10" ry="10"/>
+    <rect y="29" width="1200" height="10" fill="#1e1e1e"/>
+    <line x1="0" y1="39.5" x2="1200" y2="39.5" stroke="#d4d4d41a" stroke-width="1"/>
+    <circle cx="16" cy="19.5" r="6" fill="#ff5f56"/>
+    <circle cx="36" cy="19.5" r="6" fill="#ffbd2e"/>
+    <circle cx="56" cy="19.5" r="6" fill="#27c93f"/>
+    <text x="600" y="24.2" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="12" text-anchor="middle" opacity="0.8">Large Font Demo</text>
+  </g>
+  <g class="content f58">
+    <text x="16" y="75" fill="#d670d6" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="20" xml:space="preserve">❯</text>
+    <text x="28" y="75" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="20" xml:space="preserve"> # This uses a 20px font</text>
+    <text x="16" y="103" fill="#d670d6" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="20" xml:space="preserve">❯</text>
+    <text x="28" y="103" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="20" xml:space="preserve"> echo &apos;Great for presentations a</text>
+    <rect class="cursor-active f58" x="412" y="83" width="12" height="28" fill="#ffffff" opacity="0.7"/>
+  </g>
+
+    </g>
+    <g id="frame-59">
+      
+  <style>
+    .cursor {
+      animation: blink 1s step-end infinite;
+    }
+    .cursor-active {
+      /* No animation - solid cursor during typing/movement */
+    }
+    @keyframes blink {
+      0%, 50% { opacity: 1; }
+      50.01%, 100% { opacity: 0; }
+    }
+  </style>
+  <rect width="1200" height="700" fill="#1e1e1e" rx="10" ry="10"/>
+  <g class="title-bar f59">
+    <rect width="1200" height="39" fill="#1e1e1e" rx="10" ry="10"/>
+    <rect y="29" width="1200" height="10" fill="#1e1e1e"/>
+    <line x1="0" y1="39.5" x2="1200" y2="39.5" stroke="#d4d4d41a" stroke-width="1"/>
+    <circle cx="16" cy="19.5" r="6" fill="#ff5f56"/>
+    <circle cx="36" cy="19.5" r="6" fill="#ffbd2e"/>
+    <circle cx="56" cy="19.5" r="6" fill="#27c93f"/>
+    <text x="600" y="24.2" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="12" text-anchor="middle" opacity="0.8">Large Font Demo</text>
+  </g>
+  <g class="content f59">
+    <text x="16" y="75" fill="#d670d6" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="20" xml:space="preserve">❯</text>
+    <text x="28" y="75" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="20" xml:space="preserve"> # This uses a 20px font</text>
+    <text x="16" y="103" fill="#d670d6" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="20" xml:space="preserve">❯</text>
+    <text x="28" y="103" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="20" xml:space="preserve"> echo &apos;Great for presentations an</text>
+    <rect class="cursor-active f59" x="424" y="83" width="12" height="28" fill="#ffffff" opacity="0.7"/>
+  </g>
+
+    </g>
+    <g id="frame-60">
+      
+  <style>
+    .cursor {
+      animation: blink 1s step-end infinite;
+    }
+    .cursor-active {
+      /* No animation - solid cursor during typing/movement */
+    }
+    @keyframes blink {
+      0%, 50% { opacity: 1; }
+      50.01%, 100% { opacity: 0; }
+    }
+  </style>
+  <rect width="1200" height="700" fill="#1e1e1e" rx="10" ry="10"/>
+  <g class="title-bar f60">
+    <rect width="1200" height="39" fill="#1e1e1e" rx="10" ry="10"/>
+    <rect y="29" width="1200" height="10" fill="#1e1e1e"/>
+    <line x1="0" y1="39.5" x2="1200" y2="39.5" stroke="#d4d4d41a" stroke-width="1"/>
+    <circle cx="16" cy="19.5" r="6" fill="#ff5f56"/>
+    <circle cx="36" cy="19.5" r="6" fill="#ffbd2e"/>
+    <circle cx="56" cy="19.5" r="6" fill="#27c93f"/>
+    <text x="600" y="24.2" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="12" text-anchor="middle" opacity="0.8">Large Font Demo</text>
+  </g>
+  <g class="content f60">
+    <text x="16" y="75" fill="#d670d6" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="20" xml:space="preserve">❯</text>
+    <text x="28" y="75" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="20" xml:space="preserve"> # This uses a 20px font</text>
+    <text x="16" y="103" fill="#d670d6" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="20" xml:space="preserve">❯</text>
+    <text x="28" y="103" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="20" xml:space="preserve"> echo &apos;Great for presentations and</text>
+    <rect class="cursor-active f60" x="436" y="83" width="12" height="28" fill="#ffffff" opacity="0.7"/>
+  </g>
+
+    </g>
+    <g id="frame-61">
+      
+  <style>
+    .cursor {
+      animation: blink 1s step-end infinite;
+    }
+    .cursor-active {
+      /* No animation - solid cursor during typing/movement */
+    }
+    @keyframes blink {
+      0%, 50% { opacity: 1; }
+      50.01%, 100% { opacity: 0; }
+    }
+  </style>
+  <rect width="1200" height="700" fill="#1e1e1e" rx="10" ry="10"/>
+  <g class="title-bar f61">
+    <rect width="1200" height="39" fill="#1e1e1e" rx="10" ry="10"/>
+    <rect y="29" width="1200" height="10" fill="#1e1e1e"/>
+    <line x1="0" y1="39.5" x2="1200" y2="39.5" stroke="#d4d4d41a" stroke-width="1"/>
+    <circle cx="16" cy="19.5" r="6" fill="#ff5f56"/>
+    <circle cx="36" cy="19.5" r="6" fill="#ffbd2e"/>
+    <circle cx="56" cy="19.5" r="6" fill="#27c93f"/>
+    <text x="600" y="24.2" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="12" text-anchor="middle" opacity="0.8">Large Font Demo</text>
+  </g>
+  <g class="content f61">
+    <text x="16" y="75" fill="#d670d6" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="20" xml:space="preserve">❯</text>
+    <text x="28" y="75" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="20" xml:space="preserve"> # This uses a 20px font</text>
+    <text x="16" y="103" fill="#d670d6" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="20" xml:space="preserve">❯</text>
+    <text x="28" y="103" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="20" xml:space="preserve"> echo &apos;Great for presentations and </text>
+    <rect class="cursor-active f61" x="448" y="83" width="12" height="28" fill="#ffffff" opacity="0.7"/>
+  </g>
+
+    </g>
+    <g id="frame-62">
+      
+  <style>
+    .cursor {
+      animation: blink 1s step-end infinite;
+    }
+    .cursor-active {
+      /* No animation - solid cursor during typing/movement */
+    }
+    @keyframes blink {
+      0%, 50% { opacity: 1; }
+      50.01%, 100% { opacity: 0; }
+    }
+  </style>
+  <rect width="1200" height="700" fill="#1e1e1e" rx="10" ry="10"/>
+  <g class="title-bar f62">
+    <rect width="1200" height="39" fill="#1e1e1e" rx="10" ry="10"/>
+    <rect y="29" width="1200" height="10" fill="#1e1e1e"/>
+    <line x1="0" y1="39.5" x2="1200" y2="39.5" stroke="#d4d4d41a" stroke-width="1"/>
+    <circle cx="16" cy="19.5" r="6" fill="#ff5f56"/>
+    <circle cx="36" cy="19.5" r="6" fill="#ffbd2e"/>
+    <circle cx="56" cy="19.5" r="6" fill="#27c93f"/>
+    <text x="600" y="24.2" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="12" text-anchor="middle" opacity="0.8">Large Font Demo</text>
+  </g>
+  <g class="content f62">
+    <text x="16" y="75" fill="#d670d6" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="20" xml:space="preserve">❯</text>
+    <text x="28" y="75" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="20" xml:space="preserve"> # This uses a 20px font</text>
+    <text x="16" y="103" fill="#d670d6" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="20" xml:space="preserve">❯</text>
+    <text x="28" y="103" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="20" xml:space="preserve"> echo &apos;Great for presentations and r</text>
+    <rect class="cursor-active f62" x="460" y="83" width="12" height="28" fill="#ffffff" opacity="0.7"/>
+  </g>
+
+    </g>
+    <g id="frame-63">
+      
+  <style>
+    .cursor {
+      animation: blink 1s step-end infinite;
+    }
+    .cursor-active {
+      /* No animation - solid cursor during typing/movement */
+    }
+    @keyframes blink {
+      0%, 50% { opacity: 1; }
+      50.01%, 100% { opacity: 0; }
+    }
+  </style>
+  <rect width="1200" height="700" fill="#1e1e1e" rx="10" ry="10"/>
+  <g class="title-bar f63">
+    <rect width="1200" height="39" fill="#1e1e1e" rx="10" ry="10"/>
+    <rect y="29" width="1200" height="10" fill="#1e1e1e"/>
+    <line x1="0" y1="39.5" x2="1200" y2="39.5" stroke="#d4d4d41a" stroke-width="1"/>
+    <circle cx="16" cy="19.5" r="6" fill="#ff5f56"/>
+    <circle cx="36" cy="19.5" r="6" fill="#ffbd2e"/>
+    <circle cx="56" cy="19.5" r="6" fill="#27c93f"/>
+    <text x="600" y="24.2" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="12" text-anchor="middle" opacity="0.8">Large Font Demo</text>
+  </g>
+  <g class="content f63">
+    <text x="16" y="75" fill="#d670d6" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="20" xml:space="preserve">❯</text>
+    <text x="28" y="75" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="20" xml:space="preserve"> # This uses a 20px font</text>
+    <text x="16" y="103" fill="#d670d6" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="20" xml:space="preserve">❯</text>
+    <text x="28" y="103" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="20" xml:space="preserve"> echo &apos;Great for presentations and re</text>
+    <rect class="cursor-active f63" x="472" y="83" width="12" height="28" fill="#ffffff" opacity="0.7"/>
+  </g>
+
+    </g>
+    <g id="frame-64">
+      
+  <style>
+    .cursor {
+      animation: blink 1s step-end infinite;
+    }
+    .cursor-active {
+      /* No animation - solid cursor during typing/movement */
+    }
+    @keyframes blink {
+      0%, 50% { opacity: 1; }
+      50.01%, 100% { opacity: 0; }
+    }
+  </style>
+  <rect width="1200" height="700" fill="#1e1e1e" rx="10" ry="10"/>
+  <g class="title-bar f64">
+    <rect width="1200" height="39" fill="#1e1e1e" rx="10" ry="10"/>
+    <rect y="29" width="1200" height="10" fill="#1e1e1e"/>
+    <line x1="0" y1="39.5" x2="1200" y2="39.5" stroke="#d4d4d41a" stroke-width="1"/>
+    <circle cx="16" cy="19.5" r="6" fill="#ff5f56"/>
+    <circle cx="36" cy="19.5" r="6" fill="#ffbd2e"/>
+    <circle cx="56" cy="19.5" r="6" fill="#27c93f"/>
+    <text x="600" y="24.2" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="12" text-anchor="middle" opacity="0.8">Large Font Demo</text>
+  </g>
+  <g class="content f64">
+    <text x="16" y="75" fill="#d670d6" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="20" xml:space="preserve">❯</text>
+    <text x="28" y="75" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="20" xml:space="preserve"> # This uses a 20px font</text>
+    <text x="16" y="103" fill="#d670d6" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="20" xml:space="preserve">❯</text>
+    <text x="28" y="103" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="20" xml:space="preserve"> echo &apos;Great for presentations and rea</text>
+    <rect class="cursor-active f64" x="484" y="83" width="12" height="28" fill="#ffffff" opacity="0.7"/>
+  </g>
+
+    </g>
+    <g id="frame-65">
+      
+  <style>
+    .cursor {
+      animation: blink 1s step-end infinite;
+    }
+    .cursor-active {
+      /* No animation - solid cursor during typing/movement */
+    }
+    @keyframes blink {
+      0%, 50% { opacity: 1; }
+      50.01%, 100% { opacity: 0; }
+    }
+  </style>
+  <rect width="1200" height="700" fill="#1e1e1e" rx="10" ry="10"/>
+  <g class="title-bar f65">
+    <rect width="1200" height="39" fill="#1e1e1e" rx="10" ry="10"/>
+    <rect y="29" width="1200" height="10" fill="#1e1e1e"/>
+    <line x1="0" y1="39.5" x2="1200" y2="39.5" stroke="#d4d4d41a" stroke-width="1"/>
+    <circle cx="16" cy="19.5" r="6" fill="#ff5f56"/>
+    <circle cx="36" cy="19.5" r="6" fill="#ffbd2e"/>
+    <circle cx="56" cy="19.5" r="6" fill="#27c93f"/>
+    <text x="600" y="24.2" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="12" text-anchor="middle" opacity="0.8">Large Font Demo</text>
+  </g>
+  <g class="content f65">
+    <text x="16" y="75" fill="#d670d6" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="20" xml:space="preserve">❯</text>
+    <text x="28" y="75" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="20" xml:space="preserve"> # This uses a 20px font</text>
+    <text x="16" y="103" fill="#d670d6" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="20" xml:space="preserve">❯</text>
+    <text x="28" y="103" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="20" xml:space="preserve"> echo &apos;Great for presentations and read</text>
+    <rect class="cursor-active f65" x="496" y="83" width="12" height="28" fill="#ffffff" opacity="0.7"/>
+  </g>
+
+    </g>
+    <g id="frame-66">
+      
+  <style>
+    .cursor {
+      animation: blink 1s step-end infinite;
+    }
+    .cursor-active {
+      /* No animation - solid cursor during typing/movement */
+    }
+    @keyframes blink {
+      0%, 50% { opacity: 1; }
+      50.01%, 100% { opacity: 0; }
+    }
+  </style>
+  <rect width="1200" height="700" fill="#1e1e1e" rx="10" ry="10"/>
+  <g class="title-bar f66">
+    <rect width="1200" height="39" fill="#1e1e1e" rx="10" ry="10"/>
+    <rect y="29" width="1200" height="10" fill="#1e1e1e"/>
+    <line x1="0" y1="39.5" x2="1200" y2="39.5" stroke="#d4d4d41a" stroke-width="1"/>
+    <circle cx="16" cy="19.5" r="6" fill="#ff5f56"/>
+    <circle cx="36" cy="19.5" r="6" fill="#ffbd2e"/>
+    <circle cx="56" cy="19.5" r="6" fill="#27c93f"/>
+    <text x="600" y="24.2" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="12" text-anchor="middle" opacity="0.8">Large Font Demo</text>
+  </g>
+  <g class="content f66">
+    <text x="16" y="75" fill="#d670d6" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="20" xml:space="preserve">❯</text>
+    <text x="28" y="75" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="20" xml:space="preserve"> # This uses a 20px font</text>
+    <text x="16" y="103" fill="#d670d6" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="20" xml:space="preserve">❯</text>
+    <text x="28" y="103" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="20" xml:space="preserve"> echo &apos;Great for presentations and reada</text>
+    <rect class="cursor-active f66" x="508" y="83" width="12" height="28" fill="#ffffff" opacity="0.7"/>
+  </g>
+
+    </g>
+    <g id="frame-67">
+      
+  <style>
+    .cursor {
+      animation: blink 1s step-end infinite;
+    }
+    .cursor-active {
+      /* No animation - solid cursor during typing/movement */
+    }
+    @keyframes blink {
+      0%, 50% { opacity: 1; }
+      50.01%, 100% { opacity: 0; }
+    }
+  </style>
+  <rect width="1200" height="700" fill="#1e1e1e" rx="10" ry="10"/>
+  <g class="title-bar f67">
+    <rect width="1200" height="39" fill="#1e1e1e" rx="10" ry="10"/>
+    <rect y="29" width="1200" height="10" fill="#1e1e1e"/>
+    <line x1="0" y1="39.5" x2="1200" y2="39.5" stroke="#d4d4d41a" stroke-width="1"/>
+    <circle cx="16" cy="19.5" r="6" fill="#ff5f56"/>
+    <circle cx="36" cy="19.5" r="6" fill="#ffbd2e"/>
+    <circle cx="56" cy="19.5" r="6" fill="#27c93f"/>
+    <text x="600" y="24.2" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="12" text-anchor="middle" opacity="0.8">Large Font Demo</text>
+  </g>
+  <g class="content f67">
+    <text x="16" y="75" fill="#d670d6" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="20" xml:space="preserve">❯</text>
+    <text x="28" y="75" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="20" xml:space="preserve"> # This uses a 20px font</text>
+    <text x="16" y="103" fill="#d670d6" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="20" xml:space="preserve">❯</text>
+    <text x="28" y="103" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="20" xml:space="preserve"> echo &apos;Great for presentations and readab</text>
+    <rect class="cursor-active f67" x="520" y="83" width="12" height="28" fill="#ffffff" opacity="0.7"/>
+  </g>
+
+    </g>
+    <g id="frame-68">
+      
+  <style>
+    .cursor {
+      animation: blink 1s step-end infinite;
+    }
+    .cursor-active {
+      /* No animation - solid cursor during typing/movement */
+    }
+    @keyframes blink {
+      0%, 50% { opacity: 1; }
+      50.01%, 100% { opacity: 0; }
+    }
+  </style>
+  <rect width="1200" height="700" fill="#1e1e1e" rx="10" ry="10"/>
+  <g class="title-bar f68">
+    <rect width="1200" height="39" fill="#1e1e1e" rx="10" ry="10"/>
+    <rect y="29" width="1200" height="10" fill="#1e1e1e"/>
+    <line x1="0" y1="39.5" x2="1200" y2="39.5" stroke="#d4d4d41a" stroke-width="1"/>
+    <circle cx="16" cy="19.5" r="6" fill="#ff5f56"/>
+    <circle cx="36" cy="19.5" r="6" fill="#ffbd2e"/>
+    <circle cx="56" cy="19.5" r="6" fill="#27c93f"/>
+    <text x="600" y="24.2" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="12" text-anchor="middle" opacity="0.8">Large Font Demo</text>
+  </g>
+  <g class="content f68">
+    <text x="16" y="75" fill="#d670d6" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="20" xml:space="preserve">❯</text>
+    <text x="28" y="75" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="20" xml:space="preserve"> # This uses a 20px font</text>
+    <text x="16" y="103" fill="#d670d6" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="20" xml:space="preserve">❯</text>
+    <text x="28" y="103" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="20" xml:space="preserve"> echo &apos;Great for presentations and readabi</text>
+    <rect class="cursor-active f68" x="532" y="83" width="12" height="28" fill="#ffffff" opacity="0.7"/>
+  </g>
+
+    </g>
+    <g id="frame-69">
+      
+  <style>
+    .cursor {
+      animation: blink 1s step-end infinite;
+    }
+    .cursor-active {
+      /* No animation - solid cursor during typing/movement */
+    }
+    @keyframes blink {
+      0%, 50% { opacity: 1; }
+      50.01%, 100% { opacity: 0; }
+    }
+  </style>
+  <rect width="1200" height="700" fill="#1e1e1e" rx="10" ry="10"/>
+  <g class="title-bar f69">
+    <rect width="1200" height="39" fill="#1e1e1e" rx="10" ry="10"/>
+    <rect y="29" width="1200" height="10" fill="#1e1e1e"/>
+    <line x1="0" y1="39.5" x2="1200" y2="39.5" stroke="#d4d4d41a" stroke-width="1"/>
+    <circle cx="16" cy="19.5" r="6" fill="#ff5f56"/>
+    <circle cx="36" cy="19.5" r="6" fill="#ffbd2e"/>
+    <circle cx="56" cy="19.5" r="6" fill="#27c93f"/>
+    <text x="600" y="24.2" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="12" text-anchor="middle" opacity="0.8">Large Font Demo</text>
+  </g>
+  <g class="content f69">
+    <text x="16" y="75" fill="#d670d6" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="20" xml:space="preserve">❯</text>
+    <text x="28" y="75" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="20" xml:space="preserve"> # This uses a 20px font</text>
+    <text x="16" y="103" fill="#d670d6" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="20" xml:space="preserve">❯</text>
+    <text x="28" y="103" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="20" xml:space="preserve"> echo &apos;Great for presentations and readabil</text>
+    <rect class="cursor-active f69" x="544" y="83" width="12" height="28" fill="#ffffff" opacity="0.7"/>
+  </g>
+
+    </g>
+    <g id="frame-70">
+      
+  <style>
+    .cursor {
+      animation: blink 1s step-end infinite;
+    }
+    .cursor-active {
+      /* No animation - solid cursor during typing/movement */
+    }
+    @keyframes blink {
+      0%, 50% { opacity: 1; }
+      50.01%, 100% { opacity: 0; }
+    }
+  </style>
+  <rect width="1200" height="700" fill="#1e1e1e" rx="10" ry="10"/>
+  <g class="title-bar f70">
+    <rect width="1200" height="39" fill="#1e1e1e" rx="10" ry="10"/>
+    <rect y="29" width="1200" height="10" fill="#1e1e1e"/>
+    <line x1="0" y1="39.5" x2="1200" y2="39.5" stroke="#d4d4d41a" stroke-width="1"/>
+    <circle cx="16" cy="19.5" r="6" fill="#ff5f56"/>
+    <circle cx="36" cy="19.5" r="6" fill="#ffbd2e"/>
+    <circle cx="56" cy="19.5" r="6" fill="#27c93f"/>
+    <text x="600" y="24.2" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="12" text-anchor="middle" opacity="0.8">Large Font Demo</text>
+  </g>
+  <g class="content f70">
+    <text x="16" y="75" fill="#d670d6" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="20" xml:space="preserve">❯</text>
+    <text x="28" y="75" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="20" xml:space="preserve"> # This uses a 20px font</text>
+    <text x="16" y="103" fill="#d670d6" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="20" xml:space="preserve">❯</text>
+    <text x="28" y="103" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="20" xml:space="preserve"> echo &apos;Great for presentations and readabili</text>
+    <rect class="cursor-active f70" x="556" y="83" width="12" height="28" fill="#ffffff" opacity="0.7"/>
+  </g>
+
+    </g>
+    <g id="frame-71">
+      
+  <style>
+    .cursor {
+      animation: blink 1s step-end infinite;
+    }
+    .cursor-active {
+      /* No animation - solid cursor during typing/movement */
+    }
+    @keyframes blink {
+      0%, 50% { opacity: 1; }
+      50.01%, 100% { opacity: 0; }
+    }
+  </style>
+  <rect width="1200" height="700" fill="#1e1e1e" rx="10" ry="10"/>
+  <g class="title-bar f71">
+    <rect width="1200" height="39" fill="#1e1e1e" rx="10" ry="10"/>
+    <rect y="29" width="1200" height="10" fill="#1e1e1e"/>
+    <line x1="0" y1="39.5" x2="1200" y2="39.5" stroke="#d4d4d41a" stroke-width="1"/>
+    <circle cx="16" cy="19.5" r="6" fill="#ff5f56"/>
+    <circle cx="36" cy="19.5" r="6" fill="#ffbd2e"/>
+    <circle cx="56" cy="19.5" r="6" fill="#27c93f"/>
+    <text x="600" y="24.2" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="12" text-anchor="middle" opacity="0.8">Large Font Demo</text>
+  </g>
+  <g class="content f71">
+    <text x="16" y="75" fill="#d670d6" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="20" xml:space="preserve">❯</text>
+    <text x="28" y="75" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="20" xml:space="preserve"> # This uses a 20px font</text>
+    <text x="16" y="103" fill="#d670d6" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="20" xml:space="preserve">❯</text>
+    <text x="28" y="103" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="20" xml:space="preserve"> echo &apos;Great for presentations and readabilit</text>
+    <rect class="cursor-active f71" x="568" y="83" width="12" height="28" fill="#ffffff" opacity="0.7"/>
+  </g>
+
+    </g>
+    <g id="frame-72">
+      
+  <style>
+    .cursor {
+      animation: blink 1s step-end infinite;
+    }
+    .cursor-active {
+      /* No animation - solid cursor during typing/movement */
+    }
+    @keyframes blink {
+      0%, 50% { opacity: 1; }
+      50.01%, 100% { opacity: 0; }
+    }
+  </style>
+  <rect width="1200" height="700" fill="#1e1e1e" rx="10" ry="10"/>
+  <g class="title-bar f72">
+    <rect width="1200" height="39" fill="#1e1e1e" rx="10" ry="10"/>
+    <rect y="29" width="1200" height="10" fill="#1e1e1e"/>
+    <line x1="0" y1="39.5" x2="1200" y2="39.5" stroke="#d4d4d41a" stroke-width="1"/>
+    <circle cx="16" cy="19.5" r="6" fill="#ff5f56"/>
+    <circle cx="36" cy="19.5" r="6" fill="#ffbd2e"/>
+    <circle cx="56" cy="19.5" r="6" fill="#27c93f"/>
+    <text x="600" y="24.2" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="12" text-anchor="middle" opacity="0.8">Large Font Demo</text>
+  </g>
+  <g class="content f72">
+    <text x="16" y="75" fill="#d670d6" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="20" xml:space="preserve">❯</text>
+    <text x="28" y="75" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="20" xml:space="preserve"> # This uses a 20px font</text>
+    <text x="16" y="103" fill="#d670d6" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="20" xml:space="preserve">❯</text>
+    <text x="28" y="103" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="20" xml:space="preserve"> echo &apos;Great for presentations and readability</text>
+    <rect class="cursor-active f72" x="580" y="83" width="12" height="28" fill="#ffffff" opacity="0.7"/>
+  </g>
+
+    </g>
+    <g id="frame-73">
+      
+  <style>
+    .cursor {
+      animation: blink 1s step-end infinite;
+    }
+    .cursor-active {
+      /* No animation - solid cursor during typing/movement */
+    }
+    @keyframes blink {
+      0%, 50% { opacity: 1; }
+      50.01%, 100% { opacity: 0; }
+    }
+  </style>
+  <rect width="1200" height="700" fill="#1e1e1e" rx="10" ry="10"/>
+  <g class="title-bar f73">
+    <rect width="1200" height="39" fill="#1e1e1e" rx="10" ry="10"/>
+    <rect y="29" width="1200" height="10" fill="#1e1e1e"/>
+    <line x1="0" y1="39.5" x2="1200" y2="39.5" stroke="#d4d4d41a" stroke-width="1"/>
+    <circle cx="16" cy="19.5" r="6" fill="#ff5f56"/>
+    <circle cx="36" cy="19.5" r="6" fill="#ffbd2e"/>
+    <circle cx="56" cy="19.5" r="6" fill="#27c93f"/>
+    <text x="600" y="24.2" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="12" text-anchor="middle" opacity="0.8">Large Font Demo</text>
+  </g>
+  <g class="content f73">
+    <text x="16" y="75" fill="#d670d6" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="20" xml:space="preserve">❯</text>
+    <text x="28" y="75" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="20" xml:space="preserve"> # This uses a 20px font</text>
+    <text x="16" y="103" fill="#d670d6" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="20" xml:space="preserve">❯</text>
+    <text x="28" y="103" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="20" xml:space="preserve"> echo &apos;Great for presentations and readability!</text>
+    <rect class="cursor-active f73" x="592" y="83" width="12" height="28" fill="#ffffff" opacity="0.7"/>
+  </g>
+
+    </g>
+    <g id="frame-74">
+      
+  <style>
+    .cursor {
+      animation: blink 1s step-end infinite;
+    }
+    .cursor-active {
+      /* No animation - solid cursor during typing/movement */
+    }
+    @keyframes blink {
+      0%, 50% { opacity: 1; }
+      50.01%, 100% { opacity: 0; }
+    }
+  </style>
+  <rect width="1200" height="700" fill="#1e1e1e" rx="10" ry="10"/>
+  <g class="title-bar f74">
+    <rect width="1200" height="39" fill="#1e1e1e" rx="10" ry="10"/>
+    <rect y="29" width="1200" height="10" fill="#1e1e1e"/>
+    <line x1="0" y1="39.5" x2="1200" y2="39.5" stroke="#d4d4d41a" stroke-width="1"/>
+    <circle cx="16" cy="19.5" r="6" fill="#ff5f56"/>
+    <circle cx="36" cy="19.5" r="6" fill="#ffbd2e"/>
+    <circle cx="56" cy="19.5" r="6" fill="#27c93f"/>
+    <text x="600" y="24.2" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="12" text-anchor="middle" opacity="0.8">Large Font Demo</text>
+  </g>
+  <g class="content f74">
+    <text x="16" y="75" fill="#d670d6" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="20" xml:space="preserve">❯</text>
+    <text x="28" y="75" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="20" xml:space="preserve"> # This uses a 20px font</text>
+    <text x="16" y="103" fill="#d670d6" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="20" xml:space="preserve">❯</text>
+    <text x="28" y="103" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="20" xml:space="preserve"> echo &apos;Great for presentations and readability!&apos;</text>
+    <rect class="cursor-active f74" x="604" y="83" width="12" height="28" fill="#ffffff" opacity="0.7"/>
+  </g>
+
+    </g>
+    <g id="frame-75">
+      
+  <style>
+    .cursor {
+      animation: blink 1s step-end infinite;
+    }
+    .cursor-active {
+      /* No animation - solid cursor during typing/movement */
+    }
+    @keyframes blink {
+      0%, 50% { opacity: 1; }
+      50.01%, 100% { opacity: 0; }
+    }
+  </style>
+  <rect width="1200" height="700" fill="#1e1e1e" rx="10" ry="10"/>
+  <g class="title-bar f75">
+    <rect width="1200" height="39" fill="#1e1e1e" rx="10" ry="10"/>
+    <rect y="29" width="1200" height="10" fill="#1e1e1e"/>
+    <line x1="0" y1="39.5" x2="1200" y2="39.5" stroke="#d4d4d41a" stroke-width="1"/>
+    <circle cx="16" cy="19.5" r="6" fill="#ff5f56"/>
+    <circle cx="36" cy="19.5" r="6" fill="#ffbd2e"/>
+    <circle cx="56" cy="19.5" r="6" fill="#27c93f"/>
+    <text x="600" y="24.2" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="12" text-anchor="middle" opacity="0.8">Large Font Demo</text>
+  </g>
+  <g class="content f75">
+    <text x="16" y="75" fill="#d670d6" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="20" xml:space="preserve">❯</text>
+    <text x="28" y="75" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="20" xml:space="preserve"> # This uses a 20px font</text>
+    <text x="16" y="103" fill="#d670d6" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="20" xml:space="preserve">❯</text>
+    <text x="28" y="103" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="20" xml:space="preserve"> echo &apos;Great for presentations and readability!&apos;</text>
+    <rect class="cursor f75" x="604" y="83" width="12" height="28" fill="#ffffff" opacity="0.7"/>
+  </g>
+
+    </g>
+    <g id="frame-76">
+      
+  <style>
+    .cursor {
+      animation: blink 1s step-end infinite;
+    }
+    .cursor-active {
+      /* No animation - solid cursor during typing/movement */
+    }
+    @keyframes blink {
+      0%, 50% { opacity: 1; }
+      50.01%, 100% { opacity: 0; }
+    }
+  </style>
+  <rect width="1200" height="700" fill="#1e1e1e" rx="10" ry="10"/>
+  <g class="title-bar f76">
+    <rect width="1200" height="39" fill="#1e1e1e" rx="10" ry="10"/>
+    <rect y="29" width="1200" height="10" fill="#1e1e1e"/>
+    <line x1="0" y1="39.5" x2="1200" y2="39.5" stroke="#d4d4d41a" stroke-width="1"/>
+    <circle cx="16" cy="19.5" r="6" fill="#ff5f56"/>
+    <circle cx="36" cy="19.5" r="6" fill="#ffbd2e"/>
+    <circle cx="56" cy="19.5" r="6" fill="#27c93f"/>
+    <text x="600" y="24.2" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="12" text-anchor="middle" opacity="0.8">Large Font Demo</text>
+  </g>
+  <g class="content f76">
+    <text x="16" y="75" fill="#d670d6" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="20" xml:space="preserve">❯</text>
+    <text x="28" y="75" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="20" xml:space="preserve"> # This uses a 20px font</text>
+    <text x="16" y="103" fill="#d670d6" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="20" xml:space="preserve">❯</text>
+    <text x="28" y="103" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="20" xml:space="preserve"> echo &apos;Great for presentations and readability!&apos;</text>
+    <text x="16" y="131" fill="#d670d6" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="20" xml:space="preserve">❯</text>
+    <text x="28" y="131" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="20" xml:space="preserve"> </text>
+    <rect class="cursor f76" x="40" y="111" width="12" height="28" fill="#ffffff" opacity="0.7"/>
+  </g>
+
+    </g>
+    <g id="frame-77">
+      
+  <style>
+    .cursor {
+      animation: blink 1s step-end infinite;
+    }
+    .cursor-active {
+      /* No animation - solid cursor during typing/movement */
+    }
+    @keyframes blink {
+      0%, 50% { opacity: 1; }
+      50.01%, 100% { opacity: 0; }
+    }
+  </style>
+  <rect width="1200" height="700" fill="#1e1e1e" rx="10" ry="10"/>
+  <g class="title-bar f77">
+    <rect width="1200" height="39" fill="#1e1e1e" rx="10" ry="10"/>
+    <rect y="29" width="1200" height="10" fill="#1e1e1e"/>
+    <line x1="0" y1="39.5" x2="1200" y2="39.5" stroke="#d4d4d41a" stroke-width="1"/>
+    <circle cx="16" cy="19.5" r="6" fill="#ff5f56"/>
+    <circle cx="36" cy="19.5" r="6" fill="#ffbd2e"/>
+    <circle cx="56" cy="19.5" r="6" fill="#27c93f"/>
+    <text x="600" y="24.2" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="12" text-anchor="middle" opacity="0.8">Large Font Demo</text>
+  </g>
+  <g class="content f77">
+    <text x="16" y="75" fill="#d670d6" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="20" xml:space="preserve">❯</text>
+    <text x="28" y="75" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="20" xml:space="preserve"> # This uses a 20px font</text>
+    <text x="16" y="103" fill="#d670d6" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="20" xml:space="preserve">❯</text>
+    <text x="28" y="103" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="20" xml:space="preserve"> echo &apos;Great for presentations and readability!&apos;</text>
+    <text x="16" y="131" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="20" xml:space="preserve">Great for presentations and readability!</text>
+    <text x="16" y="159" fill="#d670d6" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="20" xml:space="preserve">❯</text>
+    <text x="28" y="159" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="20" xml:space="preserve"> </text>
+    <rect class="cursor f77" x="40" y="139" width="12" height="28" fill="#ffffff" opacity="0.7"/>
+  </g>
+
+    </g>
+    <g id="frame-78">
+      
+  <style>
+    .cursor {
+      animation: blink 1s step-end infinite;
+    }
+    .cursor-active {
+      /* No animation - solid cursor during typing/movement */
+    }
+    @keyframes blink {
+      0%, 50% { opacity: 1; }
+      50.01%, 100% { opacity: 0; }
+    }
+  </style>
+  <rect width="1200" height="700" fill="#1e1e1e" rx="10" ry="10"/>
+  <g class="title-bar f78">
+    <rect width="1200" height="39" fill="#1e1e1e" rx="10" ry="10"/>
+    <rect y="29" width="1200" height="10" fill="#1e1e1e"/>
+    <line x1="0" y1="39.5" x2="1200" y2="39.5" stroke="#d4d4d41a" stroke-width="1"/>
+    <circle cx="16" cy="19.5" r="6" fill="#ff5f56"/>
+    <circle cx="36" cy="19.5" r="6" fill="#ffbd2e"/>
+    <circle cx="56" cy="19.5" r="6" fill="#27c93f"/>
+    <text x="600" y="24.2" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="12" text-anchor="middle" opacity="0.8">Large Font Demo</text>
+  </g>
+  <g class="content f78">
+    <text x="16" y="75" fill="#d670d6" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="20" xml:space="preserve">❯</text>
+    <text x="28" y="75" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="20" xml:space="preserve"> # This uses a 20px font</text>
+    <text x="16" y="103" fill="#d670d6" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="20" xml:space="preserve">❯</text>
+    <text x="28" y="103" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="20" xml:space="preserve"> echo &apos;Great for presentations and readability!&apos;</text>
+    <text x="16" y="131" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="20" xml:space="preserve">Great for presentations and readability!</text>
+    <text x="16" y="159" fill="#d670d6" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="20" xml:space="preserve">❯</text>
+    <text x="28" y="159" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="20" xml:space="preserve"> </text>
+    <rect class="cursor f78" x="40" y="139" width="12" height="28" fill="#ffffff" opacity="0.7"/>
+  </g>
+
+    </g>
+    <g id="frame-79">
+      
+  <style>
+    .cursor {
+      animation: blink 1s step-end infinite;
+    }
+    .cursor-active {
+      /* No animation - solid cursor during typing/movement */
+    }
+    @keyframes blink {
+      0%, 50% { opacity: 1; }
+      50.01%, 100% { opacity: 0; }
+    }
+  </style>
+  <rect width="1200" height="700" fill="#1e1e1e" rx="10" ry="10"/>
+  <g class="title-bar f79">
+    <rect width="1200" height="39" fill="#1e1e1e" rx="10" ry="10"/>
+    <rect y="29" width="1200" height="10" fill="#1e1e1e"/>
+    <line x1="0" y1="39.5" x2="1200" y2="39.5" stroke="#d4d4d41a" stroke-width="1"/>
+    <circle cx="16" cy="19.5" r="6" fill="#ff5f56"/>
+    <circle cx="36" cy="19.5" r="6" fill="#ffbd2e"/>
+    <circle cx="56" cy="19.5" r="6" fill="#27c93f"/>
+    <text x="600" y="24.2" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="12" text-anchor="middle" opacity="0.8">Large Font Demo</text>
+  </g>
+  <g class="content f79">
+    <text x="16" y="75" fill="#d670d6" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="20" xml:space="preserve">❯</text>
+    <text x="28" y="75" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="20" xml:space="preserve"> # This uses a 20px font</text>
+    <text x="16" y="103" fill="#d670d6" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="20" xml:space="preserve">❯</text>
+    <text x="28" y="103" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="20" xml:space="preserve"> echo &apos;Great for presentations and readability!&apos;</text>
+    <text x="16" y="131" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="20" xml:space="preserve">Great for presentations and readability!</text>
+    <text x="16" y="159" fill="#d670d6" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="20" xml:space="preserve">❯</text>
+    <text x="28" y="159" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="20" xml:space="preserve"> </text>
+  </g>
+
+    </g>
+  </defs>
+
+  
+  <use href="#frame-0" class="frame frame-0" />
+  <use href="#frame-1" class="frame frame-1" />
+  <use href="#frame-2" class="frame frame-2" />
+  <use href="#frame-3" class="frame frame-3" />
+  <use href="#frame-4" class="frame frame-4" />
+  <use href="#frame-5" class="frame frame-5" />
+  <use href="#frame-6" class="frame frame-6" />
+  <use href="#frame-7" class="frame frame-7" />
+  <use href="#frame-8" class="frame frame-8" />
+  <use href="#frame-9" class="frame frame-9" />
+  <use href="#frame-10" class="frame frame-10" />
+  <use href="#frame-11" class="frame frame-11" />
+  <use href="#frame-12" class="frame frame-12" />
+  <use href="#frame-13" class="frame frame-13" />
+  <use href="#frame-14" class="frame frame-14" />
+  <use href="#frame-15" class="frame frame-15" />
+  <use href="#frame-16" class="frame frame-16" />
+  <use href="#frame-17" class="frame frame-17" />
+  <use href="#frame-18" class="frame frame-18" />
+  <use href="#frame-19" class="frame frame-19" />
+  <use href="#frame-20" class="frame frame-20" />
+  <use href="#frame-21" class="frame frame-21" />
+  <use href="#frame-22" class="frame frame-22" />
+  <use href="#frame-23" class="frame frame-23" />
+  <use href="#frame-24" class="frame frame-24" />
+  <use href="#frame-25" class="frame frame-25" />
+  <use href="#frame-26" class="frame frame-26" />
+  <use href="#frame-27" class="frame frame-27" />
+  <use href="#frame-28" class="frame frame-28" />
+  <use href="#frame-29" class="frame frame-29" />
+  <use href="#frame-30" class="frame frame-30" />
+  <use href="#frame-31" class="frame frame-31" />
+  <use href="#frame-32" class="frame frame-32" />
+  <use href="#frame-33" class="frame frame-33" />
+  <use href="#frame-34" class="frame frame-34" />
+  <use href="#frame-35" class="frame frame-35" />
+  <use href="#frame-36" class="frame frame-36" />
+  <use href="#frame-37" class="frame frame-37" />
+  <use href="#frame-38" class="frame frame-38" />
+  <use href="#frame-39" class="frame frame-39" />
+  <use href="#frame-40" class="frame frame-40" />
+  <use href="#frame-41" class="frame frame-41" />
+  <use href="#frame-42" class="frame frame-42" />
+  <use href="#frame-43" class="frame frame-43" />
+  <use href="#frame-44" class="frame frame-44" />
+  <use href="#frame-45" class="frame frame-45" />
+  <use href="#frame-46" class="frame frame-46" />
+  <use href="#frame-47" class="frame frame-47" />
+  <use href="#frame-48" class="frame frame-48" />
+  <use href="#frame-49" class="frame frame-49" />
+  <use href="#frame-50" class="frame frame-50" />
+  <use href="#frame-51" class="frame frame-51" />
+  <use href="#frame-52" class="frame frame-52" />
+  <use href="#frame-53" class="frame frame-53" />
+  <use href="#frame-54" class="frame frame-54" />
+  <use href="#frame-55" class="frame frame-55" />
+  <use href="#frame-56" class="frame frame-56" />
+  <use href="#frame-57" class="frame frame-57" />
+  <use href="#frame-58" class="frame frame-58" />
+  <use href="#frame-59" class="frame frame-59" />
+  <use href="#frame-60" class="frame frame-60" />
+  <use href="#frame-61" class="frame frame-61" />
+  <use href="#frame-62" class="frame frame-62" />
+  <use href="#frame-63" class="frame frame-63" />
+  <use href="#frame-64" class="frame frame-64" />
+  <use href="#frame-65" class="frame frame-65" />
+  <use href="#frame-66" class="frame frame-66" />
+  <use href="#frame-67" class="frame frame-67" />
+  <use href="#frame-68" class="frame frame-68" />
+  <use href="#frame-69" class="frame frame-69" />
+  <use href="#frame-70" class="frame frame-70" />
+  <use href="#frame-71" class="frame frame-71" />
+  <use href="#frame-72" class="frame frame-72" />
+  <use href="#frame-73" class="frame frame-73" />
+  <use href="#frame-74" class="frame frame-74" />
+  <use href="#frame-75" class="frame frame-75" />
+  <use href="#frame-76" class="frame frame-76" />
+  <use href="#frame-77" class="frame frame-77" />
+  <use href="#frame-78" class="frame frame-78" />
+  <use href="#frame-79" class="frame frame-79" />
+</svg>
