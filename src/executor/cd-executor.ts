@@ -181,11 +181,15 @@ export class CDExecutor {
 
     // Build display line with or without prompt
     let displayLine: string;
+    let adjustedCursorX: number;
 
     if (this.context.isExecutingCommand) {
       displayLine = this.context.currentLine;
+      adjustedCursorX = this.context.cursorX;
     } else {
       displayLine = this.context.promptPrefix + this.context.currentLine;
+      const prefixLength = this.stripAnsi(this.context.promptPrefix).length;
+      adjustedCursorX = this.context.cursorX + prefixLength;
     }
 
     buffer[this.context.cursorY] = displayLine;
@@ -215,6 +219,7 @@ export class CDExecutor {
 
     // Handle scrolling
     let visibleBuffer: string[];
+    let visibleCursorY: number;
 
     if (this.context.scroll) {
       const visibleLines = this.getVisibleLineCount();
@@ -231,8 +236,10 @@ export class CDExecutor {
       const startLine = this.context.scrollOffset;
       const endLine = Math.min(startLine + visibleLines, buffer.length);
       visibleBuffer = buffer.slice(startLine, endLine);
+      visibleCursorY = this.context.cursorY - this.context.scrollOffset;
     } else {
       visibleBuffer = buffer;
+      visibleCursorY = this.context.cursorY;
     }
 
     // Update VTerminal grid with current content
@@ -264,12 +271,23 @@ export class CDExecutor {
       }
     }
 
+    // Create grid and process content
     let grid = createGridState(gridWidth, gridHeight);
     grid = processInput(grid, content);
 
-    // Use VTerminal's cursor position - it accounts for line wrapping
-    const finalCursorY = Math.max(0, Math.min(grid.cursor.row, maxVisibleRows - 1));
-    const finalCursorX = grid.cursor.col;
+    // Calculate final cursor position
+    let finalCursorX: number;
+    let finalCursorY: number;
+
+    if (this.context.autoWidth) {
+      // For auto width, use tracked cursor position (no wrapping)
+      finalCursorY = Math.max(0, Math.min(visibleCursorY, maxVisibleRows - 1));
+      finalCursorX = adjustedCursorX;
+    } else {
+      // For fixed width, use VTerminal's cursor (accounts for wrapping)
+      finalCursorY = Math.max(0, Math.min(grid.cursor.row, maxVisibleRows - 1));
+      finalCursorX = grid.cursor.col;
+    }
 
     // Coalesce grid to spans
     const rows = coalesce(grid, this.context.theme);
