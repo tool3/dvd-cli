@@ -1,342 +1,275 @@
 <svg width="800" height="400" xmlns="http://www.w3.org/2000/svg">
   <style>
+    /* Base styles from first frame */
+    
+.text {
+  font-family: 'SF Mono', 'Monaco', 'Menlo', 'Consolas', monospace;
+  font-size: 16px;
+  dominant-baseline: text-before-edge;
+  text-rendering: geometricPrecision;
+  white-space: pre;
+}
+.bold { font-weight: bold; }
+.italic { font-style: italic; }
+.uline { text-decoration: underline; }
+.strike { text-decoration: line-through; }
+.dim { opacity: 0.5; }
+.fg { fill: #f8f8f2; }
+.f0 { fill: #272822; }
+.f1 { fill: #f92672; }
+.f2 { fill: #a6e22e; }
+.f3 { fill: #f4bf75; }
+.f4 { fill: #66d9ef; }
+.f5 { fill: #ae81ff; }
+.f6 { fill: #a1efe4; }
+.f7 { fill: #f8f8f2; }
+.f8 { fill: #75715e; }
+.f9 { fill: #f92672; }
+.f10 { fill: #a6e22e; }
+.f11 { fill: #f4bf75; }
+.f12 { fill: #66d9ef; }
+.f13 { fill: #ae81ff; }
+.f14 { fill: #a1efe4; }
+.f15 { fill: #f9f8f5; }
+.bg { fill: #272822; }
+.b0 { fill: #272822; }
+.b1 { fill: #f92672; }
+.b2 { fill: #a6e22e; }
+.b3 { fill: #f4bf75; }
+.b4 { fill: #66d9ef; }
+.b5 { fill: #ae81ff; }
+.b6 { fill: #a1efe4; }
+.b7 { fill: #f8f8f2; }
+.b8 { fill: #75715e; }
+.b9 { fill: #f92672; }
+.b10 { fill: #a6e22e; }
+.b11 { fill: #f4bf75; }
+.b12 { fill: #66d9ef; }
+.b13 { fill: #ae81ff; }
+.b14 { fill: #a1efe4; }
+.b15 { fill: #f9f8f5; }
+.cursor { animation: blink 1s step-end infinite; }
+.cursor-active { opacity: 1; }
+@keyframes blink {
+  0%, 50% { opacity: 1; }
+  50.01%, 100% { opacity: 0; }
+}
+
+
+    /* Animation keyframes */
     
     @keyframes frame-0-anim {
-      0% { opacity: 1; }
-      1.33% { opacity: 1; }
-      1.34% { opacity: 0; }
-      100% { opacity: 0; }
-    }@keyframes frame-1-anim {
-      0% { opacity: 0; }
-      0.03% { opacity: 0; }
-      1.33% { opacity: 1; }
-      2.66% { opacity: 1; }
-      2.67% { opacity: 0; }
-      100% { opacity: 0; }
+      0%, 1.3455% { opacity: 1; }
+      1.3456%, 100% { opacity: 0; }
+    }
+    @keyframes frame-1-anim {
+      0%, 1.3454% { opacity: 0; }
+      1.3455%, 2.6657% { opacity: 1; }
+      2.6658%, 100% { opacity: 0; }
     }
     @keyframes frame-2-anim {
-      0% { opacity: 0; }
-      1.33% { opacity: 0; }
-      2.66% { opacity: 1; }
-      3.97% { opacity: 1; }
-      3.98% { opacity: 0; }
-      100% { opacity: 0; }
+      0%, 2.6656% { opacity: 0; }
+      2.6657%, 3.9858% { opacity: 1; }
+      3.9859%, 100% { opacity: 0; }
     }
     @keyframes frame-3-anim {
-      0% { opacity: 0; }
-      2.66% { opacity: 0; }
-      3.97% { opacity: 1; }
-      5.30% { opacity: 1; }
-      5.31% { opacity: 0; }
-      100% { opacity: 0; }
+      0%, 3.9857% { opacity: 0; }
+      3.9858%, 5.3313% { opacity: 1; }
+      5.3314%, 100% { opacity: 0; }
     }
     @keyframes frame-4-anim {
-      0% { opacity: 0; }
-      3.97% { opacity: 0; }
-      5.30% { opacity: 1; }
-      6.57% { opacity: 1; }
-      6.58% { opacity: 0; }
-      100% { opacity: 0; }
+      0%, 5.3312% { opacity: 0; }
+      5.3313%, 6.6768% { opacity: 1; }
+      6.6769%, 100% { opacity: 0; }
     }
     @keyframes frame-5-anim {
-      0% { opacity: 0; }
-      5.30% { opacity: 0; }
-      6.57% { opacity: 1; }
-      7.88% { opacity: 1; }
-      7.89% { opacity: 0; }
-      100% { opacity: 0; }
+      0%, 6.6767% { opacity: 0; }
+      6.6768%, 8.0223% { opacity: 1; }
+      8.0224%, 100% { opacity: 0; }
     }
     @keyframes frame-6-anim {
-      0% { opacity: 0; }
-      6.57% { opacity: 0; }
-      7.88% { opacity: 1; }
-      9.21% { opacity: 1; }
-      9.22% { opacity: 0; }
-      100% { opacity: 0; }
+      0%, 8.0222% { opacity: 0; }
+      8.0223%, 9.3679% { opacity: 1; }
+      9.3680%, 100% { opacity: 0; }
     }
     @keyframes frame-7-anim {
-      0% { opacity: 0; }
-      7.88% { opacity: 0; }
-      9.21% { opacity: 1; }
-      10.54% { opacity: 1; }
-      10.55% { opacity: 0; }
-      100% { opacity: 0; }
+      0%, 9.3678% { opacity: 0; }
+      9.3679%, 10.7388% { opacity: 1; }
+      10.7389%, 100% { opacity: 0; }
     }
     @keyframes frame-8-anim {
-      0% { opacity: 0; }
-      9.21% { opacity: 0; }
-      10.54% { opacity: 1; }
-      11.84% { opacity: 1; }
-      11.85% { opacity: 0; }
-      100% { opacity: 0; }
+      0%, 10.7387% { opacity: 0; }
+      10.7388%, 12.1097% { opacity: 1; }
+      12.1098%, 100% { opacity: 0; }
     }
     @keyframes frame-9-anim {
-      0% { opacity: 0; }
-      10.54% { opacity: 0; }
-      11.84% { opacity: 1; }
-      13.12% { opacity: 1; }
-      13.13% { opacity: 0; }
-      100% { opacity: 0; }
+      0%, 12.1096% { opacity: 0; }
+      12.1097%, 13.4806% { opacity: 1; }
+      13.4807%, 100% { opacity: 0; }
     }
     @keyframes frame-10-anim {
-      0% { opacity: 0; }
-      11.84% { opacity: 0; }
-      13.12% { opacity: 1; }
-      14.43% { opacity: 1; }
-      14.44% { opacity: 0; }
-      100% { opacity: 0; }
+      0%, 13.4805% { opacity: 0; }
+      13.4806%, 14.8007% { opacity: 1; }
+      14.8008%, 100% { opacity: 0; }
     }
     @keyframes frame-11-anim {
-      0% { opacity: 0; }
-      13.12% { opacity: 0; }
-      14.43% { opacity: 1; }
-      15.73% { opacity: 1; }
-      15.74% { opacity: 0; }
-      100% { opacity: 0; }
+      0%, 14.8006% { opacity: 0; }
+      14.8007%, 16.1716% { opacity: 1; }
+      16.1717%, 100% { opacity: 0; }
     }
     @keyframes frame-12-anim {
-      0% { opacity: 0; }
-      14.43% { opacity: 0; }
-      15.73% { opacity: 1; }
-      17.06% { opacity: 1; }
-      17.07% { opacity: 0; }
-      100% { opacity: 0; }
+      0%, 16.1715% { opacity: 0; }
+      16.1716%, 17.5425% { opacity: 1; }
+      17.5426%, 100% { opacity: 0; }
     }
     @keyframes frame-13-anim {
-      0% { opacity: 0; }
-      15.73% { opacity: 0; }
-      17.06% { opacity: 1; }
-      18.37% { opacity: 1; }
-      18.38% { opacity: 0; }
-      100% { opacity: 0; }
+      0%, 17.5424% { opacity: 0; }
+      17.5425%, 18.8627% { opacity: 1; }
+      18.8628%, 100% { opacity: 0; }
     }
     @keyframes frame-14-anim {
-      0% { opacity: 0; }
-      17.06% { opacity: 0; }
-      18.37% { opacity: 1; }
-      19.67% { opacity: 1; }
-      19.68% { opacity: 0; }
-      100% { opacity: 0; }
+      0%, 18.8626% { opacity: 0; }
+      18.8627%, 20.2589% { opacity: 1; }
+      20.2590%, 100% { opacity: 0; }
     }
     @keyframes frame-15-anim {
-      0% { opacity: 0; }
-      18.37% { opacity: 0; }
-      19.67% { opacity: 1; }
-      20.98% { opacity: 1; }
-      20.99% { opacity: 0; }
-      100% { opacity: 0; }
+      0%, 20.2588% { opacity: 0; }
+      20.2589%, 21.6045% { opacity: 1; }
+      21.6046%, 100% { opacity: 0; }
     }
     @keyframes frame-16-anim {
-      0% { opacity: 0; }
-      19.67% { opacity: 0; }
-      20.98% { opacity: 1; }
-      22.28% { opacity: 1; }
-      22.29% { opacity: 0; }
-      100% { opacity: 0; }
+      0%, 21.6044% { opacity: 0; }
+      21.6045%, 22.9500% { opacity: 1; }
+      22.9501%, 100% { opacity: 0; }
     }
     @keyframes frame-17-anim {
-      0% { opacity: 0; }
-      20.98% { opacity: 0; }
-      22.28% { opacity: 1; }
-      23.61% { opacity: 1; }
-      23.62% { opacity: 0; }
-      100% { opacity: 0; }
+      0%, 22.9499% { opacity: 0; }
+      22.9500%, 24.2955% { opacity: 1; }
+      24.2956%, 100% { opacity: 0; }
     }
     @keyframes frame-18-anim {
-      0% { opacity: 0; }
-      22.28% { opacity: 0; }
-      23.61% { opacity: 1; }
-      24.92% { opacity: 1; }
-      24.93% { opacity: 0; }
-      100% { opacity: 0; }
+      0%, 24.2954% { opacity: 0; }
+      24.2955%, 25.6410% { opacity: 1; }
+      25.6411%, 100% { opacity: 0; }
     }
     @keyframes frame-19-anim {
-      0% { opacity: 0; }
-      23.61% { opacity: 0; }
-      24.92% { opacity: 1; }
-      26.22% { opacity: 1; }
-      26.23% { opacity: 0; }
-      100% { opacity: 0; }
+      0%, 25.6409% { opacity: 0; }
+      25.6410%, 27.1135% { opacity: 1; }
+      27.1136%, 100% { opacity: 0; }
     }
     @keyframes frame-20-anim {
-      0% { opacity: 0; }
-      24.92% { opacity: 0; }
-      26.22% { opacity: 1; }
-      27.50% { opacity: 1; }
-      27.51% { opacity: 0; }
-      100% { opacity: 0; }
+      0%, 27.1134% { opacity: 0; }
+      27.1135%, 28.5098% { opacity: 1; }
+      28.5099%, 100% { opacity: 0; }
     }
     @keyframes frame-21-anim {
-      0% { opacity: 0; }
-      26.22% { opacity: 0; }
-      27.50% { opacity: 1; }
-      28.83% { opacity: 1; }
-      28.84% { opacity: 0; }
-      100% { opacity: 0; }
+      0%, 28.5097% { opacity: 0; }
+      28.5098%, 30.0584% { opacity: 1; }
+      30.0585%, 100% { opacity: 0; }
     }
     @keyframes frame-22-anim {
-      0% { opacity: 0; }
-      27.50% { opacity: 0; }
-      28.83% { opacity: 1; }
-      30.14% { opacity: 1; }
-      30.15% { opacity: 0; }
-      100% { opacity: 0; }
+      0%, 30.0583% { opacity: 0; }
+      30.0584%, 31.4293% { opacity: 1; }
+      31.4294%, 100% { opacity: 0; }
     }
     @keyframes frame-23-anim {
-      0% { opacity: 0; }
-      28.83% { opacity: 0; }
-      30.14% { opacity: 1; }
-      31.41% { opacity: 1; }
-      31.42% { opacity: 0; }
-      100% { opacity: 0; }
+      0%, 31.4292% { opacity: 0; }
+      31.4293%, 32.8002% { opacity: 1; }
+      32.8003%, 100% { opacity: 0; }
     }
     @keyframes frame-24-anim {
-      0% { opacity: 0; }
-      30.14% { opacity: 0; }
-      31.41% { opacity: 1; }
-      32.74% { opacity: 1; }
-      32.75% { opacity: 0; }
-      100% { opacity: 0; }
+      0%, 32.8001% { opacity: 0; }
+      32.8002%, 34.2219% { opacity: 1; }
+      34.2220%, 100% { opacity: 0; }
     }
     @keyframes frame-25-anim {
-      0% { opacity: 0; }
-      31.41% { opacity: 0; }
-      32.74% { opacity: 1; }
-      34.05% { opacity: 1; }
-      34.06% { opacity: 0; }
-      100% { opacity: 0; }
+      0%, 34.2218% { opacity: 0; }
+      34.2219%, 35.5928% { opacity: 1; }
+      35.5929%, 100% { opacity: 0; }
     }
     @keyframes frame-26-anim {
-      0% { opacity: 0; }
-      32.74% { opacity: 0; }
-      34.05% { opacity: 1; }
-      35.35% { opacity: 1; }
-      35.36% { opacity: 0; }
-      100% { opacity: 0; }
+      0%, 35.5927% { opacity: 0; }
+      35.5928%, 36.9637% { opacity: 1; }
+      36.9638%, 100% { opacity: 0; }
     }
     @keyframes frame-27-anim {
-      0% { opacity: 0; }
-      34.05% { opacity: 0; }
-      35.35% { opacity: 1; }
-      36.68% { opacity: 1; }
-      36.69% { opacity: 0; }
-      100% { opacity: 0; }
+      0%, 36.9636% { opacity: 0; }
+      36.9637%, 38.3346% { opacity: 1; }
+      38.3347%, 100% { opacity: 0; }
     }
     @keyframes frame-28-anim {
-      0% { opacity: 0; }
-      35.35% { opacity: 0; }
-      36.68% { opacity: 1; }
-      37.99% { opacity: 1; }
-      38.00% { opacity: 0; }
-      100% { opacity: 0; }
+      0%, 38.3345% { opacity: 0; }
+      38.3346%, 39.7055% { opacity: 1; }
+      39.7056%, 100% { opacity: 0; }
     }
     @keyframes frame-29-anim {
-      0% { opacity: 0; }
-      36.68% { opacity: 0; }
-      37.99% { opacity: 1; }
-      39.29% { opacity: 1; }
-      39.30% { opacity: 0; }
-      100% { opacity: 0; }
+      0%, 39.7054% { opacity: 0; }
+      39.7055%, 41.0510% { opacity: 1; }
+      41.0511%, 100% { opacity: 0; }
     }
     @keyframes frame-30-anim {
-      0% { opacity: 0; }
-      37.99% { opacity: 0; }
-      39.29% { opacity: 1; }
-      40.57% { opacity: 1; }
-      40.58% { opacity: 0; }
-      100% { opacity: 0; }
+      0%, 41.0509% { opacity: 0; }
+      41.0510%, 42.3965% { opacity: 1; }
+      42.3966%, 100% { opacity: 0; }
     }
     @keyframes frame-31-anim {
-      0% { opacity: 0; }
-      39.29% { opacity: 0; }
-      40.57% { opacity: 1; }
-      41.90% { opacity: 1; }
-      41.91% { opacity: 0; }
-      100% { opacity: 0; }
+      0%, 42.3964% { opacity: 0; }
+      42.3965%, 43.7675% { opacity: 1; }
+      43.7676%, 100% { opacity: 0; }
     }
     @keyframes frame-32-anim {
-      0% { opacity: 0; }
-      40.57% { opacity: 0; }
-      41.90% { opacity: 1; }
-      43.18% { opacity: 1; }
-      43.19% { opacity: 0; }
-      100% { opacity: 0; }
+      0%, 43.7674% { opacity: 0; }
+      43.7675%, 45.1637% { opacity: 1; }
+      45.1638%, 100% { opacity: 0; }
     }
     @keyframes frame-33-anim {
-      0% { opacity: 0; }
-      41.90% { opacity: 0; }
-      43.18% { opacity: 1; }
-      44.49% { opacity: 1; }
-      44.50% { opacity: 0; }
-      100% { opacity: 0; }
+      0%, 45.1636% { opacity: 0; }
+      45.1637%, 46.5093% { opacity: 1; }
+      46.5094%, 100% { opacity: 0; }
     }
     @keyframes frame-34-anim {
-      0% { opacity: 0; }
-      43.18% { opacity: 0; }
-      44.49% { opacity: 1; }
-      45.79% { opacity: 1; }
-      45.80% { opacity: 0; }
-      100% { opacity: 0; }
+      0%, 46.5092% { opacity: 0; }
+      46.5093%, 47.9817% { opacity: 1; }
+      47.9818%, 100% { opacity: 0; }
     }
     @keyframes frame-35-anim {
-      0% { opacity: 0; }
-      44.49% { opacity: 0; }
-      45.79% { opacity: 1; }
-      47.12% { opacity: 1; }
-      47.13% { opacity: 0; }
-      100% { opacity: 0; }
+      0%, 47.9816% { opacity: 0; }
+      47.9817%, 49.3019% { opacity: 1; }
+      49.3020%, 100% { opacity: 0; }
     }
     @keyframes frame-36-anim {
-      0% { opacity: 0; }
-      45.79% { opacity: 0; }
-      47.12% { opacity: 1; }
-      49.71% { opacity: 1; }
-      49.72% { opacity: 0; }
-      100% { opacity: 0; }
+      0%, 49.3018% { opacity: 0; }
+      49.3019%, 51.9421% { opacity: 1; }
+      51.9422%, 100% { opacity: 0; }
     }
     @keyframes frame-37-anim {
-      0% { opacity: 0; }
-      47.12% { opacity: 0; }
-      49.71% { opacity: 1; }
-      71.45% { opacity: 1; }
-      71.46% { opacity: 0; }
-      100% { opacity: 0; }
+      0%, 51.9420% { opacity: 0; }
+      51.9421%, 70.9317% { opacity: 1; }
+      70.9318%, 100% { opacity: 0; }
     }
     @keyframes frame-38-anim {
-      0% { opacity: 0; }
-      49.71% { opacity: 0; }
-      71.45% { opacity: 1; }
-      74.37% { opacity: 1; }
-      74.38% { opacity: 0; }
-      100% { opacity: 0; }
+      0%, 70.9316% { opacity: 0; }
+      70.9317%, 73.9020% { opacity: 1; }
+      73.9021%, 100% { opacity: 0; }
     }
     @keyframes frame-39-anim {
-      0% { opacity: 0; }
-      71.45% { opacity: 0; }
-      74.37% { opacity: 1; }
-      100.00% { opacity: 1; }
-      100.01% { opacity: 0; }
-      100% { opacity: 0; }
+      0%, 73.9019% { opacity: 0; }
+      73.9020%, 99.7461% { opacity: 1; }
+      99.7462%, 100% { opacity: 0; }
     }
     @keyframes frame-40-anim {
-      0% { opacity: 0; }
-      74.37% { opacity: 0; }
-      100.00% { opacity: 1; }
-      100.00% { opacity: 1; }
-      100.01% { opacity: 0; }
-      100% { opacity: 0; }
+      0%, 99.7460% { opacity: 0; }
+      99.7461%, 100.0000% { opacity: 1; }
+      100.0001%, 100% { opacity: 0; }
     }
     @keyframes frame-41-anim {
-      0% { opacity: 0; }
-      100.00% { opacity: 0; }
-      100.00% { opacity: 1; }
-      100.00% { opacity: 1; }
-      100.01% { opacity: 0; }
-      100% { opacity: 0; }
+      0%, 99.9999% { opacity: 0; }
+      100.0000%, 100.0000% { opacity: 1; }
+      100.0001%, 100% { opacity: 0; }
     }
 
     .frame {
-      animation-duration: 4.91s;
+      animation-duration: 4.94s;
       animation-timing-function: step-end;
       animation-iteration-count: infinite;
       animation-fill-mode: forwards;
@@ -475,992 +408,588 @@
     
     <g id="frame-0">
       
-  <style>
-    .cursor {
-      animation: blink 1s step-end infinite;
-    }
-    .cursor-active {
-      /* No animation - solid cursor during typing/movement */
-    }
-    @keyframes blink {
-      0%, 50% { opacity: 1; }
-      50.01%, 100% { opacity: 0; }
-    }
-  </style>
-  <rect width="800" height="400" fill="#272822" rx="10" ry="10"/>
-  <g class="content f0">
-    <text x="16" y="32" fill="#a6e22e" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="16" xml:space="preserve">$</text>
-    <text x="25.6" y="32" fill="#f8f8f2" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="16" xml:space="preserve"> </text>
-    <rect class="cursor f0" x="35.2" y="16" width="9.6" height="22.4" fill="#f8f8f2" opacity="0.7"/>
-  </g>
+
+<rect class="window-bg" x="0" y="0" width="800" height="400" fill="#272822" rx="0" ry="0"/>
+<g class="text-layer">
+<text class="text f10" x="16" y="16">$</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor" x="35.2" y="16" width="9.6" height="22.4" fill="#f8f8f2"/>
+</g>
 
     </g>
     <g id="frame-1">
       
-  <style>
-    .cursor {
-      animation: blink 1s step-end infinite;
-    }
-    .cursor-active {
-      /* No animation - solid cursor during typing/movement */
-    }
-    @keyframes blink {
-      0%, 50% { opacity: 1; }
-      50.01%, 100% { opacity: 0; }
-    }
-  </style>
-  <rect width="800" height="400" fill="#272822" rx="10" ry="10"/>
-  <g class="content f1">
-    <text x="16" y="32" fill="#a6e22e" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="16" xml:space="preserve">$</text>
-    <text x="25.6" y="32" fill="#f8f8f2" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="16" xml:space="preserve"> n</text>
-    <rect class="cursor-active f1" x="44.8" y="16" width="9.6" height="22.4" fill="#f8f8f2" opacity="0.7"/>
-  </g>
+
+<rect class="window-bg" x="0" y="0" width="800" height="400" fill="#272822" rx="0" ry="0"/>
+<g class="text-layer">
+<text class="text f10" x="16" y="16">$</text>
+<text class="text fg" x="25.6" y="16"> n                                                                             </text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor" x="44.8" y="16" width="9.6" height="22.4" fill="#f8f8f2"/>
+</g>
 
     </g>
     <g id="frame-2">
       
-  <style>
-    .cursor {
-      animation: blink 1s step-end infinite;
-    }
-    .cursor-active {
-      /* No animation - solid cursor during typing/movement */
-    }
-    @keyframes blink {
-      0%, 50% { opacity: 1; }
-      50.01%, 100% { opacity: 0; }
-    }
-  </style>
-  <rect width="800" height="400" fill="#272822" rx="10" ry="10"/>
-  <g class="content f2">
-    <text x="16" y="32" fill="#a6e22e" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="16" xml:space="preserve">$</text>
-    <text x="25.6" y="32" fill="#f8f8f2" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="16" xml:space="preserve"> np</text>
-    <rect class="cursor-active f2" x="54.4" y="16" width="9.6" height="22.4" fill="#f8f8f2" opacity="0.7"/>
-  </g>
+
+<rect class="window-bg" x="0" y="0" width="800" height="400" fill="#272822" rx="0" ry="0"/>
+<g class="text-layer">
+<text class="text f10" x="16" y="16">$</text>
+<text class="text fg" x="25.6" y="16"> np                                                                            </text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor" x="54.4" y="16" width="9.6" height="22.4" fill="#f8f8f2"/>
+</g>
 
     </g>
     <g id="frame-3">
       
-  <style>
-    .cursor {
-      animation: blink 1s step-end infinite;
-    }
-    .cursor-active {
-      /* No animation - solid cursor during typing/movement */
-    }
-    @keyframes blink {
-      0%, 50% { opacity: 1; }
-      50.01%, 100% { opacity: 0; }
-    }
-  </style>
-  <rect width="800" height="400" fill="#272822" rx="10" ry="10"/>
-  <g class="content f3">
-    <text x="16" y="32" fill="#a6e22e" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="16" xml:space="preserve">$</text>
-    <text x="25.6" y="32" fill="#f8f8f2" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="16" xml:space="preserve"> npx</text>
-    <rect class="cursor-active f3" x="64" y="16" width="9.6" height="22.4" fill="#f8f8f2" opacity="0.7"/>
-  </g>
+
+<rect class="window-bg" x="0" y="0" width="800" height="400" fill="#272822" rx="0" ry="0"/>
+<g class="text-layer">
+<text class="text f10" x="16" y="16">$</text>
+<text class="text fg" x="25.6" y="16"> npx                                                                           </text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor" x="64" y="16" width="9.6" height="22.4" fill="#f8f8f2"/>
+</g>
 
     </g>
     <g id="frame-4">
       
-  <style>
-    .cursor {
-      animation: blink 1s step-end infinite;
-    }
-    .cursor-active {
-      /* No animation - solid cursor during typing/movement */
-    }
-    @keyframes blink {
-      0%, 50% { opacity: 1; }
-      50.01%, 100% { opacity: 0; }
-    }
-  </style>
-  <rect width="800" height="400" fill="#272822" rx="10" ry="10"/>
-  <g class="content f4">
-    <text x="16" y="32" fill="#a6e22e" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="16" xml:space="preserve">$</text>
-    <text x="25.6" y="32" fill="#f8f8f2" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="16" xml:space="preserve"> npx </text>
-    <rect class="cursor-active f4" x="73.6" y="16" width="9.6" height="22.4" fill="#f8f8f2" opacity="0.7"/>
-  </g>
+
+<rect class="window-bg" x="0" y="0" width="800" height="400" fill="#272822" rx="0" ry="0"/>
+<g class="text-layer">
+<text class="text f10" x="16" y="16">$</text>
+<text class="text fg" x="25.6" y="16"> npx                                                                           </text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor" x="73.6" y="16" width="9.6" height="22.4" fill="#f8f8f2"/>
+</g>
 
     </g>
     <g id="frame-5">
       
-  <style>
-    .cursor {
-      animation: blink 1s step-end infinite;
-    }
-    .cursor-active {
-      /* No animation - solid cursor during typing/movement */
-    }
-    @keyframes blink {
-      0%, 50% { opacity: 1; }
-      50.01%, 100% { opacity: 0; }
-    }
-  </style>
-  <rect width="800" height="400" fill="#272822" rx="10" ry="10"/>
-  <g class="content f5">
-    <text x="16" y="32" fill="#a6e22e" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="16" xml:space="preserve">$</text>
-    <text x="25.6" y="32" fill="#f8f8f2" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="16" xml:space="preserve"> npx c</text>
-    <rect class="cursor-active f5" x="83.2" y="16" width="9.6" height="22.4" fill="#f8f8f2" opacity="0.7"/>
-  </g>
+
+<rect class="window-bg" x="0" y="0" width="800" height="400" fill="#272822" rx="0" ry="0"/>
+<g class="text-layer">
+<text class="text f10" x="16" y="16">$</text>
+<text class="text fg" x="25.6" y="16"> npx c                                                                         </text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor" x="83.2" y="16" width="9.6" height="22.4" fill="#f8f8f2"/>
+</g>
 
     </g>
     <g id="frame-6">
       
-  <style>
-    .cursor {
-      animation: blink 1s step-end infinite;
-    }
-    .cursor-active {
-      /* No animation - solid cursor during typing/movement */
-    }
-    @keyframes blink {
-      0%, 50% { opacity: 1; }
-      50.01%, 100% { opacity: 0; }
-    }
-  </style>
-  <rect width="800" height="400" fill="#272822" rx="10" ry="10"/>
-  <g class="content f6">
-    <text x="16" y="32" fill="#a6e22e" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="16" xml:space="preserve">$</text>
-    <text x="25.6" y="32" fill="#f8f8f2" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="16" xml:space="preserve"> npx ch</text>
-    <rect class="cursor-active f6" x="92.8" y="16" width="9.6" height="22.4" fill="#f8f8f2" opacity="0.7"/>
-  </g>
+
+<rect class="window-bg" x="0" y="0" width="800" height="400" fill="#272822" rx="0" ry="0"/>
+<g class="text-layer">
+<text class="text f10" x="16" y="16">$</text>
+<text class="text fg" x="25.6" y="16"> npx ch                                                                        </text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor" x="92.8" y="16" width="9.6" height="22.4" fill="#f8f8f2"/>
+</g>
 
     </g>
     <g id="frame-7">
       
-  <style>
-    .cursor {
-      animation: blink 1s step-end infinite;
-    }
-    .cursor-active {
-      /* No animation - solid cursor during typing/movement */
-    }
-    @keyframes blink {
-      0%, 50% { opacity: 1; }
-      50.01%, 100% { opacity: 0; }
-    }
-  </style>
-  <rect width="800" height="400" fill="#272822" rx="10" ry="10"/>
-  <g class="content f7">
-    <text x="16" y="32" fill="#a6e22e" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="16" xml:space="preserve">$</text>
-    <text x="25.6" y="32" fill="#f8f8f2" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="16" xml:space="preserve"> npx cha</text>
-    <rect class="cursor-active f7" x="102.39999999999999" y="16" width="9.6" height="22.4" fill="#f8f8f2" opacity="0.7"/>
-  </g>
+
+<rect class="window-bg" x="0" y="0" width="800" height="400" fill="#272822" rx="0" ry="0"/>
+<g class="text-layer">
+<text class="text f10" x="16" y="16">$</text>
+<text class="text fg" x="25.6" y="16"> npx cha                                                                       </text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor" x="102.39999999999999" y="16" width="9.6" height="22.4" fill="#f8f8f2"/>
+</g>
 
     </g>
     <g id="frame-8">
       
-  <style>
-    .cursor {
-      animation: blink 1s step-end infinite;
-    }
-    .cursor-active {
-      /* No animation - solid cursor during typing/movement */
-    }
-    @keyframes blink {
-      0%, 50% { opacity: 1; }
-      50.01%, 100% { opacity: 0; }
-    }
-  </style>
-  <rect width="800" height="400" fill="#272822" rx="10" ry="10"/>
-  <g class="content f8">
-    <text x="16" y="32" fill="#a6e22e" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="16" xml:space="preserve">$</text>
-    <text x="25.6" y="32" fill="#f8f8f2" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="16" xml:space="preserve"> npx char</text>
-    <rect class="cursor-active f8" x="112" y="16" width="9.6" height="22.4" fill="#f8f8f2" opacity="0.7"/>
-  </g>
+
+<rect class="window-bg" x="0" y="0" width="800" height="400" fill="#272822" rx="0" ry="0"/>
+<g class="text-layer">
+<text class="text f10" x="16" y="16">$</text>
+<text class="text fg" x="25.6" y="16"> npx char                                                                      </text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor" x="112" y="16" width="9.6" height="22.4" fill="#f8f8f2"/>
+</g>
 
     </g>
     <g id="frame-9">
       
-  <style>
-    .cursor {
-      animation: blink 1s step-end infinite;
-    }
-    .cursor-active {
-      /* No animation - solid cursor during typing/movement */
-    }
-    @keyframes blink {
-      0%, 50% { opacity: 1; }
-      50.01%, 100% { opacity: 0; }
-    }
-  </style>
-  <rect width="800" height="400" fill="#272822" rx="10" ry="10"/>
-  <g class="content f9">
-    <text x="16" y="32" fill="#a6e22e" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="16" xml:space="preserve">$</text>
-    <text x="25.6" y="32" fill="#f8f8f2" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="16" xml:space="preserve"> npx chart</text>
-    <rect class="cursor-active f9" x="121.6" y="16" width="9.6" height="22.4" fill="#f8f8f2" opacity="0.7"/>
-  </g>
+
+<rect class="window-bg" x="0" y="0" width="800" height="400" fill="#272822" rx="0" ry="0"/>
+<g class="text-layer">
+<text class="text f10" x="16" y="16">$</text>
+<text class="text fg" x="25.6" y="16"> npx chart                                                                     </text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor" x="121.6" y="16" width="9.6" height="22.4" fill="#f8f8f2"/>
+</g>
 
     </g>
     <g id="frame-10">
       
-  <style>
-    .cursor {
-      animation: blink 1s step-end infinite;
-    }
-    .cursor-active {
-      /* No animation - solid cursor during typing/movement */
-    }
-    @keyframes blink {
-      0%, 50% { opacity: 1; }
-      50.01%, 100% { opacity: 0; }
-    }
-  </style>
-  <rect width="800" height="400" fill="#272822" rx="10" ry="10"/>
-  <g class="content f10">
-    <text x="16" y="32" fill="#a6e22e" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="16" xml:space="preserve">$</text>
-    <text x="25.6" y="32" fill="#f8f8f2" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="16" xml:space="preserve"> npx charts</text>
-    <rect class="cursor-active f10" x="131.2" y="16" width="9.6" height="22.4" fill="#f8f8f2" opacity="0.7"/>
-  </g>
+
+<rect class="window-bg" x="0" y="0" width="800" height="400" fill="#272822" rx="0" ry="0"/>
+<g class="text-layer">
+<text class="text f10" x="16" y="16">$</text>
+<text class="text fg" x="25.6" y="16"> npx charts                                                                    </text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor" x="131.2" y="16" width="9.6" height="22.4" fill="#f8f8f2"/>
+</g>
 
     </g>
     <g id="frame-11">
       
-  <style>
-    .cursor {
-      animation: blink 1s step-end infinite;
-    }
-    .cursor-active {
-      /* No animation - solid cursor during typing/movement */
-    }
-    @keyframes blink {
-      0%, 50% { opacity: 1; }
-      50.01%, 100% { opacity: 0; }
-    }
-  </style>
-  <rect width="800" height="400" fill="#272822" rx="10" ry="10"/>
-  <g class="content f11">
-    <text x="16" y="32" fill="#a6e22e" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="16" xml:space="preserve">$</text>
-    <text x="25.6" y="32" fill="#f8f8f2" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="16" xml:space="preserve"> npx chartsc</text>
-    <rect class="cursor-active f11" x="140.8" y="16" width="9.6" height="22.4" fill="#f8f8f2" opacity="0.7"/>
-  </g>
+
+<rect class="window-bg" x="0" y="0" width="800" height="400" fill="#272822" rx="0" ry="0"/>
+<g class="text-layer">
+<text class="text f10" x="16" y="16">$</text>
+<text class="text fg" x="25.6" y="16"> npx chartsc                                                                   </text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor" x="140.8" y="16" width="9.6" height="22.4" fill="#f8f8f2"/>
+</g>
 
     </g>
     <g id="frame-12">
       
-  <style>
-    .cursor {
-      animation: blink 1s step-end infinite;
-    }
-    .cursor-active {
-      /* No animation - solid cursor during typing/movement */
-    }
-    @keyframes blink {
-      0%, 50% { opacity: 1; }
-      50.01%, 100% { opacity: 0; }
-    }
-  </style>
-  <rect width="800" height="400" fill="#272822" rx="10" ry="10"/>
-  <g class="content f12">
-    <text x="16" y="32" fill="#a6e22e" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="16" xml:space="preserve">$</text>
-    <text x="25.6" y="32" fill="#f8f8f2" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="16" xml:space="preserve"> npx chartsci</text>
-    <rect class="cursor-active f12" x="150.4" y="16" width="9.6" height="22.4" fill="#f8f8f2" opacity="0.7"/>
-  </g>
+
+<rect class="window-bg" x="0" y="0" width="800" height="400" fill="#272822" rx="0" ry="0"/>
+<g class="text-layer">
+<text class="text f10" x="16" y="16">$</text>
+<text class="text fg" x="25.6" y="16"> npx chartsci                                                                  </text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor" x="150.4" y="16" width="9.6" height="22.4" fill="#f8f8f2"/>
+</g>
 
     </g>
     <g id="frame-13">
       
-  <style>
-    .cursor {
-      animation: blink 1s step-end infinite;
-    }
-    .cursor-active {
-      /* No animation - solid cursor during typing/movement */
-    }
-    @keyframes blink {
-      0%, 50% { opacity: 1; }
-      50.01%, 100% { opacity: 0; }
-    }
-  </style>
-  <rect width="800" height="400" fill="#272822" rx="10" ry="10"/>
-  <g class="content f13">
-    <text x="16" y="32" fill="#a6e22e" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="16" xml:space="preserve">$</text>
-    <text x="25.6" y="32" fill="#f8f8f2" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="16" xml:space="preserve"> npx chartscii</text>
-    <rect class="cursor-active f13" x="160" y="16" width="9.6" height="22.4" fill="#f8f8f2" opacity="0.7"/>
-  </g>
+
+<rect class="window-bg" x="0" y="0" width="800" height="400" fill="#272822" rx="0" ry="0"/>
+<g class="text-layer">
+<text class="text f10" x="16" y="16">$</text>
+<text class="text fg" x="25.6" y="16"> npx chartscii                                                                 </text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor" x="160" y="16" width="9.6" height="22.4" fill="#f8f8f2"/>
+</g>
 
     </g>
     <g id="frame-14">
       
-  <style>
-    .cursor {
-      animation: blink 1s step-end infinite;
-    }
-    .cursor-active {
-      /* No animation - solid cursor during typing/movement */
-    }
-    @keyframes blink {
-      0%, 50% { opacity: 1; }
-      50.01%, 100% { opacity: 0; }
-    }
-  </style>
-  <rect width="800" height="400" fill="#272822" rx="10" ry="10"/>
-  <g class="content f14">
-    <text x="16" y="32" fill="#a6e22e" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="16" xml:space="preserve">$</text>
-    <text x="25.6" y="32" fill="#f8f8f2" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="16" xml:space="preserve"> npx chartscii-</text>
-    <rect class="cursor-active f14" x="169.6" y="16" width="9.6" height="22.4" fill="#f8f8f2" opacity="0.7"/>
-  </g>
+
+<rect class="window-bg" x="0" y="0" width="800" height="400" fill="#272822" rx="0" ry="0"/>
+<g class="text-layer">
+<text class="text f10" x="16" y="16">$</text>
+<text class="text fg" x="25.6" y="16"> npx chartscii-                                                                </text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor" x="169.6" y="16" width="9.6" height="22.4" fill="#f8f8f2"/>
+</g>
 
     </g>
     <g id="frame-15">
       
-  <style>
-    .cursor {
-      animation: blink 1s step-end infinite;
-    }
-    .cursor-active {
-      /* No animation - solid cursor during typing/movement */
-    }
-    @keyframes blink {
-      0%, 50% { opacity: 1; }
-      50.01%, 100% { opacity: 0; }
-    }
-  </style>
-  <rect width="800" height="400" fill="#272822" rx="10" ry="10"/>
-  <g class="content f15">
-    <text x="16" y="32" fill="#a6e22e" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="16" xml:space="preserve">$</text>
-    <text x="25.6" y="32" fill="#f8f8f2" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="16" xml:space="preserve"> npx chartscii-c</text>
-    <rect class="cursor-active f15" x="179.2" y="16" width="9.6" height="22.4" fill="#f8f8f2" opacity="0.7"/>
-  </g>
+
+<rect class="window-bg" x="0" y="0" width="800" height="400" fill="#272822" rx="0" ry="0"/>
+<g class="text-layer">
+<text class="text f10" x="16" y="16">$</text>
+<text class="text fg" x="25.6" y="16"> npx chartscii-c                                                               </text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor" x="179.2" y="16" width="9.6" height="22.4" fill="#f8f8f2"/>
+</g>
 
     </g>
     <g id="frame-16">
       
-  <style>
-    .cursor {
-      animation: blink 1s step-end infinite;
-    }
-    .cursor-active {
-      /* No animation - solid cursor during typing/movement */
-    }
-    @keyframes blink {
-      0%, 50% { opacity: 1; }
-      50.01%, 100% { opacity: 0; }
-    }
-  </style>
-  <rect width="800" height="400" fill="#272822" rx="10" ry="10"/>
-  <g class="content f16">
-    <text x="16" y="32" fill="#a6e22e" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="16" xml:space="preserve">$</text>
-    <text x="25.6" y="32" fill="#f8f8f2" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="16" xml:space="preserve"> npx chartscii-cl</text>
-    <rect class="cursor-active f16" x="188.79999999999998" y="16" width="9.6" height="22.4" fill="#f8f8f2" opacity="0.7"/>
-  </g>
+
+<rect class="window-bg" x="0" y="0" width="800" height="400" fill="#272822" rx="0" ry="0"/>
+<g class="text-layer">
+<text class="text f10" x="16" y="16">$</text>
+<text class="text fg" x="25.6" y="16"> npx chartscii-cl                                                              </text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor" x="188.79999999999998" y="16" width="9.6" height="22.4" fill="#f8f8f2"/>
+</g>
 
     </g>
     <g id="frame-17">
       
-  <style>
-    .cursor {
-      animation: blink 1s step-end infinite;
-    }
-    .cursor-active {
-      /* No animation - solid cursor during typing/movement */
-    }
-    @keyframes blink {
-      0%, 50% { opacity: 1; }
-      50.01%, 100% { opacity: 0; }
-    }
-  </style>
-  <rect width="800" height="400" fill="#272822" rx="10" ry="10"/>
-  <g class="content f17">
-    <text x="16" y="32" fill="#a6e22e" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="16" xml:space="preserve">$</text>
-    <text x="25.6" y="32" fill="#f8f8f2" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="16" xml:space="preserve"> npx chartscii-cli</text>
-    <rect class="cursor-active f17" x="198.4" y="16" width="9.6" height="22.4" fill="#f8f8f2" opacity="0.7"/>
-  </g>
+
+<rect class="window-bg" x="0" y="0" width="800" height="400" fill="#272822" rx="0" ry="0"/>
+<g class="text-layer">
+<text class="text f10" x="16" y="16">$</text>
+<text class="text fg" x="25.6" y="16"> npx chartscii-cli                                                             </text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor" x="198.4" y="16" width="9.6" height="22.4" fill="#f8f8f2"/>
+</g>
 
     </g>
     <g id="frame-18">
       
-  <style>
-    .cursor {
-      animation: blink 1s step-end infinite;
-    }
-    .cursor-active {
-      /* No animation - solid cursor during typing/movement */
-    }
-    @keyframes blink {
-      0%, 50% { opacity: 1; }
-      50.01%, 100% { opacity: 0; }
-    }
-  </style>
-  <rect width="800" height="400" fill="#272822" rx="10" ry="10"/>
-  <g class="content f18">
-    <text x="16" y="32" fill="#a6e22e" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="16" xml:space="preserve">$</text>
-    <text x="25.6" y="32" fill="#f8f8f2" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="16" xml:space="preserve"> npx chartscii-cli </text>
-    <rect class="cursor-active f18" x="208" y="16" width="9.6" height="22.4" fill="#f8f8f2" opacity="0.7"/>
-  </g>
+
+<rect class="window-bg" x="0" y="0" width="800" height="400" fill="#272822" rx="0" ry="0"/>
+<g class="text-layer">
+<text class="text f10" x="16" y="16">$</text>
+<text class="text fg" x="25.6" y="16"> npx chartscii-cli                                                             </text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor" x="208" y="16" width="9.6" height="22.4" fill="#f8f8f2"/>
+</g>
 
     </g>
     <g id="frame-19">
       
-  <style>
-    .cursor {
-      animation: blink 1s step-end infinite;
-    }
-    .cursor-active {
-      /* No animation - solid cursor during typing/movement */
-    }
-    @keyframes blink {
-      0%, 50% { opacity: 1; }
-      50.01%, 100% { opacity: 0; }
-    }
-  </style>
-  <rect width="800" height="400" fill="#272822" rx="10" ry="10"/>
-  <g class="content f19">
-    <text x="16" y="32" fill="#a6e22e" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="16" xml:space="preserve">$</text>
-    <text x="25.6" y="32" fill="#f8f8f2" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="16" xml:space="preserve"> npx chartscii-cli c</text>
-    <rect class="cursor-active f19" x="217.6" y="16" width="9.6" height="22.4" fill="#f8f8f2" opacity="0.7"/>
-  </g>
+
+<rect class="window-bg" x="0" y="0" width="800" height="400" fill="#272822" rx="0" ry="0"/>
+<g class="text-layer">
+<text class="text f10" x="16" y="16">$</text>
+<text class="text fg" x="25.6" y="16"> npx chartscii-cli c                                                           </text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor" x="217.6" y="16" width="9.6" height="22.4" fill="#f8f8f2"/>
+</g>
 
     </g>
     <g id="frame-20">
       
-  <style>
-    .cursor {
-      animation: blink 1s step-end infinite;
-    }
-    .cursor-active {
-      /* No animation - solid cursor during typing/movement */
-    }
-    @keyframes blink {
-      0%, 50% { opacity: 1; }
-      50.01%, 100% { opacity: 0; }
-    }
-  </style>
-  <rect width="800" height="400" fill="#272822" rx="10" ry="10"/>
-  <g class="content f20">
-    <text x="16" y="32" fill="#a6e22e" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="16" xml:space="preserve">$</text>
-    <text x="25.6" y="32" fill="#f8f8f2" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="16" xml:space="preserve"> npx chartscii-cli cr</text>
-    <rect class="cursor-active f20" x="227.2" y="16" width="9.6" height="22.4" fill="#f8f8f2" opacity="0.7"/>
-  </g>
+
+<rect class="window-bg" x="0" y="0" width="800" height="400" fill="#272822" rx="0" ry="0"/>
+<g class="text-layer">
+<text class="text f10" x="16" y="16">$</text>
+<text class="text fg" x="25.6" y="16"> npx chartscii-cli cr                                                          </text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor" x="227.2" y="16" width="9.6" height="22.4" fill="#f8f8f2"/>
+</g>
 
     </g>
     <g id="frame-21">
       
-  <style>
-    .cursor {
-      animation: blink 1s step-end infinite;
-    }
-    .cursor-active {
-      /* No animation - solid cursor during typing/movement */
-    }
-    @keyframes blink {
-      0%, 50% { opacity: 1; }
-      50.01%, 100% { opacity: 0; }
-    }
-  </style>
-  <rect width="800" height="400" fill="#272822" rx="10" ry="10"/>
-  <g class="content f21">
-    <text x="16" y="32" fill="#a6e22e" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="16" xml:space="preserve">$</text>
-    <text x="25.6" y="32" fill="#f8f8f2" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="16" xml:space="preserve"> npx chartscii-cli cre</text>
-    <rect class="cursor-active f21" x="236.79999999999998" y="16" width="9.6" height="22.4" fill="#f8f8f2" opacity="0.7"/>
-  </g>
+
+<rect class="window-bg" x="0" y="0" width="800" height="400" fill="#272822" rx="0" ry="0"/>
+<g class="text-layer">
+<text class="text f10" x="16" y="16">$</text>
+<text class="text fg" x="25.6" y="16"> npx chartscii-cli cre                                                         </text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor" x="236.79999999999998" y="16" width="9.6" height="22.4" fill="#f8f8f2"/>
+</g>
 
     </g>
     <g id="frame-22">
       
-  <style>
-    .cursor {
-      animation: blink 1s step-end infinite;
-    }
-    .cursor-active {
-      /* No animation - solid cursor during typing/movement */
-    }
-    @keyframes blink {
-      0%, 50% { opacity: 1; }
-      50.01%, 100% { opacity: 0; }
-    }
-  </style>
-  <rect width="800" height="400" fill="#272822" rx="10" ry="10"/>
-  <g class="content f22">
-    <text x="16" y="32" fill="#a6e22e" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="16" xml:space="preserve">$</text>
-    <text x="25.6" y="32" fill="#f8f8f2" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="16" xml:space="preserve"> npx chartscii-cli crea</text>
-    <rect class="cursor-active f22" x="246.39999999999998" y="16" width="9.6" height="22.4" fill="#f8f8f2" opacity="0.7"/>
-  </g>
+
+<rect class="window-bg" x="0" y="0" width="800" height="400" fill="#272822" rx="0" ry="0"/>
+<g class="text-layer">
+<text class="text f10" x="16" y="16">$</text>
+<text class="text fg" x="25.6" y="16"> npx chartscii-cli crea                                                        </text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor" x="246.39999999999998" y="16" width="9.6" height="22.4" fill="#f8f8f2"/>
+</g>
 
     </g>
     <g id="frame-23">
       
-  <style>
-    .cursor {
-      animation: blink 1s step-end infinite;
-    }
-    .cursor-active {
-      /* No animation - solid cursor during typing/movement */
-    }
-    @keyframes blink {
-      0%, 50% { opacity: 1; }
-      50.01%, 100% { opacity: 0; }
-    }
-  </style>
-  <rect width="800" height="400" fill="#272822" rx="10" ry="10"/>
-  <g class="content f23">
-    <text x="16" y="32" fill="#a6e22e" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="16" xml:space="preserve">$</text>
-    <text x="25.6" y="32" fill="#f8f8f2" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="16" xml:space="preserve"> npx chartscii-cli creat</text>
-    <rect class="cursor-active f23" x="256" y="16" width="9.6" height="22.4" fill="#f8f8f2" opacity="0.7"/>
-  </g>
+
+<rect class="window-bg" x="0" y="0" width="800" height="400" fill="#272822" rx="0" ry="0"/>
+<g class="text-layer">
+<text class="text f10" x="16" y="16">$</text>
+<text class="text fg" x="25.6" y="16"> npx chartscii-cli creat                                                       </text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor" x="256" y="16" width="9.6" height="22.4" fill="#f8f8f2"/>
+</g>
 
     </g>
     <g id="frame-24">
       
-  <style>
-    .cursor {
-      animation: blink 1s step-end infinite;
-    }
-    .cursor-active {
-      /* No animation - solid cursor during typing/movement */
-    }
-    @keyframes blink {
-      0%, 50% { opacity: 1; }
-      50.01%, 100% { opacity: 0; }
-    }
-  </style>
-  <rect width="800" height="400" fill="#272822" rx="10" ry="10"/>
-  <g class="content f24">
-    <text x="16" y="32" fill="#a6e22e" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="16" xml:space="preserve">$</text>
-    <text x="25.6" y="32" fill="#f8f8f2" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="16" xml:space="preserve"> npx chartscii-cli create</text>
-    <rect class="cursor-active f24" x="265.6" y="16" width="9.6" height="22.4" fill="#f8f8f2" opacity="0.7"/>
-  </g>
+
+<rect class="window-bg" x="0" y="0" width="800" height="400" fill="#272822" rx="0" ry="0"/>
+<g class="text-layer">
+<text class="text f10" x="16" y="16">$</text>
+<text class="text fg" x="25.6" y="16"> npx chartscii-cli create                                                      </text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor" x="265.6" y="16" width="9.6" height="22.4" fill="#f8f8f2"/>
+</g>
 
     </g>
     <g id="frame-25">
       
-  <style>
-    .cursor {
-      animation: blink 1s step-end infinite;
-    }
-    .cursor-active {
-      /* No animation - solid cursor during typing/movement */
-    }
-    @keyframes blink {
-      0%, 50% { opacity: 1; }
-      50.01%, 100% { opacity: 0; }
-    }
-  </style>
-  <rect width="800" height="400" fill="#272822" rx="10" ry="10"/>
-  <g class="content f25">
-    <text x="16" y="32" fill="#a6e22e" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="16" xml:space="preserve">$</text>
-    <text x="25.6" y="32" fill="#f8f8f2" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="16" xml:space="preserve"> npx chartscii-cli create </text>
-    <rect class="cursor-active f25" x="275.2" y="16" width="9.6" height="22.4" fill="#f8f8f2" opacity="0.7"/>
-  </g>
+
+<rect class="window-bg" x="0" y="0" width="800" height="400" fill="#272822" rx="0" ry="0"/>
+<g class="text-layer">
+<text class="text f10" x="16" y="16">$</text>
+<text class="text fg" x="25.6" y="16"> npx chartscii-cli create                                                      </text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor" x="275.2" y="16" width="9.6" height="22.4" fill="#f8f8f2"/>
+</g>
 
     </g>
     <g id="frame-26">
       
-  <style>
-    .cursor {
-      animation: blink 1s step-end infinite;
-    }
-    .cursor-active {
-      /* No animation - solid cursor during typing/movement */
-    }
-    @keyframes blink {
-      0%, 50% { opacity: 1; }
-      50.01%, 100% { opacity: 0; }
-    }
-  </style>
-  <rect width="800" height="400" fill="#272822" rx="10" ry="10"/>
-  <g class="content f26">
-    <text x="16" y="32" fill="#a6e22e" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="16" xml:space="preserve">$</text>
-    <text x="25.6" y="32" fill="#f8f8f2" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="16" xml:space="preserve"> npx chartscii-cli create $</text>
-    <rect class="cursor-active f26" x="284.8" y="16" width="9.6" height="22.4" fill="#f8f8f2" opacity="0.7"/>
-  </g>
+
+<rect class="window-bg" x="0" y="0" width="800" height="400" fill="#272822" rx="0" ry="0"/>
+<g class="text-layer">
+<text class="text f10" x="16" y="16">$</text>
+<text class="text fg" x="25.6" y="16"> npx chartscii-cli create $                                                    </text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor" x="284.8" y="16" width="9.6" height="22.4" fill="#f8f8f2"/>
+</g>
 
     </g>
     <g id="frame-27">
       
-  <style>
-    .cursor {
-      animation: blink 1s step-end infinite;
-    }
-    .cursor-active {
-      /* No animation - solid cursor during typing/movement */
-    }
-    @keyframes blink {
-      0%, 50% { opacity: 1; }
-      50.01%, 100% { opacity: 0; }
-    }
-  </style>
-  <rect width="800" height="400" fill="#272822" rx="10" ry="10"/>
-  <g class="content f27">
-    <text x="16" y="32" fill="#a6e22e" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="16" xml:space="preserve">$</text>
-    <text x="25.6" y="32" fill="#f8f8f2" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="16" xml:space="preserve"> npx chartscii-cli create $(</text>
-    <rect class="cursor-active f27" x="294.4" y="16" width="9.6" height="22.4" fill="#f8f8f2" opacity="0.7"/>
-  </g>
+
+<rect class="window-bg" x="0" y="0" width="800" height="400" fill="#272822" rx="0" ry="0"/>
+<g class="text-layer">
+<text class="text f10" x="16" y="16">$</text>
+<text class="text fg" x="25.6" y="16"> npx chartscii-cli create $(                                                   </text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor" x="294.4" y="16" width="9.6" height="22.4" fill="#f8f8f2"/>
+</g>
 
     </g>
     <g id="frame-28">
       
-  <style>
-    .cursor {
-      animation: blink 1s step-end infinite;
-    }
-    .cursor-active {
-      /* No animation - solid cursor during typing/movement */
-    }
-    @keyframes blink {
-      0%, 50% { opacity: 1; }
-      50.01%, 100% { opacity: 0; }
-    }
-  </style>
-  <rect width="800" height="400" fill="#272822" rx="10" ry="10"/>
-  <g class="content f28">
-    <text x="16" y="32" fill="#a6e22e" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="16" xml:space="preserve">$</text>
-    <text x="25.6" y="32" fill="#f8f8f2" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="16" xml:space="preserve"> npx chartscii-cli create $(s</text>
-    <rect class="cursor-active f28" x="304" y="16" width="9.6" height="22.4" fill="#f8f8f2" opacity="0.7"/>
-  </g>
+
+<rect class="window-bg" x="0" y="0" width="800" height="400" fill="#272822" rx="0" ry="0"/>
+<g class="text-layer">
+<text class="text f10" x="16" y="16">$</text>
+<text class="text fg" x="25.6" y="16"> npx chartscii-cli create $(s                                                  </text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor" x="304" y="16" width="9.6" height="22.4" fill="#f8f8f2"/>
+</g>
 
     </g>
     <g id="frame-29">
       
-  <style>
-    .cursor {
-      animation: blink 1s step-end infinite;
-    }
-    .cursor-active {
-      /* No animation - solid cursor during typing/movement */
-    }
-    @keyframes blink {
-      0%, 50% { opacity: 1; }
-      50.01%, 100% { opacity: 0; }
-    }
-  </style>
-  <rect width="800" height="400" fill="#272822" rx="10" ry="10"/>
-  <g class="content f29">
-    <text x="16" y="32" fill="#a6e22e" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="16" xml:space="preserve">$</text>
-    <text x="25.6" y="32" fill="#f8f8f2" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="16" xml:space="preserve"> npx chartscii-cli create $(se</text>
-    <rect class="cursor-active f29" x="313.59999999999997" y="16" width="9.6" height="22.4" fill="#f8f8f2" opacity="0.7"/>
-  </g>
+
+<rect class="window-bg" x="0" y="0" width="800" height="400" fill="#272822" rx="0" ry="0"/>
+<g class="text-layer">
+<text class="text f10" x="16" y="16">$</text>
+<text class="text fg" x="25.6" y="16"> npx chartscii-cli create $(se                                                 </text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor" x="313.59999999999997" y="16" width="9.6" height="22.4" fill="#f8f8f2"/>
+</g>
 
     </g>
     <g id="frame-30">
       
-  <style>
-    .cursor {
-      animation: blink 1s step-end infinite;
-    }
-    .cursor-active {
-      /* No animation - solid cursor during typing/movement */
-    }
-    @keyframes blink {
-      0%, 50% { opacity: 1; }
-      50.01%, 100% { opacity: 0; }
-    }
-  </style>
-  <rect width="800" height="400" fill="#272822" rx="10" ry="10"/>
-  <g class="content f30">
-    <text x="16" y="32" fill="#a6e22e" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="16" xml:space="preserve">$</text>
-    <text x="25.6" y="32" fill="#f8f8f2" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="16" xml:space="preserve"> npx chartscii-cli create $(seq</text>
-    <rect class="cursor-active f30" x="323.2" y="16" width="9.6" height="22.4" fill="#f8f8f2" opacity="0.7"/>
-  </g>
+
+<rect class="window-bg" x="0" y="0" width="800" height="400" fill="#272822" rx="0" ry="0"/>
+<g class="text-layer">
+<text class="text f10" x="16" y="16">$</text>
+<text class="text fg" x="25.6" y="16"> npx chartscii-cli create $(seq                                                </text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor" x="323.2" y="16" width="9.6" height="22.4" fill="#f8f8f2"/>
+</g>
 
     </g>
     <g id="frame-31">
       
-  <style>
-    .cursor {
-      animation: blink 1s step-end infinite;
-    }
-    .cursor-active {
-      /* No animation - solid cursor during typing/movement */
-    }
-    @keyframes blink {
-      0%, 50% { opacity: 1; }
-      50.01%, 100% { opacity: 0; }
-    }
-  </style>
-  <rect width="800" height="400" fill="#272822" rx="10" ry="10"/>
-  <g class="content f31">
-    <text x="16" y="32" fill="#a6e22e" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="16" xml:space="preserve">$</text>
-    <text x="25.6" y="32" fill="#f8f8f2" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="16" xml:space="preserve"> npx chartscii-cli create $(seq </text>
-    <rect class="cursor-active f31" x="332.8" y="16" width="9.6" height="22.4" fill="#f8f8f2" opacity="0.7"/>
-  </g>
+
+<rect class="window-bg" x="0" y="0" width="800" height="400" fill="#272822" rx="0" ry="0"/>
+<g class="text-layer">
+<text class="text f10" x="16" y="16">$</text>
+<text class="text fg" x="25.6" y="16"> npx chartscii-cli create $(seq                                                </text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor" x="332.8" y="16" width="9.6" height="22.4" fill="#f8f8f2"/>
+</g>
 
     </g>
     <g id="frame-32">
       
-  <style>
-    .cursor {
-      animation: blink 1s step-end infinite;
-    }
-    .cursor-active {
-      /* No animation - solid cursor during typing/movement */
-    }
-    @keyframes blink {
-      0%, 50% { opacity: 1; }
-      50.01%, 100% { opacity: 0; }
-    }
-  </style>
-  <rect width="800" height="400" fill="#272822" rx="10" ry="10"/>
-  <g class="content f32">
-    <text x="16" y="32" fill="#a6e22e" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="16" xml:space="preserve">$</text>
-    <text x="25.6" y="32" fill="#f8f8f2" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="16" xml:space="preserve"> npx chartscii-cli create $(seq 1</text>
-    <rect class="cursor-active f32" x="342.4" y="16" width="9.6" height="22.4" fill="#f8f8f2" opacity="0.7"/>
-  </g>
+
+<rect class="window-bg" x="0" y="0" width="800" height="400" fill="#272822" rx="0" ry="0"/>
+<g class="text-layer">
+<text class="text f10" x="16" y="16">$</text>
+<text class="text fg" x="25.6" y="16"> npx chartscii-cli create $(seq 1                                              </text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor" x="342.4" y="16" width="9.6" height="22.4" fill="#f8f8f2"/>
+</g>
 
     </g>
     <g id="frame-33">
       
-  <style>
-    .cursor {
-      animation: blink 1s step-end infinite;
-    }
-    .cursor-active {
-      /* No animation - solid cursor during typing/movement */
-    }
-    @keyframes blink {
-      0%, 50% { opacity: 1; }
-      50.01%, 100% { opacity: 0; }
-    }
-  </style>
-  <rect width="800" height="400" fill="#272822" rx="10" ry="10"/>
-  <g class="content f33">
-    <text x="16" y="32" fill="#a6e22e" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="16" xml:space="preserve">$</text>
-    <text x="25.6" y="32" fill="#f8f8f2" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="16" xml:space="preserve"> npx chartscii-cli create $(seq 1 </text>
-    <rect class="cursor-active f33" x="352" y="16" width="9.6" height="22.4" fill="#f8f8f2" opacity="0.7"/>
-  </g>
+
+<rect class="window-bg" x="0" y="0" width="800" height="400" fill="#272822" rx="0" ry="0"/>
+<g class="text-layer">
+<text class="text f10" x="16" y="16">$</text>
+<text class="text fg" x="25.6" y="16"> npx chartscii-cli create $(seq 1                                              </text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor" x="352" y="16" width="9.6" height="22.4" fill="#f8f8f2"/>
+</g>
 
     </g>
     <g id="frame-34">
       
-  <style>
-    .cursor {
-      animation: blink 1s step-end infinite;
-    }
-    .cursor-active {
-      /* No animation - solid cursor during typing/movement */
-    }
-    @keyframes blink {
-      0%, 50% { opacity: 1; }
-      50.01%, 100% { opacity: 0; }
-    }
-  </style>
-  <rect width="800" height="400" fill="#272822" rx="10" ry="10"/>
-  <g class="content f34">
-    <text x="16" y="32" fill="#a6e22e" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="16" xml:space="preserve">$</text>
-    <text x="25.6" y="32" fill="#f8f8f2" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="16" xml:space="preserve"> npx chartscii-cli create $(seq 1 1</text>
-    <rect class="cursor-active f34" x="361.59999999999997" y="16" width="9.6" height="22.4" fill="#f8f8f2" opacity="0.7"/>
-  </g>
+
+<rect class="window-bg" x="0" y="0" width="800" height="400" fill="#272822" rx="0" ry="0"/>
+<g class="text-layer">
+<text class="text f10" x="16" y="16">$</text>
+<text class="text fg" x="25.6" y="16"> npx chartscii-cli create $(seq 1 1                                            </text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor" x="361.59999999999997" y="16" width="9.6" height="22.4" fill="#f8f8f2"/>
+</g>
 
     </g>
     <g id="frame-35">
       
-  <style>
-    .cursor {
-      animation: blink 1s step-end infinite;
-    }
-    .cursor-active {
-      /* No animation - solid cursor during typing/movement */
-    }
-    @keyframes blink {
-      0%, 50% { opacity: 1; }
-      50.01%, 100% { opacity: 0; }
-    }
-  </style>
-  <rect width="800" height="400" fill="#272822" rx="10" ry="10"/>
-  <g class="content f35">
-    <text x="16" y="32" fill="#a6e22e" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="16" xml:space="preserve">$</text>
-    <text x="25.6" y="32" fill="#f8f8f2" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="16" xml:space="preserve"> npx chartscii-cli create $(seq 1 10</text>
-    <rect class="cursor-active f35" x="371.2" y="16" width="9.6" height="22.4" fill="#f8f8f2" opacity="0.7"/>
-  </g>
+
+<rect class="window-bg" x="0" y="0" width="800" height="400" fill="#272822" rx="0" ry="0"/>
+<g class="text-layer">
+<text class="text f10" x="16" y="16">$</text>
+<text class="text fg" x="25.6" y="16"> npx chartscii-cli create $(seq 1 10                                           </text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor" x="371.2" y="16" width="9.6" height="22.4" fill="#f8f8f2"/>
+</g>
 
     </g>
     <g id="frame-36">
       
-  <style>
-    .cursor {
-      animation: blink 1s step-end infinite;
-    }
-    .cursor-active {
-      /* No animation - solid cursor during typing/movement */
-    }
-    @keyframes blink {
-      0%, 50% { opacity: 1; }
-      50.01%, 100% { opacity: 0; }
-    }
-  </style>
-  <rect width="800" height="400" fill="#272822" rx="10" ry="10"/>
-  <g class="content f36">
-    <text x="16" y="32" fill="#a6e22e" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="16" xml:space="preserve">$</text>
-    <text x="25.6" y="32" fill="#f8f8f2" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="16" xml:space="preserve"> npx chartscii-cli create $(seq 1 10)</text>
-    <rect class="cursor-active f36" x="380.8" y="16" width="9.6" height="22.4" fill="#f8f8f2" opacity="0.7"/>
-  </g>
+
+<rect class="window-bg" x="0" y="0" width="800" height="400" fill="#272822" rx="0" ry="0"/>
+<g class="text-layer">
+<text class="text f10" x="16" y="16">$</text>
+<text class="text fg" x="25.6" y="16"> npx chartscii-cli create $(seq 1 10)                                          </text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor" x="380.8" y="16" width="9.6" height="22.4" fill="#f8f8f2"/>
+</g>
 
     </g>
     <g id="frame-37">
       
-  <style>
-    .cursor {
-      animation: blink 1s step-end infinite;
-    }
-    .cursor-active {
-      /* No animation - solid cursor during typing/movement */
-    }
-    @keyframes blink {
-      0%, 50% { opacity: 1; }
-      50.01%, 100% { opacity: 0; }
-    }
-  </style>
-  <rect width="800" height="400" fill="#272822" rx="10" ry="10"/>
-  <g class="content f37">
-    <text x="16" y="32" fill="#a6e22e" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="16" xml:space="preserve">$</text>
-    <text x="25.6" y="32" fill="#f8f8f2" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="16" xml:space="preserve"> npx chartscii-cli create $(seq 1 10)</text>
-  </g>
+
+<rect class="window-bg" x="0" y="0" width="800" height="400" fill="#272822" rx="0" ry="0"/>
+<g class="text-layer">
+<text class="text f10" x="16" y="16">$</text>
+<text class="text fg" x="25.6" y="16"> npx chartscii-cli create $(seq 1 10)                                          </text>
+</g>
 
     </g>
     <g id="frame-38">
       
-  <style>
-    .cursor {
-      animation: blink 1s step-end infinite;
-    }
-    .cursor-active {
-      /* No animation - solid cursor during typing/movement */
-    }
-    @keyframes blink {
-      0%, 50% { opacity: 1; }
-      50.01%, 100% { opacity: 0; }
-    }
-  </style>
-  <rect width="800" height="400" fill="#272822" rx="10" ry="10"/>
-  <g class="content f38">
-    <text x="16" y="32" fill="#a6e22e" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="16" xml:space="preserve">$</text>
-    <text x="25.6" y="32" fill="#f8f8f2" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="16" xml:space="preserve"> npx chartscii-cli create $(seq 1 10)</text>
-  </g>
+
+<rect class="window-bg" x="0" y="0" width="800" height="400" fill="#272822" rx="0" ry="0"/>
+<g class="text-layer">
+<text class="text f10" x="16" y="16">$</text>
+<text class="text fg" x="25.6" y="16"> npx chartscii-cli create $(seq 1 10)                                          </text>
+<text class="text fg" x="16" y="60.8">1  ╢█████                                                                       </text>
+<text class="text fg" x="16" y="83.19999999999999">2  ╢██████████                                                                  </text>
+<text class="text fg" x="16" y="105.6">3  ╢███████████████                                                             </text>
+<text class="text fg" x="16" y="128">4  ╢████████████████████                                                        </text>
+<text class="text fg" x="16" y="150.39999999999998">5  ╢█████████████████████████                                                   </text>
+<text class="text fg" x="16" y="172.79999999999998">6  ╢██████████████████████████████                                              </text>
+<text class="text fg" x="16" y="195.2">7  ╢███████████████████████████████████                                         </text>
+<text class="text fg" x="16" y="217.6">8  ╢████████████████████████████████████████                                    </text>
+<text class="text fg" x="16" y="240">9  ╢█████████████████████████████████████████████                               </text>
+<text class="text fg" x="16" y="262.4">10 ╢██████████████████████████████████████████████████                          </text>
+<text class="text fg" x="16" y="284.79999999999995">   ╚══════════════════════════════════════════════════                          </text>
+</g>
 
     </g>
     <g id="frame-39">
       
-  <style>
-    .cursor {
-      animation: blink 1s step-end infinite;
-    }
-    .cursor-active {
-      /* No animation - solid cursor during typing/movement */
-    }
-    @keyframes blink {
-      0%, 50% { opacity: 1; }
-      50.01%, 100% { opacity: 0; }
-    }
-  </style>
-  <rect width="800" height="400" fill="#272822" rx="10" ry="10"/>
-  <g class="content f39">
-    <text x="16" y="32" fill="#a6e22e" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="16" xml:space="preserve">$</text>
-    <text x="25.6" y="32" fill="#f8f8f2" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="16" xml:space="preserve"> npx chartscii-cli create $(seq 1 10)</text>
-    <text x="16" y="76.8" fill="#f8f8f2" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="16" xml:space="preserve">1  </text>
-    <text x="44.8" y="76.8" fill="#f8f8f2" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="16" xml:space="preserve">╢█████</text>
-    <text x="16" y="99.19999999999999" fill="#f8f8f2" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="16" xml:space="preserve">2  </text>
-    <text x="44.8" y="99.19999999999999" fill="#f8f8f2" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="16" xml:space="preserve">╢██████████</text>
-    <text x="16" y="121.6" fill="#f8f8f2" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="16" xml:space="preserve">3  </text>
-    <text x="44.8" y="121.6" fill="#f8f8f2" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="16" xml:space="preserve">╢███████████████</text>
-    <text x="16" y="144" fill="#f8f8f2" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="16" xml:space="preserve">4  </text>
-    <text x="44.8" y="144" fill="#f8f8f2" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="16" xml:space="preserve">╢████████████████████</text>
-    <text x="16" y="166.39999999999998" fill="#f8f8f2" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="16" xml:space="preserve">5  </text>
-    <text x="44.8" y="166.39999999999998" fill="#f8f8f2" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="16" xml:space="preserve">╢█████████████████████████</text>
-    <text x="16" y="188.79999999999998" fill="#f8f8f2" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="16" xml:space="preserve">6  </text>
-    <text x="44.8" y="188.79999999999998" fill="#f8f8f2" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="16" xml:space="preserve">╢██████████████████████████████</text>
-    <text x="16" y="211.2" fill="#f8f8f2" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="16" xml:space="preserve">7  </text>
-    <text x="44.8" y="211.2" fill="#f8f8f2" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="16" xml:space="preserve">╢███████████████████████████████████</text>
-    <text x="16" y="233.6" fill="#f8f8f2" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="16" xml:space="preserve">8  </text>
-    <text x="44.8" y="233.6" fill="#f8f8f2" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="16" xml:space="preserve">╢████████████████████████████████████████</text>
-    <text x="16" y="256" fill="#f8f8f2" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="16" xml:space="preserve">9  </text>
-    <text x="44.8" y="256" fill="#f8f8f2" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="16" xml:space="preserve">╢█████████████████████████████████████████████</text>
-    <text x="16" y="278.4" fill="#f8f8f2" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="16" xml:space="preserve">10 </text>
-    <text x="44.8" y="278.4" fill="#f8f8f2" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="16" xml:space="preserve">╢██████████████████████████████████████████████████</text>
-    <text x="16" y="300.79999999999995" fill="#f8f8f2" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="16" xml:space="preserve">   ╚══════════════════════════════════════════════════</text>
-    <text x="16" y="323.2" fill="#a6e22e" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="16" xml:space="preserve">$</text>
-    <text x="25.6" y="323.2" fill="#f8f8f2" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="16" xml:space="preserve"> </text>
-    <rect class="cursor f39" x="35.2" y="307.2" width="9.6" height="22.4" fill="#f8f8f2" opacity="0.7"/>
-  </g>
+
+<rect class="window-bg" x="0" y="0" width="800" height="400" fill="#272822" rx="0" ry="0"/>
+<g class="text-layer">
+<text class="text f10" x="16" y="16">$</text>
+<text class="text fg" x="25.6" y="16"> npx chartscii-cli create $(seq 1 10)                                          </text>
+<text class="text fg" x="16" y="60.8">1  ╢█████                                                                       </text>
+<text class="text fg" x="16" y="83.19999999999999">2  ╢██████████                                                                  </text>
+<text class="text fg" x="16" y="105.6">3  ╢███████████████                                                             </text>
+<text class="text fg" x="16" y="128">4  ╢████████████████████                                                        </text>
+<text class="text fg" x="16" y="150.39999999999998">5  ╢█████████████████████████                                                   </text>
+<text class="text fg" x="16" y="172.79999999999998">6  ╢██████████████████████████████                                              </text>
+<text class="text fg" x="16" y="195.2">7  ╢███████████████████████████████████                                         </text>
+<text class="text fg" x="16" y="217.6">8  ╢████████████████████████████████████████                                    </text>
+<text class="text fg" x="16" y="240">9  ╢█████████████████████████████████████████████                               </text>
+<text class="text fg" x="16" y="262.4">10 ╢██████████████████████████████████████████████████                          </text>
+<text class="text fg" x="16" y="284.79999999999995">   ╚══════════════════════════════════════════════════                          </text>
+<text class="text f10" x="16" y="329.59999999999997">$</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor" x="35.2" y="329.59999999999997" width="9.6" height="22.4" fill="#f8f8f2"/>
+</g>
 
     </g>
     <g id="frame-40">
       
-  <style>
-    .cursor {
-      animation: blink 1s step-end infinite;
-    }
-    .cursor-active {
-      /* No animation - solid cursor during typing/movement */
-    }
-    @keyframes blink {
-      0%, 50% { opacity: 1; }
-      50.01%, 100% { opacity: 0; }
-    }
-  </style>
-  <rect width="800" height="400" fill="#272822" rx="10" ry="10"/>
-  <g class="content f40">
-    <text x="16" y="32" fill="#a6e22e" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="16" xml:space="preserve">$</text>
-    <text x="25.6" y="32" fill="#f8f8f2" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="16" xml:space="preserve"> npx chartscii-cli create $(seq 1 10)</text>
-    <text x="16" y="76.8" fill="#f8f8f2" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="16" xml:space="preserve">1  </text>
-    <text x="44.8" y="76.8" fill="#f8f8f2" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="16" xml:space="preserve">╢█████</text>
-    <text x="16" y="99.19999999999999" fill="#f8f8f2" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="16" xml:space="preserve">2  </text>
-    <text x="44.8" y="99.19999999999999" fill="#f8f8f2" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="16" xml:space="preserve">╢██████████</text>
-    <text x="16" y="121.6" fill="#f8f8f2" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="16" xml:space="preserve">3  </text>
-    <text x="44.8" y="121.6" fill="#f8f8f2" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="16" xml:space="preserve">╢███████████████</text>
-    <text x="16" y="144" fill="#f8f8f2" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="16" xml:space="preserve">4  </text>
-    <text x="44.8" y="144" fill="#f8f8f2" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="16" xml:space="preserve">╢████████████████████</text>
-    <text x="16" y="166.39999999999998" fill="#f8f8f2" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="16" xml:space="preserve">5  </text>
-    <text x="44.8" y="166.39999999999998" fill="#f8f8f2" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="16" xml:space="preserve">╢█████████████████████████</text>
-    <text x="16" y="188.79999999999998" fill="#f8f8f2" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="16" xml:space="preserve">6  </text>
-    <text x="44.8" y="188.79999999999998" fill="#f8f8f2" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="16" xml:space="preserve">╢██████████████████████████████</text>
-    <text x="16" y="211.2" fill="#f8f8f2" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="16" xml:space="preserve">7  </text>
-    <text x="44.8" y="211.2" fill="#f8f8f2" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="16" xml:space="preserve">╢███████████████████████████████████</text>
-    <text x="16" y="233.6" fill="#f8f8f2" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="16" xml:space="preserve">8  </text>
-    <text x="44.8" y="233.6" fill="#f8f8f2" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="16" xml:space="preserve">╢████████████████████████████████████████</text>
-    <text x="16" y="256" fill="#f8f8f2" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="16" xml:space="preserve">9  </text>
-    <text x="44.8" y="256" fill="#f8f8f2" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="16" xml:space="preserve">╢█████████████████████████████████████████████</text>
-    <text x="16" y="278.4" fill="#f8f8f2" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="16" xml:space="preserve">10 </text>
-    <text x="44.8" y="278.4" fill="#f8f8f2" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="16" xml:space="preserve">╢██████████████████████████████████████████████████</text>
-    <text x="16" y="300.79999999999995" fill="#f8f8f2" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="16" xml:space="preserve">   ╚══════════════════════════════════════════════════</text>
-    <text x="16" y="323.2" fill="#a6e22e" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="16" xml:space="preserve">$</text>
-    <text x="25.6" y="323.2" fill="#f8f8f2" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="16" xml:space="preserve"> </text>
-    <rect class="cursor f40" x="35.2" y="307.2" width="9.6" height="22.4" fill="#f8f8f2" opacity="0.7"/>
-  </g>
+
+<rect class="window-bg" x="0" y="0" width="800" height="400" fill="#272822" rx="0" ry="0"/>
+<g class="text-layer">
+<text class="text f10" x="16" y="16">$</text>
+<text class="text fg" x="25.6" y="16"> npx chartscii-cli create $(seq 1 10)                                          </text>
+<text class="text fg" x="16" y="60.8">1  ╢█████                                                                       </text>
+<text class="text fg" x="16" y="83.19999999999999">2  ╢██████████                                                                  </text>
+<text class="text fg" x="16" y="105.6">3  ╢███████████████                                                             </text>
+<text class="text fg" x="16" y="128">4  ╢████████████████████                                                        </text>
+<text class="text fg" x="16" y="150.39999999999998">5  ╢█████████████████████████                                                   </text>
+<text class="text fg" x="16" y="172.79999999999998">6  ╢██████████████████████████████                                              </text>
+<text class="text fg" x="16" y="195.2">7  ╢███████████████████████████████████                                         </text>
+<text class="text fg" x="16" y="217.6">8  ╢████████████████████████████████████████                                    </text>
+<text class="text fg" x="16" y="240">9  ╢█████████████████████████████████████████████                               </text>
+<text class="text fg" x="16" y="262.4">10 ╢██████████████████████████████████████████████████                          </text>
+<text class="text fg" x="16" y="284.79999999999995">   ╚══════════════════════════════════════════════════                          </text>
+<text class="text f10" x="16" y="329.59999999999997">$</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor" x="35.2" y="329.59999999999997" width="9.6" height="22.4" fill="#f8f8f2"/>
+</g>
 
     </g>
     <g id="frame-41">
       
-  <style>
-    .cursor {
-      animation: blink 1s step-end infinite;
-    }
-    .cursor-active {
-      /* No animation - solid cursor during typing/movement */
-    }
-    @keyframes blink {
-      0%, 50% { opacity: 1; }
-      50.01%, 100% { opacity: 0; }
-    }
-  </style>
-  <rect width="800" height="400" fill="#272822" rx="10" ry="10"/>
-  <g class="content f41">
-    <text x="16" y="32" fill="#a6e22e" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="16" xml:space="preserve">$</text>
-    <text x="25.6" y="32" fill="#f8f8f2" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="16" xml:space="preserve"> npx chartscii-cli create $(seq 1 10)</text>
-    <text x="16" y="76.8" fill="#f8f8f2" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="16" xml:space="preserve">1  </text>
-    <text x="44.8" y="76.8" fill="#f8f8f2" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="16" xml:space="preserve">╢█████</text>
-    <text x="16" y="99.19999999999999" fill="#f8f8f2" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="16" xml:space="preserve">2  </text>
-    <text x="44.8" y="99.19999999999999" fill="#f8f8f2" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="16" xml:space="preserve">╢██████████</text>
-    <text x="16" y="121.6" fill="#f8f8f2" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="16" xml:space="preserve">3  </text>
-    <text x="44.8" y="121.6" fill="#f8f8f2" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="16" xml:space="preserve">╢███████████████</text>
-    <text x="16" y="144" fill="#f8f8f2" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="16" xml:space="preserve">4  </text>
-    <text x="44.8" y="144" fill="#f8f8f2" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="16" xml:space="preserve">╢████████████████████</text>
-    <text x="16" y="166.39999999999998" fill="#f8f8f2" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="16" xml:space="preserve">5  </text>
-    <text x="44.8" y="166.39999999999998" fill="#f8f8f2" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="16" xml:space="preserve">╢█████████████████████████</text>
-    <text x="16" y="188.79999999999998" fill="#f8f8f2" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="16" xml:space="preserve">6  </text>
-    <text x="44.8" y="188.79999999999998" fill="#f8f8f2" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="16" xml:space="preserve">╢██████████████████████████████</text>
-    <text x="16" y="211.2" fill="#f8f8f2" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="16" xml:space="preserve">7  </text>
-    <text x="44.8" y="211.2" fill="#f8f8f2" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="16" xml:space="preserve">╢███████████████████████████████████</text>
-    <text x="16" y="233.6" fill="#f8f8f2" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="16" xml:space="preserve">8  </text>
-    <text x="44.8" y="233.6" fill="#f8f8f2" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="16" xml:space="preserve">╢████████████████████████████████████████</text>
-    <text x="16" y="256" fill="#f8f8f2" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="16" xml:space="preserve">9  </text>
-    <text x="44.8" y="256" fill="#f8f8f2" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="16" xml:space="preserve">╢█████████████████████████████████████████████</text>
-    <text x="16" y="278.4" fill="#f8f8f2" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="16" xml:space="preserve">10 </text>
-    <text x="44.8" y="278.4" fill="#f8f8f2" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="16" xml:space="preserve">╢██████████████████████████████████████████████████</text>
-    <text x="16" y="300.79999999999995" fill="#f8f8f2" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="16" xml:space="preserve">   ╚══════════════════════════════════════════════════</text>
-    <text x="16" y="323.2" fill="#a6e22e" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="16" xml:space="preserve">$</text>
-    <text x="25.6" y="323.2" fill="#f8f8f2" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="16" xml:space="preserve"> </text>
-  </g>
+
+<rect class="window-bg" x="0" y="0" width="800" height="400" fill="#272822" rx="0" ry="0"/>
+<g class="text-layer">
+<text class="text f10" x="16" y="16">$</text>
+<text class="text fg" x="25.6" y="16"> npx chartscii-cli create $(seq 1 10)                                          </text>
+<text class="text fg" x="16" y="60.8">1  ╢█████                                                                       </text>
+<text class="text fg" x="16" y="83.19999999999999">2  ╢██████████                                                                  </text>
+<text class="text fg" x="16" y="105.6">3  ╢███████████████                                                             </text>
+<text class="text fg" x="16" y="128">4  ╢████████████████████                                                        </text>
+<text class="text fg" x="16" y="150.39999999999998">5  ╢█████████████████████████                                                   </text>
+<text class="text fg" x="16" y="172.79999999999998">6  ╢██████████████████████████████                                              </text>
+<text class="text fg" x="16" y="195.2">7  ╢███████████████████████████████████                                         </text>
+<text class="text fg" x="16" y="217.6">8  ╢████████████████████████████████████████                                    </text>
+<text class="text fg" x="16" y="240">9  ╢█████████████████████████████████████████████                               </text>
+<text class="text fg" x="16" y="262.4">10 ╢██████████████████████████████████████████████████                          </text>
+<text class="text fg" x="16" y="284.79999999999995">   ╚══════════════════════════════════════════════════                          </text>
+<text class="text f10" x="16" y="329.59999999999997">$</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor" x="35.2" y="329.59999999999997" width="9.6" height="22.4" fill="#f8f8f2"/>
+</g>
 
     </g>
   </defs>

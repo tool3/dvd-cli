@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="400" viewBox="0 0 800 400">
+<style>
+.text {
+  font-family: 'SF Mono', 'Monaco', 'Menlo', 'Consolas', monospace;
+  font-size: 16px;
+  dominant-baseline: text-before-edge;
+  text-rendering: geometricPrecision;
+  white-space: pre;
+}
+.bold { font-weight: bold; }
+.italic { font-style: italic; }
+.uline { text-decoration: underline; }
+.strike { text-decoration: line-through; }
+.dim { opacity: 0.5; }
+.fg { fill: #c9d1d9; }
+.f0 { fill: #484f58; }
+.f1 { fill: #ff7b72; }
+.f2 { fill: #3fb950; }
+.f3 { fill: #d29922; }
+.f4 { fill: #58a6ff; }
+.f5 { fill: #bc8cff; }
+.f6 { fill: #39c5cf; }
+.f7 { fill: #b1bac4; }
+.f8 { fill: #6e7681; }
+.f9 { fill: #ffa198; }
+.f10 { fill: #56d364; }
+.f11 { fill: #e3b341; }
+.f12 { fill: #79c0ff; }
+.f13 { fill: #d2a8ff; }
+.f14 { fill: #56d4dd; }
+.f15 { fill: #f0f6fc; }
+.bg { fill: #0d1117; }
+.b0 { fill: #484f58; }
+.b1 { fill: #ff7b72; }
+.b2 { fill: #3fb950; }
+.b3 { fill: #d29922; }
+.b4 { fill: #58a6ff; }
+.b5 { fill: #bc8cff; }
+.b6 { fill: #39c5cf; }
+.b7 { fill: #b1bac4; }
+.b8 { fill: #6e7681; }
+.b9 { fill: #ffa198; }
+.b10 { fill: #56d364; }
+.b11 { fill: #e3b341; }
+.b12 { fill: #79c0ff; }
+.b13 { fill: #d2a8ff; }
+.b14 { fill: #56d4dd; }
+.b15 { fill: #f0f6fc; }
+.cursor { animation: blink 1s step-end infinite; }
+.cursor-active { opacity: 1; }
+@keyframes blink {
+  0%, 50% { opacity: 1; }
+  50.01%, 100% { opacity: 0; }
+}
+</style>
+<rect class="window-bg" x="0" y="0" width="800" height="400" fill="#0d1117" rx="8" ry="8"/>
+<g class="chrome"><rect class="header-bg" x="0" y="0" width="800" height="40" fill="#0d1117" rx="8" ry="8"/>
+<rect x="0" y="32" width="800" height="8" fill="#0d1117"/>
+<circle cx="22" cy="20" r="6" fill="#ff5f56"/>
+<circle cx="42" cy="20" r="6" fill="#ffbd2e"/>
+<circle cx="62" cy="20" r="6" fill="#27c93f"/></g>
+<g class="text-layer">
+<text class="text f2" x="16" y="56">$</text>
+<text class="text fg" x="25.6" y="56"> echo &apos;I am great developer&apos;                                                   </text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor" x="140.8" y="56" width="9.6" height="22.4" fill="#c9d1d9"/>
+</g>
+<text class="text dim" x="784" y="372.8" text-anchor="end" fill="#c9d1d9">[0;2mby talhayut[0m</text>
+</svg>

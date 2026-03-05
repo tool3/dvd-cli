@@ -55,42 +55,48 @@ function getSVGDimensions(svg: string): { width: number; height: number } {
 
 /**
  * Create CSS keyframes for animation
+ *
+ * Each frame should be visible from its timestamp until the next frame's timestamp.
+ * Frame visibility: [thisFrame.timestamp, nextFrame.timestamp)
+ *
+ * Uses exact percentage values to ensure seamless transitions between frames.
  */
 function createKeyframes(frames: TerminalFrame[]): string {
   if (frames.length === 0) return '';
 
   const totalDuration = frames[frames.length - 1].timestamp;
-  let css = '';
+  if (totalDuration === 0) return '';
 
-  frames.forEach((frame, i) => {
-    const startPercent = i === 0 ? 0 : (frames[i - 1].timestamp / totalDuration) * 100;
-    const endPercent = (frame.timestamp / totalDuration) * 100;
-    const nextPercent = i < frames.length - 1
-      ? (frames[i + 1].timestamp / totalDuration) * 100
-      : 100;
+  const css: string[] = [];
 
-    css += `
+  // Pre-calculate all frame percentages with consistent precision
+  const framePercents = frames.map(f => (f.timestamp / totalDuration) * 100);
+  framePercents.push(100); // End marker
+
+  for (let i = 0; i < frames.length; i++) {
+    const frameStart = framePercents[i];
+    const frameEnd = framePercents[i + 1];
+
+    // Use higher precision (4 decimal places) to avoid gaps
+    // Frame is invisible before its start, visible during its time, invisible after
+    if (i === 0) {
+      // First frame: visible from 0% to when second frame starts
+      css.push(`
     @keyframes frame-${i}-anim {
-      0% { opacity: 0; }
-      ${startPercent.toFixed(2)}% { opacity: 0; }
-      ${endPercent.toFixed(2)}% { opacity: 1; }
-      ${nextPercent.toFixed(2)}% { opacity: 1; }
-      ${(nextPercent + 0.01).toFixed(2)}% { opacity: 0; }
-      100% { opacity: 0; }
-    }`;
-  });
+      0%, ${frameEnd.toFixed(4)}% { opacity: 1; }
+      ${(frameEnd + 0.0001).toFixed(4)}%, 100% { opacity: 0; }
+    }`);
+    } else {
+      css.push(`
+    @keyframes frame-${i}-anim {
+      0%, ${(frameStart - 0.0001).toFixed(4)}% { opacity: 0; }
+      ${frameStart.toFixed(4)}%, ${frameEnd.toFixed(4)}% { opacity: 1; }
+      ${(frameEnd + 0.0001).toFixed(4)}%, 100% { opacity: 0; }
+    }`);
+    }
+  }
 
-  // First frame special case
-  const firstEnd = (frames[1]?.timestamp / totalDuration) * 100 || 100;
-  css = `
-    @keyframes frame-0-anim {
-      0% { opacity: 1; }
-      ${firstEnd.toFixed(2)}% { opacity: 1; }
-      ${(firstEnd + 0.01).toFixed(2)}% { opacity: 0; }
-      100% { opacity: 0; }
-    }` + css.substring(css.indexOf('@keyframes frame-1-anim'));
-
-  return css;
+  return css.join('');
 }
 
 /**

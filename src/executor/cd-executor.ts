@@ -222,19 +222,48 @@ export class CDExecutor {
       visibleCursorY = this.context.cursorY;
     }
 
+    // Calculate the maximum visible row that fits in the SVG
+    const lineHeight = this.context.fontSize * 1.4;
+    const padding = this.context.padding ?? 16;
+    const headerHeight = this.context.template === 'minimal' ? 0 : 40;
+    const contentStartY = headerHeight + padding;
+    const maxContentHeight = this.context.height - contentStartY - padding;
+    const maxVisibleRows = Math.floor(maxContentHeight / lineHeight);
+
+    // Clamp cursor to fit within SVG viewport
+    visibleCursorY = Math.max(0, Math.min(visibleCursorY, maxVisibleRows - 1));
+
     // Update VTerminal grid with current content
     const content = visibleBuffer.join('\n');
-    let grid = createGridState(this.context.grid.width, this.context.grid.height);
+
+    // Calculate grid dimensions - when not scrolling, expand to fit content
+    let gridWidth = this.context.grid.width;
+    let gridHeight = this.context.grid.height;
+
+    if (!this.context.scroll) {
+      // Expand grid to fit all content
+      const contentLines = visibleBuffer;
+      gridHeight = Math.max(gridHeight, contentLines.length + 1);
+
+      // Find max line length (without ANSI codes)
+      for (const line of contentLines) {
+        const lineLength = this.stripAnsi(line).length;
+        gridWidth = Math.max(gridWidth, lineLength + 1);
+      }
+    }
+
+    let grid = createGridState(gridWidth, gridHeight);
     grid = processInput(grid, content);
 
     // Coalesce grid to spans
     const rows = coalesce(grid, this.context.theme);
 
     // Generate SVG using the new emitter
+    // When showCursor is true, always render the cursor - the CSS blink animation handles visibility
     const { svg } = emit(
       rows,
       showCursor ? { row: visibleCursorY, col: adjustedCursorX } : null,
-      showCursor && (!this.context.cursorBlink || activeCursor),
+      showCursor,
       {
         theme: this.context.theme,
         template: this.context.template,
@@ -297,7 +326,11 @@ export class CDExecutor {
   }
 
   private stripAnsi(str: string): string {
-    return str.replace(/\x1b\[[0-9;]*m/g, '');
+    // Remove SGR (color) sequences and cursor control sequences
+    return str
+      .replace(/\x1b\[[0-9;]*m/g, '')           // SGR (colors)
+      .replace(/\x1b\[[0-9;]*[A-HJKSTfsu]/g, '') // Cursor movement (A-H, J, K, S, T, f, s, u)
+      .replace(/\x1b\[\?[0-9;]*[hl]/g, '');      // Mode control (show/hide cursor, etc.)
   }
 
   // ==========================================================================
@@ -758,8 +791,8 @@ export class CDExecutor {
       await this.executeCommand(cmd);
     }
 
-    // Capture final frame
-    this.captureFrame(false);
+    // Capture final frame with cursor visible (resting state)
+    this.captureFrame(true);
 
     // Auto-calculate dimensions and re-render if needed
     if (this.context.autoWidth || this.context.autoHeight) {
