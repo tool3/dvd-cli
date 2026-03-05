@@ -1049,7 +1049,8 @@ export class CDExecutor {
     const charWidth = this.context.fontSize * 0.6;
 
     if (this.context.autoWidth) {
-      this.context.width = Math.ceil(padding + this.context.maxLineLength * charWidth + padding);
+      // Add 1 extra character for cursor at end of line
+      this.context.width = Math.ceil(padding + (this.context.maxLineLength + 1) * charWidth + padding);
       if (this.context.width < 200) this.context.width = 200;
     }
 
