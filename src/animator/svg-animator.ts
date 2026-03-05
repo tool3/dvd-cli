@@ -68,6 +68,14 @@ function getBackgroundColor(svg: string): string {
 }
 
 /**
+ * Get border radius from first frame
+ */
+function getBorderRadius(svg: string): number {
+  const rxMatch = svg.match(/class="window-bg"[^>]*rx="(\d+)"/);
+  return rxMatch ? parseInt(rxMatch[1], 10) : 0;
+}
+
+/**
  * Create animated SVG from frames using SMIL animations
  */
 export async function createAnimatedSVG(
@@ -78,9 +86,10 @@ export async function createAnimatedSVG(
     throw new Error('No frames to animate');
   }
 
-  // Get dimensions and background from first frame
+  // Get dimensions, background, and border radius from first frame
   const { width, height } = getSVGDimensions(frames[0].svg);
   const bgColor = getBackgroundColor(frames[0].svg);
+  const borderRadius = getBorderRadius(frames[0].svg);
 
   // Calculate duration in seconds
   const totalDuration = frames[frames.length - 1].timestamp;
@@ -175,16 +184,27 @@ export async function createAnimatedSVG(
   }
 
   // Build animated SVG with persistent background
+  // Use clip-path for rounded corners to make corners truly transparent
+  const clipPathDef = borderRadius > 0
+    ? `<defs><clipPath id="rounded-corners"><rect x="0" y="0" width="${width}" height="${height}" rx="${borderRadius}" ry="${borderRadius}"/></clipPath></defs>`
+    : '';
+  const clipStart = borderRadius > 0 ? `<g clip-path="url(#rounded-corners)">` : '';
+  const clipEnd = borderRadius > 0 ? '</g>' : '';
+  const bgRx = borderRadius > 0 ? ` rx="${borderRadius}" ry="${borderRadius}"` : '';
+
   const svg = `<svg width="${width}" height="${height}" xmlns="http://www.w3.org/2000/svg">
+  ${clipPathDef}
   <style>
     ${baseStyles}
   </style>
 
+  ${clipStart}
   <!-- Persistent background - never animated -->
-  <rect width="100%" height="100%" fill="${bgColor}" />
+  <rect width="100%" height="100%" fill="${bgColor}"${bgRx} />
 
   <!-- Animated frames with discrete visibility transitions -->
   ${frameAnimations.join('\n')}
+  ${clipEnd}
 </svg>`;
 
   return svg;
