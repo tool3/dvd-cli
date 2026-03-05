@@ -14,7 +14,7 @@ import { createGridState, processInput } from '../pipeline/vterminal';
 import { coalesce } from '../pipeline/coalescer';
 import { emit, type FrameData } from '../pipeline/svg-emitter';
 import { themes as pipelineThemes } from '../pipeline';
-import { themes as shellfieThemes } from 'shellfie';
+import { themes as shellfieThemes, shellfie, type shellfieOptions, type Theme as ShellfieTheme } from 'shellfie';
 
 // ============================================================================
 // Types
@@ -195,14 +195,12 @@ export class CDExecutor {
     buffer[this.context.cursorY] = displayLine;
 
     // Calculate layout constants
-    const charWidth = this.context.fontSize * 0.6;
     const lineHeight = this.context.fontSize * 1.4;
     const padding = this.context.padding ?? 16;
     const headerHeight = this.context.template === 'minimal' ? 0 : 40;
     const contentStartY = headerHeight + padding;
     const maxContentHeight = this.context.height - contentStartY - padding;
     const maxVisibleRows = Math.floor(maxContentHeight / lineHeight);
-    const visibleCols = Math.floor((this.context.width - padding * 2) / charWidth);
 
     // Track max dimensions for auto-sizing
     if (!this.context.scroll && (this.context.autoWidth || this.context.autoHeight)) {
@@ -242,15 +240,9 @@ export class CDExecutor {
       visibleCursorY = this.context.cursorY;
     }
 
-    // Handle cursor wrapping when text exceeds visible columns
-    // Calculate how many visual rows the cursor has wrapped down
-    const cursorWrapRows = Math.floor(adjustedCursorX / visibleCols);
-    const wrappedCursorX = adjustedCursorX % visibleCols;
-    const wrappedCursorY = visibleCursorY + cursorWrapRows;
-
-    // Clamp cursor to fit within SVG viewport
-    const finalCursorY = Math.max(0, Math.min(wrappedCursorY, maxVisibleRows - 1));
-    const finalCursorX = wrappedCursorX;
+    // Clamp cursor Y to fit within SVG viewport (cursor X can extend beyond if auto-width)
+    const finalCursorY = Math.max(0, Math.min(visibleCursorY, maxVisibleRows - 1));
+    const finalCursorX = adjustedCursorX;
 
     // Update VTerminal grid with current content
     const content = visibleBuffer.join('\n');
@@ -587,11 +579,58 @@ export class CDExecutor {
       this.context.screenshotCounter++;
     }
 
-    // Get current frame SVG
-    const lastFrame = this.context.frames[this.context.frames.length - 1];
-    if (lastFrame) {
-      writeFileSync(resolve(screenshotPath), lastFrame.svg, 'utf-8');
+    // Build current terminal content
+    const buffer = [...this.context.lines];
+    const displayLine = this.context.isExecutingCommand
+      ? this.context.currentLine
+      : this.context.promptPrefix + this.context.currentLine;
+    buffer[this.context.cursorY] = displayLine;
+    const content = buffer.filter((line) => line !== undefined).join('\n');
+
+    // Convert our theme to shellfie theme format
+    const shellfieTheme: ShellfieTheme = {
+      name: this.context.theme.name,
+      background: this.context.theme.background,
+      foreground: this.context.theme.foreground,
+      cursor: this.context.theme.cursor ?? this.context.theme.foreground,
+      selection: this.context.theme.selection ?? '#44475a',
+      black: this.context.theme.black,
+      red: this.context.theme.red,
+      green: this.context.theme.green,
+      yellow: this.context.theme.yellow,
+      blue: this.context.theme.blue,
+      magenta: this.context.theme.magenta,
+      cyan: this.context.theme.cyan,
+      white: this.context.theme.white,
+      brightBlack: this.context.theme.brightBlack,
+      brightRed: this.context.theme.brightRed,
+      brightGreen: this.context.theme.brightGreen,
+      brightYellow: this.context.theme.brightYellow,
+      brightBlue: this.context.theme.brightBlue,
+      brightMagenta: this.context.theme.brightMagenta,
+      brightCyan: this.context.theme.brightCyan,
+      brightWhite: this.context.theme.brightWhite,
+    };
+
+    // Build shellfie options
+    const options: shellfieOptions = {
+      template: this.context.template as 'macos' | 'windows' | 'minimal',
+      title: this.context.title,
+      theme: shellfieTheme,
+      fontSize: this.context.fontSize,
+      width: this.context.width,
+      height: this.context.height,
+      watermark: this.context.watermark,
+      embedFont: true,
+    };
+
+    if (this.context.headerBackground) {
+      options.header = { backgroundColor: this.context.headerBackground };
     }
+
+    // Generate static SVG using shellfie
+    const svg = shellfie(content, options);
+    writeFileSync(resolve(screenshotPath), svg, 'utf-8');
   }
 
   // ==========================================================================
