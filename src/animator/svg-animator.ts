@@ -12,25 +12,30 @@ export interface AnimationOptions {
 }
 
 /**
- * Extract SVG body content (everything inside <svg>)
- * Optionally strip <style> blocks to avoid duplication
+ * Extract style block from SVG
  */
-function extractSVGBody(svg: string, frameId: string, stripStyles: boolean = false): string {
+function extractStyleBlock(svg: string): string {
+  const styleMatch = svg.match(/<style>([\s\S]*?)<\/style>/);
+  return styleMatch ? styleMatch[1] : '';
+}
+
+/**
+ * Extract SVG body content (everything inside <svg>)
+ * Always strips <style> blocks since they're handled separately
+ */
+function extractSVGBody(svg: string, frameId: string): string {
   const contentMatch = svg.match(/<svg[^>]*>([\s\S]*)<\/svg>/);
   if (!contentMatch) return '';
 
   let content = contentMatch[1];
 
-  // Strip style blocks if requested (to avoid duplication across frames)
-  if (stripStyles) {
-    content = content.replace(/<style>[\s\S]*?<\/style>/g, '');
-  }
+  // Strip style blocks (handled separately to avoid duplication)
+  content = content.replace(/<style>[\s\S]*?<\/style>/g, '');
 
-  // Make IDs unique
+  // Make IDs unique (but don't modify classes - they contain color definitions)
   content = content
     .replace(/id="([^"]*)"/g, `id="$1-${frameId}"`)
-    .replace(/url\(#([^)]*)\)/g, `url(#$1-${frameId})`)
-    .replace(/class="([^"]*)"/g, `class="$1 ${frameId}"`);
+    .replace(/url\(#([^)]*)\)/g, `url(#$1-${frameId})`);
 
   return content;
 }
@@ -111,15 +116,22 @@ export async function createAnimatedSVG(
   // Create keyframes
   const keyframes = createKeyframes(frames);
 
-  // Extract frame contents - strip styles from all frames since we use shared keyframes
+  // Extract base stylesheet from first frame (contains color definitions, font styles, etc.)
+  const baseStyles = extractStyleBlock(frames[0].svg);
+
+  // Extract frame contents - styles are handled separately
   const frameBodies = frames.map((frame, i) => ({
     id: `frame-${i}`,
-    content: extractSVGBody(frame.svg, `f${i}`, true), // Strip duplicate <style> blocks
+    content: extractSVGBody(frame.svg, `f${i}`),
   }));
 
   // Build animated SVG
   const svg = `<svg width="${width}" height="${height}" xmlns="http://www.w3.org/2000/svg">
   <style>
+    /* Base styles from first frame */
+    ${baseStyles}
+
+    /* Animation keyframes */
     ${keyframes}
 
     .frame {
@@ -133,18 +145,6 @@ export async function createAnimatedSVG(
     .frame-${i} {
       animation-name: frame-${i}-anim;
     }`).join('')}
-
-    /* Cursor blink animation (shared across all frames) */
-    .cursor {
-      animation: blink 1s step-end infinite;
-    }
-    .cursor-active {
-      /* No animation - solid cursor during typing/movement */
-    }
-    @keyframes blink {
-      0%, 50% { opacity: 1; }
-      50.01%, 100% { opacity: 0; }
-    }
   </style>
 
   <defs>
