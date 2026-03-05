@@ -75,8 +75,8 @@
     <animate
       attributeName="visibility"
       values="visible;hidden;hidden"
-      keyTimes="0.000000;0.006887;1.000000"
-      dur="8.13s"
+      keyTimes="0.000000;0.006772;1.000000"
+      dur="8.12s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -98,8 +98,8 @@
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.006887;0.013282;1.000000"
-      dur="8.13s"
+      keyTimes="0.000000;0.006772;0.013297;1.000000"
+      dur="8.12s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -121,8 +121,8 @@
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.013282;0.019678;1.000000"
-      dur="8.13s"
+      keyTimes="0.000000;0.013297;0.019823;1.000000"
+      dur="8.12s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -144,8 +144,8 @@
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.019678;0.025950;1.000000"
-      dur="8.13s"
+      keyTimes="0.000000;0.019823;0.026471;1.000000"
+      dur="8.12s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -167,8 +167,8 @@
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.025950;0.032591;1.000000"
-      dur="8.13s"
+      keyTimes="0.000000;0.026471;0.033243;1.000000"
+      dur="8.12s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -190,8 +190,8 @@
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.032591;0.039479;1.000000"
-      dur="8.13s"
+      keyTimes="0.000000;0.033243;0.039892;1.000000"
+      dur="8.12s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -213,8 +213,8 @@
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.039479;0.045997;1.000000"
-      dur="8.13s"
+      keyTimes="0.000000;0.039892;0.046910;1.000000"
+      dur="8.12s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -236,8 +236,8 @@
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.045997;0.052638;1.000000"
-      dur="8.13s"
+      keyTimes="0.000000;0.046910;0.053804;1.000000"
+      dur="8.12s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -259,8 +259,8 @@
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.052638;0.089903;1.000000"
-      dur="8.13s"
+      keyTimes="0.000000;0.053804;0.091480;1.000000"
+      dur="8.12s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -282,8 +282,8 @@
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.089903;0.102447;1.000000"
-      dur="8.13s"
+      keyTimes="0.000000;0.091480;0.104654;1.000000"
+      dur="8.12s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -302,8 +302,8 @@
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.102447;0.131349;1.000000"
-      dur="8.13s"
+      keyTimes="0.000000;0.104654;0.118567;1.000000"
+      dur="8.12s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -324,8 +324,8 @@
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.131349;0.148690;1.000000"
-      dur="8.13s"
+      keyTimes="0.000000;0.118567;0.136296;1.000000"
+      dur="8.12s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -336,29 +336,18 @@
     
 
 <rect class="window-bg" x="0" y="0" width="788" height="424" fill="#282a36" rx="8" ry="8"/>
-<g class="bg-layer">
-<rect x="16" y="133.6" width="42" height="19.599999999999998" fill="#8be9fd"/>
-</g>
 <g class="text-layer">
 <text class="text f13" x="16" y="16">❯</text>
 <text class="text fg" x="24.4" y="16"> npm test                                                                                 </text>
 <text class="text fg" x="16" y="55.199999999999996">&gt; dvd-cli@1.0.0 test                                                                       </text>
 <text class="text fg" x="16" y="74.8">&gt; vitest run                                                                               </text>
-<text class="text bold fg" x="16" y="133.6"> RUN </text>
-<text class="text f6" x="66.4" y="133.6">v4.0.18 </text>
-<text class="text f8" x="133.60000000000002" y="133.6">/Users/talhayut/projects/dvd</text>
-<text class="text f2" x="24.4" y="172.79999999999998">✓</text>
-<text class="text fg" x="32.8" y="172.79999999999998"> src/parser/cd-parser.test.ts </text>
-<text class="text dim fg" x="284.8" y="172.79999999999998">(33 tests)</text>
-<text class="text f2" x="368.8" y="172.79999999999998"> 4</text>
-<text class="text dim f2" x="385.6" y="172.79999999999998">ms</text>
 </g>
 
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.148690;0.172672;1.000000"
-      dur="8.13s"
+      keyTimes="0.000000;0.136296;0.153657;1.000000"
+      dur="8.12s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -385,38 +374,13 @@
 <text class="text dim fg" x="284.8" y="172.79999999999998">(33 tests)</text>
 <text class="text f2" x="368.8" y="172.79999999999998"> 4</text>
 <text class="text dim f2" x="385.6" y="172.79999999999998">ms</text>
-<text class="text f2" x="24.4" y="192.39999999999998">✓</text>
-<text class="text fg" x="32.8" y="192.39999999999998"> src/pipeline/vterminal.test.ts </text>
-<text class="text dim fg" x="301.6" y="192.39999999999998">(23 tests)</text>
-<text class="text f2" x="385.6" y="192.39999999999998"> 12</text>
-<text class="text dim f2" x="410.8" y="192.39999999999998">ms</text>
-<text class="text f2" x="24.4" y="211.99999999999997">✓</text>
-<text class="text fg" x="32.8" y="211.99999999999997"> src/pipeline/coalescer.test.ts </text>
-<text class="text dim fg" x="301.6" y="211.99999999999997">(14 tests)</text>
-<text class="text f2" x="385.6" y="211.99999999999997"> 10</text>
-<text class="text dim f2" x="410.8" y="211.99999999999997">ms</text>
-<text class="text dim fg" x="16" y="251.2"> Test Files </text>
-<text class="text bold f2" x="125.2" y="251.2">3 passed</text>
-<text class="text f8" x="192.4" y="251.2"> (3)</text>
-<text class="text dim fg" x="16" y="270.79999999999995">      Tests </text>
-<text class="text bold f2" x="125.2" y="270.79999999999995">70 passed</text>
-<text class="text f8" x="200.8" y="270.79999999999995"> (70)</text>
-<text class="text dim fg" x="16" y="290.4">   Start at </text>
-<text class="text fg" x="116.80000000000001" y="290.4"> 12:38:28                                                                      </text>
-<text class="text dim fg" x="16" y="309.99999999999994">   Duration </text>
-<text class="text fg" x="116.80000000000001" y="309.99999999999994"> 173ms</text>
-<text class="text dim fg" x="167.20000000000002" y="309.99999999999994"> (transform 215ms, setup 0ms, import 246ms, tests 26ms, environment 0ms)</text>
-<text class="text f13" x="16" y="349.2">❯</text>
-</g>
-<g class="cursor-layer">
-<rect class="cursor" x="32.8" y="349.2" width="8.4" height="19.599999999999998" fill="#f8f8f2"/>
 </g>
 
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.172672;0.299348;1.000000"
-      dur="8.13s"
+      keyTimes="0.000000;0.153657;0.178035;1.000000"
+      dur="8.12s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -446,8 +410,8 @@
 <text class="text f2" x="24.4" y="192.39999999999998">✓</text>
 <text class="text fg" x="32.8" y="192.39999999999998"> src/pipeline/vterminal.test.ts </text>
 <text class="text dim fg" x="301.6" y="192.39999999999998">(23 tests)</text>
-<text class="text f2" x="385.6" y="192.39999999999998"> 12</text>
-<text class="text dim f2" x="410.8" y="192.39999999999998">ms</text>
+<text class="text f2" x="385.6" y="192.39999999999998"> 9</text>
+<text class="text dim f2" x="402.40000000000003" y="192.39999999999998">ms</text>
 <text class="text f2" x="24.4" y="211.99999999999997">✓</text>
 <text class="text fg" x="32.8" y="211.99999999999997"> src/pipeline/coalescer.test.ts </text>
 <text class="text dim fg" x="301.6" y="211.99999999999997">(14 tests)</text>
@@ -460,10 +424,10 @@
 <text class="text bold f2" x="125.2" y="270.79999999999995">70 passed</text>
 <text class="text f8" x="200.8" y="270.79999999999995"> (70)</text>
 <text class="text dim fg" x="16" y="290.4">   Start at </text>
-<text class="text fg" x="116.80000000000001" y="290.4"> 12:38:28                                                                      </text>
+<text class="text fg" x="116.80000000000001" y="290.4"> 13:30:45                                                                      </text>
 <text class="text dim fg" x="16" y="309.99999999999994">   Duration </text>
-<text class="text fg" x="116.80000000000001" y="309.99999999999994"> 173ms</text>
-<text class="text dim fg" x="167.20000000000002" y="309.99999999999994"> (transform 215ms, setup 0ms, import 246ms, tests 26ms, environment 0ms)</text>
+<text class="text fg" x="116.80000000000001" y="309.99999999999994"> 175ms</text>
+<text class="text dim fg" x="167.20000000000002" y="309.99999999999994"> (transform 214ms, setup 0ms, import 244ms, tests 24ms, environment 0ms)</text>
 <text class="text f13" x="16" y="349.2">❯</text>
 </g>
 <g class="cursor-layer">
@@ -473,8 +437,8 @@
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.299348;0.308326;1.000000"
-      dur="8.13s"
+      keyTimes="0.000000;0.178035;0.303127;1.000000"
+      dur="8.12s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -504,8 +468,8 @@
 <text class="text f2" x="24.4" y="192.39999999999998">✓</text>
 <text class="text fg" x="32.8" y="192.39999999999998"> src/pipeline/vterminal.test.ts </text>
 <text class="text dim fg" x="301.6" y="192.39999999999998">(23 tests)</text>
-<text class="text f2" x="385.6" y="192.39999999999998"> 12</text>
-<text class="text dim f2" x="410.8" y="192.39999999999998">ms</text>
+<text class="text f2" x="385.6" y="192.39999999999998"> 9</text>
+<text class="text dim f2" x="402.40000000000003" y="192.39999999999998">ms</text>
 <text class="text f2" x="24.4" y="211.99999999999997">✓</text>
 <text class="text fg" x="32.8" y="211.99999999999997"> src/pipeline/coalescer.test.ts </text>
 <text class="text dim fg" x="301.6" y="211.99999999999997">(14 tests)</text>
@@ -518,22 +482,21 @@
 <text class="text bold f2" x="125.2" y="270.79999999999995">70 passed</text>
 <text class="text f8" x="200.8" y="270.79999999999995"> (70)</text>
 <text class="text dim fg" x="16" y="290.4">   Start at </text>
-<text class="text fg" x="116.80000000000001" y="290.4"> 12:38:28                                                                      </text>
+<text class="text fg" x="116.80000000000001" y="290.4"> 13:30:45                                                                      </text>
 <text class="text dim fg" x="16" y="309.99999999999994">   Duration </text>
-<text class="text fg" x="116.80000000000001" y="309.99999999999994"> 173ms</text>
-<text class="text dim fg" x="167.20000000000002" y="309.99999999999994"> (transform 215ms, setup 0ms, import 246ms, tests 26ms, environment 0ms)</text>
+<text class="text fg" x="116.80000000000001" y="309.99999999999994"> 175ms</text>
+<text class="text dim fg" x="167.20000000000002" y="309.99999999999994"> (transform 214ms, setup 0ms, import 244ms, tests 24ms, environment 0ms)</text>
 <text class="text f13" x="16" y="349.2">❯</text>
-<text class="text fg" x="24.4" y="349.2"> e                                                                                        </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor" x="41.2" y="349.2" width="8.4" height="19.599999999999998" fill="#f8f8f2"/>
+<rect class="cursor" x="32.8" y="349.2" width="8.4" height="19.599999999999998" fill="#f8f8f2"/>
 </g>
 
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.308326;0.316689;1.000000"
-      dur="8.13s"
+      keyTimes="0.000000;0.303127;0.311377;1.000000"
+      dur="8.12s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -563,8 +526,8 @@
 <text class="text f2" x="24.4" y="192.39999999999998">✓</text>
 <text class="text fg" x="32.8" y="192.39999999999998"> src/pipeline/vterminal.test.ts </text>
 <text class="text dim fg" x="301.6" y="192.39999999999998">(23 tests)</text>
-<text class="text f2" x="385.6" y="192.39999999999998"> 12</text>
-<text class="text dim f2" x="410.8" y="192.39999999999998">ms</text>
+<text class="text f2" x="385.6" y="192.39999999999998"> 9</text>
+<text class="text dim f2" x="402.40000000000003" y="192.39999999999998">ms</text>
 <text class="text f2" x="24.4" y="211.99999999999997">✓</text>
 <text class="text fg" x="32.8" y="211.99999999999997"> src/pipeline/coalescer.test.ts </text>
 <text class="text dim fg" x="301.6" y="211.99999999999997">(14 tests)</text>
@@ -577,22 +540,22 @@
 <text class="text bold f2" x="125.2" y="270.79999999999995">70 passed</text>
 <text class="text f8" x="200.8" y="270.79999999999995"> (70)</text>
 <text class="text dim fg" x="16" y="290.4">   Start at </text>
-<text class="text fg" x="116.80000000000001" y="290.4"> 12:38:28                                                                      </text>
+<text class="text fg" x="116.80000000000001" y="290.4"> 13:30:45                                                                      </text>
 <text class="text dim fg" x="16" y="309.99999999999994">   Duration </text>
-<text class="text fg" x="116.80000000000001" y="309.99999999999994"> 173ms</text>
-<text class="text dim fg" x="167.20000000000002" y="309.99999999999994"> (transform 215ms, setup 0ms, import 246ms, tests 26ms, environment 0ms)</text>
+<text class="text fg" x="116.80000000000001" y="309.99999999999994"> 175ms</text>
+<text class="text dim fg" x="167.20000000000002" y="309.99999999999994"> (transform 214ms, setup 0ms, import 244ms, tests 24ms, environment 0ms)</text>
 <text class="text f13" x="16" y="349.2">❯</text>
-<text class="text fg" x="24.4" y="349.2"> ec                                                                                       </text>
+<text class="text fg" x="24.4" y="349.2"> e                                                                                        </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor" x="49.6" y="349.2" width="8.4" height="19.599999999999998" fill="#f8f8f2"/>
+<rect class="cursor" x="41.2" y="349.2" width="8.4" height="19.599999999999998" fill="#f8f8f2"/>
 </g>
 
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.316689;0.325052;1.000000"
-      dur="8.13s"
+      keyTimes="0.000000;0.311377;0.319749;1.000000"
+      dur="8.12s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -622,8 +585,8 @@
 <text class="text f2" x="24.4" y="192.39999999999998">✓</text>
 <text class="text fg" x="32.8" y="192.39999999999998"> src/pipeline/vterminal.test.ts </text>
 <text class="text dim fg" x="301.6" y="192.39999999999998">(23 tests)</text>
-<text class="text f2" x="385.6" y="192.39999999999998"> 12</text>
-<text class="text dim f2" x="410.8" y="192.39999999999998">ms</text>
+<text class="text f2" x="385.6" y="192.39999999999998"> 9</text>
+<text class="text dim f2" x="402.40000000000003" y="192.39999999999998">ms</text>
 <text class="text f2" x="24.4" y="211.99999999999997">✓</text>
 <text class="text fg" x="32.8" y="211.99999999999997"> src/pipeline/coalescer.test.ts </text>
 <text class="text dim fg" x="301.6" y="211.99999999999997">(14 tests)</text>
@@ -636,22 +599,22 @@
 <text class="text bold f2" x="125.2" y="270.79999999999995">70 passed</text>
 <text class="text f8" x="200.8" y="270.79999999999995"> (70)</text>
 <text class="text dim fg" x="16" y="290.4">   Start at </text>
-<text class="text fg" x="116.80000000000001" y="290.4"> 12:38:28                                                                      </text>
+<text class="text fg" x="116.80000000000001" y="290.4"> 13:30:45                                                                      </text>
 <text class="text dim fg" x="16" y="309.99999999999994">   Duration </text>
-<text class="text fg" x="116.80000000000001" y="309.99999999999994"> 173ms</text>
-<text class="text dim fg" x="167.20000000000002" y="309.99999999999994"> (transform 215ms, setup 0ms, import 246ms, tests 26ms, environment 0ms)</text>
+<text class="text fg" x="116.80000000000001" y="309.99999999999994"> 175ms</text>
+<text class="text dim fg" x="167.20000000000002" y="309.99999999999994"> (transform 214ms, setup 0ms, import 244ms, tests 24ms, environment 0ms)</text>
 <text class="text f13" x="16" y="349.2">❯</text>
-<text class="text fg" x="24.4" y="349.2"> ech                                                                                      </text>
+<text class="text fg" x="24.4" y="349.2"> ec                                                                                       </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor" x="58" y="349.2" width="8.4" height="19.599999999999998" fill="#f8f8f2"/>
+<rect class="cursor" x="49.6" y="349.2" width="8.4" height="19.599999999999998" fill="#f8f8f2"/>
 </g>
 
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.325052;0.333538;1.000000"
-      dur="8.13s"
+      keyTimes="0.000000;0.319749;0.328121;1.000000"
+      dur="8.12s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -681,8 +644,8 @@
 <text class="text f2" x="24.4" y="192.39999999999998">✓</text>
 <text class="text fg" x="32.8" y="192.39999999999998"> src/pipeline/vterminal.test.ts </text>
 <text class="text dim fg" x="301.6" y="192.39999999999998">(23 tests)</text>
-<text class="text f2" x="385.6" y="192.39999999999998"> 12</text>
-<text class="text dim f2" x="410.8" y="192.39999999999998">ms</text>
+<text class="text f2" x="385.6" y="192.39999999999998"> 9</text>
+<text class="text dim f2" x="402.40000000000003" y="192.39999999999998">ms</text>
 <text class="text f2" x="24.4" y="211.99999999999997">✓</text>
 <text class="text fg" x="32.8" y="211.99999999999997"> src/pipeline/coalescer.test.ts </text>
 <text class="text dim fg" x="301.6" y="211.99999999999997">(14 tests)</text>
@@ -695,22 +658,22 @@
 <text class="text bold f2" x="125.2" y="270.79999999999995">70 passed</text>
 <text class="text f8" x="200.8" y="270.79999999999995"> (70)</text>
 <text class="text dim fg" x="16" y="290.4">   Start at </text>
-<text class="text fg" x="116.80000000000001" y="290.4"> 12:38:28                                                                      </text>
+<text class="text fg" x="116.80000000000001" y="290.4"> 13:30:45                                                                      </text>
 <text class="text dim fg" x="16" y="309.99999999999994">   Duration </text>
-<text class="text fg" x="116.80000000000001" y="309.99999999999994"> 173ms</text>
-<text class="text dim fg" x="167.20000000000002" y="309.99999999999994"> (transform 215ms, setup 0ms, import 246ms, tests 26ms, environment 0ms)</text>
+<text class="text fg" x="116.80000000000001" y="309.99999999999994"> 175ms</text>
+<text class="text dim fg" x="167.20000000000002" y="309.99999999999994"> (transform 214ms, setup 0ms, import 244ms, tests 24ms, environment 0ms)</text>
 <text class="text f13" x="16" y="349.2">❯</text>
-<text class="text fg" x="24.4" y="349.2"> echo                                                                                     </text>
+<text class="text fg" x="24.4" y="349.2"> ech                                                                                      </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor" x="66.4" y="349.2" width="8.4" height="19.599999999999998" fill="#f8f8f2"/>
+<rect class="cursor" x="58" y="349.2" width="8.4" height="19.599999999999998" fill="#f8f8f2"/>
 </g>
 
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.333538;0.342147;1.000000"
-      dur="8.13s"
+      keyTimes="0.000000;0.328121;0.336493;1.000000"
+      dur="8.12s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -740,8 +703,8 @@
 <text class="text f2" x="24.4" y="192.39999999999998">✓</text>
 <text class="text fg" x="32.8" y="192.39999999999998"> src/pipeline/vterminal.test.ts </text>
 <text class="text dim fg" x="301.6" y="192.39999999999998">(23 tests)</text>
-<text class="text f2" x="385.6" y="192.39999999999998"> 12</text>
-<text class="text dim f2" x="410.8" y="192.39999999999998">ms</text>
+<text class="text f2" x="385.6" y="192.39999999999998"> 9</text>
+<text class="text dim f2" x="402.40000000000003" y="192.39999999999998">ms</text>
 <text class="text f2" x="24.4" y="211.99999999999997">✓</text>
 <text class="text fg" x="32.8" y="211.99999999999997"> src/pipeline/coalescer.test.ts </text>
 <text class="text dim fg" x="301.6" y="211.99999999999997">(14 tests)</text>
@@ -754,22 +717,22 @@
 <text class="text bold f2" x="125.2" y="270.79999999999995">70 passed</text>
 <text class="text f8" x="200.8" y="270.79999999999995"> (70)</text>
 <text class="text dim fg" x="16" y="290.4">   Start at </text>
-<text class="text fg" x="116.80000000000001" y="290.4"> 12:38:28                                                                      </text>
+<text class="text fg" x="116.80000000000001" y="290.4"> 13:30:45                                                                      </text>
 <text class="text dim fg" x="16" y="309.99999999999994">   Duration </text>
-<text class="text fg" x="116.80000000000001" y="309.99999999999994"> 173ms</text>
-<text class="text dim fg" x="167.20000000000002" y="309.99999999999994"> (transform 215ms, setup 0ms, import 246ms, tests 26ms, environment 0ms)</text>
+<text class="text fg" x="116.80000000000001" y="309.99999999999994"> 175ms</text>
+<text class="text dim fg" x="167.20000000000002" y="309.99999999999994"> (transform 214ms, setup 0ms, import 244ms, tests 24ms, environment 0ms)</text>
 <text class="text f13" x="16" y="349.2">❯</text>
 <text class="text fg" x="24.4" y="349.2"> echo                                                                                     </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor" x="74.80000000000001" y="349.2" width="8.4" height="19.599999999999998" fill="#f8f8f2"/>
+<rect class="cursor" x="66.4" y="349.2" width="8.4" height="19.599999999999998" fill="#f8f8f2"/>
 </g>
 
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.342147;0.350756;1.000000"
-      dur="8.13s"
+      keyTimes="0.000000;0.336493;0.344620;1.000000"
+      dur="8.12s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -799,8 +762,8 @@
 <text class="text f2" x="24.4" y="192.39999999999998">✓</text>
 <text class="text fg" x="32.8" y="192.39999999999998"> src/pipeline/vterminal.test.ts </text>
 <text class="text dim fg" x="301.6" y="192.39999999999998">(23 tests)</text>
-<text class="text f2" x="385.6" y="192.39999999999998"> 12</text>
-<text class="text dim f2" x="410.8" y="192.39999999999998">ms</text>
+<text class="text f2" x="385.6" y="192.39999999999998"> 9</text>
+<text class="text dim f2" x="402.40000000000003" y="192.39999999999998">ms</text>
 <text class="text f2" x="24.4" y="211.99999999999997">✓</text>
 <text class="text fg" x="32.8" y="211.99999999999997"> src/pipeline/coalescer.test.ts </text>
 <text class="text dim fg" x="301.6" y="211.99999999999997">(14 tests)</text>
@@ -813,22 +776,22 @@
 <text class="text bold f2" x="125.2" y="270.79999999999995">70 passed</text>
 <text class="text f8" x="200.8" y="270.79999999999995"> (70)</text>
 <text class="text dim fg" x="16" y="290.4">   Start at </text>
-<text class="text fg" x="116.80000000000001" y="290.4"> 12:38:28                                                                      </text>
+<text class="text fg" x="116.80000000000001" y="290.4"> 13:30:45                                                                      </text>
 <text class="text dim fg" x="16" y="309.99999999999994">   Duration </text>
-<text class="text fg" x="116.80000000000001" y="309.99999999999994"> 173ms</text>
-<text class="text dim fg" x="167.20000000000002" y="309.99999999999994"> (transform 215ms, setup 0ms, import 246ms, tests 26ms, environment 0ms)</text>
+<text class="text fg" x="116.80000000000001" y="309.99999999999994"> 175ms</text>
+<text class="text dim fg" x="167.20000000000002" y="309.99999999999994"> (transform 214ms, setup 0ms, import 244ms, tests 24ms, environment 0ms)</text>
 <text class="text f13" x="16" y="349.2">❯</text>
-<text class="text fg" x="24.4" y="349.2"> echo &apos;                                                                                   </text>
+<text class="text fg" x="24.4" y="349.2"> echo                                                                                     </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor" x="83.2" y="349.2" width="8.4" height="19.599999999999998" fill="#f8f8f2"/>
+<rect class="cursor" x="74.80000000000001" y="349.2" width="8.4" height="19.599999999999998" fill="#f8f8f2"/>
 </g>
 
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.350756;0.359242;1.000000"
-      dur="8.13s"
+      keyTimes="0.000000;0.344620;0.352623;1.000000"
+      dur="8.12s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -858,8 +821,8 @@
 <text class="text f2" x="24.4" y="192.39999999999998">✓</text>
 <text class="text fg" x="32.8" y="192.39999999999998"> src/pipeline/vterminal.test.ts </text>
 <text class="text dim fg" x="301.6" y="192.39999999999998">(23 tests)</text>
-<text class="text f2" x="385.6" y="192.39999999999998"> 12</text>
-<text class="text dim f2" x="410.8" y="192.39999999999998">ms</text>
+<text class="text f2" x="385.6" y="192.39999999999998"> 9</text>
+<text class="text dim f2" x="402.40000000000003" y="192.39999999999998">ms</text>
 <text class="text f2" x="24.4" y="211.99999999999997">✓</text>
 <text class="text fg" x="32.8" y="211.99999999999997"> src/pipeline/coalescer.test.ts </text>
 <text class="text dim fg" x="301.6" y="211.99999999999997">(14 tests)</text>
@@ -872,22 +835,22 @@
 <text class="text bold f2" x="125.2" y="270.79999999999995">70 passed</text>
 <text class="text f8" x="200.8" y="270.79999999999995"> (70)</text>
 <text class="text dim fg" x="16" y="290.4">   Start at </text>
-<text class="text fg" x="116.80000000000001" y="290.4"> 12:38:28                                                                      </text>
+<text class="text fg" x="116.80000000000001" y="290.4"> 13:30:45                                                                      </text>
 <text class="text dim fg" x="16" y="309.99999999999994">   Duration </text>
-<text class="text fg" x="116.80000000000001" y="309.99999999999994"> 173ms</text>
-<text class="text dim fg" x="167.20000000000002" y="309.99999999999994"> (transform 215ms, setup 0ms, import 246ms, tests 26ms, environment 0ms)</text>
+<text class="text fg" x="116.80000000000001" y="309.99999999999994"> 175ms</text>
+<text class="text dim fg" x="167.20000000000002" y="309.99999999999994"> (transform 214ms, setup 0ms, import 244ms, tests 24ms, environment 0ms)</text>
 <text class="text f13" x="16" y="349.2">❯</text>
-<text class="text fg" x="24.4" y="349.2"> echo &apos;C                                                                                  </text>
+<text class="text fg" x="24.4" y="349.2"> echo &apos;                                                                                   </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor" x="91.60000000000001" y="349.2" width="8.4" height="19.599999999999998" fill="#f8f8f2"/>
+<rect class="cursor" x="83.2" y="349.2" width="8.4" height="19.599999999999998" fill="#f8f8f2"/>
 </g>
 
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.359242;0.367728;1.000000"
-      dur="8.13s"
+      keyTimes="0.000000;0.352623;0.360625;1.000000"
+      dur="8.12s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -917,8 +880,8 @@
 <text class="text f2" x="24.4" y="192.39999999999998">✓</text>
 <text class="text fg" x="32.8" y="192.39999999999998"> src/pipeline/vterminal.test.ts </text>
 <text class="text dim fg" x="301.6" y="192.39999999999998">(23 tests)</text>
-<text class="text f2" x="385.6" y="192.39999999999998"> 12</text>
-<text class="text dim f2" x="410.8" y="192.39999999999998">ms</text>
+<text class="text f2" x="385.6" y="192.39999999999998"> 9</text>
+<text class="text dim f2" x="402.40000000000003" y="192.39999999999998">ms</text>
 <text class="text f2" x="24.4" y="211.99999999999997">✓</text>
 <text class="text fg" x="32.8" y="211.99999999999997"> src/pipeline/coalescer.test.ts </text>
 <text class="text dim fg" x="301.6" y="211.99999999999997">(14 tests)</text>
@@ -931,22 +894,22 @@
 <text class="text bold f2" x="125.2" y="270.79999999999995">70 passed</text>
 <text class="text f8" x="200.8" y="270.79999999999995"> (70)</text>
 <text class="text dim fg" x="16" y="290.4">   Start at </text>
-<text class="text fg" x="116.80000000000001" y="290.4"> 12:38:28                                                                      </text>
+<text class="text fg" x="116.80000000000001" y="290.4"> 13:30:45                                                                      </text>
 <text class="text dim fg" x="16" y="309.99999999999994">   Duration </text>
-<text class="text fg" x="116.80000000000001" y="309.99999999999994"> 173ms</text>
-<text class="text dim fg" x="167.20000000000002" y="309.99999999999994"> (transform 215ms, setup 0ms, import 246ms, tests 26ms, environment 0ms)</text>
+<text class="text fg" x="116.80000000000001" y="309.99999999999994"> 175ms</text>
+<text class="text dim fg" x="167.20000000000002" y="309.99999999999994"> (transform 214ms, setup 0ms, import 244ms, tests 24ms, environment 0ms)</text>
 <text class="text f13" x="16" y="349.2">❯</text>
-<text class="text fg" x="24.4" y="349.2"> echo &apos;Cl                                                                                 </text>
+<text class="text fg" x="24.4" y="349.2"> echo &apos;C                                                                                  </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor" x="100" y="349.2" width="8.4" height="19.599999999999998" fill="#f8f8f2"/>
+<rect class="cursor" x="91.60000000000001" y="349.2" width="8.4" height="19.599999999999998" fill="#f8f8f2"/>
 </g>
 
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.367728;0.376214;1.000000"
-      dur="8.13s"
+      keyTimes="0.000000;0.360625;0.369244;1.000000"
+      dur="8.12s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -976,8 +939,8 @@
 <text class="text f2" x="24.4" y="192.39999999999998">✓</text>
 <text class="text fg" x="32.8" y="192.39999999999998"> src/pipeline/vterminal.test.ts </text>
 <text class="text dim fg" x="301.6" y="192.39999999999998">(23 tests)</text>
-<text class="text f2" x="385.6" y="192.39999999999998"> 12</text>
-<text class="text dim f2" x="410.8" y="192.39999999999998">ms</text>
+<text class="text f2" x="385.6" y="192.39999999999998"> 9</text>
+<text class="text dim f2" x="402.40000000000003" y="192.39999999999998">ms</text>
 <text class="text f2" x="24.4" y="211.99999999999997">✓</text>
 <text class="text fg" x="32.8" y="211.99999999999997"> src/pipeline/coalescer.test.ts </text>
 <text class="text dim fg" x="301.6" y="211.99999999999997">(14 tests)</text>
@@ -990,22 +953,22 @@
 <text class="text bold f2" x="125.2" y="270.79999999999995">70 passed</text>
 <text class="text f8" x="200.8" y="270.79999999999995"> (70)</text>
 <text class="text dim fg" x="16" y="290.4">   Start at </text>
-<text class="text fg" x="116.80000000000001" y="290.4"> 12:38:28                                                                      </text>
+<text class="text fg" x="116.80000000000001" y="290.4"> 13:30:45                                                                      </text>
 <text class="text dim fg" x="16" y="309.99999999999994">   Duration </text>
-<text class="text fg" x="116.80000000000001" y="309.99999999999994"> 173ms</text>
-<text class="text dim fg" x="167.20000000000002" y="309.99999999999994"> (transform 215ms, setup 0ms, import 246ms, tests 26ms, environment 0ms)</text>
+<text class="text fg" x="116.80000000000001" y="309.99999999999994"> 175ms</text>
+<text class="text dim fg" x="167.20000000000002" y="309.99999999999994"> (transform 214ms, setup 0ms, import 244ms, tests 24ms, environment 0ms)</text>
 <text class="text f13" x="16" y="349.2">❯</text>
-<text class="text fg" x="24.4" y="349.2"> echo &apos;Cle                                                                                </text>
+<text class="text fg" x="24.4" y="349.2"> echo &apos;Cl                                                                                 </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor" x="108.4" y="349.2" width="8.4" height="19.599999999999998" fill="#f8f8f2"/>
+<rect class="cursor" x="100" y="349.2" width="8.4" height="19.599999999999998" fill="#f8f8f2"/>
 </g>
 
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.376214;0.384824;1.000000"
-      dur="8.13s"
+      keyTimes="0.000000;0.369244;0.377001;1.000000"
+      dur="8.12s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -1035,8 +998,8 @@
 <text class="text f2" x="24.4" y="192.39999999999998">✓</text>
 <text class="text fg" x="32.8" y="192.39999999999998"> src/pipeline/vterminal.test.ts </text>
 <text class="text dim fg" x="301.6" y="192.39999999999998">(23 tests)</text>
-<text class="text f2" x="385.6" y="192.39999999999998"> 12</text>
-<text class="text dim f2" x="410.8" y="192.39999999999998">ms</text>
+<text class="text f2" x="385.6" y="192.39999999999998"> 9</text>
+<text class="text dim f2" x="402.40000000000003" y="192.39999999999998">ms</text>
 <text class="text f2" x="24.4" y="211.99999999999997">✓</text>
 <text class="text fg" x="32.8" y="211.99999999999997"> src/pipeline/coalescer.test.ts </text>
 <text class="text dim fg" x="301.6" y="211.99999999999997">(14 tests)</text>
@@ -1049,22 +1012,22 @@
 <text class="text bold f2" x="125.2" y="270.79999999999995">70 passed</text>
 <text class="text f8" x="200.8" y="270.79999999999995"> (70)</text>
 <text class="text dim fg" x="16" y="290.4">   Start at </text>
-<text class="text fg" x="116.80000000000001" y="290.4"> 12:38:28                                                                      </text>
+<text class="text fg" x="116.80000000000001" y="290.4"> 13:30:45                                                                      </text>
 <text class="text dim fg" x="16" y="309.99999999999994">   Duration </text>
-<text class="text fg" x="116.80000000000001" y="309.99999999999994"> 173ms</text>
-<text class="text dim fg" x="167.20000000000002" y="309.99999999999994"> (transform 215ms, setup 0ms, import 246ms, tests 26ms, environment 0ms)</text>
+<text class="text fg" x="116.80000000000001" y="309.99999999999994"> 175ms</text>
+<text class="text dim fg" x="167.20000000000002" y="309.99999999999994"> (transform 214ms, setup 0ms, import 244ms, tests 24ms, environment 0ms)</text>
 <text class="text f13" x="16" y="349.2">❯</text>
-<text class="text fg" x="24.4" y="349.2"> echo &apos;Clea                                                                               </text>
+<text class="text fg" x="24.4" y="349.2"> echo &apos;Cle                                                                                </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor" x="116.80000000000001" y="349.2" width="8.4" height="19.599999999999998" fill="#f8f8f2"/>
+<rect class="cursor" x="108.4" y="349.2" width="8.4" height="19.599999999999998" fill="#f8f8f2"/>
 </g>
 
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.384824;0.393433;1.000000"
-      dur="8.13s"
+      keyTimes="0.000000;0.377001;0.384881;1.000000"
+      dur="8.12s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -1094,8 +1057,8 @@
 <text class="text f2" x="24.4" y="192.39999999999998">✓</text>
 <text class="text fg" x="32.8" y="192.39999999999998"> src/pipeline/vterminal.test.ts </text>
 <text class="text dim fg" x="301.6" y="192.39999999999998">(23 tests)</text>
-<text class="text f2" x="385.6" y="192.39999999999998"> 12</text>
-<text class="text dim f2" x="410.8" y="192.39999999999998">ms</text>
+<text class="text f2" x="385.6" y="192.39999999999998"> 9</text>
+<text class="text dim f2" x="402.40000000000003" y="192.39999999999998">ms</text>
 <text class="text f2" x="24.4" y="211.99999999999997">✓</text>
 <text class="text fg" x="32.8" y="211.99999999999997"> src/pipeline/coalescer.test.ts </text>
 <text class="text dim fg" x="301.6" y="211.99999999999997">(14 tests)</text>
@@ -1108,22 +1071,22 @@
 <text class="text bold f2" x="125.2" y="270.79999999999995">70 passed</text>
 <text class="text f8" x="200.8" y="270.79999999999995"> (70)</text>
 <text class="text dim fg" x="16" y="290.4">   Start at </text>
-<text class="text fg" x="116.80000000000001" y="290.4"> 12:38:28                                                                      </text>
+<text class="text fg" x="116.80000000000001" y="290.4"> 13:30:45                                                                      </text>
 <text class="text dim fg" x="16" y="309.99999999999994">   Duration </text>
-<text class="text fg" x="116.80000000000001" y="309.99999999999994"> 173ms</text>
-<text class="text dim fg" x="167.20000000000002" y="309.99999999999994"> (transform 215ms, setup 0ms, import 246ms, tests 26ms, environment 0ms)</text>
+<text class="text fg" x="116.80000000000001" y="309.99999999999994"> 175ms</text>
+<text class="text dim fg" x="167.20000000000002" y="309.99999999999994"> (transform 214ms, setup 0ms, import 244ms, tests 24ms, environment 0ms)</text>
 <text class="text f13" x="16" y="349.2">❯</text>
-<text class="text fg" x="24.4" y="349.2"> echo &apos;Clean                                                                              </text>
+<text class="text fg" x="24.4" y="349.2"> echo &apos;Clea                                                                               </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor" x="125.2" y="349.2" width="8.4" height="19.599999999999998" fill="#f8f8f2"/>
+<rect class="cursor" x="116.80000000000001" y="349.2" width="8.4" height="19.599999999999998" fill="#f8f8f2"/>
 </g>
 
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.393433;0.401550;1.000000"
-      dur="8.13s"
+      keyTimes="0.000000;0.384881;0.392760;1.000000"
+      dur="8.12s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -1153,8 +1116,8 @@
 <text class="text f2" x="24.4" y="192.39999999999998">✓</text>
 <text class="text fg" x="32.8" y="192.39999999999998"> src/pipeline/vterminal.test.ts </text>
 <text class="text dim fg" x="301.6" y="192.39999999999998">(23 tests)</text>
-<text class="text f2" x="385.6" y="192.39999999999998"> 12</text>
-<text class="text dim f2" x="410.8" y="192.39999999999998">ms</text>
+<text class="text f2" x="385.6" y="192.39999999999998"> 9</text>
+<text class="text dim f2" x="402.40000000000003" y="192.39999999999998">ms</text>
 <text class="text f2" x="24.4" y="211.99999999999997">✓</text>
 <text class="text fg" x="32.8" y="211.99999999999997"> src/pipeline/coalescer.test.ts </text>
 <text class="text dim fg" x="301.6" y="211.99999999999997">(14 tests)</text>
@@ -1167,22 +1130,22 @@
 <text class="text bold f2" x="125.2" y="270.79999999999995">70 passed</text>
 <text class="text f8" x="200.8" y="270.79999999999995"> (70)</text>
 <text class="text dim fg" x="16" y="290.4">   Start at </text>
-<text class="text fg" x="116.80000000000001" y="290.4"> 12:38:28                                                                      </text>
+<text class="text fg" x="116.80000000000001" y="290.4"> 13:30:45                                                                      </text>
 <text class="text dim fg" x="16" y="309.99999999999994">   Duration </text>
-<text class="text fg" x="116.80000000000001" y="309.99999999999994"> 173ms</text>
-<text class="text dim fg" x="167.20000000000002" y="309.99999999999994"> (transform 215ms, setup 0ms, import 246ms, tests 26ms, environment 0ms)</text>
+<text class="text fg" x="116.80000000000001" y="309.99999999999994"> 175ms</text>
+<text class="text dim fg" x="167.20000000000002" y="309.99999999999994"> (transform 214ms, setup 0ms, import 244ms, tests 24ms, environment 0ms)</text>
 <text class="text f13" x="16" y="349.2">❯</text>
 <text class="text fg" x="24.4" y="349.2"> echo &apos;Clean                                                                              </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor" x="133.60000000000002" y="349.2" width="8.4" height="19.599999999999998" fill="#f8f8f2"/>
+<rect class="cursor" x="125.2" y="349.2" width="8.4" height="19.599999999999998" fill="#f8f8f2"/>
 </g>
 
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.401550;0.410036;1.000000"
-      dur="8.13s"
+      keyTimes="0.000000;0.392760;0.400763;1.000000"
+      dur="8.12s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -1212,8 +1175,8 @@
 <text class="text f2" x="24.4" y="192.39999999999998">✓</text>
 <text class="text fg" x="32.8" y="192.39999999999998"> src/pipeline/vterminal.test.ts </text>
 <text class="text dim fg" x="301.6" y="192.39999999999998">(23 tests)</text>
-<text class="text f2" x="385.6" y="192.39999999999998"> 12</text>
-<text class="text dim f2" x="410.8" y="192.39999999999998">ms</text>
+<text class="text f2" x="385.6" y="192.39999999999998"> 9</text>
+<text class="text dim f2" x="402.40000000000003" y="192.39999999999998">ms</text>
 <text class="text f2" x="24.4" y="211.99999999999997">✓</text>
 <text class="text fg" x="32.8" y="211.99999999999997"> src/pipeline/coalescer.test.ts </text>
 <text class="text dim fg" x="301.6" y="211.99999999999997">(14 tests)</text>
@@ -1226,22 +1189,22 @@
 <text class="text bold f2" x="125.2" y="270.79999999999995">70 passed</text>
 <text class="text f8" x="200.8" y="270.79999999999995"> (70)</text>
 <text class="text dim fg" x="16" y="290.4">   Start at </text>
-<text class="text fg" x="116.80000000000001" y="290.4"> 12:38:28                                                                      </text>
+<text class="text fg" x="116.80000000000001" y="290.4"> 13:30:45                                                                      </text>
 <text class="text dim fg" x="16" y="309.99999999999994">   Duration </text>
-<text class="text fg" x="116.80000000000001" y="309.99999999999994"> 173ms</text>
-<text class="text dim fg" x="167.20000000000002" y="309.99999999999994"> (transform 215ms, setup 0ms, import 246ms, tests 26ms, environment 0ms)</text>
+<text class="text fg" x="116.80000000000001" y="309.99999999999994"> 175ms</text>
+<text class="text dim fg" x="167.20000000000002" y="309.99999999999994"> (transform 214ms, setup 0ms, import 244ms, tests 24ms, environment 0ms)</text>
 <text class="text f13" x="16" y="349.2">❯</text>
-<text class="text fg" x="24.4" y="349.2"> echo &apos;Clean a                                                                            </text>
+<text class="text fg" x="24.4" y="349.2"> echo &apos;Clean                                                                              </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor" x="142" y="349.2" width="8.4" height="19.599999999999998" fill="#f8f8f2"/>
+<rect class="cursor" x="133.60000000000002" y="349.2" width="8.4" height="19.599999999999998" fill="#f8f8f2"/>
 </g>
 
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.410036;0.418522;1.000000"
-      dur="8.13s"
+      keyTimes="0.000000;0.400763;0.408889;1.000000"
+      dur="8.12s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -1271,8 +1234,8 @@
 <text class="text f2" x="24.4" y="192.39999999999998">✓</text>
 <text class="text fg" x="32.8" y="192.39999999999998"> src/pipeline/vterminal.test.ts </text>
 <text class="text dim fg" x="301.6" y="192.39999999999998">(23 tests)</text>
-<text class="text f2" x="385.6" y="192.39999999999998"> 12</text>
-<text class="text dim f2" x="410.8" y="192.39999999999998">ms</text>
+<text class="text f2" x="385.6" y="192.39999999999998"> 9</text>
+<text class="text dim f2" x="402.40000000000003" y="192.39999999999998">ms</text>
 <text class="text f2" x="24.4" y="211.99999999999997">✓</text>
 <text class="text fg" x="32.8" y="211.99999999999997"> src/pipeline/coalescer.test.ts </text>
 <text class="text dim fg" x="301.6" y="211.99999999999997">(14 tests)</text>
@@ -1285,22 +1248,22 @@
 <text class="text bold f2" x="125.2" y="270.79999999999995">70 passed</text>
 <text class="text f8" x="200.8" y="270.79999999999995"> (70)</text>
 <text class="text dim fg" x="16" y="290.4">   Start at </text>
-<text class="text fg" x="116.80000000000001" y="290.4"> 12:38:28                                                                      </text>
+<text class="text fg" x="116.80000000000001" y="290.4"> 13:30:45                                                                      </text>
 <text class="text dim fg" x="16" y="309.99999999999994">   Duration </text>
-<text class="text fg" x="116.80000000000001" y="309.99999999999994"> 173ms</text>
-<text class="text dim fg" x="167.20000000000002" y="309.99999999999994"> (transform 215ms, setup 0ms, import 246ms, tests 26ms, environment 0ms)</text>
+<text class="text fg" x="116.80000000000001" y="309.99999999999994"> 175ms</text>
+<text class="text dim fg" x="167.20000000000002" y="309.99999999999994"> (transform 214ms, setup 0ms, import 244ms, tests 24ms, environment 0ms)</text>
 <text class="text f13" x="16" y="349.2">❯</text>
-<text class="text fg" x="24.4" y="349.2"> echo &apos;Clean an                                                                           </text>
+<text class="text fg" x="24.4" y="349.2"> echo &apos;Clean a                                                                            </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor" x="150.4" y="349.2" width="8.4" height="19.599999999999998" fill="#f8f8f2"/>
+<rect class="cursor" x="142" y="349.2" width="8.4" height="19.599999999999998" fill="#f8f8f2"/>
 </g>
 
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.418522;0.427131;1.000000"
-      dur="8.13s"
+      keyTimes="0.000000;0.408889;0.417139;1.000000"
+      dur="8.12s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -1330,8 +1293,8 @@
 <text class="text f2" x="24.4" y="192.39999999999998">✓</text>
 <text class="text fg" x="32.8" y="192.39999999999998"> src/pipeline/vterminal.test.ts </text>
 <text class="text dim fg" x="301.6" y="192.39999999999998">(23 tests)</text>
-<text class="text f2" x="385.6" y="192.39999999999998"> 12</text>
-<text class="text dim f2" x="410.8" y="192.39999999999998">ms</text>
+<text class="text f2" x="385.6" y="192.39999999999998"> 9</text>
+<text class="text dim f2" x="402.40000000000003" y="192.39999999999998">ms</text>
 <text class="text f2" x="24.4" y="211.99999999999997">✓</text>
 <text class="text fg" x="32.8" y="211.99999999999997"> src/pipeline/coalescer.test.ts </text>
 <text class="text dim fg" x="301.6" y="211.99999999999997">(14 tests)</text>
@@ -1344,22 +1307,22 @@
 <text class="text bold f2" x="125.2" y="270.79999999999995">70 passed</text>
 <text class="text f8" x="200.8" y="270.79999999999995"> (70)</text>
 <text class="text dim fg" x="16" y="290.4">   Start at </text>
-<text class="text fg" x="116.80000000000001" y="290.4"> 12:38:28                                                                      </text>
+<text class="text fg" x="116.80000000000001" y="290.4"> 13:30:45                                                                      </text>
 <text class="text dim fg" x="16" y="309.99999999999994">   Duration </text>
-<text class="text fg" x="116.80000000000001" y="309.99999999999994"> 173ms</text>
-<text class="text dim fg" x="167.20000000000002" y="309.99999999999994"> (transform 215ms, setup 0ms, import 246ms, tests 26ms, environment 0ms)</text>
+<text class="text fg" x="116.80000000000001" y="309.99999999999994"> 175ms</text>
+<text class="text dim fg" x="167.20000000000002" y="309.99999999999994"> (transform 214ms, setup 0ms, import 244ms, tests 24ms, environment 0ms)</text>
 <text class="text f13" x="16" y="349.2">❯</text>
-<text class="text fg" x="24.4" y="349.2"> echo &apos;Clean and                                                                          </text>
+<text class="text fg" x="24.4" y="349.2"> echo &apos;Clean an                                                                           </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor" x="158.8" y="349.2" width="8.4" height="19.599999999999998" fill="#f8f8f2"/>
+<rect class="cursor" x="150.4" y="349.2" width="8.4" height="19.599999999999998" fill="#f8f8f2"/>
 </g>
 
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.427131;0.435617;1.000000"
-      dur="8.13s"
+      keyTimes="0.000000;0.417139;0.425511;1.000000"
+      dur="8.12s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -1389,8 +1352,8 @@
 <text class="text f2" x="24.4" y="192.39999999999998">✓</text>
 <text class="text fg" x="32.8" y="192.39999999999998"> src/pipeline/vterminal.test.ts </text>
 <text class="text dim fg" x="301.6" y="192.39999999999998">(23 tests)</text>
-<text class="text f2" x="385.6" y="192.39999999999998"> 12</text>
-<text class="text dim f2" x="410.8" y="192.39999999999998">ms</text>
+<text class="text f2" x="385.6" y="192.39999999999998"> 9</text>
+<text class="text dim f2" x="402.40000000000003" y="192.39999999999998">ms</text>
 <text class="text f2" x="24.4" y="211.99999999999997">✓</text>
 <text class="text fg" x="32.8" y="211.99999999999997"> src/pipeline/coalescer.test.ts </text>
 <text class="text dim fg" x="301.6" y="211.99999999999997">(14 tests)</text>
@@ -1403,22 +1366,22 @@
 <text class="text bold f2" x="125.2" y="270.79999999999995">70 passed</text>
 <text class="text f8" x="200.8" y="270.79999999999995"> (70)</text>
 <text class="text dim fg" x="16" y="290.4">   Start at </text>
-<text class="text fg" x="116.80000000000001" y="290.4"> 12:38:28                                                                      </text>
+<text class="text fg" x="116.80000000000001" y="290.4"> 13:30:45                                                                      </text>
 <text class="text dim fg" x="16" y="309.99999999999994">   Duration </text>
-<text class="text fg" x="116.80000000000001" y="309.99999999999994"> 173ms</text>
-<text class="text dim fg" x="167.20000000000002" y="309.99999999999994"> (transform 215ms, setup 0ms, import 246ms, tests 26ms, environment 0ms)</text>
+<text class="text fg" x="116.80000000000001" y="309.99999999999994"> 175ms</text>
+<text class="text dim fg" x="167.20000000000002" y="309.99999999999994"> (transform 214ms, setup 0ms, import 244ms, tests 24ms, environment 0ms)</text>
 <text class="text f13" x="16" y="349.2">❯</text>
 <text class="text fg" x="24.4" y="349.2"> echo &apos;Clean and                                                                          </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor" x="167.20000000000002" y="349.2" width="8.4" height="19.599999999999998" fill="#f8f8f2"/>
+<rect class="cursor" x="158.8" y="349.2" width="8.4" height="19.599999999999998" fill="#f8f8f2"/>
 </g>
 
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.435617;0.444226;1.000000"
-      dur="8.13s"
+      keyTimes="0.000000;0.425511;0.433883;1.000000"
+      dur="8.12s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -1448,8 +1411,8 @@
 <text class="text f2" x="24.4" y="192.39999999999998">✓</text>
 <text class="text fg" x="32.8" y="192.39999999999998"> src/pipeline/vterminal.test.ts </text>
 <text class="text dim fg" x="301.6" y="192.39999999999998">(23 tests)</text>
-<text class="text f2" x="385.6" y="192.39999999999998"> 12</text>
-<text class="text dim f2" x="410.8" y="192.39999999999998">ms</text>
+<text class="text f2" x="385.6" y="192.39999999999998"> 9</text>
+<text class="text dim f2" x="402.40000000000003" y="192.39999999999998">ms</text>
 <text class="text f2" x="24.4" y="211.99999999999997">✓</text>
 <text class="text fg" x="32.8" y="211.99999999999997"> src/pipeline/coalescer.test.ts </text>
 <text class="text dim fg" x="301.6" y="211.99999999999997">(14 tests)</text>
@@ -1462,22 +1425,22 @@
 <text class="text bold f2" x="125.2" y="270.79999999999995">70 passed</text>
 <text class="text f8" x="200.8" y="270.79999999999995"> (70)</text>
 <text class="text dim fg" x="16" y="290.4">   Start at </text>
-<text class="text fg" x="116.80000000000001" y="290.4"> 12:38:28                                                                      </text>
+<text class="text fg" x="116.80000000000001" y="290.4"> 13:30:45                                                                      </text>
 <text class="text dim fg" x="16" y="309.99999999999994">   Duration </text>
-<text class="text fg" x="116.80000000000001" y="309.99999999999994"> 173ms</text>
-<text class="text dim fg" x="167.20000000000002" y="309.99999999999994"> (transform 215ms, setup 0ms, import 246ms, tests 26ms, environment 0ms)</text>
+<text class="text fg" x="116.80000000000001" y="309.99999999999994"> 175ms</text>
+<text class="text dim fg" x="167.20000000000002" y="309.99999999999994"> (transform 214ms, setup 0ms, import 244ms, tests 24ms, environment 0ms)</text>
 <text class="text f13" x="16" y="349.2">❯</text>
-<text class="text fg" x="24.4" y="349.2"> echo &apos;Clean and m                                                                        </text>
+<text class="text fg" x="24.4" y="349.2"> echo &apos;Clean and                                                                          </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor" x="175.6" y="349.2" width="8.4" height="19.599999999999998" fill="#f8f8f2"/>
+<rect class="cursor" x="167.20000000000002" y="349.2" width="8.4" height="19.599999999999998" fill="#f8f8f2"/>
 </g>
 
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.444226;0.452712;1.000000"
-      dur="8.13s"
+      keyTimes="0.000000;0.433883;0.442132;1.000000"
+      dur="8.12s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -1507,8 +1470,8 @@
 <text class="text f2" x="24.4" y="192.39999999999998">✓</text>
 <text class="text fg" x="32.8" y="192.39999999999998"> src/pipeline/vterminal.test.ts </text>
 <text class="text dim fg" x="301.6" y="192.39999999999998">(23 tests)</text>
-<text class="text f2" x="385.6" y="192.39999999999998"> 12</text>
-<text class="text dim f2" x="410.8" y="192.39999999999998">ms</text>
+<text class="text f2" x="385.6" y="192.39999999999998"> 9</text>
+<text class="text dim f2" x="402.40000000000003" y="192.39999999999998">ms</text>
 <text class="text f2" x="24.4" y="211.99999999999997">✓</text>
 <text class="text fg" x="32.8" y="211.99999999999997"> src/pipeline/coalescer.test.ts </text>
 <text class="text dim fg" x="301.6" y="211.99999999999997">(14 tests)</text>
@@ -1521,22 +1484,22 @@
 <text class="text bold f2" x="125.2" y="270.79999999999995">70 passed</text>
 <text class="text f8" x="200.8" y="270.79999999999995"> (70)</text>
 <text class="text dim fg" x="16" y="290.4">   Start at </text>
-<text class="text fg" x="116.80000000000001" y="290.4"> 12:38:28                                                                      </text>
+<text class="text fg" x="116.80000000000001" y="290.4"> 13:30:45                                                                      </text>
 <text class="text dim fg" x="16" y="309.99999999999994">   Duration </text>
-<text class="text fg" x="116.80000000000001" y="309.99999999999994"> 173ms</text>
-<text class="text dim fg" x="167.20000000000002" y="309.99999999999994"> (transform 215ms, setup 0ms, import 246ms, tests 26ms, environment 0ms)</text>
+<text class="text fg" x="116.80000000000001" y="309.99999999999994"> 175ms</text>
+<text class="text dim fg" x="167.20000000000002" y="309.99999999999994"> (transform 214ms, setup 0ms, import 244ms, tests 24ms, environment 0ms)</text>
 <text class="text f13" x="16" y="349.2">❯</text>
-<text class="text fg" x="24.4" y="349.2"> echo &apos;Clean and mi                                                                       </text>
+<text class="text fg" x="24.4" y="349.2"> echo &apos;Clean and m                                                                        </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor" x="184" y="349.2" width="8.4" height="19.599999999999998" fill="#f8f8f2"/>
+<rect class="cursor" x="175.6" y="349.2" width="8.4" height="19.599999999999998" fill="#f8f8f2"/>
 </g>
 
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.452712;0.461321;1.000000"
-      dur="8.13s"
+      keyTimes="0.000000;0.442132;0.450628;1.000000"
+      dur="8.12s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -1566,8 +1529,8 @@
 <text class="text f2" x="24.4" y="192.39999999999998">✓</text>
 <text class="text fg" x="32.8" y="192.39999999999998"> src/pipeline/vterminal.test.ts </text>
 <text class="text dim fg" x="301.6" y="192.39999999999998">(23 tests)</text>
-<text class="text f2" x="385.6" y="192.39999999999998"> 12</text>
-<text class="text dim f2" x="410.8" y="192.39999999999998">ms</text>
+<text class="text f2" x="385.6" y="192.39999999999998"> 9</text>
+<text class="text dim f2" x="402.40000000000003" y="192.39999999999998">ms</text>
 <text class="text f2" x="24.4" y="211.99999999999997">✓</text>
 <text class="text fg" x="32.8" y="211.99999999999997"> src/pipeline/coalescer.test.ts </text>
 <text class="text dim fg" x="301.6" y="211.99999999999997">(14 tests)</text>
@@ -1580,22 +1543,22 @@
 <text class="text bold f2" x="125.2" y="270.79999999999995">70 passed</text>
 <text class="text f8" x="200.8" y="270.79999999999995"> (70)</text>
 <text class="text dim fg" x="16" y="290.4">   Start at </text>
-<text class="text fg" x="116.80000000000001" y="290.4"> 12:38:28                                                                      </text>
+<text class="text fg" x="116.80000000000001" y="290.4"> 13:30:45                                                                      </text>
 <text class="text dim fg" x="16" y="309.99999999999994">   Duration </text>
-<text class="text fg" x="116.80000000000001" y="309.99999999999994"> 173ms</text>
-<text class="text dim fg" x="167.20000000000002" y="309.99999999999994"> (transform 215ms, setup 0ms, import 246ms, tests 26ms, environment 0ms)</text>
+<text class="text fg" x="116.80000000000001" y="309.99999999999994"> 175ms</text>
+<text class="text dim fg" x="167.20000000000002" y="309.99999999999994"> (transform 214ms, setup 0ms, import 244ms, tests 24ms, environment 0ms)</text>
 <text class="text f13" x="16" y="349.2">❯</text>
-<text class="text fg" x="24.4" y="349.2"> echo &apos;Clean and min                                                                      </text>
+<text class="text fg" x="24.4" y="349.2"> echo &apos;Clean and mi                                                                       </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor" x="192.4" y="349.2" width="8.4" height="19.599999999999998" fill="#f8f8f2"/>
+<rect class="cursor" x="184" y="349.2" width="8.4" height="19.599999999999998" fill="#f8f8f2"/>
 </g>
 
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.461321;0.469930;1.000000"
-      dur="8.13s"
+      keyTimes="0.000000;0.450628;0.459000;1.000000"
+      dur="8.12s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -1625,8 +1588,8 @@
 <text class="text f2" x="24.4" y="192.39999999999998">✓</text>
 <text class="text fg" x="32.8" y="192.39999999999998"> src/pipeline/vterminal.test.ts </text>
 <text class="text dim fg" x="301.6" y="192.39999999999998">(23 tests)</text>
-<text class="text f2" x="385.6" y="192.39999999999998"> 12</text>
-<text class="text dim f2" x="410.8" y="192.39999999999998">ms</text>
+<text class="text f2" x="385.6" y="192.39999999999998"> 9</text>
+<text class="text dim f2" x="402.40000000000003" y="192.39999999999998">ms</text>
 <text class="text f2" x="24.4" y="211.99999999999997">✓</text>
 <text class="text fg" x="32.8" y="211.99999999999997"> src/pipeline/coalescer.test.ts </text>
 <text class="text dim fg" x="301.6" y="211.99999999999997">(14 tests)</text>
@@ -1639,22 +1602,22 @@
 <text class="text bold f2" x="125.2" y="270.79999999999995">70 passed</text>
 <text class="text f8" x="200.8" y="270.79999999999995"> (70)</text>
 <text class="text dim fg" x="16" y="290.4">   Start at </text>
-<text class="text fg" x="116.80000000000001" y="290.4"> 12:38:28                                                                      </text>
+<text class="text fg" x="116.80000000000001" y="290.4"> 13:30:45                                                                      </text>
 <text class="text dim fg" x="16" y="309.99999999999994">   Duration </text>
-<text class="text fg" x="116.80000000000001" y="309.99999999999994"> 173ms</text>
-<text class="text dim fg" x="167.20000000000002" y="309.99999999999994"> (transform 215ms, setup 0ms, import 246ms, tests 26ms, environment 0ms)</text>
+<text class="text fg" x="116.80000000000001" y="309.99999999999994"> 175ms</text>
+<text class="text dim fg" x="167.20000000000002" y="309.99999999999994"> (transform 214ms, setup 0ms, import 244ms, tests 24ms, environment 0ms)</text>
 <text class="text f13" x="16" y="349.2">❯</text>
-<text class="text fg" x="24.4" y="349.2"> echo &apos;Clean and mini                                                                     </text>
+<text class="text fg" x="24.4" y="349.2"> echo &apos;Clean and min                                                                      </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor" x="200.8" y="349.2" width="8.4" height="19.599999999999998" fill="#f8f8f2"/>
+<rect class="cursor" x="192.4" y="349.2" width="8.4" height="19.599999999999998" fill="#f8f8f2"/>
 </g>
 
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.469930;0.478539;1.000000"
-      dur="8.13s"
+      keyTimes="0.000000;0.459000;0.467496;1.000000"
+      dur="8.12s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -1684,8 +1647,8 @@
 <text class="text f2" x="24.4" y="192.39999999999998">✓</text>
 <text class="text fg" x="32.8" y="192.39999999999998"> src/pipeline/vterminal.test.ts </text>
 <text class="text dim fg" x="301.6" y="192.39999999999998">(23 tests)</text>
-<text class="text f2" x="385.6" y="192.39999999999998"> 12</text>
-<text class="text dim f2" x="410.8" y="192.39999999999998">ms</text>
+<text class="text f2" x="385.6" y="192.39999999999998"> 9</text>
+<text class="text dim f2" x="402.40000000000003" y="192.39999999999998">ms</text>
 <text class="text f2" x="24.4" y="211.99999999999997">✓</text>
 <text class="text fg" x="32.8" y="211.99999999999997"> src/pipeline/coalescer.test.ts </text>
 <text class="text dim fg" x="301.6" y="211.99999999999997">(14 tests)</text>
@@ -1698,22 +1661,22 @@
 <text class="text bold f2" x="125.2" y="270.79999999999995">70 passed</text>
 <text class="text f8" x="200.8" y="270.79999999999995"> (70)</text>
 <text class="text dim fg" x="16" y="290.4">   Start at </text>
-<text class="text fg" x="116.80000000000001" y="290.4"> 12:38:28                                                                      </text>
+<text class="text fg" x="116.80000000000001" y="290.4"> 13:30:45                                                                      </text>
 <text class="text dim fg" x="16" y="309.99999999999994">   Duration </text>
-<text class="text fg" x="116.80000000000001" y="309.99999999999994"> 173ms</text>
-<text class="text dim fg" x="167.20000000000002" y="309.99999999999994"> (transform 215ms, setup 0ms, import 246ms, tests 26ms, environment 0ms)</text>
+<text class="text fg" x="116.80000000000001" y="309.99999999999994"> 175ms</text>
+<text class="text dim fg" x="167.20000000000002" y="309.99999999999994"> (transform 214ms, setup 0ms, import 244ms, tests 24ms, environment 0ms)</text>
 <text class="text f13" x="16" y="349.2">❯</text>
-<text class="text fg" x="24.4" y="349.2"> echo &apos;Clean and minim                                                                    </text>
+<text class="text fg" x="24.4" y="349.2"> echo &apos;Clean and mini                                                                     </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor" x="209.20000000000002" y="349.2" width="8.4" height="19.599999999999998" fill="#f8f8f2"/>
+<rect class="cursor" x="200.8" y="349.2" width="8.4" height="19.599999999999998" fill="#f8f8f2"/>
 </g>
 
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.478539;0.487148;1.000000"
-      dur="8.13s"
+      keyTimes="0.000000;0.467496;0.476114;1.000000"
+      dur="8.12s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -1743,8 +1706,8 @@
 <text class="text f2" x="24.4" y="192.39999999999998">✓</text>
 <text class="text fg" x="32.8" y="192.39999999999998"> src/pipeline/vterminal.test.ts </text>
 <text class="text dim fg" x="301.6" y="192.39999999999998">(23 tests)</text>
-<text class="text f2" x="385.6" y="192.39999999999998"> 12</text>
-<text class="text dim f2" x="410.8" y="192.39999999999998">ms</text>
+<text class="text f2" x="385.6" y="192.39999999999998"> 9</text>
+<text class="text dim f2" x="402.40000000000003" y="192.39999999999998">ms</text>
 <text class="text f2" x="24.4" y="211.99999999999997">✓</text>
 <text class="text fg" x="32.8" y="211.99999999999997"> src/pipeline/coalescer.test.ts </text>
 <text class="text dim fg" x="301.6" y="211.99999999999997">(14 tests)</text>
@@ -1757,22 +1720,22 @@
 <text class="text bold f2" x="125.2" y="270.79999999999995">70 passed</text>
 <text class="text f8" x="200.8" y="270.79999999999995"> (70)</text>
 <text class="text dim fg" x="16" y="290.4">   Start at </text>
-<text class="text fg" x="116.80000000000001" y="290.4"> 12:38:28                                                                      </text>
+<text class="text fg" x="116.80000000000001" y="290.4"> 13:30:45                                                                      </text>
 <text class="text dim fg" x="16" y="309.99999999999994">   Duration </text>
-<text class="text fg" x="116.80000000000001" y="309.99999999999994"> 173ms</text>
-<text class="text dim fg" x="167.20000000000002" y="309.99999999999994"> (transform 215ms, setup 0ms, import 246ms, tests 26ms, environment 0ms)</text>
+<text class="text fg" x="116.80000000000001" y="309.99999999999994"> 175ms</text>
+<text class="text dim fg" x="167.20000000000002" y="309.99999999999994"> (transform 214ms, setup 0ms, import 244ms, tests 24ms, environment 0ms)</text>
 <text class="text f13" x="16" y="349.2">❯</text>
-<text class="text fg" x="24.4" y="349.2"> echo &apos;Clean and minima                                                                   </text>
+<text class="text fg" x="24.4" y="349.2"> echo &apos;Clean and minim                                                                    </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor" x="217.60000000000002" y="349.2" width="8.4" height="19.599999999999998" fill="#f8f8f2"/>
+<rect class="cursor" x="209.20000000000002" y="349.2" width="8.4" height="19.599999999999998" fill="#f8f8f2"/>
 </g>
 
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.487148;0.495634;1.000000"
-      dur="8.13s"
+      keyTimes="0.000000;0.476114;0.484487;1.000000"
+      dur="8.12s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -1802,8 +1765,8 @@
 <text class="text f2" x="24.4" y="192.39999999999998">✓</text>
 <text class="text fg" x="32.8" y="192.39999999999998"> src/pipeline/vterminal.test.ts </text>
 <text class="text dim fg" x="301.6" y="192.39999999999998">(23 tests)</text>
-<text class="text f2" x="385.6" y="192.39999999999998"> 12</text>
-<text class="text dim f2" x="410.8" y="192.39999999999998">ms</text>
+<text class="text f2" x="385.6" y="192.39999999999998"> 9</text>
+<text class="text dim f2" x="402.40000000000003" y="192.39999999999998">ms</text>
 <text class="text f2" x="24.4" y="211.99999999999997">✓</text>
 <text class="text fg" x="32.8" y="211.99999999999997"> src/pipeline/coalescer.test.ts </text>
 <text class="text dim fg" x="301.6" y="211.99999999999997">(14 tests)</text>
@@ -1816,22 +1779,22 @@
 <text class="text bold f2" x="125.2" y="270.79999999999995">70 passed</text>
 <text class="text f8" x="200.8" y="270.79999999999995"> (70)</text>
 <text class="text dim fg" x="16" y="290.4">   Start at </text>
-<text class="text fg" x="116.80000000000001" y="290.4"> 12:38:28                                                                      </text>
+<text class="text fg" x="116.80000000000001" y="290.4"> 13:30:45                                                                      </text>
 <text class="text dim fg" x="16" y="309.99999999999994">   Duration </text>
-<text class="text fg" x="116.80000000000001" y="309.99999999999994"> 173ms</text>
-<text class="text dim fg" x="167.20000000000002" y="309.99999999999994"> (transform 215ms, setup 0ms, import 246ms, tests 26ms, environment 0ms)</text>
+<text class="text fg" x="116.80000000000001" y="309.99999999999994"> 175ms</text>
+<text class="text dim fg" x="167.20000000000002" y="309.99999999999994"> (transform 214ms, setup 0ms, import 244ms, tests 24ms, environment 0ms)</text>
 <text class="text f13" x="16" y="349.2">❯</text>
-<text class="text fg" x="24.4" y="349.2"> echo &apos;Clean and minimal                                                                  </text>
+<text class="text fg" x="24.4" y="349.2"> echo &apos;Clean and minima                                                                   </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor" x="226" y="349.2" width="8.4" height="19.599999999999998" fill="#f8f8f2"/>
+<rect class="cursor" x="217.60000000000002" y="349.2" width="8.4" height="19.599999999999998" fill="#f8f8f2"/>
 </g>
 
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.495634;0.504243;1.000000"
-      dur="8.13s"
+      keyTimes="0.000000;0.484487;0.492982;1.000000"
+      dur="8.12s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -1861,8 +1824,8 @@
 <text class="text f2" x="24.4" y="192.39999999999998">✓</text>
 <text class="text fg" x="32.8" y="192.39999999999998"> src/pipeline/vterminal.test.ts </text>
 <text class="text dim fg" x="301.6" y="192.39999999999998">(23 tests)</text>
-<text class="text f2" x="385.6" y="192.39999999999998"> 12</text>
-<text class="text dim f2" x="410.8" y="192.39999999999998">ms</text>
+<text class="text f2" x="385.6" y="192.39999999999998"> 9</text>
+<text class="text dim f2" x="402.40000000000003" y="192.39999999999998">ms</text>
 <text class="text f2" x="24.4" y="211.99999999999997">✓</text>
 <text class="text fg" x="32.8" y="211.99999999999997"> src/pipeline/coalescer.test.ts </text>
 <text class="text dim fg" x="301.6" y="211.99999999999997">(14 tests)</text>
@@ -1875,22 +1838,22 @@
 <text class="text bold f2" x="125.2" y="270.79999999999995">70 passed</text>
 <text class="text f8" x="200.8" y="270.79999999999995"> (70)</text>
 <text class="text dim fg" x="16" y="290.4">   Start at </text>
-<text class="text fg" x="116.80000000000001" y="290.4"> 12:38:28                                                                      </text>
+<text class="text fg" x="116.80000000000001" y="290.4"> 13:30:45                                                                      </text>
 <text class="text dim fg" x="16" y="309.99999999999994">   Duration </text>
-<text class="text fg" x="116.80000000000001" y="309.99999999999994"> 173ms</text>
-<text class="text dim fg" x="167.20000000000002" y="309.99999999999994"> (transform 215ms, setup 0ms, import 246ms, tests 26ms, environment 0ms)</text>
+<text class="text fg" x="116.80000000000001" y="309.99999999999994"> 175ms</text>
+<text class="text dim fg" x="167.20000000000002" y="309.99999999999994"> (transform 214ms, setup 0ms, import 244ms, tests 24ms, environment 0ms)</text>
 <text class="text f13" x="16" y="349.2">❯</text>
 <text class="text fg" x="24.4" y="349.2"> echo &apos;Clean and minimal                                                                  </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor" x="234.4" y="349.2" width="8.4" height="19.599999999999998" fill="#f8f8f2"/>
+<rect class="cursor" x="226" y="349.2" width="8.4" height="19.599999999999998" fill="#f8f8f2"/>
 </g>
 
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.504243;0.512729;1.000000"
-      dur="8.13s"
+      keyTimes="0.000000;0.492982;0.501477;1.000000"
+      dur="8.12s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -1920,8 +1883,8 @@
 <text class="text f2" x="24.4" y="192.39999999999998">✓</text>
 <text class="text fg" x="32.8" y="192.39999999999998"> src/pipeline/vterminal.test.ts </text>
 <text class="text dim fg" x="301.6" y="192.39999999999998">(23 tests)</text>
-<text class="text f2" x="385.6" y="192.39999999999998"> 12</text>
-<text class="text dim f2" x="410.8" y="192.39999999999998">ms</text>
+<text class="text f2" x="385.6" y="192.39999999999998"> 9</text>
+<text class="text dim f2" x="402.40000000000003" y="192.39999999999998">ms</text>
 <text class="text f2" x="24.4" y="211.99999999999997">✓</text>
 <text class="text fg" x="32.8" y="211.99999999999997"> src/pipeline/coalescer.test.ts </text>
 <text class="text dim fg" x="301.6" y="211.99999999999997">(14 tests)</text>
@@ -1934,22 +1897,22 @@
 <text class="text bold f2" x="125.2" y="270.79999999999995">70 passed</text>
 <text class="text f8" x="200.8" y="270.79999999999995"> (70)</text>
 <text class="text dim fg" x="16" y="290.4">   Start at </text>
-<text class="text fg" x="116.80000000000001" y="290.4"> 12:38:28                                                                      </text>
+<text class="text fg" x="116.80000000000001" y="290.4"> 13:30:45                                                                      </text>
 <text class="text dim fg" x="16" y="309.99999999999994">   Duration </text>
-<text class="text fg" x="116.80000000000001" y="309.99999999999994"> 173ms</text>
-<text class="text dim fg" x="167.20000000000002" y="309.99999999999994"> (transform 215ms, setup 0ms, import 246ms, tests 26ms, environment 0ms)</text>
+<text class="text fg" x="116.80000000000001" y="309.99999999999994"> 175ms</text>
+<text class="text dim fg" x="167.20000000000002" y="309.99999999999994"> (transform 214ms, setup 0ms, import 244ms, tests 24ms, environment 0ms)</text>
 <text class="text f13" x="16" y="349.2">❯</text>
-<text class="text fg" x="24.4" y="349.2"> echo &apos;Clean and minimal l                                                                </text>
+<text class="text fg" x="24.4" y="349.2"> echo &apos;Clean and minimal                                                                  </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor" x="242.8" y="349.2" width="8.4" height="19.599999999999998" fill="#f8f8f2"/>
+<rect class="cursor" x="234.4" y="349.2" width="8.4" height="19.599999999999998" fill="#f8f8f2"/>
 </g>
 
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.512729;0.521338;1.000000"
-      dur="8.13s"
+      keyTimes="0.000000;0.501477;0.509973;1.000000"
+      dur="8.12s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -1979,8 +1942,8 @@
 <text class="text f2" x="24.4" y="192.39999999999998">✓</text>
 <text class="text fg" x="32.8" y="192.39999999999998"> src/pipeline/vterminal.test.ts </text>
 <text class="text dim fg" x="301.6" y="192.39999999999998">(23 tests)</text>
-<text class="text f2" x="385.6" y="192.39999999999998"> 12</text>
-<text class="text dim f2" x="410.8" y="192.39999999999998">ms</text>
+<text class="text f2" x="385.6" y="192.39999999999998"> 9</text>
+<text class="text dim f2" x="402.40000000000003" y="192.39999999999998">ms</text>
 <text class="text f2" x="24.4" y="211.99999999999997">✓</text>
 <text class="text fg" x="32.8" y="211.99999999999997"> src/pipeline/coalescer.test.ts </text>
 <text class="text dim fg" x="301.6" y="211.99999999999997">(14 tests)</text>
@@ -1993,22 +1956,22 @@
 <text class="text bold f2" x="125.2" y="270.79999999999995">70 passed</text>
 <text class="text f8" x="200.8" y="270.79999999999995"> (70)</text>
 <text class="text dim fg" x="16" y="290.4">   Start at </text>
-<text class="text fg" x="116.80000000000001" y="290.4"> 12:38:28                                                                      </text>
+<text class="text fg" x="116.80000000000001" y="290.4"> 13:30:45                                                                      </text>
 <text class="text dim fg" x="16" y="309.99999999999994">   Duration </text>
-<text class="text fg" x="116.80000000000001" y="309.99999999999994"> 173ms</text>
-<text class="text dim fg" x="167.20000000000002" y="309.99999999999994"> (transform 215ms, setup 0ms, import 246ms, tests 26ms, environment 0ms)</text>
+<text class="text fg" x="116.80000000000001" y="309.99999999999994"> 175ms</text>
+<text class="text dim fg" x="167.20000000000002" y="309.99999999999994"> (transform 214ms, setup 0ms, import 244ms, tests 24ms, environment 0ms)</text>
 <text class="text f13" x="16" y="349.2">❯</text>
-<text class="text fg" x="24.4" y="349.2"> echo &apos;Clean and minimal lo                                                               </text>
+<text class="text fg" x="24.4" y="349.2"> echo &apos;Clean and minimal l                                                                </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor" x="251.20000000000002" y="349.2" width="8.4" height="19.599999999999998" fill="#f8f8f2"/>
+<rect class="cursor" x="242.8" y="349.2" width="8.4" height="19.599999999999998" fill="#f8f8f2"/>
 </g>
 
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.521338;0.529947;1.000000"
-      dur="8.13s"
+      keyTimes="0.000000;0.509973;0.518468;1.000000"
+      dur="8.12s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -2038,8 +2001,8 @@
 <text class="text f2" x="24.4" y="192.39999999999998">✓</text>
 <text class="text fg" x="32.8" y="192.39999999999998"> src/pipeline/vterminal.test.ts </text>
 <text class="text dim fg" x="301.6" y="192.39999999999998">(23 tests)</text>
-<text class="text f2" x="385.6" y="192.39999999999998"> 12</text>
-<text class="text dim f2" x="410.8" y="192.39999999999998">ms</text>
+<text class="text f2" x="385.6" y="192.39999999999998"> 9</text>
+<text class="text dim f2" x="402.40000000000003" y="192.39999999999998">ms</text>
 <text class="text f2" x="24.4" y="211.99999999999997">✓</text>
 <text class="text fg" x="32.8" y="211.99999999999997"> src/pipeline/coalescer.test.ts </text>
 <text class="text dim fg" x="301.6" y="211.99999999999997">(14 tests)</text>
@@ -2052,22 +2015,22 @@
 <text class="text bold f2" x="125.2" y="270.79999999999995">70 passed</text>
 <text class="text f8" x="200.8" y="270.79999999999995"> (70)</text>
 <text class="text dim fg" x="16" y="290.4">   Start at </text>
-<text class="text fg" x="116.80000000000001" y="290.4"> 12:38:28                                                                      </text>
+<text class="text fg" x="116.80000000000001" y="290.4"> 13:30:45                                                                      </text>
 <text class="text dim fg" x="16" y="309.99999999999994">   Duration </text>
-<text class="text fg" x="116.80000000000001" y="309.99999999999994"> 173ms</text>
-<text class="text dim fg" x="167.20000000000002" y="309.99999999999994"> (transform 215ms, setup 0ms, import 246ms, tests 26ms, environment 0ms)</text>
+<text class="text fg" x="116.80000000000001" y="309.99999999999994"> 175ms</text>
+<text class="text dim fg" x="167.20000000000002" y="309.99999999999994"> (transform 214ms, setup 0ms, import 244ms, tests 24ms, environment 0ms)</text>
 <text class="text f13" x="16" y="349.2">❯</text>
-<text class="text fg" x="24.4" y="349.2"> echo &apos;Clean and minimal loo                                                              </text>
+<text class="text fg" x="24.4" y="349.2"> echo &apos;Clean and minimal lo                                                               </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor" x="259.6" y="349.2" width="8.4" height="19.599999999999998" fill="#f8f8f2"/>
+<rect class="cursor" x="251.20000000000002" y="349.2" width="8.4" height="19.599999999999998" fill="#f8f8f2"/>
 </g>
 
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.529947;0.538064;1.000000"
-      dur="8.13s"
+      keyTimes="0.000000;0.518468;0.527087;1.000000"
+      dur="8.12s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -2097,8 +2060,8 @@
 <text class="text f2" x="24.4" y="192.39999999999998">✓</text>
 <text class="text fg" x="32.8" y="192.39999999999998"> src/pipeline/vterminal.test.ts </text>
 <text class="text dim fg" x="301.6" y="192.39999999999998">(23 tests)</text>
-<text class="text f2" x="385.6" y="192.39999999999998"> 12</text>
-<text class="text dim f2" x="410.8" y="192.39999999999998">ms</text>
+<text class="text f2" x="385.6" y="192.39999999999998"> 9</text>
+<text class="text dim f2" x="402.40000000000003" y="192.39999999999998">ms</text>
 <text class="text f2" x="24.4" y="211.99999999999997">✓</text>
 <text class="text fg" x="32.8" y="211.99999999999997"> src/pipeline/coalescer.test.ts </text>
 <text class="text dim fg" x="301.6" y="211.99999999999997">(14 tests)</text>
@@ -2111,22 +2074,22 @@
 <text class="text bold f2" x="125.2" y="270.79999999999995">70 passed</text>
 <text class="text f8" x="200.8" y="270.79999999999995"> (70)</text>
 <text class="text dim fg" x="16" y="290.4">   Start at </text>
-<text class="text fg" x="116.80000000000001" y="290.4"> 12:38:28                                                                      </text>
+<text class="text fg" x="116.80000000000001" y="290.4"> 13:30:45                                                                      </text>
 <text class="text dim fg" x="16" y="309.99999999999994">   Duration </text>
-<text class="text fg" x="116.80000000000001" y="309.99999999999994"> 173ms</text>
-<text class="text dim fg" x="167.20000000000002" y="309.99999999999994"> (transform 215ms, setup 0ms, import 246ms, tests 26ms, environment 0ms)</text>
+<text class="text fg" x="116.80000000000001" y="309.99999999999994"> 175ms</text>
+<text class="text dim fg" x="167.20000000000002" y="309.99999999999994"> (transform 214ms, setup 0ms, import 244ms, tests 24ms, environment 0ms)</text>
 <text class="text f13" x="16" y="349.2">❯</text>
-<text class="text fg" x="24.4" y="349.2"> echo &apos;Clean and minimal look                                                             </text>
+<text class="text fg" x="24.4" y="349.2"> echo &apos;Clean and minimal loo                                                              </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor" x="268" y="349.2" width="8.4" height="19.599999999999998" fill="#f8f8f2"/>
+<rect class="cursor" x="259.6" y="349.2" width="8.4" height="19.599999999999998" fill="#f8f8f2"/>
 </g>
 
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.538064;0.545935;1.000000"
-      dur="8.13s"
+      keyTimes="0.000000;0.527087;0.535705;1.000000"
+      dur="8.12s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -2156,8 +2119,8 @@
 <text class="text f2" x="24.4" y="192.39999999999998">✓</text>
 <text class="text fg" x="32.8" y="192.39999999999998"> src/pipeline/vterminal.test.ts </text>
 <text class="text dim fg" x="301.6" y="192.39999999999998">(23 tests)</text>
-<text class="text f2" x="385.6" y="192.39999999999998"> 12</text>
-<text class="text dim f2" x="410.8" y="192.39999999999998">ms</text>
+<text class="text f2" x="385.6" y="192.39999999999998"> 9</text>
+<text class="text dim f2" x="402.40000000000003" y="192.39999999999998">ms</text>
 <text class="text f2" x="24.4" y="211.99999999999997">✓</text>
 <text class="text fg" x="32.8" y="211.99999999999997"> src/pipeline/coalescer.test.ts </text>
 <text class="text dim fg" x="301.6" y="211.99999999999997">(14 tests)</text>
@@ -2170,22 +2133,22 @@
 <text class="text bold f2" x="125.2" y="270.79999999999995">70 passed</text>
 <text class="text f8" x="200.8" y="270.79999999999995"> (70)</text>
 <text class="text dim fg" x="16" y="290.4">   Start at </text>
-<text class="text fg" x="116.80000000000001" y="290.4"> 12:38:28                                                                      </text>
+<text class="text fg" x="116.80000000000001" y="290.4"> 13:30:45                                                                      </text>
 <text class="text dim fg" x="16" y="309.99999999999994">   Duration </text>
-<text class="text fg" x="116.80000000000001" y="309.99999999999994"> 173ms</text>
-<text class="text dim fg" x="167.20000000000002" y="309.99999999999994"> (transform 215ms, setup 0ms, import 246ms, tests 26ms, environment 0ms)</text>
+<text class="text fg" x="116.80000000000001" y="309.99999999999994"> 175ms</text>
+<text class="text dim fg" x="167.20000000000002" y="309.99999999999994"> (transform 214ms, setup 0ms, import 244ms, tests 24ms, environment 0ms)</text>
 <text class="text f13" x="16" y="349.2">❯</text>
-<text class="text fg" x="24.4" y="349.2"> echo &apos;Clean and minimal look!                                                            </text>
+<text class="text fg" x="24.4" y="349.2"> echo &apos;Clean and minimal look                                                             </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor" x="276.40000000000003" y="349.2" width="8.4" height="19.599999999999998" fill="#f8f8f2"/>
+<rect class="cursor" x="268" y="349.2" width="8.4" height="19.599999999999998" fill="#f8f8f2"/>
 </g>
 
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.545935;0.554052;1.000000"
-      dur="8.13s"
+      keyTimes="0.000000;0.535705;0.544324;1.000000"
+      dur="8.12s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -2215,8 +2178,8 @@
 <text class="text f2" x="24.4" y="192.39999999999998">✓</text>
 <text class="text fg" x="32.8" y="192.39999999999998"> src/pipeline/vterminal.test.ts </text>
 <text class="text dim fg" x="301.6" y="192.39999999999998">(23 tests)</text>
-<text class="text f2" x="385.6" y="192.39999999999998"> 12</text>
-<text class="text dim f2" x="410.8" y="192.39999999999998">ms</text>
+<text class="text f2" x="385.6" y="192.39999999999998"> 9</text>
+<text class="text dim f2" x="402.40000000000003" y="192.39999999999998">ms</text>
 <text class="text f2" x="24.4" y="211.99999999999997">✓</text>
 <text class="text fg" x="32.8" y="211.99999999999997"> src/pipeline/coalescer.test.ts </text>
 <text class="text dim fg" x="301.6" y="211.99999999999997">(14 tests)</text>
@@ -2229,22 +2192,22 @@
 <text class="text bold f2" x="125.2" y="270.79999999999995">70 passed</text>
 <text class="text f8" x="200.8" y="270.79999999999995"> (70)</text>
 <text class="text dim fg" x="16" y="290.4">   Start at </text>
-<text class="text fg" x="116.80000000000001" y="290.4"> 12:38:28                                                                      </text>
+<text class="text fg" x="116.80000000000001" y="290.4"> 13:30:45                                                                      </text>
 <text class="text dim fg" x="16" y="309.99999999999994">   Duration </text>
-<text class="text fg" x="116.80000000000001" y="309.99999999999994"> 173ms</text>
-<text class="text dim fg" x="167.20000000000002" y="309.99999999999994"> (transform 215ms, setup 0ms, import 246ms, tests 26ms, environment 0ms)</text>
+<text class="text fg" x="116.80000000000001" y="309.99999999999994"> 175ms</text>
+<text class="text dim fg" x="167.20000000000002" y="309.99999999999994"> (transform 214ms, setup 0ms, import 244ms, tests 24ms, environment 0ms)</text>
 <text class="text f13" x="16" y="349.2">❯</text>
-<text class="text fg" x="24.4" y="349.2"> echo &apos;Clean and minimal look!&apos;                                                           </text>
+<text class="text fg" x="24.4" y="349.2"> echo &apos;Clean and minimal look!                                                            </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor" x="284.8" y="349.2" width="8.4" height="19.599999999999998" fill="#f8f8f2"/>
+<rect class="cursor" x="276.40000000000003" y="349.2" width="8.4" height="19.599999999999998" fill="#f8f8f2"/>
 </g>
 
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.554052;0.594269;1.000000"
-      dur="8.13s"
+      keyTimes="0.000000;0.544324;0.552943;1.000000"
+      dur="8.12s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -2274,8 +2237,8 @@
 <text class="text f2" x="24.4" y="192.39999999999998">✓</text>
 <text class="text fg" x="32.8" y="192.39999999999998"> src/pipeline/vterminal.test.ts </text>
 <text class="text dim fg" x="301.6" y="192.39999999999998">(23 tests)</text>
-<text class="text f2" x="385.6" y="192.39999999999998"> 12</text>
-<text class="text dim f2" x="410.8" y="192.39999999999998">ms</text>
+<text class="text f2" x="385.6" y="192.39999999999998"> 9</text>
+<text class="text dim f2" x="402.40000000000003" y="192.39999999999998">ms</text>
 <text class="text f2" x="24.4" y="211.99999999999997">✓</text>
 <text class="text fg" x="32.8" y="211.99999999999997"> src/pipeline/coalescer.test.ts </text>
 <text class="text dim fg" x="301.6" y="211.99999999999997">(14 tests)</text>
@@ -2288,10 +2251,10 @@
 <text class="text bold f2" x="125.2" y="270.79999999999995">70 passed</text>
 <text class="text f8" x="200.8" y="270.79999999999995"> (70)</text>
 <text class="text dim fg" x="16" y="290.4">   Start at </text>
-<text class="text fg" x="116.80000000000001" y="290.4"> 12:38:28                                                                      </text>
+<text class="text fg" x="116.80000000000001" y="290.4"> 13:30:45                                                                      </text>
 <text class="text dim fg" x="16" y="309.99999999999994">   Duration </text>
-<text class="text fg" x="116.80000000000001" y="309.99999999999994"> 173ms</text>
-<text class="text dim fg" x="167.20000000000002" y="309.99999999999994"> (transform 215ms, setup 0ms, import 246ms, tests 26ms, environment 0ms)</text>
+<text class="text fg" x="116.80000000000001" y="309.99999999999994"> 175ms</text>
+<text class="text dim fg" x="167.20000000000002" y="309.99999999999994"> (transform 214ms, setup 0ms, import 244ms, tests 24ms, environment 0ms)</text>
 <text class="text f13" x="16" y="349.2">❯</text>
 <text class="text fg" x="24.4" y="349.2"> echo &apos;Clean and minimal look!&apos;                                                           </text>
 </g>
@@ -2302,8 +2265,8 @@
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.594269;0.609888;1.000000"
-      dur="8.13s"
+      keyTimes="0.000000;0.552943;0.593204;1.000000"
+      dur="8.12s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -2333,8 +2296,8 @@
 <text class="text f2" x="24.4" y="192.39999999999998">✓</text>
 <text class="text fg" x="32.8" y="192.39999999999998"> src/pipeline/vterminal.test.ts </text>
 <text class="text dim fg" x="301.6" y="192.39999999999998">(23 tests)</text>
-<text class="text f2" x="385.6" y="192.39999999999998"> 12</text>
-<text class="text dim f2" x="410.8" y="192.39999999999998">ms</text>
+<text class="text f2" x="385.6" y="192.39999999999998"> 9</text>
+<text class="text dim f2" x="402.40000000000003" y="192.39999999999998">ms</text>
 <text class="text f2" x="24.4" y="211.99999999999997">✓</text>
 <text class="text fg" x="32.8" y="211.99999999999997"> src/pipeline/coalescer.test.ts </text>
 <text class="text dim fg" x="301.6" y="211.99999999999997">(14 tests)</text>
@@ -2347,19 +2310,22 @@
 <text class="text bold f2" x="125.2" y="270.79999999999995">70 passed</text>
 <text class="text f8" x="200.8" y="270.79999999999995"> (70)</text>
 <text class="text dim fg" x="16" y="290.4">   Start at </text>
-<text class="text fg" x="116.80000000000001" y="290.4"> 12:38:28                                                                      </text>
+<text class="text fg" x="116.80000000000001" y="290.4"> 13:30:45                                                                      </text>
 <text class="text dim fg" x="16" y="309.99999999999994">   Duration </text>
-<text class="text fg" x="116.80000000000001" y="309.99999999999994"> 173ms</text>
-<text class="text dim fg" x="167.20000000000002" y="309.99999999999994"> (transform 215ms, setup 0ms, import 246ms, tests 26ms, environment 0ms)</text>
+<text class="text fg" x="116.80000000000001" y="309.99999999999994"> 175ms</text>
+<text class="text dim fg" x="167.20000000000002" y="309.99999999999994"> (transform 214ms, setup 0ms, import 244ms, tests 24ms, environment 0ms)</text>
 <text class="text f13" x="16" y="349.2">❯</text>
 <text class="text fg" x="24.4" y="349.2"> echo &apos;Clean and minimal look!&apos;                                                           </text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor" x="284.8" y="349.2" width="8.4" height="19.599999999999998" fill="#f8f8f2"/>
 </g>
 
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.609888;0.625753;1.000000"
-      dur="8.13s"
+      keyTimes="0.000000;0.593204;0.608840;1.000000"
+      dur="8.12s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -2389,8 +2355,8 @@
 <text class="text f2" x="24.4" y="192.39999999999998">✓</text>
 <text class="text fg" x="32.8" y="192.39999999999998"> src/pipeline/vterminal.test.ts </text>
 <text class="text dim fg" x="301.6" y="192.39999999999998">(23 tests)</text>
-<text class="text f2" x="385.6" y="192.39999999999998"> 12</text>
-<text class="text dim f2" x="410.8" y="192.39999999999998">ms</text>
+<text class="text f2" x="385.6" y="192.39999999999998"> 9</text>
+<text class="text dim f2" x="402.40000000000003" y="192.39999999999998">ms</text>
 <text class="text f2" x="24.4" y="211.99999999999997">✓</text>
 <text class="text fg" x="32.8" y="211.99999999999997"> src/pipeline/coalescer.test.ts </text>
 <text class="text dim fg" x="301.6" y="211.99999999999997">(14 tests)</text>
@@ -2403,24 +2369,19 @@
 <text class="text bold f2" x="125.2" y="270.79999999999995">70 passed</text>
 <text class="text f8" x="200.8" y="270.79999999999995"> (70)</text>
 <text class="text dim fg" x="16" y="290.4">   Start at </text>
-<text class="text fg" x="116.80000000000001" y="290.4"> 12:38:28                                                                      </text>
+<text class="text fg" x="116.80000000000001" y="290.4"> 13:30:45                                                                      </text>
 <text class="text dim fg" x="16" y="309.99999999999994">   Duration </text>
-<text class="text fg" x="116.80000000000001" y="309.99999999999994"> 173ms</text>
-<text class="text dim fg" x="167.20000000000002" y="309.99999999999994"> (transform 215ms, setup 0ms, import 246ms, tests 26ms, environment 0ms)</text>
+<text class="text fg" x="116.80000000000001" y="309.99999999999994"> 175ms</text>
+<text class="text dim fg" x="167.20000000000002" y="309.99999999999994"> (transform 214ms, setup 0ms, import 244ms, tests 24ms, environment 0ms)</text>
 <text class="text f13" x="16" y="349.2">❯</text>
 <text class="text fg" x="24.4" y="349.2"> echo &apos;Clean and minimal look!&apos;                                                           </text>
-<text class="text fg" x="16" y="368.79999999999995">Clean and minimal look!                                                                    </text>
-<text class="text f13" x="16" y="388.4">❯</text>
-</g>
-<g class="cursor-layer">
-<rect class="cursor" x="32.8" y="388.4" width="8.4" height="19.599999999999998" fill="#f8f8f2"/>
 </g>
 
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.625753;0.874800;1.000000"
-      dur="8.13s"
+      keyTimes="0.000000;0.608840;0.624723;1.000000"
+      dur="8.12s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -2450,8 +2411,8 @@
 <text class="text f2" x="24.4" y="192.39999999999998">✓</text>
 <text class="text fg" x="32.8" y="192.39999999999998"> src/pipeline/vterminal.test.ts </text>
 <text class="text dim fg" x="301.6" y="192.39999999999998">(23 tests)</text>
-<text class="text f2" x="385.6" y="192.39999999999998"> 12</text>
-<text class="text dim f2" x="410.8" y="192.39999999999998">ms</text>
+<text class="text f2" x="385.6" y="192.39999999999998"> 9</text>
+<text class="text dim f2" x="402.40000000000003" y="192.39999999999998">ms</text>
 <text class="text f2" x="24.4" y="211.99999999999997">✓</text>
 <text class="text fg" x="32.8" y="211.99999999999997"> src/pipeline/coalescer.test.ts </text>
 <text class="text dim fg" x="301.6" y="211.99999999999997">(14 tests)</text>
@@ -2464,10 +2425,10 @@
 <text class="text bold f2" x="125.2" y="270.79999999999995">70 passed</text>
 <text class="text f8" x="200.8" y="270.79999999999995"> (70)</text>
 <text class="text dim fg" x="16" y="290.4">   Start at </text>
-<text class="text fg" x="116.80000000000001" y="290.4"> 12:38:28                                                                      </text>
+<text class="text fg" x="116.80000000000001" y="290.4"> 13:30:45                                                                      </text>
 <text class="text dim fg" x="16" y="309.99999999999994">   Duration </text>
-<text class="text fg" x="116.80000000000001" y="309.99999999999994"> 173ms</text>
-<text class="text dim fg" x="167.20000000000002" y="309.99999999999994"> (transform 215ms, setup 0ms, import 246ms, tests 26ms, environment 0ms)</text>
+<text class="text fg" x="116.80000000000001" y="309.99999999999994"> 175ms</text>
+<text class="text dim fg" x="167.20000000000002" y="309.99999999999994"> (transform 214ms, setup 0ms, import 244ms, tests 24ms, environment 0ms)</text>
 <text class="text f13" x="16" y="349.2">❯</text>
 <text class="text fg" x="24.4" y="349.2"> echo &apos;Clean and minimal look!&apos;                                                           </text>
 <text class="text fg" x="16" y="368.79999999999995">Clean and minimal look!                                                                    </text>
@@ -2480,8 +2441,8 @@
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.874800;0.877014;1.000000"
-      dur="8.13s"
+      keyTimes="0.000000;0.624723;0.874538;1.000000"
+      dur="8.12s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -2511,8 +2472,8 @@
 <text class="text f2" x="24.4" y="192.39999999999998">✓</text>
 <text class="text fg" x="32.8" y="192.39999999999998"> src/pipeline/vterminal.test.ts </text>
 <text class="text dim fg" x="301.6" y="192.39999999999998">(23 tests)</text>
-<text class="text f2" x="385.6" y="192.39999999999998"> 12</text>
-<text class="text dim f2" x="410.8" y="192.39999999999998">ms</text>
+<text class="text f2" x="385.6" y="192.39999999999998"> 9</text>
+<text class="text dim f2" x="402.40000000000003" y="192.39999999999998">ms</text>
 <text class="text f2" x="24.4" y="211.99999999999997">✓</text>
 <text class="text fg" x="32.8" y="211.99999999999997"> src/pipeline/coalescer.test.ts </text>
 <text class="text dim fg" x="301.6" y="211.99999999999997">(14 tests)</text>
@@ -2525,10 +2486,71 @@
 <text class="text bold f2" x="125.2" y="270.79999999999995">70 passed</text>
 <text class="text f8" x="200.8" y="270.79999999999995"> (70)</text>
 <text class="text dim fg" x="16" y="290.4">   Start at </text>
-<text class="text fg" x="116.80000000000001" y="290.4"> 12:38:28                                                                      </text>
+<text class="text fg" x="116.80000000000001" y="290.4"> 13:30:45                                                                      </text>
 <text class="text dim fg" x="16" y="309.99999999999994">   Duration </text>
-<text class="text fg" x="116.80000000000001" y="309.99999999999994"> 173ms</text>
-<text class="text dim fg" x="167.20000000000002" y="309.99999999999994"> (transform 215ms, setup 0ms, import 246ms, tests 26ms, environment 0ms)</text>
+<text class="text fg" x="116.80000000000001" y="309.99999999999994"> 175ms</text>
+<text class="text dim fg" x="167.20000000000002" y="309.99999999999994"> (transform 214ms, setup 0ms, import 244ms, tests 24ms, environment 0ms)</text>
+<text class="text f13" x="16" y="349.2">❯</text>
+<text class="text fg" x="24.4" y="349.2"> echo &apos;Clean and minimal look!&apos;                                                           </text>
+<text class="text fg" x="16" y="368.79999999999995">Clean and minimal look!                                                                    </text>
+<text class="text f13" x="16" y="388.4">❯</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor" x="32.8" y="388.4" width="8.4" height="19.599999999999998" fill="#f8f8f2"/>
+</g>
+
+    <animate
+      attributeName="visibility"
+      values="hidden;visible;hidden;hidden"
+      keyTimes="0.000000;0.874538;0.876878;1.000000"
+      dur="8.12s"
+      repeatCount="indefinite"
+      calcMode="discrete"
+      fill="freeze"
+    />
+  </g>
+
+  <g id="frame-50" visibility="hidden">
+    
+
+<rect class="window-bg" x="0" y="0" width="788" height="424" fill="#282a36" rx="8" ry="8"/>
+<g class="bg-layer">
+<rect x="16" y="133.6" width="42" height="19.599999999999998" fill="#8be9fd"/>
+</g>
+<g class="text-layer">
+<text class="text f13" x="16" y="16">❯</text>
+<text class="text fg" x="24.4" y="16"> npm test                                                                                 </text>
+<text class="text fg" x="16" y="55.199999999999996">&gt; dvd-cli@1.0.0 test                                                                       </text>
+<text class="text fg" x="16" y="74.8">&gt; vitest run                                                                               </text>
+<text class="text bold fg" x="16" y="133.6"> RUN </text>
+<text class="text f6" x="66.4" y="133.6">v4.0.18 </text>
+<text class="text f8" x="133.60000000000002" y="133.6">/Users/talhayut/projects/dvd</text>
+<text class="text f2" x="24.4" y="172.79999999999998">✓</text>
+<text class="text fg" x="32.8" y="172.79999999999998"> src/parser/cd-parser.test.ts </text>
+<text class="text dim fg" x="284.8" y="172.79999999999998">(33 tests)</text>
+<text class="text f2" x="368.8" y="172.79999999999998"> 4</text>
+<text class="text dim f2" x="385.6" y="172.79999999999998">ms</text>
+<text class="text f2" x="24.4" y="192.39999999999998">✓</text>
+<text class="text fg" x="32.8" y="192.39999999999998"> src/pipeline/vterminal.test.ts </text>
+<text class="text dim fg" x="301.6" y="192.39999999999998">(23 tests)</text>
+<text class="text f2" x="385.6" y="192.39999999999998"> 9</text>
+<text class="text dim f2" x="402.40000000000003" y="192.39999999999998">ms</text>
+<text class="text f2" x="24.4" y="211.99999999999997">✓</text>
+<text class="text fg" x="32.8" y="211.99999999999997"> src/pipeline/coalescer.test.ts </text>
+<text class="text dim fg" x="301.6" y="211.99999999999997">(14 tests)</text>
+<text class="text f2" x="385.6" y="211.99999999999997"> 10</text>
+<text class="text dim f2" x="410.8" y="211.99999999999997">ms</text>
+<text class="text dim fg" x="16" y="251.2"> Test Files </text>
+<text class="text bold f2" x="125.2" y="251.2">3 passed</text>
+<text class="text f8" x="192.4" y="251.2"> (3)</text>
+<text class="text dim fg" x="16" y="270.79999999999995">      Tests </text>
+<text class="text bold f2" x="125.2" y="270.79999999999995">70 passed</text>
+<text class="text f8" x="200.8" y="270.79999999999995"> (70)</text>
+<text class="text dim fg" x="16" y="290.4">   Start at </text>
+<text class="text fg" x="116.80000000000001" y="290.4"> 13:30:45                                                                      </text>
+<text class="text dim fg" x="16" y="309.99999999999994">   Duration </text>
+<text class="text fg" x="116.80000000000001" y="309.99999999999994"> 175ms</text>
+<text class="text dim fg" x="167.20000000000002" y="309.99999999999994"> (transform 214ms, setup 0ms, import 244ms, tests 24ms, environment 0ms)</text>
 <text class="text f13" x="16" y="349.2">❯</text>
 <text class="text fg" x="24.4" y="349.2"> echo &apos;Clean and minimal look!&apos;                                                           </text>
 <text class="text fg" x="16" y="368.79999999999995">Clean and minimal look!                                                                    </text>
@@ -2541,8 +2563,8 @@
     <animate
       attributeName="visibility"
       values="hidden;visible;visible"
-      keyTimes="0.000000;0.877014;1.000000"
-      dur="8.13s"
+      keyTimes="0.000000;0.876878;1.000000"
+      dur="8.12s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
