@@ -169,6 +169,24 @@ All available `Set` commands for configuring your terminal recording:
 | `Set FontFamily <name>` | Font family name (system font or web font) | SF Mono, Monaco, etc. |
 | `Set EmbedFont <path>` | Embed a font file (woff2, ttf, otf) into the SVG | none |
 
+**Embedding fonts** ensures your SVG looks the same everywhere, even if the viewer doesn't have the font installed:
+
+```
+# Use a system font (viewer must have it installed)
+Set FontFamily "Fira Code"
+
+# Or embed a font file directly into the SVG (recommended)
+Set EmbedFont examples/fonts/JetBrainsMono-Regular.woff2
+```
+
+Pre-packaged fonts in `examples/fonts/`:
+- `JetBrainsMono-Regular.woff2` - Popular coding font with ligatures
+- `FiraCode-Regular.woff2` - Another great coding font with ligatures
+- `SourceCodePro-Regular.woff2` - Adobe's clean monospace font
+- `IBMPlexMono-Regular.woff2` - IBM's modern monospace font
+- `RobotoMono-Regular.woff2` - Google's Roboto in monospace
+- `UbuntuMono-Regular.woff2` - Ubuntu's distinctive monospace font
+
 ### Appearance
 
 | Command | Description | Default |
@@ -250,6 +268,7 @@ Type "Height auto-calculated"
 See the [examples/](examples/) directory for complete working examples:
 
 - `ansi-colors.cd` - ANSI color demonstration
+- `embedded-font.cd` - Custom font embedding
 - `keyboard-navigation-demo.cd` - Text selection, word movement, shortcuts
 - `themes.cd` - All available themes
 - `custom-prompt.cd` - Custom shell prompts

@@ -1,0 +1,25 @@
+# Embedded Font Example
+# Demonstrates embedding a custom font directly into the SVG
+# The font is base64-encoded, so the SVG works offline without font installation
+
+Output examples/svgs/embedded-font.svg
+
+Set Width 600
+Set Height 250
+Set FontSize 18
+Set Theme dracula
+Set Title "Embedded Font Demo"
+Set Template macos
+
+# Embed JetBrains Mono - a popular coding font with ligatures
+Set EmbedFont examples/fonts/JetBrainsMono-Regular.woff2
+
+Type "const greeting = 'Hello, World!';"
+Sleep 500ms
+Enter
+Type "console.log(greeting);"
+Sleep 500ms
+Enter
+Enter
+Type "// Font is embedded - works everywhere!"
+Sleep 1s
