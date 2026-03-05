@@ -194,6 +194,16 @@ export class CDExecutor {
 
     buffer[this.context.cursorY] = displayLine;
 
+    // Calculate layout constants
+    const charWidth = this.context.fontSize * 0.6;
+    const lineHeight = this.context.fontSize * 1.4;
+    const padding = this.context.padding ?? 16;
+    const headerHeight = this.context.template === 'minimal' ? 0 : 40;
+    const contentStartY = headerHeight + padding;
+    const maxContentHeight = this.context.height - contentStartY - padding;
+    const maxVisibleRows = Math.floor(maxContentHeight / lineHeight);
+    const visibleCols = Math.floor((this.context.width - padding * 2) / charWidth);
+
     // Track max dimensions for auto-sizing
     if (!this.context.scroll && (this.context.autoWidth || this.context.autoHeight)) {
       for (const line of buffer) {
@@ -232,16 +242,15 @@ export class CDExecutor {
       visibleCursorY = this.context.cursorY;
     }
 
-    // Calculate the maximum visible row that fits in the SVG
-    const lineHeight = this.context.fontSize * 1.4;
-    const padding = this.context.padding ?? 16;
-    const headerHeight = this.context.template === 'minimal' ? 0 : 40;
-    const contentStartY = headerHeight + padding;
-    const maxContentHeight = this.context.height - contentStartY - padding;
-    const maxVisibleRows = Math.floor(maxContentHeight / lineHeight);
+    // Handle cursor wrapping when text exceeds visible columns
+    // Calculate how many visual rows the cursor has wrapped down
+    const cursorWrapRows = Math.floor(adjustedCursorX / visibleCols);
+    const wrappedCursorX = adjustedCursorX % visibleCols;
+    const wrappedCursorY = visibleCursorY + cursorWrapRows;
 
     // Clamp cursor to fit within SVG viewport
-    visibleCursorY = Math.max(0, Math.min(visibleCursorY, maxVisibleRows - 1));
+    const finalCursorY = Math.max(0, Math.min(wrappedCursorY, maxVisibleRows - 1));
+    const finalCursorX = wrappedCursorX;
 
     // Update VTerminal grid with current content
     const content = visibleBuffer.join('\n');
@@ -276,7 +285,7 @@ export class CDExecutor {
         ? {
             start: this.context.selectionStart + (this.context.isExecutingCommand ? 0 : this.stripAnsi(this.context.promptPrefix).length),
             end: this.context.selectionEnd + (this.context.isExecutingCommand ? 0 : this.stripAnsi(this.context.promptPrefix).length),
-            row: visibleCursorY,
+            row: finalCursorY,
           }
         : null;
 
@@ -284,7 +293,7 @@ export class CDExecutor {
     // When showCursor is true, always render the cursor - the CSS blink animation handles visibility
     const { svg } = emit(
       rows,
-      showCursor ? { row: visibleCursorY, col: adjustedCursorX } : null,
+      showCursor ? { row: finalCursorY, col: finalCursorX } : null,
       showCursor,
       {
         theme: this.context.theme,
@@ -308,8 +317,8 @@ export class CDExecutor {
     // Create terminal state for backward compatibility
     const state: TerminalState = {
       content,
-      cursorX: adjustedCursorX,
-      cursorY: visibleCursorY,
+      cursorX: finalCursorX,
+      cursorY: finalCursorY,
       width: this.context.width,
       height: this.context.height,
       fontSize: this.context.fontSize,
@@ -332,7 +341,7 @@ export class CDExecutor {
     // Also store frame data for animation
     this.context.frameData.push({
       rows,
-      cursor: showCursor ? { row: visibleCursorY, col: adjustedCursorX } : null,
+      cursor: showCursor ? { row: finalCursorY, col: finalCursorX } : null,
       cursorVisible: showCursor,
       timestamp,
     });
@@ -447,11 +456,15 @@ export class CDExecutor {
       });
 
       child.on('close', () => {
-        const outputLines = output.split('\n');
+        // Remove trailing newline to avoid extra blank line
+        const trimmedOutput = output.endsWith('\n') ? output.slice(0, -1) : output;
+        const outputLines = trimmedOutput.split('\n');
+
         for (let i = 0; i < outputLines.length; i++) {
           this.context.lines[outputStartLine + i] = outputLines[i];
         }
 
+        // Position cursor on line after the last output line (where prompt will go)
         this.context.cursorY = outputStartLine + outputLines.length;
         this.context.cursorX = 0;
 

@@ -1,6 +1,12 @@
 /**
  * SVG Animator
  * Combines pre-rendered terminal SVGs into animated SVG
+ *
+ * Uses SMIL <animate> with calcMode="discrete" for flicker-free animations.
+ * Strategy:
+ * - Static background is always visible (never animated)
+ * - Each frame is stacked with visibility animation
+ * - calcMode="discrete" ensures instant transitions with no interpolation
  */
 
 import type { TerminalFrame } from '../executor/cd-executor';
@@ -54,64 +60,15 @@ function getSVGDimensions(svg: string): { width: number; height: number } {
 }
 
 /**
- * Create CSS keyframes for animation
- *
- * Strategy: Each frame has opacity 0 by default, becomes visible at its start time,
- * and becomes hidden when the next frame starts.
- * Uses linear timing with instant opacity changes (0 to 1 or 1 to 0).
+ * Get background color from first frame
  */
-function createKeyframes(frames: TerminalFrame[]): string {
-  if (frames.length === 0) return '';
-
-  const totalDuration = frames[frames.length - 1].timestamp;
-  if (totalDuration === 0) return '';
-
-  const css: string[] = [];
-
-  // Calculate frame start percentages
-  const framePercents = frames.map(f => (f.timestamp / totalDuration) * 100);
-
-  for (let i = 0; i < frames.length; i++) {
-    const startPercent = framePercents[i];
-    const endPercent = i < frames.length - 1 ? framePercents[i + 1] : 100;
-
-    if (i === 0) {
-      // First frame: visible from start until next frame begins
-      css.push(`
-    @keyframes frame-${i}-anim {
-      0% { opacity: 1; }
-      ${endPercent.toFixed(4)}% { opacity: 1; }
-      ${(endPercent + 0.0001).toFixed(4)}% { opacity: 0; }
-      100% { opacity: 0; }
-    }`);
-    } else if (i === frames.length - 1) {
-      // Last frame: hidden until start, then visible to end
-      css.push(`
-    @keyframes frame-${i}-anim {
-      0% { opacity: 0; }
-      ${(startPercent - 0.0001).toFixed(4)}% { opacity: 0; }
-      ${startPercent.toFixed(4)}% { opacity: 1; }
-      100% { opacity: 1; }
-    }`);
-    } else {
-      // Middle frames: hidden, visible during their window, then hidden
-      css.push(`
-    @keyframes frame-${i}-anim {
-      0% { opacity: 0; }
-      ${(startPercent - 0.0001).toFixed(4)}% { opacity: 0; }
-      ${startPercent.toFixed(4)}% { opacity: 1; }
-      ${endPercent.toFixed(4)}% { opacity: 1; }
-      ${(endPercent + 0.0001).toFixed(4)}% { opacity: 0; }
-      100% { opacity: 0; }
-    }`);
-    }
-  }
-
-  return css.join('');
+function getBackgroundColor(svg: string): string {
+  const bgMatch = svg.match(/class="window-bg"[^>]*fill="([^"]*)"/);
+  return bgMatch ? bgMatch[1] : '#282a36';
 }
 
 /**
- * Create animated SVG from frames
+ * Create animated SVG from frames using SMIL animations
  */
 export async function createAnimatedSVG(
   frames: TerminalFrame[],
@@ -121,58 +78,113 @@ export async function createAnimatedSVG(
     throw new Error('No frames to animate');
   }
 
-  // Get dimensions from first frame
+  // Get dimensions and background from first frame
   const { width, height } = getSVGDimensions(frames[0].svg);
+  const bgColor = getBackgroundColor(frames[0].svg);
 
-  // Calculate duration
+  // Calculate duration in seconds
   const totalDuration = frames[frames.length - 1].timestamp;
   const pauseAtEnd = options.pauseAtEnd || 1000;
-  const animationDuration = ((totalDuration + pauseAtEnd) / 1000).toFixed(2);
-  const animationIterationCount = options.loop !== false ? 'infinite' : '1';
-
-  // Create keyframes
-  const keyframes = createKeyframes(frames);
+  const animationDurationMs = totalDuration + pauseAtEnd;
+  const animationDurationS = (animationDurationMs / 1000).toFixed(2);
+  const repeatCount = options.loop !== false ? 'indefinite' : '1';
 
   // Extract base stylesheet from first frame (contains color definitions, font styles, etc.)
   const baseStyles = extractStyleBlock(frames[0].svg);
 
-  // Extract frame contents - styles are handled separately
-  const frameBodies = frames.map((frame, i) => ({
-    id: `frame-${i}`,
-    content: extractSVGBody(frame.svg, `f${i}`),
-  }));
+  // Calculate keyTimes for each frame (normalized 0-1)
+  const keyTimes: number[] = frames.map(f => f.timestamp / animationDurationMs);
 
-  // Build animated SVG
-  const svg = `<svg width="${width}" height="${height}" xmlns="http://www.w3.org/2000/svg">
-  <style>
-    /* Base styles from first frame */
-    ${baseStyles}
+  // Build visibility values for each frame
+  // Each frame needs: hidden until its time, visible during its window, hidden after
+  const frameAnimations: string[] = [];
 
-    /* Animation keyframes */
-    ${keyframes}
+  for (let i = 0; i < frames.length; i++) {
+    const frameContent = extractSVGBody(frames[i].svg, `f${i}`);
 
-    .frame {
-      animation-duration: ${animationDuration}s;
-      animation-timing-function: linear;
-      animation-iteration-count: ${animationIterationCount};
-      animation-fill-mode: both;
+    // Build keyTimes and values for this frame's visibility
+    const times: number[] = [];
+    const values: string[] = [];
+
+    if (i === 0) {
+      // First frame: visible from start until next frame
+      times.push(0);
+      values.push('visible');
+
+      if (frames.length > 1) {
+        times.push(keyTimes[1]);
+        values.push('hidden');
+      }
+
+      times.push(1);
+      values.push('hidden');
+    } else if (i === frames.length - 1) {
+      // Last frame: hidden until its time, then visible to end
+      times.push(0);
+      values.push('hidden');
+
+      times.push(keyTimes[i]);
+      values.push('visible');
+
+      times.push(1);
+      values.push('visible');
+    } else {
+      // Middle frames: hidden, visible during window, hidden
+      times.push(0);
+      values.push('hidden');
+
+      times.push(keyTimes[i]);
+      values.push('visible');
+
+      times.push(keyTimes[i + 1]);
+      values.push('hidden');
+
+      times.push(1);
+      values.push('hidden');
     }
 
-    ${frames.map((_, i) => `
-    .frame-${i} {
-      animation-name: frame-${i}-anim;
-    }`).join('')}
+    // Dedupe consecutive identical times/values
+    const dedupedTimes: number[] = [times[0]];
+    const dedupedValues: string[] = [values[0]];
+    for (let j = 1; j < times.length; j++) {
+      if (times[j] !== dedupedTimes[dedupedTimes.length - 1]) {
+        dedupedTimes.push(times[j]);
+        dedupedValues.push(values[j]);
+      }
+    }
+
+    const keyTimesStr = dedupedTimes.map(t => t.toFixed(6)).join(';');
+    const valuesStr = dedupedValues.join(';');
+
+    // Initial visibility: first frame visible, rest hidden
+    const initialVisibility = i === 0 ? 'visible' : 'hidden';
+
+    frameAnimations.push(`
+  <g id="frame-${i}" visibility="${initialVisibility}">
+    ${frameContent}
+    <animate
+      attributeName="visibility"
+      values="${valuesStr}"
+      keyTimes="${keyTimesStr}"
+      dur="${animationDurationS}s"
+      repeatCount="${repeatCount}"
+      calcMode="discrete"
+      fill="freeze"
+    />
+  </g>`);
+  }
+
+  // Build animated SVG with persistent background
+  const svg = `<svg width="${width}" height="${height}" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    ${baseStyles}
   </style>
 
-  <defs>
-    ${frameBodies.map((frame) => `
-    <g id="${frame.id}">
-      ${frame.content}
-    </g>`).join('')}
-  </defs>
+  <!-- Persistent background - never animated -->
+  <rect width="100%" height="100%" fill="${bgColor}" />
 
-  ${frameBodies.map((frame, i) => `
-  <use href="#${frame.id}" class="frame frame-${i}" />`).join('')}
+  <!-- Animated frames with discrete visibility transitions -->
+  ${frameAnimations.join('\n')}
 </svg>`;
 
   return svg;

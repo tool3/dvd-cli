@@ -431,10 +431,20 @@ function getColorClass(color: string, theme: Theme): string | null {
 }
 
 /**
- * Escape XML special characters
+ * Strip ANSI escape sequences from text
+ */
+function stripAnsi(text: string): string {
+  return text
+    .replace(/\x1b\[[0-9;]*m/g, '')           // SGR (colors)
+    .replace(/\x1b\[[0-9;]*[A-HJKSTfsu]/g, '') // Cursor movement
+    .replace(/\x1b\[\?[0-9;]*[hl]/g, '');      // Mode control
+}
+
+/**
+ * Escape XML special characters and strip ANSI codes
  */
 function escapeXml(text: string): string {
-  return text
+  return stripAnsi(text)
     .replace(/&/g, '&amp;')
     .replace(/</g, '&lt;')
     .replace(/>/g, '&gt;')
