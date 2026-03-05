@@ -1,15 +1,24 @@
 /**
  * CD Command Executor
- * Executes real commands with typing effect and cursor
+ * Executes .cd scripts and generates animated SVG frames
+ *
+ * Uses the new pipeline: VTerminal → Coalescer → SVG Emitter
  */
 
 import { spawn } from 'node:child_process';
 import { writeFileSync } from 'node:fs';
 import { resolve } from 'node:path';
 import type { CDCommand, CDScript } from '../parser/cd-parser';
-import { renderTerminalSVG, createTerminalState, type TerminalState } from './terminal-renderer';
-import { themes, type Theme, shellfie, templates } from 'shellfie';
-import { TerminalBuffer } from './terminal-buffer';
+import type { GridState, Theme } from '../types';
+import { createGridState, processInput } from '../pipeline/vterminal';
+import { coalesce } from '../pipeline/coalescer';
+import { emit, type FrameData } from '../pipeline/svg-emitter';
+import { themes as pipelineThemes } from '../pipeline';
+import { themes as shellfieThemes } from 'shellfie';
+
+// ============================================================================
+// Types
+// ============================================================================
 
 export interface TerminalFrame {
   timestamp: number;
@@ -17,42 +26,17 @@ export interface TerminalFrame {
   state: TerminalState;
 }
 
-export interface SimulatorContext {
-  lines: string[];
-  currentLine: string;
+export interface TerminalState {
+  content: string;
   cursorX: number;
   cursorY: number;
-  frames: TerminalFrame[];
-  clipboard: string;
-  startTime: number;
   width: number;
   height: number;
   fontSize: number;
-  typingSpeed: number; // milliseconds per character
-  title?: string;
-  template?: 'macos' | 'windows' | 'minimal';
-  promptPrefix: string; // ANSI formatted prompt prefix
-  theme?: Theme;
-  cursorBlink: boolean; // Enable/disable cursor blinking
-  selectionStart?: number; // Selection start position (for text selection)
-  selectionEnd?: number; // Selection end position
-  watermark?: string; // Watermark text to display
-  screenshotCounter: number; // Counter for auto-named screenshots
-  outputPath?: string; // Output path from DVD script
-  autoWidth: boolean; // Whether width should be auto-calculated
-  autoHeight: boolean; // Whether height should be auto-calculated
-  maxLineLength: number; // Track max line length for auto-width
-  maxLines: number; // Track max lines for auto-height
-  isExecutingCommand: boolean; // True when running a command (don't show prompt)
-  scroll: boolean; // Enable scrolling when content exceeds terminal height
-  scrollOffset: number; // Current scroll offset (first visible line)
-  // Theme overrides
-  headerBackground?: string; // Override header/title bar background color
-  footerBackground?: string; // Override footer background color
-  borderColor?: string; // Override border color
-  borderWidth?: number; // Override border width
-  borderRadius?: number; // Override border radius
-  padding?: number; // Override content padding
+  showCursor: boolean;
+  activeCursor: boolean;
+  selectionStart?: number;
+  selectionEnd?: number;
 }
 
 export interface CDExecutorOptions {
@@ -66,111 +50,151 @@ export interface CDExecutorOptions {
   onProgress?: (current: number, total: number, description?: string) => void;
 }
 
+interface ExecutorContext {
+  // Terminal grid state (using VTerminal)
+  grid: GridState;
+
+  // Line-based state for typing simulation
+  lines: string[];
+  currentLine: string;
+  cursorX: number;
+  cursorY: number;
+
+  // Frame capture
+  frames: TerminalFrame[];
+  frameData: FrameData[];
+  startTime: number;
+
+  // Configuration
+  width: number;
+  height: number;
+  fontSize: number;
+  typingSpeed: number;
+  title?: string;
+  template: 'macos' | 'windows' | 'minimal';
+  theme: Theme;
+  promptPrefix: string;
+  watermark?: string;
+  cursorBlink: boolean;
+
+  // Selection state
+  selectionStart?: number;
+  selectionEnd?: number;
+
+  // Clipboard
+  clipboard: string;
+
+  // Screenshot tracking
+  screenshotCounter: number;
+  outputPath?: string;
+
+  // Auto-sizing
+  autoWidth: boolean;
+  autoHeight: boolean;
+  maxLineLength: number;
+  maxLines: number;
+
+  // Scrolling
+  scroll: boolean;
+  scrollOffset: number;
+
+  // Execution state
+  isExecutingCommand: boolean;
+
+  // Style overrides
+  headerBackground?: string;
+  footerBackground?: string;
+  borderColor?: string;
+  borderWidth?: number;
+  borderRadius?: number;
+  padding?: number;
+}
+
+// ============================================================================
+// CDExecutor Class
+// ============================================================================
+
 export class CDExecutor {
-  private context: SimulatorContext;
+  private context: ExecutorContext;
   private options: CDExecutorOptions;
 
   constructor(options: CDExecutorOptions = {}) {
     this.options = options;
 
+    const width = options.width || 800;
+    const height = options.height || 600;
+    const fontSize = options.fontSize || 14;
+
+    // Calculate terminal grid dimensions
+    const charWidth = fontSize * 0.6;
+    const lineHeight = fontSize * 1.4;
+    const padding = 16;
+    const headerHeight = options.template === 'minimal' ? 0 : 40;
+    const termWidth = Math.floor((width - padding * 2) / charWidth);
+    const termHeight = Math.floor((height - headerHeight - padding * 2) / lineHeight);
+
     this.context = {
+      // VTerminal grid
+      grid: createGridState(termWidth, termHeight),
+
+      // Line-based state
       lines: [''],
       currentLine: '',
       cursorX: 0,
       cursorY: 0,
+
+      // Frames
       frames: [],
-      clipboard: '',
+      frameData: [],
       startTime: Date.now(),
-      width: options.width || 800,
-      height: options.height || 600,
-      fontSize: options.fontSize || 14,
-      typingSpeed: 50, // Default 50ms per character
+
+      // Configuration
+      width,
+      height,
+      fontSize,
+      typingSpeed: 50,
       title: options.title,
       template: options.template || 'minimal',
-      promptPrefix: '\x1b[95m❯\x1b[0m ', // Default: pink > character
-      cursorBlink: true, // Default: cursor blinks
+      theme: options.theme || pipelineThemes.dracula,
+      promptPrefix: '\x1b[95m❯\x1b[0m ',
+      cursorBlink: true,
+
+      // State
+      clipboard: '',
       screenshotCounter: 0,
       autoWidth: !options.width,
       autoHeight: !options.height,
       maxLineLength: 0,
       maxLines: 0,
-      isExecutingCommand: false,
-      // Scroll is only enabled when explicit dimensions are set
-      // Auto-sizing (no width/height) requires scroll to be off to measure content
       scroll: !!(options.width && options.height),
       scrollOffset: 0,
+      isExecutingCommand: false,
     };
   }
 
-  /**
-   * Calculate the number of visible lines based on terminal height
-   */
-  private getVisibleLineCount(): number {
-    // Get template from shellfie for accurate header height
-    const templateName = this.context.template || 'minimal';
-    const template = templates[templateName as keyof typeof templates] || templates.minimal;
-    const headerHeight = template.shell.titleBar ? template.shell.titleBarHeight : 0;
-    const padding = template.shell.padding;
-    const lineHeight = this.context.fontSize * 1.4;
-    const watermarkHeight = this.context.watermark ? lineHeight : 0;
-    const contentHeight = this.context.height - headerHeight - padding - watermarkHeight - padding;
-    return Math.floor(contentHeight / lineHeight);
-  }
+  // ==========================================================================
+  // Frame Capture
+  // ==========================================================================
 
-  /**
-   * Update scroll offset to keep cursor visible
-   */
-  private updateScrollOffset(): void {
-    if (!this.context.scroll) return;
-
-    const visibleLines = this.getVisibleLineCount();
-    const cursorY = this.context.cursorY;
-
-    // If cursor is below visible area, scroll down
-    if (cursorY >= this.context.scrollOffset + visibleLines) {
-      this.context.scrollOffset = cursorY - visibleLines + 1;
-    }
-    // If cursor is above visible area, scroll up
-    else if (cursorY < this.context.scrollOffset) {
-      this.context.scrollOffset = cursorY;
-    }
-  }
-
-  /**
-   * Capture current terminal state as a frame
-   */
   private captureFrame(showCursor: boolean = true, activeCursor: boolean = false): void {
     const buffer = [...this.context.lines];
 
-    // Only show prefix when not executing a command (like a real terminal)
-    // During command execution, just show the current line content (output)
+    // Build display line with or without prompt
     let displayLine: string;
     let adjustedCursorX: number;
-    let adjustedSelectionStart: number | undefined;
-    let adjustedSelectionEnd: number | undefined;
 
     if (this.context.isExecutingCommand) {
-      // During command execution, no prefix
       displayLine = this.context.currentLine;
       adjustedCursorX = this.context.cursorX;
-      adjustedSelectionStart = this.context.selectionStart;
-      adjustedSelectionEnd = this.context.selectionEnd;
     } else {
-      // Normal mode: prepend prefix to current line for display
       displayLine = this.context.promptPrefix + this.context.currentLine;
       const prefixLength = this.stripAnsi(this.context.promptPrefix).length;
       adjustedCursorX = this.context.cursorX + prefixLength;
-      adjustedSelectionStart = this.context.selectionStart !== undefined
-        ? this.context.selectionStart + prefixLength
-        : undefined;
-      adjustedSelectionEnd = this.context.selectionEnd !== undefined
-        ? this.context.selectionEnd + prefixLength
-        : undefined;
     }
 
     buffer[this.context.cursorY] = displayLine;
 
-    // Track max dimensions for auto-sizing (only when not scrolling)
+    // Track max dimensions for auto-sizing
     if (!this.context.scroll && (this.context.autoWidth || this.context.autoHeight)) {
       for (const line of buffer) {
         const lineLength = this.stripAnsi(line).length;
@@ -183,12 +207,11 @@ export class CDExecutor {
       }
     }
 
-    // Handle scrolling: only show visible lines
+    // Handle scrolling
     let visibleBuffer: string[];
     let visibleCursorY: number;
 
     if (this.context.scroll) {
-      this.updateScrollOffset();
       const visibleLines = this.getVisibleLineCount();
       const startLine = this.context.scrollOffset;
       const endLine = Math.min(startLine + visibleLines, buffer.length);
@@ -199,89 +222,112 @@ export class CDExecutor {
       visibleCursorY = this.context.cursorY;
     }
 
-    const state = createTerminalState(
-      visibleBuffer.join('\n'),
-      adjustedCursorX,
-      visibleCursorY,
-      this.context.width,
-      this.context.height,
-      this.context.fontSize,
-      showCursor,
-      activeCursor,
-      adjustedSelectionStart,
-      adjustedSelectionEnd
+    // Update VTerminal grid with current content
+    const content = visibleBuffer.join('\n');
+    let grid = createGridState(this.context.grid.width, this.context.grid.height);
+    grid = processInput(grid, content);
+
+    // Coalesce grid to spans
+    const rows = coalesce(grid, this.context.theme);
+
+    // Generate SVG using the new emitter
+    const { svg } = emit(
+      rows,
+      showCursor ? { row: visibleCursorY, col: adjustedCursorX } : null,
+      showCursor && (!this.context.cursorBlink || activeCursor),
+      {
+        theme: this.context.theme,
+        template: this.context.template,
+        width: this.context.width,
+        height: this.context.height,
+        fontSize: this.context.fontSize,
+        title: this.context.title,
+        watermark: this.context.watermark,
+        headerBackground: this.context.headerBackground,
+        footerBackground: this.context.footerBackground,
+        borderColor: this.context.borderColor,
+        borderWidth: this.context.borderWidth,
+        borderRadius: this.context.borderRadius,
+        padding: this.context.padding,
+      }
     );
 
-    const svg = renderTerminalSVG(state, {
-      title: this.context.title,
-      template: this.context.template,
-      theme: this.context.theme,
-      watermark: this.context.watermark,
-      headerBackground: this.context.headerBackground,
-      footerBackground: this.context.footerBackground,
-      borderColor: this.context.borderColor,
-      borderWidth: this.context.borderWidth,
-      borderRadius: this.context.borderRadius,
-      padding: this.context.padding,
-    });
+    // Create terminal state for backward compatibility
+    const state: TerminalState = {
+      content,
+      cursorX: adjustedCursorX,
+      cursorY: visibleCursorY,
+      width: this.context.width,
+      height: this.context.height,
+      fontSize: this.context.fontSize,
+      showCursor,
+      activeCursor,
+      selectionStart: this.context.selectionStart,
+      selectionEnd: this.context.selectionEnd,
+    };
+
+    const timestamp = Date.now() - this.context.startTime;
 
     const frame: TerminalFrame = {
-      timestamp: Date.now() - this.context.startTime,
+      timestamp,
       svg,
       state,
     };
 
     this.context.frames.push(frame);
+
+    // Also store frame data for animation
+    this.context.frameData.push({
+      rows,
+      cursor: showCursor ? { row: visibleCursorY, col: adjustedCursorX } : null,
+      cursorVisible: showCursor,
+      timestamp,
+    });
+
     this.options.onFrame?.(frame);
   }
 
-  /**
-   * Execute Type command - simulate typing character by character
-   * Note: currentLine contains only the command (no prefix), prefix is added during rendering
-   * Characters are inserted at the current cursor position
-   */
+  private getVisibleLineCount(): number {
+    const headerHeight = this.context.template === 'minimal' ? 0 : 40;
+    const padding = this.context.padding ?? 16;
+    const lineHeight = this.context.fontSize * 1.4;
+    const watermarkHeight = this.context.watermark ? lineHeight : 0;
+    const contentHeight = this.context.height - headerHeight - padding - watermarkHeight - padding;
+    return Math.floor(contentHeight / lineHeight);
+  }
+
+  private stripAnsi(str: string): string {
+    return str.replace(/\x1b\[[0-9;]*m/g, '');
+  }
+
+  // ==========================================================================
+  // Command Execution
+  // ==========================================================================
+
   private async executeType(text: string, speed?: number): Promise<void> {
     const delay = speed || this.context.typingSpeed;
 
-    // If there's a selection, delete it first
     if (this.hasSelection()) {
       this.deleteSelection();
       this.captureFrame(true, true);
-      await new Promise((resolve) => setTimeout(resolve, delay));
+      await this.sleep(delay);
     }
 
     for (const char of text) {
-      // Insert character at cursor position
       const before = this.context.currentLine.substring(0, this.context.cursorX);
       const after = this.context.currentLine.substring(this.context.cursorX);
       this.context.currentLine = before + char + after;
       this.context.cursorX++;
 
-      // Capture frame showing the new character with active cursor (no blink during typing)
-      await new Promise((resolve) => setTimeout(resolve, delay));
+      await this.sleep(delay);
       this.captureFrame(true, true);
     }
   }
 
-  /**
-   * Strip ANSI escape codes to get actual string length
-   */
-  private stripAnsi(str: string): string {
-    // eslint-disable-next-line no-control-regex
-    return str.replace(/\x1b\[[0-9;]*m/g, '');
-  }
-
-  /**
-   * Execute Enter - run the command and capture streaming output
-   */
   private async executeEnter(): Promise<void> {
-    // currentLine contains only the command (no prefix)
     const command = this.context.currentLine.trim();
 
-    // Store the line with prefix for display in history
     this.context.lines[this.context.cursorY] = this.context.promptPrefix + this.context.currentLine;
-
-    // Move to next line
     this.context.cursorY++;
     this.context.cursorX = 0;
     this.context.currentLine = '';
@@ -290,67 +336,47 @@ export class CDExecutor {
       this.context.lines[this.context.cursorY] = '';
     }
 
-    // Execute the command if it's not empty
     if (command) {
-      // Set executing flag - don't show prompt during command execution
       this.context.isExecutingCommand = true;
-
-      // Capture frame showing command was submitted (no prompt on new line)
-      await new Promise((resolve) => setTimeout(resolve, 100));
-      this.captureFrame(false); // Hide cursor during command execution
-
-      await this.executeCommandStreaming(command);
+      await this.sleep(100);
+      this.captureFrame(false);
+      await this.executeShellCommand(command);
     } else {
-      // Empty command - just show the new prompt line
-      await new Promise((resolve) => setTimeout(resolve, 100));
+      await this.sleep(100);
       this.captureFrame(true);
     }
   }
 
-  /**
-   * Execute command with streaming output support
-   * Uses TerminalBuffer to properly handle ANSI cursor positioning (for neofetch, etc.)
-   */
-  private async executeCommandStreaming(command: string): Promise<void> {
+  private async executeShellCommand(command: string): Promise<void> {
     return new Promise((resolve) => {
       const child = spawn(command, [], {
         shell: true,
         env: { ...process.env, FORCE_COLOR: '1', CLICOLOR_FORCE: '1' },
       });
 
-      // Use terminal buffer to handle cursor positioning escape sequences
-      const termBuffer = new TerminalBuffer();
+      let output = '';
       let lastFrameTime = Date.now();
-      const FRAME_INTERVAL = 100; // Capture frame every 100ms when output is streaming
-
-      // Save the starting line position once at the beginning
+      const FRAME_INTERVAL = 100;
       const outputStartLine = this.context.cursorY;
 
       const processOutput = (data: string) => {
-        // Write data to terminal buffer (handles cursor movement)
-        termBuffer.write(data);
+        output += data;
 
-        // Update context lines from buffer
-        const bufferLines = termBuffer.getLines();
-
-        // Replace lines starting from the fixed output start position
-        for (let i = 0; i < bufferLines.length; i++) {
-          this.context.lines[outputStartLine + i] = bufferLines[i];
+        // Parse output and update lines
+        const outputLines = output.split('\n');
+        for (let i = 0; i < outputLines.length; i++) {
+          this.context.lines[outputStartLine + i] = outputLines[i];
         }
 
-        // Update cursor position relative to output start
-        const bufferCursor = termBuffer.getCursor();
-        this.context.cursorY = outputStartLine + bufferCursor.y;
+        this.context.cursorY = outputStartLine + outputLines.length - 1;
 
-        // Ensure we have enough lines
         while (this.context.lines.length <= this.context.cursorY) {
           this.context.lines.push('');
         }
 
-        // Capture frame if enough time has passed (for animations)
         const now = Date.now();
         if (now - lastFrameTime >= FRAME_INTERVAL) {
-          this.captureFrame(false); // No cursor during output
+          this.captureFrame(false);
           lastFrameTime = now;
         }
       };
@@ -364,27 +390,21 @@ export class CDExecutor {
       });
 
       child.on('close', () => {
-        // Final update from buffer
-        const bufferLines = termBuffer.getLines();
-
-        for (let i = 0; i < bufferLines.length; i++) {
-          this.context.lines[outputStartLine + i] = bufferLines[i];
+        const outputLines = output.split('\n');
+        for (let i = 0; i < outputLines.length; i++) {
+          this.context.lines[outputStartLine + i] = outputLines[i];
         }
 
-        // Move cursor to after the output
-        this.context.cursorY = outputStartLine + bufferLines.length;
+        this.context.cursorY = outputStartLine + outputLines.length;
         this.context.cursorX = 0;
 
-        // Ensure we have a line for the cursor
         while (this.context.lines.length <= this.context.cursorY) {
           this.context.lines.push('');
         }
 
-        // Command finished - show prompt again
         this.context.isExecutingCommand = false;
         this.context.currentLine = '';
 
-        // Capture final frame with cursor on new line (prompt now visible)
         setTimeout(() => {
           this.captureFrame(true);
           resolve();
@@ -396,7 +416,6 @@ export class CDExecutor {
         this.context.cursorY++;
         this.context.lines[this.context.cursorY] = '';
 
-        // Command finished - show prompt again
         this.context.isExecutingCommand = false;
         this.context.currentLine = '';
         this.context.cursorX = 0;
@@ -407,9 +426,6 @@ export class CDExecutor {
     });
   }
 
-  /**
-   * Execute arrow keys
-   */
   private async executeArrow(direction: 'Left' | 'Right' | 'Up' | 'Down'): Promise<void> {
     switch (direction) {
       case 'Left':
@@ -421,112 +437,46 @@ export class CDExecutor {
       case 'Up':
         if (this.context.cursorY > 0) {
           this.context.cursorY--;
-          this.context.currentLine = this.context.lines[this.context.cursorY];
+          this.context.currentLine = this.context.lines[this.context.cursorY] || '';
           this.context.cursorX = Math.min(this.context.cursorX, this.context.currentLine.length);
         }
         break;
       case 'Down':
         if (this.context.cursorY < this.context.lines.length - 1) {
           this.context.cursorY++;
-          this.context.currentLine = this.context.lines[this.context.cursorY];
+          this.context.currentLine = this.context.lines[this.context.cursorY] || '';
           this.context.cursorX = Math.min(this.context.cursorX, this.context.currentLine.length);
         }
         break;
     }
 
-    await new Promise((resolve) => setTimeout(resolve, 50));
-    this.captureFrame(true, true); // active cursor during arrow key movement
+    await this.sleep(50);
+    this.captureFrame(true, true);
   }
 
-  /**
-   * Execute Screenshot - save current terminal state as static SVG using shellfie
-   */
-  private async executeScreenshot(path?: string): Promise<void> {
-    // Determine the screenshot path
-    let screenshotPath: string;
-    if (path) {
-      screenshotPath = path;
-    } else {
-      // Auto-generate name based on Output path
-      const baseName = this.context.outputPath
-        ? this.context.outputPath.replace(/\.svg$/, '')
-        : 'screenshot';
-      screenshotPath = `${baseName}_screenshot_${this.context.screenshotCounter}.svg`;
-      this.context.screenshotCounter++;
-    }
-
-    // Get current terminal content
-    const buffer = [...this.context.lines];
-    buffer[this.context.cursorY] = this.context.currentLine;
-    const content = buffer.join('\n');
-
-    // Use shellfie to generate static SVG with exact dimensions to match animated frames
-    // Create a custom template with shadow disabled to match terminal-renderer
-    let templateOption: 'macos' | 'windows' | 'minimal' | any = this.context.template;
-    if (typeof this.context.template === 'string') {
-      // For built-in templates, create a custom version with shadow disabled
-      const { templates } = await import('shellfie');
-      const baseTemplate = templates[this.context.template as keyof typeof templates];
-      if (baseTemplate) {
-        templateOption = {
-          ...baseTemplate,
-          shell: {
-            ...baseTemplate.shell,
-            shadow: false, // Disable shadow to match terminal-renderer
-          },
-        };
-      }
-    }
-
-    const svg = shellfie(content, {
-      width: this.context.width,
-      height: this.context.height,
-      fontSize: this.context.fontSize,
-      title: this.context.title,
-      template: templateOption as any,
-      theme: this.context.theme,
-      watermark: this.context.watermark,
-      // Enable title bar border to match terminal-renderer
-      header: {
-        border: true,
-        borderColor: '#d4d4d41a',
-        borderWidth: 1,
-      },
-    });
-
-    // Write to file
-    writeFileSync(resolve(screenshotPath), svg, 'utf-8');
-  }
-
-  /**
-   * Execute Backspace - delete characters with animation
-   */
   private async executeBackspace(count: number = 1): Promise<void> {
     const delay = this.context.typingSpeed;
 
-    // If there's a selection, delete it instead of normal backspace
     if (this.hasSelection()) {
       this.deleteSelection();
-      await new Promise((resolve) => setTimeout(resolve, delay));
+      await this.sleep(delay);
       this.captureFrame(true, true);
       return;
     }
 
     for (let i = 0; i < count; i++) {
-      if (this.context.currentLine.length > 0) {
-        // Always delete from the end of the line (like a real terminal)
-        this.context.currentLine = this.context.currentLine.slice(0, -1);
+      if (this.context.currentLine.length > 0 && this.context.cursorX > 0) {
+        const before = this.context.currentLine.substring(0, this.context.cursorX - 1);
+        const after = this.context.currentLine.substring(this.context.cursorX);
+        this.context.currentLine = before + after;
         this.context.cursorX--;
 
-        await new Promise((resolve) => setTimeout(resolve, delay));
-        this.captureFrame(true, true); // active cursor during backspace
+        await this.sleep(delay);
+        this.captureFrame(true, true);
       }
     }
   }
 
-  /**
-   * Execute keyboard shortcut with modifiers
-   */
   private async executeShortcut(
     ctrl: boolean,
     alt: boolean,
@@ -534,27 +484,21 @@ export class CDExecutor {
     cmd: boolean,
     key: string
   ): Promise<void> {
-    // Normalize Cmd to Ctrl for cross-platform compatibility
     const metaKey = cmd || ctrl;
 
-    // Handle different shortcut combinations
     if (shift && !alt && !metaKey) {
-      // Shift + Arrow keys = Selection
       if (key === 'Left' || key === 'Right') {
         await this.executeSelectionMove(key === 'Right', shift);
       }
     } else if (alt && shift && !metaKey) {
-      // Alt + Shift + Arrow = Word selection
       if (key === 'Left' || key === 'Right') {
         await this.executeWordSelection(key === 'Right');
       }
     } else if (alt && !shift && !metaKey) {
-      // Alt + Arrow = Word movement
       if (key === 'Left' || key === 'Right') {
         await this.executeWordMove(key === 'Right');
       }
     } else if (metaKey && !alt && !shift) {
-      // Cmd/Ctrl + Arrow = Line navigation
       if (key === 'Left' || key === 'Right') {
         await this.executeLineNavigation(key === 'Right');
       } else if (key === 'Backspace') {
@@ -563,119 +507,27 @@ export class CDExecutor {
     }
   }
 
-  /**
-   * Execute selection movement (Shift + Left/Right)
-   */
-  private async executeSelectionMove(right: boolean, shift: boolean): Promise<void> {
-    const strippedLine = this.stripAnsi(this.context.currentLine);
-
-    // Initialize selection anchor if not already set
-    if (!shift || (this.context.selectionStart === undefined && this.context.selectionEnd === undefined)) {
-      this.context.selectionStart = this.context.cursorX;
-      this.context.selectionEnd = this.context.cursorX;
-    }
-
-    // Move cursor
-    if (right) {
-      if (this.context.cursorX < strippedLine.length) {
-        this.context.cursorX++;
-      }
+  private async executeScreenshot(path?: string): Promise<void> {
+    let screenshotPath: string;
+    if (path) {
+      screenshotPath = path;
     } else {
-      if (this.context.cursorX > 0) {
-        this.context.cursorX--;
-      }
+      const baseName = this.context.outputPath?.replace(/\.svg$/, '') || 'screenshot';
+      screenshotPath = `${baseName}_screenshot_${this.context.screenshotCounter}.svg`;
+      this.context.screenshotCounter++;
     }
 
-    // Update selection end
-    if (shift) {
-      this.context.selectionEnd = this.context.cursorX;
-    } else {
-      this.clearSelection();
+    // Get current frame SVG
+    const lastFrame = this.context.frames[this.context.frames.length - 1];
+    if (lastFrame) {
+      writeFileSync(resolve(screenshotPath), lastFrame.svg, 'utf-8');
     }
-
-    await new Promise((resolve) => setTimeout(resolve, 50));
-    this.captureFrame(true, true);
   }
 
-  /**
-   * Execute word movement (Alt + Left/Right)
-   */
-  private async executeWordMove(right: boolean): Promise<void> {
-    const strippedLine = this.stripAnsi(this.context.currentLine);
-    this.clearSelection(); // Clear any selection
+  // ==========================================================================
+  // Selection Helpers
+  // ==========================================================================
 
-    const direction = right ? 'right' : 'left';
-    const newPosition = this.findWordBoundary(direction, this.context.cursorX, this.context.currentLine);
-    this.context.cursorX = newPosition;
-
-    await new Promise((resolve) => setTimeout(resolve, 50));
-    this.captureFrame(true, true);
-  }
-
-  /**
-   * Execute word selection (Alt + Shift + Left/Right)
-   */
-  private async executeWordSelection(right: boolean): Promise<void> {
-    // Initialize selection if not set
-    if (this.context.selectionStart === undefined) {
-      this.context.selectionStart = this.context.cursorX;
-      this.context.selectionEnd = this.context.cursorX;
-    }
-
-    const direction = right ? 'right' : 'left';
-    const newPosition = this.findWordBoundary(direction, this.context.cursorX, this.context.currentLine);
-    this.context.cursorX = newPosition;
-    this.context.selectionEnd = newPosition;
-
-    await new Promise((resolve) => setTimeout(resolve, 50));
-    this.captureFrame(true, true);
-  }
-
-  /**
-   * Execute line navigation (Cmd/Ctrl + Left/Right)
-   * Note: cursorX is relative to currentLine only (not including prefix)
-   */
-  private async executeLineNavigation(toEnd: boolean): Promise<void> {
-    this.clearSelection(); // Clear any selection
-
-    if (toEnd) {
-      // Move to end of line
-      this.context.cursorX = this.context.currentLine.length;
-    } else {
-      // Move to beginning of line
-      this.context.cursorX = 0;
-    }
-
-    await new Promise((resolve) => setTimeout(resolve, 50));
-    this.captureFrame(true, true);
-  }
-
-  /**
-   * Execute word deletion (Cmd/Ctrl + Backspace)
-   * Deletes entire word instantly like a real terminal
-   */
-  private async executeWordDelete(): Promise<void> {
-    // Find word boundary to the left
-    const wordStart = this.findWordBoundary('left', this.context.cursorX, this.context.currentLine);
-
-    // Calculate how many characters to delete
-    const deleteCount = this.context.cursorX - wordStart;
-
-    if (deleteCount <= 0) return;
-
-    // Delete the word instantly (not character by character)
-    const before = this.context.currentLine.substring(0, wordStart);
-    const after = this.context.currentLine.substring(this.context.cursorX);
-    this.context.currentLine = before + after;
-    this.context.cursorX = wordStart;
-
-    await new Promise((resolve) => setTimeout(resolve, 50));
-    this.captureFrame(true, true);
-  }
-
-  /**
-   * Check if there's an active selection
-   */
   private hasSelection(): boolean {
     return (
       this.context.selectionStart !== undefined &&
@@ -684,38 +536,17 @@ export class CDExecutor {
     );
   }
 
-  /**
-   * Get selected text
-   */
-  private getSelectedText(): string {
-    if (!this.hasSelection()) return '';
-
-    const start = Math.min(this.context.selectionStart!, this.context.selectionEnd!);
-    const end = Math.max(this.context.selectionStart!, this.context.selectionEnd!);
-
-    const strippedLine = this.stripAnsi(this.context.currentLine);
-    return strippedLine.substring(start, end);
-  }
-
-  /**
-   * Clear selection
-   */
   private clearSelection(): void {
     this.context.selectionStart = undefined;
     this.context.selectionEnd = undefined;
   }
 
-  /**
-   * Delete selected text and return true if selection was deleted
-   * Note: currentLine contains only plain text (no ANSI codes), so positions work directly
-   */
   private deleteSelection(): boolean {
     if (!this.hasSelection()) return false;
 
     const start = Math.min(this.context.selectionStart!, this.context.selectionEnd!);
     const end = Math.max(this.context.selectionStart!, this.context.selectionEnd!);
 
-    // currentLine is plain text (no prefix/ANSI), so substring works directly
     const before = this.context.currentLine.substring(0, start);
     const after = this.context.currentLine.substring(end);
 
@@ -726,67 +557,120 @@ export class CDExecutor {
     return true;
   }
 
-  /**
-   * Find word boundary in the given direction
-   * Returns the position of the word boundary
-   */
+  private async executeSelectionMove(right: boolean, shift: boolean): Promise<void> {
+    const strippedLine = this.stripAnsi(this.context.currentLine);
+
+    if (!shift || (this.context.selectionStart === undefined && this.context.selectionEnd === undefined)) {
+      this.context.selectionStart = this.context.cursorX;
+      this.context.selectionEnd = this.context.cursorX;
+    }
+
+    if (right) {
+      if (this.context.cursorX < strippedLine.length) this.context.cursorX++;
+    } else {
+      if (this.context.cursorX > 0) this.context.cursorX--;
+    }
+
+    if (shift) {
+      this.context.selectionEnd = this.context.cursorX;
+    } else {
+      this.clearSelection();
+    }
+
+    await this.sleep(50);
+    this.captureFrame(true, true);
+  }
+
+  private async executeWordMove(right: boolean): Promise<void> {
+    this.clearSelection();
+    const newPosition = this.findWordBoundary(right ? 'right' : 'left', this.context.cursorX, this.context.currentLine);
+    this.context.cursorX = newPosition;
+
+    await this.sleep(50);
+    this.captureFrame(true, true);
+  }
+
+  private async executeWordSelection(right: boolean): Promise<void> {
+    if (this.context.selectionStart === undefined) {
+      this.context.selectionStart = this.context.cursorX;
+      this.context.selectionEnd = this.context.cursorX;
+    }
+
+    const newPosition = this.findWordBoundary(right ? 'right' : 'left', this.context.cursorX, this.context.currentLine);
+    this.context.cursorX = newPosition;
+    this.context.selectionEnd = newPosition;
+
+    await this.sleep(50);
+    this.captureFrame(true, true);
+  }
+
+  private async executeLineNavigation(toEnd: boolean): Promise<void> {
+    this.clearSelection();
+    this.context.cursorX = toEnd ? this.context.currentLine.length : 0;
+
+    await this.sleep(50);
+    this.captureFrame(true, true);
+  }
+
+  private async executeWordDelete(): Promise<void> {
+    const wordStart = this.findWordBoundary('left', this.context.cursorX, this.context.currentLine);
+    const deleteCount = this.context.cursorX - wordStart;
+
+    if (deleteCount <= 0) return;
+
+    const before = this.context.currentLine.substring(0, wordStart);
+    const after = this.context.currentLine.substring(this.context.cursorX);
+    this.context.currentLine = before + after;
+    this.context.cursorX = wordStart;
+
+    await this.sleep(50);
+    this.captureFrame(true, true);
+  }
+
   private findWordBoundary(direction: 'left' | 'right', position: number, text: string): number {
     const stripped = this.stripAnsi(text);
 
     if (direction === 'left') {
-      // Move left to find word boundary
       if (position === 0) return 0;
-
       let pos = position - 1;
 
-      // Skip whitespace
-      while (pos > 0 && /\s/.test(stripped[pos])) {
-        pos--;
-      }
+      while (pos > 0 && /\s/.test(stripped[pos])) pos--;
 
-      // Skip word characters
       if (/\w/.test(stripped[pos])) {
-        while (pos > 0 && /\w/.test(stripped[pos - 1])) {
-          pos--;
-        }
+        while (pos > 0 && /\w/.test(stripped[pos - 1])) pos--;
       } else if (/\S/.test(stripped[pos])) {
-        // Skip punctuation (non-whitespace, non-word)
-        while (pos > 0 && /[^\w\s]/.test(stripped[pos - 1])) {
-          pos--;
-        }
+        while (pos > 0 && /[^\w\s]/.test(stripped[pos - 1])) pos--;
       }
 
       return pos;
     } else {
-      // Move right to find word boundary
       if (position >= stripped.length) return stripped.length;
-
       let pos = position;
 
-      // Skip whitespace
-      while (pos < stripped.length && /\s/.test(stripped[pos])) {
-        pos++;
-      }
+      while (pos < stripped.length && /\s/.test(stripped[pos])) pos++;
 
-      // Skip word characters
       if (pos < stripped.length && /\w/.test(stripped[pos])) {
-        while (pos < stripped.length && /\w/.test(stripped[pos])) {
-          pos++;
-        }
+        while (pos < stripped.length && /\w/.test(stripped[pos])) pos++;
       } else if (pos < stripped.length && /\S/.test(stripped[pos])) {
-        // Skip punctuation
-        while (pos < stripped.length && /[^\w\s]/.test(stripped[pos])) {
-          pos++;
-        }
+        while (pos < stripped.length && /[^\w\s]/.test(stripped[pos])) pos++;
       }
 
       return pos;
     }
   }
 
-  /**
-   * Execute a single command
-   */
+  // ==========================================================================
+  // Utility
+  // ==========================================================================
+
+  private sleep(ms: number): Promise<void> {
+    return new Promise((resolve) => setTimeout(resolve, ms));
+  }
+
+  // ==========================================================================
+  // Command Router
+  // ==========================================================================
+
   private async executeCommand(command: CDCommand): Promise<void> {
     switch (command.type) {
       case 'Type':
@@ -804,16 +688,14 @@ export class CDExecutor {
         } else if (command.key === 'Backspace') {
           await this.executeBackspace(command.count || 1);
         } else if (command.key === 'Space') {
-          const count = command.count || 1;
-          await this.executeType(' '.repeat(count));
+          await this.executeType(' '.repeat(command.count || 1));
         } else if (command.key === 'Tab') {
-          const count = command.count || 1;
-          await this.executeType('    '.repeat(count)); // 4 spaces per tab
+          await this.executeType('    '.repeat(command.count || 1));
         }
         break;
 
       case 'Sleep':
-        await new Promise((resolve) => setTimeout(resolve, command.duration));
+        await this.sleep(command.duration);
         this.captureFrame(true);
         break;
 
@@ -835,101 +717,26 @@ export class CDExecutor {
         await this.executeShortcut(command.ctrl, command.alt, command.shift, command.cmd, command.key);
         break;
 
-      case 'Hide':
-      case 'Show':
-      case 'Output':
-      case 'Require':
-      case 'Set':
-      case 'Source':
-      case 'Env':
-      case 'Comment':
-      case 'Wait':
-        // Not implemented in simulation mode
+      default:
+        // Not implemented: Hide, Show, Output, Require, Set, Source, Env, Comment, Wait
         break;
     }
   }
 
-  /**
-   * Execute complete DVD script
-   */
+  // ==========================================================================
+  // Main Execution
+  // ==========================================================================
+
   async execute(script: CDScript): Promise<TerminalFrame[]> {
     // Apply settings
     for (const [key, value] of script.settings.entries()) {
-      if (key === 'Width') {
-        this.context.width = parseInt(value, 10);
-        this.context.autoWidth = false; // Explicit width set
-      }
-      if (key === 'Height') {
-        this.context.height = parseInt(value, 10);
-        this.context.autoHeight = false; // Explicit height set
-      }
-      if (key === 'FontSize') this.context.fontSize = parseInt(value, 10);
-      if (key === 'TypingSpeed') this.context.typingSpeed = parseInt(value, 10);
-      if (key === 'Title') this.context.title = value;
-      if (key === 'Template') this.context.template = value as any;
-      if (key === 'Theme') {
-        // Look up theme from shellfie themes
-        // Support both camelCase (githubDark) and kebab-case (github-dark)
-        let themeName = value as keyof typeof themes;
-        if (!themes[themeName]) {
-          // Try converting kebab-case to camelCase
-          const camelCase = value.replace(/-([a-z])/g, (_, letter) => letter.toUpperCase()) as keyof typeof themes;
-          if (themes[camelCase]) {
-            themeName = camelCase;
-          }
-        }
-        if (themes[themeName]) {
-          this.context.theme = themes[themeName];
-        }
-      }
-      if (key === 'PromptPrefix') {
-        // Parse the string to handle escape sequences
-        this.context.promptPrefix = value
-          .replace(/\\e/g, '\x1b')
-          .replace(/\\x1b/g, '\x1b')
-          .replace(/\\n/g, '\n')
-          .replace(/\\t/g, '\t');
-      }
-      if (key === 'Watermark') {
-        // Parse the string to handle escape sequences (same as PromptPrefix)
-        this.context.watermark = value
-          .replace(/\\e/g, '\x1b')
-          .replace(/\\x1b/g, '\x1b')
-          .replace(/\\n/g, '\n')
-          .replace(/\\t/g, '\t');
-      }
-      if (key === 'CursorBlink') {
-        this.context.cursorBlink = value.toLowerCase() !== 'false';
-      }
-      if (key === 'Scroll') {
-        this.context.scroll = value.toLowerCase() === 'true';
-        // When scroll is enabled, disable auto-height since height is fixed
-        if (this.context.scroll) {
-          this.context.autoHeight = false;
-        }
-      }
-      if (key === 'HeaderBackground') {
-        this.context.headerBackground = value;
-      }
-      if (key === 'FooterBackground') {
-        this.context.footerBackground = value;
-      }
-      if (key === 'BorderColor') {
-        this.context.borderColor = value;
-      }
-      if (key === 'BorderWidth') {
-        this.context.borderWidth = parseInt(value, 10);
-      }
-      if (key === 'BorderRadius') {
-        this.context.borderRadius = parseInt(value, 10);
-      }
-      if (key === 'Padding') {
-        this.context.padding = parseInt(value, 10);
-      }
+      this.applySetting(key, value);
     }
 
-    // Store output path for auto-naming screenshots
     this.context.outputPath = script.output;
+
+    // Recalculate grid dimensions after settings applied
+    this.updateGridDimensions();
 
     // Capture initial frame
     this.captureFrame(true);
@@ -942,22 +749,19 @@ export class CDExecutor {
     for (let i = 0; i < actionCommands.length; i++) {
       const cmd = actionCommands[i];
 
-      // Create progress message with command type BEFORE executing
       let cmdDescription: string = cmd.type;
       if (cmd.type === 'Key') {
         cmdDescription = cmd.key;
       }
 
       this.options.onProgress?.(i + 1, actionCommands.length, cmdDescription);
-
-      // Now execute the command
       await this.executeCommand(cmd);
     }
 
-    // Capture final frame without cursor
+    // Capture final frame
     this.captureFrame(false);
 
-    // Auto-calculate dimensions and re-render frames if needed
+    // Auto-calculate dimensions and re-render if needed
     if (this.context.autoWidth || this.context.autoHeight) {
       this.recalculateDimensionsAndRerender();
     }
@@ -965,42 +769,160 @@ export class CDExecutor {
     return this.context.frames;
   }
 
-  /**
-   * Recalculate dimensions based on content and re-render all frames
-   */
+  private applySetting(key: string, value: string): void {
+    switch (key) {
+      case 'Width':
+        this.context.width = parseInt(value, 10);
+        this.context.autoWidth = false;
+        break;
+      case 'Height':
+        this.context.height = parseInt(value, 10);
+        this.context.autoHeight = false;
+        break;
+      case 'FontSize':
+        this.context.fontSize = parseInt(value, 10);
+        break;
+      case 'TypingSpeed':
+        this.context.typingSpeed = parseInt(value, 10);
+        break;
+      case 'Title':
+        this.context.title = value;
+        break;
+      case 'Template':
+        this.context.template = value as 'macos' | 'windows' | 'minimal';
+        break;
+      case 'Theme':
+        this.resolveTheme(value);
+        break;
+      case 'PromptPrefix':
+        this.context.promptPrefix = this.parseEscapes(value);
+        break;
+      case 'Watermark':
+        this.context.watermark = this.parseEscapes(value);
+        break;
+      case 'CursorBlink':
+        this.context.cursorBlink = value.toLowerCase() !== 'false';
+        break;
+      case 'Scroll':
+        this.context.scroll = value.toLowerCase() === 'true';
+        if (this.context.scroll) this.context.autoHeight = false;
+        break;
+      case 'HeaderBackground':
+        this.context.headerBackground = value;
+        break;
+      case 'FooterBackground':
+        this.context.footerBackground = value;
+        break;
+      case 'BorderColor':
+        this.context.borderColor = value;
+        break;
+      case 'BorderWidth':
+        this.context.borderWidth = parseInt(value, 10);
+        break;
+      case 'BorderRadius':
+        this.context.borderRadius = parseInt(value, 10);
+        break;
+      case 'Padding':
+        this.context.padding = parseInt(value, 10);
+        break;
+    }
+  }
+
+  private resolveTheme(themeName: string): void {
+    // Try pipeline themes first
+    const pipelineTheme = pipelineThemes[themeName as keyof typeof pipelineThemes];
+    if (pipelineTheme) {
+      this.context.theme = pipelineTheme;
+      return;
+    }
+
+    // Try shellfie themes
+    let name = themeName as keyof typeof shellfieThemes;
+    if (!shellfieThemes[name]) {
+      // Convert kebab-case to camelCase
+      const camelCase = themeName.replace(/-([a-z])/g, (_, letter) => letter.toUpperCase()) as keyof typeof shellfieThemes;
+      if (shellfieThemes[camelCase]) {
+        name = camelCase;
+      }
+    }
+
+    if (shellfieThemes[name]) {
+      // Convert shellfie theme to our Theme type
+      const st = shellfieThemes[name];
+      this.context.theme = {
+        name: themeName,
+        background: st.background,
+        foreground: st.foreground,
+        cursor: st.cursor,
+        selection: st.selection,
+        black: st.black,
+        red: st.red,
+        green: st.green,
+        yellow: st.yellow,
+        blue: st.blue,
+        magenta: st.magenta,
+        cyan: st.cyan,
+        white: st.white,
+        brightBlack: st.brightBlack,
+        brightRed: st.brightRed,
+        brightGreen: st.brightGreen,
+        brightYellow: st.brightYellow,
+        brightBlue: st.brightBlue,
+        brightMagenta: st.brightMagenta,
+        brightCyan: st.brightCyan,
+        brightWhite: st.brightWhite,
+      };
+    }
+  }
+
+  private parseEscapes(value: string): string {
+    return value
+      .replace(/\\e/g, '\x1b')
+      .replace(/\\x1b/g, '\x1b')
+      .replace(/\\n/g, '\n')
+      .replace(/\\t/g, '\t');
+  }
+
+  private updateGridDimensions(): void {
+    const charWidth = this.context.fontSize * 0.6;
+    const lineHeight = this.context.fontSize * 1.4;
+    const padding = this.context.padding ?? 16;
+    const headerHeight = this.context.template === 'minimal' ? 0 : 40;
+    const termWidth = Math.floor((this.context.width - padding * 2) / charWidth);
+    const termHeight = Math.floor((this.context.height - headerHeight - padding * 2) / lineHeight);
+
+    this.context.grid = createGridState(termWidth, termHeight);
+  }
+
   private recalculateDimensionsAndRerender(): void {
-    const padding = 16;
-    const headerHeight = this.context.template === 'minimal' ? 0 : 39;
+    const padding = this.context.padding ?? 16;
+    const headerHeight = this.context.template === 'minimal' ? 0 : 40;
     const lineHeight = this.context.fontSize * 1.4;
     const charWidth = this.context.fontSize * 0.6;
 
-    // Calculate auto dimensions
     if (this.context.autoWidth) {
-      // Width = padding + (max chars * char width) + padding
-      this.context.width = Math.ceil(padding + (this.context.maxLineLength * charWidth) + padding);
-      // Minimum width
+      this.context.width = Math.ceil(padding + this.context.maxLineLength * charWidth + padding);
       if (this.context.width < 200) this.context.width = 200;
     }
 
     if (this.context.autoHeight) {
-      // Height = header + padding + (lines * line height) + padding + watermark line if present
       const watermarkHeight = this.context.watermark ? lineHeight : 0;
-      this.context.height = Math.ceil(headerHeight + padding + (this.context.maxLines * lineHeight) + watermarkHeight + padding);
-      // Minimum height
+      this.context.height = Math.ceil(headerHeight + padding + this.context.maxLines * lineHeight + watermarkHeight + padding);
       if (this.context.height < 100) this.context.height = 100;
     }
 
-    // Re-render all frames with the new dimensions
-    for (const frame of this.context.frames) {
-      // Update state dimensions
-      frame.state.width = this.context.width;
-      frame.state.height = this.context.height;
+    // Re-render all frames with new dimensions
+    this.updateGridDimensions();
 
-      // Re-render SVG
-      frame.svg = renderTerminalSVG(frame.state, {
-        title: this.context.title,
-        template: this.context.template,
+    for (let i = 0; i < this.context.frameData.length; i++) {
+      const frameData = this.context.frameData[i];
+      const { svg } = emit(frameData.rows, frameData.cursor, frameData.cursorVisible, {
         theme: this.context.theme,
+        template: this.context.template,
+        width: this.context.width,
+        height: this.context.height,
+        fontSize: this.context.fontSize,
+        title: this.context.title,
         watermark: this.context.watermark,
         headerBackground: this.context.headerBackground,
         footerBackground: this.context.footerBackground,
@@ -1009,20 +931,18 @@ export class CDExecutor {
         borderRadius: this.context.borderRadius,
         padding: this.context.padding,
       });
+
+      this.context.frames[i].svg = svg;
+      this.context.frames[i].state.width = this.context.width;
+      this.context.frames[i].state.height = this.context.height;
     }
   }
 
-  /**
-   * Get all captured frames
-   */
   getFrames(): TerminalFrame[] {
     return this.context.frames;
   }
 
-  /**
-   * Cleanup (no-op for simulation)
-   */
   async cleanup(): Promise<void> {
-    // Nothing to clean up in simulation mode
+    // Nothing to clean up
   }
 }

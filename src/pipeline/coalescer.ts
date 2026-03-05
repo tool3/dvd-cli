@@ -1,0 +1,328 @@
+/**
+ * Coalescer - Groups consecutive cells with identical styles into spans
+ *
+ * This is the #1 performance optimization:
+ * - 80x24 terminal = 1920 cells
+ * - After coalescing = ~50-200 spans (75-95% reduction)
+ */
+
+import type { Cell, GridState, Color, CellStyle, Span, SpanRow, Theme } from '../types';
+import { stylesEqual, colorsEqual } from '../types';
+
+// ============================================================================
+// Color Resolution
+// ============================================================================
+
+/**
+ * Convert ANSI 256 color index to hex
+ */
+function ansi256ToHex(index: number): string {
+  // Standard colors (0-15) - these should be resolved via theme
+  if (index < 16) {
+    return `ansi${index}`;
+  }
+
+  // Color cube (16-231): 6x6x6 RGB
+  if (index < 232) {
+    const i = index - 16;
+    const r = Math.floor(i / 36);
+    const g = Math.floor((i % 36) / 6);
+    const b = i % 6;
+
+    const toValue = (n: number) => (n === 0 ? 0 : 55 + n * 40);
+    const rVal = toValue(r);
+    const gVal = toValue(g);
+    const bVal = toValue(b);
+
+    return `#${rVal.toString(16).padStart(2, '0')}${gVal.toString(16).padStart(2, '0')}${bVal.toString(16).padStart(2, '0')}`;
+  }
+
+  // Grayscale (232-255): 24 shades
+  const gray = 8 + (index - 232) * 10;
+  return `#${gray.toString(16).padStart(2, '0')}${gray.toString(16).padStart(2, '0')}${gray.toString(16).padStart(2, '0')}`;
+}
+
+/**
+ * Map ANSI 16 color index to theme key
+ */
+const ANSI16_KEYS: (keyof Theme)[] = [
+  'black',
+  'red',
+  'green',
+  'yellow',
+  'blue',
+  'magenta',
+  'cyan',
+  'white',
+  'brightBlack',
+  'brightRed',
+  'brightGreen',
+  'brightYellow',
+  'brightBlue',
+  'brightMagenta',
+  'brightCyan',
+  'brightWhite',
+];
+
+/**
+ * Resolve a Color to a CSS color string using theme
+ */
+export function resolveColor(color: Color, theme: Theme, isBackground: boolean): string | null {
+  switch (color.mode) {
+    case 'default':
+      return isBackground ? null : theme.foreground;
+
+    case 'ansi16': {
+      const key = ANSI16_KEYS[color.value];
+      return key ? (theme[key] as string) : null;
+    }
+
+    case 'ansi256': {
+      const hex = ansi256ToHex(color.value);
+      // If it starts with 'ansi', it's a standard color - resolve via theme
+      if (hex.startsWith('ansi')) {
+        const index = parseInt(hex.slice(4), 10);
+        const key = ANSI16_KEYS[index];
+        return key ? (theme[key] as string) : null;
+      }
+      return hex;
+    }
+
+    case 'rgb':
+      return `rgb(${color.value[0]},${color.value[1]},${color.value[2]})`;
+
+    default:
+      return null;
+  }
+}
+
+/**
+ * Create a CellStyle from a Cell using theme for color resolution
+ */
+export function cellToStyle(cell: Cell, theme: Theme): CellStyle {
+  // Handle inverse - swap fg and bg
+  let fg: Color = cell.fg;
+  let bg: Color = cell.bg;
+
+  if (cell.inverse) {
+    fg = cell.bg;
+    bg = cell.fg;
+    // If either was default, use the theme defaults
+    if (fg.mode === 'default') {
+      fg = { mode: 'rgb', value: hexToRgb(theme.background) };
+    }
+    if (bg.mode === 'default') {
+      bg = { mode: 'rgb', value: hexToRgb(theme.foreground) };
+    }
+  }
+
+  return {
+    fg: resolveColor(fg, theme, false),
+    bg: resolveColor(bg, theme, true),
+    bold: cell.bold,
+    italic: cell.italic,
+    underline: cell.underline,
+    dim: cell.dim,
+    strikethrough: cell.strikethrough,
+  };
+}
+
+/**
+ * Convert hex color to RGB tuple
+ */
+function hexToRgb(hex: string): [number, number, number] {
+  const result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
+  if (result) {
+    return [parseInt(result[1], 16), parseInt(result[2], 16), parseInt(result[3], 16)];
+  }
+  return [255, 255, 255]; // Default to white
+}
+
+// ============================================================================
+// Coalescing Algorithm
+// ============================================================================
+
+/**
+ * Coalesce a grid into spans
+ * Groups consecutive cells with identical styles
+ */
+export function coalesce(grid: GridState, theme: Theme): SpanRow[] {
+  const result: SpanRow[] = [];
+
+  for (let row = 0; row < grid.cells.length; row++) {
+    const cells = grid.cells[row];
+    const spans: Span[] = [];
+
+    if (cells.length === 0) {
+      result.push([]);
+      continue;
+    }
+
+    let currentSpan: Span | null = null;
+
+    for (let col = 0; col < cells.length; col++) {
+      const cell = cells[col];
+
+      // Skip empty placeholder cells (from wide characters)
+      if (cell.char === '' && cell.width === 1) {
+        continue;
+      }
+
+      const style = cellToStyle(cell, theme);
+
+      if (currentSpan && stylesEqual(currentSpan.style, style)) {
+        // Extend current span
+        currentSpan.text += cell.char;
+      } else {
+        // Finalize current span and start new one
+        if (currentSpan && (currentSpan.text.trim().length > 0 || currentSpan.style.bg)) {
+          spans.push(currentSpan);
+        }
+        currentSpan = {
+          text: cell.char,
+          style,
+          col,
+          row,
+        };
+      }
+    }
+
+    // Push final span
+    if (currentSpan && (currentSpan.text.trim().length > 0 || currentSpan.style.bg)) {
+      spans.push(currentSpan);
+    }
+
+    result.push(spans);
+  }
+
+  return result;
+}
+
+// ============================================================================
+// Background Rect Optimization
+// ============================================================================
+
+export interface BgRect {
+  x: number;
+  y: number;
+  width: number;
+  height: number;
+  color: string;
+}
+
+export interface RenderConfig {
+  charWidth: number;
+  lineHeight: number;
+  padding: number;
+  headerHeight: number;
+}
+
+/**
+ * Coalesce background rectangles from spans
+ * Merges consecutive spans with same background color into single rects
+ */
+export function coalesceBackgrounds(rows: SpanRow[], config: RenderConfig): BgRect[] {
+  const rects: BgRect[] = [];
+  const { charWidth, lineHeight, padding, headerHeight } = config;
+
+  for (const row of rows) {
+    if (row.length === 0) continue;
+
+    let currentRect: BgRect | null = null;
+
+    for (const span of row) {
+      if (!span.style.bg) {
+        // No background - finalize current rect if any
+        if (currentRect) {
+          rects.push(currentRect);
+          currentRect = null;
+        }
+        continue;
+      }
+
+      const x = padding + span.col * charWidth;
+      const y = headerHeight + span.row * lineHeight;
+      const width = span.text.length * charWidth;
+
+      if (
+        currentRect &&
+        currentRect.color === span.style.bg &&
+        currentRect.y === y &&
+        Math.abs(currentRect.x + currentRect.width - x) < 0.01
+      ) {
+        // Extend current rect
+        currentRect.width += width;
+      } else {
+        // Finalize previous and start new
+        if (currentRect) {
+          rects.push(currentRect);
+        }
+        currentRect = {
+          x,
+          y,
+          width,
+          height: lineHeight,
+          color: span.style.bg,
+        };
+      }
+    }
+
+    if (currentRect) {
+      rects.push(currentRect);
+      currentRect = null;
+    }
+  }
+
+  return rects;
+}
+
+/**
+ * Merge vertically adjacent background rectangles with same color and alignment
+ */
+export function mergeVerticalBackgrounds(rects: BgRect[]): BgRect[] {
+  if (rects.length === 0) return [];
+
+  // Sort by x, y, color
+  const sorted = [...rects].sort((a, b) => a.x - b.x || a.y - b.y || a.color.localeCompare(b.color));
+
+  const merged: BgRect[] = [];
+  let current: BgRect | null = null;
+
+  for (const rect of sorted) {
+    if (
+      current &&
+      current.color === rect.color &&
+      current.x === rect.x &&
+      current.width === rect.width &&
+      Math.abs(current.y + current.height - rect.y) < 0.01
+    ) {
+      // Extend vertically
+      current.height += rect.height;
+    } else {
+      if (current) merged.push(current);
+      current = { ...rect };
+    }
+  }
+
+  if (current) merged.push(current);
+  return merged;
+}
+
+// ============================================================================
+// Statistics
+// ============================================================================
+
+/**
+ * Get coalescing statistics for performance analysis
+ */
+export function getCoalesceStats(grid: GridState, rows: SpanRow[]): {
+  cellCount: number;
+  spanCount: number;
+  reduction: number;
+} {
+  const cellCount = grid.cells.reduce((sum, row) => sum + row.length, 0);
+  const spanCount = rows.reduce((sum, row) => sum + row.length, 0);
+  const reduction = cellCount > 0 ? Math.round((1 - spanCount / cellCount) * 100) : 0;
+
+  return { cellCount, spanCount, reduction };
+}

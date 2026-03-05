@@ -1,0 +1,912 @@
+<svg width="293" height="130" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    
+    @keyframes frame-0-anim {
+      0% { opacity: 1; }
+      1.94% { opacity: 1; }
+      1.95% { opacity: 0; }
+      100% { opacity: 0; }
+    }@keyframes frame-1-anim {
+      0% { opacity: 0; }
+      0.07% { opacity: 0; }
+      1.94% { opacity: 1; }
+      3.81% { opacity: 1; }
+      3.82% { opacity: 0; }
+      100% { opacity: 0; }
+    }
+    @keyframes frame-2-anim {
+      0% { opacity: 0; }
+      1.94% { opacity: 0; }
+      3.81% { opacity: 1; }
+      5.64% { opacity: 1; }
+      5.65% { opacity: 0; }
+      100% { opacity: 0; }
+    }
+    @keyframes frame-3-anim {
+      0% { opacity: 0; }
+      3.81% { opacity: 0; }
+      5.64% { opacity: 1; }
+      7.48% { opacity: 1; }
+      7.49% { opacity: 0; }
+      100% { opacity: 0; }
+    }
+    @keyframes frame-4-anim {
+      0% { opacity: 0; }
+      5.64% { opacity: 0; }
+      7.48% { opacity: 1; }
+      9.38% { opacity: 1; }
+      9.39% { opacity: 0; }
+      100% { opacity: 0; }
+    }
+    @keyframes frame-5-anim {
+      0% { opacity: 0; }
+      7.48% { opacity: 0; }
+      9.38% { opacity: 1; }
+      11.25% { opacity: 1; }
+      11.26% { opacity: 0; }
+      100% { opacity: 0; }
+    }
+    @keyframes frame-6-anim {
+      0% { opacity: 0; }
+      9.38% { opacity: 0; }
+      11.25% { opacity: 1; }
+      13.16% { opacity: 1; }
+      13.17% { opacity: 0; }
+      100% { opacity: 0; }
+    }
+    @keyframes frame-7-anim {
+      0% { opacity: 0; }
+      11.25% { opacity: 0; }
+      13.16% { opacity: 1; }
+      15.13% { opacity: 1; }
+      15.14% { opacity: 0; }
+      100% { opacity: 0; }
+    }
+    @keyframes frame-8-anim {
+      0% { opacity: 0; }
+      13.16% { opacity: 0; }
+      15.13% { opacity: 1; }
+      17.11% { opacity: 1; }
+      17.12% { opacity: 0; }
+      100% { opacity: 0; }
+    }
+    @keyframes frame-9-anim {
+      0% { opacity: 0; }
+      15.13% { opacity: 0; }
+      17.11% { opacity: 1; }
+      19.05% { opacity: 1; }
+      19.06% { opacity: 0; }
+      100% { opacity: 0; }
+    }
+    @keyframes frame-10-anim {
+      0% { opacity: 0; }
+      17.11% { opacity: 0; }
+      19.05% { opacity: 1; }
+      20.92% { opacity: 1; }
+      20.93% { opacity: 0; }
+      100% { opacity: 0; }
+    }
+    @keyframes frame-11-anim {
+      0% { opacity: 0; }
+      19.05% { opacity: 0; }
+      20.92% { opacity: 1; }
+      22.82% { opacity: 1; }
+      22.83% { opacity: 0; }
+      100% { opacity: 0; }
+    }
+    @keyframes frame-12-anim {
+      0% { opacity: 0; }
+      20.92% { opacity: 0; }
+      22.82% { opacity: 1; }
+      24.80% { opacity: 1; }
+      24.81% { opacity: 0; }
+      100% { opacity: 0; }
+    }
+    @keyframes frame-13-anim {
+      0% { opacity: 0; }
+      22.82% { opacity: 0; }
+      24.80% { opacity: 1; }
+      26.77% { opacity: 1; }
+      26.78% { opacity: 0; }
+      100% { opacity: 0; }
+    }
+    @keyframes frame-14-anim {
+      0% { opacity: 0; }
+      24.80% { opacity: 0; }
+      26.77% { opacity: 1; }
+      28.75% { opacity: 1; }
+      28.76% { opacity: 0; }
+      100% { opacity: 0; }
+    }
+    @keyframes frame-15-anim {
+      0% { opacity: 0; }
+      26.77% { opacity: 0; }
+      28.75% { opacity: 1; }
+      30.69% { opacity: 1; }
+      30.70% { opacity: 0; }
+      100% { opacity: 0; }
+    }
+    @keyframes frame-16-anim {
+      0% { opacity: 0; }
+      28.75% { opacity: 0; }
+      30.69% { opacity: 1; }
+      32.70% { opacity: 1; }
+      32.71% { opacity: 0; }
+      100% { opacity: 0; }
+    }
+    @keyframes frame-17-anim {
+      0% { opacity: 0; }
+      30.69% { opacity: 0; }
+      32.70% { opacity: 1; }
+      34.64% { opacity: 1; }
+      34.65% { opacity: 0; }
+      100% { opacity: 0; }
+    }
+    @keyframes frame-18-anim {
+      0% { opacity: 0; }
+      32.70% { opacity: 0; }
+      34.64% { opacity: 1; }
+      36.51% { opacity: 1; }
+      36.52% { opacity: 0; }
+      100% { opacity: 0; }
+    }
+    @keyframes frame-19-anim {
+      0% { opacity: 0; }
+      34.64% { opacity: 0; }
+      36.51% { opacity: 1; }
+      38.48% { opacity: 1; }
+      38.49% { opacity: 0; }
+      100% { opacity: 0; }
+    }
+    @keyframes frame-20-anim {
+      0% { opacity: 0; }
+      36.51% { opacity: 0; }
+      38.48% { opacity: 1; }
+      40.42% { opacity: 1; }
+      40.43% { opacity: 0; }
+      100% { opacity: 0; }
+    }
+    @keyframes frame-21-anim {
+      0% { opacity: 0; }
+      38.48% { opacity: 0; }
+      40.42% { opacity: 1; }
+      42.36% { opacity: 1; }
+      42.37% { opacity: 0; }
+      100% { opacity: 0; }
+    }
+    @keyframes frame-22-anim {
+      0% { opacity: 0; }
+      40.42% { opacity: 0; }
+      42.36% { opacity: 1; }
+      44.30% { opacity: 1; }
+      44.31% { opacity: 0; }
+      100% { opacity: 0; }
+    }
+    @keyframes frame-23-anim {
+      0% { opacity: 0; }
+      42.36% { opacity: 0; }
+      44.30% { opacity: 1; }
+      46.24% { opacity: 1; }
+      46.25% { opacity: 0; }
+      100% { opacity: 0; }
+    }
+    @keyframes frame-24-anim {
+      0% { opacity: 0; }
+      44.30% { opacity: 0; }
+      46.24% { opacity: 1; }
+      48.22% { opacity: 1; }
+      48.23% { opacity: 0; }
+      100% { opacity: 0; }
+    }
+    @keyframes frame-25-anim {
+      0% { opacity: 0; }
+      46.24% { opacity: 0; }
+      48.22% { opacity: 1; }
+      50.23% { opacity: 1; }
+      50.24% { opacity: 0; }
+      100% { opacity: 0; }
+    }
+    @keyframes frame-26-anim {
+      0% { opacity: 0; }
+      48.22% { opacity: 0; }
+      50.23% { opacity: 1; }
+      52.24% { opacity: 1; }
+      52.25% { opacity: 0; }
+      100% { opacity: 0; }
+    }
+    @keyframes frame-27-anim {
+      0% { opacity: 0; }
+      50.23% { opacity: 0; }
+      52.24% { opacity: 1; }
+      54.29% { opacity: 1; }
+      54.30% { opacity: 0; }
+      100% { opacity: 0; }
+    }
+    @keyframes frame-28-anim {
+      0% { opacity: 0; }
+      52.24% { opacity: 0; }
+      54.29% { opacity: 1; }
+      56.26% { opacity: 1; }
+      56.27% { opacity: 0; }
+      100% { opacity: 0; }
+    }
+    @keyframes frame-29-anim {
+      0% { opacity: 0; }
+      54.29% { opacity: 0; }
+      56.26% { opacity: 1; }
+      60.04% { opacity: 1; }
+      60.05% { opacity: 0; }
+      100% { opacity: 0; }
+    }
+    @keyframes frame-30-anim {
+      0% { opacity: 0; }
+      56.26% { opacity: 0; }
+      60.04% { opacity: 1; }
+      64.16% { opacity: 1; }
+      64.17% { opacity: 0; }
+      100% { opacity: 0; }
+    }
+    @keyframes frame-31-anim {
+      0% { opacity: 0; }
+      60.04% { opacity: 0; }
+      64.16% { opacity: 1; }
+      99.82% { opacity: 1; }
+      99.83% { opacity: 0; }
+      100% { opacity: 0; }
+    }
+    @keyframes frame-32-anim {
+      0% { opacity: 0; }
+      64.16% { opacity: 0; }
+      99.82% { opacity: 1; }
+      100.00% { opacity: 1; }
+      100.01% { opacity: 0; }
+      100% { opacity: 0; }
+    }
+    @keyframes frame-33-anim {
+      0% { opacity: 0; }
+      99.82% { opacity: 0; }
+      100.00% { opacity: 1; }
+      100.00% { opacity: 1; }
+      100.01% { opacity: 0; }
+      100% { opacity: 0; }
+    }
+
+    .frame {
+      animation-duration: 3.83s;
+      animation-timing-function: step-end;
+      animation-iteration-count: infinite;
+      animation-fill-mode: forwards;
+    }
+
+    
+    .frame-0 {
+      animation-name: frame-0-anim;
+    }
+    .frame-1 {
+      animation-name: frame-1-anim;
+    }
+    .frame-2 {
+      animation-name: frame-2-anim;
+    }
+    .frame-3 {
+      animation-name: frame-3-anim;
+    }
+    .frame-4 {
+      animation-name: frame-4-anim;
+    }
+    .frame-5 {
+      animation-name: frame-5-anim;
+    }
+    .frame-6 {
+      animation-name: frame-6-anim;
+    }
+    .frame-7 {
+      animation-name: frame-7-anim;
+    }
+    .frame-8 {
+      animation-name: frame-8-anim;
+    }
+    .frame-9 {
+      animation-name: frame-9-anim;
+    }
+    .frame-10 {
+      animation-name: frame-10-anim;
+    }
+    .frame-11 {
+      animation-name: frame-11-anim;
+    }
+    .frame-12 {
+      animation-name: frame-12-anim;
+    }
+    .frame-13 {
+      animation-name: frame-13-anim;
+    }
+    .frame-14 {
+      animation-name: frame-14-anim;
+    }
+    .frame-15 {
+      animation-name: frame-15-anim;
+    }
+    .frame-16 {
+      animation-name: frame-16-anim;
+    }
+    .frame-17 {
+      animation-name: frame-17-anim;
+    }
+    .frame-18 {
+      animation-name: frame-18-anim;
+    }
+    .frame-19 {
+      animation-name: frame-19-anim;
+    }
+    .frame-20 {
+      animation-name: frame-20-anim;
+    }
+    .frame-21 {
+      animation-name: frame-21-anim;
+    }
+    .frame-22 {
+      animation-name: frame-22-anim;
+    }
+    .frame-23 {
+      animation-name: frame-23-anim;
+    }
+    .frame-24 {
+      animation-name: frame-24-anim;
+    }
+    .frame-25 {
+      animation-name: frame-25-anim;
+    }
+    .frame-26 {
+      animation-name: frame-26-anim;
+    }
+    .frame-27 {
+      animation-name: frame-27-anim;
+    }
+    .frame-28 {
+      animation-name: frame-28-anim;
+    }
+    .frame-29 {
+      animation-name: frame-29-anim;
+    }
+    .frame-30 {
+      animation-name: frame-30-anim;
+    }
+    .frame-31 {
+      animation-name: frame-31-anim;
+    }
+    .frame-32 {
+      animation-name: frame-32-anim;
+    }
+    .frame-33 {
+      animation-name: frame-33-anim;
+    }
+
+    /* Cursor blink animation (shared across all frames) */
+    .cursor {
+      animation: blink 1s step-end infinite;
+    }
+    .cursor-active {
+      /* No animation - solid cursor during typing/movement */
+    }
+    @keyframes blink {
+      0%, 50% { opacity: 1; }
+      50.01%, 100% { opacity: 0; }
+    }
+  </style>
+
+  <defs>
+    
+    <g id="frame-0">
+      
+
+<rect class="window-bg f0" x="0" y="0" width="293" height="130" fill="#0d1117" rx="0" ry="0"/>
+<g class="text-layer f0">
+<text class="text f13 f0" x="16" y="16">❯</text>
+</g>
+<g class="cursor-layer f0">
+<rect class="cursor f0" x="32.8" y="16" width="8.4" height="19.599999999999998" fill="#c9d1d9"/>
+</g>
+<text class="text dim f0" x="277" y="104.2" text-anchor="end" fill="#c9d1d9">Hello hello</text>
+
+    </g>
+    <g id="frame-1">
+      
+
+<rect class="window-bg f1" x="0" y="0" width="293" height="130" fill="#0d1117" rx="0" ry="0"/>
+<g class="text-layer f1">
+<text class="text f13 f1" x="16" y="16">❯</text>
+<text class="text fg f1" x="24.4" y="16"> e                                                                                        </text>
+</g>
+<g class="cursor-layer f1">
+<rect class="cursor f1" x="41.2" y="16" width="8.4" height="19.599999999999998" fill="#c9d1d9"/>
+</g>
+<text class="text dim f1" x="277" y="104.2" text-anchor="end" fill="#c9d1d9">Hello hello</text>
+
+    </g>
+    <g id="frame-2">
+      
+
+<rect class="window-bg f2" x="0" y="0" width="293" height="130" fill="#0d1117" rx="0" ry="0"/>
+<g class="text-layer f2">
+<text class="text f13 f2" x="16" y="16">❯</text>
+<text class="text fg f2" x="24.4" y="16"> ec                                                                                       </text>
+</g>
+<g class="cursor-layer f2">
+<rect class="cursor f2" x="49.6" y="16" width="8.4" height="19.599999999999998" fill="#c9d1d9"/>
+</g>
+<text class="text dim f2" x="277" y="104.2" text-anchor="end" fill="#c9d1d9">Hello hello</text>
+
+    </g>
+    <g id="frame-3">
+      
+
+<rect class="window-bg f3" x="0" y="0" width="293" height="130" fill="#0d1117" rx="0" ry="0"/>
+<g class="text-layer f3">
+<text class="text f13 f3" x="16" y="16">❯</text>
+<text class="text fg f3" x="24.4" y="16"> ech                                                                                      </text>
+</g>
+<g class="cursor-layer f3">
+<rect class="cursor f3" x="58" y="16" width="8.4" height="19.599999999999998" fill="#c9d1d9"/>
+</g>
+<text class="text dim f3" x="277" y="104.2" text-anchor="end" fill="#c9d1d9">Hello hello</text>
+
+    </g>
+    <g id="frame-4">
+      
+
+<rect class="window-bg f4" x="0" y="0" width="293" height="130" fill="#0d1117" rx="0" ry="0"/>
+<g class="text-layer f4">
+<text class="text f13 f4" x="16" y="16">❯</text>
+<text class="text fg f4" x="24.4" y="16"> echo                                                                                     </text>
+</g>
+<g class="cursor-layer f4">
+<rect class="cursor f4" x="66.4" y="16" width="8.4" height="19.599999999999998" fill="#c9d1d9"/>
+</g>
+<text class="text dim f4" x="277" y="104.2" text-anchor="end" fill="#c9d1d9">Hello hello</text>
+
+    </g>
+    <g id="frame-5">
+      
+
+<rect class="window-bg f5" x="0" y="0" width="293" height="130" fill="#0d1117" rx="0" ry="0"/>
+<g class="text-layer f5">
+<text class="text f13 f5" x="16" y="16">❯</text>
+<text class="text fg f5" x="24.4" y="16"> echo                                                                                     </text>
+</g>
+<g class="cursor-layer f5">
+<rect class="cursor f5" x="74.80000000000001" y="16" width="8.4" height="19.599999999999998" fill="#c9d1d9"/>
+</g>
+<text class="text dim f5" x="277" y="104.2" text-anchor="end" fill="#c9d1d9">Hello hello</text>
+
+    </g>
+    <g id="frame-6">
+      
+
+<rect class="window-bg f6" x="0" y="0" width="293" height="130" fill="#0d1117" rx="0" ry="0"/>
+<g class="text-layer f6">
+<text class="text f13 f6" x="16" y="16">❯</text>
+<text class="text fg f6" x="24.4" y="16"> echo &apos;                                                                                   </text>
+</g>
+<g class="cursor-layer f6">
+<rect class="cursor f6" x="83.2" y="16" width="8.4" height="19.599999999999998" fill="#c9d1d9"/>
+</g>
+<text class="text dim f6" x="277" y="104.2" text-anchor="end" fill="#c9d1d9">Hello hello</text>
+
+    </g>
+    <g id="frame-7">
+      
+
+<rect class="window-bg f7" x="0" y="0" width="293" height="130" fill="#0d1117" rx="0" ry="0"/>
+<g class="text-layer f7">
+<text class="text f13 f7" x="16" y="16">❯</text>
+<text class="text fg f7" x="24.4" y="16"> echo &apos;H                                                                                  </text>
+</g>
+<g class="cursor-layer f7">
+<rect class="cursor f7" x="91.60000000000001" y="16" width="8.4" height="19.599999999999998" fill="#c9d1d9"/>
+</g>
+<text class="text dim f7" x="277" y="104.2" text-anchor="end" fill="#c9d1d9">Hello hello</text>
+
+    </g>
+    <g id="frame-8">
+      
+
+<rect class="window-bg f8" x="0" y="0" width="293" height="130" fill="#0d1117" rx="0" ry="0"/>
+<g class="text-layer f8">
+<text class="text f13 f8" x="16" y="16">❯</text>
+<text class="text fg f8" x="24.4" y="16"> echo &apos;He                                                                                 </text>
+</g>
+<g class="cursor-layer f8">
+<rect class="cursor f8" x="100" y="16" width="8.4" height="19.599999999999998" fill="#c9d1d9"/>
+</g>
+<text class="text dim f8" x="277" y="104.2" text-anchor="end" fill="#c9d1d9">Hello hello</text>
+
+    </g>
+    <g id="frame-9">
+      
+
+<rect class="window-bg f9" x="0" y="0" width="293" height="130" fill="#0d1117" rx="0" ry="0"/>
+<g class="text-layer f9">
+<text class="text f13 f9" x="16" y="16">❯</text>
+<text class="text fg f9" x="24.4" y="16"> echo &apos;Hel                                                                                </text>
+</g>
+<g class="cursor-layer f9">
+<rect class="cursor f9" x="108.4" y="16" width="8.4" height="19.599999999999998" fill="#c9d1d9"/>
+</g>
+<text class="text dim f9" x="277" y="104.2" text-anchor="end" fill="#c9d1d9">Hello hello</text>
+
+    </g>
+    <g id="frame-10">
+      
+
+<rect class="window-bg f10" x="0" y="0" width="293" height="130" fill="#0d1117" rx="0" ry="0"/>
+<g class="text-layer f10">
+<text class="text f13 f10" x="16" y="16">❯</text>
+<text class="text fg f10" x="24.4" y="16"> echo &apos;Hell                                                                               </text>
+</g>
+<g class="cursor-layer f10">
+<rect class="cursor f10" x="116.80000000000001" y="16" width="8.4" height="19.599999999999998" fill="#c9d1d9"/>
+</g>
+<text class="text dim f10" x="277" y="104.2" text-anchor="end" fill="#c9d1d9">Hello hello</text>
+
+    </g>
+    <g id="frame-11">
+      
+
+<rect class="window-bg f11" x="0" y="0" width="293" height="130" fill="#0d1117" rx="0" ry="0"/>
+<g class="text-layer f11">
+<text class="text f13 f11" x="16" y="16">❯</text>
+<text class="text fg f11" x="24.4" y="16"> echo &apos;Hello                                                                              </text>
+</g>
+<g class="cursor-layer f11">
+<rect class="cursor f11" x="125.2" y="16" width="8.4" height="19.599999999999998" fill="#c9d1d9"/>
+</g>
+<text class="text dim f11" x="277" y="104.2" text-anchor="end" fill="#c9d1d9">Hello hello</text>
+
+    </g>
+    <g id="frame-12">
+      
+
+<rect class="window-bg f12" x="0" y="0" width="293" height="130" fill="#0d1117" rx="0" ry="0"/>
+<g class="text-layer f12">
+<text class="text f13 f12" x="16" y="16">❯</text>
+<text class="text fg f12" x="24.4" y="16"> echo &apos;Hello,                                                                             </text>
+</g>
+<g class="cursor-layer f12">
+<rect class="cursor f12" x="133.60000000000002" y="16" width="8.4" height="19.599999999999998" fill="#c9d1d9"/>
+</g>
+<text class="text dim f12" x="277" y="104.2" text-anchor="end" fill="#c9d1d9">Hello hello</text>
+
+    </g>
+    <g id="frame-13">
+      
+
+<rect class="window-bg f13" x="0" y="0" width="293" height="130" fill="#0d1117" rx="0" ry="0"/>
+<g class="text-layer f13">
+<text class="text f13 f13" x="16" y="16">❯</text>
+<text class="text fg f13" x="24.4" y="16"> echo &apos;Hello,                                                                             </text>
+</g>
+<g class="cursor-layer f13">
+<rect class="cursor f13" x="142" y="16" width="8.4" height="19.599999999999998" fill="#c9d1d9"/>
+</g>
+<text class="text dim f13" x="277" y="104.2" text-anchor="end" fill="#c9d1d9">Hello hello</text>
+
+    </g>
+    <g id="frame-14">
+      
+
+<rect class="window-bg f14" x="0" y="0" width="293" height="130" fill="#0d1117" rx="0" ry="0"/>
+<g class="text-layer f14">
+<text class="text f13 f14" x="16" y="16">❯</text>
+<text class="text fg f14" x="24.4" y="16"> echo &apos;Hello, C                                                                           </text>
+</g>
+<g class="cursor-layer f14">
+<rect class="cursor f14" x="150.4" y="16" width="8.4" height="19.599999999999998" fill="#c9d1d9"/>
+</g>
+<text class="text dim f14" x="277" y="104.2" text-anchor="end" fill="#c9d1d9">Hello hello</text>
+
+    </g>
+    <g id="frame-15">
+      
+
+<rect class="window-bg f15" x="0" y="0" width="293" height="130" fill="#0d1117" rx="0" ry="0"/>
+<g class="text-layer f15">
+<text class="text f13 f15" x="16" y="16">❯</text>
+<text class="text fg f15" x="24.4" y="16"> echo &apos;Hello, Ci                                                                          </text>
+</g>
+<g class="cursor-layer f15">
+<rect class="cursor f15" x="158.8" y="16" width="8.4" height="19.599999999999998" fill="#c9d1d9"/>
+</g>
+<text class="text dim f15" x="277" y="104.2" text-anchor="end" fill="#c9d1d9">Hello hello</text>
+
+    </g>
+    <g id="frame-16">
+      
+
+<rect class="window-bg f16" x="0" y="0" width="293" height="130" fill="#0d1117" rx="0" ry="0"/>
+<g class="text-layer f16">
+<text class="text f13 f16" x="16" y="16">❯</text>
+<text class="text fg f16" x="24.4" y="16"> echo &apos;Hello, Cin                                                                         </text>
+</g>
+<g class="cursor-layer f16">
+<rect class="cursor f16" x="167.20000000000002" y="16" width="8.4" height="19.599999999999998" fill="#c9d1d9"/>
+</g>
+<text class="text dim f16" x="277" y="104.2" text-anchor="end" fill="#c9d1d9">Hello hello</text>
+
+    </g>
+    <g id="frame-17">
+      
+
+<rect class="window-bg f17" x="0" y="0" width="293" height="130" fill="#0d1117" rx="0" ry="0"/>
+<g class="text-layer f17">
+<text class="text f13 f17" x="16" y="16">❯</text>
+<text class="text fg f17" x="24.4" y="16"> echo &apos;Hello, Cine                                                                        </text>
+</g>
+<g class="cursor-layer f17">
+<rect class="cursor f17" x="175.6" y="16" width="8.4" height="19.599999999999998" fill="#c9d1d9"/>
+</g>
+<text class="text dim f17" x="277" y="104.2" text-anchor="end" fill="#c9d1d9">Hello hello</text>
+
+    </g>
+    <g id="frame-18">
+      
+
+<rect class="window-bg f18" x="0" y="0" width="293" height="130" fill="#0d1117" rx="0" ry="0"/>
+<g class="text-layer f18">
+<text class="text f13 f18" x="16" y="16">❯</text>
+<text class="text fg f18" x="24.4" y="16"> echo &apos;Hello, Cinem                                                                       </text>
+</g>
+<g class="cursor-layer f18">
+<rect class="cursor f18" x="184" y="16" width="8.4" height="19.599999999999998" fill="#c9d1d9"/>
+</g>
+<text class="text dim f18" x="277" y="104.2" text-anchor="end" fill="#c9d1d9">Hello hello</text>
+
+    </g>
+    <g id="frame-19">
+      
+
+<rect class="window-bg f19" x="0" y="0" width="293" height="130" fill="#0d1117" rx="0" ry="0"/>
+<g class="text-layer f19">
+<text class="text f13 f19" x="16" y="16">❯</text>
+<text class="text fg f19" x="24.4" y="16"> echo &apos;Hello, Cinema                                                                      </text>
+</g>
+<g class="cursor-layer f19">
+<rect class="cursor f19" x="192.4" y="16" width="8.4" height="19.599999999999998" fill="#c9d1d9"/>
+</g>
+<text class="text dim f19" x="277" y="104.2" text-anchor="end" fill="#c9d1d9">Hello hello</text>
+
+    </g>
+    <g id="frame-20">
+      
+
+<rect class="window-bg f20" x="0" y="0" width="293" height="130" fill="#0d1117" rx="0" ry="0"/>
+<g class="text-layer f20">
+<text class="text f13 f20" x="16" y="16">❯</text>
+<text class="text fg f20" x="24.4" y="16"> echo &apos;Hello, Cinema                                                                      </text>
+</g>
+<g class="cursor-layer f20">
+<rect class="cursor f20" x="200.8" y="16" width="8.4" height="19.599999999999998" fill="#c9d1d9"/>
+</g>
+<text class="text dim f20" x="277" y="104.2" text-anchor="end" fill="#c9d1d9">Hello hello</text>
+
+    </g>
+    <g id="frame-21">
+      
+
+<rect class="window-bg f21" x="0" y="0" width="293" height="130" fill="#0d1117" rx="0" ry="0"/>
+<g class="text-layer f21">
+<text class="text f13 f21" x="16" y="16">❯</text>
+<text class="text fg f21" x="24.4" y="16"> echo &apos;Hello, Cinema D                                                                    </text>
+</g>
+<g class="cursor-layer f21">
+<rect class="cursor f21" x="209.20000000000002" y="16" width="8.4" height="19.599999999999998" fill="#c9d1d9"/>
+</g>
+<text class="text dim f21" x="277" y="104.2" text-anchor="end" fill="#c9d1d9">Hello hello</text>
+
+    </g>
+    <g id="frame-22">
+      
+
+<rect class="window-bg f22" x="0" y="0" width="293" height="130" fill="#0d1117" rx="0" ry="0"/>
+<g class="text-layer f22">
+<text class="text f13 f22" x="16" y="16">❯</text>
+<text class="text fg f22" x="24.4" y="16"> echo &apos;Hello, Cinema Di                                                                   </text>
+</g>
+<g class="cursor-layer f22">
+<rect class="cursor f22" x="217.60000000000002" y="16" width="8.4" height="19.599999999999998" fill="#c9d1d9"/>
+</g>
+<text class="text dim f22" x="277" y="104.2" text-anchor="end" fill="#c9d1d9">Hello hello</text>
+
+    </g>
+    <g id="frame-23">
+      
+
+<rect class="window-bg f23" x="0" y="0" width="293" height="130" fill="#0d1117" rx="0" ry="0"/>
+<g class="text-layer f23">
+<text class="text f13 f23" x="16" y="16">❯</text>
+<text class="text fg f23" x="24.4" y="16"> echo &apos;Hello, Cinema Dis                                                                  </text>
+</g>
+<g class="cursor-layer f23">
+<rect class="cursor f23" x="226" y="16" width="8.4" height="19.599999999999998" fill="#c9d1d9"/>
+</g>
+<text class="text dim f23" x="277" y="104.2" text-anchor="end" fill="#c9d1d9">Hello hello</text>
+
+    </g>
+    <g id="frame-24">
+      
+
+<rect class="window-bg f24" x="0" y="0" width="293" height="130" fill="#0d1117" rx="0" ry="0"/>
+<g class="text-layer f24">
+<text class="text f13 f24" x="16" y="16">❯</text>
+<text class="text fg f24" x="24.4" y="16"> echo &apos;Hello, Cinema Disp                                                                 </text>
+</g>
+<g class="cursor-layer f24">
+<rect class="cursor f24" x="234.4" y="16" width="8.4" height="19.599999999999998" fill="#c9d1d9"/>
+</g>
+<text class="text dim f24" x="277" y="104.2" text-anchor="end" fill="#c9d1d9">Hello hello</text>
+
+    </g>
+    <g id="frame-25">
+      
+
+<rect class="window-bg f25" x="0" y="0" width="293" height="130" fill="#0d1117" rx="0" ry="0"/>
+<g class="text-layer f25">
+<text class="text f13 f25" x="16" y="16">❯</text>
+<text class="text fg f25" x="24.4" y="16"> echo &apos;Hello, Cinema Displ                                                                </text>
+</g>
+<g class="cursor-layer f25">
+<rect class="cursor f25" x="242.8" y="16" width="8.4" height="19.599999999999998" fill="#c9d1d9"/>
+</g>
+<text class="text dim f25" x="277" y="104.2" text-anchor="end" fill="#c9d1d9">Hello hello</text>
+
+    </g>
+    <g id="frame-26">
+      
+
+<rect class="window-bg f26" x="0" y="0" width="293" height="130" fill="#0d1117" rx="0" ry="0"/>
+<g class="text-layer f26">
+<text class="text f13 f26" x="16" y="16">❯</text>
+<text class="text fg f26" x="24.4" y="16"> echo &apos;Hello, Cinema Displa                                                               </text>
+</g>
+<g class="cursor-layer f26">
+<rect class="cursor f26" x="251.20000000000002" y="16" width="8.4" height="19.599999999999998" fill="#c9d1d9"/>
+</g>
+<text class="text dim f26" x="277" y="104.2" text-anchor="end" fill="#c9d1d9">Hello hello</text>
+
+    </g>
+    <g id="frame-27">
+      
+
+<rect class="window-bg f27" x="0" y="0" width="293" height="130" fill="#0d1117" rx="0" ry="0"/>
+<g class="text-layer f27">
+<text class="text f13 f27" x="16" y="16">❯</text>
+<text class="text fg f27" x="24.4" y="16"> echo &apos;Hello, Cinema Display                                                              </text>
+</g>
+<g class="cursor-layer f27">
+<rect class="cursor f27" x="259.6" y="16" width="8.4" height="19.599999999999998" fill="#c9d1d9"/>
+</g>
+<text class="text dim f27" x="277" y="104.2" text-anchor="end" fill="#c9d1d9">Hello hello</text>
+
+    </g>
+    <g id="frame-28">
+      
+
+<rect class="window-bg f28" x="0" y="0" width="293" height="130" fill="#0d1117" rx="0" ry="0"/>
+<g class="text-layer f28">
+<text class="text f13 f28" x="16" y="16">❯</text>
+<text class="text fg f28" x="24.4" y="16"> echo &apos;Hello, Cinema Display!                                                             </text>
+</g>
+<g class="cursor-layer f28">
+<rect class="cursor f28" x="268" y="16" width="8.4" height="19.599999999999998" fill="#c9d1d9"/>
+</g>
+<text class="text dim f28" x="277" y="104.2" text-anchor="end" fill="#c9d1d9">Hello hello</text>
+
+    </g>
+    <g id="frame-29">
+      
+
+<rect class="window-bg f29" x="0" y="0" width="293" height="130" fill="#0d1117" rx="0" ry="0"/>
+<g class="text-layer f29">
+<text class="text f13 f29" x="16" y="16">❯</text>
+<text class="text fg f29" x="24.4" y="16"> echo &apos;Hello, Cinema Display!&apos;                                                            </text>
+</g>
+<g class="cursor-layer f29">
+<rect class="cursor f29" x="276.40000000000003" y="16" width="8.4" height="19.599999999999998" fill="#c9d1d9"/>
+</g>
+<text class="text dim f29" x="277" y="104.2" text-anchor="end" fill="#c9d1d9">Hello hello</text>
+
+    </g>
+    <g id="frame-30">
+      
+
+<rect class="window-bg f30" x="0" y="0" width="293" height="130" fill="#0d1117" rx="0" ry="0"/>
+<g class="text-layer f30">
+<text class="text f13 f30" x="16" y="16">❯</text>
+<text class="text fg f30" x="24.4" y="16"> echo &apos;Hello, Cinema Display!&apos;                                                            </text>
+</g>
+<text class="text dim f30" x="277" y="104.2" text-anchor="end" fill="#c9d1d9">Hello hello</text>
+
+    </g>
+    <g id="frame-31">
+      
+
+<rect class="window-bg f31" x="0" y="0" width="293" height="130" fill="#0d1117" rx="0" ry="0"/>
+<g class="text-layer f31">
+<text class="text f13 f31" x="16" y="16">❯</text>
+<text class="text fg f31" x="24.4" y="16"> echo &apos;Hello, Cinema Display!&apos;                                                            </text>
+<text class="text fg f31" x="16" y="35.599999999999994">Hello, Cinema Display!                                                                     </text>
+<text class="text f13 f31" x="16" y="74.8">❯</text>
+</g>
+<g class="cursor-layer f31">
+<rect class="cursor f31" x="32.8" y="74.8" width="8.4" height="19.599999999999998" fill="#c9d1d9"/>
+</g>
+<text class="text dim f31" x="277" y="104.2" text-anchor="end" fill="#c9d1d9">Hello hello</text>
+
+    </g>
+    <g id="frame-32">
+      
+
+<rect class="window-bg f32" x="0" y="0" width="293" height="130" fill="#0d1117" rx="0" ry="0"/>
+<g class="text-layer f32">
+<text class="text f13 f32" x="16" y="16">❯</text>
+<text class="text fg f32" x="24.4" y="16"> echo &apos;Hello, Cinema Display!&apos;                                                            </text>
+<text class="text fg f32" x="16" y="35.599999999999994">Hello, Cinema Display!                                                                     </text>
+<text class="text f13 f32" x="16" y="74.8">❯</text>
+</g>
+<g class="cursor-layer f32">
+<rect class="cursor f32" x="32.8" y="74.8" width="8.4" height="19.599999999999998" fill="#c9d1d9"/>
+</g>
+<text class="text dim f32" x="277" y="104.2" text-anchor="end" fill="#c9d1d9">Hello hello</text>
+
+    </g>
+    <g id="frame-33">
+      
+
+<rect class="window-bg f33" x="0" y="0" width="293" height="130" fill="#0d1117" rx="0" ry="0"/>
+<g class="text-layer f33">
+<text class="text f13 f33" x="16" y="16">❯</text>
+<text class="text fg f33" x="24.4" y="16"> echo &apos;Hello, Cinema Display!&apos;                                                            </text>
+<text class="text fg f33" x="16" y="35.599999999999994">Hello, Cinema Display!                                                                     </text>
+<text class="text f13 f33" x="16" y="74.8">❯</text>
+</g>
+<text class="text dim f33" x="277" y="104.2" text-anchor="end" fill="#c9d1d9">Hello hello</text>
+
+    </g>
+  </defs>
+
+  
+  <use href="#frame-0" class="frame frame-0" />
+  <use href="#frame-1" class="frame frame-1" />
+  <use href="#frame-2" class="frame frame-2" />
+  <use href="#frame-3" class="frame frame-3" />
+  <use href="#frame-4" class="frame frame-4" />
+  <use href="#frame-5" class="frame frame-5" />
+  <use href="#frame-6" class="frame frame-6" />
+  <use href="#frame-7" class="frame frame-7" />
+  <use href="#frame-8" class="frame frame-8" />
+  <use href="#frame-9" class="frame frame-9" />
+  <use href="#frame-10" class="frame frame-10" />
+  <use href="#frame-11" class="frame frame-11" />
+  <use href="#frame-12" class="frame frame-12" />
+  <use href="#frame-13" class="frame frame-13" />
+  <use href="#frame-14" class="frame frame-14" />
+  <use href="#frame-15" class="frame frame-15" />
+  <use href="#frame-16" class="frame frame-16" />
+  <use href="#frame-17" class="frame frame-17" />
+  <use href="#frame-18" class="frame frame-18" />
+  <use href="#frame-19" class="frame frame-19" />
+  <use href="#frame-20" class="frame frame-20" />
+  <use href="#frame-21" class="frame frame-21" />
+  <use href="#frame-22" class="frame frame-22" />
+  <use href="#frame-23" class="frame frame-23" />
+  <use href="#frame-24" class="frame frame-24" />
+  <use href="#frame-25" class="frame frame-25" />
+  <use href="#frame-26" class="frame frame-26" />
+  <use href="#frame-27" class="frame frame-27" />
+  <use href="#frame-28" class="frame frame-28" />
+  <use href="#frame-29" class="frame frame-29" />
+  <use href="#frame-30" class="frame frame-30" />
+  <use href="#frame-31" class="frame frame-31" />
+  <use href="#frame-32" class="frame frame-32" />
+  <use href="#frame-33" class="frame frame-33" />
+</svg>

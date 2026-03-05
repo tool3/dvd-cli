@@ -1,0 +1,642 @@
+/**
+ * SVG Emitter - Generates optimized SVG output
+ *
+ * Key optimizations:
+ * - CSS classes instead of inline styles
+ * - Background rect coalescing
+ * - Embedded monospace font
+ * - Minimal markup
+ */
+
+import type { SpanRow, Span, CellStyle, Theme, EmitterOptions, CursorPosition } from '../types';
+import { coalesceBackgrounds, mergeVerticalBackgrounds, type BgRect, type RenderConfig } from './coalescer';
+
+// ============================================================================
+// CSS Class Generation
+// ============================================================================
+
+/**
+ * Generate CSS class names for a span style
+ */
+export function styleToClasses(style: CellStyle): string[] {
+  const classes: string[] = [];
+
+  if (style.bold) classes.push('bold');
+  if (style.italic) classes.push('italic');
+  if (style.underline) classes.push('uline');
+  if (style.dim) classes.push('dim');
+  if (style.strikethrough) classes.push('strike');
+
+  return classes;
+}
+
+/**
+ * Check if a color is a truecolor (rgb) that needs inline style
+ */
+function isTruecolor(color: string | null): boolean {
+  return color !== null && color.startsWith('rgb(');
+}
+
+/**
+ * Generate the CSS stylesheet for the SVG
+ */
+export function generateStylesheet(theme: Theme, options: EmitterOptions): string {
+  const fontSize = options.fontSize;
+  const lineHeight = options.lineHeight ?? fontSize * 1.4;
+
+  const lines: string[] = [];
+
+  // Font face (if embedded)
+  if (options.embedFont && options.fontData) {
+    lines.push(`@font-face {
+  font-family: 'DVDMono';
+  src: url(data:font/woff2;base64,${options.fontData}) format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: block;
+}`);
+  }
+
+  // Base text styles
+  const fontFamily = options.embedFont ? "'DVDMono', monospace" : "'SF Mono', 'Monaco', 'Menlo', 'Consolas', monospace";
+  lines.push(`.text {
+  font-family: ${fontFamily};
+  font-size: ${fontSize}px;
+  dominant-baseline: text-before-edge;
+  text-rendering: geometricPrecision;
+  white-space: pre;
+}`);
+
+  // Style modifiers
+  lines.push('.bold { font-weight: bold; }');
+  lines.push('.italic { font-style: italic; }');
+  lines.push('.uline { text-decoration: underline; }');
+  lines.push('.strike { text-decoration: line-through; }');
+  lines.push('.dim { opacity: 0.5; }');
+
+  // Foreground colors (ANSI 16)
+  const fgColors = [
+    theme.black,
+    theme.red,
+    theme.green,
+    theme.yellow,
+    theme.blue,
+    theme.magenta,
+    theme.cyan,
+    theme.white,
+    theme.brightBlack,
+    theme.brightRed,
+    theme.brightGreen,
+    theme.brightYellow,
+    theme.brightBlue,
+    theme.brightMagenta,
+    theme.brightCyan,
+    theme.brightWhite,
+  ];
+
+  lines.push(`.fg { fill: ${theme.foreground}; }`);
+  fgColors.forEach((color, i) => {
+    lines.push(`.f${i} { fill: ${color}; }`);
+  });
+
+  // Background colors (ANSI 16)
+  lines.push(`.bg { fill: ${theme.background}; }`);
+  fgColors.forEach((color, i) => {
+    lines.push(`.b${i} { fill: ${color}; }`);
+  });
+
+  // Cursor animation
+  lines.push(`.cursor { animation: blink 1s step-end infinite; }`);
+  lines.push(`.cursor-active { opacity: 1; }`);
+  lines.push(`@keyframes blink {
+  0%, 50% { opacity: 1; }
+  50.01%, 100% { opacity: 0; }
+}`);
+
+  return lines.join('\n');
+}
+
+// ============================================================================
+// Chrome Generation (Title Bar, Controls)
+// ============================================================================
+
+interface ChromeConfig {
+  template: 'macos' | 'windows' | 'minimal';
+  width: number;
+  height: number;
+  headerHeight: number;
+  padding: number;
+  borderRadius: number;
+  title?: string;
+  theme: Theme;
+  headerBackground?: string;
+}
+
+function generateChrome(config: ChromeConfig): string {
+  const { template, width, headerHeight, padding, borderRadius, title, theme, headerBackground } = config;
+
+  const parts: string[] = [];
+
+  if (template === 'minimal') {
+    // No chrome for minimal template
+    return '';
+  }
+
+  const headerBg = headerBackground ?? theme.background;
+
+  // Header background
+  parts.push(
+    `<rect class="header-bg" x="0" y="0" width="${width}" height="${headerHeight}" ` +
+      `fill="${headerBg}" rx="${borderRadius}" ry="${borderRadius}"/>`
+  );
+
+  // Bottom corners of header should be square (covered by content area)
+  parts.push(`<rect x="0" y="${headerHeight - borderRadius}" width="${width}" height="${borderRadius}" fill="${headerBg}"/>`);
+
+  if (template === 'macos') {
+    // Traffic lights
+    const buttonY = headerHeight / 2;
+    const buttonRadius = 6;
+    const buttonSpacing = 20;
+    const buttonStartX = padding + buttonRadius;
+
+    parts.push(`<circle cx="${buttonStartX}" cy="${buttonY}" r="${buttonRadius}" fill="#ff5f56"/>`);
+    parts.push(`<circle cx="${buttonStartX + buttonSpacing}" cy="${buttonY}" r="${buttonRadius}" fill="#ffbd2e"/>`);
+    parts.push(`<circle cx="${buttonStartX + buttonSpacing * 2}" cy="${buttonY}" r="${buttonRadius}" fill="#27c93f"/>`);
+  } else if (template === 'windows') {
+    // Windows controls (minimize, maximize, close)
+    const buttonWidth = 46;
+    const buttonHeight = headerHeight;
+    const closeX = width - buttonWidth;
+    const maxX = closeX - buttonWidth;
+    const minX = maxX - buttonWidth;
+
+    // Hover areas (invisible)
+    parts.push(`<rect x="${minX}" y="0" width="${buttonWidth}" height="${buttonHeight}" fill="transparent"/>`);
+    parts.push(`<rect x="${maxX}" y="0" width="${buttonWidth}" height="${buttonHeight}" fill="transparent"/>`);
+    parts.push(`<rect x="${closeX}" y="0" width="${buttonWidth}" height="${buttonHeight}" fill="transparent"/>`);
+
+    // Icons
+    const iconColor = theme.foreground;
+    const iconY = headerHeight / 2;
+
+    // Minimize (line)
+    parts.push(`<line x1="${minX + 18}" y1="${iconY}" x2="${minX + 28}" y2="${iconY}" stroke="${iconColor}" stroke-width="1"/>`);
+
+    // Maximize (square)
+    parts.push(
+      `<rect x="${maxX + 18}" y="${iconY - 5}" width="10" height="10" ` + `stroke="${iconColor}" stroke-width="1" fill="none"/>`
+    );
+
+    // Close (X)
+    parts.push(`<line x1="${closeX + 18}" y1="${iconY - 5}" x2="${closeX + 28}" y2="${iconY + 5}" stroke="${iconColor}" stroke-width="1"/>`);
+    parts.push(`<line x1="${closeX + 28}" y1="${iconY - 5}" x2="${closeX + 18}" y2="${iconY + 5}" stroke="${iconColor}" stroke-width="1"/>`);
+  }
+
+  // Title text
+  if (title) {
+    const titleX = width / 2;
+    const titleY = headerHeight / 2 + 4;
+    parts.push(
+      `<text class="text fg" x="${titleX}" y="${titleY}" text-anchor="middle" dominant-baseline="middle">${escapeXml(title)}</text>`
+    );
+  }
+
+  return parts.join('\n');
+}
+
+// ============================================================================
+// Main Emitter
+// ============================================================================
+
+export interface EmitResult {
+  svg: string;
+  width: number;
+  height: number;
+}
+
+/**
+ * Emit SVG from coalesced span rows
+ */
+export function emit(
+  rows: SpanRow[],
+  cursor: CursorPosition | null,
+  cursorVisible: boolean,
+  options: EmitterOptions
+): EmitResult {
+  const { theme, template, width, height, fontSize, title, watermark } = options;
+  const lineHeight = options.lineHeight ?? fontSize * 1.4;
+  const charWidth = options.charWidth ?? fontSize * 0.6;
+  const padding = options.padding ?? 16;
+  const borderRadius = options.borderRadius ?? (template === 'minimal' ? 0 : 8);
+  const borderWidth = options.borderWidth ?? 0;
+  const borderColor = options.borderColor ?? theme.foreground;
+
+  // Calculate header height based on template
+  const headerHeight = template === 'minimal' ? 0 : 40;
+  const watermarkHeight = watermark ? lineHeight : 0;
+  const contentStartY = headerHeight + padding;
+
+  const parts: string[] = [];
+
+  // SVG header
+  parts.push(`<svg xmlns="http://www.w3.org/2000/svg" width="${width}" height="${height}" viewBox="0 0 ${width} ${height}">`);
+
+  // Stylesheet
+  parts.push('<style>');
+  parts.push(generateStylesheet(theme, options));
+  parts.push('</style>');
+
+  // Background
+  parts.push(
+    `<rect class="window-bg" x="0" y="0" width="${width}" height="${height}" ` +
+      `fill="${theme.background}" rx="${borderRadius}" ry="${borderRadius}"/>`
+  );
+
+  // Border (if specified)
+  if (borderWidth > 0) {
+    parts.push(
+      `<rect x="${borderWidth / 2}" y="${borderWidth / 2}" ` +
+        `width="${width - borderWidth}" height="${height - borderWidth}" ` +
+        `fill="none" stroke="${borderColor}" stroke-width="${borderWidth}" ` +
+        `rx="${borderRadius}" ry="${borderRadius}"/>`
+    );
+  }
+
+  // Chrome (title bar)
+  const chrome = generateChrome({
+    template,
+    width,
+    height,
+    headerHeight,
+    padding,
+    borderRadius,
+    title,
+    theme,
+    headerBackground: options.headerBackground,
+  });
+  if (chrome) {
+    parts.push(`<g class="chrome">${chrome}</g>`);
+  }
+
+  // Background rectangles layer
+  const renderConfig: RenderConfig = {
+    charWidth,
+    lineHeight,
+    padding,
+    headerHeight: contentStartY,
+  };
+
+  const bgRects = coalesceBackgrounds(rows, renderConfig);
+  const mergedBgRects = mergeVerticalBackgrounds(bgRects);
+
+  if (mergedBgRects.length > 0) {
+    parts.push('<g class="bg-layer">');
+    for (const rect of mergedBgRects) {
+      parts.push(`<rect x="${rect.x}" y="${rect.y}" width="${rect.width}" height="${rect.height}" fill="${rect.color}"/>`);
+    }
+    parts.push('</g>');
+  }
+
+  // Text layer
+  parts.push('<g class="text-layer">');
+  for (const row of rows) {
+    for (const span of row) {
+      const x = padding + span.col * charWidth;
+      const y = contentStartY + span.row * lineHeight;
+
+      const classes = ['text', ...styleToClasses(span.style)];
+
+      // Foreground color - use class if it's a theme color, inline if truecolor
+      let fillAttr = '';
+      if (span.style.fg) {
+        if (isTruecolor(span.style.fg)) {
+          fillAttr = ` fill="${span.style.fg}"`;
+        } else {
+          // Check if it matches a theme color
+          const colorClass = getColorClass(span.style.fg, theme);
+          if (colorClass) {
+            classes.push(colorClass);
+          } else {
+            fillAttr = ` fill="${span.style.fg}"`;
+          }
+        }
+      } else {
+        classes.push('fg');
+      }
+
+      const classAttr = classes.join(' ');
+      const text = escapeXml(span.text);
+
+      parts.push(`<text class="${classAttr}" x="${x}" y="${y}"${fillAttr}>${text}</text>`);
+    }
+  }
+  parts.push('</g>');
+
+  // Cursor layer
+  if (cursor && cursorVisible) {
+    const cursorX = padding + cursor.col * charWidth;
+    const cursorY = contentStartY + cursor.row * lineHeight;
+    const cursorColor = theme.cursor ?? theme.foreground;
+
+    parts.push('<g class="cursor-layer">');
+    parts.push(
+      `<rect class="cursor" x="${cursorX}" y="${cursorY}" ` +
+        `width="${charWidth}" height="${lineHeight}" fill="${cursorColor}"/>`
+    );
+    parts.push('</g>');
+  }
+
+  // Watermark
+  if (watermark) {
+    const watermarkY = height - padding - watermarkHeight / 2;
+    const watermarkX = width - padding;
+
+    if (options.footerBackground) {
+      parts.push(
+        `<rect x="0" y="${height - watermarkHeight - padding}" width="${width}" ` +
+          `height="${watermarkHeight + padding}" fill="${options.footerBackground}"/>`
+      );
+    }
+
+    parts.push(
+      `<text class="text dim" x="${watermarkX}" y="${watermarkY}" ` +
+        `text-anchor="end" fill="${theme.foreground}">${escapeXml(watermark)}</text>`
+    );
+  }
+
+  // Close SVG
+  parts.push('</svg>');
+
+  return {
+    svg: parts.join('\n'),
+    width,
+    height,
+  };
+}
+
+// ============================================================================
+// Helper Functions
+// ============================================================================
+
+/**
+ * Get color class name if the color matches a theme color
+ */
+function getColorClass(color: string, theme: Theme): string | null {
+  const colorMap: Record<string, string> = {
+    [theme.black]: 'f0',
+    [theme.red]: 'f1',
+    [theme.green]: 'f2',
+    [theme.yellow]: 'f3',
+    [theme.blue]: 'f4',
+    [theme.magenta]: 'f5',
+    [theme.cyan]: 'f6',
+    [theme.white]: 'f7',
+    [theme.brightBlack]: 'f8',
+    [theme.brightRed]: 'f9',
+    [theme.brightGreen]: 'f10',
+    [theme.brightYellow]: 'f11',
+    [theme.brightBlue]: 'f12',
+    [theme.brightMagenta]: 'f13',
+    [theme.brightCyan]: 'f14',
+    [theme.brightWhite]: 'f15',
+    [theme.foreground]: 'fg',
+  };
+
+  return colorMap[color] ?? null;
+}
+
+/**
+ * Escape XML special characters
+ */
+function escapeXml(text: string): string {
+  return text
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&apos;');
+}
+
+// ============================================================================
+// Frame Animation Support
+// ============================================================================
+
+export interface AnimatedSVGOptions extends EmitterOptions {
+  fps?: number;
+  loop?: boolean;
+  pauseAtEnd?: number;
+}
+
+export interface FrameData {
+  rows: SpanRow[];
+  cursor: CursorPosition | null;
+  cursorVisible: boolean;
+  timestamp: number;
+}
+
+/**
+ * Emit animated SVG from multiple frames
+ */
+export function emitAnimated(frames: FrameData[], options: AnimatedSVGOptions): EmitResult {
+  if (frames.length === 0) {
+    return emit([], null, false, options);
+  }
+
+  if (frames.length === 1) {
+    return emit(frames[0].rows, frames[0].cursor, frames[0].cursorVisible, options);
+  }
+
+  const { theme, template, width, height, fontSize } = options;
+  const lineHeight = options.lineHeight ?? fontSize * 1.4;
+  const charWidth = options.charWidth ?? fontSize * 0.6;
+  const padding = options.padding ?? 16;
+  const borderRadius = options.borderRadius ?? (template === 'minimal' ? 0 : 8);
+  const headerHeight = template === 'minimal' ? 0 : 40;
+  const contentStartY = headerHeight + padding;
+  const fps = options.fps ?? 10;
+  const loop = options.loop ?? true;
+  const pauseAtEnd = options.pauseAtEnd ?? 0;
+
+  // Calculate total duration
+  const lastFrame = frames[frames.length - 1];
+  const totalDuration = lastFrame.timestamp + pauseAtEnd;
+
+  const parts: string[] = [];
+
+  // SVG header
+  parts.push(`<svg xmlns="http://www.w3.org/2000/svg" width="${width}" height="${height}" viewBox="0 0 ${width} ${height}">`);
+
+  // Defs for reusable content
+  parts.push('<defs>');
+
+  // Generate each frame as a group in defs
+  for (let i = 0; i < frames.length; i++) {
+    const frame = frames[i];
+    const frameContent = generateFrameContent(frame, {
+      ...options,
+      charWidth,
+      lineHeight,
+      padding,
+      contentStartY,
+    });
+    parts.push(`<g id="f${i}">${frameContent}</g>`);
+  }
+
+  parts.push('</defs>');
+
+  // Stylesheet with animation keyframes
+  parts.push('<style>');
+  parts.push(generateStylesheet(theme, options));
+  parts.push(generateAnimationKeyframes(frames, totalDuration, loop));
+  parts.push('</style>');
+
+  // Static background
+  parts.push(
+    `<rect class="window-bg" x="0" y="0" width="${width}" height="${height}" ` +
+      `fill="${theme.background}" rx="${borderRadius}" ry="${borderRadius}"/>`
+  );
+
+  // Chrome (static)
+  const chrome = generateChrome({
+    template,
+    width,
+    height,
+    headerHeight,
+    padding,
+    borderRadius,
+    title: options.title,
+    theme,
+    headerBackground: options.headerBackground,
+  });
+  if (chrome) {
+    parts.push(`<g class="chrome">${chrome}</g>`);
+  }
+
+  // Animated frame references
+  for (let i = 0; i < frames.length; i++) {
+    parts.push(`<use href="#f${i}" class="frame frame-${i}"/>`);
+  }
+
+  // Watermark (static)
+  if (options.watermark) {
+    const watermarkHeight = lineHeight;
+    const watermarkY = height - padding - watermarkHeight / 2;
+    const watermarkX = width - padding;
+
+    parts.push(
+      `<text class="text dim" x="${watermarkX}" y="${watermarkY}" ` +
+        `text-anchor="end" fill="${theme.foreground}">${escapeXml(options.watermark)}</text>`
+    );
+  }
+
+  parts.push('</svg>');
+
+  return {
+    svg: parts.join('\n'),
+    width,
+    height,
+  };
+}
+
+interface FrameRenderConfig {
+  charWidth: number;
+  lineHeight: number;
+  padding: number;
+  contentStartY: number;
+  theme: Theme;
+}
+
+function generateFrameContent(frame: FrameData, config: EmitterOptions & FrameRenderConfig): string {
+  const { rows, cursor, cursorVisible } = frame;
+  const { charWidth, lineHeight, padding, contentStartY, theme } = config;
+
+  const parts: string[] = [];
+
+  // Background rectangles
+  const renderConfig: RenderConfig = {
+    charWidth,
+    lineHeight,
+    padding,
+    headerHeight: contentStartY,
+  };
+
+  const bgRects = coalesceBackgrounds(rows, renderConfig);
+  const mergedBgRects = mergeVerticalBackgrounds(bgRects);
+
+  if (mergedBgRects.length > 0) {
+    parts.push('<g class="bg-layer">');
+    for (const rect of mergedBgRects) {
+      parts.push(`<rect x="${rect.x}" y="${rect.y}" width="${rect.width}" height="${rect.height}" fill="${rect.color}"/>`);
+    }
+    parts.push('</g>');
+  }
+
+  // Text layer
+  parts.push('<g class="text-layer">');
+  for (const row of rows) {
+    for (const span of row) {
+      const x = padding + span.col * charWidth;
+      const y = contentStartY + span.row * lineHeight;
+
+      const classes = ['text', ...styleToClasses(span.style)];
+      let fillAttr = '';
+
+      if (span.style.fg) {
+        if (isTruecolor(span.style.fg)) {
+          fillAttr = ` fill="${span.style.fg}"`;
+        } else {
+          const colorClass = getColorClass(span.style.fg, theme);
+          if (colorClass) {
+            classes.push(colorClass);
+          } else {
+            fillAttr = ` fill="${span.style.fg}"`;
+          }
+        }
+      } else {
+        classes.push('fg');
+      }
+
+      parts.push(`<text class="${classes.join(' ')}" x="${x}" y="${y}"${fillAttr}>${escapeXml(span.text)}</text>`);
+    }
+  }
+  parts.push('</g>');
+
+  // Cursor
+  if (cursor && cursorVisible) {
+    const cursorX = padding + cursor.col * charWidth;
+    const cursorY = contentStartY + cursor.row * lineHeight;
+    const cursorColor = theme.cursor ?? theme.foreground;
+
+    parts.push(
+      `<rect class="cursor" x="${cursorX}" y="${cursorY}" ` +
+        `width="${charWidth}" height="${lineHeight}" fill="${cursorColor}"/>`
+    );
+  }
+
+  return parts.join('\n');
+}
+
+function generateAnimationKeyframes(frames: FrameData[], totalDuration: number, loop: boolean): string {
+  const lines: string[] = [];
+
+  for (let i = 0; i < frames.length; i++) {
+    const frame = frames[i];
+    const nextFrame = frames[i + 1];
+
+    const startPercent = (frame.timestamp / totalDuration) * 100;
+    const endPercent = nextFrame ? (nextFrame.timestamp / totalDuration) * 100 : 100;
+
+    lines.push(`.frame-${i} {
+  animation: frame-${i}-anim ${totalDuration}ms step-end ${loop ? 'infinite' : 'forwards'};
+}
+
+@keyframes frame-${i}-anim {
+  0%, ${startPercent.toFixed(2)}% { opacity: 0; }
+  ${startPercent.toFixed(2)}%, ${endPercent.toFixed(2)}% { opacity: 1; }
+  ${endPercent.toFixed(2)}%, 100% { opacity: 0; }
+}`);
+  }
+
+  return lines.join('\n');
+}
