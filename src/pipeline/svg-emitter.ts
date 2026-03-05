@@ -318,6 +318,18 @@ export function emit(
   parts.push(generateStylesheet(theme, options));
   parts.push('</style>');
 
+  // Clip path for rounded corners (makes corners truly transparent)
+  if (borderRadius > 0) {
+    parts.push('<defs>');
+    parts.push(
+      `<clipPath id="rounded-corners">` +
+        `<rect x="0" y="0" width="${width}" height="${height}" rx="${borderRadius}" ry="${borderRadius}"/>` +
+        `</clipPath>`
+    );
+    parts.push('</defs>');
+    parts.push(`<g clip-path="url(#rounded-corners)">`);
+  }
+
   // Background
   parts.push(
     `<rect class="window-bg" x="0" y="0" width="${width}" height="${height}" ` +
@@ -493,6 +505,11 @@ export function emit(
     );
   }
 
+  // Close clip group if we opened one
+  if (borderRadius > 0) {
+    parts.push('</g>');
+  }
+
   // Close SVG
   parts.push('</svg>');
 
@@ -606,8 +623,17 @@ export function emitAnimated(frames: FrameData[], options: AnimatedSVGOptions): 
   // SVG header
   parts.push(`<svg xmlns="http://www.w3.org/2000/svg" width="${width}" height="${height}" viewBox="0 0 ${width} ${height}">`);
 
-  // Defs for reusable content
+  // Defs for reusable content and clip path
   parts.push('<defs>');
+
+  // Clip path for rounded corners (makes corners truly transparent)
+  if (borderRadius > 0) {
+    parts.push(
+      `<clipPath id="rounded-corners">` +
+        `<rect x="0" y="0" width="${width}" height="${height}" rx="${borderRadius}" ry="${borderRadius}"/>` +
+        `</clipPath>`
+    );
+  }
 
   // Generate each frame as a group in defs
   for (let i = 0; i < frames.length; i++) {
@@ -629,6 +655,11 @@ export function emitAnimated(frames: FrameData[], options: AnimatedSVGOptions): 
   parts.push(generateStylesheet(theme, options));
   parts.push(generateAnimationKeyframes(frames, totalDuration, loop));
   parts.push('</style>');
+
+  // Wrap all content in clip group for rounded corners
+  if (borderRadius > 0) {
+    parts.push(`<g clip-path="url(#rounded-corners)">`);
+  }
 
   // Static background
   parts.push(
@@ -688,6 +719,11 @@ export function emitAnimated(frames: FrameData[], options: AnimatedSVGOptions): 
       `<text class="text dim" x="${watermarkX}" y="${watermarkY}" ` +
         `text-anchor="end" fill="${theme.foreground}">${escapeXml(options.watermark)}</text>`
     );
+  }
+
+  // Close clip group if we opened one
+  if (borderRadius > 0) {
+    parts.push('</g>');
   }
 
   parts.push('</svg>');
