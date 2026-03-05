@@ -1,0 +1,19 @@
+# Cursor Style Test
+# Tests bar cursor style with custom color
+Output examples/svgs/cursor-style-test.svg
+
+Set Width 500
+Set Height 200
+Set FontSize 16
+Set Theme dracula
+Set Title "Bar Cursor Style"
+
+# Use bar cursor style with green color
+Set CursorStyle bar
+Set CursorColor #50fa7b
+
+Type "This uses a bar cursor"
+Sleep 500ms
+Enter
+Type "with a custom green color"
+Sleep 1s

@@ -135,6 +135,15 @@ interface ChromeConfig {
   title?: string;
   theme: Theme;
   headerBackground?: string;
+  // Header/Footer border config (shellfie 2.0 style)
+  headerBorder?: boolean;
+  headerBorderColor?: string;
+  headerBorderWidth?: number;
+  footerBackground?: string;
+  footerHeight?: number;
+  footerBorder?: boolean;
+  footerBorderColor?: string;
+  footerBorderWidth?: number;
 }
 
 function generateChrome(config: ChromeConfig): string {
@@ -208,6 +217,61 @@ function generateChrome(config: ChromeConfig): string {
     );
   }
 
+  // Header border (line below header)
+  if (config.headerBorder) {
+    const hBorderColor = config.headerBorderColor ?? theme.foreground;
+    const hBorderWidth = config.headerBorderWidth ?? 1;
+    parts.push(
+      `<line x1="0" y1="${headerHeight}" x2="${width}" y2="${headerHeight}" ` +
+        `stroke="${hBorderColor}" stroke-width="${hBorderWidth}"/>`
+    );
+  }
+
+  return parts.join('\n');
+}
+
+interface FooterConfig {
+  width: number;
+  height: number;
+  footerHeight: number;
+  borderRadius: number;
+  theme: Theme;
+  footerBackground?: string;
+  footerBorder?: boolean;
+  footerBorderColor?: string;
+  footerBorderWidth?: number;
+}
+
+function generateFooter(config: FooterConfig): string {
+  const { width, height, footerHeight, borderRadius, theme, footerBackground } = config;
+
+  if (footerHeight <= 0) {
+    return '';
+  }
+
+  const parts: string[] = [];
+  const footerY = height - footerHeight;
+  const footerBg = footerBackground ?? theme.background;
+
+  // Footer background with rounded bottom corners
+  parts.push(
+    `<rect class="footer-bg" x="0" y="${footerY}" width="${width}" height="${footerHeight}" ` +
+      `fill="${footerBg}" rx="${borderRadius}" ry="${borderRadius}"/>`
+  );
+
+  // Top corners of footer should be square
+  parts.push(`<rect x="0" y="${footerY}" width="${width}" height="${borderRadius}" fill="${footerBg}"/>`);
+
+  // Footer border (line above footer)
+  if (config.footerBorder) {
+    const fBorderColor = config.footerBorderColor ?? theme.foreground;
+    const fBorderWidth = config.footerBorderWidth ?? 1;
+    parts.push(
+      `<line x1="0" y1="${footerY}" x2="${width}" y2="${footerY}" ` +
+        `stroke="${fBorderColor}" stroke-width="${fBorderWidth}"/>`
+    );
+  }
+
   return parts.join('\n');
 }
 
@@ -238,8 +302,9 @@ export function emit(
   const borderWidth = options.borderWidth ?? 0;
   const borderColor = options.borderColor ?? theme.foreground;
 
-  // Calculate header height based on template
-  const headerHeight = template === 'minimal' ? 0 : 40;
+  // Calculate header height based on template or custom setting
+  const headerHeight = options.headerHeight ?? (template === 'minimal' ? 0 : 40);
+  const footerHeight = options.footerHeight ?? 0;
   const watermarkHeight = watermark ? lineHeight : 0;
   const contentStartY = headerHeight + padding;
 
@@ -280,9 +345,30 @@ export function emit(
     title,
     theme,
     headerBackground: options.headerBackground,
+    headerBorder: options.headerBorder,
+    headerBorderColor: options.headerBorderColor,
+    headerBorderWidth: options.headerBorderWidth,
   });
   if (chrome) {
     parts.push(`<g class="chrome">${chrome}</g>`);
+  }
+
+  // Footer
+  if (footerHeight > 0 || options.footerBackground) {
+    const footer = generateFooter({
+      width,
+      height,
+      footerHeight: footerHeight || 40,
+      borderRadius,
+      theme,
+      footerBackground: options.footerBackground,
+      footerBorder: options.footerBorder,
+      footerBorderColor: options.footerBorderColor,
+      footerBorderWidth: options.footerBorderWidth,
+    });
+    if (footer) {
+      parts.push(`<g class="footer">${footer}</g>`);
+    }
   }
 
   // Background rectangles layer
@@ -361,15 +447,31 @@ export function emit(
   if (cursor && cursorVisible) {
     const cursorX = padding + cursor.col * charWidth;
     const cursorY = contentStartY + cursor.row * lineHeight;
-    const cursorColor = theme.cursor ?? theme.foreground;
+    const cursorColor = options.cursorColor ?? theme.cursor ?? theme.foreground;
     // Use cursor-active class when actively typing (no blink)
     const cursorClass = options.activeCursor ? 'cursor-active' : 'cursor';
+    const cursorStyle = options.cursorStyle ?? 'block';
 
     parts.push('<g class="cursor-layer">');
-    parts.push(
-      `<rect class="${cursorClass}" x="${cursorX}" y="${cursorY}" ` +
-        `width="${charWidth}" height="${lineHeight}" fill="${cursorColor}"/>`
-    );
+    if (cursorStyle === 'block') {
+      parts.push(
+        `<rect class="${cursorClass}" x="${cursorX}" y="${cursorY}" ` +
+          `width="${charWidth}" height="${lineHeight}" fill="${cursorColor}"/>`
+      );
+    } else if (cursorStyle === 'bar') {
+      // Vertical bar cursor (2px wide)
+      parts.push(
+        `<rect class="${cursorClass}" x="${cursorX}" y="${cursorY}" ` +
+          `width="2" height="${lineHeight}" fill="${cursorColor}"/>`
+      );
+    } else if (cursorStyle === 'underline') {
+      // Underline cursor (2px tall at bottom of cell)
+      const underlineY = cursorY + lineHeight - 2;
+      parts.push(
+        `<rect class="${cursorClass}" x="${cursorX}" y="${underlineY}" ` +
+          `width="${charWidth}" height="2" fill="${cursorColor}"/>`
+      );
+    }
     parts.push('</g>');
   }
 
@@ -488,7 +590,8 @@ export function emitAnimated(frames: FrameData[], options: AnimatedSVGOptions): 
   const charWidth = options.charWidth ?? fontSize * 0.6;
   const padding = options.padding ?? 16;
   const borderRadius = options.borderRadius ?? (template === 'minimal' ? 0 : 8);
-  const headerHeight = template === 'minimal' ? 0 : 40;
+  const headerHeight = options.headerHeight ?? (template === 'minimal' ? 0 : 40);
+  const footerHeight = options.footerHeight ?? 0;
   const contentStartY = headerHeight + padding;
   const fps = options.fps ?? 10;
   const loop = options.loop ?? true;
@@ -544,9 +647,30 @@ export function emitAnimated(frames: FrameData[], options: AnimatedSVGOptions): 
     title: options.title,
     theme,
     headerBackground: options.headerBackground,
+    headerBorder: options.headerBorder,
+    headerBorderColor: options.headerBorderColor,
+    headerBorderWidth: options.headerBorderWidth,
   });
   if (chrome) {
     parts.push(`<g class="chrome">${chrome}</g>`);
+  }
+
+  // Footer (static)
+  if (footerHeight > 0 || options.footerBackground) {
+    const footer = generateFooter({
+      width,
+      height,
+      footerHeight: footerHeight || 40,
+      borderRadius,
+      theme,
+      footerBackground: options.footerBackground,
+      footerBorder: options.footerBorder,
+      footerBorderColor: options.footerBorderColor,
+      footerBorderWidth: options.footerBorderWidth,
+    });
+    if (footer) {
+      parts.push(`<g class="footer">${footer}</g>`);
+    }
   }
 
   // Animated frame references
@@ -642,12 +766,28 @@ function generateFrameContent(frame: FrameData, config: EmitterOptions & FrameRe
   if (cursor && cursorVisible) {
     const cursorX = padding + cursor.col * charWidth;
     const cursorY = contentStartY + cursor.row * lineHeight;
-    const cursorColor = theme.cursor ?? theme.foreground;
+    const cursorColor = config.cursorColor ?? theme.cursor ?? theme.foreground;
+    const cursorStyle = config.cursorStyle ?? 'block';
 
-    parts.push(
-      `<rect class="cursor" x="${cursorX}" y="${cursorY}" ` +
-        `width="${charWidth}" height="${lineHeight}" fill="${cursorColor}"/>`
-    );
+    if (cursorStyle === 'block') {
+      parts.push(
+        `<rect class="cursor" x="${cursorX}" y="${cursorY}" ` +
+          `width="${charWidth}" height="${lineHeight}" fill="${cursorColor}"/>`
+      );
+    } else if (cursorStyle === 'bar') {
+      // Vertical bar cursor (2px wide)
+      parts.push(
+        `<rect class="cursor" x="${cursorX}" y="${cursorY}" ` +
+          `width="2" height="${lineHeight}" fill="${cursorColor}"/>`
+      );
+    } else if (cursorStyle === 'underline') {
+      // Underline cursor (2px tall at bottom of cell)
+      const underlineY = cursorY + lineHeight - 2;
+      parts.push(
+        `<rect class="cursor" x="${cursorX}" y="${underlineY}" ` +
+          `width="${charWidth}" height="2" fill="${cursorColor}"/>`
+      );
+    }
   }
 
   return parts.join('\n');

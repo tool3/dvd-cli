@@ -108,6 +108,20 @@ interface ExecutorContext {
   borderWidth?: number;
   borderRadius?: number;
   padding?: number;
+
+  // Header/Footer border config (shellfie 2.0 style)
+  headerHeight?: number;
+  headerBorder?: boolean;
+  headerBorderColor?: string;
+  headerBorderWidth?: number;
+  footerHeight?: number;
+  footerBorder?: boolean;
+  footerBorderColor?: string;
+  footerBorderWidth?: number;
+
+  // Custom cursor config
+  cursorStyle?: 'block' | 'bar' | 'underline';
+  cursorColor?: string;
 }
 
 // ============================================================================
@@ -342,6 +356,18 @@ export class CDExecutor {
         cursorBlink: this.context.cursorBlink,
         activeCursor,
         selection,
+        // Header/Footer config (shellfie 2.0 style)
+        headerHeight: this.context.headerHeight,
+        headerBorder: this.context.headerBorder,
+        headerBorderColor: this.context.headerBorderColor,
+        headerBorderWidth: this.context.headerBorderWidth,
+        footerHeight: this.context.footerHeight,
+        footerBorder: this.context.footerBorder,
+        footerBorderColor: this.context.footerBorderColor,
+        footerBorderWidth: this.context.footerBorderWidth,
+        // Cursor config
+        cursorStyle: this.context.cursorStyle,
+        cursorColor: this.context.cursorColor,
       }
     );
 
@@ -972,6 +998,42 @@ export class CDExecutor {
         break;
       case 'Padding':
         this.context.padding = parseInt(value, 10);
+        break;
+      // Header config (shellfie 2.0 style)
+      case 'HeaderHeight':
+        this.context.headerHeight = parseInt(value, 10);
+        break;
+      case 'HeaderBorder':
+        this.context.headerBorder = value.toLowerCase() === 'true';
+        break;
+      case 'HeaderBorderColor':
+        this.context.headerBorderColor = value;
+        break;
+      case 'HeaderBorderWidth':
+        this.context.headerBorderWidth = parseInt(value, 10);
+        break;
+      // Footer config (shellfie 2.0 style)
+      case 'FooterHeight':
+        this.context.footerHeight = parseInt(value, 10);
+        break;
+      case 'FooterBorder':
+        this.context.footerBorder = value.toLowerCase() === 'true';
+        break;
+      case 'FooterBorderColor':
+        this.context.footerBorderColor = value;
+        break;
+      case 'FooterBorderWidth':
+        this.context.footerBorderWidth = parseInt(value, 10);
+        break;
+      // Cursor config
+      case 'CursorStyle':
+        const style = value.toLowerCase();
+        if (style === 'block' || style === 'bar' || style === 'underline') {
+          this.context.cursorStyle = style;
+        }
+        break;
+      case 'CursorColor':
+        this.context.cursorColor = value;
         break;
     }
   }

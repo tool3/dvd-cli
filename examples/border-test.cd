@@ -1,0 +1,22 @@
+# Border Options Test
+# Tests BorderRadius, BorderColor, BorderWidth, and Padding
+Output examples/svgs/border-test.svg
+
+Set Width 600
+Set Height 300
+Set FontSize 16
+Set Theme dark
+Set Title "Border Test"
+Set BorderRadius 20
+Set BorderWidth 3
+Set BorderColor #ff5555
+Set Padding 32
+
+Type "Testing border options"
+Sleep 500ms
+Enter
+Type "BorderRadius: 20, BorderWidth: 3"
+Sleep 500ms
+Enter
+Type "BorderColor: #ff5555, Padding: 32"
+Sleep 1s

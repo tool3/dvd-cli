@@ -1,0 +1,1361 @@
+<svg width="500" height="200" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    
+.text {
+  font-family: 'SF Mono', 'Monaco', 'Menlo', 'Consolas', monospace;
+  font-size: 16px;
+  dominant-baseline: text-before-edge;
+  text-rendering: geometricPrecision;
+  white-space: pre;
+}
+.bold { font-weight: bold; }
+.italic { font-style: italic; }
+.uline { text-decoration: underline; }
+.strike { text-decoration: line-through; }
+.dim { opacity: 0.5; }
+.fg { fill: #f8f8f2; }
+.f0 { fill: #21222c; }
+.f1 { fill: #ff5555; }
+.f2 { fill: #50fa7b; }
+.f3 { fill: #f1fa8c; }
+.f4 { fill: #bd93f9; }
+.f5 { fill: #ff79c6; }
+.f6 { fill: #8be9fd; }
+.f7 { fill: #f8f8f2; }
+.f8 { fill: #6272a4; }
+.f9 { fill: #ff6e6e; }
+.f10 { fill: #69ff94; }
+.f11 { fill: #ffffa5; }
+.f12 { fill: #d6acff; }
+.f13 { fill: #ff92df; }
+.f14 { fill: #a4ffff; }
+.f15 { fill: #ffffff; }
+.bg { fill: #282a36; }
+.b0 { fill: #21222c; }
+.b1 { fill: #ff5555; }
+.b2 { fill: #50fa7b; }
+.b3 { fill: #f1fa8c; }
+.b4 { fill: #bd93f9; }
+.b5 { fill: #ff79c6; }
+.b6 { fill: #8be9fd; }
+.b7 { fill: #f8f8f2; }
+.b8 { fill: #6272a4; }
+.b9 { fill: #ff6e6e; }
+.b10 { fill: #69ff94; }
+.b11 { fill: #ffffa5; }
+.b12 { fill: #d6acff; }
+.b13 { fill: #ff92df; }
+.b14 { fill: #a4ffff; }
+.b15 { fill: #ffffff; }
+.cursor { animation: blink 1s step-end infinite; }
+@keyframes blink {
+  0%, 50% { opacity: 1; }
+  50.01%, 100% { opacity: 0; }
+}
+.cursor-active { opacity: 1; }
+
+  </style>
+
+  <!-- Persistent background - never animated -->
+  <rect width="100%" height="100%" fill="#282a36" />
+
+  <!-- Animated frames with discrete visibility transitions -->
+  
+  <g id="frame-0" visibility="visible">
+    
+
+<rect class="window-bg" x="0" y="0" width="500" height="200" fill="#282a36" rx="8" ry="8"/>
+<g class="text-layer">
+<text class="text f13" x="16" y="16">❯</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor" x="35.2" y="16" width="2" height="22.4" fill="#50fa7b"/>
+</g>
+
+    <animate
+      attributeName="visibility"
+      values="visible;hidden;hidden"
+      keyTimes="0.000000;0.010377;1.000000"
+      dur="5.20s"
+      repeatCount="indefinite"
+      calcMode="discrete"
+      fill="freeze"
+    />
+  </g>
+
+  <g id="frame-1" visibility="hidden">
+    
+
+<rect class="window-bg" x="0" y="0" width="500" height="200" fill="#282a36" rx="8" ry="8"/>
+<g class="text-layer">
+<text class="text f13" x="16" y="16">❯</text>
+<text class="text fg" x="25.6" y="16"> T                                             </text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="44.8" y="16" width="2" height="22.4" fill="#50fa7b"/>
+</g>
+
+    <animate
+      attributeName="visibility"
+      values="hidden;visible;hidden;hidden"
+      keyTimes="0.000000;0.010377;0.020369;1.000000"
+      dur="5.20s"
+      repeatCount="indefinite"
+      calcMode="discrete"
+      fill="freeze"
+    />
+  </g>
+
+  <g id="frame-2" visibility="hidden">
+    
+
+<rect class="window-bg" x="0" y="0" width="500" height="200" fill="#282a36" rx="8" ry="8"/>
+<g class="text-layer">
+<text class="text f13" x="16" y="16">❯</text>
+<text class="text fg" x="25.6" y="16"> Th                                            </text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="54.4" y="16" width="2" height="22.4" fill="#50fa7b"/>
+</g>
+
+    <animate
+      attributeName="visibility"
+      values="hidden;visible;hidden;hidden"
+      keyTimes="0.000000;0.020369;0.030169;1.000000"
+      dur="5.20s"
+      repeatCount="indefinite"
+      calcMode="discrete"
+      fill="freeze"
+    />
+  </g>
+
+  <g id="frame-3" visibility="hidden">
+    
+
+<rect class="window-bg" x="0" y="0" width="500" height="200" fill="#282a36" rx="8" ry="8"/>
+<g class="text-layer">
+<text class="text f13" x="16" y="16">❯</text>
+<text class="text fg" x="25.6" y="16"> Thi                                           </text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="64" y="16" width="2" height="22.4" fill="#50fa7b"/>
+</g>
+
+    <animate
+      attributeName="visibility"
+      values="hidden;visible;hidden;hidden"
+      keyTimes="0.000000;0.030169;0.039969;1.000000"
+      dur="5.20s"
+      repeatCount="indefinite"
+      calcMode="discrete"
+      fill="freeze"
+    />
+  </g>
+
+  <g id="frame-4" visibility="hidden">
+    
+
+<rect class="window-bg" x="0" y="0" width="500" height="200" fill="#282a36" rx="8" ry="8"/>
+<g class="text-layer">
+<text class="text f13" x="16" y="16">❯</text>
+<text class="text fg" x="25.6" y="16"> This                                          </text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="73.6" y="16" width="2" height="22.4" fill="#50fa7b"/>
+</g>
+
+    <animate
+      attributeName="visibility"
+      values="hidden;visible;hidden;hidden"
+      keyTimes="0.000000;0.039969;0.049962;1.000000"
+      dur="5.20s"
+      repeatCount="indefinite"
+      calcMode="discrete"
+      fill="freeze"
+    />
+  </g>
+
+  <g id="frame-5" visibility="hidden">
+    
+
+<rect class="window-bg" x="0" y="0" width="500" height="200" fill="#282a36" rx="8" ry="8"/>
+<g class="text-layer">
+<text class="text f13" x="16" y="16">❯</text>
+<text class="text fg" x="25.6" y="16"> This                                          </text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="83.2" y="16" width="2" height="22.4" fill="#50fa7b"/>
+</g>
+
+    <animate
+      attributeName="visibility"
+      values="hidden;visible;hidden;hidden"
+      keyTimes="0.000000;0.049962;0.059954;1.000000"
+      dur="5.20s"
+      repeatCount="indefinite"
+      calcMode="discrete"
+      fill="freeze"
+    />
+  </g>
+
+  <g id="frame-6" visibility="hidden">
+    
+
+<rect class="window-bg" x="0" y="0" width="500" height="200" fill="#282a36" rx="8" ry="8"/>
+<g class="text-layer">
+<text class="text f13" x="16" y="16">❯</text>
+<text class="text fg" x="25.6" y="16"> This u                                        </text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="92.8" y="16" width="2" height="22.4" fill="#50fa7b"/>
+</g>
+
+    <animate
+      attributeName="visibility"
+      values="hidden;visible;hidden;hidden"
+      keyTimes="0.000000;0.059954;0.069946;1.000000"
+      dur="5.20s"
+      repeatCount="indefinite"
+      calcMode="discrete"
+      fill="freeze"
+    />
+  </g>
+
+  <g id="frame-7" visibility="hidden">
+    
+
+<rect class="window-bg" x="0" y="0" width="500" height="200" fill="#282a36" rx="8" ry="8"/>
+<g class="text-layer">
+<text class="text f13" x="16" y="16">❯</text>
+<text class="text fg" x="25.6" y="16"> This us                                       </text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="102.39999999999999" y="16" width="2" height="22.4" fill="#50fa7b"/>
+</g>
+
+    <animate
+      attributeName="visibility"
+      values="hidden;visible;hidden;hidden"
+      keyTimes="0.000000;0.069946;0.080131;1.000000"
+      dur="5.20s"
+      repeatCount="indefinite"
+      calcMode="discrete"
+      fill="freeze"
+    />
+  </g>
+
+  <g id="frame-8" visibility="hidden">
+    
+
+<rect class="window-bg" x="0" y="0" width="500" height="200" fill="#282a36" rx="8" ry="8"/>
+<g class="text-layer">
+<text class="text f13" x="16" y="16">❯</text>
+<text class="text fg" x="25.6" y="16"> This use                                      </text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="112" y="16" width="2" height="22.4" fill="#50fa7b"/>
+</g>
+
+    <animate
+      attributeName="visibility"
+      values="hidden;visible;hidden;hidden"
+      keyTimes="0.000000;0.080131;0.090123;1.000000"
+      dur="5.20s"
+      repeatCount="indefinite"
+      calcMode="discrete"
+      fill="freeze"
+    />
+  </g>
+
+  <g id="frame-9" visibility="hidden">
+    
+
+<rect class="window-bg" x="0" y="0" width="500" height="200" fill="#282a36" rx="8" ry="8"/>
+<g class="text-layer">
+<text class="text f13" x="16" y="16">❯</text>
+<text class="text fg" x="25.6" y="16"> This uses                                     </text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="121.6" y="16" width="2" height="22.4" fill="#50fa7b"/>
+</g>
+
+    <animate
+      attributeName="visibility"
+      values="hidden;visible;hidden;hidden"
+      keyTimes="0.000000;0.090123;0.099923;1.000000"
+      dur="5.20s"
+      repeatCount="indefinite"
+      calcMode="discrete"
+      fill="freeze"
+    />
+  </g>
+
+  <g id="frame-10" visibility="hidden">
+    
+
+<rect class="window-bg" x="0" y="0" width="500" height="200" fill="#282a36" rx="8" ry="8"/>
+<g class="text-layer">
+<text class="text f13" x="16" y="16">❯</text>
+<text class="text fg" x="25.6" y="16"> This uses                                     </text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="131.2" y="16" width="2" height="22.4" fill="#50fa7b"/>
+</g>
+
+    <animate
+      attributeName="visibility"
+      values="hidden;visible;hidden;hidden"
+      keyTimes="0.000000;0.099923;0.109915;1.000000"
+      dur="5.20s"
+      repeatCount="indefinite"
+      calcMode="discrete"
+      fill="freeze"
+    />
+  </g>
+
+  <g id="frame-11" visibility="hidden">
+    
+
+<rect class="window-bg" x="0" y="0" width="500" height="200" fill="#282a36" rx="8" ry="8"/>
+<g class="text-layer">
+<text class="text f13" x="16" y="16">❯</text>
+<text class="text fg" x="25.6" y="16"> This uses a                                   </text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="140.8" y="16" width="2" height="22.4" fill="#50fa7b"/>
+</g>
+
+    <animate
+      attributeName="visibility"
+      values="hidden;visible;hidden;hidden"
+      keyTimes="0.000000;0.109915;0.119908;1.000000"
+      dur="5.20s"
+      repeatCount="indefinite"
+      calcMode="discrete"
+      fill="freeze"
+    />
+  </g>
+
+  <g id="frame-12" visibility="hidden">
+    
+
+<rect class="window-bg" x="0" y="0" width="500" height="200" fill="#282a36" rx="8" ry="8"/>
+<g class="text-layer">
+<text class="text f13" x="16" y="16">❯</text>
+<text class="text fg" x="25.6" y="16"> This uses a                                   </text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="150.4" y="16" width="2" height="22.4" fill="#50fa7b"/>
+</g>
+
+    <animate
+      attributeName="visibility"
+      values="hidden;visible;hidden;hidden"
+      keyTimes="0.000000;0.119908;0.130092;1.000000"
+      dur="5.20s"
+      repeatCount="indefinite"
+      calcMode="discrete"
+      fill="freeze"
+    />
+  </g>
+
+  <g id="frame-13" visibility="hidden">
+    
+
+<rect class="window-bg" x="0" y="0" width="500" height="200" fill="#282a36" rx="8" ry="8"/>
+<g class="text-layer">
+<text class="text f13" x="16" y="16">❯</text>
+<text class="text fg" x="25.6" y="16"> This uses a b                                 </text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="160" y="16" width="2" height="22.4" fill="#50fa7b"/>
+</g>
+
+    <animate
+      attributeName="visibility"
+      values="hidden;visible;hidden;hidden"
+      keyTimes="0.000000;0.130092;0.139892;1.000000"
+      dur="5.20s"
+      repeatCount="indefinite"
+      calcMode="discrete"
+      fill="freeze"
+    />
+  </g>
+
+  <g id="frame-14" visibility="hidden">
+    
+
+<rect class="window-bg" x="0" y="0" width="500" height="200" fill="#282a36" rx="8" ry="8"/>
+<g class="text-layer">
+<text class="text f13" x="16" y="16">❯</text>
+<text class="text fg" x="25.6" y="16"> This uses a ba                                </text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="169.6" y="16" width="2" height="22.4" fill="#50fa7b"/>
+</g>
+
+    <animate
+      attributeName="visibility"
+      values="hidden;visible;hidden;hidden"
+      keyTimes="0.000000;0.139892;0.149693;1.000000"
+      dur="5.20s"
+      repeatCount="indefinite"
+      calcMode="discrete"
+      fill="freeze"
+    />
+  </g>
+
+  <g id="frame-15" visibility="hidden">
+    
+
+<rect class="window-bg" x="0" y="0" width="500" height="200" fill="#282a36" rx="8" ry="8"/>
+<g class="text-layer">
+<text class="text f13" x="16" y="16">❯</text>
+<text class="text fg" x="25.6" y="16"> This uses a bar                               </text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="179.2" y="16" width="2" height="22.4" fill="#50fa7b"/>
+</g>
+
+    <animate
+      attributeName="visibility"
+      values="hidden;visible;hidden;hidden"
+      keyTimes="0.000000;0.149693;0.159877;1.000000"
+      dur="5.20s"
+      repeatCount="indefinite"
+      calcMode="discrete"
+      fill="freeze"
+    />
+  </g>
+
+  <g id="frame-16" visibility="hidden">
+    
+
+<rect class="window-bg" x="0" y="0" width="500" height="200" fill="#282a36" rx="8" ry="8"/>
+<g class="text-layer">
+<text class="text f13" x="16" y="16">❯</text>
+<text class="text fg" x="25.6" y="16"> This uses a bar                               </text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="188.79999999999998" y="16" width="2" height="22.4" fill="#50fa7b"/>
+</g>
+
+    <animate
+      attributeName="visibility"
+      values="hidden;visible;hidden;hidden"
+      keyTimes="0.000000;0.159877;0.169869;1.000000"
+      dur="5.20s"
+      repeatCount="indefinite"
+      calcMode="discrete"
+      fill="freeze"
+    />
+  </g>
+
+  <g id="frame-17" visibility="hidden">
+    
+
+<rect class="window-bg" x="0" y="0" width="500" height="200" fill="#282a36" rx="8" ry="8"/>
+<g class="text-layer">
+<text class="text f13" x="16" y="16">❯</text>
+<text class="text fg" x="25.6" y="16"> This uses a bar c                             </text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="198.4" y="16" width="2" height="22.4" fill="#50fa7b"/>
+</g>
+
+    <animate
+      attributeName="visibility"
+      values="hidden;visible;hidden;hidden"
+      keyTimes="0.000000;0.169869;0.179862;1.000000"
+      dur="5.20s"
+      repeatCount="indefinite"
+      calcMode="discrete"
+      fill="freeze"
+    />
+  </g>
+
+  <g id="frame-18" visibility="hidden">
+    
+
+<rect class="window-bg" x="0" y="0" width="500" height="200" fill="#282a36" rx="8" ry="8"/>
+<g class="text-layer">
+<text class="text f13" x="16" y="16">❯</text>
+<text class="text fg" x="25.6" y="16"> This uses a bar cu                            </text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="208" y="16" width="2" height="22.4" fill="#50fa7b"/>
+</g>
+
+    <animate
+      attributeName="visibility"
+      values="hidden;visible;hidden;hidden"
+      keyTimes="0.000000;0.179862;0.189854;1.000000"
+      dur="5.20s"
+      repeatCount="indefinite"
+      calcMode="discrete"
+      fill="freeze"
+    />
+  </g>
+
+  <g id="frame-19" visibility="hidden">
+    
+
+<rect class="window-bg" x="0" y="0" width="500" height="200" fill="#282a36" rx="8" ry="8"/>
+<g class="text-layer">
+<text class="text f13" x="16" y="16">❯</text>
+<text class="text fg" x="25.6" y="16"> This uses a bar cur                           </text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="217.6" y="16" width="2" height="22.4" fill="#50fa7b"/>
+</g>
+
+    <animate
+      attributeName="visibility"
+      values="hidden;visible;hidden;hidden"
+      keyTimes="0.000000;0.189854;0.200038;1.000000"
+      dur="5.20s"
+      repeatCount="indefinite"
+      calcMode="discrete"
+      fill="freeze"
+    />
+  </g>
+
+  <g id="frame-20" visibility="hidden">
+    
+
+<rect class="window-bg" x="0" y="0" width="500" height="200" fill="#282a36" rx="8" ry="8"/>
+<g class="text-layer">
+<text class="text f13" x="16" y="16">❯</text>
+<text class="text fg" x="25.6" y="16"> This uses a bar curs                          </text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="227.2" y="16" width="2" height="22.4" fill="#50fa7b"/>
+</g>
+
+    <animate
+      attributeName="visibility"
+      values="hidden;visible;hidden;hidden"
+      keyTimes="0.000000;0.200038;0.210031;1.000000"
+      dur="5.20s"
+      repeatCount="indefinite"
+      calcMode="discrete"
+      fill="freeze"
+    />
+  </g>
+
+  <g id="frame-21" visibility="hidden">
+    
+
+<rect class="window-bg" x="0" y="0" width="500" height="200" fill="#282a36" rx="8" ry="8"/>
+<g class="text-layer">
+<text class="text f13" x="16" y="16">❯</text>
+<text class="text fg" x="25.6" y="16"> This uses a bar curso                         </text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="236.79999999999998" y="16" width="2" height="22.4" fill="#50fa7b"/>
+</g>
+
+    <animate
+      attributeName="visibility"
+      values="hidden;visible;hidden;hidden"
+      keyTimes="0.000000;0.210031;0.219831;1.000000"
+      dur="5.20s"
+      repeatCount="indefinite"
+      calcMode="discrete"
+      fill="freeze"
+    />
+  </g>
+
+  <g id="frame-22" visibility="hidden">
+    
+
+<rect class="window-bg" x="0" y="0" width="500" height="200" fill="#282a36" rx="8" ry="8"/>
+<g class="text-layer">
+<text class="text f13" x="16" y="16">❯</text>
+<text class="text fg" x="25.6" y="16"> This uses a bar cursor                        </text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="246.39999999999998" y="16" width="2" height="22.4" fill="#50fa7b"/>
+</g>
+
+    <animate
+      attributeName="visibility"
+      values="hidden;visible;hidden;hidden"
+      keyTimes="0.000000;0.219831;0.316487;1.000000"
+      dur="5.20s"
+      repeatCount="indefinite"
+      calcMode="discrete"
+      fill="freeze"
+    />
+  </g>
+
+  <g id="frame-23" visibility="hidden">
+    
+
+<rect class="window-bg" x="0" y="0" width="500" height="200" fill="#282a36" rx="8" ry="8"/>
+<g class="text-layer">
+<text class="text f13" x="16" y="16">❯</text>
+<text class="text fg" x="25.6" y="16"> This uses a bar cursor                        </text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor" x="246.39999999999998" y="16" width="2" height="22.4" fill="#50fa7b"/>
+</g>
+
+    <animate
+      attributeName="visibility"
+      values="hidden;visible;hidden;hidden"
+      keyTimes="0.000000;0.316487;0.336472;1.000000"
+      dur="5.20s"
+      repeatCount="indefinite"
+      calcMode="discrete"
+      fill="freeze"
+    />
+  </g>
+
+  <g id="frame-24" visibility="hidden">
+    
+
+<rect class="window-bg" x="0" y="0" width="500" height="200" fill="#282a36" rx="8" ry="8"/>
+<g class="text-layer">
+<text class="text f13" x="16" y="16">❯</text>
+<text class="text fg" x="25.6" y="16"> This uses a bar cursor                        </text>
+</g>
+
+    <animate
+      attributeName="visibility"
+      values="hidden;visible;hidden;hidden"
+      keyTimes="0.000000;0.336472;0.359147;1.000000"
+      dur="5.20s"
+      repeatCount="indefinite"
+      calcMode="discrete"
+      fill="freeze"
+    />
+  </g>
+
+  <g id="frame-25" visibility="hidden">
+    
+
+<rect class="window-bg" x="0" y="0" width="500" height="200" fill="#282a36" rx="8" ry="8"/>
+<g class="text-layer">
+<text class="text f13" x="16" y="16">❯</text>
+<text class="text fg" x="25.6" y="16"> This uses a bar cursor                        </text>
+<text class="text fg" x="16" y="38.4">/bin/sh: This: command not found                </text>
+<text class="text f13" x="16" y="60.8">❯</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor" x="35.2" y="60.8" width="2" height="22.4" fill="#50fa7b"/>
+</g>
+
+    <animate
+      attributeName="visibility"
+      values="hidden;visible;hidden;hidden"
+      keyTimes="0.000000;0.359147;0.369523;1.000000"
+      dur="5.20s"
+      repeatCount="indefinite"
+      calcMode="discrete"
+      fill="freeze"
+    />
+  </g>
+
+  <g id="frame-26" visibility="hidden">
+    
+
+<rect class="window-bg" x="0" y="0" width="500" height="200" fill="#282a36" rx="8" ry="8"/>
+<g class="text-layer">
+<text class="text f13" x="16" y="16">❯</text>
+<text class="text fg" x="25.6" y="16"> This uses a bar cursor                        </text>
+<text class="text fg" x="16" y="38.4">/bin/sh: This: command not found                </text>
+<text class="text f13" x="16" y="60.8">❯</text>
+<text class="text fg" x="25.6" y="60.8"> w                                             </text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="44.8" y="60.8" width="2" height="22.4" fill="#50fa7b"/>
+</g>
+
+    <animate
+      attributeName="visibility"
+      values="hidden;visible;hidden;hidden"
+      keyTimes="0.000000;0.369523;0.379900;1.000000"
+      dur="5.20s"
+      repeatCount="indefinite"
+      calcMode="discrete"
+      fill="freeze"
+    />
+  </g>
+
+  <g id="frame-27" visibility="hidden">
+    
+
+<rect class="window-bg" x="0" y="0" width="500" height="200" fill="#282a36" rx="8" ry="8"/>
+<g class="text-layer">
+<text class="text f13" x="16" y="16">❯</text>
+<text class="text fg" x="25.6" y="16"> This uses a bar cursor                        </text>
+<text class="text fg" x="16" y="38.4">/bin/sh: This: command not found                </text>
+<text class="text f13" x="16" y="60.8">❯</text>
+<text class="text fg" x="25.6" y="60.8"> wi                                            </text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="54.4" y="60.8" width="2" height="22.4" fill="#50fa7b"/>
+</g>
+
+    <animate
+      attributeName="visibility"
+      values="hidden;visible;hidden;hidden"
+      keyTimes="0.000000;0.379900;0.390085;1.000000"
+      dur="5.20s"
+      repeatCount="indefinite"
+      calcMode="discrete"
+      fill="freeze"
+    />
+  </g>
+
+  <g id="frame-28" visibility="hidden">
+    
+
+<rect class="window-bg" x="0" y="0" width="500" height="200" fill="#282a36" rx="8" ry="8"/>
+<g class="text-layer">
+<text class="text f13" x="16" y="16">❯</text>
+<text class="text fg" x="25.6" y="16"> This uses a bar cursor                        </text>
+<text class="text fg" x="16" y="38.4">/bin/sh: This: command not found                </text>
+<text class="text f13" x="16" y="60.8">❯</text>
+<text class="text fg" x="25.6" y="60.8"> wit                                           </text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="64" y="60.8" width="2" height="22.4" fill="#50fa7b"/>
+</g>
+
+    <animate
+      attributeName="visibility"
+      values="hidden;visible;hidden;hidden"
+      keyTimes="0.000000;0.390085;0.400269;1.000000"
+      dur="5.20s"
+      repeatCount="indefinite"
+      calcMode="discrete"
+      fill="freeze"
+    />
+  </g>
+
+  <g id="frame-29" visibility="hidden">
+    
+
+<rect class="window-bg" x="0" y="0" width="500" height="200" fill="#282a36" rx="8" ry="8"/>
+<g class="text-layer">
+<text class="text f13" x="16" y="16">❯</text>
+<text class="text fg" x="25.6" y="16"> This uses a bar cursor                        </text>
+<text class="text fg" x="16" y="38.4">/bin/sh: This: command not found                </text>
+<text class="text f13" x="16" y="60.8">❯</text>
+<text class="text fg" x="25.6" y="60.8"> with                                          </text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="73.6" y="60.8" width="2" height="22.4" fill="#50fa7b"/>
+</g>
+
+    <animate
+      attributeName="visibility"
+      values="hidden;visible;hidden;hidden"
+      keyTimes="0.000000;0.400269;0.410646;1.000000"
+      dur="5.20s"
+      repeatCount="indefinite"
+      calcMode="discrete"
+      fill="freeze"
+    />
+  </g>
+
+  <g id="frame-30" visibility="hidden">
+    
+
+<rect class="window-bg" x="0" y="0" width="500" height="200" fill="#282a36" rx="8" ry="8"/>
+<g class="text-layer">
+<text class="text f13" x="16" y="16">❯</text>
+<text class="text fg" x="25.6" y="16"> This uses a bar cursor                        </text>
+<text class="text fg" x="16" y="38.4">/bin/sh: This: command not found                </text>
+<text class="text f13" x="16" y="60.8">❯</text>
+<text class="text fg" x="25.6" y="60.8"> with                                          </text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="83.2" y="60.8" width="2" height="22.4" fill="#50fa7b"/>
+</g>
+
+    <animate
+      attributeName="visibility"
+      values="hidden;visible;hidden;hidden"
+      keyTimes="0.000000;0.410646;0.420830;1.000000"
+      dur="5.20s"
+      repeatCount="indefinite"
+      calcMode="discrete"
+      fill="freeze"
+    />
+  </g>
+
+  <g id="frame-31" visibility="hidden">
+    
+
+<rect class="window-bg" x="0" y="0" width="500" height="200" fill="#282a36" rx="8" ry="8"/>
+<g class="text-layer">
+<text class="text f13" x="16" y="16">❯</text>
+<text class="text fg" x="25.6" y="16"> This uses a bar cursor                        </text>
+<text class="text fg" x="16" y="38.4">/bin/sh: This: command not found                </text>
+<text class="text f13" x="16" y="60.8">❯</text>
+<text class="text fg" x="25.6" y="60.8"> with a                                        </text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="92.8" y="60.8" width="2" height="22.4" fill="#50fa7b"/>
+</g>
+
+    <animate
+      attributeName="visibility"
+      values="hidden;visible;hidden;hidden"
+      keyTimes="0.000000;0.420830;0.431207;1.000000"
+      dur="5.20s"
+      repeatCount="indefinite"
+      calcMode="discrete"
+      fill="freeze"
+    />
+  </g>
+
+  <g id="frame-32" visibility="hidden">
+    
+
+<rect class="window-bg" x="0" y="0" width="500" height="200" fill="#282a36" rx="8" ry="8"/>
+<g class="text-layer">
+<text class="text f13" x="16" y="16">❯</text>
+<text class="text fg" x="25.6" y="16"> This uses a bar cursor                        </text>
+<text class="text fg" x="16" y="38.4">/bin/sh: This: command not found                </text>
+<text class="text f13" x="16" y="60.8">❯</text>
+<text class="text fg" x="25.6" y="60.8"> with a                                        </text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="102.39999999999999" y="60.8" width="2" height="22.4" fill="#50fa7b"/>
+</g>
+
+    <animate
+      attributeName="visibility"
+      values="hidden;visible;hidden;hidden"
+      keyTimes="0.000000;0.431207;0.441583;1.000000"
+      dur="5.20s"
+      repeatCount="indefinite"
+      calcMode="discrete"
+      fill="freeze"
+    />
+  </g>
+
+  <g id="frame-33" visibility="hidden">
+    
+
+<rect class="window-bg" x="0" y="0" width="500" height="200" fill="#282a36" rx="8" ry="8"/>
+<g class="text-layer">
+<text class="text f13" x="16" y="16">❯</text>
+<text class="text fg" x="25.6" y="16"> This uses a bar cursor                        </text>
+<text class="text fg" x="16" y="38.4">/bin/sh: This: command not found                </text>
+<text class="text f13" x="16" y="60.8">❯</text>
+<text class="text fg" x="25.6" y="60.8"> with a c                                      </text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="112" y="60.8" width="2" height="22.4" fill="#50fa7b"/>
+</g>
+
+    <animate
+      attributeName="visibility"
+      values="hidden;visible;hidden;hidden"
+      keyTimes="0.000000;0.441583;0.451960;1.000000"
+      dur="5.20s"
+      repeatCount="indefinite"
+      calcMode="discrete"
+      fill="freeze"
+    />
+  </g>
+
+  <g id="frame-34" visibility="hidden">
+    
+
+<rect class="window-bg" x="0" y="0" width="500" height="200" fill="#282a36" rx="8" ry="8"/>
+<g class="text-layer">
+<text class="text f13" x="16" y="16">❯</text>
+<text class="text fg" x="25.6" y="16"> This uses a bar cursor                        </text>
+<text class="text fg" x="16" y="38.4">/bin/sh: This: command not found                </text>
+<text class="text f13" x="16" y="60.8">❯</text>
+<text class="text fg" x="25.6" y="60.8"> with a cu                                     </text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="121.6" y="60.8" width="2" height="22.4" fill="#50fa7b"/>
+</g>
+
+    <animate
+      attributeName="visibility"
+      values="hidden;visible;hidden;hidden"
+      keyTimes="0.000000;0.451960;0.461952;1.000000"
+      dur="5.20s"
+      repeatCount="indefinite"
+      calcMode="discrete"
+      fill="freeze"
+    />
+  </g>
+
+  <g id="frame-35" visibility="hidden">
+    
+
+<rect class="window-bg" x="0" y="0" width="500" height="200" fill="#282a36" rx="8" ry="8"/>
+<g class="text-layer">
+<text class="text f13" x="16" y="16">❯</text>
+<text class="text fg" x="25.6" y="16"> This uses a bar cursor                        </text>
+<text class="text fg" x="16" y="38.4">/bin/sh: This: command not found                </text>
+<text class="text f13" x="16" y="60.8">❯</text>
+<text class="text fg" x="25.6" y="60.8"> with a cus                                    </text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="131.2" y="60.8" width="2" height="22.4" fill="#50fa7b"/>
+</g>
+
+    <animate
+      attributeName="visibility"
+      values="hidden;visible;hidden;hidden"
+      keyTimes="0.000000;0.461952;0.472521;1.000000"
+      dur="5.20s"
+      repeatCount="indefinite"
+      calcMode="discrete"
+      fill="freeze"
+    />
+  </g>
+
+  <g id="frame-36" visibility="hidden">
+    
+
+<rect class="window-bg" x="0" y="0" width="500" height="200" fill="#282a36" rx="8" ry="8"/>
+<g class="text-layer">
+<text class="text f13" x="16" y="16">❯</text>
+<text class="text fg" x="25.6" y="16"> This uses a bar cursor                        </text>
+<text class="text fg" x="16" y="38.4">/bin/sh: This: command not found                </text>
+<text class="text f13" x="16" y="60.8">❯</text>
+<text class="text fg" x="25.6" y="60.8"> with a cust                                   </text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="140.8" y="60.8" width="2" height="22.4" fill="#50fa7b"/>
+</g>
+
+    <animate
+      attributeName="visibility"
+      values="hidden;visible;hidden;hidden"
+      keyTimes="0.000000;0.472521;0.482706;1.000000"
+      dur="5.20s"
+      repeatCount="indefinite"
+      calcMode="discrete"
+      fill="freeze"
+    />
+  </g>
+
+  <g id="frame-37" visibility="hidden">
+    
+
+<rect class="window-bg" x="0" y="0" width="500" height="200" fill="#282a36" rx="8" ry="8"/>
+<g class="text-layer">
+<text class="text f13" x="16" y="16">❯</text>
+<text class="text fg" x="25.6" y="16"> This uses a bar cursor                        </text>
+<text class="text fg" x="16" y="38.4">/bin/sh: This: command not found                </text>
+<text class="text f13" x="16" y="60.8">❯</text>
+<text class="text fg" x="25.6" y="60.8"> with a custo                                  </text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="150.4" y="60.8" width="2" height="22.4" fill="#50fa7b"/>
+</g>
+
+    <animate
+      attributeName="visibility"
+      values="hidden;visible;hidden;hidden"
+      keyTimes="0.000000;0.482706;0.492890;1.000000"
+      dur="5.20s"
+      repeatCount="indefinite"
+      calcMode="discrete"
+      fill="freeze"
+    />
+  </g>
+
+  <g id="frame-38" visibility="hidden">
+    
+
+<rect class="window-bg" x="0" y="0" width="500" height="200" fill="#282a36" rx="8" ry="8"/>
+<g class="text-layer">
+<text class="text f13" x="16" y="16">❯</text>
+<text class="text fg" x="25.6" y="16"> This uses a bar cursor                        </text>
+<text class="text fg" x="16" y="38.4">/bin/sh: This: command not found                </text>
+<text class="text f13" x="16" y="60.8">❯</text>
+<text class="text fg" x="25.6" y="60.8"> with a custom                                 </text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="160" y="60.8" width="2" height="22.4" fill="#50fa7b"/>
+</g>
+
+    <animate
+      attributeName="visibility"
+      values="hidden;visible;hidden;hidden"
+      keyTimes="0.000000;0.492890;0.502882;1.000000"
+      dur="5.20s"
+      repeatCount="indefinite"
+      calcMode="discrete"
+      fill="freeze"
+    />
+  </g>
+
+  <g id="frame-39" visibility="hidden">
+    
+
+<rect class="window-bg" x="0" y="0" width="500" height="200" fill="#282a36" rx="8" ry="8"/>
+<g class="text-layer">
+<text class="text f13" x="16" y="16">❯</text>
+<text class="text fg" x="25.6" y="16"> This uses a bar cursor                        </text>
+<text class="text fg" x="16" y="38.4">/bin/sh: This: command not found                </text>
+<text class="text f13" x="16" y="60.8">❯</text>
+<text class="text fg" x="25.6" y="60.8"> with a custom                                 </text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="169.6" y="60.8" width="2" height="22.4" fill="#50fa7b"/>
+</g>
+
+    <animate
+      attributeName="visibility"
+      values="hidden;visible;hidden;hidden"
+      keyTimes="0.000000;0.502882;0.512875;1.000000"
+      dur="5.20s"
+      repeatCount="indefinite"
+      calcMode="discrete"
+      fill="freeze"
+    />
+  </g>
+
+  <g id="frame-40" visibility="hidden">
+    
+
+<rect class="window-bg" x="0" y="0" width="500" height="200" fill="#282a36" rx="8" ry="8"/>
+<g class="text-layer">
+<text class="text f13" x="16" y="16">❯</text>
+<text class="text fg" x="25.6" y="16"> This uses a bar cursor                        </text>
+<text class="text fg" x="16" y="38.4">/bin/sh: This: command not found                </text>
+<text class="text f13" x="16" y="60.8">❯</text>
+<text class="text fg" x="25.6" y="60.8"> with a custom g                               </text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="179.2" y="60.8" width="2" height="22.4" fill="#50fa7b"/>
+</g>
+
+    <animate
+      attributeName="visibility"
+      values="hidden;visible;hidden;hidden"
+      keyTimes="0.000000;0.512875;0.524020;1.000000"
+      dur="5.20s"
+      repeatCount="indefinite"
+      calcMode="discrete"
+      fill="freeze"
+    />
+  </g>
+
+  <g id="frame-41" visibility="hidden">
+    
+
+<rect class="window-bg" x="0" y="0" width="500" height="200" fill="#282a36" rx="8" ry="8"/>
+<g class="text-layer">
+<text class="text f13" x="16" y="16">❯</text>
+<text class="text fg" x="25.6" y="16"> This uses a bar cursor                        </text>
+<text class="text fg" x="16" y="38.4">/bin/sh: This: command not found                </text>
+<text class="text f13" x="16" y="60.8">❯</text>
+<text class="text fg" x="25.6" y="60.8"> with a custom gr                              </text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="188.79999999999998" y="60.8" width="2" height="22.4" fill="#50fa7b"/>
+</g>
+
+    <animate
+      attributeName="visibility"
+      values="hidden;visible;hidden;hidden"
+      keyTimes="0.000000;0.524020;0.534012;1.000000"
+      dur="5.20s"
+      repeatCount="indefinite"
+      calcMode="discrete"
+      fill="freeze"
+    />
+  </g>
+
+  <g id="frame-42" visibility="hidden">
+    
+
+<rect class="window-bg" x="0" y="0" width="500" height="200" fill="#282a36" rx="8" ry="8"/>
+<g class="text-layer">
+<text class="text f13" x="16" y="16">❯</text>
+<text class="text fg" x="25.6" y="16"> This uses a bar cursor                        </text>
+<text class="text fg" x="16" y="38.4">/bin/sh: This: command not found                </text>
+<text class="text f13" x="16" y="60.8">❯</text>
+<text class="text fg" x="25.6" y="60.8"> with a custom gre                             </text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="198.4" y="60.8" width="2" height="22.4" fill="#50fa7b"/>
+</g>
+
+    <animate
+      attributeName="visibility"
+      values="hidden;visible;hidden;hidden"
+      keyTimes="0.000000;0.534012;0.544005;1.000000"
+      dur="5.20s"
+      repeatCount="indefinite"
+      calcMode="discrete"
+      fill="freeze"
+    />
+  </g>
+
+  <g id="frame-43" visibility="hidden">
+    
+
+<rect class="window-bg" x="0" y="0" width="500" height="200" fill="#282a36" rx="8" ry="8"/>
+<g class="text-layer">
+<text class="text f13" x="16" y="16">❯</text>
+<text class="text fg" x="25.6" y="16"> This uses a bar cursor                        </text>
+<text class="text fg" x="16" y="38.4">/bin/sh: This: command not found                </text>
+<text class="text f13" x="16" y="60.8">❯</text>
+<text class="text fg" x="25.6" y="60.8"> with a custom gree                            </text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="208" y="60.8" width="2" height="22.4" fill="#50fa7b"/>
+</g>
+
+    <animate
+      attributeName="visibility"
+      values="hidden;visible;hidden;hidden"
+      keyTimes="0.000000;0.544005;0.554189;1.000000"
+      dur="5.20s"
+      repeatCount="indefinite"
+      calcMode="discrete"
+      fill="freeze"
+    />
+  </g>
+
+  <g id="frame-44" visibility="hidden">
+    
+
+<rect class="window-bg" x="0" y="0" width="500" height="200" fill="#282a36" rx="8" ry="8"/>
+<g class="text-layer">
+<text class="text f13" x="16" y="16">❯</text>
+<text class="text fg" x="25.6" y="16"> This uses a bar cursor                        </text>
+<text class="text fg" x="16" y="38.4">/bin/sh: This: command not found                </text>
+<text class="text f13" x="16" y="60.8">❯</text>
+<text class="text fg" x="25.6" y="60.8"> with a custom green                           </text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="217.6" y="60.8" width="2" height="22.4" fill="#50fa7b"/>
+</g>
+
+    <animate
+      attributeName="visibility"
+      values="hidden;visible;hidden;hidden"
+      keyTimes="0.000000;0.554189;0.564374;1.000000"
+      dur="5.20s"
+      repeatCount="indefinite"
+      calcMode="discrete"
+      fill="freeze"
+    />
+  </g>
+
+  <g id="frame-45" visibility="hidden">
+    
+
+<rect class="window-bg" x="0" y="0" width="500" height="200" fill="#282a36" rx="8" ry="8"/>
+<g class="text-layer">
+<text class="text f13" x="16" y="16">❯</text>
+<text class="text fg" x="25.6" y="16"> This uses a bar cursor                        </text>
+<text class="text fg" x="16" y="38.4">/bin/sh: This: command not found                </text>
+<text class="text f13" x="16" y="60.8">❯</text>
+<text class="text fg" x="25.6" y="60.8"> with a custom green                           </text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="227.2" y="60.8" width="2" height="22.4" fill="#50fa7b"/>
+</g>
+
+    <animate
+      attributeName="visibility"
+      values="hidden;visible;hidden;hidden"
+      keyTimes="0.000000;0.564374;0.574366;1.000000"
+      dur="5.20s"
+      repeatCount="indefinite"
+      calcMode="discrete"
+      fill="freeze"
+    />
+  </g>
+
+  <g id="frame-46" visibility="hidden">
+    
+
+<rect class="window-bg" x="0" y="0" width="500" height="200" fill="#282a36" rx="8" ry="8"/>
+<g class="text-layer">
+<text class="text f13" x="16" y="16">❯</text>
+<text class="text fg" x="25.6" y="16"> This uses a bar cursor                        </text>
+<text class="text fg" x="16" y="38.4">/bin/sh: This: command not found                </text>
+<text class="text f13" x="16" y="60.8">❯</text>
+<text class="text fg" x="25.6" y="60.8"> with a custom green c                         </text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="236.79999999999998" y="60.8" width="2" height="22.4" fill="#50fa7b"/>
+</g>
+
+    <animate
+      attributeName="visibility"
+      values="hidden;visible;hidden;hidden"
+      keyTimes="0.000000;0.574366;0.584358;1.000000"
+      dur="5.20s"
+      repeatCount="indefinite"
+      calcMode="discrete"
+      fill="freeze"
+    />
+  </g>
+
+  <g id="frame-47" visibility="hidden">
+    
+
+<rect class="window-bg" x="0" y="0" width="500" height="200" fill="#282a36" rx="8" ry="8"/>
+<g class="text-layer">
+<text class="text f13" x="16" y="16">❯</text>
+<text class="text fg" x="25.6" y="16"> This uses a bar cursor                        </text>
+<text class="text fg" x="16" y="38.4">/bin/sh: This: command not found                </text>
+<text class="text f13" x="16" y="60.8">❯</text>
+<text class="text fg" x="25.6" y="60.8"> with a custom green co                        </text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="246.39999999999998" y="60.8" width="2" height="22.4" fill="#50fa7b"/>
+</g>
+
+    <animate
+      attributeName="visibility"
+      values="hidden;visible;hidden;hidden"
+      keyTimes="0.000000;0.584358;0.594543;1.000000"
+      dur="5.20s"
+      repeatCount="indefinite"
+      calcMode="discrete"
+      fill="freeze"
+    />
+  </g>
+
+  <g id="frame-48" visibility="hidden">
+    
+
+<rect class="window-bg" x="0" y="0" width="500" height="200" fill="#282a36" rx="8" ry="8"/>
+<g class="text-layer">
+<text class="text f13" x="16" y="16">❯</text>
+<text class="text fg" x="25.6" y="16"> This uses a bar cursor                        </text>
+<text class="text fg" x="16" y="38.4">/bin/sh: This: command not found                </text>
+<text class="text f13" x="16" y="60.8">❯</text>
+<text class="text fg" x="25.6" y="60.8"> with a custom green col                       </text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="256" y="60.8" width="2" height="22.4" fill="#50fa7b"/>
+</g>
+
+    <animate
+      attributeName="visibility"
+      values="hidden;visible;hidden;hidden"
+      keyTimes="0.000000;0.594543;0.604727;1.000000"
+      dur="5.20s"
+      repeatCount="indefinite"
+      calcMode="discrete"
+      fill="freeze"
+    />
+  </g>
+
+  <g id="frame-49" visibility="hidden">
+    
+
+<rect class="window-bg" x="0" y="0" width="500" height="200" fill="#282a36" rx="8" ry="8"/>
+<g class="text-layer">
+<text class="text f13" x="16" y="16">❯</text>
+<text class="text fg" x="25.6" y="16"> This uses a bar cursor                        </text>
+<text class="text fg" x="16" y="38.4">/bin/sh: This: command not found                </text>
+<text class="text f13" x="16" y="60.8">❯</text>
+<text class="text fg" x="25.6" y="60.8"> with a custom green colo                      </text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="265.6" y="60.8" width="2" height="22.4" fill="#50fa7b"/>
+</g>
+
+    <animate
+      attributeName="visibility"
+      values="hidden;visible;hidden;hidden"
+      keyTimes="0.000000;0.604727;0.614719;1.000000"
+      dur="5.20s"
+      repeatCount="indefinite"
+      calcMode="discrete"
+      fill="freeze"
+    />
+  </g>
+
+  <g id="frame-50" visibility="hidden">
+    
+
+<rect class="window-bg" x="0" y="0" width="500" height="200" fill="#282a36" rx="8" ry="8"/>
+<g class="text-layer">
+<text class="text f13" x="16" y="16">❯</text>
+<text class="text fg" x="25.6" y="16"> This uses a bar cursor                        </text>
+<text class="text fg" x="16" y="38.4">/bin/sh: This: command not found                </text>
+<text class="text f13" x="16" y="60.8">❯</text>
+<text class="text fg" x="25.6" y="60.8"> with a custom green color                     </text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="275.2" y="60.8" width="2" height="22.4" fill="#50fa7b"/>
+</g>
+
+    <animate
+      attributeName="visibility"
+      values="hidden;visible;hidden;hidden"
+      keyTimes="0.000000;0.614719;0.807456;1.000000"
+      dur="5.20s"
+      repeatCount="indefinite"
+      calcMode="discrete"
+      fill="freeze"
+    />
+  </g>
+
+  <g id="frame-51" visibility="hidden">
+    
+
+<rect class="window-bg" x="0" y="0" width="500" height="200" fill="#282a36" rx="8" ry="8"/>
+<g class="text-layer">
+<text class="text f13" x="16" y="16">❯</text>
+<text class="text fg" x="25.6" y="16"> This uses a bar cursor                        </text>
+<text class="text fg" x="16" y="38.4">/bin/sh: This: command not found                </text>
+<text class="text f13" x="16" y="60.8">❯</text>
+<text class="text fg" x="25.6" y="60.8"> with a custom green color                     </text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor" x="275.2" y="60.8" width="2" height="22.4" fill="#50fa7b"/>
+</g>
+
+    <animate
+      attributeName="visibility"
+      values="hidden;visible;hidden;hidden"
+      keyTimes="0.000000;0.807456;0.807840;1.000000"
+      dur="5.20s"
+      repeatCount="indefinite"
+      calcMode="discrete"
+      fill="freeze"
+    />
+  </g>
+
+  <g id="frame-52" visibility="hidden">
+    
+
+<rect class="window-bg" x="0" y="0" width="500" height="200" fill="#282a36" rx="8" ry="8"/>
+<g class="text-layer">
+<text class="text f13" x="16" y="16">❯</text>
+<text class="text fg" x="25.6" y="16"> This uses a bar cursor                        </text>
+<text class="text fg" x="16" y="38.4">/bin/sh: This: command not found                </text>
+<text class="text f13" x="16" y="60.8">❯</text>
+<text class="text fg" x="25.6" y="60.8"> with a custom green color                     </text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor" x="275.2" y="60.8" width="2" height="22.4" fill="#50fa7b"/>
+</g>
+
+    <animate
+      attributeName="visibility"
+      values="hidden;visible;visible"
+      keyTimes="0.000000;0.807840;1.000000"
+      dur="5.20s"
+      repeatCount="indefinite"
+      calcMode="discrete"
+      fill="freeze"
+    />
+  </g>
+</svg>

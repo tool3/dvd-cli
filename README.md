@@ -108,8 +108,10 @@ See [FORMAT.md](FORMAT.md) for complete specification.
 ### Basic Commands
 
 ```
-# Configuration
+# Output
 Output demo.svg
+
+# Basic settings
 Set Width 800
 Set Height 600
 Set FontSize 16
@@ -147,6 +149,95 @@ Sleep 500ms
 Screenshot frame.svg
 ```
 
+## Set Commands Reference
+
+All available `Set` commands for configuring your terminal recording:
+
+### Dimensions & Layout
+
+| Command | Description | Default |
+|---------|-------------|---------|
+| `Set Width <px>` | Terminal width in pixels. Omit for auto-width based on content. | auto |
+| `Set Height <px>` | Terminal height in pixels. Omit for auto-height based on content. | auto |
+| `Set FontSize <px>` | Font size in pixels | 14 |
+| `Set Padding <px>` | Content padding in pixels | 16 |
+
+### Appearance
+
+| Command | Description | Default |
+|---------|-------------|---------|
+| `Set Theme <name>` | Color theme (see Themes section) | dark |
+| `Set Template <name>` | Window template: `macos`, `windows`, `minimal` | minimal |
+| `Set Title <text>` | Window title (shown in title bar for macos/windows templates) | none |
+| `Set Watermark <text>` | Watermark text (bottom-right, supports ANSI) | none |
+| `Set PromptPrefix <text>` | Custom shell prompt prefix (supports ANSI) | `❯ ` |
+
+### Border & Corners
+
+| Command | Description | Default |
+|---------|-------------|---------|
+| `Set BorderRadius <px>` | Window corner radius | 8 (0 for minimal) |
+| `Set BorderWidth <px>` | Window border width | 0 |
+| `Set BorderColor <color>` | Window border color (hex) | theme foreground |
+
+### Header Configuration
+
+| Command | Description | Default |
+|---------|-------------|---------|
+| `Set HeaderBackground <color>` | Header background color (hex) | theme background |
+| `Set HeaderHeight <px>` | Header height in pixels | 40 (0 for minimal) |
+| `Set HeaderBorder <bool>` | Show border line below header | false |
+| `Set HeaderBorderColor <color>` | Header border line color | theme foreground |
+| `Set HeaderBorderWidth <px>` | Header border line width | 1 |
+
+### Footer Configuration
+
+| Command | Description | Default |
+|---------|-------------|---------|
+| `Set FooterBackground <color>` | Footer background color (hex) | none |
+| `Set FooterHeight <px>` | Footer height in pixels | 0 |
+| `Set FooterBorder <bool>` | Show border line above footer | false |
+| `Set FooterBorderColor <color>` | Footer border line color | theme foreground |
+| `Set FooterBorderWidth <px>` | Footer border line width | 1 |
+
+### Cursor
+
+| Command | Description | Default |
+|---------|-------------|---------|
+| `Set CursorStyle <style>` | Cursor shape: `block`, `bar`, `underline` | block |
+| `Set CursorColor <color>` | Cursor color (hex) | theme cursor |
+| `Set CursorBlink <bool>` | Enable cursor blinking | true |
+
+### Behavior
+
+| Command | Description | Default |
+|---------|-------------|---------|
+| `Set TypingSpeed <ms>` | Milliseconds per character when typing | 50 |
+| `Set Scroll <bool>` | Enable scrolling when content exceeds height | auto |
+
+### Auto-sizing
+
+When you omit `Set Width` or `Set Height`, dvd automatically calculates dimensions:
+
+```
+# Auto width and height based on content
+Set FontSize 16
+Set Title "Auto-sized"
+Type "Content determines size"
+```
+
+```
+# Fixed height, auto width
+Set Height 400
+Type "Width auto-calculated"
+```
+
+```
+# Fixed width, auto height (content can scroll)
+Set Width 600
+Type "Height auto-calculated"
+```
+
 ## Examples
 
 See the [examples/](examples/) directory for complete working examples:
@@ -177,9 +268,9 @@ Available themes:
 ## Templates
 
 Available templates:
-- **macos** - macOS-style terminal with traffic light buttons (default)
+- **minimal** - Clean, minimal design (default)
+- **macos** - macOS-style terminal with traffic light buttons
 - **windows** - Windows terminal style
-- **minimal** - Clean, minimal design
 
 ## Related
 

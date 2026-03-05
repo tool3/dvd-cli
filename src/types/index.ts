@@ -245,6 +245,18 @@ export interface EmitterOptions {
   cursorBlink?: boolean;
   activeCursor?: boolean;
   selection?: { start: number; end: number; row: number } | null;
+  // Header/Footer config (shellfie 2.0 style)
+  headerHeight?: number;
+  headerBorder?: boolean;
+  headerBorderColor?: string;
+  headerBorderWidth?: number;
+  footerHeight?: number;
+  footerBorder?: boolean;
+  footerBorderColor?: string;
+  footerBorderWidth?: number;
+  // Cursor config
+  cursorStyle?: 'block' | 'bar' | 'underline';
+  cursorColor?: string;
 }
 
 // ============================================================================

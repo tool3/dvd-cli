@@ -1,0 +1,32 @@
+# Header/Footer Config Test
+# Tests header and footer styling options (shellfie 2.0 style)
+Output examples/svgs/header-footer-test.svg
+
+Set Width 600
+Set Height 350
+Set FontSize 14
+Set Theme dracula
+Set Title "Header/Footer Test"
+Set Template macos
+
+# Header config
+Set HeaderBackground #44475a
+Set HeaderBorder true
+Set HeaderBorderColor #6272a4
+Set HeaderBorderWidth 2
+
+# Footer config
+Set FooterBackground #282a36
+Set FooterHeight 30
+Set FooterBorder true
+Set FooterBorderColor #6272a4
+Set FooterBorderWidth 1
+
+Type "Testing header and footer config"
+Sleep 500ms
+Enter
+Type "Header has custom background and border"
+Sleep 500ms
+Enter
+Type "Footer has custom background and border"
+Sleep 1s
