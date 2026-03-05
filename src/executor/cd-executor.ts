@@ -239,20 +239,29 @@ export class CDExecutor {
     const content = visibleBuffer.join('\n');
 
     // Calculate grid dimensions
-    // Use fixed width matching SVG visible columns so text wraps correctly
-    const gridWidth = visibleCols;
+    let gridWidth: number;
     let gridHeight = this.context.grid.height;
 
-    if (!this.context.scroll) {
-      // Expand height to fit all content plus potential wrapped lines
-      const contentLines = visibleBuffer;
-      // Each line could wrap multiple times
-      let estimatedRows = 0;
-      for (const line of contentLines) {
+    if (this.context.autoWidth) {
+      // When width is auto, expand grid to fit all content (no wrapping)
+      gridWidth = this.context.grid.width;
+      for (const line of visibleBuffer) {
         const lineLength = this.stripAnsi(line).length;
-        estimatedRows += Math.ceil(lineLength / visibleCols) || 1;
+        gridWidth = Math.max(gridWidth, lineLength + 1);
       }
-      gridHeight = Math.max(gridHeight, estimatedRows + 5);
+      gridHeight = Math.max(gridHeight, visibleBuffer.length + 1);
+    } else {
+      // When width is fixed, use visible columns so text wraps correctly
+      gridWidth = visibleCols;
+      if (!this.context.scroll) {
+        // Expand height to fit all content plus potential wrapped lines
+        let estimatedRows = 0;
+        for (const line of visibleBuffer) {
+          const lineLength = this.stripAnsi(line).length;
+          estimatedRows += Math.ceil(lineLength / visibleCols) || 1;
+        }
+        gridHeight = Math.max(gridHeight, estimatedRows + 5);
+      }
     }
 
     let grid = createGridState(gridWidth, gridHeight);
