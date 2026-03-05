@@ -205,13 +205,17 @@ export class CDExecutor {
     const visibleCols = Math.floor((this.context.width - padding * 2) / charWidth);
 
     // Track max dimensions for auto-sizing
-    if (!this.context.scroll && (this.context.autoWidth || this.context.autoHeight)) {
+    // Track width even when scrolling (width can still be auto when height is fixed)
+    if (this.context.autoWidth) {
       for (const line of buffer) {
         const lineLength = this.stripAnsi(line).length;
         if (lineLength > this.context.maxLineLength) {
           this.context.maxLineLength = lineLength;
         }
       }
+    }
+    // Track height only when not scrolling (scroll handles height via viewport)
+    if (!this.context.scroll && this.context.autoHeight) {
       if (buffer.length > this.context.maxLines) {
         this.context.maxLines = buffer.length;
       }
