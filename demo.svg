@@ -1,6 +1,5 @@
-<svg width="695" height="290" xmlns="http://www.w3.org/2000/svg">
+<svg width="695" height="226" xmlns="http://www.w3.org/2000/svg">
   <style>
-    /* Base styles from first frame */
     
 .text {
   font-family: 'SF Mono', 'Monaco', 'Menlo', 'Consolas', monospace;
@@ -55,330 +54,17 @@
 }
 .cursor-active { opacity: 1; }
 
-
-    /* Animation keyframes */
-    
-    @keyframes frame-0-anim {
-      0% { opacity: 1; }
-      0.7585% { opacity: 1; }
-      0.7586% { opacity: 0; }
-      100% { opacity: 0; }
-    }
-    @keyframes frame-1-anim {
-      0% { opacity: 0; }
-      0.7584% { opacity: 0; }
-      0.7585% { opacity: 1; }
-      1.5023% { opacity: 1; }
-      1.5024% { opacity: 0; }
-      100% { opacity: 0; }
-    }
-    @keyframes frame-2-anim {
-      0% { opacity: 0; }
-      1.5022% { opacity: 0; }
-      1.5023% { opacity: 1; }
-      2.2462% { opacity: 1; }
-      2.2463% { opacity: 0; }
-      100% { opacity: 0; }
-    }
-    @keyframes frame-3-anim {
-      0% { opacity: 0; }
-      2.2461% { opacity: 0; }
-      2.2462% { opacity: 1; }
-      2.9901% { opacity: 1; }
-      2.9902% { opacity: 0; }
-      100% { opacity: 0; }
-    }
-    @keyframes frame-4-anim {
-      0% { opacity: 0; }
-      2.9900% { opacity: 0; }
-      2.9901% { opacity: 1; }
-      3.7340% { opacity: 1; }
-      3.7341% { opacity: 0; }
-      100% { opacity: 0; }
-    }
-    @keyframes frame-5-anim {
-      0% { opacity: 0; }
-      3.7339% { opacity: 0; }
-      3.7340% { opacity: 1; }
-      4.4778% { opacity: 1; }
-      4.4779% { opacity: 0; }
-      100% { opacity: 0; }
-    }
-    @keyframes frame-6-anim {
-      0% { opacity: 0; }
-      4.4777% { opacity: 0; }
-      4.4778% { opacity: 1; }
-      5.2363% { opacity: 1; }
-      5.2364% { opacity: 0; }
-      100% { opacity: 0; }
-    }
-    @keyframes frame-7-anim {
-      0% { opacity: 0; }
-      5.2362% { opacity: 0; }
-      5.2363% { opacity: 1; }
-      6.0093% { opacity: 1; }
-      6.0094% { opacity: 0; }
-      100% { opacity: 0; }
-    }
-    @keyframes frame-8-anim {
-      0% { opacity: 0; }
-      6.0092% { opacity: 0; }
-      6.0093% { opacity: 1; }
-      6.7386% { opacity: 1; }
-      6.7387% { opacity: 0; }
-      100% { opacity: 0; }
-    }
-    @keyframes frame-9-anim {
-      0% { opacity: 0; }
-      6.7385% { opacity: 0; }
-      6.7386% { opacity: 1; }
-      7.4971% { opacity: 1; }
-      7.4972% { opacity: 0; }
-      100% { opacity: 0; }
-    }
-    @keyframes frame-10-anim {
-      0% { opacity: 0; }
-      7.4970% { opacity: 0; }
-      7.4971% { opacity: 1; }
-      8.2410% { opacity: 1; }
-      8.2411% { opacity: 0; }
-      100% { opacity: 0; }
-    }
-    @keyframes frame-11-anim {
-      0% { opacity: 0; }
-      8.2409% { opacity: 0; }
-      8.2410% { opacity: 1; }
-      8.9994% { opacity: 1; }
-      8.9995% { opacity: 0; }
-      100% { opacity: 0; }
-    }
-    @keyframes frame-12-anim {
-      0% { opacity: 0; }
-      8.9993% { opacity: 0; }
-      8.9994% { opacity: 1; }
-      9.7579% { opacity: 1; }
-      9.7580% { opacity: 0; }
-      100% { opacity: 0; }
-    }
-    @keyframes frame-13-anim {
-      0% { opacity: 0; }
-      9.7578% { opacity: 0; }
-      9.7579% { opacity: 1; }
-      10.5163% { opacity: 1; }
-      10.5164% { opacity: 0; }
-      100% { opacity: 0; }
-    }
-    @keyframes frame-14-anim {
-      0% { opacity: 0; }
-      10.5162% { opacity: 0; }
-      10.5163% { opacity: 1; }
-      11.2894% { opacity: 1; }
-      11.2895% { opacity: 0; }
-      100% { opacity: 0; }
-    }
-    @keyframes frame-15-anim {
-      0% { opacity: 0; }
-      11.2893% { opacity: 0; }
-      11.2894% { opacity: 1; }
-      12.0478% { opacity: 1; }
-      12.0479% { opacity: 0; }
-      100% { opacity: 0; }
-    }
-    @keyframes frame-16-anim {
-      0% { opacity: 0; }
-      12.0477% { opacity: 0; }
-      12.0478% { opacity: 1; }
-      12.8063% { opacity: 1; }
-      12.8064% { opacity: 0; }
-      100% { opacity: 0; }
-    }
-    @keyframes frame-17-anim {
-      0% { opacity: 0; }
-      12.8062% { opacity: 0; }
-      12.8063% { opacity: 1; }
-      13.5648% { opacity: 1; }
-      13.5649% { opacity: 0; }
-      100% { opacity: 0; }
-    }
-    @keyframes frame-18-anim {
-      0% { opacity: 0; }
-      13.5647% { opacity: 0; }
-      13.5648% { opacity: 1; }
-      14.3232% { opacity: 1; }
-      14.3233% { opacity: 0; }
-      100% { opacity: 0; }
-    }
-    @keyframes frame-19-anim {
-      0% { opacity: 0; }
-      14.3231% { opacity: 0; }
-      14.3232% { opacity: 1; }
-      15.0817% { opacity: 1; }
-      15.0818% { opacity: 0; }
-      100% { opacity: 0; }
-    }
-    @keyframes frame-20-anim {
-      0% { opacity: 0; }
-      15.0816% { opacity: 0; }
-      15.0817% { opacity: 1; }
-      15.8547% { opacity: 1; }
-      15.8548% { opacity: 0; }
-      100% { opacity: 0; }
-    }
-    @keyframes frame-21-anim {
-      0% { opacity: 0; }
-      15.8546% { opacity: 0; }
-      15.8547% { opacity: 1; }
-      16.6132% { opacity: 1; }
-      16.6133% { opacity: 0; }
-      100% { opacity: 0; }
-    }
-    @keyframes frame-22-anim {
-      0% { opacity: 0; }
-      16.6131% { opacity: 0; }
-      16.6132% { opacity: 1; }
-      23.9352% { opacity: 1; }
-      23.9353% { opacity: 0; }
-      100% { opacity: 0; }
-    }
-    @keyframes frame-23-anim {
-      0% { opacity: 0; }
-      23.9351% { opacity: 0; }
-      23.9352% { opacity: 1; }
-      25.4084% { opacity: 1; }
-      25.4085% { opacity: 0; }
-      100% { opacity: 0; }
-    }
-    @keyframes frame-24-anim {
-      0% { opacity: 0; }
-      25.4083% { opacity: 0; }
-      25.4084% { opacity: 1; }
-      27.0128% { opacity: 1; }
-      27.0129% { opacity: 0; }
-      100% { opacity: 0; }
-    }
-    @keyframes frame-25-anim {
-      0% { opacity: 0; }
-      27.0127% { opacity: 0; }
-      27.0128% { opacity: 1; }
-      99.9854% { opacity: 1; }
-      99.9855% { opacity: 0; }
-      100% { opacity: 0; }
-    }
-    @keyframes frame-26-anim {
-      0% { opacity: 0; }
-      99.9853% { opacity: 0; }
-      99.9854% { opacity: 1; }
-      100.0000% { opacity: 1; }
-      100.0001% { opacity: 0; }
-      100% { opacity: 0; }
-    }
-    @keyframes frame-27-anim {
-      0% { opacity: 0; }
-      99.9999% { opacity: 0; }
-      100.0000% { opacity: 1; }
-      100% { opacity: 1; }
-    }
-
-    .frame {
-      animation-duration: 7.86s;
-      animation-timing-function: linear;
-      animation-iteration-count: infinite;
-      animation-fill-mode: both;
-    }
-
-    
-    .frame-0 {
-      animation-name: frame-0-anim;
-    }
-    .frame-1 {
-      animation-name: frame-1-anim;
-    }
-    .frame-2 {
-      animation-name: frame-2-anim;
-    }
-    .frame-3 {
-      animation-name: frame-3-anim;
-    }
-    .frame-4 {
-      animation-name: frame-4-anim;
-    }
-    .frame-5 {
-      animation-name: frame-5-anim;
-    }
-    .frame-6 {
-      animation-name: frame-6-anim;
-    }
-    .frame-7 {
-      animation-name: frame-7-anim;
-    }
-    .frame-8 {
-      animation-name: frame-8-anim;
-    }
-    .frame-9 {
-      animation-name: frame-9-anim;
-    }
-    .frame-10 {
-      animation-name: frame-10-anim;
-    }
-    .frame-11 {
-      animation-name: frame-11-anim;
-    }
-    .frame-12 {
-      animation-name: frame-12-anim;
-    }
-    .frame-13 {
-      animation-name: frame-13-anim;
-    }
-    .frame-14 {
-      animation-name: frame-14-anim;
-    }
-    .frame-15 {
-      animation-name: frame-15-anim;
-    }
-    .frame-16 {
-      animation-name: frame-16-anim;
-    }
-    .frame-17 {
-      animation-name: frame-17-anim;
-    }
-    .frame-18 {
-      animation-name: frame-18-anim;
-    }
-    .frame-19 {
-      animation-name: frame-19-anim;
-    }
-    .frame-20 {
-      animation-name: frame-20-anim;
-    }
-    .frame-21 {
-      animation-name: frame-21-anim;
-    }
-    .frame-22 {
-      animation-name: frame-22-anim;
-    }
-    .frame-23 {
-      animation-name: frame-23-anim;
-    }
-    .frame-24 {
-      animation-name: frame-24-anim;
-    }
-    .frame-25 {
-      animation-name: frame-25-anim;
-    }
-    .frame-26 {
-      animation-name: frame-26-anim;
-    }
-    .frame-27 {
-      animation-name: frame-27-anim;
-    }
   </style>
 
-  <defs>
-    
-    <g id="frame-0">
-      
+  <!-- Persistent background - never animated -->
+  <rect width="100%" height="100%" fill="#282a36" />
 
-<rect class="window-bg" x="0" y="0" width="695" height="290" fill="#282a36" rx="8" ry="8"/>
+  <!-- Animated frames with discrete visibility transitions -->
+  
+  <g id="frame-0" visibility="visible">
+    
+
+<rect class="window-bg" x="0" y="0" width="695" height="226" fill="#282a36" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f13" x="16" y="16">❯</text>
 </g>
@@ -386,11 +72,21 @@
 <rect class="cursor" x="71.19999999999999" y="16" width="27.599999999999998" height="64.39999999999999" fill="#f8f8f2"/>
 </g>
 
-    </g>
-    <g id="frame-1">
-      
+    <animate
+      attributeName="visibility"
+      values="visible;hidden;hidden"
+      keyTimes="0.000000;0.006604;1.000000"
+      dur="7.87s"
+      repeatCount="indefinite"
+      calcMode="discrete"
+      fill="freeze"
+    />
+  </g>
 
-<rect class="window-bg" x="0" y="0" width="695" height="290" fill="#282a36" rx="8" ry="8"/>
+  <g id="frame-1" visibility="hidden">
+    
+
+<rect class="window-bg" x="0" y="0" width="695" height="226" fill="#282a36" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f13" x="16" y="16">❯</text>
 <text class="text fg" x="43.599999999999994" y="16"> e                        </text>
@@ -399,11 +95,21 @@
 <rect class="cursor" x="98.8" y="16" width="27.599999999999998" height="64.39999999999999" fill="#f8f8f2"/>
 </g>
 
-    </g>
-    <g id="frame-2">
-      
+    <animate
+      attributeName="visibility"
+      values="hidden;visible;hidden;hidden"
+      keyTimes="0.000000;0.006604;0.013208;1.000000"
+      dur="7.87s"
+      repeatCount="indefinite"
+      calcMode="discrete"
+      fill="freeze"
+    />
+  </g>
 
-<rect class="window-bg" x="0" y="0" width="695" height="290" fill="#282a36" rx="8" ry="8"/>
+  <g id="frame-2" visibility="hidden">
+    
+
+<rect class="window-bg" x="0" y="0" width="695" height="226" fill="#282a36" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f13" x="16" y="16">❯</text>
 <text class="text fg" x="43.599999999999994" y="16"> ec                       </text>
@@ -412,11 +118,21 @@
 <rect class="cursor" x="126.39999999999999" y="16" width="27.599999999999998" height="64.39999999999999" fill="#f8f8f2"/>
 </g>
 
-    </g>
-    <g id="frame-3">
-      
+    <animate
+      attributeName="visibility"
+      values="hidden;visible;hidden;hidden"
+      keyTimes="0.000000;0.013208;0.019812;1.000000"
+      dur="7.87s"
+      repeatCount="indefinite"
+      calcMode="discrete"
+      fill="freeze"
+    />
+  </g>
 
-<rect class="window-bg" x="0" y="0" width="695" height="290" fill="#282a36" rx="8" ry="8"/>
+  <g id="frame-3" visibility="hidden">
+    
+
+<rect class="window-bg" x="0" y="0" width="695" height="226" fill="#282a36" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f13" x="16" y="16">❯</text>
 <text class="text fg" x="43.599999999999994" y="16"> ech                      </text>
@@ -425,11 +141,21 @@
 <rect class="cursor" x="154" y="16" width="27.599999999999998" height="64.39999999999999" fill="#f8f8f2"/>
 </g>
 
-    </g>
-    <g id="frame-4">
-      
+    <animate
+      attributeName="visibility"
+      values="hidden;visible;hidden;hidden"
+      keyTimes="0.000000;0.019812;0.026289;1.000000"
+      dur="7.87s"
+      repeatCount="indefinite"
+      calcMode="discrete"
+      fill="freeze"
+    />
+  </g>
 
-<rect class="window-bg" x="0" y="0" width="695" height="290" fill="#282a36" rx="8" ry="8"/>
+  <g id="frame-4" visibility="hidden">
+    
+
+<rect class="window-bg" x="0" y="0" width="695" height="226" fill="#282a36" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f13" x="16" y="16">❯</text>
 <text class="text fg" x="43.599999999999994" y="16"> echo                     </text>
@@ -438,11 +164,21 @@
 <rect class="cursor" x="181.6" y="16" width="27.599999999999998" height="64.39999999999999" fill="#f8f8f2"/>
 </g>
 
-    </g>
-    <g id="frame-5">
-      
+    <animate
+      attributeName="visibility"
+      values="hidden;visible;hidden;hidden"
+      keyTimes="0.000000;0.026289;0.033020;1.000000"
+      dur="7.87s"
+      repeatCount="indefinite"
+      calcMode="discrete"
+      fill="freeze"
+    />
+  </g>
 
-<rect class="window-bg" x="0" y="0" width="695" height="290" fill="#282a36" rx="8" ry="8"/>
+  <g id="frame-5" visibility="hidden">
+    
+
+<rect class="window-bg" x="0" y="0" width="695" height="226" fill="#282a36" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f13" x="16" y="16">❯</text>
 <text class="text fg" x="43.599999999999994" y="16"> echo                     </text>
@@ -451,11 +187,21 @@
 <rect class="cursor" x="209.2" y="16" width="27.599999999999998" height="64.39999999999999" fill="#f8f8f2"/>
 </g>
 
-    </g>
-    <g id="frame-6">
-      
+    <animate
+      attributeName="visibility"
+      values="hidden;visible;hidden;hidden"
+      keyTimes="0.000000;0.033020;0.039624;1.000000"
+      dur="7.87s"
+      repeatCount="indefinite"
+      calcMode="discrete"
+      fill="freeze"
+    />
+  </g>
 
-<rect class="window-bg" x="0" y="0" width="695" height="290" fill="#282a36" rx="8" ry="8"/>
+  <g id="frame-6" visibility="hidden">
+    
+
+<rect class="window-bg" x="0" y="0" width="695" height="226" fill="#282a36" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f13" x="16" y="16">❯</text>
 <text class="text fg" x="43.599999999999994" y="16"> echo &apos;                   </text>
@@ -464,11 +210,21 @@
 <rect class="cursor" x="236.79999999999998" y="16" width="27.599999999999998" height="64.39999999999999" fill="#f8f8f2"/>
 </g>
 
-    </g>
-    <g id="frame-7">
-      
+    <animate
+      attributeName="visibility"
+      values="hidden;visible;hidden;hidden"
+      keyTimes="0.000000;0.039624;0.046228;1.000000"
+      dur="7.87s"
+      repeatCount="indefinite"
+      calcMode="discrete"
+      fill="freeze"
+    />
+  </g>
 
-<rect class="window-bg" x="0" y="0" width="695" height="290" fill="#282a36" rx="8" ry="8"/>
+  <g id="frame-7" visibility="hidden">
+    
+
+<rect class="window-bg" x="0" y="0" width="695" height="226" fill="#282a36" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f13" x="16" y="16">❯</text>
 <text class="text fg" x="43.599999999999994" y="16"> echo &apos;W                  </text>
@@ -477,11 +233,21 @@
 <rect class="cursor" x="264.4" y="16" width="27.599999999999998" height="64.39999999999999" fill="#f8f8f2"/>
 </g>
 
-    </g>
-    <g id="frame-8">
-      
+    <animate
+      attributeName="visibility"
+      values="hidden;visible;hidden;hidden"
+      keyTimes="0.000000;0.046228;0.052959;1.000000"
+      dur="7.87s"
+      repeatCount="indefinite"
+      calcMode="discrete"
+      fill="freeze"
+    />
+  </g>
 
-<rect class="window-bg" x="0" y="0" width="695" height="290" fill="#282a36" rx="8" ry="8"/>
+  <g id="frame-8" visibility="hidden">
+    
+
+<rect class="window-bg" x="0" y="0" width="695" height="226" fill="#282a36" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f13" x="16" y="16">❯</text>
 <text class="text fg" x="43.599999999999994" y="16"> echo &apos;We                 </text>
@@ -490,11 +256,21 @@
 <rect class="cursor" x="292" y="16" width="27.599999999999998" height="64.39999999999999" fill="#f8f8f2"/>
 </g>
 
-    </g>
-    <g id="frame-9">
-      
+    <animate
+      attributeName="visibility"
+      values="hidden;visible;hidden;hidden"
+      keyTimes="0.000000;0.052959;0.059563;1.000000"
+      dur="7.87s"
+      repeatCount="indefinite"
+      calcMode="discrete"
+      fill="freeze"
+    />
+  </g>
 
-<rect class="window-bg" x="0" y="0" width="695" height="290" fill="#282a36" rx="8" ry="8"/>
+  <g id="frame-9" visibility="hidden">
+    
+
+<rect class="window-bg" x="0" y="0" width="695" height="226" fill="#282a36" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f13" x="16" y="16">❯</text>
 <text class="text fg" x="43.599999999999994" y="16"> echo &apos;Wel                </text>
@@ -503,11 +279,21 @@
 <rect class="cursor" x="319.59999999999997" y="16" width="27.599999999999998" height="64.39999999999999" fill="#f8f8f2"/>
 </g>
 
-    </g>
-    <g id="frame-10">
-      
+    <animate
+      attributeName="visibility"
+      values="hidden;visible;hidden;hidden"
+      keyTimes="0.000000;0.059563;0.066294;1.000000"
+      dur="7.87s"
+      repeatCount="indefinite"
+      calcMode="discrete"
+      fill="freeze"
+    />
+  </g>
 
-<rect class="window-bg" x="0" y="0" width="695" height="290" fill="#282a36" rx="8" ry="8"/>
+  <g id="frame-10" visibility="hidden">
+    
+
+<rect class="window-bg" x="0" y="0" width="695" height="226" fill="#282a36" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f13" x="16" y="16">❯</text>
 <text class="text fg" x="43.599999999999994" y="16"> echo &apos;Welc               </text>
@@ -516,11 +302,21 @@
 <rect class="cursor" x="347.2" y="16" width="27.599999999999998" height="64.39999999999999" fill="#f8f8f2"/>
 </g>
 
-    </g>
-    <g id="frame-11">
-      
+    <animate
+      attributeName="visibility"
+      values="hidden;visible;hidden;hidden"
+      keyTimes="0.000000;0.066294;0.072644;1.000000"
+      dur="7.87s"
+      repeatCount="indefinite"
+      calcMode="discrete"
+      fill="freeze"
+    />
+  </g>
 
-<rect class="window-bg" x="0" y="0" width="695" height="290" fill="#282a36" rx="8" ry="8"/>
+  <g id="frame-11" visibility="hidden">
+    
+
+<rect class="window-bg" x="0" y="0" width="695" height="226" fill="#282a36" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f13" x="16" y="16">❯</text>
 <text class="text fg" x="43.599999999999994" y="16"> echo &apos;Welco              </text>
@@ -529,11 +325,21 @@
 <rect class="cursor" x="374.79999999999995" y="16" width="27.599999999999998" height="64.39999999999999" fill="#f8f8f2"/>
 </g>
 
-    </g>
-    <g id="frame-12">
-      
+    <animate
+      attributeName="visibility"
+      values="hidden;visible;hidden;hidden"
+      keyTimes="0.000000;0.072644;0.079375;1.000000"
+      dur="7.87s"
+      repeatCount="indefinite"
+      calcMode="discrete"
+      fill="freeze"
+    />
+  </g>
 
-<rect class="window-bg" x="0" y="0" width="695" height="290" fill="#282a36" rx="8" ry="8"/>
+  <g id="frame-12" visibility="hidden">
+    
+
+<rect class="window-bg" x="0" y="0" width="695" height="226" fill="#282a36" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f13" x="16" y="16">❯</text>
 <text class="text fg" x="43.599999999999994" y="16"> echo &apos;Welcom             </text>
@@ -542,11 +348,21 @@
 <rect class="cursor" x="402.4" y="16" width="27.599999999999998" height="64.39999999999999" fill="#f8f8f2"/>
 </g>
 
-    </g>
-    <g id="frame-13">
-      
+    <animate
+      attributeName="visibility"
+      values="hidden;visible;hidden;hidden"
+      keyTimes="0.000000;0.079375;0.085852;1.000000"
+      dur="7.87s"
+      repeatCount="indefinite"
+      calcMode="discrete"
+      fill="freeze"
+    />
+  </g>
 
-<rect class="window-bg" x="0" y="0" width="695" height="290" fill="#282a36" rx="8" ry="8"/>
+  <g id="frame-13" visibility="hidden">
+    
+
+<rect class="window-bg" x="0" y="0" width="695" height="226" fill="#282a36" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f13" x="16" y="16">❯</text>
 <text class="text fg" x="43.599999999999994" y="16"> echo &apos;Welcome            </text>
@@ -555,11 +371,21 @@
 <rect class="cursor" x="429.99999999999994" y="16" width="27.599999999999998" height="64.39999999999999" fill="#f8f8f2"/>
 </g>
 
-    </g>
-    <g id="frame-14">
-      
+    <animate
+      attributeName="visibility"
+      values="hidden;visible;hidden;hidden"
+      keyTimes="0.000000;0.085852;0.092456;1.000000"
+      dur="7.87s"
+      repeatCount="indefinite"
+      calcMode="discrete"
+      fill="freeze"
+    />
+  </g>
 
-<rect class="window-bg" x="0" y="0" width="695" height="290" fill="#282a36" rx="8" ry="8"/>
+  <g id="frame-14" visibility="hidden">
+    
+
+<rect class="window-bg" x="0" y="0" width="695" height="226" fill="#282a36" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f13" x="16" y="16">❯</text>
 <text class="text fg" x="43.599999999999994" y="16"> echo &apos;Welcome            </text>
@@ -568,11 +394,21 @@
 <rect class="cursor" x="457.59999999999997" y="16" width="27.599999999999998" height="64.39999999999999" fill="#f8f8f2"/>
 </g>
 
-    </g>
-    <g id="frame-15">
-      
+    <animate
+      attributeName="visibility"
+      values="hidden;visible;hidden;hidden"
+      keyTimes="0.000000;0.092456;0.099187;1.000000"
+      dur="7.87s"
+      repeatCount="indefinite"
+      calcMode="discrete"
+      fill="freeze"
+    />
+  </g>
 
-<rect class="window-bg" x="0" y="0" width="695" height="290" fill="#282a36" rx="8" ry="8"/>
+  <g id="frame-15" visibility="hidden">
+    
+
+<rect class="window-bg" x="0" y="0" width="695" height="226" fill="#282a36" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f13" x="16" y="16">❯</text>
 <text class="text fg" x="43.599999999999994" y="16"> echo &apos;Welcome t          </text>
@@ -581,11 +417,21 @@
 <rect class="cursor" x="485.2" y="16" width="27.599999999999998" height="64.39999999999999" fill="#f8f8f2"/>
 </g>
 
-    </g>
-    <g id="frame-16">
-      
+    <animate
+      attributeName="visibility"
+      values="hidden;visible;hidden;hidden"
+      keyTimes="0.000000;0.099187;0.105918;1.000000"
+      dur="7.87s"
+      repeatCount="indefinite"
+      calcMode="discrete"
+      fill="freeze"
+    />
+  </g>
 
-<rect class="window-bg" x="0" y="0" width="695" height="290" fill="#282a36" rx="8" ry="8"/>
+  <g id="frame-16" visibility="hidden">
+    
+
+<rect class="window-bg" x="0" y="0" width="695" height="226" fill="#282a36" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f13" x="16" y="16">❯</text>
 <text class="text fg" x="43.599999999999994" y="16"> echo &apos;Welcome to         </text>
@@ -594,11 +440,21 @@
 <rect class="cursor" x="512.8" y="16" width="27.599999999999998" height="64.39999999999999" fill="#f8f8f2"/>
 </g>
 
-    </g>
-    <g id="frame-17">
-      
+    <animate
+      attributeName="visibility"
+      values="hidden;visible;hidden;hidden"
+      keyTimes="0.000000;0.105918;0.112522;1.000000"
+      dur="7.87s"
+      repeatCount="indefinite"
+      calcMode="discrete"
+      fill="freeze"
+    />
+  </g>
 
-<rect class="window-bg" x="0" y="0" width="695" height="290" fill="#282a36" rx="8" ry="8"/>
+  <g id="frame-17" visibility="hidden">
+    
+
+<rect class="window-bg" x="0" y="0" width="695" height="226" fill="#282a36" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f13" x="16" y="16">❯</text>
 <text class="text fg" x="43.599999999999994" y="16"> echo &apos;Welcome to         </text>
@@ -607,169 +463,247 @@
 <rect class="cursor" x="540.4" y="16" width="27.599999999999998" height="64.39999999999999" fill="#f8f8f2"/>
 </g>
 
-    </g>
-    <g id="frame-18">
-      
+    <animate
+      attributeName="visibility"
+      values="hidden;visible;hidden;hidden"
+      keyTimes="0.000000;0.112522;0.119253;1.000000"
+      dur="7.87s"
+      repeatCount="indefinite"
+      calcMode="discrete"
+      fill="freeze"
+    />
+  </g>
 
-<rect class="window-bg" x="0" y="0" width="695" height="290" fill="#282a36" rx="8" ry="8"/>
+  <g id="frame-18" visibility="hidden">
+    
+
+<rect class="window-bg" x="0" y="0" width="695" height="226" fill="#282a36" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f13" x="16" y="16">❯</text>
-<text class="text fg" x="43.599999999999994" y="16"> echo &apos;Welcome to V       </text>
+<text class="text fg" x="43.599999999999994" y="16"> echo &apos;Welcome to D       </text>
 </g>
 <g class="cursor-layer">
 <rect class="cursor" x="568" y="16" width="27.599999999999998" height="64.39999999999999" fill="#f8f8f2"/>
 </g>
 
-    </g>
-    <g id="frame-19">
-      
+    <animate
+      attributeName="visibility"
+      values="hidden;visible;hidden;hidden"
+      keyTimes="0.000000;0.119253;0.125857;1.000000"
+      dur="7.87s"
+      repeatCount="indefinite"
+      calcMode="discrete"
+      fill="freeze"
+    />
+  </g>
 
-<rect class="window-bg" x="0" y="0" width="695" height="290" fill="#282a36" rx="8" ry="8"/>
+  <g id="frame-19" visibility="hidden">
+    
+
+<rect class="window-bg" x="0" y="0" width="695" height="226" fill="#282a36" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f13" x="16" y="16">❯</text>
-<text class="text fg" x="43.599999999999994" y="16"> echo &apos;Welcome to VH      </text>
+<text class="text fg" x="43.599999999999994" y="16"> echo &apos;Welcome to DV      </text>
 </g>
 <g class="cursor-layer">
 <rect class="cursor" x="595.5999999999999" y="16" width="27.599999999999998" height="64.39999999999999" fill="#f8f8f2"/>
 </g>
 
-    </g>
-    <g id="frame-20">
-      
+    <animate
+      attributeName="visibility"
+      values="hidden;visible;hidden;hidden"
+      keyTimes="0.000000;0.125857;0.132461;1.000000"
+      dur="7.87s"
+      repeatCount="indefinite"
+      calcMode="discrete"
+      fill="freeze"
+    />
+  </g>
 
-<rect class="window-bg" x="0" y="0" width="695" height="290" fill="#282a36" rx="8" ry="8"/>
+  <g id="frame-20" visibility="hidden">
+    
+
+<rect class="window-bg" x="0" y="0" width="695" height="226" fill="#282a36" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f13" x="16" y="16">❯</text>
-<text class="text fg" x="43.599999999999994" y="16"> echo &apos;Welcome to VHS     </text>
+<text class="text fg" x="43.599999999999994" y="16"> echo &apos;Welcome to DVD     </text>
 </g>
 <g class="cursor-layer">
 <rect class="cursor" x="623.1999999999999" y="16" width="27.599999999999998" height="64.39999999999999" fill="#f8f8f2"/>
 </g>
 
-    </g>
-    <g id="frame-21">
-      
+    <animate
+      attributeName="visibility"
+      values="hidden;visible;hidden;hidden"
+      keyTimes="0.000000;0.132461;0.139065;1.000000"
+      dur="7.87s"
+      repeatCount="indefinite"
+      calcMode="discrete"
+      fill="freeze"
+    />
+  </g>
 
-<rect class="window-bg" x="0" y="0" width="695" height="290" fill="#282a36" rx="8" ry="8"/>
+  <g id="frame-21" visibility="hidden">
+    
+
+<rect class="window-bg" x="0" y="0" width="695" height="226" fill="#282a36" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f13" x="16" y="16">❯</text>
-<text class="text fg" x="43.599999999999994" y="16"> echo &apos;Welcome to VHS!    </text>
+<text class="text fg" x="43.599999999999994" y="16"> echo &apos;Welcome to DVD!    </text>
 </g>
 <g class="cursor-layer">
 <rect class="cursor" x="650.8" y="16" width="27.599999999999998" height="64.39999999999999" fill="#f8f8f2"/>
 </g>
 
-    </g>
-    <g id="frame-22">
-      
+    <animate
+      attributeName="visibility"
+      values="hidden;visible;hidden;hidden"
+      keyTimes="0.000000;0.139065;0.145669;1.000000"
+      dur="7.87s"
+      repeatCount="indefinite"
+      calcMode="discrete"
+      fill="freeze"
+    />
+  </g>
 
-<rect class="window-bg" x="0" y="0" width="695" height="290" fill="#282a36" rx="8" ry="8"/>
+  <g id="frame-22" visibility="hidden">
+    
+
+<rect class="window-bg" x="0" y="0" width="695" height="226" fill="#282a36" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f13" x="16" y="16">❯</text>
-<text class="text fg" x="43.599999999999994" y="16"> echo &apos;Welcome to VHS!&apos;   </text>
+<text class="text fg" x="43.599999999999994" y="16"> echo &apos;Welcome to DVD!&apos;   </text>
 </g>
 <g class="cursor-layer">
 <rect class="cursor" x="678.4" y="16" width="27.599999999999998" height="64.39999999999999" fill="#f8f8f2"/>
 </g>
 
-    </g>
-    <g id="frame-23">
-      
+    <animate
+      attributeName="visibility"
+      values="hidden;visible;hidden;hidden"
+      keyTimes="0.000000;0.145669;0.209550;1.000000"
+      dur="7.87s"
+      repeatCount="indefinite"
+      calcMode="discrete"
+      fill="freeze"
+    />
+  </g>
 
-<rect class="window-bg" x="0" y="0" width="695" height="290" fill="#282a36" rx="8" ry="8"/>
+  <g id="frame-23" visibility="hidden">
+    
+
+<rect class="window-bg" x="0" y="0" width="695" height="226" fill="#282a36" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f13" x="16" y="16">❯</text>
-<text class="text fg" x="43.599999999999994" y="16"> echo &apos;Welcome to VHS!&apos;   </text>
+<text class="text fg" x="43.599999999999994" y="16"> echo &apos;Welcome to DVD!&apos;   </text>
 </g>
 <g class="cursor-layer">
 <rect class="cursor" x="678.4" y="16" width="27.599999999999998" height="64.39999999999999" fill="#f8f8f2"/>
 </g>
 
-    </g>
-    <g id="frame-24">
-      
+    <animate
+      attributeName="visibility"
+      values="hidden;visible;hidden;hidden"
+      keyTimes="0.000000;0.209550;0.222504;1.000000"
+      dur="7.87s"
+      repeatCount="indefinite"
+      calcMode="discrete"
+      fill="freeze"
+    />
+  </g>
 
-<rect class="window-bg" x="0" y="0" width="695" height="290" fill="#282a36" rx="8" ry="8"/>
+  <g id="frame-24" visibility="hidden">
+    
+
+<rect class="window-bg" x="0" y="0" width="695" height="226" fill="#282a36" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f13" x="16" y="16">❯</text>
-<text class="text fg" x="43.599999999999994" y="16"> echo &apos;Welcome to VHS!&apos;   </text>
+<text class="text fg" x="43.599999999999994" y="16"> echo &apos;Welcome to DVD!&apos;   </text>
 </g>
 
-    </g>
-    <g id="frame-25">
-      
+    <animate
+      attributeName="visibility"
+      values="hidden;visible;hidden;hidden"
+      keyTimes="0.000000;0.222504;0.237490;1.000000"
+      dur="7.87s"
+      repeatCount="indefinite"
+      calcMode="discrete"
+      fill="freeze"
+    />
+  </g>
 
-<rect class="window-bg" x="0" y="0" width="695" height="290" fill="#282a36" rx="8" ry="8"/>
+  <g id="frame-25" visibility="hidden">
+    
+
+<rect class="window-bg" x="0" y="0" width="695" height="226" fill="#282a36" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f13" x="16" y="16">❯</text>
-<text class="text fg" x="43.599999999999994" y="16"> echo &apos;Welcome to VHS!&apos;   </text>
-<text class="text fg" x="16" y="80.39999999999999">Welcome to VHS!            </text>
-<text class="text f13" x="16" y="209.2">❯</text>
+<text class="text fg" x="43.599999999999994" y="16"> echo &apos;Welcome to DVD!&apos;   </text>
+<text class="text fg" x="16" y="80.39999999999999">Welcome to DVD!            </text>
+<text class="text f13" x="16" y="144.79999999999998">❯</text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor" x="71.19999999999999" y="209.2" width="27.599999999999998" height="64.39999999999999" fill="#f8f8f2"/>
+<rect class="cursor" x="71.19999999999999" y="144.79999999999998" width="27.599999999999998" height="64.39999999999999" fill="#f8f8f2"/>
 </g>
 
-    </g>
-    <g id="frame-26">
-      
+    <animate
+      attributeName="visibility"
+      values="hidden;visible;hidden;hidden"
+      keyTimes="0.000000;0.237490;0.872873;1.000000"
+      dur="7.87s"
+      repeatCount="indefinite"
+      calcMode="discrete"
+      fill="freeze"
+    />
+  </g>
 
-<rect class="window-bg" x="0" y="0" width="695" height="290" fill="#282a36" rx="8" ry="8"/>
+  <g id="frame-26" visibility="hidden">
+    
+
+<rect class="window-bg" x="0" y="0" width="695" height="226" fill="#282a36" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f13" x="16" y="16">❯</text>
-<text class="text fg" x="43.599999999999994" y="16"> echo &apos;Welcome to VHS!&apos;   </text>
-<text class="text fg" x="16" y="80.39999999999999">Welcome to VHS!            </text>
-<text class="text f13" x="16" y="209.2">❯</text>
+<text class="text fg" x="43.599999999999994" y="16"> echo &apos;Welcome to DVD!&apos;   </text>
+<text class="text fg" x="16" y="80.39999999999999">Welcome to DVD!            </text>
+<text class="text f13" x="16" y="144.79999999999998">❯</text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor" x="71.19999999999999" y="209.2" width="27.599999999999998" height="64.39999999999999" fill="#f8f8f2"/>
+<rect class="cursor" x="71.19999999999999" y="144.79999999999998" width="27.599999999999998" height="64.39999999999999" fill="#f8f8f2"/>
 </g>
 
-    </g>
-    <g id="frame-27">
-      
+    <animate
+      attributeName="visibility"
+      values="hidden;visible;hidden;hidden"
+      keyTimes="0.000000;0.872873;0.873000;1.000000"
+      dur="7.87s"
+      repeatCount="indefinite"
+      calcMode="discrete"
+      fill="freeze"
+    />
+  </g>
 
-<rect class="window-bg" x="0" y="0" width="695" height="290" fill="#282a36" rx="8" ry="8"/>
+  <g id="frame-27" visibility="hidden">
+    
+
+<rect class="window-bg" x="0" y="0" width="695" height="226" fill="#282a36" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f13" x="16" y="16">❯</text>
-<text class="text fg" x="43.599999999999994" y="16"> echo &apos;Welcome to VHS!&apos;   </text>
-<text class="text fg" x="16" y="80.39999999999999">Welcome to VHS!            </text>
-<text class="text f13" x="16" y="209.2">❯</text>
+<text class="text fg" x="43.599999999999994" y="16"> echo &apos;Welcome to DVD!&apos;   </text>
+<text class="text fg" x="16" y="80.39999999999999">Welcome to DVD!            </text>
+<text class="text f13" x="16" y="144.79999999999998">❯</text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor" x="71.19999999999999" y="209.2" width="27.599999999999998" height="64.39999999999999" fill="#f8f8f2"/>
+<rect class="cursor" x="71.19999999999999" y="144.79999999999998" width="27.599999999999998" height="64.39999999999999" fill="#f8f8f2"/>
 </g>
 
-    </g>
-  </defs>
-
-  
-  <use href="#frame-0" class="frame frame-0" />
-  <use href="#frame-1" class="frame frame-1" />
-  <use href="#frame-2" class="frame frame-2" />
-  <use href="#frame-3" class="frame frame-3" />
-  <use href="#frame-4" class="frame frame-4" />
-  <use href="#frame-5" class="frame frame-5" />
-  <use href="#frame-6" class="frame frame-6" />
-  <use href="#frame-7" class="frame frame-7" />
-  <use href="#frame-8" class="frame frame-8" />
-  <use href="#frame-9" class="frame frame-9" />
-  <use href="#frame-10" class="frame frame-10" />
-  <use href="#frame-11" class="frame frame-11" />
-  <use href="#frame-12" class="frame frame-12" />
-  <use href="#frame-13" class="frame frame-13" />
-  <use href="#frame-14" class="frame frame-14" />
-  <use href="#frame-15" class="frame frame-15" />
-  <use href="#frame-16" class="frame frame-16" />
-  <use href="#frame-17" class="frame frame-17" />
-  <use href="#frame-18" class="frame frame-18" />
-  <use href="#frame-19" class="frame frame-19" />
-  <use href="#frame-20" class="frame frame-20" />
-  <use href="#frame-21" class="frame frame-21" />
-  <use href="#frame-22" class="frame frame-22" />
-  <use href="#frame-23" class="frame frame-23" />
-  <use href="#frame-24" class="frame frame-24" />
-  <use href="#frame-25" class="frame frame-25" />
-  <use href="#frame-26" class="frame frame-26" />
-  <use href="#frame-27" class="frame frame-27" />
+    <animate
+      attributeName="visibility"
+      values="hidden;visible;visible"
+      keyTimes="0.000000;0.873000;1.000000"
+      dur="7.87s"
+      repeatCount="indefinite"
+      calcMode="discrete"
+      fill="freeze"
+    />
+  </g>
 </svg>
