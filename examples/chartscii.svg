@@ -49,230 +49,229 @@
 .b14 { fill: #a1efe4; }
 .b15 { fill: #f9f8f5; }
 .cursor { animation: blink 1s step-end infinite; }
-.cursor-active { opacity: 1; }
 @keyframes blink {
   0%, 50% { opacity: 1; }
   50.01%, 100% { opacity: 0; }
 }
+.cursor-active { opacity: 1; }
 
 
     /* Animation keyframes */
     
     @keyframes frame-0-anim {
-      0%, 1.3455% { opacity: 1; }
-      1.3456%, 100% { opacity: 0; }
+      0%, 1.226158% { opacity: 1; }
+      1.226158% { opacity: 0; }
     }
     @keyframes frame-1-anim {
-      0%, 1.3454% { opacity: 0; }
-      1.3455%, 2.6657% { opacity: 1; }
-      2.6658%, 100% { opacity: 0; }
+      0%, 1.226158% { opacity: 0; }
+      1.226158%, 2.406903% { opacity: 1; }
+      2.406903% { opacity: 0; }
     }
     @keyframes frame-2-anim {
-      0%, 2.6656% { opacity: 0; }
-      2.6657%, 3.9858% { opacity: 1; }
-      3.9859%, 100% { opacity: 0; }
+      0%, 2.406903% { opacity: 0; }
+      2.406903%, 3.587648% { opacity: 1; }
+      3.587648% { opacity: 0; }
     }
     @keyframes frame-3-anim {
-      0%, 3.9857% { opacity: 0; }
-      3.9858%, 5.3313% { opacity: 1; }
-      5.3314%, 100% { opacity: 0; }
+      0%, 3.587648% { opacity: 0; }
+      3.587648%, 4.768392% { opacity: 1; }
+      4.768392% { opacity: 0; }
     }
     @keyframes frame-4-anim {
-      0%, 5.3312% { opacity: 0; }
-      5.3313%, 6.6768% { opacity: 1; }
-      6.6769%, 100% { opacity: 0; }
+      0%, 4.768392% { opacity: 0; }
+      4.768392%, 5.949137% { opacity: 1; }
+      5.949137% { opacity: 0; }
     }
     @keyframes frame-5-anim {
-      0%, 6.6767% { opacity: 0; }
-      6.6768%, 8.0223% { opacity: 1; }
-      8.0224%, 100% { opacity: 0; }
+      0%, 5.949137% { opacity: 0; }
+      5.949137%, 7.152589% { opacity: 1; }
+      7.152589% { opacity: 0; }
     }
     @keyframes frame-6-anim {
-      0%, 8.0222% { opacity: 0; }
-      8.0223%, 9.3679% { opacity: 1; }
-      9.3680%, 100% { opacity: 0; }
+      0%, 7.152589% { opacity: 0; }
+      7.152589%, 8.333333% { opacity: 1; }
+      8.333333% { opacity: 0; }
     }
     @keyframes frame-7-anim {
-      0%, 9.3678% { opacity: 0; }
-      9.3679%, 10.7388% { opacity: 1; }
-      10.7389%, 100% { opacity: 0; }
+      0%, 8.333333% { opacity: 0; }
+      8.333333%, 9.514078% { opacity: 1; }
+      9.514078% { opacity: 0; }
     }
     @keyframes frame-8-anim {
-      0%, 10.7387% { opacity: 0; }
-      10.7388%, 12.1097% { opacity: 1; }
-      12.1098%, 100% { opacity: 0; }
+      0%, 9.514078% { opacity: 0; }
+      9.514078%, 10.694823% { opacity: 1; }
+      10.694823% { opacity: 0; }
     }
     @keyframes frame-9-anim {
-      0%, 12.1096% { opacity: 0; }
-      12.1097%, 13.4806% { opacity: 1; }
-      13.4807%, 100% { opacity: 0; }
+      0%, 10.694823% { opacity: 0; }
+      10.694823%, 11.852861% { opacity: 1; }
+      11.852861% { opacity: 0; }
     }
     @keyframes frame-10-anim {
-      0%, 13.4805% { opacity: 0; }
-      13.4806%, 14.8007% { opacity: 1; }
-      14.8008%, 100% { opacity: 0; }
+      0%, 11.852861% { opacity: 0; }
+      11.852861%, 13.010899% { opacity: 1; }
+      13.010899% { opacity: 0; }
     }
     @keyframes frame-11-anim {
-      0%, 14.8006% { opacity: 0; }
-      14.8007%, 16.1716% { opacity: 1; }
-      16.1717%, 100% { opacity: 0; }
+      0%, 13.010899% { opacity: 0; }
+      13.010899%, 14.168937% { opacity: 1; }
+      14.168937% { opacity: 0; }
     }
     @keyframes frame-12-anim {
-      0%, 16.1715% { opacity: 0; }
-      16.1716%, 17.5425% { opacity: 1; }
-      17.5426%, 100% { opacity: 0; }
+      0%, 14.168937% { opacity: 0; }
+      14.168937%, 15.349682% { opacity: 1; }
+      15.349682% { opacity: 0; }
     }
     @keyframes frame-13-anim {
-      0%, 17.5424% { opacity: 0; }
-      17.5425%, 18.8627% { opacity: 1; }
-      18.8628%, 100% { opacity: 0; }
+      0%, 15.349682% { opacity: 0; }
+      15.349682%, 16.530427% { opacity: 1; }
+      16.530427% { opacity: 0; }
     }
     @keyframes frame-14-anim {
-      0%, 18.8626% { opacity: 0; }
-      18.8627%, 20.2589% { opacity: 1; }
-      20.2590%, 100% { opacity: 0; }
+      0%, 16.530427% { opacity: 0; }
+      16.530427%, 17.711172% { opacity: 1; }
+      17.711172% { opacity: 0; }
     }
     @keyframes frame-15-anim {
-      0%, 20.2588% { opacity: 0; }
-      20.2589%, 21.6045% { opacity: 1; }
-      21.6046%, 100% { opacity: 0; }
+      0%, 17.711172% { opacity: 0; }
+      17.711172%, 18.891916% { opacity: 1; }
+      18.891916% { opacity: 0; }
     }
     @keyframes frame-16-anim {
-      0%, 21.6044% { opacity: 0; }
-      21.6045%, 22.9500% { opacity: 1; }
-      22.9501%, 100% { opacity: 0; }
+      0%, 18.891916% { opacity: 0; }
+      18.891916%, 20.072661% { opacity: 1; }
+      20.072661% { opacity: 0; }
     }
     @keyframes frame-17-anim {
-      0%, 22.9499% { opacity: 0; }
-      22.9500%, 24.2955% { opacity: 1; }
-      24.2956%, 100% { opacity: 0; }
+      0%, 20.072661% { opacity: 0; }
+      20.072661%, 21.276113% { opacity: 1; }
+      21.276113% { opacity: 0; }
     }
     @keyframes frame-18-anim {
-      0%, 24.2954% { opacity: 0; }
-      24.2955%, 25.6410% { opacity: 1; }
-      25.6411%, 100% { opacity: 0; }
+      0%, 21.276113% { opacity: 0; }
+      21.276113%, 22.502271% { opacity: 1; }
+      22.502271% { opacity: 0; }
     }
     @keyframes frame-19-anim {
-      0%, 25.6409% { opacity: 0; }
-      25.6410%, 27.1135% { opacity: 1; }
-      27.1136%, 100% { opacity: 0; }
+      0%, 22.502271% { opacity: 0; }
+      22.502271%, 23.683015% { opacity: 1; }
+      23.683015% { opacity: 0; }
     }
     @keyframes frame-20-anim {
-      0%, 27.1134% { opacity: 0; }
-      27.1135%, 28.5098% { opacity: 1; }
-      28.5099%, 100% { opacity: 0; }
+      0%, 23.683015% { opacity: 0; }
+      23.683015%, 24.909173% { opacity: 1; }
+      24.909173% { opacity: 0; }
     }
     @keyframes frame-21-anim {
-      0%, 28.5097% { opacity: 0; }
-      28.5098%, 30.0584% { opacity: 1; }
-      30.0585%, 100% { opacity: 0; }
+      0%, 24.909173% { opacity: 0; }
+      24.909173%, 26.135332% { opacity: 1; }
+      26.135332% { opacity: 0; }
     }
     @keyframes frame-22-anim {
-      0%, 30.0583% { opacity: 0; }
-      30.0584%, 31.4293% { opacity: 1; }
-      31.4294%, 100% { opacity: 0; }
+      0%, 26.135332% { opacity: 0; }
+      26.135332%, 27.316076% { opacity: 1; }
+      27.316076% { opacity: 0; }
     }
     @keyframes frame-23-anim {
-      0%, 31.4292% { opacity: 0; }
-      31.4293%, 32.8002% { opacity: 1; }
-      32.8003%, 100% { opacity: 0; }
+      0%, 27.316076% { opacity: 0; }
+      27.316076%, 28.564941% { opacity: 1; }
+      28.564941% { opacity: 0; }
     }
     @keyframes frame-24-anim {
-      0%, 32.8001% { opacity: 0; }
-      32.8002%, 34.2219% { opacity: 1; }
-      34.2220%, 100% { opacity: 0; }
+      0%, 28.564941% { opacity: 0; }
+      28.564941%, 29.722979% { opacity: 1; }
+      29.722979% { opacity: 0; }
     }
     @keyframes frame-25-anim {
-      0%, 34.2218% { opacity: 0; }
-      34.2219%, 35.5928% { opacity: 1; }
-      35.5929%, 100% { opacity: 0; }
+      0%, 29.722979% { opacity: 0; }
+      29.722979%, 30.994550% { opacity: 1; }
+      30.994550% { opacity: 0; }
     }
     @keyframes frame-26-anim {
-      0%, 35.5927% { opacity: 0; }
-      35.5928%, 36.9637% { opacity: 1; }
-      36.9638%, 100% { opacity: 0; }
+      0%, 30.994550% { opacity: 0; }
+      30.994550%, 32.198002% { opacity: 1; }
+      32.198002% { opacity: 0; }
     }
     @keyframes frame-27-anim {
-      0%, 36.9636% { opacity: 0; }
-      36.9637%, 38.3346% { opacity: 1; }
-      38.3347%, 100% { opacity: 0; }
+      0%, 32.198002% { opacity: 0; }
+      32.198002%, 33.378747% { opacity: 1; }
+      33.378747% { opacity: 0; }
     }
     @keyframes frame-28-anim {
-      0%, 38.3345% { opacity: 0; }
-      38.3346%, 39.7055% { opacity: 1; }
-      39.7056%, 100% { opacity: 0; }
+      0%, 33.378747% { opacity: 0; }
+      33.378747%, 34.559491% { opacity: 1; }
+      34.559491% { opacity: 0; }
     }
     @keyframes frame-29-anim {
-      0%, 39.7054% { opacity: 0; }
-      39.7055%, 41.0510% { opacity: 1; }
-      41.0511%, 100% { opacity: 0; }
+      0%, 34.559491% { opacity: 0; }
+      34.559491%, 35.785649% { opacity: 1; }
+      35.785649% { opacity: 0; }
     }
     @keyframes frame-30-anim {
-      0%, 41.0509% { opacity: 0; }
-      41.0510%, 42.3965% { opacity: 1; }
-      42.3966%, 100% { opacity: 0; }
+      0%, 35.785649% { opacity: 0; }
+      35.785649%, 37.079927% { opacity: 1; }
+      37.079927% { opacity: 0; }
     }
     @keyframes frame-31-anim {
-      0%, 42.3964% { opacity: 0; }
-      42.3965%, 43.7675% { opacity: 1; }
-      43.7676%, 100% { opacity: 0; }
+      0%, 37.079927% { opacity: 0; }
+      37.079927%, 38.283379% { opacity: 1; }
+      38.283379% { opacity: 0; }
     }
     @keyframes frame-32-anim {
-      0%, 43.7674% { opacity: 0; }
-      43.7675%, 45.1637% { opacity: 1; }
-      45.1638%, 100% { opacity: 0; }
+      0%, 38.283379% { opacity: 0; }
+      38.283379%, 39.509537% { opacity: 1; }
+      39.509537% { opacity: 0; }
     }
     @keyframes frame-33-anim {
-      0%, 45.1636% { opacity: 0; }
-      45.1637%, 46.5093% { opacity: 1; }
-      46.5094%, 100% { opacity: 0; }
+      0%, 39.509537% { opacity: 0; }
+      39.509537%, 40.735695% { opacity: 1; }
+      40.735695% { opacity: 0; }
     }
     @keyframes frame-34-anim {
-      0%, 46.5092% { opacity: 0; }
-      46.5093%, 47.9817% { opacity: 1; }
-      47.9818%, 100% { opacity: 0; }
+      0%, 40.735695% { opacity: 0; }
+      40.735695%, 41.984559% { opacity: 1; }
+      41.984559% { opacity: 0; }
     }
     @keyframes frame-35-anim {
-      0%, 47.9816% { opacity: 0; }
-      47.9817%, 49.3019% { opacity: 1; }
-      49.3020%, 100% { opacity: 0; }
+      0%, 41.984559% { opacity: 0; }
+      41.984559%, 43.233424% { opacity: 1; }
+      43.233424% { opacity: 0; }
     }
     @keyframes frame-36-anim {
-      0%, 49.3018% { opacity: 0; }
-      49.3019%, 51.9421% { opacity: 1; }
-      51.9422%, 100% { opacity: 0; }
+      0%, 43.233424% { opacity: 0; }
+      43.233424%, 45.617620% { opacity: 1; }
+      45.617620% { opacity: 0; }
     }
     @keyframes frame-37-anim {
-      0%, 51.9420% { opacity: 0; }
-      51.9421%, 70.9317% { opacity: 1; }
-      70.9318%, 100% { opacity: 0; }
+      0%, 45.617620% { opacity: 0; }
+      45.617620%, 73.955495% { opacity: 1; }
+      73.955495% { opacity: 0; }
     }
     @keyframes frame-38-anim {
-      0%, 70.9316% { opacity: 0; }
-      70.9317%, 73.9020% { opacity: 1; }
-      73.9021%, 100% { opacity: 0; }
+      0%, 73.955495% { opacity: 0; }
+      73.955495%, 76.612171% { opacity: 1; }
+      76.612171% { opacity: 0; }
     }
     @keyframes frame-39-anim {
-      0%, 73.9019% { opacity: 0; }
-      73.9020%, 99.7461% { opacity: 1; }
-      99.7462%, 100% { opacity: 0; }
+      0%, 76.612171% { opacity: 0; }
+      76.612171%, 99.750227% { opacity: 1; }
+      99.750227% { opacity: 0; }
     }
     @keyframes frame-40-anim {
-      0%, 99.7460% { opacity: 0; }
-      99.7461%, 100.0000% { opacity: 1; }
-      100.0001%, 100% { opacity: 0; }
+      0%, 99.750227% { opacity: 0; }
+      99.750227%, 100.000000% { opacity: 1; }
+      100.000000% { opacity: 0; }
     }
     @keyframes frame-41-anim {
-      0%, 99.9999% { opacity: 0; }
-      100.0000%, 100.0000% { opacity: 1; }
-      100.0001%, 100% { opacity: 0; }
+      0%, 100.000000% { opacity: 0; }
+      100.000000% { opacity: 1; }
     }
 
     .frame {
-      animation-duration: 4.94s;
-      animation-timing-function: step-end;
+      animation-duration: 5.40s;
+      animation-timing-function: step-start;
       animation-iteration-count: infinite;
-      animation-fill-mode: forwards;
+      animation-fill-mode: both;
     }
 
     
