@@ -1,4 +1,5 @@
 <svg width="900" height="500" xmlns="http://www.w3.org/2000/svg">
+  <defs><clipPath id="rounded-corners"><rect x="0" y="0" width="900" height="500" rx="8" ry="8"/></clipPath></defs>
   <style>
     
 .text {
@@ -13,40 +14,40 @@
 .uline { text-decoration: underline; }
 .strike { text-decoration: line-through; }
 .dim { opacity: 0.5; }
-.fg { fill: #f8f8f2; }
-.f0 { fill: #21222c; }
-.f1 { fill: #ff5555; }
-.f2 { fill: #50fa7b; }
-.f3 { fill: #f1fa8c; }
-.f4 { fill: #bd93f9; }
-.f5 { fill: #ff79c6; }
-.f6 { fill: #8be9fd; }
-.f7 { fill: #f8f8f2; }
-.f8 { fill: #6272a4; }
-.f9 { fill: #ff6e6e; }
-.f10 { fill: #69ff94; }
-.f11 { fill: #ffffa5; }
-.f12 { fill: #d6acff; }
-.f13 { fill: #ff92df; }
-.f14 { fill: #a4ffff; }
-.f15 { fill: #ffffff; }
-.bg { fill: #282a36; }
-.b0 { fill: #21222c; }
-.b1 { fill: #ff5555; }
-.b2 { fill: #50fa7b; }
-.b3 { fill: #f1fa8c; }
-.b4 { fill: #bd93f9; }
-.b5 { fill: #ff79c6; }
-.b6 { fill: #8be9fd; }
-.b7 { fill: #f8f8f2; }
-.b8 { fill: #6272a4; }
-.b9 { fill: #ff6e6e; }
-.b10 { fill: #69ff94; }
-.b11 { fill: #ffffa5; }
-.b12 { fill: #d6acff; }
-.b13 { fill: #ff92df; }
-.b14 { fill: #a4ffff; }
-.b15 { fill: #ffffff; }
+.fg { fill: #c9d1d9; }
+.f0 { fill: #000000; }
+.f1 { fill: #ff7b72; }
+.f2 { fill: #3fb950; }
+.f3 { fill: #d29922; }
+.f4 { fill: #58a6ff; }
+.f5 { fill: #bc8cff; }
+.f6 { fill: #39c5cf; }
+.f7 { fill: #b1bac4; }
+.f8 { fill: #6e7681; }
+.f9 { fill: #ffa198; }
+.f10 { fill: #56d364; }
+.f11 { fill: #e3b341; }
+.f12 { fill: #79c0ff; }
+.f13 { fill: #d2a8ff; }
+.f14 { fill: #56d4dd; }
+.f15 { fill: #f0f6fc; }
+.bg { fill: #1e1e1e; }
+.b0 { fill: #000000; }
+.b1 { fill: #ff7b72; }
+.b2 { fill: #3fb950; }
+.b3 { fill: #d29922; }
+.b4 { fill: #58a6ff; }
+.b5 { fill: #bc8cff; }
+.b6 { fill: #39c5cf; }
+.b7 { fill: #b1bac4; }
+.b8 { fill: #6e7681; }
+.b9 { fill: #ffa198; }
+.b10 { fill: #56d364; }
+.b11 { fill: #e3b341; }
+.b12 { fill: #79c0ff; }
+.b13 { fill: #d2a8ff; }
+.b14 { fill: #56d4dd; }
+.b15 { fill: #f0f6fc; }
 .cursor { animation: blink 1s step-end infinite; }
 @keyframes blink {
   0%, 50% { opacity: 1; }
@@ -56,37 +57,35 @@
 
   </style>
 
+  <g clip-path="url(#rounded-corners)">
   <!-- Persistent background - never animated -->
-  <rect width="100%" height="100%" fill="#282a36" />
+  <rect width="100%" height="100%" fill="#1e1e1e" rx="8" ry="8" />
 
   <!-- Animated frames with discrete visibility transitions -->
   
   <g id="frame-0" visibility="visible">
-    
-
-<rect class="window-bg" x="0" y="0" width="900" height="500" fill="#282a36" rx="8" ry="8"/>
-<g class="chrome"><rect class="header-bg" x="0" y="0" width="900" height="40" fill="#282a36" rx="8" ry="8"/>
-<rect x="0" y="32" width="900" height="8" fill="#282a36"/>
+    <rect class="window-bg" x="0" y="0" width="900" height="500" fill="#1e1e1e" rx="8" ry="8"/>
+<g class="chrome"><rect class="header-bg" x="0" y="0" width="900" height="40" fill="#1e1e1e" rx="8" ry="8"/>
+<rect x="0" y="32" width="900" height="8" fill="#1e1e1e"/>
 <rect x="762" y="0" width="46" height="40" fill="transparent"/>
 <rect x="808" y="0" width="46" height="40" fill="transparent"/>
 <rect x="854" y="0" width="46" height="40" fill="transparent"/>
-<line x1="780" y1="20" x2="790" y2="20" stroke="#f8f8f2" stroke-width="1"/>
-<rect x="826" y="15" width="10" height="10" stroke="#f8f8f2" stroke-width="1" fill="none"/>
-<line x1="872" y1="15" x2="882" y2="25" stroke="#f8f8f2" stroke-width="1"/>
-<line x1="882" y1="15" x2="872" y2="25" stroke="#f8f8f2" stroke-width="1"/>
+<line x1="780" y1="20" x2="790" y2="20" stroke="#c9d1d9" stroke-width="1"/>
+<rect x="826" y="15" width="10" height="10" stroke="#c9d1d9" stroke-width="1" fill="none"/>
+<line x1="872" y1="15" x2="882" y2="25" stroke="#c9d1d9" stroke-width="1"/>
+<line x1="882" y1="15" x2="872" y2="25" stroke="#c9d1d9" stroke-width="1"/>
 <text class="text fg" x="450" y="20" text-anchor="middle" style="dominant-baseline: central">PowerShell</text></g>
 <g class="text-layer">
 <text class="text f2" x="16" y="56">PS&gt;</text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor" x="52" y="56" width="9" height="21" fill="#f8f8f2"/>
+<rect class="cursor" x="52" y="56" width="9" height="21" fill="#c9d1d9"/>
 </g>
-
     <animate
       attributeName="visibility"
       values="visible;hidden;hidden"
-      keyTimes="0.000000;0.006087;1.000000"
-      dur="9.04s"
+      keyTimes="0.000000;0.006333;1.000000"
+      dur="8.68s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -94,32 +93,29 @@
   </g>
 
   <g id="frame-1" visibility="hidden">
-    
-
-<rect class="window-bg" x="0" y="0" width="900" height="500" fill="#282a36" rx="8" ry="8"/>
-<g class="chrome"><rect class="header-bg" x="0" y="0" width="900" height="40" fill="#282a36" rx="8" ry="8"/>
-<rect x="0" y="32" width="900" height="8" fill="#282a36"/>
+    <rect class="window-bg" x="0" y="0" width="900" height="500" fill="#1e1e1e" rx="8" ry="8"/>
+<g class="chrome"><rect class="header-bg" x="0" y="0" width="900" height="40" fill="#1e1e1e" rx="8" ry="8"/>
+<rect x="0" y="32" width="900" height="8" fill="#1e1e1e"/>
 <rect x="762" y="0" width="46" height="40" fill="transparent"/>
 <rect x="808" y="0" width="46" height="40" fill="transparent"/>
 <rect x="854" y="0" width="46" height="40" fill="transparent"/>
-<line x1="780" y1="20" x2="790" y2="20" stroke="#f8f8f2" stroke-width="1"/>
-<rect x="826" y="15" width="10" height="10" stroke="#f8f8f2" stroke-width="1" fill="none"/>
-<line x1="872" y1="15" x2="882" y2="25" stroke="#f8f8f2" stroke-width="1"/>
-<line x1="882" y1="15" x2="872" y2="25" stroke="#f8f8f2" stroke-width="1"/>
+<line x1="780" y1="20" x2="790" y2="20" stroke="#c9d1d9" stroke-width="1"/>
+<rect x="826" y="15" width="10" height="10" stroke="#c9d1d9" stroke-width="1" fill="none"/>
+<line x1="872" y1="15" x2="882" y2="25" stroke="#c9d1d9" stroke-width="1"/>
+<line x1="882" y1="15" x2="872" y2="25" stroke="#c9d1d9" stroke-width="1"/>
 <text class="text fg" x="450" y="20" text-anchor="middle" style="dominant-baseline: central">PowerShell</text></g>
 <g class="text-layer">
 <text class="text f2" x="16" y="56">PS&gt;</text>
 <text class="text fg" x="43" y="56"> G                                                                                           </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor-active" x="61" y="56" width="9" height="21" fill="#f8f8f2"/>
+<rect class="cursor-active" x="61" y="56" width="9" height="21" fill="#c9d1d9"/>
 </g>
-
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.006087;0.011954;1.000000"
-      dur="9.04s"
+      keyTimes="0.000000;0.006333;0.012206;1.000000"
+      dur="8.68s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -127,32 +123,29 @@
   </g>
 
   <g id="frame-2" visibility="hidden">
-    
-
-<rect class="window-bg" x="0" y="0" width="900" height="500" fill="#282a36" rx="8" ry="8"/>
-<g class="chrome"><rect class="header-bg" x="0" y="0" width="900" height="40" fill="#282a36" rx="8" ry="8"/>
-<rect x="0" y="32" width="900" height="8" fill="#282a36"/>
+    <rect class="window-bg" x="0" y="0" width="900" height="500" fill="#1e1e1e" rx="8" ry="8"/>
+<g class="chrome"><rect class="header-bg" x="0" y="0" width="900" height="40" fill="#1e1e1e" rx="8" ry="8"/>
+<rect x="0" y="32" width="900" height="8" fill="#1e1e1e"/>
 <rect x="762" y="0" width="46" height="40" fill="transparent"/>
 <rect x="808" y="0" width="46" height="40" fill="transparent"/>
 <rect x="854" y="0" width="46" height="40" fill="transparent"/>
-<line x1="780" y1="20" x2="790" y2="20" stroke="#f8f8f2" stroke-width="1"/>
-<rect x="826" y="15" width="10" height="10" stroke="#f8f8f2" stroke-width="1" fill="none"/>
-<line x1="872" y1="15" x2="882" y2="25" stroke="#f8f8f2" stroke-width="1"/>
-<line x1="882" y1="15" x2="872" y2="25" stroke="#f8f8f2" stroke-width="1"/>
+<line x1="780" y1="20" x2="790" y2="20" stroke="#c9d1d9" stroke-width="1"/>
+<rect x="826" y="15" width="10" height="10" stroke="#c9d1d9" stroke-width="1" fill="none"/>
+<line x1="872" y1="15" x2="882" y2="25" stroke="#c9d1d9" stroke-width="1"/>
+<line x1="882" y1="15" x2="872" y2="25" stroke="#c9d1d9" stroke-width="1"/>
 <text class="text fg" x="450" y="20" text-anchor="middle" style="dominant-baseline: central">PowerShell</text></g>
 <g class="text-layer">
 <text class="text f2" x="16" y="56">PS&gt;</text>
 <text class="text fg" x="43" y="56"> Ge                                                                                          </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor-active" x="70" y="56" width="9" height="21" fill="#f8f8f2"/>
+<rect class="cursor-active" x="70" y="56" width="9" height="21" fill="#c9d1d9"/>
 </g>
-
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.011954;0.017820;1.000000"
-      dur="9.04s"
+      keyTimes="0.000000;0.012206;0.018079;1.000000"
+      dur="8.68s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -160,32 +153,29 @@
   </g>
 
   <g id="frame-3" visibility="hidden">
-    
-
-<rect class="window-bg" x="0" y="0" width="900" height="500" fill="#282a36" rx="8" ry="8"/>
-<g class="chrome"><rect class="header-bg" x="0" y="0" width="900" height="40" fill="#282a36" rx="8" ry="8"/>
-<rect x="0" y="32" width="900" height="8" fill="#282a36"/>
+    <rect class="window-bg" x="0" y="0" width="900" height="500" fill="#1e1e1e" rx="8" ry="8"/>
+<g class="chrome"><rect class="header-bg" x="0" y="0" width="900" height="40" fill="#1e1e1e" rx="8" ry="8"/>
+<rect x="0" y="32" width="900" height="8" fill="#1e1e1e"/>
 <rect x="762" y="0" width="46" height="40" fill="transparent"/>
 <rect x="808" y="0" width="46" height="40" fill="transparent"/>
 <rect x="854" y="0" width="46" height="40" fill="transparent"/>
-<line x1="780" y1="20" x2="790" y2="20" stroke="#f8f8f2" stroke-width="1"/>
-<rect x="826" y="15" width="10" height="10" stroke="#f8f8f2" stroke-width="1" fill="none"/>
-<line x1="872" y1="15" x2="882" y2="25" stroke="#f8f8f2" stroke-width="1"/>
-<line x1="882" y1="15" x2="872" y2="25" stroke="#f8f8f2" stroke-width="1"/>
+<line x1="780" y1="20" x2="790" y2="20" stroke="#c9d1d9" stroke-width="1"/>
+<rect x="826" y="15" width="10" height="10" stroke="#c9d1d9" stroke-width="1" fill="none"/>
+<line x1="872" y1="15" x2="882" y2="25" stroke="#c9d1d9" stroke-width="1"/>
+<line x1="882" y1="15" x2="872" y2="25" stroke="#c9d1d9" stroke-width="1"/>
 <text class="text fg" x="450" y="20" text-anchor="middle" style="dominant-baseline: central">PowerShell</text></g>
 <g class="text-layer">
 <text class="text f2" x="16" y="56">PS&gt;</text>
 <text class="text fg" x="43" y="56"> Get                                                                                         </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor-active" x="79" y="56" width="9" height="21" fill="#f8f8f2"/>
+<rect class="cursor-active" x="79" y="56" width="9" height="21" fill="#c9d1d9"/>
 </g>
-
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.017820;0.023464;1.000000"
-      dur="9.04s"
+      keyTimes="0.000000;0.018079;0.023952;1.000000"
+      dur="8.68s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -193,32 +183,29 @@
   </g>
 
   <g id="frame-4" visibility="hidden">
-    
-
-<rect class="window-bg" x="0" y="0" width="900" height="500" fill="#282a36" rx="8" ry="8"/>
-<g class="chrome"><rect class="header-bg" x="0" y="0" width="900" height="40" fill="#282a36" rx="8" ry="8"/>
-<rect x="0" y="32" width="900" height="8" fill="#282a36"/>
+    <rect class="window-bg" x="0" y="0" width="900" height="500" fill="#1e1e1e" rx="8" ry="8"/>
+<g class="chrome"><rect class="header-bg" x="0" y="0" width="900" height="40" fill="#1e1e1e" rx="8" ry="8"/>
+<rect x="0" y="32" width="900" height="8" fill="#1e1e1e"/>
 <rect x="762" y="0" width="46" height="40" fill="transparent"/>
 <rect x="808" y="0" width="46" height="40" fill="transparent"/>
 <rect x="854" y="0" width="46" height="40" fill="transparent"/>
-<line x1="780" y1="20" x2="790" y2="20" stroke="#f8f8f2" stroke-width="1"/>
-<rect x="826" y="15" width="10" height="10" stroke="#f8f8f2" stroke-width="1" fill="none"/>
-<line x1="872" y1="15" x2="882" y2="25" stroke="#f8f8f2" stroke-width="1"/>
-<line x1="882" y1="15" x2="872" y2="25" stroke="#f8f8f2" stroke-width="1"/>
+<line x1="780" y1="20" x2="790" y2="20" stroke="#c9d1d9" stroke-width="1"/>
+<rect x="826" y="15" width="10" height="10" stroke="#c9d1d9" stroke-width="1" fill="none"/>
+<line x1="872" y1="15" x2="882" y2="25" stroke="#c9d1d9" stroke-width="1"/>
+<line x1="882" y1="15" x2="872" y2="25" stroke="#c9d1d9" stroke-width="1"/>
 <text class="text fg" x="450" y="20" text-anchor="middle" style="dominant-baseline: central">PowerShell</text></g>
 <g class="text-layer">
 <text class="text f2" x="16" y="56">PS&gt;</text>
 <text class="text fg" x="43" y="56"> Get-                                                                                        </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor-active" x="88" y="56" width="9" height="21" fill="#f8f8f2"/>
+<rect class="cursor-active" x="88" y="56" width="9" height="21" fill="#c9d1d9"/>
 </g>
-
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.023464;0.029441;1.000000"
-      dur="9.04s"
+      keyTimes="0.000000;0.023952;0.029940;1.000000"
+      dur="8.68s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -226,32 +213,29 @@
   </g>
 
   <g id="frame-5" visibility="hidden">
-    
-
-<rect class="window-bg" x="0" y="0" width="900" height="500" fill="#282a36" rx="8" ry="8"/>
-<g class="chrome"><rect class="header-bg" x="0" y="0" width="900" height="40" fill="#282a36" rx="8" ry="8"/>
-<rect x="0" y="32" width="900" height="8" fill="#282a36"/>
+    <rect class="window-bg" x="0" y="0" width="900" height="500" fill="#1e1e1e" rx="8" ry="8"/>
+<g class="chrome"><rect class="header-bg" x="0" y="0" width="900" height="40" fill="#1e1e1e" rx="8" ry="8"/>
+<rect x="0" y="32" width="900" height="8" fill="#1e1e1e"/>
 <rect x="762" y="0" width="46" height="40" fill="transparent"/>
 <rect x="808" y="0" width="46" height="40" fill="transparent"/>
 <rect x="854" y="0" width="46" height="40" fill="transparent"/>
-<line x1="780" y1="20" x2="790" y2="20" stroke="#f8f8f2" stroke-width="1"/>
-<rect x="826" y="15" width="10" height="10" stroke="#f8f8f2" stroke-width="1" fill="none"/>
-<line x1="872" y1="15" x2="882" y2="25" stroke="#f8f8f2" stroke-width="1"/>
-<line x1="882" y1="15" x2="872" y2="25" stroke="#f8f8f2" stroke-width="1"/>
+<line x1="780" y1="20" x2="790" y2="20" stroke="#c9d1d9" stroke-width="1"/>
+<rect x="826" y="15" width="10" height="10" stroke="#c9d1d9" stroke-width="1" fill="none"/>
+<line x1="872" y1="15" x2="882" y2="25" stroke="#c9d1d9" stroke-width="1"/>
+<line x1="882" y1="15" x2="872" y2="25" stroke="#c9d1d9" stroke-width="1"/>
 <text class="text fg" x="450" y="20" text-anchor="middle" style="dominant-baseline: central">PowerShell</text></g>
 <g class="text-layer">
 <text class="text f2" x="16" y="56">PS&gt;</text>
 <text class="text fg" x="43" y="56"> Get-C                                                                                       </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor-active" x="97" y="56" width="9" height="21" fill="#f8f8f2"/>
+<rect class="cursor-active" x="97" y="56" width="9" height="21" fill="#c9d1d9"/>
 </g>
-
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.029441;0.035307;1.000000"
-      dur="9.04s"
+      keyTimes="0.000000;0.029940;0.035928;1.000000"
+      dur="8.68s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -259,32 +243,29 @@
   </g>
 
   <g id="frame-6" visibility="hidden">
-    
-
-<rect class="window-bg" x="0" y="0" width="900" height="500" fill="#282a36" rx="8" ry="8"/>
-<g class="chrome"><rect class="header-bg" x="0" y="0" width="900" height="40" fill="#282a36" rx="8" ry="8"/>
-<rect x="0" y="32" width="900" height="8" fill="#282a36"/>
+    <rect class="window-bg" x="0" y="0" width="900" height="500" fill="#1e1e1e" rx="8" ry="8"/>
+<g class="chrome"><rect class="header-bg" x="0" y="0" width="900" height="40" fill="#1e1e1e" rx="8" ry="8"/>
+<rect x="0" y="32" width="900" height="8" fill="#1e1e1e"/>
 <rect x="762" y="0" width="46" height="40" fill="transparent"/>
 <rect x="808" y="0" width="46" height="40" fill="transparent"/>
 <rect x="854" y="0" width="46" height="40" fill="transparent"/>
-<line x1="780" y1="20" x2="790" y2="20" stroke="#f8f8f2" stroke-width="1"/>
-<rect x="826" y="15" width="10" height="10" stroke="#f8f8f2" stroke-width="1" fill="none"/>
-<line x1="872" y1="15" x2="882" y2="25" stroke="#f8f8f2" stroke-width="1"/>
-<line x1="882" y1="15" x2="872" y2="25" stroke="#f8f8f2" stroke-width="1"/>
+<line x1="780" y1="20" x2="790" y2="20" stroke="#c9d1d9" stroke-width="1"/>
+<rect x="826" y="15" width="10" height="10" stroke="#c9d1d9" stroke-width="1" fill="none"/>
+<line x1="872" y1="15" x2="882" y2="25" stroke="#c9d1d9" stroke-width="1"/>
+<line x1="882" y1="15" x2="872" y2="25" stroke="#c9d1d9" stroke-width="1"/>
 <text class="text fg" x="450" y="20" text-anchor="middle" style="dominant-baseline: central">PowerShell</text></g>
 <g class="text-layer">
 <text class="text f2" x="16" y="56">PS&gt;</text>
 <text class="text fg" x="43" y="56"> Get-Ch                                                                                      </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor-active" x="106" y="56" width="9" height="21" fill="#f8f8f2"/>
+<rect class="cursor-active" x="106" y="56" width="9" height="21" fill="#c9d1d9"/>
 </g>
-
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.035307;0.041063;1.000000"
-      dur="9.04s"
+      keyTimes="0.000000;0.035928;0.041801;1.000000"
+      dur="8.68s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -292,32 +273,29 @@
   </g>
 
   <g id="frame-7" visibility="hidden">
-    
-
-<rect class="window-bg" x="0" y="0" width="900" height="500" fill="#282a36" rx="8" ry="8"/>
-<g class="chrome"><rect class="header-bg" x="0" y="0" width="900" height="40" fill="#282a36" rx="8" ry="8"/>
-<rect x="0" y="32" width="900" height="8" fill="#282a36"/>
+    <rect class="window-bg" x="0" y="0" width="900" height="500" fill="#1e1e1e" rx="8" ry="8"/>
+<g class="chrome"><rect class="header-bg" x="0" y="0" width="900" height="40" fill="#1e1e1e" rx="8" ry="8"/>
+<rect x="0" y="32" width="900" height="8" fill="#1e1e1e"/>
 <rect x="762" y="0" width="46" height="40" fill="transparent"/>
 <rect x="808" y="0" width="46" height="40" fill="transparent"/>
 <rect x="854" y="0" width="46" height="40" fill="transparent"/>
-<line x1="780" y1="20" x2="790" y2="20" stroke="#f8f8f2" stroke-width="1"/>
-<rect x="826" y="15" width="10" height="10" stroke="#f8f8f2" stroke-width="1" fill="none"/>
-<line x1="872" y1="15" x2="882" y2="25" stroke="#f8f8f2" stroke-width="1"/>
-<line x1="882" y1="15" x2="872" y2="25" stroke="#f8f8f2" stroke-width="1"/>
+<line x1="780" y1="20" x2="790" y2="20" stroke="#c9d1d9" stroke-width="1"/>
+<rect x="826" y="15" width="10" height="10" stroke="#c9d1d9" stroke-width="1" fill="none"/>
+<line x1="872" y1="15" x2="882" y2="25" stroke="#c9d1d9" stroke-width="1"/>
+<line x1="882" y1="15" x2="872" y2="25" stroke="#c9d1d9" stroke-width="1"/>
 <text class="text fg" x="450" y="20" text-anchor="middle" style="dominant-baseline: central">PowerShell</text></g>
 <g class="text-layer">
 <text class="text f2" x="16" y="56">PS&gt;</text>
 <text class="text fg" x="43" y="56"> Get-Chi                                                                                     </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor-active" x="115" y="56" width="9" height="21" fill="#f8f8f2"/>
+<rect class="cursor-active" x="115" y="56" width="9" height="21" fill="#c9d1d9"/>
 </g>
-
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.041063;0.047039;1.000000"
-      dur="9.04s"
+      keyTimes="0.000000;0.041801;0.047904;1.000000"
+      dur="8.68s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -325,32 +303,29 @@
   </g>
 
   <g id="frame-8" visibility="hidden">
-    
-
-<rect class="window-bg" x="0" y="0" width="900" height="500" fill="#282a36" rx="8" ry="8"/>
-<g class="chrome"><rect class="header-bg" x="0" y="0" width="900" height="40" fill="#282a36" rx="8" ry="8"/>
-<rect x="0" y="32" width="900" height="8" fill="#282a36"/>
+    <rect class="window-bg" x="0" y="0" width="900" height="500" fill="#1e1e1e" rx="8" ry="8"/>
+<g class="chrome"><rect class="header-bg" x="0" y="0" width="900" height="40" fill="#1e1e1e" rx="8" ry="8"/>
+<rect x="0" y="32" width="900" height="8" fill="#1e1e1e"/>
 <rect x="762" y="0" width="46" height="40" fill="transparent"/>
 <rect x="808" y="0" width="46" height="40" fill="transparent"/>
 <rect x="854" y="0" width="46" height="40" fill="transparent"/>
-<line x1="780" y1="20" x2="790" y2="20" stroke="#f8f8f2" stroke-width="1"/>
-<rect x="826" y="15" width="10" height="10" stroke="#f8f8f2" stroke-width="1" fill="none"/>
-<line x1="872" y1="15" x2="882" y2="25" stroke="#f8f8f2" stroke-width="1"/>
-<line x1="882" y1="15" x2="872" y2="25" stroke="#f8f8f2" stroke-width="1"/>
+<line x1="780" y1="20" x2="790" y2="20" stroke="#c9d1d9" stroke-width="1"/>
+<rect x="826" y="15" width="10" height="10" stroke="#c9d1d9" stroke-width="1" fill="none"/>
+<line x1="872" y1="15" x2="882" y2="25" stroke="#c9d1d9" stroke-width="1"/>
+<line x1="882" y1="15" x2="872" y2="25" stroke="#c9d1d9" stroke-width="1"/>
 <text class="text fg" x="450" y="20" text-anchor="middle" style="dominant-baseline: central">PowerShell</text></g>
 <g class="text-layer">
 <text class="text f2" x="16" y="56">PS&gt;</text>
 <text class="text fg" x="43" y="56"> Get-Chil                                                                                    </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor-active" x="124" y="56" width="9" height="21" fill="#f8f8f2"/>
+<rect class="cursor-active" x="124" y="56" width="9" height="21" fill="#c9d1d9"/>
 </g>
-
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.047039;0.053016;1.000000"
-      dur="9.04s"
+      keyTimes="0.000000;0.047904;0.054007;1.000000"
+      dur="8.68s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -358,32 +333,29 @@
   </g>
 
   <g id="frame-9" visibility="hidden">
-    
-
-<rect class="window-bg" x="0" y="0" width="900" height="500" fill="#282a36" rx="8" ry="8"/>
-<g class="chrome"><rect class="header-bg" x="0" y="0" width="900" height="40" fill="#282a36" rx="8" ry="8"/>
-<rect x="0" y="32" width="900" height="8" fill="#282a36"/>
+    <rect class="window-bg" x="0" y="0" width="900" height="500" fill="#1e1e1e" rx="8" ry="8"/>
+<g class="chrome"><rect class="header-bg" x="0" y="0" width="900" height="40" fill="#1e1e1e" rx="8" ry="8"/>
+<rect x="0" y="32" width="900" height="8" fill="#1e1e1e"/>
 <rect x="762" y="0" width="46" height="40" fill="transparent"/>
 <rect x="808" y="0" width="46" height="40" fill="transparent"/>
 <rect x="854" y="0" width="46" height="40" fill="transparent"/>
-<line x1="780" y1="20" x2="790" y2="20" stroke="#f8f8f2" stroke-width="1"/>
-<rect x="826" y="15" width="10" height="10" stroke="#f8f8f2" stroke-width="1" fill="none"/>
-<line x1="872" y1="15" x2="882" y2="25" stroke="#f8f8f2" stroke-width="1"/>
-<line x1="882" y1="15" x2="872" y2="25" stroke="#f8f8f2" stroke-width="1"/>
+<line x1="780" y1="20" x2="790" y2="20" stroke="#c9d1d9" stroke-width="1"/>
+<rect x="826" y="15" width="10" height="10" stroke="#c9d1d9" stroke-width="1" fill="none"/>
+<line x1="872" y1="15" x2="882" y2="25" stroke="#c9d1d9" stroke-width="1"/>
+<line x1="882" y1="15" x2="872" y2="25" stroke="#c9d1d9" stroke-width="1"/>
 <text class="text fg" x="450" y="20" text-anchor="middle" style="dominant-baseline: central">PowerShell</text></g>
 <g class="text-layer">
 <text class="text f2" x="16" y="56">PS&gt;</text>
 <text class="text fg" x="43" y="56"> Get-Child                                                                                   </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor-active" x="133" y="56" width="9" height="21" fill="#f8f8f2"/>
+<rect class="cursor-active" x="133" y="56" width="9" height="21" fill="#c9d1d9"/>
 </g>
-
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.053016;0.059214;1.000000"
-      dur="9.04s"
+      keyTimes="0.000000;0.054007;0.059535;1.000000"
+      dur="8.68s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -391,32 +363,29 @@
   </g>
 
   <g id="frame-10" visibility="hidden">
-    
-
-<rect class="window-bg" x="0" y="0" width="900" height="500" fill="#282a36" rx="8" ry="8"/>
-<g class="chrome"><rect class="header-bg" x="0" y="0" width="900" height="40" fill="#282a36" rx="8" ry="8"/>
-<rect x="0" y="32" width="900" height="8" fill="#282a36"/>
+    <rect class="window-bg" x="0" y="0" width="900" height="500" fill="#1e1e1e" rx="8" ry="8"/>
+<g class="chrome"><rect class="header-bg" x="0" y="0" width="900" height="40" fill="#1e1e1e" rx="8" ry="8"/>
+<rect x="0" y="32" width="900" height="8" fill="#1e1e1e"/>
 <rect x="762" y="0" width="46" height="40" fill="transparent"/>
 <rect x="808" y="0" width="46" height="40" fill="transparent"/>
 <rect x="854" y="0" width="46" height="40" fill="transparent"/>
-<line x1="780" y1="20" x2="790" y2="20" stroke="#f8f8f2" stroke-width="1"/>
-<rect x="826" y="15" width="10" height="10" stroke="#f8f8f2" stroke-width="1" fill="none"/>
-<line x1="872" y1="15" x2="882" y2="25" stroke="#f8f8f2" stroke-width="1"/>
-<line x1="882" y1="15" x2="872" y2="25" stroke="#f8f8f2" stroke-width="1"/>
+<line x1="780" y1="20" x2="790" y2="20" stroke="#c9d1d9" stroke-width="1"/>
+<rect x="826" y="15" width="10" height="10" stroke="#c9d1d9" stroke-width="1" fill="none"/>
+<line x1="872" y1="15" x2="882" y2="25" stroke="#c9d1d9" stroke-width="1"/>
+<line x1="882" y1="15" x2="872" y2="25" stroke="#c9d1d9" stroke-width="1"/>
 <text class="text fg" x="450" y="20" text-anchor="middle" style="dominant-baseline: central">PowerShell</text></g>
 <g class="text-layer">
 <text class="text f2" x="16" y="56">PS&gt;</text>
 <text class="text fg" x="43" y="56"> Get-ChildI                                                                                  </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor-active" x="142" y="56" width="9" height="21" fill="#f8f8f2"/>
+<rect class="cursor-active" x="142" y="56" width="9" height="21" fill="#c9d1d9"/>
 </g>
-
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.059214;0.065191;1.000000"
-      dur="9.04s"
+      keyTimes="0.000000;0.059535;0.065292;1.000000"
+      dur="8.68s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -424,32 +393,29 @@
   </g>
 
   <g id="frame-11" visibility="hidden">
-    
-
-<rect class="window-bg" x="0" y="0" width="900" height="500" fill="#282a36" rx="8" ry="8"/>
-<g class="chrome"><rect class="header-bg" x="0" y="0" width="900" height="40" fill="#282a36" rx="8" ry="8"/>
-<rect x="0" y="32" width="900" height="8" fill="#282a36"/>
+    <rect class="window-bg" x="0" y="0" width="900" height="500" fill="#1e1e1e" rx="8" ry="8"/>
+<g class="chrome"><rect class="header-bg" x="0" y="0" width="900" height="40" fill="#1e1e1e" rx="8" ry="8"/>
+<rect x="0" y="32" width="900" height="8" fill="#1e1e1e"/>
 <rect x="762" y="0" width="46" height="40" fill="transparent"/>
 <rect x="808" y="0" width="46" height="40" fill="transparent"/>
 <rect x="854" y="0" width="46" height="40" fill="transparent"/>
-<line x1="780" y1="20" x2="790" y2="20" stroke="#f8f8f2" stroke-width="1"/>
-<rect x="826" y="15" width="10" height="10" stroke="#f8f8f2" stroke-width="1" fill="none"/>
-<line x1="872" y1="15" x2="882" y2="25" stroke="#f8f8f2" stroke-width="1"/>
-<line x1="882" y1="15" x2="872" y2="25" stroke="#f8f8f2" stroke-width="1"/>
+<line x1="780" y1="20" x2="790" y2="20" stroke="#c9d1d9" stroke-width="1"/>
+<rect x="826" y="15" width="10" height="10" stroke="#c9d1d9" stroke-width="1" fill="none"/>
+<line x1="872" y1="15" x2="882" y2="25" stroke="#c9d1d9" stroke-width="1"/>
+<line x1="882" y1="15" x2="872" y2="25" stroke="#c9d1d9" stroke-width="1"/>
 <text class="text fg" x="450" y="20" text-anchor="middle" style="dominant-baseline: central">PowerShell</text></g>
 <g class="text-layer">
 <text class="text f2" x="16" y="56">PS&gt;</text>
 <text class="text fg" x="43" y="56"> Get-ChildIt                                                                                 </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor-active" x="151" y="56" width="9" height="21" fill="#f8f8f2"/>
+<rect class="cursor-active" x="151" y="56" width="9" height="21" fill="#c9d1d9"/>
 </g>
-
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.065191;0.071278;1.000000"
-      dur="9.04s"
+      keyTimes="0.000000;0.065292;0.071281;1.000000"
+      dur="8.68s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -457,32 +423,29 @@
   </g>
 
   <g id="frame-12" visibility="hidden">
-    
-
-<rect class="window-bg" x="0" y="0" width="900" height="500" fill="#282a36" rx="8" ry="8"/>
-<g class="chrome"><rect class="header-bg" x="0" y="0" width="900" height="40" fill="#282a36" rx="8" ry="8"/>
-<rect x="0" y="32" width="900" height="8" fill="#282a36"/>
+    <rect class="window-bg" x="0" y="0" width="900" height="500" fill="#1e1e1e" rx="8" ry="8"/>
+<g class="chrome"><rect class="header-bg" x="0" y="0" width="900" height="40" fill="#1e1e1e" rx="8" ry="8"/>
+<rect x="0" y="32" width="900" height="8" fill="#1e1e1e"/>
 <rect x="762" y="0" width="46" height="40" fill="transparent"/>
 <rect x="808" y="0" width="46" height="40" fill="transparent"/>
 <rect x="854" y="0" width="46" height="40" fill="transparent"/>
-<line x1="780" y1="20" x2="790" y2="20" stroke="#f8f8f2" stroke-width="1"/>
-<rect x="826" y="15" width="10" height="10" stroke="#f8f8f2" stroke-width="1" fill="none"/>
-<line x1="872" y1="15" x2="882" y2="25" stroke="#f8f8f2" stroke-width="1"/>
-<line x1="882" y1="15" x2="872" y2="25" stroke="#f8f8f2" stroke-width="1"/>
+<line x1="780" y1="20" x2="790" y2="20" stroke="#c9d1d9" stroke-width="1"/>
+<rect x="826" y="15" width="10" height="10" stroke="#c9d1d9" stroke-width="1" fill="none"/>
+<line x1="872" y1="15" x2="882" y2="25" stroke="#c9d1d9" stroke-width="1"/>
+<line x1="882" y1="15" x2="872" y2="25" stroke="#c9d1d9" stroke-width="1"/>
 <text class="text fg" x="450" y="20" text-anchor="middle" style="dominant-baseline: central">PowerShell</text></g>
 <g class="text-layer">
 <text class="text f2" x="16" y="56">PS&gt;</text>
 <text class="text fg" x="43" y="56"> Get-ChildIte                                                                                </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor-active" x="160" y="56" width="9" height="21" fill="#f8f8f2"/>
+<rect class="cursor-active" x="160" y="56" width="9" height="21" fill="#c9d1d9"/>
 </g>
-
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.071278;0.077144;1.000000"
-      dur="9.04s"
+      keyTimes="0.000000;0.071281;0.077038;1.000000"
+      dur="8.68s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -490,32 +453,29 @@
   </g>
 
   <g id="frame-13" visibility="hidden">
-    
-
-<rect class="window-bg" x="0" y="0" width="900" height="500" fill="#282a36" rx="8" ry="8"/>
-<g class="chrome"><rect class="header-bg" x="0" y="0" width="900" height="40" fill="#282a36" rx="8" ry="8"/>
-<rect x="0" y="32" width="900" height="8" fill="#282a36"/>
+    <rect class="window-bg" x="0" y="0" width="900" height="500" fill="#1e1e1e" rx="8" ry="8"/>
+<g class="chrome"><rect class="header-bg" x="0" y="0" width="900" height="40" fill="#1e1e1e" rx="8" ry="8"/>
+<rect x="0" y="32" width="900" height="8" fill="#1e1e1e"/>
 <rect x="762" y="0" width="46" height="40" fill="transparent"/>
 <rect x="808" y="0" width="46" height="40" fill="transparent"/>
 <rect x="854" y="0" width="46" height="40" fill="transparent"/>
-<line x1="780" y1="20" x2="790" y2="20" stroke="#f8f8f2" stroke-width="1"/>
-<rect x="826" y="15" width="10" height="10" stroke="#f8f8f2" stroke-width="1" fill="none"/>
-<line x1="872" y1="15" x2="882" y2="25" stroke="#f8f8f2" stroke-width="1"/>
-<line x1="882" y1="15" x2="872" y2="25" stroke="#f8f8f2" stroke-width="1"/>
+<line x1="780" y1="20" x2="790" y2="20" stroke="#c9d1d9" stroke-width="1"/>
+<rect x="826" y="15" width="10" height="10" stroke="#c9d1d9" stroke-width="1" fill="none"/>
+<line x1="872" y1="15" x2="882" y2="25" stroke="#c9d1d9" stroke-width="1"/>
+<line x1="882" y1="15" x2="872" y2="25" stroke="#c9d1d9" stroke-width="1"/>
 <text class="text fg" x="450" y="20" text-anchor="middle" style="dominant-baseline: central">PowerShell</text></g>
 <g class="text-layer">
 <text class="text f2" x="16" y="56">PS&gt;</text>
 <text class="text fg" x="43" y="56"> Get-ChildItem                                                                               </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor-active" x="169" y="56" width="9" height="21" fill="#f8f8f2"/>
+<rect class="cursor-active" x="169" y="56" width="9" height="21" fill="#c9d1d9"/>
 </g>
-
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.077144;0.121859;1.000000"
-      dur="9.04s"
+      keyTimes="0.000000;0.077038;0.123215;1.000000"
+      dur="8.68s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -523,32 +483,29 @@
   </g>
 
   <g id="frame-14" visibility="hidden">
-    
-
-<rect class="window-bg" x="0" y="0" width="900" height="500" fill="#282a36" rx="8" ry="8"/>
-<g class="chrome"><rect class="header-bg" x="0" y="0" width="900" height="40" fill="#282a36" rx="8" ry="8"/>
-<rect x="0" y="32" width="900" height="8" fill="#282a36"/>
+    <rect class="window-bg" x="0" y="0" width="900" height="500" fill="#1e1e1e" rx="8" ry="8"/>
+<g class="chrome"><rect class="header-bg" x="0" y="0" width="900" height="40" fill="#1e1e1e" rx="8" ry="8"/>
+<rect x="0" y="32" width="900" height="8" fill="#1e1e1e"/>
 <rect x="762" y="0" width="46" height="40" fill="transparent"/>
 <rect x="808" y="0" width="46" height="40" fill="transparent"/>
 <rect x="854" y="0" width="46" height="40" fill="transparent"/>
-<line x1="780" y1="20" x2="790" y2="20" stroke="#f8f8f2" stroke-width="1"/>
-<rect x="826" y="15" width="10" height="10" stroke="#f8f8f2" stroke-width="1" fill="none"/>
-<line x1="872" y1="15" x2="882" y2="25" stroke="#f8f8f2" stroke-width="1"/>
-<line x1="882" y1="15" x2="872" y2="25" stroke="#f8f8f2" stroke-width="1"/>
+<line x1="780" y1="20" x2="790" y2="20" stroke="#c9d1d9" stroke-width="1"/>
+<rect x="826" y="15" width="10" height="10" stroke="#c9d1d9" stroke-width="1" fill="none"/>
+<line x1="872" y1="15" x2="882" y2="25" stroke="#c9d1d9" stroke-width="1"/>
+<line x1="882" y1="15" x2="872" y2="25" stroke="#c9d1d9" stroke-width="1"/>
 <text class="text fg" x="450" y="20" text-anchor="middle" style="dominant-baseline: central">PowerShell</text></g>
 <g class="text-layer">
 <text class="text f2" x="16" y="56">PS&gt;</text>
 <text class="text fg" x="43" y="56"> Get-ChildItem                                                                               </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor" x="169" y="56" width="9" height="21" fill="#f8f8f2"/>
+<rect class="cursor" x="169" y="56" width="9" height="21" fill="#c9d1d9"/>
 </g>
-
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.121859;0.133592;1.000000"
-      dur="9.04s"
+      keyTimes="0.000000;0.123215;0.135076;1.000000"
+      dur="8.68s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -556,29 +513,26 @@
   </g>
 
   <g id="frame-15" visibility="hidden">
-    
-
-<rect class="window-bg" x="0" y="0" width="900" height="500" fill="#282a36" rx="8" ry="8"/>
-<g class="chrome"><rect class="header-bg" x="0" y="0" width="900" height="40" fill="#282a36" rx="8" ry="8"/>
-<rect x="0" y="32" width="900" height="8" fill="#282a36"/>
+    <rect class="window-bg" x="0" y="0" width="900" height="500" fill="#1e1e1e" rx="8" ry="8"/>
+<g class="chrome"><rect class="header-bg" x="0" y="0" width="900" height="40" fill="#1e1e1e" rx="8" ry="8"/>
+<rect x="0" y="32" width="900" height="8" fill="#1e1e1e"/>
 <rect x="762" y="0" width="46" height="40" fill="transparent"/>
 <rect x="808" y="0" width="46" height="40" fill="transparent"/>
 <rect x="854" y="0" width="46" height="40" fill="transparent"/>
-<line x1="780" y1="20" x2="790" y2="20" stroke="#f8f8f2" stroke-width="1"/>
-<rect x="826" y="15" width="10" height="10" stroke="#f8f8f2" stroke-width="1" fill="none"/>
-<line x1="872" y1="15" x2="882" y2="25" stroke="#f8f8f2" stroke-width="1"/>
-<line x1="882" y1="15" x2="872" y2="25" stroke="#f8f8f2" stroke-width="1"/>
+<line x1="780" y1="20" x2="790" y2="20" stroke="#c9d1d9" stroke-width="1"/>
+<rect x="826" y="15" width="10" height="10" stroke="#c9d1d9" stroke-width="1" fill="none"/>
+<line x1="872" y1="15" x2="882" y2="25" stroke="#c9d1d9" stroke-width="1"/>
+<line x1="882" y1="15" x2="872" y2="25" stroke="#c9d1d9" stroke-width="1"/>
 <text class="text fg" x="450" y="20" text-anchor="middle" style="dominant-baseline: central">PowerShell</text></g>
 <g class="text-layer">
 <text class="text f2" x="16" y="56">PS&gt;</text>
 <text class="text fg" x="43" y="56"> Get-ChildItem                                                                               </text>
 </g>
-
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.133592;0.147095;1.000000"
-      dur="9.04s"
+      keyTimes="0.000000;0.135076;0.147973;1.000000"
+      dur="8.68s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -586,18 +540,16 @@
   </g>
 
   <g id="frame-16" visibility="hidden">
-    
-
-<rect class="window-bg" x="0" y="0" width="900" height="500" fill="#282a36" rx="8" ry="8"/>
-<g class="chrome"><rect class="header-bg" x="0" y="0" width="900" height="40" fill="#282a36" rx="8" ry="8"/>
-<rect x="0" y="32" width="900" height="8" fill="#282a36"/>
+    <rect class="window-bg" x="0" y="0" width="900" height="500" fill="#1e1e1e" rx="8" ry="8"/>
+<g class="chrome"><rect class="header-bg" x="0" y="0" width="900" height="40" fill="#1e1e1e" rx="8" ry="8"/>
+<rect x="0" y="32" width="900" height="8" fill="#1e1e1e"/>
 <rect x="762" y="0" width="46" height="40" fill="transparent"/>
 <rect x="808" y="0" width="46" height="40" fill="transparent"/>
 <rect x="854" y="0" width="46" height="40" fill="transparent"/>
-<line x1="780" y1="20" x2="790" y2="20" stroke="#f8f8f2" stroke-width="1"/>
-<rect x="826" y="15" width="10" height="10" stroke="#f8f8f2" stroke-width="1" fill="none"/>
-<line x1="872" y1="15" x2="882" y2="25" stroke="#f8f8f2" stroke-width="1"/>
-<line x1="882" y1="15" x2="872" y2="25" stroke="#f8f8f2" stroke-width="1"/>
+<line x1="780" y1="20" x2="790" y2="20" stroke="#c9d1d9" stroke-width="1"/>
+<rect x="826" y="15" width="10" height="10" stroke="#c9d1d9" stroke-width="1" fill="none"/>
+<line x1="872" y1="15" x2="882" y2="25" stroke="#c9d1d9" stroke-width="1"/>
+<line x1="882" y1="15" x2="872" y2="25" stroke="#c9d1d9" stroke-width="1"/>
 <text class="text fg" x="450" y="20" text-anchor="middle" style="dominant-baseline: central">PowerShell</text></g>
 <g class="text-layer">
 <text class="text f2" x="16" y="56">PS&gt;</text>
@@ -606,14 +558,13 @@
 <text class="text f2" x="16" y="98">PS&gt;</text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor" x="52" y="98" width="9" height="21" fill="#f8f8f2"/>
+<rect class="cursor" x="52" y="98" width="9" height="21" fill="#c9d1d9"/>
 </g>
-
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.147095;0.258661;1.000000"
-      dur="9.04s"
+      keyTimes="0.000000;0.147973;0.263934;1.000000"
+      dur="8.68s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -621,18 +572,16 @@
   </g>
 
   <g id="frame-17" visibility="hidden">
-    
-
-<rect class="window-bg" x="0" y="0" width="900" height="500" fill="#282a36" rx="8" ry="8"/>
-<g class="chrome"><rect class="header-bg" x="0" y="0" width="900" height="40" fill="#282a36" rx="8" ry="8"/>
-<rect x="0" y="32" width="900" height="8" fill="#282a36"/>
+    <rect class="window-bg" x="0" y="0" width="900" height="500" fill="#1e1e1e" rx="8" ry="8"/>
+<g class="chrome"><rect class="header-bg" x="0" y="0" width="900" height="40" fill="#1e1e1e" rx="8" ry="8"/>
+<rect x="0" y="32" width="900" height="8" fill="#1e1e1e"/>
 <rect x="762" y="0" width="46" height="40" fill="transparent"/>
 <rect x="808" y="0" width="46" height="40" fill="transparent"/>
 <rect x="854" y="0" width="46" height="40" fill="transparent"/>
-<line x1="780" y1="20" x2="790" y2="20" stroke="#f8f8f2" stroke-width="1"/>
-<rect x="826" y="15" width="10" height="10" stroke="#f8f8f2" stroke-width="1" fill="none"/>
-<line x1="872" y1="15" x2="882" y2="25" stroke="#f8f8f2" stroke-width="1"/>
-<line x1="882" y1="15" x2="872" y2="25" stroke="#f8f8f2" stroke-width="1"/>
+<line x1="780" y1="20" x2="790" y2="20" stroke="#c9d1d9" stroke-width="1"/>
+<rect x="826" y="15" width="10" height="10" stroke="#c9d1d9" stroke-width="1" fill="none"/>
+<line x1="872" y1="15" x2="882" y2="25" stroke="#c9d1d9" stroke-width="1"/>
+<line x1="882" y1="15" x2="872" y2="25" stroke="#c9d1d9" stroke-width="1"/>
 <text class="text fg" x="450" y="20" text-anchor="middle" style="dominant-baseline: central">PowerShell</text></g>
 <g class="text-layer">
 <text class="text f2" x="16" y="56">PS&gt;</text>
@@ -641,14 +590,13 @@
 <text class="text f2" x="16" y="98">PS&gt;</text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor" x="52" y="98" width="9" height="21" fill="#f8f8f2"/>
+<rect class="cursor" x="52" y="98" width="9" height="21" fill="#c9d1d9"/>
 </g>
-
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.258661;0.264638;1.000000"
-      dur="9.04s"
+      keyTimes="0.000000;0.263934;0.270267;1.000000"
+      dur="8.68s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -656,18 +604,16 @@
   </g>
 
   <g id="frame-18" visibility="hidden">
-    
-
-<rect class="window-bg" x="0" y="0" width="900" height="500" fill="#282a36" rx="8" ry="8"/>
-<g class="chrome"><rect class="header-bg" x="0" y="0" width="900" height="40" fill="#282a36" rx="8" ry="8"/>
-<rect x="0" y="32" width="900" height="8" fill="#282a36"/>
+    <rect class="window-bg" x="0" y="0" width="900" height="500" fill="#1e1e1e" rx="8" ry="8"/>
+<g class="chrome"><rect class="header-bg" x="0" y="0" width="900" height="40" fill="#1e1e1e" rx="8" ry="8"/>
+<rect x="0" y="32" width="900" height="8" fill="#1e1e1e"/>
 <rect x="762" y="0" width="46" height="40" fill="transparent"/>
 <rect x="808" y="0" width="46" height="40" fill="transparent"/>
 <rect x="854" y="0" width="46" height="40" fill="transparent"/>
-<line x1="780" y1="20" x2="790" y2="20" stroke="#f8f8f2" stroke-width="1"/>
-<rect x="826" y="15" width="10" height="10" stroke="#f8f8f2" stroke-width="1" fill="none"/>
-<line x1="872" y1="15" x2="882" y2="25" stroke="#f8f8f2" stroke-width="1"/>
-<line x1="882" y1="15" x2="872" y2="25" stroke="#f8f8f2" stroke-width="1"/>
+<line x1="780" y1="20" x2="790" y2="20" stroke="#c9d1d9" stroke-width="1"/>
+<rect x="826" y="15" width="10" height="10" stroke="#c9d1d9" stroke-width="1" fill="none"/>
+<line x1="872" y1="15" x2="882" y2="25" stroke="#c9d1d9" stroke-width="1"/>
+<line x1="882" y1="15" x2="872" y2="25" stroke="#c9d1d9" stroke-width="1"/>
 <text class="text fg" x="450" y="20" text-anchor="middle" style="dominant-baseline: central">PowerShell</text></g>
 <g class="text-layer">
 <text class="text f2" x="16" y="56">PS&gt;</text>
@@ -677,14 +623,13 @@
 <text class="text fg" x="43" y="98"> W                                                                                           </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor-active" x="61" y="98" width="9" height="21" fill="#f8f8f2"/>
+<rect class="cursor-active" x="61" y="98" width="9" height="21" fill="#c9d1d9"/>
 </g>
-
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.264638;0.270614;1.000000"
-      dur="9.04s"
+      keyTimes="0.000000;0.270267;0.276025;1.000000"
+      dur="8.68s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -692,18 +637,16 @@
   </g>
 
   <g id="frame-19" visibility="hidden">
-    
-
-<rect class="window-bg" x="0" y="0" width="900" height="500" fill="#282a36" rx="8" ry="8"/>
-<g class="chrome"><rect class="header-bg" x="0" y="0" width="900" height="40" fill="#282a36" rx="8" ry="8"/>
-<rect x="0" y="32" width="900" height="8" fill="#282a36"/>
+    <rect class="window-bg" x="0" y="0" width="900" height="500" fill="#1e1e1e" rx="8" ry="8"/>
+<g class="chrome"><rect class="header-bg" x="0" y="0" width="900" height="40" fill="#1e1e1e" rx="8" ry="8"/>
+<rect x="0" y="32" width="900" height="8" fill="#1e1e1e"/>
 <rect x="762" y="0" width="46" height="40" fill="transparent"/>
 <rect x="808" y="0" width="46" height="40" fill="transparent"/>
 <rect x="854" y="0" width="46" height="40" fill="transparent"/>
-<line x1="780" y1="20" x2="790" y2="20" stroke="#f8f8f2" stroke-width="1"/>
-<rect x="826" y="15" width="10" height="10" stroke="#f8f8f2" stroke-width="1" fill="none"/>
-<line x1="872" y1="15" x2="882" y2="25" stroke="#f8f8f2" stroke-width="1"/>
-<line x1="882" y1="15" x2="872" y2="25" stroke="#f8f8f2" stroke-width="1"/>
+<line x1="780" y1="20" x2="790" y2="20" stroke="#c9d1d9" stroke-width="1"/>
+<rect x="826" y="15" width="10" height="10" stroke="#c9d1d9" stroke-width="1" fill="none"/>
+<line x1="872" y1="15" x2="882" y2="25" stroke="#c9d1d9" stroke-width="1"/>
+<line x1="882" y1="15" x2="872" y2="25" stroke="#c9d1d9" stroke-width="1"/>
 <text class="text fg" x="450" y="20" text-anchor="middle" style="dominant-baseline: central">PowerShell</text></g>
 <g class="text-layer">
 <text class="text f2" x="16" y="56">PS&gt;</text>
@@ -713,14 +656,13 @@
 <text class="text fg" x="43" y="98"> Wr                                                                                          </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor-active" x="70" y="98" width="9" height="21" fill="#f8f8f2"/>
+<rect class="cursor-active" x="70" y="98" width="9" height="21" fill="#c9d1d9"/>
 </g>
-
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.270614;0.276702;1.000000"
-      dur="9.04s"
+      keyTimes="0.000000;0.276025;0.281898;1.000000"
+      dur="8.68s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -728,18 +670,16 @@
   </g>
 
   <g id="frame-20" visibility="hidden">
-    
-
-<rect class="window-bg" x="0" y="0" width="900" height="500" fill="#282a36" rx="8" ry="8"/>
-<g class="chrome"><rect class="header-bg" x="0" y="0" width="900" height="40" fill="#282a36" rx="8" ry="8"/>
-<rect x="0" y="32" width="900" height="8" fill="#282a36"/>
+    <rect class="window-bg" x="0" y="0" width="900" height="500" fill="#1e1e1e" rx="8" ry="8"/>
+<g class="chrome"><rect class="header-bg" x="0" y="0" width="900" height="40" fill="#1e1e1e" rx="8" ry="8"/>
+<rect x="0" y="32" width="900" height="8" fill="#1e1e1e"/>
 <rect x="762" y="0" width="46" height="40" fill="transparent"/>
 <rect x="808" y="0" width="46" height="40" fill="transparent"/>
 <rect x="854" y="0" width="46" height="40" fill="transparent"/>
-<line x1="780" y1="20" x2="790" y2="20" stroke="#f8f8f2" stroke-width="1"/>
-<rect x="826" y="15" width="10" height="10" stroke="#f8f8f2" stroke-width="1" fill="none"/>
-<line x1="872" y1="15" x2="882" y2="25" stroke="#f8f8f2" stroke-width="1"/>
-<line x1="882" y1="15" x2="872" y2="25" stroke="#f8f8f2" stroke-width="1"/>
+<line x1="780" y1="20" x2="790" y2="20" stroke="#c9d1d9" stroke-width="1"/>
+<rect x="826" y="15" width="10" height="10" stroke="#c9d1d9" stroke-width="1" fill="none"/>
+<line x1="872" y1="15" x2="882" y2="25" stroke="#c9d1d9" stroke-width="1"/>
+<line x1="882" y1="15" x2="872" y2="25" stroke="#c9d1d9" stroke-width="1"/>
 <text class="text fg" x="450" y="20" text-anchor="middle" style="dominant-baseline: central">PowerShell</text></g>
 <g class="text-layer">
 <text class="text f2" x="16" y="56">PS&gt;</text>
@@ -749,14 +689,13 @@
 <text class="text fg" x="43" y="98"> Wri                                                                                         </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor-active" x="79" y="98" width="9" height="21" fill="#f8f8f2"/>
+<rect class="cursor-active" x="79" y="98" width="9" height="21" fill="#c9d1d9"/>
 </g>
-
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.276702;0.282678;1.000000"
-      dur="9.04s"
+      keyTimes="0.000000;0.281898;0.287886;1.000000"
+      dur="8.68s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -764,18 +703,16 @@
   </g>
 
   <g id="frame-21" visibility="hidden">
-    
-
-<rect class="window-bg" x="0" y="0" width="900" height="500" fill="#282a36" rx="8" ry="8"/>
-<g class="chrome"><rect class="header-bg" x="0" y="0" width="900" height="40" fill="#282a36" rx="8" ry="8"/>
-<rect x="0" y="32" width="900" height="8" fill="#282a36"/>
+    <rect class="window-bg" x="0" y="0" width="900" height="500" fill="#1e1e1e" rx="8" ry="8"/>
+<g class="chrome"><rect class="header-bg" x="0" y="0" width="900" height="40" fill="#1e1e1e" rx="8" ry="8"/>
+<rect x="0" y="32" width="900" height="8" fill="#1e1e1e"/>
 <rect x="762" y="0" width="46" height="40" fill="transparent"/>
 <rect x="808" y="0" width="46" height="40" fill="transparent"/>
 <rect x="854" y="0" width="46" height="40" fill="transparent"/>
-<line x1="780" y1="20" x2="790" y2="20" stroke="#f8f8f2" stroke-width="1"/>
-<rect x="826" y="15" width="10" height="10" stroke="#f8f8f2" stroke-width="1" fill="none"/>
-<line x1="872" y1="15" x2="882" y2="25" stroke="#f8f8f2" stroke-width="1"/>
-<line x1="882" y1="15" x2="872" y2="25" stroke="#f8f8f2" stroke-width="1"/>
+<line x1="780" y1="20" x2="790" y2="20" stroke="#c9d1d9" stroke-width="1"/>
+<rect x="826" y="15" width="10" height="10" stroke="#c9d1d9" stroke-width="1" fill="none"/>
+<line x1="872" y1="15" x2="882" y2="25" stroke="#c9d1d9" stroke-width="1"/>
+<line x1="882" y1="15" x2="872" y2="25" stroke="#c9d1d9" stroke-width="1"/>
 <text class="text fg" x="450" y="20" text-anchor="middle" style="dominant-baseline: central">PowerShell</text></g>
 <g class="text-layer">
 <text class="text f2" x="16" y="56">PS&gt;</text>
@@ -785,14 +722,13 @@
 <text class="text fg" x="43" y="98"> Writ                                                                                        </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor-active" x="88" y="98" width="9" height="21" fill="#f8f8f2"/>
+<rect class="cursor-active" x="88" y="98" width="9" height="21" fill="#c9d1d9"/>
 </g>
-
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.282678;0.288766;1.000000"
-      dur="9.04s"
+      keyTimes="0.000000;0.287886;0.293874;1.000000"
+      dur="8.68s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -800,18 +736,16 @@
   </g>
 
   <g id="frame-22" visibility="hidden">
-    
-
-<rect class="window-bg" x="0" y="0" width="900" height="500" fill="#282a36" rx="8" ry="8"/>
-<g class="chrome"><rect class="header-bg" x="0" y="0" width="900" height="40" fill="#282a36" rx="8" ry="8"/>
-<rect x="0" y="32" width="900" height="8" fill="#282a36"/>
+    <rect class="window-bg" x="0" y="0" width="900" height="500" fill="#1e1e1e" rx="8" ry="8"/>
+<g class="chrome"><rect class="header-bg" x="0" y="0" width="900" height="40" fill="#1e1e1e" rx="8" ry="8"/>
+<rect x="0" y="32" width="900" height="8" fill="#1e1e1e"/>
 <rect x="762" y="0" width="46" height="40" fill="transparent"/>
 <rect x="808" y="0" width="46" height="40" fill="transparent"/>
 <rect x="854" y="0" width="46" height="40" fill="transparent"/>
-<line x1="780" y1="20" x2="790" y2="20" stroke="#f8f8f2" stroke-width="1"/>
-<rect x="826" y="15" width="10" height="10" stroke="#f8f8f2" stroke-width="1" fill="none"/>
-<line x1="872" y1="15" x2="882" y2="25" stroke="#f8f8f2" stroke-width="1"/>
-<line x1="882" y1="15" x2="872" y2="25" stroke="#f8f8f2" stroke-width="1"/>
+<line x1="780" y1="20" x2="790" y2="20" stroke="#c9d1d9" stroke-width="1"/>
+<rect x="826" y="15" width="10" height="10" stroke="#c9d1d9" stroke-width="1" fill="none"/>
+<line x1="872" y1="15" x2="882" y2="25" stroke="#c9d1d9" stroke-width="1"/>
+<line x1="882" y1="15" x2="872" y2="25" stroke="#c9d1d9" stroke-width="1"/>
 <text class="text fg" x="450" y="20" text-anchor="middle" style="dominant-baseline: central">PowerShell</text></g>
 <g class="text-layer">
 <text class="text f2" x="16" y="56">PS&gt;</text>
@@ -821,14 +755,13 @@
 <text class="text fg" x="43" y="98"> Write                                                                                       </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor-active" x="97" y="98" width="9" height="21" fill="#f8f8f2"/>
+<rect class="cursor-active" x="97" y="98" width="9" height="21" fill="#c9d1d9"/>
 </g>
-
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.288766;0.294853;1.000000"
-      dur="9.04s"
+      keyTimes="0.000000;0.293874;0.299747;1.000000"
+      dur="8.68s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -836,18 +769,16 @@
   </g>
 
   <g id="frame-23" visibility="hidden">
-    
-
-<rect class="window-bg" x="0" y="0" width="900" height="500" fill="#282a36" rx="8" ry="8"/>
-<g class="chrome"><rect class="header-bg" x="0" y="0" width="900" height="40" fill="#282a36" rx="8" ry="8"/>
-<rect x="0" y="32" width="900" height="8" fill="#282a36"/>
+    <rect class="window-bg" x="0" y="0" width="900" height="500" fill="#1e1e1e" rx="8" ry="8"/>
+<g class="chrome"><rect class="header-bg" x="0" y="0" width="900" height="40" fill="#1e1e1e" rx="8" ry="8"/>
+<rect x="0" y="32" width="900" height="8" fill="#1e1e1e"/>
 <rect x="762" y="0" width="46" height="40" fill="transparent"/>
 <rect x="808" y="0" width="46" height="40" fill="transparent"/>
 <rect x="854" y="0" width="46" height="40" fill="transparent"/>
-<line x1="780" y1="20" x2="790" y2="20" stroke="#f8f8f2" stroke-width="1"/>
-<rect x="826" y="15" width="10" height="10" stroke="#f8f8f2" stroke-width="1" fill="none"/>
-<line x1="872" y1="15" x2="882" y2="25" stroke="#f8f8f2" stroke-width="1"/>
-<line x1="882" y1="15" x2="872" y2="25" stroke="#f8f8f2" stroke-width="1"/>
+<line x1="780" y1="20" x2="790" y2="20" stroke="#c9d1d9" stroke-width="1"/>
+<rect x="826" y="15" width="10" height="10" stroke="#c9d1d9" stroke-width="1" fill="none"/>
+<line x1="872" y1="15" x2="882" y2="25" stroke="#c9d1d9" stroke-width="1"/>
+<line x1="882" y1="15" x2="872" y2="25" stroke="#c9d1d9" stroke-width="1"/>
 <text class="text fg" x="450" y="20" text-anchor="middle" style="dominant-baseline: central">PowerShell</text></g>
 <g class="text-layer">
 <text class="text f2" x="16" y="56">PS&gt;</text>
@@ -857,14 +788,13 @@
 <text class="text fg" x="43" y="98"> Write-                                                                                      </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor-active" x="106" y="98" width="9" height="21" fill="#f8f8f2"/>
+<rect class="cursor-active" x="106" y="98" width="9" height="21" fill="#c9d1d9"/>
 </g>
-
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.294853;0.300941;1.000000"
-      dur="9.04s"
+      keyTimes="0.000000;0.299747;0.305735;1.000000"
+      dur="8.68s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -872,18 +802,16 @@
   </g>
 
   <g id="frame-24" visibility="hidden">
-    
-
-<rect class="window-bg" x="0" y="0" width="900" height="500" fill="#282a36" rx="8" ry="8"/>
-<g class="chrome"><rect class="header-bg" x="0" y="0" width="900" height="40" fill="#282a36" rx="8" ry="8"/>
-<rect x="0" y="32" width="900" height="8" fill="#282a36"/>
+    <rect class="window-bg" x="0" y="0" width="900" height="500" fill="#1e1e1e" rx="8" ry="8"/>
+<g class="chrome"><rect class="header-bg" x="0" y="0" width="900" height="40" fill="#1e1e1e" rx="8" ry="8"/>
+<rect x="0" y="32" width="900" height="8" fill="#1e1e1e"/>
 <rect x="762" y="0" width="46" height="40" fill="transparent"/>
 <rect x="808" y="0" width="46" height="40" fill="transparent"/>
 <rect x="854" y="0" width="46" height="40" fill="transparent"/>
-<line x1="780" y1="20" x2="790" y2="20" stroke="#f8f8f2" stroke-width="1"/>
-<rect x="826" y="15" width="10" height="10" stroke="#f8f8f2" stroke-width="1" fill="none"/>
-<line x1="872" y1="15" x2="882" y2="25" stroke="#f8f8f2" stroke-width="1"/>
-<line x1="882" y1="15" x2="872" y2="25" stroke="#f8f8f2" stroke-width="1"/>
+<line x1="780" y1="20" x2="790" y2="20" stroke="#c9d1d9" stroke-width="1"/>
+<rect x="826" y="15" width="10" height="10" stroke="#c9d1d9" stroke-width="1" fill="none"/>
+<line x1="872" y1="15" x2="882" y2="25" stroke="#c9d1d9" stroke-width="1"/>
+<line x1="882" y1="15" x2="872" y2="25" stroke="#c9d1d9" stroke-width="1"/>
 <text class="text fg" x="450" y="20" text-anchor="middle" style="dominant-baseline: central">PowerShell</text></g>
 <g class="text-layer">
 <text class="text f2" x="16" y="56">PS&gt;</text>
@@ -893,14 +821,13 @@
 <text class="text fg" x="43" y="98"> Write-H                                                                                     </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor-active" x="115" y="98" width="9" height="21" fill="#f8f8f2"/>
+<rect class="cursor-active" x="115" y="98" width="9" height="21" fill="#c9d1d9"/>
 </g>
-
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.300941;0.307360;1.000000"
-      dur="9.04s"
+      keyTimes="0.000000;0.305735;0.311723;1.000000"
+      dur="8.68s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -908,18 +835,16 @@
   </g>
 
   <g id="frame-25" visibility="hidden">
-    
-
-<rect class="window-bg" x="0" y="0" width="900" height="500" fill="#282a36" rx="8" ry="8"/>
-<g class="chrome"><rect class="header-bg" x="0" y="0" width="900" height="40" fill="#282a36" rx="8" ry="8"/>
-<rect x="0" y="32" width="900" height="8" fill="#282a36"/>
+    <rect class="window-bg" x="0" y="0" width="900" height="500" fill="#1e1e1e" rx="8" ry="8"/>
+<g class="chrome"><rect class="header-bg" x="0" y="0" width="900" height="40" fill="#1e1e1e" rx="8" ry="8"/>
+<rect x="0" y="32" width="900" height="8" fill="#1e1e1e"/>
 <rect x="762" y="0" width="46" height="40" fill="transparent"/>
 <rect x="808" y="0" width="46" height="40" fill="transparent"/>
 <rect x="854" y="0" width="46" height="40" fill="transparent"/>
-<line x1="780" y1="20" x2="790" y2="20" stroke="#f8f8f2" stroke-width="1"/>
-<rect x="826" y="15" width="10" height="10" stroke="#f8f8f2" stroke-width="1" fill="none"/>
-<line x1="872" y1="15" x2="882" y2="25" stroke="#f8f8f2" stroke-width="1"/>
-<line x1="882" y1="15" x2="872" y2="25" stroke="#f8f8f2" stroke-width="1"/>
+<line x1="780" y1="20" x2="790" y2="20" stroke="#c9d1d9" stroke-width="1"/>
+<rect x="826" y="15" width="10" height="10" stroke="#c9d1d9" stroke-width="1" fill="none"/>
+<line x1="872" y1="15" x2="882" y2="25" stroke="#c9d1d9" stroke-width="1"/>
+<line x1="882" y1="15" x2="872" y2="25" stroke="#c9d1d9" stroke-width="1"/>
 <text class="text fg" x="450" y="20" text-anchor="middle" style="dominant-baseline: central">PowerShell</text></g>
 <g class="text-layer">
 <text class="text f2" x="16" y="56">PS&gt;</text>
@@ -929,14 +854,13 @@
 <text class="text fg" x="43" y="98"> Write-Ho                                                                                    </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor-active" x="124" y="98" width="9" height="21" fill="#f8f8f2"/>
+<rect class="cursor-active" x="124" y="98" width="9" height="21" fill="#c9d1d9"/>
 </g>
-
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.307360;0.313780;1.000000"
-      dur="9.04s"
+      keyTimes="0.000000;0.311723;0.317365;1.000000"
+      dur="8.68s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -944,18 +868,16 @@
   </g>
 
   <g id="frame-26" visibility="hidden">
-    
-
-<rect class="window-bg" x="0" y="0" width="900" height="500" fill="#282a36" rx="8" ry="8"/>
-<g class="chrome"><rect class="header-bg" x="0" y="0" width="900" height="40" fill="#282a36" rx="8" ry="8"/>
-<rect x="0" y="32" width="900" height="8" fill="#282a36"/>
+    <rect class="window-bg" x="0" y="0" width="900" height="500" fill="#1e1e1e" rx="8" ry="8"/>
+<g class="chrome"><rect class="header-bg" x="0" y="0" width="900" height="40" fill="#1e1e1e" rx="8" ry="8"/>
+<rect x="0" y="32" width="900" height="8" fill="#1e1e1e"/>
 <rect x="762" y="0" width="46" height="40" fill="transparent"/>
 <rect x="808" y="0" width="46" height="40" fill="transparent"/>
 <rect x="854" y="0" width="46" height="40" fill="transparent"/>
-<line x1="780" y1="20" x2="790" y2="20" stroke="#f8f8f2" stroke-width="1"/>
-<rect x="826" y="15" width="10" height="10" stroke="#f8f8f2" stroke-width="1" fill="none"/>
-<line x1="872" y1="15" x2="882" y2="25" stroke="#f8f8f2" stroke-width="1"/>
-<line x1="882" y1="15" x2="872" y2="25" stroke="#f8f8f2" stroke-width="1"/>
+<line x1="780" y1="20" x2="790" y2="20" stroke="#c9d1d9" stroke-width="1"/>
+<rect x="826" y="15" width="10" height="10" stroke="#c9d1d9" stroke-width="1" fill="none"/>
+<line x1="872" y1="15" x2="882" y2="25" stroke="#c9d1d9" stroke-width="1"/>
+<line x1="882" y1="15" x2="872" y2="25" stroke="#c9d1d9" stroke-width="1"/>
 <text class="text fg" x="450" y="20" text-anchor="middle" style="dominant-baseline: central">PowerShell</text></g>
 <g class="text-layer">
 <text class="text f2" x="16" y="56">PS&gt;</text>
@@ -965,14 +887,13 @@
 <text class="text fg" x="43" y="98"> Write-Hos                                                                                   </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor-active" x="133" y="98" width="9" height="21" fill="#f8f8f2"/>
+<rect class="cursor-active" x="133" y="98" width="9" height="21" fill="#c9d1d9"/>
 </g>
-
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.313780;0.319978;1.000000"
-      dur="9.04s"
+      keyTimes="0.000000;0.317365;0.323584;1.000000"
+      dur="8.68s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -980,18 +901,16 @@
   </g>
 
   <g id="frame-27" visibility="hidden">
-    
-
-<rect class="window-bg" x="0" y="0" width="900" height="500" fill="#282a36" rx="8" ry="8"/>
-<g class="chrome"><rect class="header-bg" x="0" y="0" width="900" height="40" fill="#282a36" rx="8" ry="8"/>
-<rect x="0" y="32" width="900" height="8" fill="#282a36"/>
+    <rect class="window-bg" x="0" y="0" width="900" height="500" fill="#1e1e1e" rx="8" ry="8"/>
+<g class="chrome"><rect class="header-bg" x="0" y="0" width="900" height="40" fill="#1e1e1e" rx="8" ry="8"/>
+<rect x="0" y="32" width="900" height="8" fill="#1e1e1e"/>
 <rect x="762" y="0" width="46" height="40" fill="transparent"/>
 <rect x="808" y="0" width="46" height="40" fill="transparent"/>
 <rect x="854" y="0" width="46" height="40" fill="transparent"/>
-<line x1="780" y1="20" x2="790" y2="20" stroke="#f8f8f2" stroke-width="1"/>
-<rect x="826" y="15" width="10" height="10" stroke="#f8f8f2" stroke-width="1" fill="none"/>
-<line x1="872" y1="15" x2="882" y2="25" stroke="#f8f8f2" stroke-width="1"/>
-<line x1="882" y1="15" x2="872" y2="25" stroke="#f8f8f2" stroke-width="1"/>
+<line x1="780" y1="20" x2="790" y2="20" stroke="#c9d1d9" stroke-width="1"/>
+<rect x="826" y="15" width="10" height="10" stroke="#c9d1d9" stroke-width="1" fill="none"/>
+<line x1="872" y1="15" x2="882" y2="25" stroke="#c9d1d9" stroke-width="1"/>
+<line x1="882" y1="15" x2="872" y2="25" stroke="#c9d1d9" stroke-width="1"/>
 <text class="text fg" x="450" y="20" text-anchor="middle" style="dominant-baseline: central">PowerShell</text></g>
 <g class="text-layer">
 <text class="text f2" x="16" y="56">PS&gt;</text>
@@ -1001,14 +920,13 @@
 <text class="text fg" x="43" y="98"> Write-Host                                                                                  </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor-active" x="142" y="98" width="9" height="21" fill="#f8f8f2"/>
+<rect class="cursor-active" x="142" y="98" width="9" height="21" fill="#c9d1d9"/>
 </g>
-
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.319978;0.326176;1.000000"
-      dur="9.04s"
+      keyTimes="0.000000;0.323584;0.329341;1.000000"
+      dur="8.68s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -1016,18 +934,16 @@
   </g>
 
   <g id="frame-28" visibility="hidden">
-    
-
-<rect class="window-bg" x="0" y="0" width="900" height="500" fill="#282a36" rx="8" ry="8"/>
-<g class="chrome"><rect class="header-bg" x="0" y="0" width="900" height="40" fill="#282a36" rx="8" ry="8"/>
-<rect x="0" y="32" width="900" height="8" fill="#282a36"/>
+    <rect class="window-bg" x="0" y="0" width="900" height="500" fill="#1e1e1e" rx="8" ry="8"/>
+<g class="chrome"><rect class="header-bg" x="0" y="0" width="900" height="40" fill="#1e1e1e" rx="8" ry="8"/>
+<rect x="0" y="32" width="900" height="8" fill="#1e1e1e"/>
 <rect x="762" y="0" width="46" height="40" fill="transparent"/>
 <rect x="808" y="0" width="46" height="40" fill="transparent"/>
 <rect x="854" y="0" width="46" height="40" fill="transparent"/>
-<line x1="780" y1="20" x2="790" y2="20" stroke="#f8f8f2" stroke-width="1"/>
-<rect x="826" y="15" width="10" height="10" stroke="#f8f8f2" stroke-width="1" fill="none"/>
-<line x1="872" y1="15" x2="882" y2="25" stroke="#f8f8f2" stroke-width="1"/>
-<line x1="882" y1="15" x2="872" y2="25" stroke="#f8f8f2" stroke-width="1"/>
+<line x1="780" y1="20" x2="790" y2="20" stroke="#c9d1d9" stroke-width="1"/>
+<rect x="826" y="15" width="10" height="10" stroke="#c9d1d9" stroke-width="1" fill="none"/>
+<line x1="872" y1="15" x2="882" y2="25" stroke="#c9d1d9" stroke-width="1"/>
+<line x1="882" y1="15" x2="872" y2="25" stroke="#c9d1d9" stroke-width="1"/>
 <text class="text fg" x="450" y="20" text-anchor="middle" style="dominant-baseline: central">PowerShell</text></g>
 <g class="text-layer">
 <text class="text f2" x="16" y="56">PS&gt;</text>
@@ -1037,14 +953,13 @@
 <text class="text fg" x="43" y="98"> Write-Host                                                                                  </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor-active" x="151" y="98" width="9" height="21" fill="#f8f8f2"/>
+<rect class="cursor-active" x="151" y="98" width="9" height="21" fill="#c9d1d9"/>
 </g>
-
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.326176;0.332153;1.000000"
-      dur="9.04s"
+      keyTimes="0.000000;0.329341;0.335099;1.000000"
+      dur="8.68s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -1052,18 +967,16 @@
   </g>
 
   <g id="frame-29" visibility="hidden">
-    
-
-<rect class="window-bg" x="0" y="0" width="900" height="500" fill="#282a36" rx="8" ry="8"/>
-<g class="chrome"><rect class="header-bg" x="0" y="0" width="900" height="40" fill="#282a36" rx="8" ry="8"/>
-<rect x="0" y="32" width="900" height="8" fill="#282a36"/>
+    <rect class="window-bg" x="0" y="0" width="900" height="500" fill="#1e1e1e" rx="8" ry="8"/>
+<g class="chrome"><rect class="header-bg" x="0" y="0" width="900" height="40" fill="#1e1e1e" rx="8" ry="8"/>
+<rect x="0" y="32" width="900" height="8" fill="#1e1e1e"/>
 <rect x="762" y="0" width="46" height="40" fill="transparent"/>
 <rect x="808" y="0" width="46" height="40" fill="transparent"/>
 <rect x="854" y="0" width="46" height="40" fill="transparent"/>
-<line x1="780" y1="20" x2="790" y2="20" stroke="#f8f8f2" stroke-width="1"/>
-<rect x="826" y="15" width="10" height="10" stroke="#f8f8f2" stroke-width="1" fill="none"/>
-<line x1="872" y1="15" x2="882" y2="25" stroke="#f8f8f2" stroke-width="1"/>
-<line x1="882" y1="15" x2="872" y2="25" stroke="#f8f8f2" stroke-width="1"/>
+<line x1="780" y1="20" x2="790" y2="20" stroke="#c9d1d9" stroke-width="1"/>
+<rect x="826" y="15" width="10" height="10" stroke="#c9d1d9" stroke-width="1" fill="none"/>
+<line x1="872" y1="15" x2="882" y2="25" stroke="#c9d1d9" stroke-width="1"/>
+<line x1="882" y1="15" x2="872" y2="25" stroke="#c9d1d9" stroke-width="1"/>
 <text class="text fg" x="450" y="20" text-anchor="middle" style="dominant-baseline: central">PowerShell</text></g>
 <g class="text-layer">
 <text class="text f2" x="16" y="56">PS&gt;</text>
@@ -1073,14 +986,13 @@
 <text class="text fg" x="43" y="98"> Write-Host &apos;                                                                                </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor-active" x="160" y="98" width="9" height="21" fill="#f8f8f2"/>
+<rect class="cursor-active" x="160" y="98" width="9" height="21" fill="#c9d1d9"/>
 </g>
-
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.332153;0.338019;1.000000"
-      dur="9.04s"
+      keyTimes="0.000000;0.335099;0.341202;1.000000"
+      dur="8.68s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -1088,18 +1000,16 @@
   </g>
 
   <g id="frame-30" visibility="hidden">
-    
-
-<rect class="window-bg" x="0" y="0" width="900" height="500" fill="#282a36" rx="8" ry="8"/>
-<g class="chrome"><rect class="header-bg" x="0" y="0" width="900" height="40" fill="#282a36" rx="8" ry="8"/>
-<rect x="0" y="32" width="900" height="8" fill="#282a36"/>
+    <rect class="window-bg" x="0" y="0" width="900" height="500" fill="#1e1e1e" rx="8" ry="8"/>
+<g class="chrome"><rect class="header-bg" x="0" y="0" width="900" height="40" fill="#1e1e1e" rx="8" ry="8"/>
+<rect x="0" y="32" width="900" height="8" fill="#1e1e1e"/>
 <rect x="762" y="0" width="46" height="40" fill="transparent"/>
 <rect x="808" y="0" width="46" height="40" fill="transparent"/>
 <rect x="854" y="0" width="46" height="40" fill="transparent"/>
-<line x1="780" y1="20" x2="790" y2="20" stroke="#f8f8f2" stroke-width="1"/>
-<rect x="826" y="15" width="10" height="10" stroke="#f8f8f2" stroke-width="1" fill="none"/>
-<line x1="872" y1="15" x2="882" y2="25" stroke="#f8f8f2" stroke-width="1"/>
-<line x1="882" y1="15" x2="872" y2="25" stroke="#f8f8f2" stroke-width="1"/>
+<line x1="780" y1="20" x2="790" y2="20" stroke="#c9d1d9" stroke-width="1"/>
+<rect x="826" y="15" width="10" height="10" stroke="#c9d1d9" stroke-width="1" fill="none"/>
+<line x1="872" y1="15" x2="882" y2="25" stroke="#c9d1d9" stroke-width="1"/>
+<line x1="882" y1="15" x2="872" y2="25" stroke="#c9d1d9" stroke-width="1"/>
 <text class="text fg" x="450" y="20" text-anchor="middle" style="dominant-baseline: central">PowerShell</text></g>
 <g class="text-layer">
 <text class="text f2" x="16" y="56">PS&gt;</text>
@@ -1109,14 +1019,13 @@
 <text class="text fg" x="43" y="98"> Write-Host &apos;H                                                                               </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor-active" x="169" y="98" width="9" height="21" fill="#f8f8f2"/>
+<rect class="cursor-active" x="169" y="98" width="9" height="21" fill="#c9d1d9"/>
 </g>
-
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.338019;0.343996;1.000000"
-      dur="9.04s"
+      keyTimes="0.000000;0.341202;0.347075;1.000000"
+      dur="8.68s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -1124,18 +1033,16 @@
   </g>
 
   <g id="frame-31" visibility="hidden">
-    
-
-<rect class="window-bg" x="0" y="0" width="900" height="500" fill="#282a36" rx="8" ry="8"/>
-<g class="chrome"><rect class="header-bg" x="0" y="0" width="900" height="40" fill="#282a36" rx="8" ry="8"/>
-<rect x="0" y="32" width="900" height="8" fill="#282a36"/>
+    <rect class="window-bg" x="0" y="0" width="900" height="500" fill="#1e1e1e" rx="8" ry="8"/>
+<g class="chrome"><rect class="header-bg" x="0" y="0" width="900" height="40" fill="#1e1e1e" rx="8" ry="8"/>
+<rect x="0" y="32" width="900" height="8" fill="#1e1e1e"/>
 <rect x="762" y="0" width="46" height="40" fill="transparent"/>
 <rect x="808" y="0" width="46" height="40" fill="transparent"/>
 <rect x="854" y="0" width="46" height="40" fill="transparent"/>
-<line x1="780" y1="20" x2="790" y2="20" stroke="#f8f8f2" stroke-width="1"/>
-<rect x="826" y="15" width="10" height="10" stroke="#f8f8f2" stroke-width="1" fill="none"/>
-<line x1="872" y1="15" x2="882" y2="25" stroke="#f8f8f2" stroke-width="1"/>
-<line x1="882" y1="15" x2="872" y2="25" stroke="#f8f8f2" stroke-width="1"/>
+<line x1="780" y1="20" x2="790" y2="20" stroke="#c9d1d9" stroke-width="1"/>
+<rect x="826" y="15" width="10" height="10" stroke="#c9d1d9" stroke-width="1" fill="none"/>
+<line x1="872" y1="15" x2="882" y2="25" stroke="#c9d1d9" stroke-width="1"/>
+<line x1="882" y1="15" x2="872" y2="25" stroke="#c9d1d9" stroke-width="1"/>
 <text class="text fg" x="450" y="20" text-anchor="middle" style="dominant-baseline: central">PowerShell</text></g>
 <g class="text-layer">
 <text class="text f2" x="16" y="56">PS&gt;</text>
@@ -1145,14 +1052,13 @@
 <text class="text fg" x="43" y="98"> Write-Host &apos;He                                                                              </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor-active" x="178" y="98" width="9" height="21" fill="#f8f8f2"/>
+<rect class="cursor-active" x="178" y="98" width="9" height="21" fill="#c9d1d9"/>
 </g>
-
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.343996;0.350083;1.000000"
-      dur="9.04s"
+      keyTimes="0.000000;0.347075;0.352718;1.000000"
+      dur="8.68s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -1160,18 +1066,16 @@
   </g>
 
   <g id="frame-32" visibility="hidden">
-    
-
-<rect class="window-bg" x="0" y="0" width="900" height="500" fill="#282a36" rx="8" ry="8"/>
-<g class="chrome"><rect class="header-bg" x="0" y="0" width="900" height="40" fill="#282a36" rx="8" ry="8"/>
-<rect x="0" y="32" width="900" height="8" fill="#282a36"/>
+    <rect class="window-bg" x="0" y="0" width="900" height="500" fill="#1e1e1e" rx="8" ry="8"/>
+<g class="chrome"><rect class="header-bg" x="0" y="0" width="900" height="40" fill="#1e1e1e" rx="8" ry="8"/>
+<rect x="0" y="32" width="900" height="8" fill="#1e1e1e"/>
 <rect x="762" y="0" width="46" height="40" fill="transparent"/>
 <rect x="808" y="0" width="46" height="40" fill="transparent"/>
 <rect x="854" y="0" width="46" height="40" fill="transparent"/>
-<line x1="780" y1="20" x2="790" y2="20" stroke="#f8f8f2" stroke-width="1"/>
-<rect x="826" y="15" width="10" height="10" stroke="#f8f8f2" stroke-width="1" fill="none"/>
-<line x1="872" y1="15" x2="882" y2="25" stroke="#f8f8f2" stroke-width="1"/>
-<line x1="882" y1="15" x2="872" y2="25" stroke="#f8f8f2" stroke-width="1"/>
+<line x1="780" y1="20" x2="790" y2="20" stroke="#c9d1d9" stroke-width="1"/>
+<rect x="826" y="15" width="10" height="10" stroke="#c9d1d9" stroke-width="1" fill="none"/>
+<line x1="872" y1="15" x2="882" y2="25" stroke="#c9d1d9" stroke-width="1"/>
+<line x1="882" y1="15" x2="872" y2="25" stroke="#c9d1d9" stroke-width="1"/>
 <text class="text fg" x="450" y="20" text-anchor="middle" style="dominant-baseline: central">PowerShell</text></g>
 <g class="text-layer">
 <text class="text f2" x="16" y="56">PS&gt;</text>
@@ -1181,14 +1085,13 @@
 <text class="text fg" x="43" y="98"> Write-Host &apos;Hel                                                                             </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor-active" x="187" y="98" width="9" height="21" fill="#f8f8f2"/>
+<rect class="cursor-active" x="187" y="98" width="9" height="21" fill="#c9d1d9"/>
 </g>
-
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.350083;0.356170;1.000000"
-      dur="9.04s"
+      keyTimes="0.000000;0.352718;0.358475;1.000000"
+      dur="8.68s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -1196,18 +1099,16 @@
   </g>
 
   <g id="frame-33" visibility="hidden">
-    
-
-<rect class="window-bg" x="0" y="0" width="900" height="500" fill="#282a36" rx="8" ry="8"/>
-<g class="chrome"><rect class="header-bg" x="0" y="0" width="900" height="40" fill="#282a36" rx="8" ry="8"/>
-<rect x="0" y="32" width="900" height="8" fill="#282a36"/>
+    <rect class="window-bg" x="0" y="0" width="900" height="500" fill="#1e1e1e" rx="8" ry="8"/>
+<g class="chrome"><rect class="header-bg" x="0" y="0" width="900" height="40" fill="#1e1e1e" rx="8" ry="8"/>
+<rect x="0" y="32" width="900" height="8" fill="#1e1e1e"/>
 <rect x="762" y="0" width="46" height="40" fill="transparent"/>
 <rect x="808" y="0" width="46" height="40" fill="transparent"/>
 <rect x="854" y="0" width="46" height="40" fill="transparent"/>
-<line x1="780" y1="20" x2="790" y2="20" stroke="#f8f8f2" stroke-width="1"/>
-<rect x="826" y="15" width="10" height="10" stroke="#f8f8f2" stroke-width="1" fill="none"/>
-<line x1="872" y1="15" x2="882" y2="25" stroke="#f8f8f2" stroke-width="1"/>
-<line x1="882" y1="15" x2="872" y2="25" stroke="#f8f8f2" stroke-width="1"/>
+<line x1="780" y1="20" x2="790" y2="20" stroke="#c9d1d9" stroke-width="1"/>
+<rect x="826" y="15" width="10" height="10" stroke="#c9d1d9" stroke-width="1" fill="none"/>
+<line x1="872" y1="15" x2="882" y2="25" stroke="#c9d1d9" stroke-width="1"/>
+<line x1="882" y1="15" x2="872" y2="25" stroke="#c9d1d9" stroke-width="1"/>
 <text class="text fg" x="450" y="20" text-anchor="middle" style="dominant-baseline: central">PowerShell</text></g>
 <g class="text-layer">
 <text class="text f2" x="16" y="56">PS&gt;</text>
@@ -1217,14 +1118,13 @@
 <text class="text fg" x="43" y="98"> Write-Host &apos;Hell                                                                            </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor-active" x="196" y="98" width="9" height="21" fill="#f8f8f2"/>
+<rect class="cursor-active" x="196" y="98" width="9" height="21" fill="#c9d1d9"/>
 </g>
-
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.356170;0.362258;1.000000"
-      dur="9.04s"
+      keyTimes="0.000000;0.358475;0.364463;1.000000"
+      dur="8.68s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -1232,18 +1132,16 @@
   </g>
 
   <g id="frame-34" visibility="hidden">
-    
-
-<rect class="window-bg" x="0" y="0" width="900" height="500" fill="#282a36" rx="8" ry="8"/>
-<g class="chrome"><rect class="header-bg" x="0" y="0" width="900" height="40" fill="#282a36" rx="8" ry="8"/>
-<rect x="0" y="32" width="900" height="8" fill="#282a36"/>
+    <rect class="window-bg" x="0" y="0" width="900" height="500" fill="#1e1e1e" rx="8" ry="8"/>
+<g class="chrome"><rect class="header-bg" x="0" y="0" width="900" height="40" fill="#1e1e1e" rx="8" ry="8"/>
+<rect x="0" y="32" width="900" height="8" fill="#1e1e1e"/>
 <rect x="762" y="0" width="46" height="40" fill="transparent"/>
 <rect x="808" y="0" width="46" height="40" fill="transparent"/>
 <rect x="854" y="0" width="46" height="40" fill="transparent"/>
-<line x1="780" y1="20" x2="790" y2="20" stroke="#f8f8f2" stroke-width="1"/>
-<rect x="826" y="15" width="10" height="10" stroke="#f8f8f2" stroke-width="1" fill="none"/>
-<line x1="872" y1="15" x2="882" y2="25" stroke="#f8f8f2" stroke-width="1"/>
-<line x1="882" y1="15" x2="872" y2="25" stroke="#f8f8f2" stroke-width="1"/>
+<line x1="780" y1="20" x2="790" y2="20" stroke="#c9d1d9" stroke-width="1"/>
+<rect x="826" y="15" width="10" height="10" stroke="#c9d1d9" stroke-width="1" fill="none"/>
+<line x1="872" y1="15" x2="882" y2="25" stroke="#c9d1d9" stroke-width="1"/>
+<line x1="882" y1="15" x2="872" y2="25" stroke="#c9d1d9" stroke-width="1"/>
 <text class="text fg" x="450" y="20" text-anchor="middle" style="dominant-baseline: central">PowerShell</text></g>
 <g class="text-layer">
 <text class="text f2" x="16" y="56">PS&gt;</text>
@@ -1253,14 +1151,13 @@
 <text class="text fg" x="43" y="98"> Write-Host &apos;Hello                                                                           </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor-active" x="205" y="98" width="9" height="21" fill="#f8f8f2"/>
+<rect class="cursor-active" x="205" y="98" width="9" height="21" fill="#c9d1d9"/>
 </g>
-
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.362258;0.368456;1.000000"
-      dur="9.04s"
+      keyTimes="0.000000;0.364463;0.370106;1.000000"
+      dur="8.68s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -1268,18 +1165,16 @@
   </g>
 
   <g id="frame-35" visibility="hidden">
-    
-
-<rect class="window-bg" x="0" y="0" width="900" height="500" fill="#282a36" rx="8" ry="8"/>
-<g class="chrome"><rect class="header-bg" x="0" y="0" width="900" height="40" fill="#282a36" rx="8" ry="8"/>
-<rect x="0" y="32" width="900" height="8" fill="#282a36"/>
+    <rect class="window-bg" x="0" y="0" width="900" height="500" fill="#1e1e1e" rx="8" ry="8"/>
+<g class="chrome"><rect class="header-bg" x="0" y="0" width="900" height="40" fill="#1e1e1e" rx="8" ry="8"/>
+<rect x="0" y="32" width="900" height="8" fill="#1e1e1e"/>
 <rect x="762" y="0" width="46" height="40" fill="transparent"/>
 <rect x="808" y="0" width="46" height="40" fill="transparent"/>
 <rect x="854" y="0" width="46" height="40" fill="transparent"/>
-<line x1="780" y1="20" x2="790" y2="20" stroke="#f8f8f2" stroke-width="1"/>
-<rect x="826" y="15" width="10" height="10" stroke="#f8f8f2" stroke-width="1" fill="none"/>
-<line x1="872" y1="15" x2="882" y2="25" stroke="#f8f8f2" stroke-width="1"/>
-<line x1="882" y1="15" x2="872" y2="25" stroke="#f8f8f2" stroke-width="1"/>
+<line x1="780" y1="20" x2="790" y2="20" stroke="#c9d1d9" stroke-width="1"/>
+<rect x="826" y="15" width="10" height="10" stroke="#c9d1d9" stroke-width="1" fill="none"/>
+<line x1="872" y1="15" x2="882" y2="25" stroke="#c9d1d9" stroke-width="1"/>
+<line x1="882" y1="15" x2="872" y2="25" stroke="#c9d1d9" stroke-width="1"/>
 <text class="text fg" x="450" y="20" text-anchor="middle" style="dominant-baseline: central">PowerShell</text></g>
 <g class="text-layer">
 <text class="text f2" x="16" y="56">PS&gt;</text>
@@ -1289,14 +1184,13 @@
 <text class="text fg" x="43" y="98"> Write-Host &apos;Hello                                                                           </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor-active" x="214" y="98" width="9" height="21" fill="#f8f8f2"/>
+<rect class="cursor-active" x="214" y="98" width="9" height="21" fill="#c9d1d9"/>
 </g>
-
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.368456;0.374765;1.000000"
-      dur="9.04s"
+      keyTimes="0.000000;0.370106;0.375979;1.000000"
+      dur="8.68s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -1304,18 +1198,16 @@
   </g>
 
   <g id="frame-36" visibility="hidden">
-    
-
-<rect class="window-bg" x="0" y="0" width="900" height="500" fill="#282a36" rx="8" ry="8"/>
-<g class="chrome"><rect class="header-bg" x="0" y="0" width="900" height="40" fill="#282a36" rx="8" ry="8"/>
-<rect x="0" y="32" width="900" height="8" fill="#282a36"/>
+    <rect class="window-bg" x="0" y="0" width="900" height="500" fill="#1e1e1e" rx="8" ry="8"/>
+<g class="chrome"><rect class="header-bg" x="0" y="0" width="900" height="40" fill="#1e1e1e" rx="8" ry="8"/>
+<rect x="0" y="32" width="900" height="8" fill="#1e1e1e"/>
 <rect x="762" y="0" width="46" height="40" fill="transparent"/>
 <rect x="808" y="0" width="46" height="40" fill="transparent"/>
 <rect x="854" y="0" width="46" height="40" fill="transparent"/>
-<line x1="780" y1="20" x2="790" y2="20" stroke="#f8f8f2" stroke-width="1"/>
-<rect x="826" y="15" width="10" height="10" stroke="#f8f8f2" stroke-width="1" fill="none"/>
-<line x1="872" y1="15" x2="882" y2="25" stroke="#f8f8f2" stroke-width="1"/>
-<line x1="882" y1="15" x2="872" y2="25" stroke="#f8f8f2" stroke-width="1"/>
+<line x1="780" y1="20" x2="790" y2="20" stroke="#c9d1d9" stroke-width="1"/>
+<rect x="826" y="15" width="10" height="10" stroke="#c9d1d9" stroke-width="1" fill="none"/>
+<line x1="872" y1="15" x2="882" y2="25" stroke="#c9d1d9" stroke-width="1"/>
+<line x1="882" y1="15" x2="872" y2="25" stroke="#c9d1d9" stroke-width="1"/>
 <text class="text fg" x="450" y="20" text-anchor="middle" style="dominant-baseline: central">PowerShell</text></g>
 <g class="text-layer">
 <text class="text f2" x="16" y="56">PS&gt;</text>
@@ -1325,14 +1217,13 @@
 <text class="text fg" x="43" y="98"> Write-Host &apos;Hello f                                                                         </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor-active" x="223" y="98" width="9" height="21" fill="#f8f8f2"/>
+<rect class="cursor-active" x="223" y="98" width="9" height="21" fill="#c9d1d9"/>
 </g>
-
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.374765;0.380852;1.000000"
-      dur="9.04s"
+      keyTimes="0.000000;0.375979;0.381852;1.000000"
+      dur="8.68s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -1340,18 +1231,16 @@
   </g>
 
   <g id="frame-37" visibility="hidden">
-    
-
-<rect class="window-bg" x="0" y="0" width="900" height="500" fill="#282a36" rx="8" ry="8"/>
-<g class="chrome"><rect class="header-bg" x="0" y="0" width="900" height="40" fill="#282a36" rx="8" ry="8"/>
-<rect x="0" y="32" width="900" height="8" fill="#282a36"/>
+    <rect class="window-bg" x="0" y="0" width="900" height="500" fill="#1e1e1e" rx="8" ry="8"/>
+<g class="chrome"><rect class="header-bg" x="0" y="0" width="900" height="40" fill="#1e1e1e" rx="8" ry="8"/>
+<rect x="0" y="32" width="900" height="8" fill="#1e1e1e"/>
 <rect x="762" y="0" width="46" height="40" fill="transparent"/>
 <rect x="808" y="0" width="46" height="40" fill="transparent"/>
 <rect x="854" y="0" width="46" height="40" fill="transparent"/>
-<line x1="780" y1="20" x2="790" y2="20" stroke="#f8f8f2" stroke-width="1"/>
-<rect x="826" y="15" width="10" height="10" stroke="#f8f8f2" stroke-width="1" fill="none"/>
-<line x1="872" y1="15" x2="882" y2="25" stroke="#f8f8f2" stroke-width="1"/>
-<line x1="882" y1="15" x2="872" y2="25" stroke="#f8f8f2" stroke-width="1"/>
+<line x1="780" y1="20" x2="790" y2="20" stroke="#c9d1d9" stroke-width="1"/>
+<rect x="826" y="15" width="10" height="10" stroke="#c9d1d9" stroke-width="1" fill="none"/>
+<line x1="872" y1="15" x2="882" y2="25" stroke="#c9d1d9" stroke-width="1"/>
+<line x1="882" y1="15" x2="872" y2="25" stroke="#c9d1d9" stroke-width="1"/>
 <text class="text fg" x="450" y="20" text-anchor="middle" style="dominant-baseline: central">PowerShell</text></g>
 <g class="text-layer">
 <text class="text f2" x="16" y="56">PS&gt;</text>
@@ -1361,14 +1250,13 @@
 <text class="text fg" x="43" y="98"> Write-Host &apos;Hello fr                                                                        </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor-active" x="232" y="98" width="9" height="21" fill="#f8f8f2"/>
+<rect class="cursor-active" x="232" y="98" width="9" height="21" fill="#c9d1d9"/>
 </g>
-
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.380852;0.387161;1.000000"
-      dur="9.04s"
+      keyTimes="0.000000;0.381852;0.387609;1.000000"
+      dur="8.68s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -1376,18 +1264,16 @@
   </g>
 
   <g id="frame-38" visibility="hidden">
-    
-
-<rect class="window-bg" x="0" y="0" width="900" height="500" fill="#282a36" rx="8" ry="8"/>
-<g class="chrome"><rect class="header-bg" x="0" y="0" width="900" height="40" fill="#282a36" rx="8" ry="8"/>
-<rect x="0" y="32" width="900" height="8" fill="#282a36"/>
+    <rect class="window-bg" x="0" y="0" width="900" height="500" fill="#1e1e1e" rx="8" ry="8"/>
+<g class="chrome"><rect class="header-bg" x="0" y="0" width="900" height="40" fill="#1e1e1e" rx="8" ry="8"/>
+<rect x="0" y="32" width="900" height="8" fill="#1e1e1e"/>
 <rect x="762" y="0" width="46" height="40" fill="transparent"/>
 <rect x="808" y="0" width="46" height="40" fill="transparent"/>
 <rect x="854" y="0" width="46" height="40" fill="transparent"/>
-<line x1="780" y1="20" x2="790" y2="20" stroke="#f8f8f2" stroke-width="1"/>
-<rect x="826" y="15" width="10" height="10" stroke="#f8f8f2" stroke-width="1" fill="none"/>
-<line x1="872" y1="15" x2="882" y2="25" stroke="#f8f8f2" stroke-width="1"/>
-<line x1="882" y1="15" x2="872" y2="25" stroke="#f8f8f2" stroke-width="1"/>
+<line x1="780" y1="20" x2="790" y2="20" stroke="#c9d1d9" stroke-width="1"/>
+<rect x="826" y="15" width="10" height="10" stroke="#c9d1d9" stroke-width="1" fill="none"/>
+<line x1="872" y1="15" x2="882" y2="25" stroke="#c9d1d9" stroke-width="1"/>
+<line x1="882" y1="15" x2="872" y2="25" stroke="#c9d1d9" stroke-width="1"/>
 <text class="text fg" x="450" y="20" text-anchor="middle" style="dominant-baseline: central">PowerShell</text></g>
 <g class="text-layer">
 <text class="text f2" x="16" y="56">PS&gt;</text>
@@ -1397,14 +1283,13 @@
 <text class="text fg" x="43" y="98"> Write-Host &apos;Hello fro                                                                       </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor-active" x="241" y="98" width="9" height="21" fill="#f8f8f2"/>
+<rect class="cursor-active" x="241" y="98" width="9" height="21" fill="#c9d1d9"/>
 </g>
-
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.387161;0.393802;1.000000"
-      dur="9.04s"
+      keyTimes="0.000000;0.387609;0.393597;1.000000"
+      dur="8.68s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -1412,18 +1297,16 @@
   </g>
 
   <g id="frame-39" visibility="hidden">
-    
-
-<rect class="window-bg" x="0" y="0" width="900" height="500" fill="#282a36" rx="8" ry="8"/>
-<g class="chrome"><rect class="header-bg" x="0" y="0" width="900" height="40" fill="#282a36" rx="8" ry="8"/>
-<rect x="0" y="32" width="900" height="8" fill="#282a36"/>
+    <rect class="window-bg" x="0" y="0" width="900" height="500" fill="#1e1e1e" rx="8" ry="8"/>
+<g class="chrome"><rect class="header-bg" x="0" y="0" width="900" height="40" fill="#1e1e1e" rx="8" ry="8"/>
+<rect x="0" y="32" width="900" height="8" fill="#1e1e1e"/>
 <rect x="762" y="0" width="46" height="40" fill="transparent"/>
 <rect x="808" y="0" width="46" height="40" fill="transparent"/>
 <rect x="854" y="0" width="46" height="40" fill="transparent"/>
-<line x1="780" y1="20" x2="790" y2="20" stroke="#f8f8f2" stroke-width="1"/>
-<rect x="826" y="15" width="10" height="10" stroke="#f8f8f2" stroke-width="1" fill="none"/>
-<line x1="872" y1="15" x2="882" y2="25" stroke="#f8f8f2" stroke-width="1"/>
-<line x1="882" y1="15" x2="872" y2="25" stroke="#f8f8f2" stroke-width="1"/>
+<line x1="780" y1="20" x2="790" y2="20" stroke="#c9d1d9" stroke-width="1"/>
+<rect x="826" y="15" width="10" height="10" stroke="#c9d1d9" stroke-width="1" fill="none"/>
+<line x1="872" y1="15" x2="882" y2="25" stroke="#c9d1d9" stroke-width="1"/>
+<line x1="882" y1="15" x2="872" y2="25" stroke="#c9d1d9" stroke-width="1"/>
 <text class="text fg" x="450" y="20" text-anchor="middle" style="dominant-baseline: central">PowerShell</text></g>
 <g class="text-layer">
 <text class="text f2" x="16" y="56">PS&gt;</text>
@@ -1433,14 +1316,13 @@
 <text class="text fg" x="43" y="98"> Write-Host &apos;Hello from                                                                      </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor-active" x="250" y="98" width="9" height="21" fill="#f8f8f2"/>
+<rect class="cursor-active" x="250" y="98" width="9" height="21" fill="#c9d1d9"/>
 </g>
-
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.393802;0.400221;1.000000"
-      dur="9.04s"
+      keyTimes="0.000000;0.393597;0.399701;1.000000"
+      dur="8.68s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -1448,18 +1330,16 @@
   </g>
 
   <g id="frame-40" visibility="hidden">
-    
-
-<rect class="window-bg" x="0" y="0" width="900" height="500" fill="#282a36" rx="8" ry="8"/>
-<g class="chrome"><rect class="header-bg" x="0" y="0" width="900" height="40" fill="#282a36" rx="8" ry="8"/>
-<rect x="0" y="32" width="900" height="8" fill="#282a36"/>
+    <rect class="window-bg" x="0" y="0" width="900" height="500" fill="#1e1e1e" rx="8" ry="8"/>
+<g class="chrome"><rect class="header-bg" x="0" y="0" width="900" height="40" fill="#1e1e1e" rx="8" ry="8"/>
+<rect x="0" y="32" width="900" height="8" fill="#1e1e1e"/>
 <rect x="762" y="0" width="46" height="40" fill="transparent"/>
 <rect x="808" y="0" width="46" height="40" fill="transparent"/>
 <rect x="854" y="0" width="46" height="40" fill="transparent"/>
-<line x1="780" y1="20" x2="790" y2="20" stroke="#f8f8f2" stroke-width="1"/>
-<rect x="826" y="15" width="10" height="10" stroke="#f8f8f2" stroke-width="1" fill="none"/>
-<line x1="872" y1="15" x2="882" y2="25" stroke="#f8f8f2" stroke-width="1"/>
-<line x1="882" y1="15" x2="872" y2="25" stroke="#f8f8f2" stroke-width="1"/>
+<line x1="780" y1="20" x2="790" y2="20" stroke="#c9d1d9" stroke-width="1"/>
+<rect x="826" y="15" width="10" height="10" stroke="#c9d1d9" stroke-width="1" fill="none"/>
+<line x1="872" y1="15" x2="882" y2="25" stroke="#c9d1d9" stroke-width="1"/>
+<line x1="882" y1="15" x2="872" y2="25" stroke="#c9d1d9" stroke-width="1"/>
 <text class="text fg" x="450" y="20" text-anchor="middle" style="dominant-baseline: central">PowerShell</text></g>
 <g class="text-layer">
 <text class="text f2" x="16" y="56">PS&gt;</text>
@@ -1469,14 +1349,13 @@
 <text class="text fg" x="43" y="98"> Write-Host &apos;Hello from                                                                      </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor-active" x="259" y="98" width="9" height="21" fill="#f8f8f2"/>
+<rect class="cursor-active" x="259" y="98" width="9" height="21" fill="#c9d1d9"/>
 </g>
-
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.400221;0.406530;1.000000"
-      dur="9.04s"
+      keyTimes="0.000000;0.399701;0.405228;1.000000"
+      dur="8.68s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -1484,18 +1363,16 @@
   </g>
 
   <g id="frame-41" visibility="hidden">
-    
-
-<rect class="window-bg" x="0" y="0" width="900" height="500" fill="#282a36" rx="8" ry="8"/>
-<g class="chrome"><rect class="header-bg" x="0" y="0" width="900" height="40" fill="#282a36" rx="8" ry="8"/>
-<rect x="0" y="32" width="900" height="8" fill="#282a36"/>
+    <rect class="window-bg" x="0" y="0" width="900" height="500" fill="#1e1e1e" rx="8" ry="8"/>
+<g class="chrome"><rect class="header-bg" x="0" y="0" width="900" height="40" fill="#1e1e1e" rx="8" ry="8"/>
+<rect x="0" y="32" width="900" height="8" fill="#1e1e1e"/>
 <rect x="762" y="0" width="46" height="40" fill="transparent"/>
 <rect x="808" y="0" width="46" height="40" fill="transparent"/>
 <rect x="854" y="0" width="46" height="40" fill="transparent"/>
-<line x1="780" y1="20" x2="790" y2="20" stroke="#f8f8f2" stroke-width="1"/>
-<rect x="826" y="15" width="10" height="10" stroke="#f8f8f2" stroke-width="1" fill="none"/>
-<line x1="872" y1="15" x2="882" y2="25" stroke="#f8f8f2" stroke-width="1"/>
-<line x1="882" y1="15" x2="872" y2="25" stroke="#f8f8f2" stroke-width="1"/>
+<line x1="780" y1="20" x2="790" y2="20" stroke="#c9d1d9" stroke-width="1"/>
+<rect x="826" y="15" width="10" height="10" stroke="#c9d1d9" stroke-width="1" fill="none"/>
+<line x1="872" y1="15" x2="882" y2="25" stroke="#c9d1d9" stroke-width="1"/>
+<line x1="882" y1="15" x2="872" y2="25" stroke="#c9d1d9" stroke-width="1"/>
 <text class="text fg" x="450" y="20" text-anchor="middle" style="dominant-baseline: central">PowerShell</text></g>
 <g class="text-layer">
 <text class="text f2" x="16" y="56">PS&gt;</text>
@@ -1505,14 +1382,13 @@
 <text class="text fg" x="43" y="98"> Write-Host &apos;Hello from W                                                                    </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor-active" x="268" y="98" width="9" height="21" fill="#f8f8f2"/>
+<rect class="cursor-active" x="268" y="98" width="9" height="21" fill="#c9d1d9"/>
 </g>
-
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.406530;0.412839;1.000000"
-      dur="9.04s"
+      keyTimes="0.000000;0.405228;0.410871;1.000000"
+      dur="8.68s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -1520,18 +1396,16 @@
   </g>
 
   <g id="frame-42" visibility="hidden">
-    
-
-<rect class="window-bg" x="0" y="0" width="900" height="500" fill="#282a36" rx="8" ry="8"/>
-<g class="chrome"><rect class="header-bg" x="0" y="0" width="900" height="40" fill="#282a36" rx="8" ry="8"/>
-<rect x="0" y="32" width="900" height="8" fill="#282a36"/>
+    <rect class="window-bg" x="0" y="0" width="900" height="500" fill="#1e1e1e" rx="8" ry="8"/>
+<g class="chrome"><rect class="header-bg" x="0" y="0" width="900" height="40" fill="#1e1e1e" rx="8" ry="8"/>
+<rect x="0" y="32" width="900" height="8" fill="#1e1e1e"/>
 <rect x="762" y="0" width="46" height="40" fill="transparent"/>
 <rect x="808" y="0" width="46" height="40" fill="transparent"/>
 <rect x="854" y="0" width="46" height="40" fill="transparent"/>
-<line x1="780" y1="20" x2="790" y2="20" stroke="#f8f8f2" stroke-width="1"/>
-<rect x="826" y="15" width="10" height="10" stroke="#f8f8f2" stroke-width="1" fill="none"/>
-<line x1="872" y1="15" x2="882" y2="25" stroke="#f8f8f2" stroke-width="1"/>
-<line x1="882" y1="15" x2="872" y2="25" stroke="#f8f8f2" stroke-width="1"/>
+<line x1="780" y1="20" x2="790" y2="20" stroke="#c9d1d9" stroke-width="1"/>
+<rect x="826" y="15" width="10" height="10" stroke="#c9d1d9" stroke-width="1" fill="none"/>
+<line x1="872" y1="15" x2="882" y2="25" stroke="#c9d1d9" stroke-width="1"/>
+<line x1="882" y1="15" x2="872" y2="25" stroke="#c9d1d9" stroke-width="1"/>
 <text class="text fg" x="450" y="20" text-anchor="middle" style="dominant-baseline: central">PowerShell</text></g>
 <g class="text-layer">
 <text class="text f2" x="16" y="56">PS&gt;</text>
@@ -1541,14 +1415,13 @@
 <text class="text fg" x="43" y="98"> Write-Host &apos;Hello from Wi                                                                   </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor-active" x="277" y="98" width="9" height="21" fill="#f8f8f2"/>
+<rect class="cursor-active" x="277" y="98" width="9" height="21" fill="#c9d1d9"/>
 </g>
-
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.412839;0.419148;1.000000"
-      dur="9.04s"
+      keyTimes="0.000000;0.410871;0.416628;1.000000"
+      dur="8.68s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -1556,18 +1429,16 @@
   </g>
 
   <g id="frame-43" visibility="hidden">
-    
-
-<rect class="window-bg" x="0" y="0" width="900" height="500" fill="#282a36" rx="8" ry="8"/>
-<g class="chrome"><rect class="header-bg" x="0" y="0" width="900" height="40" fill="#282a36" rx="8" ry="8"/>
-<rect x="0" y="32" width="900" height="8" fill="#282a36"/>
+    <rect class="window-bg" x="0" y="0" width="900" height="500" fill="#1e1e1e" rx="8" ry="8"/>
+<g class="chrome"><rect class="header-bg" x="0" y="0" width="900" height="40" fill="#1e1e1e" rx="8" ry="8"/>
+<rect x="0" y="32" width="900" height="8" fill="#1e1e1e"/>
 <rect x="762" y="0" width="46" height="40" fill="transparent"/>
 <rect x="808" y="0" width="46" height="40" fill="transparent"/>
 <rect x="854" y="0" width="46" height="40" fill="transparent"/>
-<line x1="780" y1="20" x2="790" y2="20" stroke="#f8f8f2" stroke-width="1"/>
-<rect x="826" y="15" width="10" height="10" stroke="#f8f8f2" stroke-width="1" fill="none"/>
-<line x1="872" y1="15" x2="882" y2="25" stroke="#f8f8f2" stroke-width="1"/>
-<line x1="882" y1="15" x2="872" y2="25" stroke="#f8f8f2" stroke-width="1"/>
+<line x1="780" y1="20" x2="790" y2="20" stroke="#c9d1d9" stroke-width="1"/>
+<rect x="826" y="15" width="10" height="10" stroke="#c9d1d9" stroke-width="1" fill="none"/>
+<line x1="872" y1="15" x2="882" y2="25" stroke="#c9d1d9" stroke-width="1"/>
+<line x1="882" y1="15" x2="872" y2="25" stroke="#c9d1d9" stroke-width="1"/>
 <text class="text fg" x="450" y="20" text-anchor="middle" style="dominant-baseline: central">PowerShell</text></g>
 <g class="text-layer">
 <text class="text f2" x="16" y="56">PS&gt;</text>
@@ -1577,14 +1448,13 @@
 <text class="text fg" x="43" y="98"> Write-Host &apos;Hello from Win                                                                  </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor-active" x="286" y="98" width="9" height="21" fill="#f8f8f2"/>
+<rect class="cursor-active" x="286" y="98" width="9" height="21" fill="#c9d1d9"/>
 </g>
-
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.419148;0.425346;1.000000"
-      dur="9.04s"
+      keyTimes="0.000000;0.416628;0.422386;1.000000"
+      dur="8.68s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -1592,18 +1462,16 @@
   </g>
 
   <g id="frame-44" visibility="hidden">
-    
-
-<rect class="window-bg" x="0" y="0" width="900" height="500" fill="#282a36" rx="8" ry="8"/>
-<g class="chrome"><rect class="header-bg" x="0" y="0" width="900" height="40" fill="#282a36" rx="8" ry="8"/>
-<rect x="0" y="32" width="900" height="8" fill="#282a36"/>
+    <rect class="window-bg" x="0" y="0" width="900" height="500" fill="#1e1e1e" rx="8" ry="8"/>
+<g class="chrome"><rect class="header-bg" x="0" y="0" width="900" height="40" fill="#1e1e1e" rx="8" ry="8"/>
+<rect x="0" y="32" width="900" height="8" fill="#1e1e1e"/>
 <rect x="762" y="0" width="46" height="40" fill="transparent"/>
 <rect x="808" y="0" width="46" height="40" fill="transparent"/>
 <rect x="854" y="0" width="46" height="40" fill="transparent"/>
-<line x1="780" y1="20" x2="790" y2="20" stroke="#f8f8f2" stroke-width="1"/>
-<rect x="826" y="15" width="10" height="10" stroke="#f8f8f2" stroke-width="1" fill="none"/>
-<line x1="872" y1="15" x2="882" y2="25" stroke="#f8f8f2" stroke-width="1"/>
-<line x1="882" y1="15" x2="872" y2="25" stroke="#f8f8f2" stroke-width="1"/>
+<line x1="780" y1="20" x2="790" y2="20" stroke="#c9d1d9" stroke-width="1"/>
+<rect x="826" y="15" width="10" height="10" stroke="#c9d1d9" stroke-width="1" fill="none"/>
+<line x1="872" y1="15" x2="882" y2="25" stroke="#c9d1d9" stroke-width="1"/>
+<line x1="882" y1="15" x2="872" y2="25" stroke="#c9d1d9" stroke-width="1"/>
 <text class="text fg" x="450" y="20" text-anchor="middle" style="dominant-baseline: central">PowerShell</text></g>
 <g class="text-layer">
 <text class="text f2" x="16" y="56">PS&gt;</text>
@@ -1613,14 +1481,13 @@
 <text class="text fg" x="43" y="98"> Write-Host &apos;Hello from Wind                                                                 </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor-active" x="295" y="98" width="9" height="21" fill="#f8f8f2"/>
+<rect class="cursor-active" x="295" y="98" width="9" height="21" fill="#c9d1d9"/>
 </g>
-
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.425346;0.431655;1.000000"
-      dur="9.04s"
+      keyTimes="0.000000;0.422386;0.428374;1.000000"
+      dur="8.68s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -1628,18 +1495,16 @@
   </g>
 
   <g id="frame-45" visibility="hidden">
-    
-
-<rect class="window-bg" x="0" y="0" width="900" height="500" fill="#282a36" rx="8" ry="8"/>
-<g class="chrome"><rect class="header-bg" x="0" y="0" width="900" height="40" fill="#282a36" rx="8" ry="8"/>
-<rect x="0" y="32" width="900" height="8" fill="#282a36"/>
+    <rect class="window-bg" x="0" y="0" width="900" height="500" fill="#1e1e1e" rx="8" ry="8"/>
+<g class="chrome"><rect class="header-bg" x="0" y="0" width="900" height="40" fill="#1e1e1e" rx="8" ry="8"/>
+<rect x="0" y="32" width="900" height="8" fill="#1e1e1e"/>
 <rect x="762" y="0" width="46" height="40" fill="transparent"/>
 <rect x="808" y="0" width="46" height="40" fill="transparent"/>
 <rect x="854" y="0" width="46" height="40" fill="transparent"/>
-<line x1="780" y1="20" x2="790" y2="20" stroke="#f8f8f2" stroke-width="1"/>
-<rect x="826" y="15" width="10" height="10" stroke="#f8f8f2" stroke-width="1" fill="none"/>
-<line x1="872" y1="15" x2="882" y2="25" stroke="#f8f8f2" stroke-width="1"/>
-<line x1="882" y1="15" x2="872" y2="25" stroke="#f8f8f2" stroke-width="1"/>
+<line x1="780" y1="20" x2="790" y2="20" stroke="#c9d1d9" stroke-width="1"/>
+<rect x="826" y="15" width="10" height="10" stroke="#c9d1d9" stroke-width="1" fill="none"/>
+<line x1="872" y1="15" x2="882" y2="25" stroke="#c9d1d9" stroke-width="1"/>
+<line x1="882" y1="15" x2="872" y2="25" stroke="#c9d1d9" stroke-width="1"/>
 <text class="text fg" x="450" y="20" text-anchor="middle" style="dominant-baseline: central">PowerShell</text></g>
 <g class="text-layer">
 <text class="text f2" x="16" y="56">PS&gt;</text>
@@ -1649,14 +1514,13 @@
 <text class="text fg" x="43" y="98"> Write-Host &apos;Hello from Windo                                                                </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor-active" x="304" y="98" width="9" height="21" fill="#f8f8f2"/>
+<rect class="cursor-active" x="304" y="98" width="9" height="21" fill="#c9d1d9"/>
 </g>
-
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.431655;0.438185;1.000000"
-      dur="9.04s"
+      keyTimes="0.000000;0.428374;0.434247;1.000000"
+      dur="8.68s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -1664,18 +1528,16 @@
   </g>
 
   <g id="frame-46" visibility="hidden">
-    
-
-<rect class="window-bg" x="0" y="0" width="900" height="500" fill="#282a36" rx="8" ry="8"/>
-<g class="chrome"><rect class="header-bg" x="0" y="0" width="900" height="40" fill="#282a36" rx="8" ry="8"/>
-<rect x="0" y="32" width="900" height="8" fill="#282a36"/>
+    <rect class="window-bg" x="0" y="0" width="900" height="500" fill="#1e1e1e" rx="8" ry="8"/>
+<g class="chrome"><rect class="header-bg" x="0" y="0" width="900" height="40" fill="#1e1e1e" rx="8" ry="8"/>
+<rect x="0" y="32" width="900" height="8" fill="#1e1e1e"/>
 <rect x="762" y="0" width="46" height="40" fill="transparent"/>
 <rect x="808" y="0" width="46" height="40" fill="transparent"/>
 <rect x="854" y="0" width="46" height="40" fill="transparent"/>
-<line x1="780" y1="20" x2="790" y2="20" stroke="#f8f8f2" stroke-width="1"/>
-<rect x="826" y="15" width="10" height="10" stroke="#f8f8f2" stroke-width="1" fill="none"/>
-<line x1="872" y1="15" x2="882" y2="25" stroke="#f8f8f2" stroke-width="1"/>
-<line x1="882" y1="15" x2="872" y2="25" stroke="#f8f8f2" stroke-width="1"/>
+<line x1="780" y1="20" x2="790" y2="20" stroke="#c9d1d9" stroke-width="1"/>
+<rect x="826" y="15" width="10" height="10" stroke="#c9d1d9" stroke-width="1" fill="none"/>
+<line x1="872" y1="15" x2="882" y2="25" stroke="#c9d1d9" stroke-width="1"/>
+<line x1="882" y1="15" x2="872" y2="25" stroke="#c9d1d9" stroke-width="1"/>
 <text class="text fg" x="450" y="20" text-anchor="middle" style="dominant-baseline: central">PowerShell</text></g>
 <g class="text-layer">
 <text class="text f2" x="16" y="56">PS&gt;</text>
@@ -1685,14 +1547,13 @@
 <text class="text fg" x="43" y="98"> Write-Host &apos;Hello from Window                                                               </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor-active" x="313" y="98" width="9" height="21" fill="#f8f8f2"/>
+<rect class="cursor-active" x="313" y="98" width="9" height="21" fill="#c9d1d9"/>
 </g>
-
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.438185;0.444494;1.000000"
-      dur="9.04s"
+      keyTimes="0.000000;0.434247;0.440120;1.000000"
+      dur="8.68s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -1700,18 +1561,16 @@
   </g>
 
   <g id="frame-47" visibility="hidden">
-    
-
-<rect class="window-bg" x="0" y="0" width="900" height="500" fill="#282a36" rx="8" ry="8"/>
-<g class="chrome"><rect class="header-bg" x="0" y="0" width="900" height="40" fill="#282a36" rx="8" ry="8"/>
-<rect x="0" y="32" width="900" height="8" fill="#282a36"/>
+    <rect class="window-bg" x="0" y="0" width="900" height="500" fill="#1e1e1e" rx="8" ry="8"/>
+<g class="chrome"><rect class="header-bg" x="0" y="0" width="900" height="40" fill="#1e1e1e" rx="8" ry="8"/>
+<rect x="0" y="32" width="900" height="8" fill="#1e1e1e"/>
 <rect x="762" y="0" width="46" height="40" fill="transparent"/>
 <rect x="808" y="0" width="46" height="40" fill="transparent"/>
 <rect x="854" y="0" width="46" height="40" fill="transparent"/>
-<line x1="780" y1="20" x2="790" y2="20" stroke="#f8f8f2" stroke-width="1"/>
-<rect x="826" y="15" width="10" height="10" stroke="#f8f8f2" stroke-width="1" fill="none"/>
-<line x1="872" y1="15" x2="882" y2="25" stroke="#f8f8f2" stroke-width="1"/>
-<line x1="882" y1="15" x2="872" y2="25" stroke="#f8f8f2" stroke-width="1"/>
+<line x1="780" y1="20" x2="790" y2="20" stroke="#c9d1d9" stroke-width="1"/>
+<rect x="826" y="15" width="10" height="10" stroke="#c9d1d9" stroke-width="1" fill="none"/>
+<line x1="872" y1="15" x2="882" y2="25" stroke="#c9d1d9" stroke-width="1"/>
+<line x1="882" y1="15" x2="872" y2="25" stroke="#c9d1d9" stroke-width="1"/>
 <text class="text fg" x="450" y="20" text-anchor="middle" style="dominant-baseline: central">PowerShell</text></g>
 <g class="text-layer">
 <text class="text f2" x="16" y="56">PS&gt;</text>
@@ -1721,14 +1580,13 @@
 <text class="text fg" x="43" y="98"> Write-Host &apos;Hello from Windows                                                              </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor-active" x="322" y="98" width="9" height="21" fill="#f8f8f2"/>
+<rect class="cursor-active" x="322" y="98" width="9" height="21" fill="#c9d1d9"/>
 </g>
-
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.444494;0.450913;1.000000"
-      dur="9.04s"
+      keyTimes="0.000000;0.440120;0.445993;1.000000"
+      dur="8.68s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -1736,18 +1594,16 @@
   </g>
 
   <g id="frame-48" visibility="hidden">
-    
-
-<rect class="window-bg" x="0" y="0" width="900" height="500" fill="#282a36" rx="8" ry="8"/>
-<g class="chrome"><rect class="header-bg" x="0" y="0" width="900" height="40" fill="#282a36" rx="8" ry="8"/>
-<rect x="0" y="32" width="900" height="8" fill="#282a36"/>
+    <rect class="window-bg" x="0" y="0" width="900" height="500" fill="#1e1e1e" rx="8" ry="8"/>
+<g class="chrome"><rect class="header-bg" x="0" y="0" width="900" height="40" fill="#1e1e1e" rx="8" ry="8"/>
+<rect x="0" y="32" width="900" height="8" fill="#1e1e1e"/>
 <rect x="762" y="0" width="46" height="40" fill="transparent"/>
 <rect x="808" y="0" width="46" height="40" fill="transparent"/>
 <rect x="854" y="0" width="46" height="40" fill="transparent"/>
-<line x1="780" y1="20" x2="790" y2="20" stroke="#f8f8f2" stroke-width="1"/>
-<rect x="826" y="15" width="10" height="10" stroke="#f8f8f2" stroke-width="1" fill="none"/>
-<line x1="872" y1="15" x2="882" y2="25" stroke="#f8f8f2" stroke-width="1"/>
-<line x1="882" y1="15" x2="872" y2="25" stroke="#f8f8f2" stroke-width="1"/>
+<line x1="780" y1="20" x2="790" y2="20" stroke="#c9d1d9" stroke-width="1"/>
+<rect x="826" y="15" width="10" height="10" stroke="#c9d1d9" stroke-width="1" fill="none"/>
+<line x1="872" y1="15" x2="882" y2="25" stroke="#c9d1d9" stroke-width="1"/>
+<line x1="882" y1="15" x2="872" y2="25" stroke="#c9d1d9" stroke-width="1"/>
 <text class="text fg" x="450" y="20" text-anchor="middle" style="dominant-baseline: central">PowerShell</text></g>
 <g class="text-layer">
 <text class="text f2" x="16" y="56">PS&gt;</text>
@@ -1757,14 +1613,13 @@
 <text class="text fg" x="43" y="98"> Write-Host &apos;Hello from Windows!                                                             </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor-active" x="331" y="98" width="9" height="21" fill="#f8f8f2"/>
+<rect class="cursor-active" x="331" y="98" width="9" height="21" fill="#c9d1d9"/>
 </g>
-
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.450913;0.457333;1.000000"
-      dur="9.04s"
+      keyTimes="0.000000;0.445993;0.451865;1.000000"
+      dur="8.68s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -1772,18 +1627,16 @@
   </g>
 
   <g id="frame-49" visibility="hidden">
-    
-
-<rect class="window-bg" x="0" y="0" width="900" height="500" fill="#282a36" rx="8" ry="8"/>
-<g class="chrome"><rect class="header-bg" x="0" y="0" width="900" height="40" fill="#282a36" rx="8" ry="8"/>
-<rect x="0" y="32" width="900" height="8" fill="#282a36"/>
+    <rect class="window-bg" x="0" y="0" width="900" height="500" fill="#1e1e1e" rx="8" ry="8"/>
+<g class="chrome"><rect class="header-bg" x="0" y="0" width="900" height="40" fill="#1e1e1e" rx="8" ry="8"/>
+<rect x="0" y="32" width="900" height="8" fill="#1e1e1e"/>
 <rect x="762" y="0" width="46" height="40" fill="transparent"/>
 <rect x="808" y="0" width="46" height="40" fill="transparent"/>
 <rect x="854" y="0" width="46" height="40" fill="transparent"/>
-<line x1="780" y1="20" x2="790" y2="20" stroke="#f8f8f2" stroke-width="1"/>
-<rect x="826" y="15" width="10" height="10" stroke="#f8f8f2" stroke-width="1" fill="none"/>
-<line x1="872" y1="15" x2="882" y2="25" stroke="#f8f8f2" stroke-width="1"/>
-<line x1="882" y1="15" x2="872" y2="25" stroke="#f8f8f2" stroke-width="1"/>
+<line x1="780" y1="20" x2="790" y2="20" stroke="#c9d1d9" stroke-width="1"/>
+<rect x="826" y="15" width="10" height="10" stroke="#c9d1d9" stroke-width="1" fill="none"/>
+<line x1="872" y1="15" x2="882" y2="25" stroke="#c9d1d9" stroke-width="1"/>
+<line x1="882" y1="15" x2="872" y2="25" stroke="#c9d1d9" stroke-width="1"/>
 <text class="text fg" x="450" y="20" text-anchor="middle" style="dominant-baseline: central">PowerShell</text></g>
 <g class="text-layer">
 <text class="text f2" x="16" y="56">PS&gt;</text>
@@ -1793,14 +1646,13 @@
 <text class="text fg" x="43" y="98"> Write-Host &apos;Hello from Windows!&apos;                                                            </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor-active" x="340" y="98" width="9" height="21" fill="#f8f8f2"/>
+<rect class="cursor-active" x="340" y="98" width="9" height="21" fill="#c9d1d9"/>
 </g>
-
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.457333;0.463863;1.000000"
-      dur="9.04s"
+      keyTimes="0.000000;0.451865;0.457508;1.000000"
+      dur="8.68s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -1808,18 +1660,16 @@
   </g>
 
   <g id="frame-50" visibility="hidden">
-    
-
-<rect class="window-bg" x="0" y="0" width="900" height="500" fill="#282a36" rx="8" ry="8"/>
-<g class="chrome"><rect class="header-bg" x="0" y="0" width="900" height="40" fill="#282a36" rx="8" ry="8"/>
-<rect x="0" y="32" width="900" height="8" fill="#282a36"/>
+    <rect class="window-bg" x="0" y="0" width="900" height="500" fill="#1e1e1e" rx="8" ry="8"/>
+<g class="chrome"><rect class="header-bg" x="0" y="0" width="900" height="40" fill="#1e1e1e" rx="8" ry="8"/>
+<rect x="0" y="32" width="900" height="8" fill="#1e1e1e"/>
 <rect x="762" y="0" width="46" height="40" fill="transparent"/>
 <rect x="808" y="0" width="46" height="40" fill="transparent"/>
 <rect x="854" y="0" width="46" height="40" fill="transparent"/>
-<line x1="780" y1="20" x2="790" y2="20" stroke="#f8f8f2" stroke-width="1"/>
-<rect x="826" y="15" width="10" height="10" stroke="#f8f8f2" stroke-width="1" fill="none"/>
-<line x1="872" y1="15" x2="882" y2="25" stroke="#f8f8f2" stroke-width="1"/>
-<line x1="882" y1="15" x2="872" y2="25" stroke="#f8f8f2" stroke-width="1"/>
+<line x1="780" y1="20" x2="790" y2="20" stroke="#c9d1d9" stroke-width="1"/>
+<rect x="826" y="15" width="10" height="10" stroke="#c9d1d9" stroke-width="1" fill="none"/>
+<line x1="872" y1="15" x2="882" y2="25" stroke="#c9d1d9" stroke-width="1"/>
+<line x1="882" y1="15" x2="872" y2="25" stroke="#c9d1d9" stroke-width="1"/>
 <text class="text fg" x="450" y="20" text-anchor="middle" style="dominant-baseline: central">PowerShell</text></g>
 <g class="text-layer">
 <text class="text f2" x="16" y="56">PS&gt;</text>
@@ -1829,14 +1679,13 @@
 <text class="text fg" x="43" y="98"> Write-Host &apos;Hello from Windows!&apos;                                                            </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor-active" x="349" y="98" width="9" height="21" fill="#f8f8f2"/>
+<rect class="cursor-active" x="349" y="98" width="9" height="21" fill="#c9d1d9"/>
 </g>
-
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.463863;0.470061;1.000000"
-      dur="9.04s"
+      keyTimes="0.000000;0.457508;0.463381;1.000000"
+      dur="8.68s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -1844,18 +1693,16 @@
   </g>
 
   <g id="frame-51" visibility="hidden">
-    
-
-<rect class="window-bg" x="0" y="0" width="900" height="500" fill="#282a36" rx="8" ry="8"/>
-<g class="chrome"><rect class="header-bg" x="0" y="0" width="900" height="40" fill="#282a36" rx="8" ry="8"/>
-<rect x="0" y="32" width="900" height="8" fill="#282a36"/>
+    <rect class="window-bg" x="0" y="0" width="900" height="500" fill="#1e1e1e" rx="8" ry="8"/>
+<g class="chrome"><rect class="header-bg" x="0" y="0" width="900" height="40" fill="#1e1e1e" rx="8" ry="8"/>
+<rect x="0" y="32" width="900" height="8" fill="#1e1e1e"/>
 <rect x="762" y="0" width="46" height="40" fill="transparent"/>
 <rect x="808" y="0" width="46" height="40" fill="transparent"/>
 <rect x="854" y="0" width="46" height="40" fill="transparent"/>
-<line x1="780" y1="20" x2="790" y2="20" stroke="#f8f8f2" stroke-width="1"/>
-<rect x="826" y="15" width="10" height="10" stroke="#f8f8f2" stroke-width="1" fill="none"/>
-<line x1="872" y1="15" x2="882" y2="25" stroke="#f8f8f2" stroke-width="1"/>
-<line x1="882" y1="15" x2="872" y2="25" stroke="#f8f8f2" stroke-width="1"/>
+<line x1="780" y1="20" x2="790" y2="20" stroke="#c9d1d9" stroke-width="1"/>
+<rect x="826" y="15" width="10" height="10" stroke="#c9d1d9" stroke-width="1" fill="none"/>
+<line x1="872" y1="15" x2="882" y2="25" stroke="#c9d1d9" stroke-width="1"/>
+<line x1="882" y1="15" x2="872" y2="25" stroke="#c9d1d9" stroke-width="1"/>
 <text class="text fg" x="450" y="20" text-anchor="middle" style="dominant-baseline: central">PowerShell</text></g>
 <g class="text-layer">
 <text class="text f2" x="16" y="56">PS&gt;</text>
@@ -1865,14 +1712,13 @@
 <text class="text fg" x="43" y="98"> Write-Host &apos;Hello from Windows!&apos; -                                                          </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor-active" x="358" y="98" width="9" height="21" fill="#f8f8f2"/>
+<rect class="cursor-active" x="358" y="98" width="9" height="21" fill="#c9d1d9"/>
 </g>
-
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.470061;0.476148;1.000000"
-      dur="9.04s"
+      keyTimes="0.000000;0.463381;0.469023;1.000000"
+      dur="8.68s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -1880,18 +1726,16 @@
   </g>
 
   <g id="frame-52" visibility="hidden">
-    
-
-<rect class="window-bg" x="0" y="0" width="900" height="500" fill="#282a36" rx="8" ry="8"/>
-<g class="chrome"><rect class="header-bg" x="0" y="0" width="900" height="40" fill="#282a36" rx="8" ry="8"/>
-<rect x="0" y="32" width="900" height="8" fill="#282a36"/>
+    <rect class="window-bg" x="0" y="0" width="900" height="500" fill="#1e1e1e" rx="8" ry="8"/>
+<g class="chrome"><rect class="header-bg" x="0" y="0" width="900" height="40" fill="#1e1e1e" rx="8" ry="8"/>
+<rect x="0" y="32" width="900" height="8" fill="#1e1e1e"/>
 <rect x="762" y="0" width="46" height="40" fill="transparent"/>
 <rect x="808" y="0" width="46" height="40" fill="transparent"/>
 <rect x="854" y="0" width="46" height="40" fill="transparent"/>
-<line x1="780" y1="20" x2="790" y2="20" stroke="#f8f8f2" stroke-width="1"/>
-<rect x="826" y="15" width="10" height="10" stroke="#f8f8f2" stroke-width="1" fill="none"/>
-<line x1="872" y1="15" x2="882" y2="25" stroke="#f8f8f2" stroke-width="1"/>
-<line x1="882" y1="15" x2="872" y2="25" stroke="#f8f8f2" stroke-width="1"/>
+<line x1="780" y1="20" x2="790" y2="20" stroke="#c9d1d9" stroke-width="1"/>
+<rect x="826" y="15" width="10" height="10" stroke="#c9d1d9" stroke-width="1" fill="none"/>
+<line x1="872" y1="15" x2="882" y2="25" stroke="#c9d1d9" stroke-width="1"/>
+<line x1="882" y1="15" x2="872" y2="25" stroke="#c9d1d9" stroke-width="1"/>
 <text class="text fg" x="450" y="20" text-anchor="middle" style="dominant-baseline: central">PowerShell</text></g>
 <g class="text-layer">
 <text class="text f2" x="16" y="56">PS&gt;</text>
@@ -1901,14 +1745,13 @@
 <text class="text fg" x="43" y="98"> Write-Host &apos;Hello from Windows!&apos; -F                                                         </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor-active" x="367" y="98" width="9" height="21" fill="#f8f8f2"/>
+<rect class="cursor-active" x="367" y="98" width="9" height="21" fill="#c9d1d9"/>
 </g>
-
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.476148;0.482346;1.000000"
-      dur="9.04s"
+      keyTimes="0.000000;0.469023;0.475012;1.000000"
+      dur="8.68s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -1916,18 +1759,16 @@
   </g>
 
   <g id="frame-53" visibility="hidden">
-    
-
-<rect class="window-bg" x="0" y="0" width="900" height="500" fill="#282a36" rx="8" ry="8"/>
-<g class="chrome"><rect class="header-bg" x="0" y="0" width="900" height="40" fill="#282a36" rx="8" ry="8"/>
-<rect x="0" y="32" width="900" height="8" fill="#282a36"/>
+    <rect class="window-bg" x="0" y="0" width="900" height="500" fill="#1e1e1e" rx="8" ry="8"/>
+<g class="chrome"><rect class="header-bg" x="0" y="0" width="900" height="40" fill="#1e1e1e" rx="8" ry="8"/>
+<rect x="0" y="32" width="900" height="8" fill="#1e1e1e"/>
 <rect x="762" y="0" width="46" height="40" fill="transparent"/>
 <rect x="808" y="0" width="46" height="40" fill="transparent"/>
 <rect x="854" y="0" width="46" height="40" fill="transparent"/>
-<line x1="780" y1="20" x2="790" y2="20" stroke="#f8f8f2" stroke-width="1"/>
-<rect x="826" y="15" width="10" height="10" stroke="#f8f8f2" stroke-width="1" fill="none"/>
-<line x1="872" y1="15" x2="882" y2="25" stroke="#f8f8f2" stroke-width="1"/>
-<line x1="882" y1="15" x2="872" y2="25" stroke="#f8f8f2" stroke-width="1"/>
+<line x1="780" y1="20" x2="790" y2="20" stroke="#c9d1d9" stroke-width="1"/>
+<rect x="826" y="15" width="10" height="10" stroke="#c9d1d9" stroke-width="1" fill="none"/>
+<line x1="872" y1="15" x2="882" y2="25" stroke="#c9d1d9" stroke-width="1"/>
+<line x1="882" y1="15" x2="872" y2="25" stroke="#c9d1d9" stroke-width="1"/>
 <text class="text fg" x="450" y="20" text-anchor="middle" style="dominant-baseline: central">PowerShell</text></g>
 <g class="text-layer">
 <text class="text f2" x="16" y="56">PS&gt;</text>
@@ -1937,14 +1778,13 @@
 <text class="text fg" x="43" y="98"> Write-Host &apos;Hello from Windows!&apos; -Fo                                                        </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor-active" x="376" y="98" width="9" height="21" fill="#f8f8f2"/>
+<rect class="cursor-active" x="376" y="98" width="9" height="21" fill="#c9d1d9"/>
 </g>
-
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.482346;0.488545;1.000000"
-      dur="9.04s"
+      keyTimes="0.000000;0.475012;0.481115;1.000000"
+      dur="8.68s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -1952,18 +1792,16 @@
   </g>
 
   <g id="frame-54" visibility="hidden">
-    
-
-<rect class="window-bg" x="0" y="0" width="900" height="500" fill="#282a36" rx="8" ry="8"/>
-<g class="chrome"><rect class="header-bg" x="0" y="0" width="900" height="40" fill="#282a36" rx="8" ry="8"/>
-<rect x="0" y="32" width="900" height="8" fill="#282a36"/>
+    <rect class="window-bg" x="0" y="0" width="900" height="500" fill="#1e1e1e" rx="8" ry="8"/>
+<g class="chrome"><rect class="header-bg" x="0" y="0" width="900" height="40" fill="#1e1e1e" rx="8" ry="8"/>
+<rect x="0" y="32" width="900" height="8" fill="#1e1e1e"/>
 <rect x="762" y="0" width="46" height="40" fill="transparent"/>
 <rect x="808" y="0" width="46" height="40" fill="transparent"/>
 <rect x="854" y="0" width="46" height="40" fill="transparent"/>
-<line x1="780" y1="20" x2="790" y2="20" stroke="#f8f8f2" stroke-width="1"/>
-<rect x="826" y="15" width="10" height="10" stroke="#f8f8f2" stroke-width="1" fill="none"/>
-<line x1="872" y1="15" x2="882" y2="25" stroke="#f8f8f2" stroke-width="1"/>
-<line x1="882" y1="15" x2="872" y2="25" stroke="#f8f8f2" stroke-width="1"/>
+<line x1="780" y1="20" x2="790" y2="20" stroke="#c9d1d9" stroke-width="1"/>
+<rect x="826" y="15" width="10" height="10" stroke="#c9d1d9" stroke-width="1" fill="none"/>
+<line x1="872" y1="15" x2="882" y2="25" stroke="#c9d1d9" stroke-width="1"/>
+<line x1="882" y1="15" x2="872" y2="25" stroke="#c9d1d9" stroke-width="1"/>
 <text class="text fg" x="450" y="20" text-anchor="middle" style="dominant-baseline: central">PowerShell</text></g>
 <g class="text-layer">
 <text class="text f2" x="16" y="56">PS&gt;</text>
@@ -1973,14 +1811,13 @@
 <text class="text fg" x="43" y="98"> Write-Host &apos;Hello from Windows!&apos; -For                                                       </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor-active" x="385" y="98" width="9" height="21" fill="#f8f8f2"/>
+<rect class="cursor-active" x="385" y="98" width="9" height="21" fill="#c9d1d9"/>
 </g>
-
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.488545;0.494521;1.000000"
-      dur="9.04s"
+      keyTimes="0.000000;0.481115;0.487218;1.000000"
+      dur="8.68s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -1988,18 +1825,16 @@
   </g>
 
   <g id="frame-55" visibility="hidden">
-    
-
-<rect class="window-bg" x="0" y="0" width="900" height="500" fill="#282a36" rx="8" ry="8"/>
-<g class="chrome"><rect class="header-bg" x="0" y="0" width="900" height="40" fill="#282a36" rx="8" ry="8"/>
-<rect x="0" y="32" width="900" height="8" fill="#282a36"/>
+    <rect class="window-bg" x="0" y="0" width="900" height="500" fill="#1e1e1e" rx="8" ry="8"/>
+<g class="chrome"><rect class="header-bg" x="0" y="0" width="900" height="40" fill="#1e1e1e" rx="8" ry="8"/>
+<rect x="0" y="32" width="900" height="8" fill="#1e1e1e"/>
 <rect x="762" y="0" width="46" height="40" fill="transparent"/>
 <rect x="808" y="0" width="46" height="40" fill="transparent"/>
 <rect x="854" y="0" width="46" height="40" fill="transparent"/>
-<line x1="780" y1="20" x2="790" y2="20" stroke="#f8f8f2" stroke-width="1"/>
-<rect x="826" y="15" width="10" height="10" stroke="#f8f8f2" stroke-width="1" fill="none"/>
-<line x1="872" y1="15" x2="882" y2="25" stroke="#f8f8f2" stroke-width="1"/>
-<line x1="882" y1="15" x2="872" y2="25" stroke="#f8f8f2" stroke-width="1"/>
+<line x1="780" y1="20" x2="790" y2="20" stroke="#c9d1d9" stroke-width="1"/>
+<rect x="826" y="15" width="10" height="10" stroke="#c9d1d9" stroke-width="1" fill="none"/>
+<line x1="872" y1="15" x2="882" y2="25" stroke="#c9d1d9" stroke-width="1"/>
+<line x1="882" y1="15" x2="872" y2="25" stroke="#c9d1d9" stroke-width="1"/>
 <text class="text fg" x="450" y="20" text-anchor="middle" style="dominant-baseline: central">PowerShell</text></g>
 <g class="text-layer">
 <text class="text f2" x="16" y="56">PS&gt;</text>
@@ -2009,14 +1844,13 @@
 <text class="text fg" x="43" y="98"> Write-Host &apos;Hello from Windows!&apos; -Fore                                                      </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor-active" x="394" y="98" width="9" height="21" fill="#f8f8f2"/>
+<rect class="cursor-active" x="394" y="98" width="9" height="21" fill="#c9d1d9"/>
 </g>
-
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.494521;0.500609;1.000000"
-      dur="9.04s"
+      keyTimes="0.000000;0.487218;0.493091;1.000000"
+      dur="8.68s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -2024,18 +1858,16 @@
   </g>
 
   <g id="frame-56" visibility="hidden">
-    
-
-<rect class="window-bg" x="0" y="0" width="900" height="500" fill="#282a36" rx="8" ry="8"/>
-<g class="chrome"><rect class="header-bg" x="0" y="0" width="900" height="40" fill="#282a36" rx="8" ry="8"/>
-<rect x="0" y="32" width="900" height="8" fill="#282a36"/>
+    <rect class="window-bg" x="0" y="0" width="900" height="500" fill="#1e1e1e" rx="8" ry="8"/>
+<g class="chrome"><rect class="header-bg" x="0" y="0" width="900" height="40" fill="#1e1e1e" rx="8" ry="8"/>
+<rect x="0" y="32" width="900" height="8" fill="#1e1e1e"/>
 <rect x="762" y="0" width="46" height="40" fill="transparent"/>
 <rect x="808" y="0" width="46" height="40" fill="transparent"/>
 <rect x="854" y="0" width="46" height="40" fill="transparent"/>
-<line x1="780" y1="20" x2="790" y2="20" stroke="#f8f8f2" stroke-width="1"/>
-<rect x="826" y="15" width="10" height="10" stroke="#f8f8f2" stroke-width="1" fill="none"/>
-<line x1="872" y1="15" x2="882" y2="25" stroke="#f8f8f2" stroke-width="1"/>
-<line x1="882" y1="15" x2="872" y2="25" stroke="#f8f8f2" stroke-width="1"/>
+<line x1="780" y1="20" x2="790" y2="20" stroke="#c9d1d9" stroke-width="1"/>
+<rect x="826" y="15" width="10" height="10" stroke="#c9d1d9" stroke-width="1" fill="none"/>
+<line x1="872" y1="15" x2="882" y2="25" stroke="#c9d1d9" stroke-width="1"/>
+<line x1="882" y1="15" x2="872" y2="25" stroke="#c9d1d9" stroke-width="1"/>
 <text class="text fg" x="450" y="20" text-anchor="middle" style="dominant-baseline: central">PowerShell</text></g>
 <g class="text-layer">
 <text class="text f2" x="16" y="56">PS&gt;</text>
@@ -2045,14 +1877,13 @@
 <text class="text fg" x="43" y="98"> Write-Host &apos;Hello from Windows!&apos; -Foreg                                                     </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor-active" x="403" y="98" width="9" height="21" fill="#f8f8f2"/>
+<rect class="cursor-active" x="403" y="98" width="9" height="21" fill="#c9d1d9"/>
 </g>
-
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.500609;0.506586;1.000000"
-      dur="9.04s"
+      keyTimes="0.000000;0.493091;0.499309;1.000000"
+      dur="8.68s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -2060,18 +1891,16 @@
   </g>
 
   <g id="frame-57" visibility="hidden">
-    
-
-<rect class="window-bg" x="0" y="0" width="900" height="500" fill="#282a36" rx="8" ry="8"/>
-<g class="chrome"><rect class="header-bg" x="0" y="0" width="900" height="40" fill="#282a36" rx="8" ry="8"/>
-<rect x="0" y="32" width="900" height="8" fill="#282a36"/>
+    <rect class="window-bg" x="0" y="0" width="900" height="500" fill="#1e1e1e" rx="8" ry="8"/>
+<g class="chrome"><rect class="header-bg" x="0" y="0" width="900" height="40" fill="#1e1e1e" rx="8" ry="8"/>
+<rect x="0" y="32" width="900" height="8" fill="#1e1e1e"/>
 <rect x="762" y="0" width="46" height="40" fill="transparent"/>
 <rect x="808" y="0" width="46" height="40" fill="transparent"/>
 <rect x="854" y="0" width="46" height="40" fill="transparent"/>
-<line x1="780" y1="20" x2="790" y2="20" stroke="#f8f8f2" stroke-width="1"/>
-<rect x="826" y="15" width="10" height="10" stroke="#f8f8f2" stroke-width="1" fill="none"/>
-<line x1="872" y1="15" x2="882" y2="25" stroke="#f8f8f2" stroke-width="1"/>
-<line x1="882" y1="15" x2="872" y2="25" stroke="#f8f8f2" stroke-width="1"/>
+<line x1="780" y1="20" x2="790" y2="20" stroke="#c9d1d9" stroke-width="1"/>
+<rect x="826" y="15" width="10" height="10" stroke="#c9d1d9" stroke-width="1" fill="none"/>
+<line x1="872" y1="15" x2="882" y2="25" stroke="#c9d1d9" stroke-width="1"/>
+<line x1="882" y1="15" x2="872" y2="25" stroke="#c9d1d9" stroke-width="1"/>
 <text class="text fg" x="450" y="20" text-anchor="middle" style="dominant-baseline: central">PowerShell</text></g>
 <g class="text-layer">
 <text class="text f2" x="16" y="56">PS&gt;</text>
@@ -2081,14 +1910,13 @@
 <text class="text fg" x="43" y="98"> Write-Host &apos;Hello from Windows!&apos; -Foregr                                                    </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor-active" x="412" y="98" width="9" height="21" fill="#f8f8f2"/>
+<rect class="cursor-active" x="412" y="98" width="9" height="21" fill="#c9d1d9"/>
 </g>
-
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.506586;0.512784;1.000000"
-      dur="9.04s"
+      keyTimes="0.000000;0.499309;0.504721;1.000000"
+      dur="8.68s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -2096,18 +1924,16 @@
   </g>
 
   <g id="frame-58" visibility="hidden">
-    
-
-<rect class="window-bg" x="0" y="0" width="900" height="500" fill="#282a36" rx="8" ry="8"/>
-<g class="chrome"><rect class="header-bg" x="0" y="0" width="900" height="40" fill="#282a36" rx="8" ry="8"/>
-<rect x="0" y="32" width="900" height="8" fill="#282a36"/>
+    <rect class="window-bg" x="0" y="0" width="900" height="500" fill="#1e1e1e" rx="8" ry="8"/>
+<g class="chrome"><rect class="header-bg" x="0" y="0" width="900" height="40" fill="#1e1e1e" rx="8" ry="8"/>
+<rect x="0" y="32" width="900" height="8" fill="#1e1e1e"/>
 <rect x="762" y="0" width="46" height="40" fill="transparent"/>
 <rect x="808" y="0" width="46" height="40" fill="transparent"/>
 <rect x="854" y="0" width="46" height="40" fill="transparent"/>
-<line x1="780" y1="20" x2="790" y2="20" stroke="#f8f8f2" stroke-width="1"/>
-<rect x="826" y="15" width="10" height="10" stroke="#f8f8f2" stroke-width="1" fill="none"/>
-<line x1="872" y1="15" x2="882" y2="25" stroke="#f8f8f2" stroke-width="1"/>
-<line x1="882" y1="15" x2="872" y2="25" stroke="#f8f8f2" stroke-width="1"/>
+<line x1="780" y1="20" x2="790" y2="20" stroke="#c9d1d9" stroke-width="1"/>
+<rect x="826" y="15" width="10" height="10" stroke="#c9d1d9" stroke-width="1" fill="none"/>
+<line x1="872" y1="15" x2="882" y2="25" stroke="#c9d1d9" stroke-width="1"/>
+<line x1="882" y1="15" x2="872" y2="25" stroke="#c9d1d9" stroke-width="1"/>
 <text class="text fg" x="450" y="20" text-anchor="middle" style="dominant-baseline: central">PowerShell</text></g>
 <g class="text-layer">
 <text class="text f2" x="16" y="56">PS&gt;</text>
@@ -2117,14 +1943,13 @@
 <text class="text fg" x="43" y="98"> Write-Host &apos;Hello from Windows!&apos; -Foregro                                                   </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor-active" x="421" y="98" width="9" height="21" fill="#f8f8f2"/>
+<rect class="cursor-active" x="421" y="98" width="9" height="21" fill="#c9d1d9"/>
 </g>
-
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.512784;0.518871;1.000000"
-      dur="9.04s"
+      keyTimes="0.000000;0.504721;0.510709;1.000000"
+      dur="8.68s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -2132,18 +1957,16 @@
   </g>
 
   <g id="frame-59" visibility="hidden">
-    
-
-<rect class="window-bg" x="0" y="0" width="900" height="500" fill="#282a36" rx="8" ry="8"/>
-<g class="chrome"><rect class="header-bg" x="0" y="0" width="900" height="40" fill="#282a36" rx="8" ry="8"/>
-<rect x="0" y="32" width="900" height="8" fill="#282a36"/>
+    <rect class="window-bg" x="0" y="0" width="900" height="500" fill="#1e1e1e" rx="8" ry="8"/>
+<g class="chrome"><rect class="header-bg" x="0" y="0" width="900" height="40" fill="#1e1e1e" rx="8" ry="8"/>
+<rect x="0" y="32" width="900" height="8" fill="#1e1e1e"/>
 <rect x="762" y="0" width="46" height="40" fill="transparent"/>
 <rect x="808" y="0" width="46" height="40" fill="transparent"/>
 <rect x="854" y="0" width="46" height="40" fill="transparent"/>
-<line x1="780" y1="20" x2="790" y2="20" stroke="#f8f8f2" stroke-width="1"/>
-<rect x="826" y="15" width="10" height="10" stroke="#f8f8f2" stroke-width="1" fill="none"/>
-<line x1="872" y1="15" x2="882" y2="25" stroke="#f8f8f2" stroke-width="1"/>
-<line x1="882" y1="15" x2="872" y2="25" stroke="#f8f8f2" stroke-width="1"/>
+<line x1="780" y1="20" x2="790" y2="20" stroke="#c9d1d9" stroke-width="1"/>
+<rect x="826" y="15" width="10" height="10" stroke="#c9d1d9" stroke-width="1" fill="none"/>
+<line x1="872" y1="15" x2="882" y2="25" stroke="#c9d1d9" stroke-width="1"/>
+<line x1="882" y1="15" x2="872" y2="25" stroke="#c9d1d9" stroke-width="1"/>
 <text class="text fg" x="450" y="20" text-anchor="middle" style="dominant-baseline: central">PowerShell</text></g>
 <g class="text-layer">
 <text class="text f2" x="16" y="56">PS&gt;</text>
@@ -2153,14 +1976,13 @@
 <text class="text fg" x="43" y="98"> Write-Host &apos;Hello from Windows!&apos; -Foregrou                                                  </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor-active" x="430" y="98" width="9" height="21" fill="#f8f8f2"/>
+<rect class="cursor-active" x="430" y="98" width="9" height="21" fill="#c9d1d9"/>
 </g>
-
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.518871;0.524958;1.000000"
-      dur="9.04s"
+      keyTimes="0.000000;0.510709;0.516352;1.000000"
+      dur="8.68s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -2168,18 +1990,16 @@
   </g>
 
   <g id="frame-60" visibility="hidden">
-    
-
-<rect class="window-bg" x="0" y="0" width="900" height="500" fill="#282a36" rx="8" ry="8"/>
-<g class="chrome"><rect class="header-bg" x="0" y="0" width="900" height="40" fill="#282a36" rx="8" ry="8"/>
-<rect x="0" y="32" width="900" height="8" fill="#282a36"/>
+    <rect class="window-bg" x="0" y="0" width="900" height="500" fill="#1e1e1e" rx="8" ry="8"/>
+<g class="chrome"><rect class="header-bg" x="0" y="0" width="900" height="40" fill="#1e1e1e" rx="8" ry="8"/>
+<rect x="0" y="32" width="900" height="8" fill="#1e1e1e"/>
 <rect x="762" y="0" width="46" height="40" fill="transparent"/>
 <rect x="808" y="0" width="46" height="40" fill="transparent"/>
 <rect x="854" y="0" width="46" height="40" fill="transparent"/>
-<line x1="780" y1="20" x2="790" y2="20" stroke="#f8f8f2" stroke-width="1"/>
-<rect x="826" y="15" width="10" height="10" stroke="#f8f8f2" stroke-width="1" fill="none"/>
-<line x1="872" y1="15" x2="882" y2="25" stroke="#f8f8f2" stroke-width="1"/>
-<line x1="882" y1="15" x2="872" y2="25" stroke="#f8f8f2" stroke-width="1"/>
+<line x1="780" y1="20" x2="790" y2="20" stroke="#c9d1d9" stroke-width="1"/>
+<rect x="826" y="15" width="10" height="10" stroke="#c9d1d9" stroke-width="1" fill="none"/>
+<line x1="872" y1="15" x2="882" y2="25" stroke="#c9d1d9" stroke-width="1"/>
+<line x1="882" y1="15" x2="872" y2="25" stroke="#c9d1d9" stroke-width="1"/>
 <text class="text fg" x="450" y="20" text-anchor="middle" style="dominant-baseline: central">PowerShell</text></g>
 <g class="text-layer">
 <text class="text f2" x="16" y="56">PS&gt;</text>
@@ -2189,14 +2009,13 @@
 <text class="text fg" x="43" y="98"> Write-Host &apos;Hello from Windows!&apos; -Foregroun                                                 </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor-active" x="439" y="98" width="9" height="21" fill="#f8f8f2"/>
+<rect class="cursor-active" x="439" y="98" width="9" height="21" fill="#c9d1d9"/>
 </g>
-
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.524958;0.531157;1.000000"
-      dur="9.04s"
+      keyTimes="0.000000;0.516352;0.522455;1.000000"
+      dur="8.68s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -2204,18 +2023,16 @@
   </g>
 
   <g id="frame-61" visibility="hidden">
-    
-
-<rect class="window-bg" x="0" y="0" width="900" height="500" fill="#282a36" rx="8" ry="8"/>
-<g class="chrome"><rect class="header-bg" x="0" y="0" width="900" height="40" fill="#282a36" rx="8" ry="8"/>
-<rect x="0" y="32" width="900" height="8" fill="#282a36"/>
+    <rect class="window-bg" x="0" y="0" width="900" height="500" fill="#1e1e1e" rx="8" ry="8"/>
+<g class="chrome"><rect class="header-bg" x="0" y="0" width="900" height="40" fill="#1e1e1e" rx="8" ry="8"/>
+<rect x="0" y="32" width="900" height="8" fill="#1e1e1e"/>
 <rect x="762" y="0" width="46" height="40" fill="transparent"/>
 <rect x="808" y="0" width="46" height="40" fill="transparent"/>
 <rect x="854" y="0" width="46" height="40" fill="transparent"/>
-<line x1="780" y1="20" x2="790" y2="20" stroke="#f8f8f2" stroke-width="1"/>
-<rect x="826" y="15" width="10" height="10" stroke="#f8f8f2" stroke-width="1" fill="none"/>
-<line x1="872" y1="15" x2="882" y2="25" stroke="#f8f8f2" stroke-width="1"/>
-<line x1="882" y1="15" x2="872" y2="25" stroke="#f8f8f2" stroke-width="1"/>
+<line x1="780" y1="20" x2="790" y2="20" stroke="#c9d1d9" stroke-width="1"/>
+<rect x="826" y="15" width="10" height="10" stroke="#c9d1d9" stroke-width="1" fill="none"/>
+<line x1="872" y1="15" x2="882" y2="25" stroke="#c9d1d9" stroke-width="1"/>
+<line x1="882" y1="15" x2="872" y2="25" stroke="#c9d1d9" stroke-width="1"/>
 <text class="text fg" x="450" y="20" text-anchor="middle" style="dominant-baseline: central">PowerShell</text></g>
 <g class="text-layer">
 <text class="text f2" x="16" y="56">PS&gt;</text>
@@ -2225,14 +2042,13 @@
 <text class="text fg" x="43" y="98"> Write-Host &apos;Hello from Windows!&apos; -Foreground                                                </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor-active" x="448" y="98" width="9" height="21" fill="#f8f8f2"/>
+<rect class="cursor-active" x="448" y="98" width="9" height="21" fill="#c9d1d9"/>
 </g>
-
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.531157;0.537244;1.000000"
-      dur="9.04s"
+      keyTimes="0.000000;0.522455;0.527982;1.000000"
+      dur="8.68s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -2240,18 +2056,16 @@
   </g>
 
   <g id="frame-62" visibility="hidden">
-    
-
-<rect class="window-bg" x="0" y="0" width="900" height="500" fill="#282a36" rx="8" ry="8"/>
-<g class="chrome"><rect class="header-bg" x="0" y="0" width="900" height="40" fill="#282a36" rx="8" ry="8"/>
-<rect x="0" y="32" width="900" height="8" fill="#282a36"/>
+    <rect class="window-bg" x="0" y="0" width="900" height="500" fill="#1e1e1e" rx="8" ry="8"/>
+<g class="chrome"><rect class="header-bg" x="0" y="0" width="900" height="40" fill="#1e1e1e" rx="8" ry="8"/>
+<rect x="0" y="32" width="900" height="8" fill="#1e1e1e"/>
 <rect x="762" y="0" width="46" height="40" fill="transparent"/>
 <rect x="808" y="0" width="46" height="40" fill="transparent"/>
 <rect x="854" y="0" width="46" height="40" fill="transparent"/>
-<line x1="780" y1="20" x2="790" y2="20" stroke="#f8f8f2" stroke-width="1"/>
-<rect x="826" y="15" width="10" height="10" stroke="#f8f8f2" stroke-width="1" fill="none"/>
-<line x1="872" y1="15" x2="882" y2="25" stroke="#f8f8f2" stroke-width="1"/>
-<line x1="882" y1="15" x2="872" y2="25" stroke="#f8f8f2" stroke-width="1"/>
+<line x1="780" y1="20" x2="790" y2="20" stroke="#c9d1d9" stroke-width="1"/>
+<rect x="826" y="15" width="10" height="10" stroke="#c9d1d9" stroke-width="1" fill="none"/>
+<line x1="872" y1="15" x2="882" y2="25" stroke="#c9d1d9" stroke-width="1"/>
+<line x1="882" y1="15" x2="872" y2="25" stroke="#c9d1d9" stroke-width="1"/>
 <text class="text fg" x="450" y="20" text-anchor="middle" style="dominant-baseline: central">PowerShell</text></g>
 <g class="text-layer">
 <text class="text f2" x="16" y="56">PS&gt;</text>
@@ -2261,14 +2075,13 @@
 <text class="text fg" x="43" y="98"> Write-Host &apos;Hello from Windows!&apos; -ForegroundC                                               </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor-active" x="457" y="98" width="9" height="21" fill="#f8f8f2"/>
+<rect class="cursor-active" x="457" y="98" width="9" height="21" fill="#c9d1d9"/>
 </g>
-
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.537244;0.543553;1.000000"
-      dur="9.04s"
+      keyTimes="0.000000;0.527982;0.533395;1.000000"
+      dur="8.68s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -2276,18 +2089,16 @@
   </g>
 
   <g id="frame-63" visibility="hidden">
-    
-
-<rect class="window-bg" x="0" y="0" width="900" height="500" fill="#282a36" rx="8" ry="8"/>
-<g class="chrome"><rect class="header-bg" x="0" y="0" width="900" height="40" fill="#282a36" rx="8" ry="8"/>
-<rect x="0" y="32" width="900" height="8" fill="#282a36"/>
+    <rect class="window-bg" x="0" y="0" width="900" height="500" fill="#1e1e1e" rx="8" ry="8"/>
+<g class="chrome"><rect class="header-bg" x="0" y="0" width="900" height="40" fill="#1e1e1e" rx="8" ry="8"/>
+<rect x="0" y="32" width="900" height="8" fill="#1e1e1e"/>
 <rect x="762" y="0" width="46" height="40" fill="transparent"/>
 <rect x="808" y="0" width="46" height="40" fill="transparent"/>
 <rect x="854" y="0" width="46" height="40" fill="transparent"/>
-<line x1="780" y1="20" x2="790" y2="20" stroke="#f8f8f2" stroke-width="1"/>
-<rect x="826" y="15" width="10" height="10" stroke="#f8f8f2" stroke-width="1" fill="none"/>
-<line x1="872" y1="15" x2="882" y2="25" stroke="#f8f8f2" stroke-width="1"/>
-<line x1="882" y1="15" x2="872" y2="25" stroke="#f8f8f2" stroke-width="1"/>
+<line x1="780" y1="20" x2="790" y2="20" stroke="#c9d1d9" stroke-width="1"/>
+<rect x="826" y="15" width="10" height="10" stroke="#c9d1d9" stroke-width="1" fill="none"/>
+<line x1="872" y1="15" x2="882" y2="25" stroke="#c9d1d9" stroke-width="1"/>
+<line x1="882" y1="15" x2="872" y2="25" stroke="#c9d1d9" stroke-width="1"/>
 <text class="text fg" x="450" y="20" text-anchor="middle" style="dominant-baseline: central">PowerShell</text></g>
 <g class="text-layer">
 <text class="text f2" x="16" y="56">PS&gt;</text>
@@ -2297,14 +2108,13 @@
 <text class="text fg" x="43" y="98"> Write-Host &apos;Hello from Windows!&apos; -ForegroundCo                                              </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor-active" x="466" y="98" width="9" height="21" fill="#f8f8f2"/>
+<rect class="cursor-active" x="466" y="98" width="9" height="21" fill="#c9d1d9"/>
 </g>
-
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.543553;0.549862;1.000000"
-      dur="9.04s"
+      keyTimes="0.000000;0.533395;0.539728;1.000000"
+      dur="8.68s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -2312,18 +2122,16 @@
   </g>
 
   <g id="frame-64" visibility="hidden">
-    
-
-<rect class="window-bg" x="0" y="0" width="900" height="500" fill="#282a36" rx="8" ry="8"/>
-<g class="chrome"><rect class="header-bg" x="0" y="0" width="900" height="40" fill="#282a36" rx="8" ry="8"/>
-<rect x="0" y="32" width="900" height="8" fill="#282a36"/>
+    <rect class="window-bg" x="0" y="0" width="900" height="500" fill="#1e1e1e" rx="8" ry="8"/>
+<g class="chrome"><rect class="header-bg" x="0" y="0" width="900" height="40" fill="#1e1e1e" rx="8" ry="8"/>
+<rect x="0" y="32" width="900" height="8" fill="#1e1e1e"/>
 <rect x="762" y="0" width="46" height="40" fill="transparent"/>
 <rect x="808" y="0" width="46" height="40" fill="transparent"/>
 <rect x="854" y="0" width="46" height="40" fill="transparent"/>
-<line x1="780" y1="20" x2="790" y2="20" stroke="#f8f8f2" stroke-width="1"/>
-<rect x="826" y="15" width="10" height="10" stroke="#f8f8f2" stroke-width="1" fill="none"/>
-<line x1="872" y1="15" x2="882" y2="25" stroke="#f8f8f2" stroke-width="1"/>
-<line x1="882" y1="15" x2="872" y2="25" stroke="#f8f8f2" stroke-width="1"/>
+<line x1="780" y1="20" x2="790" y2="20" stroke="#c9d1d9" stroke-width="1"/>
+<rect x="826" y="15" width="10" height="10" stroke="#c9d1d9" stroke-width="1" fill="none"/>
+<line x1="872" y1="15" x2="882" y2="25" stroke="#c9d1d9" stroke-width="1"/>
+<line x1="882" y1="15" x2="872" y2="25" stroke="#c9d1d9" stroke-width="1"/>
 <text class="text fg" x="450" y="20" text-anchor="middle" style="dominant-baseline: central">PowerShell</text></g>
 <g class="text-layer">
 <text class="text f2" x="16" y="56">PS&gt;</text>
@@ -2333,14 +2141,13 @@
 <text class="text fg" x="43" y="98"> Write-Host &apos;Hello from Windows!&apos; -ForegroundCol                                             </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor-active" x="475" y="98" width="9" height="21" fill="#f8f8f2"/>
+<rect class="cursor-active" x="475" y="98" width="9" height="21" fill="#c9d1d9"/>
 </g>
-
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.549862;0.556281;1.000000"
-      dur="9.04s"
+      keyTimes="0.000000;0.539728;0.545831;1.000000"
+      dur="8.68s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -2348,18 +2155,16 @@
   </g>
 
   <g id="frame-65" visibility="hidden">
-    
-
-<rect class="window-bg" x="0" y="0" width="900" height="500" fill="#282a36" rx="8" ry="8"/>
-<g class="chrome"><rect class="header-bg" x="0" y="0" width="900" height="40" fill="#282a36" rx="8" ry="8"/>
-<rect x="0" y="32" width="900" height="8" fill="#282a36"/>
+    <rect class="window-bg" x="0" y="0" width="900" height="500" fill="#1e1e1e" rx="8" ry="8"/>
+<g class="chrome"><rect class="header-bg" x="0" y="0" width="900" height="40" fill="#1e1e1e" rx="8" ry="8"/>
+<rect x="0" y="32" width="900" height="8" fill="#1e1e1e"/>
 <rect x="762" y="0" width="46" height="40" fill="transparent"/>
 <rect x="808" y="0" width="46" height="40" fill="transparent"/>
 <rect x="854" y="0" width="46" height="40" fill="transparent"/>
-<line x1="780" y1="20" x2="790" y2="20" stroke="#f8f8f2" stroke-width="1"/>
-<rect x="826" y="15" width="10" height="10" stroke="#f8f8f2" stroke-width="1" fill="none"/>
-<line x1="872" y1="15" x2="882" y2="25" stroke="#f8f8f2" stroke-width="1"/>
-<line x1="882" y1="15" x2="872" y2="25" stroke="#f8f8f2" stroke-width="1"/>
+<line x1="780" y1="20" x2="790" y2="20" stroke="#c9d1d9" stroke-width="1"/>
+<rect x="826" y="15" width="10" height="10" stroke="#c9d1d9" stroke-width="1" fill="none"/>
+<line x1="872" y1="15" x2="882" y2="25" stroke="#c9d1d9" stroke-width="1"/>
+<line x1="882" y1="15" x2="872" y2="25" stroke="#c9d1d9" stroke-width="1"/>
 <text class="text fg" x="450" y="20" text-anchor="middle" style="dominant-baseline: central">PowerShell</text></g>
 <g class="text-layer">
 <text class="text f2" x="16" y="56">PS&gt;</text>
@@ -2369,14 +2174,13 @@
 <text class="text fg" x="43" y="98"> Write-Host &apos;Hello from Windows!&apos; -ForegroundColo                                            </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor-active" x="484" y="98" width="9" height="21" fill="#f8f8f2"/>
+<rect class="cursor-active" x="484" y="98" width="9" height="21" fill="#c9d1d9"/>
 </g>
-
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.556281;0.562811;1.000000"
-      dur="9.04s"
+      keyTimes="0.000000;0.545831;0.552050;1.000000"
+      dur="8.68s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -2384,18 +2188,16 @@
   </g>
 
   <g id="frame-66" visibility="hidden">
-    
-
-<rect class="window-bg" x="0" y="0" width="900" height="500" fill="#282a36" rx="8" ry="8"/>
-<g class="chrome"><rect class="header-bg" x="0" y="0" width="900" height="40" fill="#282a36" rx="8" ry="8"/>
-<rect x="0" y="32" width="900" height="8" fill="#282a36"/>
+    <rect class="window-bg" x="0" y="0" width="900" height="500" fill="#1e1e1e" rx="8" ry="8"/>
+<g class="chrome"><rect class="header-bg" x="0" y="0" width="900" height="40" fill="#1e1e1e" rx="8" ry="8"/>
+<rect x="0" y="32" width="900" height="8" fill="#1e1e1e"/>
 <rect x="762" y="0" width="46" height="40" fill="transparent"/>
 <rect x="808" y="0" width="46" height="40" fill="transparent"/>
 <rect x="854" y="0" width="46" height="40" fill="transparent"/>
-<line x1="780" y1="20" x2="790" y2="20" stroke="#f8f8f2" stroke-width="1"/>
-<rect x="826" y="15" width="10" height="10" stroke="#f8f8f2" stroke-width="1" fill="none"/>
-<line x1="872" y1="15" x2="882" y2="25" stroke="#f8f8f2" stroke-width="1"/>
-<line x1="882" y1="15" x2="872" y2="25" stroke="#f8f8f2" stroke-width="1"/>
+<line x1="780" y1="20" x2="790" y2="20" stroke="#c9d1d9" stroke-width="1"/>
+<rect x="826" y="15" width="10" height="10" stroke="#c9d1d9" stroke-width="1" fill="none"/>
+<line x1="872" y1="15" x2="882" y2="25" stroke="#c9d1d9" stroke-width="1"/>
+<line x1="882" y1="15" x2="872" y2="25" stroke="#c9d1d9" stroke-width="1"/>
 <text class="text fg" x="450" y="20" text-anchor="middle" style="dominant-baseline: central">PowerShell</text></g>
 <g class="text-layer">
 <text class="text f2" x="16" y="56">PS&gt;</text>
@@ -2405,14 +2207,13 @@
 <text class="text fg" x="43" y="98"> Write-Host &apos;Hello from Windows!&apos; -ForegroundColor                                           </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor-active" x="493" y="98" width="9" height="21" fill="#f8f8f2"/>
+<rect class="cursor-active" x="493" y="98" width="9" height="21" fill="#c9d1d9"/>
 </g>
-
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.562811;0.569563;1.000000"
-      dur="9.04s"
+      keyTimes="0.000000;0.552050;0.557577;1.000000"
+      dur="8.68s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -2420,18 +2221,16 @@
   </g>
 
   <g id="frame-67" visibility="hidden">
-    
-
-<rect class="window-bg" x="0" y="0" width="900" height="500" fill="#282a36" rx="8" ry="8"/>
-<g class="chrome"><rect class="header-bg" x="0" y="0" width="900" height="40" fill="#282a36" rx="8" ry="8"/>
-<rect x="0" y="32" width="900" height="8" fill="#282a36"/>
+    <rect class="window-bg" x="0" y="0" width="900" height="500" fill="#1e1e1e" rx="8" ry="8"/>
+<g class="chrome"><rect class="header-bg" x="0" y="0" width="900" height="40" fill="#1e1e1e" rx="8" ry="8"/>
+<rect x="0" y="32" width="900" height="8" fill="#1e1e1e"/>
 <rect x="762" y="0" width="46" height="40" fill="transparent"/>
 <rect x="808" y="0" width="46" height="40" fill="transparent"/>
 <rect x="854" y="0" width="46" height="40" fill="transparent"/>
-<line x1="780" y1="20" x2="790" y2="20" stroke="#f8f8f2" stroke-width="1"/>
-<rect x="826" y="15" width="10" height="10" stroke="#f8f8f2" stroke-width="1" fill="none"/>
-<line x1="872" y1="15" x2="882" y2="25" stroke="#f8f8f2" stroke-width="1"/>
-<line x1="882" y1="15" x2="872" y2="25" stroke="#f8f8f2" stroke-width="1"/>
+<line x1="780" y1="20" x2="790" y2="20" stroke="#c9d1d9" stroke-width="1"/>
+<rect x="826" y="15" width="10" height="10" stroke="#c9d1d9" stroke-width="1" fill="none"/>
+<line x1="872" y1="15" x2="882" y2="25" stroke="#c9d1d9" stroke-width="1"/>
+<line x1="882" y1="15" x2="872" y2="25" stroke="#c9d1d9" stroke-width="1"/>
 <text class="text fg" x="450" y="20" text-anchor="middle" style="dominant-baseline: central">PowerShell</text></g>
 <g class="text-layer">
 <text class="text f2" x="16" y="56">PS&gt;</text>
@@ -2441,14 +2240,13 @@
 <text class="text fg" x="43" y="98"> Write-Host &apos;Hello from Windows!&apos; -ForegroundColor                                           </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor-active" x="502" y="98" width="9" height="21" fill="#f8f8f2"/>
+<rect class="cursor-active" x="502" y="98" width="9" height="21" fill="#c9d1d9"/>
 </g>
-
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.569563;0.576314;1.000000"
-      dur="9.04s"
+      keyTimes="0.000000;0.557577;0.563335;1.000000"
+      dur="8.68s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -2456,18 +2254,16 @@
   </g>
 
   <g id="frame-68" visibility="hidden">
-    
-
-<rect class="window-bg" x="0" y="0" width="900" height="500" fill="#282a36" rx="8" ry="8"/>
-<g class="chrome"><rect class="header-bg" x="0" y="0" width="900" height="40" fill="#282a36" rx="8" ry="8"/>
-<rect x="0" y="32" width="900" height="8" fill="#282a36"/>
+    <rect class="window-bg" x="0" y="0" width="900" height="500" fill="#1e1e1e" rx="8" ry="8"/>
+<g class="chrome"><rect class="header-bg" x="0" y="0" width="900" height="40" fill="#1e1e1e" rx="8" ry="8"/>
+<rect x="0" y="32" width="900" height="8" fill="#1e1e1e"/>
 <rect x="762" y="0" width="46" height="40" fill="transparent"/>
 <rect x="808" y="0" width="46" height="40" fill="transparent"/>
 <rect x="854" y="0" width="46" height="40" fill="transparent"/>
-<line x1="780" y1="20" x2="790" y2="20" stroke="#f8f8f2" stroke-width="1"/>
-<rect x="826" y="15" width="10" height="10" stroke="#f8f8f2" stroke-width="1" fill="none"/>
-<line x1="872" y1="15" x2="882" y2="25" stroke="#f8f8f2" stroke-width="1"/>
-<line x1="882" y1="15" x2="872" y2="25" stroke="#f8f8f2" stroke-width="1"/>
+<line x1="780" y1="20" x2="790" y2="20" stroke="#c9d1d9" stroke-width="1"/>
+<rect x="826" y="15" width="10" height="10" stroke="#c9d1d9" stroke-width="1" fill="none"/>
+<line x1="872" y1="15" x2="882" y2="25" stroke="#c9d1d9" stroke-width="1"/>
+<line x1="882" y1="15" x2="872" y2="25" stroke="#c9d1d9" stroke-width="1"/>
 <text class="text fg" x="450" y="20" text-anchor="middle" style="dominant-baseline: central">PowerShell</text></g>
 <g class="text-layer">
 <text class="text f2" x="16" y="56">PS&gt;</text>
@@ -2477,14 +2273,13 @@
 <text class="text fg" x="43" y="98"> Write-Host &apos;Hello from Windows!&apos; -ForegroundColor C                                         </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor-active" x="511" y="98" width="9" height="21" fill="#f8f8f2"/>
+<rect class="cursor-active" x="511" y="98" width="9" height="21" fill="#c9d1d9"/>
 </g>
-
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.576314;0.582512;1.000000"
-      dur="9.04s"
+      keyTimes="0.000000;0.563335;0.569208;1.000000"
+      dur="8.68s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -2492,18 +2287,16 @@
   </g>
 
   <g id="frame-69" visibility="hidden">
-    
-
-<rect class="window-bg" x="0" y="0" width="900" height="500" fill="#282a36" rx="8" ry="8"/>
-<g class="chrome"><rect class="header-bg" x="0" y="0" width="900" height="40" fill="#282a36" rx="8" ry="8"/>
-<rect x="0" y="32" width="900" height="8" fill="#282a36"/>
+    <rect class="window-bg" x="0" y="0" width="900" height="500" fill="#1e1e1e" rx="8" ry="8"/>
+<g class="chrome"><rect class="header-bg" x="0" y="0" width="900" height="40" fill="#1e1e1e" rx="8" ry="8"/>
+<rect x="0" y="32" width="900" height="8" fill="#1e1e1e"/>
 <rect x="762" y="0" width="46" height="40" fill="transparent"/>
 <rect x="808" y="0" width="46" height="40" fill="transparent"/>
 <rect x="854" y="0" width="46" height="40" fill="transparent"/>
-<line x1="780" y1="20" x2="790" y2="20" stroke="#f8f8f2" stroke-width="1"/>
-<rect x="826" y="15" width="10" height="10" stroke="#f8f8f2" stroke-width="1" fill="none"/>
-<line x1="872" y1="15" x2="882" y2="25" stroke="#f8f8f2" stroke-width="1"/>
-<line x1="882" y1="15" x2="872" y2="25" stroke="#f8f8f2" stroke-width="1"/>
+<line x1="780" y1="20" x2="790" y2="20" stroke="#c9d1d9" stroke-width="1"/>
+<rect x="826" y="15" width="10" height="10" stroke="#c9d1d9" stroke-width="1" fill="none"/>
+<line x1="872" y1="15" x2="882" y2="25" stroke="#c9d1d9" stroke-width="1"/>
+<line x1="882" y1="15" x2="872" y2="25" stroke="#c9d1d9" stroke-width="1"/>
 <text class="text fg" x="450" y="20" text-anchor="middle" style="dominant-baseline: central">PowerShell</text></g>
 <g class="text-layer">
 <text class="text f2" x="16" y="56">PS&gt;</text>
@@ -2513,14 +2306,13 @@
 <text class="text fg" x="43" y="98"> Write-Host &apos;Hello from Windows!&apos; -ForegroundColor Cy                                        </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor-active" x="520" y="98" width="9" height="21" fill="#f8f8f2"/>
+<rect class="cursor-active" x="520" y="98" width="9" height="21" fill="#c9d1d9"/>
 </g>
-
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.582512;0.588932;1.000000"
-      dur="9.04s"
+      keyTimes="0.000000;0.569208;0.575081;1.000000"
+      dur="8.68s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -2528,18 +2320,16 @@
   </g>
 
   <g id="frame-70" visibility="hidden">
-    
-
-<rect class="window-bg" x="0" y="0" width="900" height="500" fill="#282a36" rx="8" ry="8"/>
-<g class="chrome"><rect class="header-bg" x="0" y="0" width="900" height="40" fill="#282a36" rx="8" ry="8"/>
-<rect x="0" y="32" width="900" height="8" fill="#282a36"/>
+    <rect class="window-bg" x="0" y="0" width="900" height="500" fill="#1e1e1e" rx="8" ry="8"/>
+<g class="chrome"><rect class="header-bg" x="0" y="0" width="900" height="40" fill="#1e1e1e" rx="8" ry="8"/>
+<rect x="0" y="32" width="900" height="8" fill="#1e1e1e"/>
 <rect x="762" y="0" width="46" height="40" fill="transparent"/>
 <rect x="808" y="0" width="46" height="40" fill="transparent"/>
 <rect x="854" y="0" width="46" height="40" fill="transparent"/>
-<line x1="780" y1="20" x2="790" y2="20" stroke="#f8f8f2" stroke-width="1"/>
-<rect x="826" y="15" width="10" height="10" stroke="#f8f8f2" stroke-width="1" fill="none"/>
-<line x1="872" y1="15" x2="882" y2="25" stroke="#f8f8f2" stroke-width="1"/>
-<line x1="882" y1="15" x2="872" y2="25" stroke="#f8f8f2" stroke-width="1"/>
+<line x1="780" y1="20" x2="790" y2="20" stroke="#c9d1d9" stroke-width="1"/>
+<rect x="826" y="15" width="10" height="10" stroke="#c9d1d9" stroke-width="1" fill="none"/>
+<line x1="872" y1="15" x2="882" y2="25" stroke="#c9d1d9" stroke-width="1"/>
+<line x1="882" y1="15" x2="872" y2="25" stroke="#c9d1d9" stroke-width="1"/>
 <text class="text fg" x="450" y="20" text-anchor="middle" style="dominant-baseline: central">PowerShell</text></g>
 <g class="text-layer">
 <text class="text f2" x="16" y="56">PS&gt;</text>
@@ -2549,14 +2339,13 @@
 <text class="text fg" x="43" y="98"> Write-Host &apos;Hello from Windows!&apos; -ForegroundColor Cya                                       </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor-active" x="529" y="98" width="9" height="21" fill="#f8f8f2"/>
+<rect class="cursor-active" x="529" y="98" width="9" height="21" fill="#c9d1d9"/>
 </g>
-
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.588932;0.595462;1.000000"
-      dur="9.04s"
+      keyTimes="0.000000;0.575081;0.580953;1.000000"
+      dur="8.68s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -2564,18 +2353,16 @@
   </g>
 
   <g id="frame-71" visibility="hidden">
-    
-
-<rect class="window-bg" x="0" y="0" width="900" height="500" fill="#282a36" rx="8" ry="8"/>
-<g class="chrome"><rect class="header-bg" x="0" y="0" width="900" height="40" fill="#282a36" rx="8" ry="8"/>
-<rect x="0" y="32" width="900" height="8" fill="#282a36"/>
+    <rect class="window-bg" x="0" y="0" width="900" height="500" fill="#1e1e1e" rx="8" ry="8"/>
+<g class="chrome"><rect class="header-bg" x="0" y="0" width="900" height="40" fill="#1e1e1e" rx="8" ry="8"/>
+<rect x="0" y="32" width="900" height="8" fill="#1e1e1e"/>
 <rect x="762" y="0" width="46" height="40" fill="transparent"/>
 <rect x="808" y="0" width="46" height="40" fill="transparent"/>
 <rect x="854" y="0" width="46" height="40" fill="transparent"/>
-<line x1="780" y1="20" x2="790" y2="20" stroke="#f8f8f2" stroke-width="1"/>
-<rect x="826" y="15" width="10" height="10" stroke="#f8f8f2" stroke-width="1" fill="none"/>
-<line x1="872" y1="15" x2="882" y2="25" stroke="#f8f8f2" stroke-width="1"/>
-<line x1="882" y1="15" x2="872" y2="25" stroke="#f8f8f2" stroke-width="1"/>
+<line x1="780" y1="20" x2="790" y2="20" stroke="#c9d1d9" stroke-width="1"/>
+<rect x="826" y="15" width="10" height="10" stroke="#c9d1d9" stroke-width="1" fill="none"/>
+<line x1="872" y1="15" x2="882" y2="25" stroke="#c9d1d9" stroke-width="1"/>
+<line x1="882" y1="15" x2="872" y2="25" stroke="#c9d1d9" stroke-width="1"/>
 <text class="text fg" x="450" y="20" text-anchor="middle" style="dominant-baseline: central">PowerShell</text></g>
 <g class="text-layer">
 <text class="text f2" x="16" y="56">PS&gt;</text>
@@ -2585,14 +2372,13 @@
 <text class="text fg" x="43" y="98"> Write-Host &apos;Hello from Windows!&apos; -ForegroundColor Cyan                                      </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor-active" x="538" y="98" width="9" height="21" fill="#f8f8f2"/>
+<rect class="cursor-active" x="538" y="98" width="9" height="21" fill="#c9d1d9"/>
 </g>
-
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.595462;0.640509;1.000000"
-      dur="9.04s"
+      keyTimes="0.000000;0.580953;0.627015;1.000000"
+      dur="8.68s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -2600,18 +2386,16 @@
   </g>
 
   <g id="frame-72" visibility="hidden">
-    
-
-<rect class="window-bg" x="0" y="0" width="900" height="500" fill="#282a36" rx="8" ry="8"/>
-<g class="chrome"><rect class="header-bg" x="0" y="0" width="900" height="40" fill="#282a36" rx="8" ry="8"/>
-<rect x="0" y="32" width="900" height="8" fill="#282a36"/>
+    <rect class="window-bg" x="0" y="0" width="900" height="500" fill="#1e1e1e" rx="8" ry="8"/>
+<g class="chrome"><rect class="header-bg" x="0" y="0" width="900" height="40" fill="#1e1e1e" rx="8" ry="8"/>
+<rect x="0" y="32" width="900" height="8" fill="#1e1e1e"/>
 <rect x="762" y="0" width="46" height="40" fill="transparent"/>
 <rect x="808" y="0" width="46" height="40" fill="transparent"/>
 <rect x="854" y="0" width="46" height="40" fill="transparent"/>
-<line x1="780" y1="20" x2="790" y2="20" stroke="#f8f8f2" stroke-width="1"/>
-<rect x="826" y="15" width="10" height="10" stroke="#f8f8f2" stroke-width="1" fill="none"/>
-<line x1="872" y1="15" x2="882" y2="25" stroke="#f8f8f2" stroke-width="1"/>
-<line x1="882" y1="15" x2="872" y2="25" stroke="#f8f8f2" stroke-width="1"/>
+<line x1="780" y1="20" x2="790" y2="20" stroke="#c9d1d9" stroke-width="1"/>
+<rect x="826" y="15" width="10" height="10" stroke="#c9d1d9" stroke-width="1" fill="none"/>
+<line x1="872" y1="15" x2="882" y2="25" stroke="#c9d1d9" stroke-width="1"/>
+<line x1="882" y1="15" x2="872" y2="25" stroke="#c9d1d9" stroke-width="1"/>
 <text class="text fg" x="450" y="20" text-anchor="middle" style="dominant-baseline: central">PowerShell</text></g>
 <g class="text-layer">
 <text class="text f2" x="16" y="56">PS&gt;</text>
@@ -2621,14 +2405,13 @@
 <text class="text fg" x="43" y="98"> Write-Host &apos;Hello from Windows!&apos; -ForegroundColor Cyan                                      </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor" x="538" y="98" width="9" height="21" fill="#f8f8f2"/>
+<rect class="cursor" x="538" y="98" width="9" height="21" fill="#c9d1d9"/>
 </g>
-
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.640509;0.652463;1.000000"
-      dur="9.04s"
+      keyTimes="0.000000;0.627015;0.639337;1.000000"
+      dur="8.68s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -2636,18 +2419,16 @@
   </g>
 
   <g id="frame-73" visibility="hidden">
-    
-
-<rect class="window-bg" x="0" y="0" width="900" height="500" fill="#282a36" rx="8" ry="8"/>
-<g class="chrome"><rect class="header-bg" x="0" y="0" width="900" height="40" fill="#282a36" rx="8" ry="8"/>
-<rect x="0" y="32" width="900" height="8" fill="#282a36"/>
+    <rect class="window-bg" x="0" y="0" width="900" height="500" fill="#1e1e1e" rx="8" ry="8"/>
+<g class="chrome"><rect class="header-bg" x="0" y="0" width="900" height="40" fill="#1e1e1e" rx="8" ry="8"/>
+<rect x="0" y="32" width="900" height="8" fill="#1e1e1e"/>
 <rect x="762" y="0" width="46" height="40" fill="transparent"/>
 <rect x="808" y="0" width="46" height="40" fill="transparent"/>
 <rect x="854" y="0" width="46" height="40" fill="transparent"/>
-<line x1="780" y1="20" x2="790" y2="20" stroke="#f8f8f2" stroke-width="1"/>
-<rect x="826" y="15" width="10" height="10" stroke="#f8f8f2" stroke-width="1" fill="none"/>
-<line x1="872" y1="15" x2="882" y2="25" stroke="#f8f8f2" stroke-width="1"/>
-<line x1="882" y1="15" x2="872" y2="25" stroke="#f8f8f2" stroke-width="1"/>
+<line x1="780" y1="20" x2="790" y2="20" stroke="#c9d1d9" stroke-width="1"/>
+<rect x="826" y="15" width="10" height="10" stroke="#c9d1d9" stroke-width="1" fill="none"/>
+<line x1="872" y1="15" x2="882" y2="25" stroke="#c9d1d9" stroke-width="1"/>
+<line x1="882" y1="15" x2="872" y2="25" stroke="#c9d1d9" stroke-width="1"/>
 <text class="text fg" x="450" y="20" text-anchor="middle" style="dominant-baseline: central">PowerShell</text></g>
 <g class="text-layer">
 <text class="text f2" x="16" y="56">PS&gt;</text>
@@ -2656,12 +2437,11 @@
 <text class="text f2" x="16" y="98">PS&gt;</text>
 <text class="text fg" x="43" y="98"> Write-Host &apos;Hello from Windows!&apos; -ForegroundColor Cyan                                      </text>
 </g>
-
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.652463;0.665523;1.000000"
-      dur="9.04s"
+      keyTimes="0.000000;0.639337;0.652579;1.000000"
+      dur="8.68s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -2669,18 +2449,16 @@
   </g>
 
   <g id="frame-74" visibility="hidden">
-    
-
-<rect class="window-bg" x="0" y="0" width="900" height="500" fill="#282a36" rx="8" ry="8"/>
-<g class="chrome"><rect class="header-bg" x="0" y="0" width="900" height="40" fill="#282a36" rx="8" ry="8"/>
-<rect x="0" y="32" width="900" height="8" fill="#282a36"/>
+    <rect class="window-bg" x="0" y="0" width="900" height="500" fill="#1e1e1e" rx="8" ry="8"/>
+<g class="chrome"><rect class="header-bg" x="0" y="0" width="900" height="40" fill="#1e1e1e" rx="8" ry="8"/>
+<rect x="0" y="32" width="900" height="8" fill="#1e1e1e"/>
 <rect x="762" y="0" width="46" height="40" fill="transparent"/>
 <rect x="808" y="0" width="46" height="40" fill="transparent"/>
 <rect x="854" y="0" width="46" height="40" fill="transparent"/>
-<line x1="780" y1="20" x2="790" y2="20" stroke="#f8f8f2" stroke-width="1"/>
-<rect x="826" y="15" width="10" height="10" stroke="#f8f8f2" stroke-width="1" fill="none"/>
-<line x1="872" y1="15" x2="882" y2="25" stroke="#f8f8f2" stroke-width="1"/>
-<line x1="882" y1="15" x2="872" y2="25" stroke="#f8f8f2" stroke-width="1"/>
+<line x1="780" y1="20" x2="790" y2="20" stroke="#c9d1d9" stroke-width="1"/>
+<rect x="826" y="15" width="10" height="10" stroke="#c9d1d9" stroke-width="1" fill="none"/>
+<line x1="872" y1="15" x2="882" y2="25" stroke="#c9d1d9" stroke-width="1"/>
+<line x1="882" y1="15" x2="872" y2="25" stroke="#c9d1d9" stroke-width="1"/>
 <text class="text fg" x="450" y="20" text-anchor="middle" style="dominant-baseline: central">PowerShell</text></g>
 <g class="text-layer">
 <text class="text f2" x="16" y="56">PS&gt;</text>
@@ -2692,14 +2470,13 @@
 <text class="text f2" x="16" y="140">PS&gt;</text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor" x="52" y="140" width="9" height="21" fill="#f8f8f2"/>
+<rect class="cursor" x="52" y="140" width="9" height="21" fill="#c9d1d9"/>
 </g>
-
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.665523;0.888434;1.000000"
-      dur="9.04s"
+      keyTimes="0.000000;0.652579;0.884040;1.000000"
+      dur="8.68s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -2707,18 +2484,16 @@
   </g>
 
   <g id="frame-75" visibility="hidden">
-    
-
-<rect class="window-bg" x="0" y="0" width="900" height="500" fill="#282a36" rx="8" ry="8"/>
-<g class="chrome"><rect class="header-bg" x="0" y="0" width="900" height="40" fill="#282a36" rx="8" ry="8"/>
-<rect x="0" y="32" width="900" height="8" fill="#282a36"/>
+    <rect class="window-bg" x="0" y="0" width="900" height="500" fill="#1e1e1e" rx="8" ry="8"/>
+<g class="chrome"><rect class="header-bg" x="0" y="0" width="900" height="40" fill="#1e1e1e" rx="8" ry="8"/>
+<rect x="0" y="32" width="900" height="8" fill="#1e1e1e"/>
 <rect x="762" y="0" width="46" height="40" fill="transparent"/>
 <rect x="808" y="0" width="46" height="40" fill="transparent"/>
 <rect x="854" y="0" width="46" height="40" fill="transparent"/>
-<line x1="780" y1="20" x2="790" y2="20" stroke="#f8f8f2" stroke-width="1"/>
-<rect x="826" y="15" width="10" height="10" stroke="#f8f8f2" stroke-width="1" fill="none"/>
-<line x1="872" y1="15" x2="882" y2="25" stroke="#f8f8f2" stroke-width="1"/>
-<line x1="882" y1="15" x2="872" y2="25" stroke="#f8f8f2" stroke-width="1"/>
+<line x1="780" y1="20" x2="790" y2="20" stroke="#c9d1d9" stroke-width="1"/>
+<rect x="826" y="15" width="10" height="10" stroke="#c9d1d9" stroke-width="1" fill="none"/>
+<line x1="872" y1="15" x2="882" y2="25" stroke="#c9d1d9" stroke-width="1"/>
+<line x1="882" y1="15" x2="872" y2="25" stroke="#c9d1d9" stroke-width="1"/>
 <text class="text fg" x="450" y="20" text-anchor="middle" style="dominant-baseline: central">PowerShell</text></g>
 <g class="text-layer">
 <text class="text f2" x="16" y="56">PS&gt;</text>
@@ -2730,14 +2505,13 @@
 <text class="text f2" x="16" y="140">PS&gt;</text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor" x="52" y="140" width="9" height="21" fill="#f8f8f2"/>
+<rect class="cursor" x="52" y="140" width="9" height="21" fill="#c9d1d9"/>
 </g>
-
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.888434;0.889319;1.000000"
-      dur="9.04s"
+      keyTimes="0.000000;0.884040;0.884846;1.000000"
+      dur="8.68s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -2745,18 +2519,16 @@
   </g>
 
   <g id="frame-76" visibility="hidden">
-    
-
-<rect class="window-bg" x="0" y="0" width="900" height="500" fill="#282a36" rx="8" ry="8"/>
-<g class="chrome"><rect class="header-bg" x="0" y="0" width="900" height="40" fill="#282a36" rx="8" ry="8"/>
-<rect x="0" y="32" width="900" height="8" fill="#282a36"/>
+    <rect class="window-bg" x="0" y="0" width="900" height="500" fill="#1e1e1e" rx="8" ry="8"/>
+<g class="chrome"><rect class="header-bg" x="0" y="0" width="900" height="40" fill="#1e1e1e" rx="8" ry="8"/>
+<rect x="0" y="32" width="900" height="8" fill="#1e1e1e"/>
 <rect x="762" y="0" width="46" height="40" fill="transparent"/>
 <rect x="808" y="0" width="46" height="40" fill="transparent"/>
 <rect x="854" y="0" width="46" height="40" fill="transparent"/>
-<line x1="780" y1="20" x2="790" y2="20" stroke="#f8f8f2" stroke-width="1"/>
-<rect x="826" y="15" width="10" height="10" stroke="#f8f8f2" stroke-width="1" fill="none"/>
-<line x1="872" y1="15" x2="882" y2="25" stroke="#f8f8f2" stroke-width="1"/>
-<line x1="882" y1="15" x2="872" y2="25" stroke="#f8f8f2" stroke-width="1"/>
+<line x1="780" y1="20" x2="790" y2="20" stroke="#c9d1d9" stroke-width="1"/>
+<rect x="826" y="15" width="10" height="10" stroke="#c9d1d9" stroke-width="1" fill="none"/>
+<line x1="872" y1="15" x2="882" y2="25" stroke="#c9d1d9" stroke-width="1"/>
+<line x1="882" y1="15" x2="872" y2="25" stroke="#c9d1d9" stroke-width="1"/>
 <text class="text fg" x="450" y="20" text-anchor="middle" style="dominant-baseline: central">PowerShell</text></g>
 <g class="text-layer">
 <text class="text f2" x="16" y="56">PS&gt;</text>
@@ -2768,17 +2540,17 @@
 <text class="text f2" x="16" y="140">PS&gt;</text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor" x="52" y="140" width="9" height="21" fill="#f8f8f2"/>
+<rect class="cursor" x="52" y="140" width="9" height="21" fill="#c9d1d9"/>
 </g>
-
     <animate
       attributeName="visibility"
       values="hidden;visible;visible"
-      keyTimes="0.000000;0.889319;1.000000"
-      dur="9.04s"
+      keyTimes="0.000000;0.884846;1.000000"
+      dur="8.68s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
     />
+  </g>
   </g>
 </svg>

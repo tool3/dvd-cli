@@ -1,4 +1,5 @@
 <svg width="800" height="400" xmlns="http://www.w3.org/2000/svg">
+  <defs><clipPath id="rounded-corners"><rect x="0" y="0" width="800" height="400" rx="8" ry="8"/></clipPath></defs>
   <style>
     
 .text {
@@ -56,27 +57,25 @@
 
   </style>
 
+  <g clip-path="url(#rounded-corners)">
   <!-- Persistent background - never animated -->
-  <rect width="100%" height="100%" fill="#272822" />
+  <rect width="100%" height="100%" fill="#272822" rx="8" ry="8" />
 
   <!-- Animated frames with discrete visibility transitions -->
   
   <g id="frame-0" visibility="visible">
-    
-
-<rect class="window-bg" x="0" y="0" width="800" height="400" fill="#272822" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="800" height="400" fill="#272822" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f10" x="16" y="16">$</text>
 </g>
 <g class="cursor-layer">
 <rect class="cursor" x="35.2" y="16" width="9.6" height="22.4" fill="#f8f8f2"/>
 </g>
-
     <animate
       attributeName="visibility"
       values="visible;hidden;hidden"
-      keyTimes="0.000000;0.009306;1.000000"
-      dur="5.70s"
+      keyTimes="0.000000;0.009432;1.000000"
+      dur="5.62s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -84,9 +83,7 @@
   </g>
 
   <g id="frame-1" visibility="hidden">
-    
-
-<rect class="window-bg" x="0" y="0" width="800" height="400" fill="#272822" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="800" height="400" fill="#272822" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f10" x="16" y="16">$</text>
 <text class="text fg" x="25.6" y="16"> h                                                                             </text>
@@ -94,12 +91,11 @@
 <g class="cursor-layer">
 <rect class="cursor-active" x="44.8" y="16" width="9.6" height="22.4" fill="#f8f8f2"/>
 </g>
-
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.009306;0.018437;1.000000"
-      dur="5.70s"
+      keyTimes="0.000000;0.009432;0.018687;1.000000"
+      dur="5.62s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -107,9 +103,7 @@
   </g>
 
   <g id="frame-2" visibility="hidden">
-    
-
-<rect class="window-bg" x="0" y="0" width="800" height="400" fill="#272822" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="800" height="400" fill="#272822" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f10" x="16" y="16">$</text>
 <text class="text fg" x="25.6" y="16"> he                                                                            </text>
@@ -117,12 +111,11 @@
 <g class="cursor-layer">
 <rect class="cursor-active" x="54.4" y="16" width="9.6" height="22.4" fill="#f8f8f2"/>
 </g>
-
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.018437;0.027744;1.000000"
-      dur="5.70s"
+      keyTimes="0.000000;0.018687;0.027763;1.000000"
+      dur="5.62s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -130,9 +123,7 @@
   </g>
 
   <g id="frame-3" visibility="hidden">
-    
-
-<rect class="window-bg" x="0" y="0" width="800" height="400" fill="#272822" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="800" height="400" fill="#272822" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f10" x="16" y="16">$</text>
 <text class="text fg" x="25.6" y="16"> hel                                                                           </text>
@@ -140,12 +131,11 @@
 <g class="cursor-layer">
 <rect class="cursor-active" x="64" y="16" width="9.6" height="22.4" fill="#f8f8f2"/>
 </g>
-
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.027744;0.037226;1.000000"
-      dur="5.70s"
+      keyTimes="0.000000;0.027763;0.036483;1.000000"
+      dur="5.62s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -153,9 +143,7 @@
   </g>
 
   <g id="frame-4" visibility="hidden">
-    
-
-<rect class="window-bg" x="0" y="0" width="800" height="400" fill="#272822" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="800" height="400" fill="#272822" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f10" x="16" y="16">$</text>
 <text class="text fg" x="25.6" y="16"> hell                                                                          </text>
@@ -163,12 +151,11 @@
 <g class="cursor-layer">
 <rect class="cursor-active" x="73.6" y="16" width="9.6" height="22.4" fill="#f8f8f2"/>
 </g>
-
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.037226;0.046883;1.000000"
-      dur="5.70s"
+      keyTimes="0.000000;0.036483;0.045560;1.000000"
+      dur="5.62s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -176,9 +163,7 @@
   </g>
 
   <g id="frame-5" visibility="hidden">
-    
-
-<rect class="window-bg" x="0" y="0" width="800" height="400" fill="#272822" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="800" height="400" fill="#272822" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f10" x="16" y="16">$</text>
 <text class="text fg" x="25.6" y="16"> hello                                                                         </text>
@@ -186,12 +171,11 @@
 <g class="cursor-layer">
 <rect class="cursor-active" x="83.2" y="16" width="9.6" height="22.4" fill="#f8f8f2"/>
 </g>
-
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.046883;0.056365;1.000000"
-      dur="5.70s"
+      keyTimes="0.000000;0.045560;0.054814;1.000000"
+      dur="5.62s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -199,9 +183,7 @@
   </g>
 
   <g id="frame-6" visibility="hidden">
-    
-
-<rect class="window-bg" x="0" y="0" width="800" height="400" fill="#272822" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="800" height="400" fill="#272822" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f10" x="16" y="16">$</text>
 <text class="text fg" x="25.6" y="16"> hello                                                                         </text>
@@ -209,12 +191,11 @@
 <g class="cursor-layer">
 <rect class="cursor-active" x="92.8" y="16" width="9.6" height="22.4" fill="#f8f8f2"/>
 </g>
-
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.056365;0.065496;1.000000"
-      dur="5.70s"
+      keyTimes="0.000000;0.054814;0.063712;1.000000"
+      dur="5.62s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -222,9 +203,7 @@
   </g>
 
   <g id="frame-7" visibility="hidden">
-    
-
-<rect class="window-bg" x="0" y="0" width="800" height="400" fill="#272822" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="800" height="400" fill="#272822" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f10" x="16" y="16">$</text>
 <text class="text fg" x="25.6" y="16"> hello w                                                                       </text>
@@ -232,12 +211,11 @@
 <g class="cursor-layer">
 <rect class="cursor-active" x="102.39999999999999" y="16" width="9.6" height="22.4" fill="#f8f8f2"/>
 </g>
-
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.065496;0.074978;1.000000"
-      dur="5.70s"
+      keyTimes="0.000000;0.063712;0.072611;1.000000"
+      dur="5.62s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -245,9 +223,7 @@
   </g>
 
   <g id="frame-8" visibility="hidden">
-    
-
-<rect class="window-bg" x="0" y="0" width="800" height="400" fill="#272822" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="800" height="400" fill="#272822" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f10" x="16" y="16">$</text>
 <text class="text fg" x="25.6" y="16"> hello wo                                                                      </text>
@@ -255,12 +231,11 @@
 <g class="cursor-layer">
 <rect class="cursor-active" x="112" y="16" width="9.6" height="22.4" fill="#f8f8f2"/>
 </g>
-
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.074978;0.084636;1.000000"
-      dur="5.70s"
+      keyTimes="0.000000;0.072611;0.081865;1.000000"
+      dur="5.62s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -268,9 +243,7 @@
   </g>
 
   <g id="frame-9" visibility="hidden">
-    
-
-<rect class="window-bg" x="0" y="0" width="800" height="400" fill="#272822" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="800" height="400" fill="#272822" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f10" x="16" y="16">$</text>
 <text class="text fg" x="25.6" y="16"> hello wor                                                                     </text>
@@ -278,12 +251,11 @@
 <g class="cursor-layer">
 <rect class="cursor-active" x="121.6" y="16" width="9.6" height="22.4" fill="#f8f8f2"/>
 </g>
-
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.084636;0.094118;1.000000"
-      dur="5.70s"
+      keyTimes="0.000000;0.081865;0.090763;1.000000"
+      dur="5.62s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -291,9 +263,7 @@
   </g>
 
   <g id="frame-10" visibility="hidden">
-    
-
-<rect class="window-bg" x="0" y="0" width="800" height="400" fill="#272822" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="800" height="400" fill="#272822" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f10" x="16" y="16">$</text>
 <text class="text fg" x="25.6" y="16"> hello worl                                                                    </text>
@@ -301,12 +271,11 @@
 <g class="cursor-layer">
 <rect class="cursor-active" x="131.2" y="16" width="9.6" height="22.4" fill="#f8f8f2"/>
 </g>
-
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.094118;0.103775;1.000000"
-      dur="5.70s"
+      keyTimes="0.000000;0.090763;0.100018;1.000000"
+      dur="5.62s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -314,9 +283,7 @@
   </g>
 
   <g id="frame-11" visibility="hidden">
-    
-
-<rect class="window-bg" x="0" y="0" width="800" height="400" fill="#272822" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="800" height="400" fill="#272822" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f10" x="16" y="16">$</text>
 <text class="text fg" x="25.6" y="16"> hello world                                                                   </text>
@@ -324,12 +291,11 @@
 <g class="cursor-layer">
 <rect class="cursor-active" x="140.8" y="16" width="9.6" height="22.4" fill="#f8f8f2"/>
 </g>
-
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.103775;0.113257;1.000000"
-      dur="5.70s"
+      keyTimes="0.000000;0.100018;0.108916;1.000000"
+      dur="5.62s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -337,9 +303,7 @@
   </g>
 
   <g id="frame-12" visibility="hidden">
-    
-
-<rect class="window-bg" x="0" y="0" width="800" height="400" fill="#272822" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="800" height="400" fill="#272822" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f10" x="16" y="16">$</text>
 <text class="text fg" x="25.6" y="16"> hello world                                                                   </text>
@@ -347,12 +311,11 @@
 <g class="cursor-layer">
 <rect class="cursor-active" x="150.4" y="16" width="9.6" height="22.4" fill="#f8f8f2"/>
 </g>
-
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.113257;0.122564;1.000000"
-      dur="5.70s"
+      keyTimes="0.000000;0.108916;0.118170;1.000000"
+      dur="5.62s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -360,9 +323,7 @@
   </g>
 
   <g id="frame-13" visibility="hidden">
-    
-
-<rect class="window-bg" x="0" y="0" width="800" height="400" fill="#272822" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="800" height="400" fill="#272822" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f10" x="16" y="16">$</text>
 <text class="text fg" x="25.6" y="16"> hello world e                                                                 </text>
@@ -370,12 +331,11 @@
 <g class="cursor-layer">
 <rect class="cursor-active" x="160" y="16" width="9.6" height="22.4" fill="#f8f8f2"/>
 </g>
-
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.122564;0.132046;1.000000"
-      dur="5.70s"
+      keyTimes="0.000000;0.118170;0.127425;1.000000"
+      dur="5.62s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -383,9 +343,7 @@
   </g>
 
   <g id="frame-14" visibility="hidden">
-    
-
-<rect class="window-bg" x="0" y="0" width="800" height="400" fill="#272822" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="800" height="400" fill="#272822" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f10" x="16" y="16">$</text>
 <text class="text fg" x="25.6" y="16"> hello world ex                                                                </text>
@@ -393,12 +351,11 @@
 <g class="cursor-layer">
 <rect class="cursor-active" x="169.6" y="16" width="9.6" height="22.4" fill="#f8f8f2"/>
 </g>
-
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.132046;0.141176;1.000000"
-      dur="5.70s"
+      keyTimes="0.000000;0.127425;0.136679;1.000000"
+      dur="5.62s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -406,9 +363,7 @@
   </g>
 
   <g id="frame-15" visibility="hidden">
-    
-
-<rect class="window-bg" x="0" y="0" width="800" height="400" fill="#272822" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="800" height="400" fill="#272822" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f10" x="16" y="16">$</text>
 <text class="text fg" x="25.6" y="16"> hello world exa                                                               </text>
@@ -416,12 +371,11 @@
 <g class="cursor-layer">
 <rect class="cursor-active" x="179.2" y="16" width="9.6" height="22.4" fill="#f8f8f2"/>
 </g>
-
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.141176;0.150658;1.000000"
-      dur="5.70s"
+      keyTimes="0.000000;0.136679;0.145933;1.000000"
+      dur="5.62s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -429,9 +383,7 @@
   </g>
 
   <g id="frame-16" visibility="hidden">
-    
-
-<rect class="window-bg" x="0" y="0" width="800" height="400" fill="#272822" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="800" height="400" fill="#272822" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f10" x="16" y="16">$</text>
 <text class="text fg" x="25.6" y="16"> hello world exam                                                              </text>
@@ -439,12 +391,11 @@
 <g class="cursor-layer">
 <rect class="cursor-active" x="188.79999999999998" y="16" width="9.6" height="22.4" fill="#f8f8f2"/>
 </g>
-
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.150658;0.160140;1.000000"
-      dur="5.70s"
+      keyTimes="0.000000;0.145933;0.154832;1.000000"
+      dur="5.62s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -452,9 +403,7 @@
   </g>
 
   <g id="frame-17" visibility="hidden">
-    
-
-<rect class="window-bg" x="0" y="0" width="800" height="400" fill="#272822" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="800" height="400" fill="#272822" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f10" x="16" y="16">$</text>
 <text class="text fg" x="25.6" y="16"> hello world examp                                                             </text>
@@ -462,12 +411,11 @@
 <g class="cursor-layer">
 <rect class="cursor-active" x="198.4" y="16" width="9.6" height="22.4" fill="#f8f8f2"/>
 </g>
-
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.160140;0.169798;1.000000"
-      dur="5.70s"
+      keyTimes="0.000000;0.154832;0.164086;1.000000"
+      dur="5.62s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -475,9 +423,7 @@
   </g>
 
   <g id="frame-18" visibility="hidden">
-    
-
-<rect class="window-bg" x="0" y="0" width="800" height="400" fill="#272822" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="800" height="400" fill="#272822" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f10" x="16" y="16">$</text>
 <text class="text fg" x="25.6" y="16"> hello world exampl                                                            </text>
@@ -485,12 +431,11 @@
 <g class="cursor-layer">
 <rect class="cursor-active" x="208" y="16" width="9.6" height="22.4" fill="#f8f8f2"/>
 </g>
-
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.169798;0.179456;1.000000"
-      dur="5.70s"
+      keyTimes="0.000000;0.164086;0.172807;1.000000"
+      dur="5.62s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -498,9 +443,7 @@
   </g>
 
   <g id="frame-19" visibility="hidden">
-    
-
-<rect class="window-bg" x="0" y="0" width="800" height="400" fill="#272822" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="800" height="400" fill="#272822" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f10" x="16" y="16">$</text>
 <text class="text fg" x="25.6" y="16"> hello world example                                                           </text>
@@ -508,12 +451,11 @@
 <g class="cursor-layer">
 <rect class="cursor-active" x="217.6" y="16" width="9.6" height="22.4" fill="#f8f8f2"/>
 </g>
-
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.179456;0.189289;1.000000"
-      dur="5.70s"
+      keyTimes="0.000000;0.172807;0.182061;1.000000"
+      dur="5.62s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -521,9 +463,7 @@
   </g>
 
   <g id="frame-20" visibility="hidden">
-    
-
-<rect class="window-bg" x="0" y="0" width="800" height="400" fill="#272822" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="800" height="400" fill="#272822" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f10" x="16" y="16">$</text>
 <text class="text fg" x="25.6" y="16"> hello world example                                                           </text>
@@ -531,12 +471,11 @@
 <g class="cursor-layer">
 <rect class="cursor-active" x="227.2" y="16" width="9.6" height="22.4" fill="#f8f8f2"/>
 </g>
-
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.189289;0.198946;1.000000"
-      dur="5.70s"
+      keyTimes="0.000000;0.182061;0.191137;1.000000"
+      dur="5.62s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -544,9 +483,7 @@
   </g>
 
   <g id="frame-21" visibility="hidden">
-    
-
-<rect class="window-bg" x="0" y="0" width="800" height="400" fill="#272822" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="800" height="400" fill="#272822" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f10" x="16" y="16">$</text>
 <text class="text fg" x="25.6" y="16"> hello world example t                                                         </text>
@@ -554,12 +491,11 @@
 <g class="cursor-layer">
 <rect class="cursor-active" x="236.79999999999998" y="16" width="9.6" height="22.4" fill="#f8f8f2"/>
 </g>
-
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.198946;0.208428;1.000000"
-      dur="5.70s"
+      keyTimes="0.000000;0.191137;0.200036;1.000000"
+      dur="5.62s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -567,9 +503,7 @@
   </g>
 
   <g id="frame-22" visibility="hidden">
-    
-
-<rect class="window-bg" x="0" y="0" width="800" height="400" fill="#272822" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="800" height="400" fill="#272822" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f10" x="16" y="16">$</text>
 <text class="text fg" x="25.6" y="16"> hello world example te                                                        </text>
@@ -577,12 +511,11 @@
 <g class="cursor-layer">
 <rect class="cursor-active" x="246.39999999999998" y="16" width="9.6" height="22.4" fill="#f8f8f2"/>
 </g>
-
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.208428;0.218086;1.000000"
-      dur="5.70s"
+      keyTimes="0.000000;0.200036;0.208934;1.000000"
+      dur="5.62s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -590,9 +523,7 @@
   </g>
 
   <g id="frame-23" visibility="hidden">
-    
-
-<rect class="window-bg" x="0" y="0" width="800" height="400" fill="#272822" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="800" height="400" fill="#272822" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f10" x="16" y="16">$</text>
 <text class="text fg" x="25.6" y="16"> hello world example tex                                                       </text>
@@ -600,12 +531,11 @@
 <g class="cursor-layer">
 <rect class="cursor-active" x="256" y="16" width="9.6" height="22.4" fill="#f8f8f2"/>
 </g>
-
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.218086;0.227919;1.000000"
-      dur="5.70s"
+      keyTimes="0.000000;0.208934;0.218188;1.000000"
+      dur="5.62s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -613,9 +543,7 @@
   </g>
 
   <g id="frame-24" visibility="hidden">
-    
-
-<rect class="window-bg" x="0" y="0" width="800" height="400" fill="#272822" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="800" height="400" fill="#272822" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f10" x="16" y="16">$</text>
 <text class="text fg" x="25.6" y="16"> hello world example text                                                      </text>
@@ -623,12 +551,11 @@
 <g class="cursor-layer">
 <rect class="cursor-active" x="265.6" y="16" width="9.6" height="22.4" fill="#f8f8f2"/>
 </g>
-
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.227919;0.316594;1.000000"
-      dur="5.70s"
+      keyTimes="0.000000;0.218188;0.307172;1.000000"
+      dur="5.62s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -636,9 +563,7 @@
   </g>
 
   <g id="frame-25" visibility="hidden">
-    
-
-<rect class="window-bg" x="0" y="0" width="800" height="400" fill="#272822" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="800" height="400" fill="#272822" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f10" x="16" y="16">$</text>
 <text class="text fg" x="25.6" y="16"> hello world example text                                                      </text>
@@ -646,12 +571,11 @@
 <g class="cursor-layer">
 <rect class="cursor" x="265.6" y="16" width="9.6" height="22.4" fill="#f8f8f2"/>
 </g>
-
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.316594;0.326427;1.000000"
-      dur="5.70s"
+      keyTimes="0.000000;0.307172;0.316426;1.000000"
+      dur="5.62s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -659,9 +583,7 @@
   </g>
 
   <g id="frame-26" visibility="hidden">
-    
-
-<rect class="window-bg" x="0" y="0" width="800" height="400" fill="#272822" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="800" height="400" fill="#272822" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f10" x="16" y="16">$</text>
 <text class="text fg" x="25.6" y="16"> hello world example                                                           </text>
@@ -669,12 +591,11 @@
 <g class="cursor-layer">
 <rect class="cursor-active" x="227.2" y="16" width="9.6" height="22.4" fill="#f8f8f2"/>
 </g>
-
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.326427;0.415101;1.000000"
-      dur="5.70s"
+      keyTimes="0.000000;0.316426;0.405766;1.000000"
+      dur="5.62s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -682,9 +603,7 @@
   </g>
 
   <g id="frame-27" visibility="hidden">
-    
-
-<rect class="window-bg" x="0" y="0" width="800" height="400" fill="#272822" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="800" height="400" fill="#272822" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f10" x="16" y="16">$</text>
 <text class="text fg" x="25.6" y="16"> hello world example                                                           </text>
@@ -692,12 +611,11 @@
 <g class="cursor-layer">
 <rect class="cursor" x="227.2" y="16" width="9.6" height="22.4" fill="#f8f8f2"/>
 </g>
-
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.415101;0.424232;1.000000"
-      dur="5.70s"
+      keyTimes="0.000000;0.405766;0.414842;1.000000"
+      dur="5.62s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -705,9 +623,7 @@
   </g>
 
   <g id="frame-28" visibility="hidden">
-    
-
-<rect class="window-bg" x="0" y="0" width="800" height="400" fill="#272822" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="800" height="400" fill="#272822" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f10" x="16" y="16">$</text>
 <text class="text fg" x="25.6" y="16"> hello world                                                                   </text>
@@ -715,12 +631,11 @@
 <g class="cursor-layer">
 <rect class="cursor-active" x="150.4" y="16" width="9.6" height="22.4" fill="#f8f8f2"/>
 </g>
-
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.424232;0.512379;1.000000"
-      dur="5.70s"
+      keyTimes="0.000000;0.414842;0.504360;1.000000"
+      dur="5.62s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -728,9 +643,7 @@
   </g>
 
   <g id="frame-29" visibility="hidden">
-    
-
-<rect class="window-bg" x="0" y="0" width="800" height="400" fill="#272822" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="800" height="400" fill="#272822" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f10" x="16" y="16">$</text>
 <text class="text fg" x="25.6" y="16"> hello world                                                                   </text>
@@ -738,12 +651,11 @@
 <g class="cursor-layer">
 <rect class="cursor" x="150.4" y="16" width="9.6" height="22.4" fill="#f8f8f2"/>
 </g>
-
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.512379;0.521335;1.000000"
-      dur="5.70s"
+      keyTimes="0.000000;0.504360;0.513615;1.000000"
+      dur="5.62s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -751,9 +663,7 @@
   </g>
 
   <g id="frame-30" visibility="hidden">
-    
-
-<rect class="window-bg" x="0" y="0" width="800" height="400" fill="#272822" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="800" height="400" fill="#272822" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f10" x="16" y="16">$</text>
 <text class="text fg" x="25.6" y="16"> hello                                                                         </text>
@@ -761,12 +671,11 @@
 <g class="cursor-layer">
 <rect class="cursor-active" x="92.8" y="16" width="9.6" height="22.4" fill="#f8f8f2"/>
 </g>
-
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.521335;0.609482;1.000000"
-      dur="5.70s"
+      keyTimes="0.000000;0.513615;0.602954;1.000000"
+      dur="5.62s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -774,9 +683,7 @@
   </g>
 
   <g id="frame-31" visibility="hidden">
-    
-
-<rect class="window-bg" x="0" y="0" width="800" height="400" fill="#272822" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="800" height="400" fill="#272822" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f10" x="16" y="16">$</text>
 <text class="text fg" x="25.6" y="16"> hello                                                                         </text>
@@ -784,12 +691,11 @@
 <g class="cursor-layer">
 <rect class="cursor" x="92.8" y="16" width="9.6" height="22.4" fill="#f8f8f2"/>
 </g>
-
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.609482;0.627392;1.000000"
-      dur="5.70s"
+      keyTimes="0.000000;0.602954;0.621641;1.000000"
+      dur="5.62s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -797,19 +703,16 @@
   </g>
 
   <g id="frame-32" visibility="hidden">
-    
-
-<rect class="window-bg" x="0" y="0" width="800" height="400" fill="#272822" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="800" height="400" fill="#272822" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f10" x="16" y="16">$</text>
 <text class="text fg" x="25.6" y="16"> hello                                                                         </text>
 </g>
-
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.627392;0.647586;1.000000"
-      dur="5.70s"
+      keyTimes="0.000000;0.621641;0.643175;1.000000"
+      dur="5.62s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -817,9 +720,7 @@
   </g>
 
   <g id="frame-33" visibility="hidden">
-    
-
-<rect class="window-bg" x="0" y="0" width="800" height="400" fill="#272822" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="800" height="400" fill="#272822" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f10" x="16" y="16">$</text>
 <text class="text fg" x="25.6" y="16"> hello                                                                         </text>
@@ -829,12 +730,11 @@
 <g class="cursor-layer">
 <rect class="cursor" x="35.2" y="60.8" width="9.6" height="22.4" fill="#f8f8f2"/>
 </g>
-
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.647586;0.823881;1.000000"
-      dur="5.70s"
+      keyTimes="0.000000;0.643175;0.821676;1.000000"
+      dur="5.62s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -842,9 +742,7 @@
   </g>
 
   <g id="frame-34" visibility="hidden">
-    
-
-<rect class="window-bg" x="0" y="0" width="800" height="400" fill="#272822" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="800" height="400" fill="#272822" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f10" x="16" y="16">$</text>
 <text class="text fg" x="25.6" y="16"> hello                                                                         </text>
@@ -854,12 +752,11 @@
 <g class="cursor-layer">
 <rect class="cursor" x="35.2" y="60.8" width="9.6" height="22.4" fill="#f8f8f2"/>
 </g>
-
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.823881;0.824407;1.000000"
-      dur="5.70s"
+      keyTimes="0.000000;0.821676;0.822032;1.000000"
+      dur="5.62s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -867,9 +764,7 @@
   </g>
 
   <g id="frame-35" visibility="hidden">
-    
-
-<rect class="window-bg" x="0" y="0" width="800" height="400" fill="#272822" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="800" height="400" fill="#272822" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f10" x="16" y="16">$</text>
 <text class="text fg" x="25.6" y="16"> hello                                                                         </text>
@@ -879,15 +774,15 @@
 <g class="cursor-layer">
 <rect class="cursor" x="35.2" y="60.8" width="9.6" height="22.4" fill="#f8f8f2"/>
 </g>
-
     <animate
       attributeName="visibility"
       values="hidden;visible;visible"
-      keyTimes="0.000000;0.824407;1.000000"
-      dur="5.70s"
+      keyTimes="0.000000;0.822032;1.000000"
+      dur="5.62s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
     />
+  </g>
   </g>
 </svg>
