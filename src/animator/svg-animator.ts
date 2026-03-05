@@ -27,7 +27,8 @@ function extractStyleBlock(svg: string): string {
 
 /**
  * Extract SVG body content (everything inside <svg>)
- * Always strips <style> blocks since they're handled separately
+ * Strips <style> blocks, <defs> blocks (for clip-paths), and outer clip groups
+ * since these are handled at the animation level
  */
 function extractSVGBody(svg: string, frameId: string): string {
   const contentMatch = svg.match(/<svg[^>]*>([\s\S]*)<\/svg>/);
@@ -37,6 +38,14 @@ function extractSVGBody(svg: string, frameId: string): string {
 
   // Strip style blocks (handled separately to avoid duplication)
   content = content.replace(/<style>[\s\S]*?<\/style>/g, '');
+
+  // Strip defs blocks (clip-paths handled at animation level)
+  content = content.replace(/<defs>[\s\S]*?<\/defs>/g, '');
+
+  // Strip outer clip-path group (we use a global one at animation level)
+  // Match opening <g clip-path="..."> at start and closing </g> at end
+  content = content.replace(/^\s*<g clip-path="[^"]*">\s*/g, '');
+  content = content.replace(/\s*<\/g>\s*$/g, '');
 
   // Make IDs unique (but don't modify classes - they contain color definitions)
   content = content

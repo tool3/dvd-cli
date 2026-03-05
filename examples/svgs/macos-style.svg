@@ -1,4 +1,5 @@
 <svg width="724" height="400" xmlns="http://www.w3.org/2000/svg">
+  <defs><clipPath id="rounded-corners"><rect x="0" y="0" width="724" height="400" rx="8" ry="8"/></clipPath></defs>
   <style>
     
 .text {
@@ -56,8 +57,9 @@
 
   </style>
 
+  <g clip-path="url(#rounded-corners)">
   <!-- Persistent background - never animated -->
-  <rect width="100%" height="100%" fill="#1e1e1e" />
+  <rect width="100%" height="100%" fill="#1e1e1e" rx="8" ry="8" />
 
   <!-- Animated frames with discrete visibility transitions -->
   
@@ -87,8 +89,8 @@
     <animate
       attributeName="visibility"
       values="visible;hidden;hidden"
-      keyTimes="0.000000;0.005523;1.000000"
-      dur="9.78s"
+      keyTimes="0.000000;0.005451;1.000000"
+      dur="9.72s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -122,8 +124,8 @@
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.005523;0.010841;1.000000"
-      dur="9.78s"
+      keyTimes="0.000000;0.005451;0.010902;1.000000"
+      dur="9.72s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -157,8 +159,8 @@
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.010841;0.016159;1.000000"
-      dur="9.78s"
+      keyTimes="0.000000;0.010902;0.016147;1.000000"
+      dur="9.72s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -192,8 +194,8 @@
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.016159;0.021477;1.000000"
-      dur="9.78s"
+      keyTimes="0.000000;0.016147;0.021495;1.000000"
+      dur="9.72s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -227,8 +229,8 @@
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.021477;0.026795;1.000000"
-      dur="9.78s"
+      keyTimes="0.000000;0.021495;0.026946;1.000000"
+      dur="9.72s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -262,8 +264,8 @@
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.026795;0.032215;1.000000"
-      dur="9.78s"
+      keyTimes="0.000000;0.026946;0.032295;1.000000"
+      dur="9.72s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -297,8 +299,8 @@
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.032215;0.037636;1.000000"
-      dur="9.78s"
+      keyTimes="0.000000;0.032295;0.037643;1.000000"
+      dur="9.72s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -332,8 +334,8 @@
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.037636;0.043158;1.000000"
-      dur="9.78s"
+      keyTimes="0.000000;0.037643;0.043299;1.000000"
+      dur="9.72s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -367,8 +369,8 @@
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.043158;0.048374;1.000000"
-      dur="9.78s"
+      keyTimes="0.000000;0.043299;0.048750;1.000000"
+      dur="9.72s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -402,8 +404,8 @@
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.048374;0.053692;1.000000"
-      dur="9.78s"
+      keyTimes="0.000000;0.048750;0.054304;1.000000"
+      dur="9.72s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -437,8 +439,8 @@
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.053692;0.094907;1.000000"
-      dur="9.78s"
+      keyTimes="0.000000;0.054304;0.095649;1.000000"
+      dur="9.72s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -472,8 +474,8 @@
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.094907;0.105441;1.000000"
-      dur="9.78s"
+      keyTimes="0.000000;0.095649;0.106140;1.000000"
+      dur="9.72s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -504,8 +506,8 @@
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.105441;0.118736;1.000000"
-      dur="9.78s"
+      keyTimes="0.000000;0.106140;0.119613;1.000000"
+      dur="9.72s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -527,15 +529,16 @@
 <circle cx="62" cy="20" r="6" fill="#27c93f"/>
 <text class="text fg" x="362" y="20" text-anchor="middle" style="dominant-baseline: central">my-project</text></g>
 <g class="text-layer">
-<text class="text fg" x="16" y="56">Your branch is ahead of &apos;origin/feat/rearch&apos; by 1 commit.                       </text>
-<text class="text fg" x="16" y="78.4">  (use &quot;git push&quot; to publish your local commits)                                </text>
-<text class="text fg" x="16" y="123.19999999999999">Changes not staged for commit:                                                  </text>
-<text class="text fg" x="16" y="145.6">  (use &quot;git add &lt;file&gt;...&quot; to update what will be committed)                    </text>
-<text class="text fg" x="16" y="168">  (use &quot;git restore &lt;file&gt;...&quot; to discard changes in working directory)         </text>
-<text class="text fg" x="16" y="190.39999999999998">        modified:   examples/svgs/macos-style.svg                               </text>
-<text class="text fg" x="16" y="212.79999999999998">        modified:   examples/svgs/word-navigation-test.svg                      </text>
-<text class="text fg" x="16" y="235.2">        modified:   examples/svgs/word-selection-test.svg                       </text>
-<text class="text fg" x="16" y="257.6">        modified:   src/pipeline/svg-emitter.ts                                 </text>
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="25.6" y="56"> git status                                                                    </text>
+<text class="text fg" x="16" y="78.4">On branch feat/rearch                                                           </text>
+<text class="text fg" x="16" y="100.8">Your branch is ahead of &apos;origin/feat/rearch&apos; by 2 commits.                      </text>
+<text class="text fg" x="16" y="123.19999999999999">  (use &quot;git push&quot; to publish your local commits)                                </text>
+<text class="text fg" x="16" y="168">Changes not staged for commit:                                                  </text>
+<text class="text fg" x="16" y="190.39999999999998">  (use &quot;git add &lt;file&gt;...&quot; to update what will be committed)                    </text>
+<text class="text fg" x="16" y="212.79999999999998">  (use &quot;git restore &lt;file&gt;...&quot; to discard changes in working directory)         </text>
+<text class="text fg" x="16" y="235.2">        modified:   examples/svgs/macos-style.svg                               </text>
+<text class="text fg" x="16" y="257.6">        modified:   src/animator/svg-animator.ts                                </text>
 <text class="text fg" x="16" y="302.4">no changes added to commit (use &quot;git add&quot; and/or &quot;git commit -a&quot;)               </text>
 <text class="text f13" x="16" y="324.79999999999995">❯</text>
 </g>
@@ -548,8 +551,8 @@
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.118736;0.222847;1.000000"
-      dur="9.78s"
+      keyTimes="0.000000;0.119613;0.224005;1.000000"
+      dur="9.72s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -571,15 +574,16 @@
 <circle cx="62" cy="20" r="6" fill="#27c93f"/>
 <text class="text fg" x="362" y="20" text-anchor="middle" style="dominant-baseline: central">my-project</text></g>
 <g class="text-layer">
-<text class="text fg" x="16" y="56">Your branch is ahead of &apos;origin/feat/rearch&apos; by 1 commit.                       </text>
-<text class="text fg" x="16" y="78.4">  (use &quot;git push&quot; to publish your local commits)                                </text>
-<text class="text fg" x="16" y="123.19999999999999">Changes not staged for commit:                                                  </text>
-<text class="text fg" x="16" y="145.6">  (use &quot;git add &lt;file&gt;...&quot; to update what will be committed)                    </text>
-<text class="text fg" x="16" y="168">  (use &quot;git restore &lt;file&gt;...&quot; to discard changes in working directory)         </text>
-<text class="text fg" x="16" y="190.39999999999998">        modified:   examples/svgs/macos-style.svg                               </text>
-<text class="text fg" x="16" y="212.79999999999998">        modified:   examples/svgs/word-navigation-test.svg                      </text>
-<text class="text fg" x="16" y="235.2">        modified:   examples/svgs/word-selection-test.svg                       </text>
-<text class="text fg" x="16" y="257.6">        modified:   src/pipeline/svg-emitter.ts                                 </text>
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="25.6" y="56"> git status                                                                    </text>
+<text class="text fg" x="16" y="78.4">On branch feat/rearch                                                           </text>
+<text class="text fg" x="16" y="100.8">Your branch is ahead of &apos;origin/feat/rearch&apos; by 2 commits.                      </text>
+<text class="text fg" x="16" y="123.19999999999999">  (use &quot;git push&quot; to publish your local commits)                                </text>
+<text class="text fg" x="16" y="168">Changes not staged for commit:                                                  </text>
+<text class="text fg" x="16" y="190.39999999999998">  (use &quot;git add &lt;file&gt;...&quot; to update what will be committed)                    </text>
+<text class="text fg" x="16" y="212.79999999999998">  (use &quot;git restore &lt;file&gt;...&quot; to discard changes in working directory)         </text>
+<text class="text fg" x="16" y="235.2">        modified:   examples/svgs/macos-style.svg                               </text>
+<text class="text fg" x="16" y="257.6">        modified:   src/animator/svg-animator.ts                                </text>
 <text class="text fg" x="16" y="302.4">no changes added to commit (use &quot;git add&quot; and/or &quot;git commit -a&quot;)               </text>
 <text class="text f13" x="16" y="324.79999999999995">❯</text>
 </g>
@@ -592,8 +596,8 @@
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.222847;0.229699;1.000000"
-      dur="9.78s"
+      keyTimes="0.000000;0.224005;0.230690;1.000000"
+      dur="9.72s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -615,15 +619,16 @@
 <circle cx="62" cy="20" r="6" fill="#27c93f"/>
 <text class="text fg" x="362" y="20" text-anchor="middle" style="dominant-baseline: central">my-project</text></g>
 <g class="text-layer">
-<text class="text fg" x="16" y="56">Your branch is ahead of &apos;origin/feat/rearch&apos; by 1 commit.                       </text>
-<text class="text fg" x="16" y="78.4">  (use &quot;git push&quot; to publish your local commits)                                </text>
-<text class="text fg" x="16" y="123.19999999999999">Changes not staged for commit:                                                  </text>
-<text class="text fg" x="16" y="145.6">  (use &quot;git add &lt;file&gt;...&quot; to update what will be committed)                    </text>
-<text class="text fg" x="16" y="168">  (use &quot;git restore &lt;file&gt;...&quot; to discard changes in working directory)         </text>
-<text class="text fg" x="16" y="190.39999999999998">        modified:   examples/svgs/macos-style.svg                               </text>
-<text class="text fg" x="16" y="212.79999999999998">        modified:   examples/svgs/word-navigation-test.svg                      </text>
-<text class="text fg" x="16" y="235.2">        modified:   examples/svgs/word-selection-test.svg                       </text>
-<text class="text fg" x="16" y="257.6">        modified:   src/pipeline/svg-emitter.ts                                 </text>
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="25.6" y="56"> git status                                                                    </text>
+<text class="text fg" x="16" y="78.4">On branch feat/rearch                                                           </text>
+<text class="text fg" x="16" y="100.8">Your branch is ahead of &apos;origin/feat/rearch&apos; by 2 commits.                      </text>
+<text class="text fg" x="16" y="123.19999999999999">  (use &quot;git push&quot; to publish your local commits)                                </text>
+<text class="text fg" x="16" y="168">Changes not staged for commit:                                                  </text>
+<text class="text fg" x="16" y="190.39999999999998">  (use &quot;git add &lt;file&gt;...&quot; to update what will be committed)                    </text>
+<text class="text fg" x="16" y="212.79999999999998">  (use &quot;git restore &lt;file&gt;...&quot; to discard changes in working directory)         </text>
+<text class="text fg" x="16" y="235.2">        modified:   examples/svgs/macos-style.svg                               </text>
+<text class="text fg" x="16" y="257.6">        modified:   src/animator/svg-animator.ts                                </text>
 <text class="text fg" x="16" y="302.4">no changes added to commit (use &quot;git add&quot; and/or &quot;git commit -a&quot;)               </text>
 <text class="text f13" x="16" y="324.79999999999995">❯</text>
 <text class="text fg" x="25.6" y="324.79999999999995"> g                                                                             </text>
@@ -637,8 +642,8 @@
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.229699;0.236449;1.000000"
-      dur="9.78s"
+      keyTimes="0.000000;0.230690;0.237170;1.000000"
+      dur="9.72s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -660,15 +665,16 @@
 <circle cx="62" cy="20" r="6" fill="#27c93f"/>
 <text class="text fg" x="362" y="20" text-anchor="middle" style="dominant-baseline: central">my-project</text></g>
 <g class="text-layer">
-<text class="text fg" x="16" y="56">Your branch is ahead of &apos;origin/feat/rearch&apos; by 1 commit.                       </text>
-<text class="text fg" x="16" y="78.4">  (use &quot;git push&quot; to publish your local commits)                                </text>
-<text class="text fg" x="16" y="123.19999999999999">Changes not staged for commit:                                                  </text>
-<text class="text fg" x="16" y="145.6">  (use &quot;git add &lt;file&gt;...&quot; to update what will be committed)                    </text>
-<text class="text fg" x="16" y="168">  (use &quot;git restore &lt;file&gt;...&quot; to discard changes in working directory)         </text>
-<text class="text fg" x="16" y="190.39999999999998">        modified:   examples/svgs/macos-style.svg                               </text>
-<text class="text fg" x="16" y="212.79999999999998">        modified:   examples/svgs/word-navigation-test.svg                      </text>
-<text class="text fg" x="16" y="235.2">        modified:   examples/svgs/word-selection-test.svg                       </text>
-<text class="text fg" x="16" y="257.6">        modified:   src/pipeline/svg-emitter.ts                                 </text>
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="25.6" y="56"> git status                                                                    </text>
+<text class="text fg" x="16" y="78.4">On branch feat/rearch                                                           </text>
+<text class="text fg" x="16" y="100.8">Your branch is ahead of &apos;origin/feat/rearch&apos; by 2 commits.                      </text>
+<text class="text fg" x="16" y="123.19999999999999">  (use &quot;git push&quot; to publish your local commits)                                </text>
+<text class="text fg" x="16" y="168">Changes not staged for commit:                                                  </text>
+<text class="text fg" x="16" y="190.39999999999998">  (use &quot;git add &lt;file&gt;...&quot; to update what will be committed)                    </text>
+<text class="text fg" x="16" y="212.79999999999998">  (use &quot;git restore &lt;file&gt;...&quot; to discard changes in working directory)         </text>
+<text class="text fg" x="16" y="235.2">        modified:   examples/svgs/macos-style.svg                               </text>
+<text class="text fg" x="16" y="257.6">        modified:   src/animator/svg-animator.ts                                </text>
 <text class="text fg" x="16" y="302.4">no changes added to commit (use &quot;git add&quot; and/or &quot;git commit -a&quot;)               </text>
 <text class="text f13" x="16" y="324.79999999999995">❯</text>
 <text class="text fg" x="25.6" y="324.79999999999995"> gi                                                                            </text>
@@ -682,8 +688,8 @@
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.236449;0.242994;1.000000"
-      dur="9.78s"
+      keyTimes="0.000000;0.237170;0.243752;1.000000"
+      dur="9.72s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -705,15 +711,16 @@
 <circle cx="62" cy="20" r="6" fill="#27c93f"/>
 <text class="text fg" x="362" y="20" text-anchor="middle" style="dominant-baseline: central">my-project</text></g>
 <g class="text-layer">
-<text class="text fg" x="16" y="56">Your branch is ahead of &apos;origin/feat/rearch&apos; by 1 commit.                       </text>
-<text class="text fg" x="16" y="78.4">  (use &quot;git push&quot; to publish your local commits)                                </text>
-<text class="text fg" x="16" y="123.19999999999999">Changes not staged for commit:                                                  </text>
-<text class="text fg" x="16" y="145.6">  (use &quot;git add &lt;file&gt;...&quot; to update what will be committed)                    </text>
-<text class="text fg" x="16" y="168">  (use &quot;git restore &lt;file&gt;...&quot; to discard changes in working directory)         </text>
-<text class="text fg" x="16" y="190.39999999999998">        modified:   examples/svgs/macos-style.svg                               </text>
-<text class="text fg" x="16" y="212.79999999999998">        modified:   examples/svgs/word-navigation-test.svg                      </text>
-<text class="text fg" x="16" y="235.2">        modified:   examples/svgs/word-selection-test.svg                       </text>
-<text class="text fg" x="16" y="257.6">        modified:   src/pipeline/svg-emitter.ts                                 </text>
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="25.6" y="56"> git status                                                                    </text>
+<text class="text fg" x="16" y="78.4">On branch feat/rearch                                                           </text>
+<text class="text fg" x="16" y="100.8">Your branch is ahead of &apos;origin/feat/rearch&apos; by 2 commits.                      </text>
+<text class="text fg" x="16" y="123.19999999999999">  (use &quot;git push&quot; to publish your local commits)                                </text>
+<text class="text fg" x="16" y="168">Changes not staged for commit:                                                  </text>
+<text class="text fg" x="16" y="190.39999999999998">  (use &quot;git add &lt;file&gt;...&quot; to update what will be committed)                    </text>
+<text class="text fg" x="16" y="212.79999999999998">  (use &quot;git restore &lt;file&gt;...&quot; to discard changes in working directory)         </text>
+<text class="text fg" x="16" y="235.2">        modified:   examples/svgs/macos-style.svg                               </text>
+<text class="text fg" x="16" y="257.6">        modified:   src/animator/svg-animator.ts                                </text>
 <text class="text fg" x="16" y="302.4">no changes added to commit (use &quot;git add&quot; and/or &quot;git commit -a&quot;)               </text>
 <text class="text f13" x="16" y="324.79999999999995">❯</text>
 <text class="text fg" x="25.6" y="324.79999999999995"> git                                                                           </text>
@@ -727,8 +734,8 @@
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.242994;0.249642;1.000000"
-      dur="9.78s"
+      keyTimes="0.000000;0.243752;0.250334;1.000000"
+      dur="9.72s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -750,15 +757,16 @@
 <circle cx="62" cy="20" r="6" fill="#27c93f"/>
 <text class="text fg" x="362" y="20" text-anchor="middle" style="dominant-baseline: central">my-project</text></g>
 <g class="text-layer">
-<text class="text fg" x="16" y="56">Your branch is ahead of &apos;origin/feat/rearch&apos; by 1 commit.                       </text>
-<text class="text fg" x="16" y="78.4">  (use &quot;git push&quot; to publish your local commits)                                </text>
-<text class="text fg" x="16" y="123.19999999999999">Changes not staged for commit:                                                  </text>
-<text class="text fg" x="16" y="145.6">  (use &quot;git add &lt;file&gt;...&quot; to update what will be committed)                    </text>
-<text class="text fg" x="16" y="168">  (use &quot;git restore &lt;file&gt;...&quot; to discard changes in working directory)         </text>
-<text class="text fg" x="16" y="190.39999999999998">        modified:   examples/svgs/macos-style.svg                               </text>
-<text class="text fg" x="16" y="212.79999999999998">        modified:   examples/svgs/word-navigation-test.svg                      </text>
-<text class="text fg" x="16" y="235.2">        modified:   examples/svgs/word-selection-test.svg                       </text>
-<text class="text fg" x="16" y="257.6">        modified:   src/pipeline/svg-emitter.ts                                 </text>
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="25.6" y="56"> git status                                                                    </text>
+<text class="text fg" x="16" y="78.4">On branch feat/rearch                                                           </text>
+<text class="text fg" x="16" y="100.8">Your branch is ahead of &apos;origin/feat/rearch&apos; by 2 commits.                      </text>
+<text class="text fg" x="16" y="123.19999999999999">  (use &quot;git push&quot; to publish your local commits)                                </text>
+<text class="text fg" x="16" y="168">Changes not staged for commit:                                                  </text>
+<text class="text fg" x="16" y="190.39999999999998">  (use &quot;git add &lt;file&gt;...&quot; to update what will be committed)                    </text>
+<text class="text fg" x="16" y="212.79999999999998">  (use &quot;git restore &lt;file&gt;...&quot; to discard changes in working directory)         </text>
+<text class="text fg" x="16" y="235.2">        modified:   examples/svgs/macos-style.svg                               </text>
+<text class="text fg" x="16" y="257.6">        modified:   src/animator/svg-animator.ts                                </text>
 <text class="text fg" x="16" y="302.4">no changes added to commit (use &quot;git add&quot; and/or &quot;git commit -a&quot;)               </text>
 <text class="text f13" x="16" y="324.79999999999995">❯</text>
 <text class="text fg" x="25.6" y="324.79999999999995"> git                                                                           </text>
@@ -772,8 +780,8 @@
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.249642;0.256187;1.000000"
-      dur="9.78s"
+      keyTimes="0.000000;0.250334;0.257019;1.000000"
+      dur="9.72s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -795,15 +803,16 @@
 <circle cx="62" cy="20" r="6" fill="#27c93f"/>
 <text class="text fg" x="362" y="20" text-anchor="middle" style="dominant-baseline: central">my-project</text></g>
 <g class="text-layer">
-<text class="text fg" x="16" y="56">Your branch is ahead of &apos;origin/feat/rearch&apos; by 1 commit.                       </text>
-<text class="text fg" x="16" y="78.4">  (use &quot;git push&quot; to publish your local commits)                                </text>
-<text class="text fg" x="16" y="123.19999999999999">Changes not staged for commit:                                                  </text>
-<text class="text fg" x="16" y="145.6">  (use &quot;git add &lt;file&gt;...&quot; to update what will be committed)                    </text>
-<text class="text fg" x="16" y="168">  (use &quot;git restore &lt;file&gt;...&quot; to discard changes in working directory)         </text>
-<text class="text fg" x="16" y="190.39999999999998">        modified:   examples/svgs/macos-style.svg                               </text>
-<text class="text fg" x="16" y="212.79999999999998">        modified:   examples/svgs/word-navigation-test.svg                      </text>
-<text class="text fg" x="16" y="235.2">        modified:   examples/svgs/word-selection-test.svg                       </text>
-<text class="text fg" x="16" y="257.6">        modified:   src/pipeline/svg-emitter.ts                                 </text>
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="25.6" y="56"> git status                                                                    </text>
+<text class="text fg" x="16" y="78.4">On branch feat/rearch                                                           </text>
+<text class="text fg" x="16" y="100.8">Your branch is ahead of &apos;origin/feat/rearch&apos; by 2 commits.                      </text>
+<text class="text fg" x="16" y="123.19999999999999">  (use &quot;git push&quot; to publish your local commits)                                </text>
+<text class="text fg" x="16" y="168">Changes not staged for commit:                                                  </text>
+<text class="text fg" x="16" y="190.39999999999998">  (use &quot;git add &lt;file&gt;...&quot; to update what will be committed)                    </text>
+<text class="text fg" x="16" y="212.79999999999998">  (use &quot;git restore &lt;file&gt;...&quot; to discard changes in working directory)         </text>
+<text class="text fg" x="16" y="235.2">        modified:   examples/svgs/macos-style.svg                               </text>
+<text class="text fg" x="16" y="257.6">        modified:   src/animator/svg-animator.ts                                </text>
 <text class="text fg" x="16" y="302.4">no changes added to commit (use &quot;git add&quot; and/or &quot;git commit -a&quot;)               </text>
 <text class="text f13" x="16" y="324.79999999999995">❯</text>
 <text class="text fg" x="25.6" y="324.79999999999995"> git a                                                                         </text>
@@ -817,8 +826,8 @@
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.256187;0.262733;1.000000"
-      dur="9.78s"
+      keyTimes="0.000000;0.257019;0.263602;1.000000"
+      dur="9.72s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -840,15 +849,16 @@
 <circle cx="62" cy="20" r="6" fill="#27c93f"/>
 <text class="text fg" x="362" y="20" text-anchor="middle" style="dominant-baseline: central">my-project</text></g>
 <g class="text-layer">
-<text class="text fg" x="16" y="56">Your branch is ahead of &apos;origin/feat/rearch&apos; by 1 commit.                       </text>
-<text class="text fg" x="16" y="78.4">  (use &quot;git push&quot; to publish your local commits)                                </text>
-<text class="text fg" x="16" y="123.19999999999999">Changes not staged for commit:                                                  </text>
-<text class="text fg" x="16" y="145.6">  (use &quot;git add &lt;file&gt;...&quot; to update what will be committed)                    </text>
-<text class="text fg" x="16" y="168">  (use &quot;git restore &lt;file&gt;...&quot; to discard changes in working directory)         </text>
-<text class="text fg" x="16" y="190.39999999999998">        modified:   examples/svgs/macos-style.svg                               </text>
-<text class="text fg" x="16" y="212.79999999999998">        modified:   examples/svgs/word-navigation-test.svg                      </text>
-<text class="text fg" x="16" y="235.2">        modified:   examples/svgs/word-selection-test.svg                       </text>
-<text class="text fg" x="16" y="257.6">        modified:   src/pipeline/svg-emitter.ts                                 </text>
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="25.6" y="56"> git status                                                                    </text>
+<text class="text fg" x="16" y="78.4">On branch feat/rearch                                                           </text>
+<text class="text fg" x="16" y="100.8">Your branch is ahead of &apos;origin/feat/rearch&apos; by 2 commits.                      </text>
+<text class="text fg" x="16" y="123.19999999999999">  (use &quot;git push&quot; to publish your local commits)                                </text>
+<text class="text fg" x="16" y="168">Changes not staged for commit:                                                  </text>
+<text class="text fg" x="16" y="190.39999999999998">  (use &quot;git add &lt;file&gt;...&quot; to update what will be committed)                    </text>
+<text class="text fg" x="16" y="212.79999999999998">  (use &quot;git restore &lt;file&gt;...&quot; to discard changes in working directory)         </text>
+<text class="text fg" x="16" y="235.2">        modified:   examples/svgs/macos-style.svg                               </text>
+<text class="text fg" x="16" y="257.6">        modified:   src/animator/svg-animator.ts                                </text>
 <text class="text fg" x="16" y="302.4">no changes added to commit (use &quot;git add&quot; and/or &quot;git commit -a&quot;)               </text>
 <text class="text f13" x="16" y="324.79999999999995">❯</text>
 <text class="text fg" x="25.6" y="324.79999999999995"> git ad                                                                        </text>
@@ -862,8 +872,8 @@
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.262733;0.269380;1.000000"
-      dur="9.78s"
+      keyTimes="0.000000;0.263602;0.269978;1.000000"
+      dur="9.72s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -885,15 +895,16 @@
 <circle cx="62" cy="20" r="6" fill="#27c93f"/>
 <text class="text fg" x="362" y="20" text-anchor="middle" style="dominant-baseline: central">my-project</text></g>
 <g class="text-layer">
-<text class="text fg" x="16" y="56">Your branch is ahead of &apos;origin/feat/rearch&apos; by 1 commit.                       </text>
-<text class="text fg" x="16" y="78.4">  (use &quot;git push&quot; to publish your local commits)                                </text>
-<text class="text fg" x="16" y="123.19999999999999">Changes not staged for commit:                                                  </text>
-<text class="text fg" x="16" y="145.6">  (use &quot;git add &lt;file&gt;...&quot; to update what will be committed)                    </text>
-<text class="text fg" x="16" y="168">  (use &quot;git restore &lt;file&gt;...&quot; to discard changes in working directory)         </text>
-<text class="text fg" x="16" y="190.39999999999998">        modified:   examples/svgs/macos-style.svg                               </text>
-<text class="text fg" x="16" y="212.79999999999998">        modified:   examples/svgs/word-navigation-test.svg                      </text>
-<text class="text fg" x="16" y="235.2">        modified:   examples/svgs/word-selection-test.svg                       </text>
-<text class="text fg" x="16" y="257.6">        modified:   src/pipeline/svg-emitter.ts                                 </text>
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="25.6" y="56"> git status                                                                    </text>
+<text class="text fg" x="16" y="78.4">On branch feat/rearch                                                           </text>
+<text class="text fg" x="16" y="100.8">Your branch is ahead of &apos;origin/feat/rearch&apos; by 2 commits.                      </text>
+<text class="text fg" x="16" y="123.19999999999999">  (use &quot;git push&quot; to publish your local commits)                                </text>
+<text class="text fg" x="16" y="168">Changes not staged for commit:                                                  </text>
+<text class="text fg" x="16" y="190.39999999999998">  (use &quot;git add &lt;file&gt;...&quot; to update what will be committed)                    </text>
+<text class="text fg" x="16" y="212.79999999999998">  (use &quot;git restore &lt;file&gt;...&quot; to discard changes in working directory)         </text>
+<text class="text fg" x="16" y="235.2">        modified:   examples/svgs/macos-style.svg                               </text>
+<text class="text fg" x="16" y="257.6">        modified:   src/animator/svg-animator.ts                                </text>
 <text class="text fg" x="16" y="302.4">no changes added to commit (use &quot;git add&quot; and/or &quot;git commit -a&quot;)               </text>
 <text class="text f13" x="16" y="324.79999999999995">❯</text>
 <text class="text fg" x="25.6" y="324.79999999999995"> git add                                                                       </text>
@@ -907,8 +918,8 @@
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.269380;0.276028;1.000000"
-      dur="9.78s"
+      keyTimes="0.000000;0.269978;0.276458;1.000000"
+      dur="9.72s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -930,15 +941,16 @@
 <circle cx="62" cy="20" r="6" fill="#27c93f"/>
 <text class="text fg" x="362" y="20" text-anchor="middle" style="dominant-baseline: central">my-project</text></g>
 <g class="text-layer">
-<text class="text fg" x="16" y="56">Your branch is ahead of &apos;origin/feat/rearch&apos; by 1 commit.                       </text>
-<text class="text fg" x="16" y="78.4">  (use &quot;git push&quot; to publish your local commits)                                </text>
-<text class="text fg" x="16" y="123.19999999999999">Changes not staged for commit:                                                  </text>
-<text class="text fg" x="16" y="145.6">  (use &quot;git add &lt;file&gt;...&quot; to update what will be committed)                    </text>
-<text class="text fg" x="16" y="168">  (use &quot;git restore &lt;file&gt;...&quot; to discard changes in working directory)         </text>
-<text class="text fg" x="16" y="190.39999999999998">        modified:   examples/svgs/macos-style.svg                               </text>
-<text class="text fg" x="16" y="212.79999999999998">        modified:   examples/svgs/word-navigation-test.svg                      </text>
-<text class="text fg" x="16" y="235.2">        modified:   examples/svgs/word-selection-test.svg                       </text>
-<text class="text fg" x="16" y="257.6">        modified:   src/pipeline/svg-emitter.ts                                 </text>
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="25.6" y="56"> git status                                                                    </text>
+<text class="text fg" x="16" y="78.4">On branch feat/rearch                                                           </text>
+<text class="text fg" x="16" y="100.8">Your branch is ahead of &apos;origin/feat/rearch&apos; by 2 commits.                      </text>
+<text class="text fg" x="16" y="123.19999999999999">  (use &quot;git push&quot; to publish your local commits)                                </text>
+<text class="text fg" x="16" y="168">Changes not staged for commit:                                                  </text>
+<text class="text fg" x="16" y="190.39999999999998">  (use &quot;git add &lt;file&gt;...&quot; to update what will be committed)                    </text>
+<text class="text fg" x="16" y="212.79999999999998">  (use &quot;git restore &lt;file&gt;...&quot; to discard changes in working directory)         </text>
+<text class="text fg" x="16" y="235.2">        modified:   examples/svgs/macos-style.svg                               </text>
+<text class="text fg" x="16" y="257.6">        modified:   src/animator/svg-animator.ts                                </text>
 <text class="text fg" x="16" y="302.4">no changes added to commit (use &quot;git add&quot; and/or &quot;git commit -a&quot;)               </text>
 <text class="text f13" x="16" y="324.79999999999995">❯</text>
 <text class="text fg" x="25.6" y="324.79999999999995"> git add                                                                       </text>
@@ -952,8 +964,8 @@
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.276028;0.282573;1.000000"
-      dur="9.78s"
+      keyTimes="0.000000;0.276458;0.282937;1.000000"
+      dur="9.72s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -975,15 +987,16 @@
 <circle cx="62" cy="20" r="6" fill="#27c93f"/>
 <text class="text fg" x="362" y="20" text-anchor="middle" style="dominant-baseline: central">my-project</text></g>
 <g class="text-layer">
-<text class="text fg" x="16" y="56">Your branch is ahead of &apos;origin/feat/rearch&apos; by 1 commit.                       </text>
-<text class="text fg" x="16" y="78.4">  (use &quot;git push&quot; to publish your local commits)                                </text>
-<text class="text fg" x="16" y="123.19999999999999">Changes not staged for commit:                                                  </text>
-<text class="text fg" x="16" y="145.6">  (use &quot;git add &lt;file&gt;...&quot; to update what will be committed)                    </text>
-<text class="text fg" x="16" y="168">  (use &quot;git restore &lt;file&gt;...&quot; to discard changes in working directory)         </text>
-<text class="text fg" x="16" y="190.39999999999998">        modified:   examples/svgs/macos-style.svg                               </text>
-<text class="text fg" x="16" y="212.79999999999998">        modified:   examples/svgs/word-navigation-test.svg                      </text>
-<text class="text fg" x="16" y="235.2">        modified:   examples/svgs/word-selection-test.svg                       </text>
-<text class="text fg" x="16" y="257.6">        modified:   src/pipeline/svg-emitter.ts                                 </text>
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="25.6" y="56"> git status                                                                    </text>
+<text class="text fg" x="16" y="78.4">On branch feat/rearch                                                           </text>
+<text class="text fg" x="16" y="100.8">Your branch is ahead of &apos;origin/feat/rearch&apos; by 2 commits.                      </text>
+<text class="text fg" x="16" y="123.19999999999999">  (use &quot;git push&quot; to publish your local commits)                                </text>
+<text class="text fg" x="16" y="168">Changes not staged for commit:                                                  </text>
+<text class="text fg" x="16" y="190.39999999999998">  (use &quot;git add &lt;file&gt;...&quot; to update what will be committed)                    </text>
+<text class="text fg" x="16" y="212.79999999999998">  (use &quot;git restore &lt;file&gt;...&quot; to discard changes in working directory)         </text>
+<text class="text fg" x="16" y="235.2">        modified:   examples/svgs/macos-style.svg                               </text>
+<text class="text fg" x="16" y="257.6">        modified:   src/animator/svg-animator.ts                                </text>
 <text class="text fg" x="16" y="302.4">no changes added to commit (use &quot;git add&quot; and/or &quot;git commit -a&quot;)               </text>
 <text class="text f13" x="16" y="324.79999999999995">❯</text>
 <text class="text fg" x="25.6" y="324.79999999999995"> git add .                                                                     </text>
@@ -997,8 +1010,8 @@
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.282573;0.325118;1.000000"
-      dur="9.78s"
+      keyTimes="0.000000;0.282937;0.325414;1.000000"
+      dur="9.72s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -1020,15 +1033,16 @@
 <circle cx="62" cy="20" r="6" fill="#27c93f"/>
 <text class="text fg" x="362" y="20" text-anchor="middle" style="dominant-baseline: central">my-project</text></g>
 <g class="text-layer">
-<text class="text fg" x="16" y="56">Your branch is ahead of &apos;origin/feat/rearch&apos; by 1 commit.                       </text>
-<text class="text fg" x="16" y="78.4">  (use &quot;git push&quot; to publish your local commits)                                </text>
-<text class="text fg" x="16" y="123.19999999999999">Changes not staged for commit:                                                  </text>
-<text class="text fg" x="16" y="145.6">  (use &quot;git add &lt;file&gt;...&quot; to update what will be committed)                    </text>
-<text class="text fg" x="16" y="168">  (use &quot;git restore &lt;file&gt;...&quot; to discard changes in working directory)         </text>
-<text class="text fg" x="16" y="190.39999999999998">        modified:   examples/svgs/macos-style.svg                               </text>
-<text class="text fg" x="16" y="212.79999999999998">        modified:   examples/svgs/word-navigation-test.svg                      </text>
-<text class="text fg" x="16" y="235.2">        modified:   examples/svgs/word-selection-test.svg                       </text>
-<text class="text fg" x="16" y="257.6">        modified:   src/pipeline/svg-emitter.ts                                 </text>
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="25.6" y="56"> git status                                                                    </text>
+<text class="text fg" x="16" y="78.4">On branch feat/rearch                                                           </text>
+<text class="text fg" x="16" y="100.8">Your branch is ahead of &apos;origin/feat/rearch&apos; by 2 commits.                      </text>
+<text class="text fg" x="16" y="123.19999999999999">  (use &quot;git push&quot; to publish your local commits)                                </text>
+<text class="text fg" x="16" y="168">Changes not staged for commit:                                                  </text>
+<text class="text fg" x="16" y="190.39999999999998">  (use &quot;git add &lt;file&gt;...&quot; to update what will be committed)                    </text>
+<text class="text fg" x="16" y="212.79999999999998">  (use &quot;git restore &lt;file&gt;...&quot; to discard changes in working directory)         </text>
+<text class="text fg" x="16" y="235.2">        modified:   examples/svgs/macos-style.svg                               </text>
+<text class="text fg" x="16" y="257.6">        modified:   src/animator/svg-animator.ts                                </text>
 <text class="text fg" x="16" y="302.4">no changes added to commit (use &quot;git add&quot; and/or &quot;git commit -a&quot;)               </text>
 <text class="text f13" x="16" y="324.79999999999995">❯</text>
 <text class="text fg" x="25.6" y="324.79999999999995"> git add .                                                                     </text>
@@ -1042,8 +1056,8 @@
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.325118;0.337083;1.000000"
-      dur="9.78s"
+      keyTimes="0.000000;0.325414;0.337036;1.000000"
+      dur="9.72s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -1065,14 +1079,14 @@
 <circle cx="62" cy="20" r="6" fill="#27c93f"/>
 <text class="text fg" x="362" y="20" text-anchor="middle" style="dominant-baseline: central">my-project</text></g>
 <g class="text-layer">
-<text class="text fg" x="16" y="56">  (use &quot;git push&quot; to publish your local commits)                                </text>
-<text class="text fg" x="16" y="100.8">Changes not staged for commit:                                                  </text>
-<text class="text fg" x="16" y="123.19999999999999">  (use &quot;git add &lt;file&gt;...&quot; to update what will be committed)                    </text>
-<text class="text fg" x="16" y="145.6">  (use &quot;git restore &lt;file&gt;...&quot; to discard changes in working directory)         </text>
-<text class="text fg" x="16" y="168">        modified:   examples/svgs/macos-style.svg                               </text>
-<text class="text fg" x="16" y="190.39999999999998">        modified:   examples/svgs/word-navigation-test.svg                      </text>
-<text class="text fg" x="16" y="212.79999999999998">        modified:   examples/svgs/word-selection-test.svg                       </text>
-<text class="text fg" x="16" y="235.2">        modified:   src/pipeline/svg-emitter.ts                                 </text>
+<text class="text fg" x="16" y="56">On branch feat/rearch                                                           </text>
+<text class="text fg" x="16" y="78.4">Your branch is ahead of &apos;origin/feat/rearch&apos; by 2 commits.                      </text>
+<text class="text fg" x="16" y="100.8">  (use &quot;git push&quot; to publish your local commits)                                </text>
+<text class="text fg" x="16" y="145.6">Changes not staged for commit:                                                  </text>
+<text class="text fg" x="16" y="168">  (use &quot;git add &lt;file&gt;...&quot; to update what will be committed)                    </text>
+<text class="text fg" x="16" y="190.39999999999998">  (use &quot;git restore &lt;file&gt;...&quot; to discard changes in working directory)         </text>
+<text class="text fg" x="16" y="212.79999999999998">        modified:   examples/svgs/macos-style.svg                               </text>
+<text class="text fg" x="16" y="235.2">        modified:   src/animator/svg-animator.ts                                </text>
 <text class="text fg" x="16" y="280">no changes added to commit (use &quot;git add&quot; and/or &quot;git commit -a&quot;)               </text>
 <text class="text f13" x="16" y="302.4">❯</text>
 <text class="text fg" x="25.6" y="302.4"> git add .                                                                     </text>
@@ -1083,8 +1097,8 @@
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.337083;0.350583;1.000000"
-      dur="9.78s"
+      keyTimes="0.000000;0.337036;0.350406;1.000000"
+      dur="9.72s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -1106,13 +1120,13 @@
 <circle cx="62" cy="20" r="6" fill="#27c93f"/>
 <text class="text fg" x="362" y="20" text-anchor="middle" style="dominant-baseline: central">my-project</text></g>
 <g class="text-layer">
-<text class="text fg" x="16" y="78.4">Changes not staged for commit:                                                  </text>
-<text class="text fg" x="16" y="100.8">  (use &quot;git add &lt;file&gt;...&quot; to update what will be committed)                    </text>
-<text class="text fg" x="16" y="123.19999999999999">  (use &quot;git restore &lt;file&gt;...&quot; to discard changes in working directory)         </text>
-<text class="text fg" x="16" y="145.6">        modified:   examples/svgs/macos-style.svg                               </text>
-<text class="text fg" x="16" y="168">        modified:   examples/svgs/word-navigation-test.svg                      </text>
-<text class="text fg" x="16" y="190.39999999999998">        modified:   examples/svgs/word-selection-test.svg                       </text>
-<text class="text fg" x="16" y="212.79999999999998">        modified:   src/pipeline/svg-emitter.ts                                 </text>
+<text class="text fg" x="16" y="56">Your branch is ahead of &apos;origin/feat/rearch&apos; by 2 commits.                      </text>
+<text class="text fg" x="16" y="78.4">  (use &quot;git push&quot; to publish your local commits)                                </text>
+<text class="text fg" x="16" y="123.19999999999999">Changes not staged for commit:                                                  </text>
+<text class="text fg" x="16" y="145.6">  (use &quot;git add &lt;file&gt;...&quot; to update what will be committed)                    </text>
+<text class="text fg" x="16" y="168">  (use &quot;git restore &lt;file&gt;...&quot; to discard changes in working directory)         </text>
+<text class="text fg" x="16" y="190.39999999999998">        modified:   examples/svgs/macos-style.svg                               </text>
+<text class="text fg" x="16" y="212.79999999999998">        modified:   src/animator/svg-animator.ts                                </text>
 <text class="text fg" x="16" y="257.6">no changes added to commit (use &quot;git add&quot; and/or &quot;git commit -a&quot;)               </text>
 <text class="text f13" x="16" y="280">❯</text>
 <text class="text fg" x="25.6" y="280"> git add .                                                                     </text>
@@ -1127,8 +1141,8 @@
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.350583;0.402843;1.000000"
-      dur="9.78s"
+      keyTimes="0.000000;0.350406;0.402859;1.000000"
+      dur="9.72s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -1150,13 +1164,13 @@
 <circle cx="62" cy="20" r="6" fill="#27c93f"/>
 <text class="text fg" x="362" y="20" text-anchor="middle" style="dominant-baseline: central">my-project</text></g>
 <g class="text-layer">
-<text class="text fg" x="16" y="78.4">Changes not staged for commit:                                                  </text>
-<text class="text fg" x="16" y="100.8">  (use &quot;git add &lt;file&gt;...&quot; to update what will be committed)                    </text>
-<text class="text fg" x="16" y="123.19999999999999">  (use &quot;git restore &lt;file&gt;...&quot; to discard changes in working directory)         </text>
-<text class="text fg" x="16" y="145.6">        modified:   examples/svgs/macos-style.svg                               </text>
-<text class="text fg" x="16" y="168">        modified:   examples/svgs/word-navigation-test.svg                      </text>
-<text class="text fg" x="16" y="190.39999999999998">        modified:   examples/svgs/word-selection-test.svg                       </text>
-<text class="text fg" x="16" y="212.79999999999998">        modified:   src/pipeline/svg-emitter.ts                                 </text>
+<text class="text fg" x="16" y="56">Your branch is ahead of &apos;origin/feat/rearch&apos; by 2 commits.                      </text>
+<text class="text fg" x="16" y="78.4">  (use &quot;git push&quot; to publish your local commits)                                </text>
+<text class="text fg" x="16" y="123.19999999999999">Changes not staged for commit:                                                  </text>
+<text class="text fg" x="16" y="145.6">  (use &quot;git add &lt;file&gt;...&quot; to update what will be committed)                    </text>
+<text class="text fg" x="16" y="168">  (use &quot;git restore &lt;file&gt;...&quot; to discard changes in working directory)         </text>
+<text class="text fg" x="16" y="190.39999999999998">        modified:   examples/svgs/macos-style.svg                               </text>
+<text class="text fg" x="16" y="212.79999999999998">        modified:   src/animator/svg-animator.ts                                </text>
 <text class="text fg" x="16" y="257.6">no changes added to commit (use &quot;git add&quot; and/or &quot;git commit -a&quot;)               </text>
 <text class="text f13" x="16" y="280">❯</text>
 <text class="text fg" x="25.6" y="280"> git add .                                                                     </text>
@@ -1171,8 +1185,8 @@
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.402843;0.408979;1.000000"
-      dur="9.78s"
+      keyTimes="0.000000;0.402859;0.408927;1.000000"
+      dur="9.72s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -1194,13 +1208,13 @@
 <circle cx="62" cy="20" r="6" fill="#27c93f"/>
 <text class="text fg" x="362" y="20" text-anchor="middle" style="dominant-baseline: central">my-project</text></g>
 <g class="text-layer">
-<text class="text fg" x="16" y="78.4">Changes not staged for commit:                                                  </text>
-<text class="text fg" x="16" y="100.8">  (use &quot;git add &lt;file&gt;...&quot; to update what will be committed)                    </text>
-<text class="text fg" x="16" y="123.19999999999999">  (use &quot;git restore &lt;file&gt;...&quot; to discard changes in working directory)         </text>
-<text class="text fg" x="16" y="145.6">        modified:   examples/svgs/macos-style.svg                               </text>
-<text class="text fg" x="16" y="168">        modified:   examples/svgs/word-navigation-test.svg                      </text>
-<text class="text fg" x="16" y="190.39999999999998">        modified:   examples/svgs/word-selection-test.svg                       </text>
-<text class="text fg" x="16" y="212.79999999999998">        modified:   src/pipeline/svg-emitter.ts                                 </text>
+<text class="text fg" x="16" y="56">Your branch is ahead of &apos;origin/feat/rearch&apos; by 2 commits.                      </text>
+<text class="text fg" x="16" y="78.4">  (use &quot;git push&quot; to publish your local commits)                                </text>
+<text class="text fg" x="16" y="123.19999999999999">Changes not staged for commit:                                                  </text>
+<text class="text fg" x="16" y="145.6">  (use &quot;git add &lt;file&gt;...&quot; to update what will be committed)                    </text>
+<text class="text fg" x="16" y="168">  (use &quot;git restore &lt;file&gt;...&quot; to discard changes in working directory)         </text>
+<text class="text fg" x="16" y="190.39999999999998">        modified:   examples/svgs/macos-style.svg                               </text>
+<text class="text fg" x="16" y="212.79999999999998">        modified:   src/animator/svg-animator.ts                                </text>
 <text class="text fg" x="16" y="257.6">no changes added to commit (use &quot;git add&quot; and/or &quot;git commit -a&quot;)               </text>
 <text class="text f13" x="16" y="280">❯</text>
 <text class="text fg" x="25.6" y="280"> git add .                                                                     </text>
@@ -1216,8 +1230,8 @@
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.408979;0.415116;1.000000"
-      dur="9.78s"
+      keyTimes="0.000000;0.408927;0.415098;1.000000"
+      dur="9.72s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -1239,13 +1253,13 @@
 <circle cx="62" cy="20" r="6" fill="#27c93f"/>
 <text class="text fg" x="362" y="20" text-anchor="middle" style="dominant-baseline: central">my-project</text></g>
 <g class="text-layer">
-<text class="text fg" x="16" y="78.4">Changes not staged for commit:                                                  </text>
-<text class="text fg" x="16" y="100.8">  (use &quot;git add &lt;file&gt;...&quot; to update what will be committed)                    </text>
-<text class="text fg" x="16" y="123.19999999999999">  (use &quot;git restore &lt;file&gt;...&quot; to discard changes in working directory)         </text>
-<text class="text fg" x="16" y="145.6">        modified:   examples/svgs/macos-style.svg                               </text>
-<text class="text fg" x="16" y="168">        modified:   examples/svgs/word-navigation-test.svg                      </text>
-<text class="text fg" x="16" y="190.39999999999998">        modified:   examples/svgs/word-selection-test.svg                       </text>
-<text class="text fg" x="16" y="212.79999999999998">        modified:   src/pipeline/svg-emitter.ts                                 </text>
+<text class="text fg" x="16" y="56">Your branch is ahead of &apos;origin/feat/rearch&apos; by 2 commits.                      </text>
+<text class="text fg" x="16" y="78.4">  (use &quot;git push&quot; to publish your local commits)                                </text>
+<text class="text fg" x="16" y="123.19999999999999">Changes not staged for commit:                                                  </text>
+<text class="text fg" x="16" y="145.6">  (use &quot;git add &lt;file&gt;...&quot; to update what will be committed)                    </text>
+<text class="text fg" x="16" y="168">  (use &quot;git restore &lt;file&gt;...&quot; to discard changes in working directory)         </text>
+<text class="text fg" x="16" y="190.39999999999998">        modified:   examples/svgs/macos-style.svg                               </text>
+<text class="text fg" x="16" y="212.79999999999998">        modified:   src/animator/svg-animator.ts                                </text>
 <text class="text fg" x="16" y="257.6">no changes added to commit (use &quot;git add&quot; and/or &quot;git commit -a&quot;)               </text>
 <text class="text f13" x="16" y="280">❯</text>
 <text class="text fg" x="25.6" y="280"> git add .                                                                     </text>
@@ -1261,8 +1275,8 @@
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.415116;0.421354;1.000000"
-      dur="9.78s"
+      keyTimes="0.000000;0.415098;0.421372;1.000000"
+      dur="9.72s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -1284,13 +1298,13 @@
 <circle cx="62" cy="20" r="6" fill="#27c93f"/>
 <text class="text fg" x="362" y="20" text-anchor="middle" style="dominant-baseline: central">my-project</text></g>
 <g class="text-layer">
-<text class="text fg" x="16" y="78.4">Changes not staged for commit:                                                  </text>
-<text class="text fg" x="16" y="100.8">  (use &quot;git add &lt;file&gt;...&quot; to update what will be committed)                    </text>
-<text class="text fg" x="16" y="123.19999999999999">  (use &quot;git restore &lt;file&gt;...&quot; to discard changes in working directory)         </text>
-<text class="text fg" x="16" y="145.6">        modified:   examples/svgs/macos-style.svg                               </text>
-<text class="text fg" x="16" y="168">        modified:   examples/svgs/word-navigation-test.svg                      </text>
-<text class="text fg" x="16" y="190.39999999999998">        modified:   examples/svgs/word-selection-test.svg                       </text>
-<text class="text fg" x="16" y="212.79999999999998">        modified:   src/pipeline/svg-emitter.ts                                 </text>
+<text class="text fg" x="16" y="56">Your branch is ahead of &apos;origin/feat/rearch&apos; by 2 commits.                      </text>
+<text class="text fg" x="16" y="78.4">  (use &quot;git push&quot; to publish your local commits)                                </text>
+<text class="text fg" x="16" y="123.19999999999999">Changes not staged for commit:                                                  </text>
+<text class="text fg" x="16" y="145.6">  (use &quot;git add &lt;file&gt;...&quot; to update what will be committed)                    </text>
+<text class="text fg" x="16" y="168">  (use &quot;git restore &lt;file&gt;...&quot; to discard changes in working directory)         </text>
+<text class="text fg" x="16" y="190.39999999999998">        modified:   examples/svgs/macos-style.svg                               </text>
+<text class="text fg" x="16" y="212.79999999999998">        modified:   src/animator/svg-animator.ts                                </text>
 <text class="text fg" x="16" y="257.6">no changes added to commit (use &quot;git add&quot; and/or &quot;git commit -a&quot;)               </text>
 <text class="text f13" x="16" y="280">❯</text>
 <text class="text fg" x="25.6" y="280"> git add .                                                                     </text>
@@ -1306,8 +1320,8 @@
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.421354;0.427593;1.000000"
-      dur="9.78s"
+      keyTimes="0.000000;0.421372;0.427646;1.000000"
+      dur="9.72s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -1329,13 +1343,13 @@
 <circle cx="62" cy="20" r="6" fill="#27c93f"/>
 <text class="text fg" x="362" y="20" text-anchor="middle" style="dominant-baseline: central">my-project</text></g>
 <g class="text-layer">
-<text class="text fg" x="16" y="78.4">Changes not staged for commit:                                                  </text>
-<text class="text fg" x="16" y="100.8">  (use &quot;git add &lt;file&gt;...&quot; to update what will be committed)                    </text>
-<text class="text fg" x="16" y="123.19999999999999">  (use &quot;git restore &lt;file&gt;...&quot; to discard changes in working directory)         </text>
-<text class="text fg" x="16" y="145.6">        modified:   examples/svgs/macos-style.svg                               </text>
-<text class="text fg" x="16" y="168">        modified:   examples/svgs/word-navigation-test.svg                      </text>
-<text class="text fg" x="16" y="190.39999999999998">        modified:   examples/svgs/word-selection-test.svg                       </text>
-<text class="text fg" x="16" y="212.79999999999998">        modified:   src/pipeline/svg-emitter.ts                                 </text>
+<text class="text fg" x="16" y="56">Your branch is ahead of &apos;origin/feat/rearch&apos; by 2 commits.                      </text>
+<text class="text fg" x="16" y="78.4">  (use &quot;git push&quot; to publish your local commits)                                </text>
+<text class="text fg" x="16" y="123.19999999999999">Changes not staged for commit:                                                  </text>
+<text class="text fg" x="16" y="145.6">  (use &quot;git add &lt;file&gt;...&quot; to update what will be committed)                    </text>
+<text class="text fg" x="16" y="168">  (use &quot;git restore &lt;file&gt;...&quot; to discard changes in working directory)         </text>
+<text class="text fg" x="16" y="190.39999999999998">        modified:   examples/svgs/macos-style.svg                               </text>
+<text class="text fg" x="16" y="212.79999999999998">        modified:   src/animator/svg-animator.ts                                </text>
 <text class="text fg" x="16" y="257.6">no changes added to commit (use &quot;git add&quot; and/or &quot;git commit -a&quot;)               </text>
 <text class="text f13" x="16" y="280">❯</text>
 <text class="text fg" x="25.6" y="280"> git add .                                                                     </text>
@@ -1351,8 +1365,8 @@
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.427593;0.433933;1.000000"
-      dur="9.78s"
+      keyTimes="0.000000;0.427646;0.433817;1.000000"
+      dur="9.72s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -1374,13 +1388,13 @@
 <circle cx="62" cy="20" r="6" fill="#27c93f"/>
 <text class="text fg" x="362" y="20" text-anchor="middle" style="dominant-baseline: central">my-project</text></g>
 <g class="text-layer">
-<text class="text fg" x="16" y="78.4">Changes not staged for commit:                                                  </text>
-<text class="text fg" x="16" y="100.8">  (use &quot;git add &lt;file&gt;...&quot; to update what will be committed)                    </text>
-<text class="text fg" x="16" y="123.19999999999999">  (use &quot;git restore &lt;file&gt;...&quot; to discard changes in working directory)         </text>
-<text class="text fg" x="16" y="145.6">        modified:   examples/svgs/macos-style.svg                               </text>
-<text class="text fg" x="16" y="168">        modified:   examples/svgs/word-navigation-test.svg                      </text>
-<text class="text fg" x="16" y="190.39999999999998">        modified:   examples/svgs/word-selection-test.svg                       </text>
-<text class="text fg" x="16" y="212.79999999999998">        modified:   src/pipeline/svg-emitter.ts                                 </text>
+<text class="text fg" x="16" y="56">Your branch is ahead of &apos;origin/feat/rearch&apos; by 2 commits.                      </text>
+<text class="text fg" x="16" y="78.4">  (use &quot;git push&quot; to publish your local commits)                                </text>
+<text class="text fg" x="16" y="123.19999999999999">Changes not staged for commit:                                                  </text>
+<text class="text fg" x="16" y="145.6">  (use &quot;git add &lt;file&gt;...&quot; to update what will be committed)                    </text>
+<text class="text fg" x="16" y="168">  (use &quot;git restore &lt;file&gt;...&quot; to discard changes in working directory)         </text>
+<text class="text fg" x="16" y="190.39999999999998">        modified:   examples/svgs/macos-style.svg                               </text>
+<text class="text fg" x="16" y="212.79999999999998">        modified:   src/animator/svg-animator.ts                                </text>
 <text class="text fg" x="16" y="257.6">no changes added to commit (use &quot;git add&quot; and/or &quot;git commit -a&quot;)               </text>
 <text class="text f13" x="16" y="280">❯</text>
 <text class="text fg" x="25.6" y="280"> git add .                                                                     </text>
@@ -1396,8 +1410,8 @@
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.433933;0.440274;1.000000"
-      dur="9.78s"
+      keyTimes="0.000000;0.433817;0.440193;1.000000"
+      dur="9.72s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -1419,13 +1433,13 @@
 <circle cx="62" cy="20" r="6" fill="#27c93f"/>
 <text class="text fg" x="362" y="20" text-anchor="middle" style="dominant-baseline: central">my-project</text></g>
 <g class="text-layer">
-<text class="text fg" x="16" y="78.4">Changes not staged for commit:                                                  </text>
-<text class="text fg" x="16" y="100.8">  (use &quot;git add &lt;file&gt;...&quot; to update what will be committed)                    </text>
-<text class="text fg" x="16" y="123.19999999999999">  (use &quot;git restore &lt;file&gt;...&quot; to discard changes in working directory)         </text>
-<text class="text fg" x="16" y="145.6">        modified:   examples/svgs/macos-style.svg                               </text>
-<text class="text fg" x="16" y="168">        modified:   examples/svgs/word-navigation-test.svg                      </text>
-<text class="text fg" x="16" y="190.39999999999998">        modified:   examples/svgs/word-selection-test.svg                       </text>
-<text class="text fg" x="16" y="212.79999999999998">        modified:   src/pipeline/svg-emitter.ts                                 </text>
+<text class="text fg" x="16" y="56">Your branch is ahead of &apos;origin/feat/rearch&apos; by 2 commits.                      </text>
+<text class="text fg" x="16" y="78.4">  (use &quot;git push&quot; to publish your local commits)                                </text>
+<text class="text fg" x="16" y="123.19999999999999">Changes not staged for commit:                                                  </text>
+<text class="text fg" x="16" y="145.6">  (use &quot;git add &lt;file&gt;...&quot; to update what will be committed)                    </text>
+<text class="text fg" x="16" y="168">  (use &quot;git restore &lt;file&gt;...&quot; to discard changes in working directory)         </text>
+<text class="text fg" x="16" y="190.39999999999998">        modified:   examples/svgs/macos-style.svg                               </text>
+<text class="text fg" x="16" y="212.79999999999998">        modified:   src/animator/svg-animator.ts                                </text>
 <text class="text fg" x="16" y="257.6">no changes added to commit (use &quot;git add&quot; and/or &quot;git commit -a&quot;)               </text>
 <text class="text f13" x="16" y="280">❯</text>
 <text class="text fg" x="25.6" y="280"> git add .                                                                     </text>
@@ -1441,8 +1455,8 @@
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.440274;0.446615;1.000000"
-      dur="9.78s"
+      keyTimes="0.000000;0.440193;0.446570;1.000000"
+      dur="9.72s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -1464,13 +1478,13 @@
 <circle cx="62" cy="20" r="6" fill="#27c93f"/>
 <text class="text fg" x="362" y="20" text-anchor="middle" style="dominant-baseline: central">my-project</text></g>
 <g class="text-layer">
-<text class="text fg" x="16" y="78.4">Changes not staged for commit:                                                  </text>
-<text class="text fg" x="16" y="100.8">  (use &quot;git add &lt;file&gt;...&quot; to update what will be committed)                    </text>
-<text class="text fg" x="16" y="123.19999999999999">  (use &quot;git restore &lt;file&gt;...&quot; to discard changes in working directory)         </text>
-<text class="text fg" x="16" y="145.6">        modified:   examples/svgs/macos-style.svg                               </text>
-<text class="text fg" x="16" y="168">        modified:   examples/svgs/word-navigation-test.svg                      </text>
-<text class="text fg" x="16" y="190.39999999999998">        modified:   examples/svgs/word-selection-test.svg                       </text>
-<text class="text fg" x="16" y="212.79999999999998">        modified:   src/pipeline/svg-emitter.ts                                 </text>
+<text class="text fg" x="16" y="56">Your branch is ahead of &apos;origin/feat/rearch&apos; by 2 commits.                      </text>
+<text class="text fg" x="16" y="78.4">  (use &quot;git push&quot; to publish your local commits)                                </text>
+<text class="text fg" x="16" y="123.19999999999999">Changes not staged for commit:                                                  </text>
+<text class="text fg" x="16" y="145.6">  (use &quot;git add &lt;file&gt;...&quot; to update what will be committed)                    </text>
+<text class="text fg" x="16" y="168">  (use &quot;git restore &lt;file&gt;...&quot; to discard changes in working directory)         </text>
+<text class="text fg" x="16" y="190.39999999999998">        modified:   examples/svgs/macos-style.svg                               </text>
+<text class="text fg" x="16" y="212.79999999999998">        modified:   src/animator/svg-animator.ts                                </text>
 <text class="text fg" x="16" y="257.6">no changes added to commit (use &quot;git add&quot; and/or &quot;git commit -a&quot;)               </text>
 <text class="text f13" x="16" y="280">❯</text>
 <text class="text fg" x="25.6" y="280"> git add .                                                                     </text>
@@ -1486,8 +1500,8 @@
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.446615;0.452751;1.000000"
-      dur="9.78s"
+      keyTimes="0.000000;0.446570;0.452844;1.000000"
+      dur="9.72s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -1509,13 +1523,13 @@
 <circle cx="62" cy="20" r="6" fill="#27c93f"/>
 <text class="text fg" x="362" y="20" text-anchor="middle" style="dominant-baseline: central">my-project</text></g>
 <g class="text-layer">
-<text class="text fg" x="16" y="78.4">Changes not staged for commit:                                                  </text>
-<text class="text fg" x="16" y="100.8">  (use &quot;git add &lt;file&gt;...&quot; to update what will be committed)                    </text>
-<text class="text fg" x="16" y="123.19999999999999">  (use &quot;git restore &lt;file&gt;...&quot; to discard changes in working directory)         </text>
-<text class="text fg" x="16" y="145.6">        modified:   examples/svgs/macos-style.svg                               </text>
-<text class="text fg" x="16" y="168">        modified:   examples/svgs/word-navigation-test.svg                      </text>
-<text class="text fg" x="16" y="190.39999999999998">        modified:   examples/svgs/word-selection-test.svg                       </text>
-<text class="text fg" x="16" y="212.79999999999998">        modified:   src/pipeline/svg-emitter.ts                                 </text>
+<text class="text fg" x="16" y="56">Your branch is ahead of &apos;origin/feat/rearch&apos; by 2 commits.                      </text>
+<text class="text fg" x="16" y="78.4">  (use &quot;git push&quot; to publish your local commits)                                </text>
+<text class="text fg" x="16" y="123.19999999999999">Changes not staged for commit:                                                  </text>
+<text class="text fg" x="16" y="145.6">  (use &quot;git add &lt;file&gt;...&quot; to update what will be committed)                    </text>
+<text class="text fg" x="16" y="168">  (use &quot;git restore &lt;file&gt;...&quot; to discard changes in working directory)         </text>
+<text class="text fg" x="16" y="190.39999999999998">        modified:   examples/svgs/macos-style.svg                               </text>
+<text class="text fg" x="16" y="212.79999999999998">        modified:   src/animator/svg-animator.ts                                </text>
 <text class="text fg" x="16" y="257.6">no changes added to commit (use &quot;git add&quot; and/or &quot;git commit -a&quot;)               </text>
 <text class="text f13" x="16" y="280">❯</text>
 <text class="text fg" x="25.6" y="280"> git add .                                                                     </text>
@@ -1531,8 +1545,8 @@
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.452751;0.458887;1.000000"
-      dur="9.78s"
+      keyTimes="0.000000;0.452844;0.459220;1.000000"
+      dur="9.72s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -1554,13 +1568,13 @@
 <circle cx="62" cy="20" r="6" fill="#27c93f"/>
 <text class="text fg" x="362" y="20" text-anchor="middle" style="dominant-baseline: central">my-project</text></g>
 <g class="text-layer">
-<text class="text fg" x="16" y="78.4">Changes not staged for commit:                                                  </text>
-<text class="text fg" x="16" y="100.8">  (use &quot;git add &lt;file&gt;...&quot; to update what will be committed)                    </text>
-<text class="text fg" x="16" y="123.19999999999999">  (use &quot;git restore &lt;file&gt;...&quot; to discard changes in working directory)         </text>
-<text class="text fg" x="16" y="145.6">        modified:   examples/svgs/macos-style.svg                               </text>
-<text class="text fg" x="16" y="168">        modified:   examples/svgs/word-navigation-test.svg                      </text>
-<text class="text fg" x="16" y="190.39999999999998">        modified:   examples/svgs/word-selection-test.svg                       </text>
-<text class="text fg" x="16" y="212.79999999999998">        modified:   src/pipeline/svg-emitter.ts                                 </text>
+<text class="text fg" x="16" y="56">Your branch is ahead of &apos;origin/feat/rearch&apos; by 2 commits.                      </text>
+<text class="text fg" x="16" y="78.4">  (use &quot;git push&quot; to publish your local commits)                                </text>
+<text class="text fg" x="16" y="123.19999999999999">Changes not staged for commit:                                                  </text>
+<text class="text fg" x="16" y="145.6">  (use &quot;git add &lt;file&gt;...&quot; to update what will be committed)                    </text>
+<text class="text fg" x="16" y="168">  (use &quot;git restore &lt;file&gt;...&quot; to discard changes in working directory)         </text>
+<text class="text fg" x="16" y="190.39999999999998">        modified:   examples/svgs/macos-style.svg                               </text>
+<text class="text fg" x="16" y="212.79999999999998">        modified:   src/animator/svg-animator.ts                                </text>
 <text class="text fg" x="16" y="257.6">no changes added to commit (use &quot;git add&quot; and/or &quot;git commit -a&quot;)               </text>
 <text class="text f13" x="16" y="280">❯</text>
 <text class="text fg" x="25.6" y="280"> git add .                                                                     </text>
@@ -1576,8 +1590,8 @@
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.458887;0.465024;1.000000"
-      dur="9.78s"
+      keyTimes="0.000000;0.459220;0.465494;1.000000"
+      dur="9.72s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -1599,13 +1613,13 @@
 <circle cx="62" cy="20" r="6" fill="#27c93f"/>
 <text class="text fg" x="362" y="20" text-anchor="middle" style="dominant-baseline: central">my-project</text></g>
 <g class="text-layer">
-<text class="text fg" x="16" y="78.4">Changes not staged for commit:                                                  </text>
-<text class="text fg" x="16" y="100.8">  (use &quot;git add &lt;file&gt;...&quot; to update what will be committed)                    </text>
-<text class="text fg" x="16" y="123.19999999999999">  (use &quot;git restore &lt;file&gt;...&quot; to discard changes in working directory)         </text>
-<text class="text fg" x="16" y="145.6">        modified:   examples/svgs/macos-style.svg                               </text>
-<text class="text fg" x="16" y="168">        modified:   examples/svgs/word-navigation-test.svg                      </text>
-<text class="text fg" x="16" y="190.39999999999998">        modified:   examples/svgs/word-selection-test.svg                       </text>
-<text class="text fg" x="16" y="212.79999999999998">        modified:   src/pipeline/svg-emitter.ts                                 </text>
+<text class="text fg" x="16" y="56">Your branch is ahead of &apos;origin/feat/rearch&apos; by 2 commits.                      </text>
+<text class="text fg" x="16" y="78.4">  (use &quot;git push&quot; to publish your local commits)                                </text>
+<text class="text fg" x="16" y="123.19999999999999">Changes not staged for commit:                                                  </text>
+<text class="text fg" x="16" y="145.6">  (use &quot;git add &lt;file&gt;...&quot; to update what will be committed)                    </text>
+<text class="text fg" x="16" y="168">  (use &quot;git restore &lt;file&gt;...&quot; to discard changes in working directory)         </text>
+<text class="text fg" x="16" y="190.39999999999998">        modified:   examples/svgs/macos-style.svg                               </text>
+<text class="text fg" x="16" y="212.79999999999998">        modified:   src/animator/svg-animator.ts                                </text>
 <text class="text fg" x="16" y="257.6">no changes added to commit (use &quot;git add&quot; and/or &quot;git commit -a&quot;)               </text>
 <text class="text f13" x="16" y="280">❯</text>
 <text class="text fg" x="25.6" y="280"> git add .                                                                     </text>
@@ -1621,8 +1635,8 @@
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.465024;0.471262;1.000000"
-      dur="9.78s"
+      keyTimes="0.000000;0.465494;0.471871;1.000000"
+      dur="9.72s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -1644,13 +1658,13 @@
 <circle cx="62" cy="20" r="6" fill="#27c93f"/>
 <text class="text fg" x="362" y="20" text-anchor="middle" style="dominant-baseline: central">my-project</text></g>
 <g class="text-layer">
-<text class="text fg" x="16" y="78.4">Changes not staged for commit:                                                  </text>
-<text class="text fg" x="16" y="100.8">  (use &quot;git add &lt;file&gt;...&quot; to update what will be committed)                    </text>
-<text class="text fg" x="16" y="123.19999999999999">  (use &quot;git restore &lt;file&gt;...&quot; to discard changes in working directory)         </text>
-<text class="text fg" x="16" y="145.6">        modified:   examples/svgs/macos-style.svg                               </text>
-<text class="text fg" x="16" y="168">        modified:   examples/svgs/word-navigation-test.svg                      </text>
-<text class="text fg" x="16" y="190.39999999999998">        modified:   examples/svgs/word-selection-test.svg                       </text>
-<text class="text fg" x="16" y="212.79999999999998">        modified:   src/pipeline/svg-emitter.ts                                 </text>
+<text class="text fg" x="16" y="56">Your branch is ahead of &apos;origin/feat/rearch&apos; by 2 commits.                      </text>
+<text class="text fg" x="16" y="78.4">  (use &quot;git push&quot; to publish your local commits)                                </text>
+<text class="text fg" x="16" y="123.19999999999999">Changes not staged for commit:                                                  </text>
+<text class="text fg" x="16" y="145.6">  (use &quot;git add &lt;file&gt;...&quot; to update what will be committed)                    </text>
+<text class="text fg" x="16" y="168">  (use &quot;git restore &lt;file&gt;...&quot; to discard changes in working directory)         </text>
+<text class="text fg" x="16" y="190.39999999999998">        modified:   examples/svgs/macos-style.svg                               </text>
+<text class="text fg" x="16" y="212.79999999999998">        modified:   src/animator/svg-animator.ts                                </text>
 <text class="text fg" x="16" y="257.6">no changes added to commit (use &quot;git add&quot; and/or &quot;git commit -a&quot;)               </text>
 <text class="text f13" x="16" y="280">❯</text>
 <text class="text fg" x="25.6" y="280"> git add .                                                                     </text>
@@ -1666,8 +1680,8 @@
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.471262;0.477705;1.000000"
-      dur="9.78s"
+      keyTimes="0.000000;0.471871;0.478145;1.000000"
+      dur="9.72s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -1689,13 +1703,13 @@
 <circle cx="62" cy="20" r="6" fill="#27c93f"/>
 <text class="text fg" x="362" y="20" text-anchor="middle" style="dominant-baseline: central">my-project</text></g>
 <g class="text-layer">
-<text class="text fg" x="16" y="78.4">Changes not staged for commit:                                                  </text>
-<text class="text fg" x="16" y="100.8">  (use &quot;git add &lt;file&gt;...&quot; to update what will be committed)                    </text>
-<text class="text fg" x="16" y="123.19999999999999">  (use &quot;git restore &lt;file&gt;...&quot; to discard changes in working directory)         </text>
-<text class="text fg" x="16" y="145.6">        modified:   examples/svgs/macos-style.svg                               </text>
-<text class="text fg" x="16" y="168">        modified:   examples/svgs/word-navigation-test.svg                      </text>
-<text class="text fg" x="16" y="190.39999999999998">        modified:   examples/svgs/word-selection-test.svg                       </text>
-<text class="text fg" x="16" y="212.79999999999998">        modified:   src/pipeline/svg-emitter.ts                                 </text>
+<text class="text fg" x="16" y="56">Your branch is ahead of &apos;origin/feat/rearch&apos; by 2 commits.                      </text>
+<text class="text fg" x="16" y="78.4">  (use &quot;git push&quot; to publish your local commits)                                </text>
+<text class="text fg" x="16" y="123.19999999999999">Changes not staged for commit:                                                  </text>
+<text class="text fg" x="16" y="145.6">  (use &quot;git add &lt;file&gt;...&quot; to update what will be committed)                    </text>
+<text class="text fg" x="16" y="168">  (use &quot;git restore &lt;file&gt;...&quot; to discard changes in working directory)         </text>
+<text class="text fg" x="16" y="190.39999999999998">        modified:   examples/svgs/macos-style.svg                               </text>
+<text class="text fg" x="16" y="212.79999999999998">        modified:   src/animator/svg-animator.ts                                </text>
 <text class="text fg" x="16" y="257.6">no changes added to commit (use &quot;git add&quot; and/or &quot;git commit -a&quot;)               </text>
 <text class="text f13" x="16" y="280">❯</text>
 <text class="text fg" x="25.6" y="280"> git add .                                                                     </text>
@@ -1711,8 +1725,8 @@
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.477705;0.483944;1.000000"
-      dur="9.78s"
+      keyTimes="0.000000;0.478145;0.484521;1.000000"
+      dur="9.72s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -1734,13 +1748,13 @@
 <circle cx="62" cy="20" r="6" fill="#27c93f"/>
 <text class="text fg" x="362" y="20" text-anchor="middle" style="dominant-baseline: central">my-project</text></g>
 <g class="text-layer">
-<text class="text fg" x="16" y="78.4">Changes not staged for commit:                                                  </text>
-<text class="text fg" x="16" y="100.8">  (use &quot;git add &lt;file&gt;...&quot; to update what will be committed)                    </text>
-<text class="text fg" x="16" y="123.19999999999999">  (use &quot;git restore &lt;file&gt;...&quot; to discard changes in working directory)         </text>
-<text class="text fg" x="16" y="145.6">        modified:   examples/svgs/macos-style.svg                               </text>
-<text class="text fg" x="16" y="168">        modified:   examples/svgs/word-navigation-test.svg                      </text>
-<text class="text fg" x="16" y="190.39999999999998">        modified:   examples/svgs/word-selection-test.svg                       </text>
-<text class="text fg" x="16" y="212.79999999999998">        modified:   src/pipeline/svg-emitter.ts                                 </text>
+<text class="text fg" x="16" y="56">Your branch is ahead of &apos;origin/feat/rearch&apos; by 2 commits.                      </text>
+<text class="text fg" x="16" y="78.4">  (use &quot;git push&quot; to publish your local commits)                                </text>
+<text class="text fg" x="16" y="123.19999999999999">Changes not staged for commit:                                                  </text>
+<text class="text fg" x="16" y="145.6">  (use &quot;git add &lt;file&gt;...&quot; to update what will be committed)                    </text>
+<text class="text fg" x="16" y="168">  (use &quot;git restore &lt;file&gt;...&quot; to discard changes in working directory)         </text>
+<text class="text fg" x="16" y="190.39999999999998">        modified:   examples/svgs/macos-style.svg                               </text>
+<text class="text fg" x="16" y="212.79999999999998">        modified:   src/animator/svg-animator.ts                                </text>
 <text class="text fg" x="16" y="257.6">no changes added to commit (use &quot;git add&quot; and/or &quot;git commit -a&quot;)               </text>
 <text class="text f13" x="16" y="280">❯</text>
 <text class="text fg" x="25.6" y="280"> git add .                                                                     </text>
@@ -1756,8 +1770,8 @@
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.483944;0.490182;1.000000"
-      dur="9.78s"
+      keyTimes="0.000000;0.484521;0.490795;1.000000"
+      dur="9.72s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -1779,13 +1793,13 @@
 <circle cx="62" cy="20" r="6" fill="#27c93f"/>
 <text class="text fg" x="362" y="20" text-anchor="middle" style="dominant-baseline: central">my-project</text></g>
 <g class="text-layer">
-<text class="text fg" x="16" y="78.4">Changes not staged for commit:                                                  </text>
-<text class="text fg" x="16" y="100.8">  (use &quot;git add &lt;file&gt;...&quot; to update what will be committed)                    </text>
-<text class="text fg" x="16" y="123.19999999999999">  (use &quot;git restore &lt;file&gt;...&quot; to discard changes in working directory)         </text>
-<text class="text fg" x="16" y="145.6">        modified:   examples/svgs/macos-style.svg                               </text>
-<text class="text fg" x="16" y="168">        modified:   examples/svgs/word-navigation-test.svg                      </text>
-<text class="text fg" x="16" y="190.39999999999998">        modified:   examples/svgs/word-selection-test.svg                       </text>
-<text class="text fg" x="16" y="212.79999999999998">        modified:   src/pipeline/svg-emitter.ts                                 </text>
+<text class="text fg" x="16" y="56">Your branch is ahead of &apos;origin/feat/rearch&apos; by 2 commits.                      </text>
+<text class="text fg" x="16" y="78.4">  (use &quot;git push&quot; to publish your local commits)                                </text>
+<text class="text fg" x="16" y="123.19999999999999">Changes not staged for commit:                                                  </text>
+<text class="text fg" x="16" y="145.6">  (use &quot;git add &lt;file&gt;...&quot; to update what will be committed)                    </text>
+<text class="text fg" x="16" y="168">  (use &quot;git restore &lt;file&gt;...&quot; to discard changes in working directory)         </text>
+<text class="text fg" x="16" y="190.39999999999998">        modified:   examples/svgs/macos-style.svg                               </text>
+<text class="text fg" x="16" y="212.79999999999998">        modified:   src/animator/svg-animator.ts                                </text>
 <text class="text fg" x="16" y="257.6">no changes added to commit (use &quot;git add&quot; and/or &quot;git commit -a&quot;)               </text>
 <text class="text f13" x="16" y="280">❯</text>
 <text class="text fg" x="25.6" y="280"> git add .                                                                     </text>
@@ -1801,8 +1815,8 @@
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.490182;0.496421;1.000000"
-      dur="9.78s"
+      keyTimes="0.000000;0.490795;0.496966;1.000000"
+      dur="9.72s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -1824,13 +1838,13 @@
 <circle cx="62" cy="20" r="6" fill="#27c93f"/>
 <text class="text fg" x="362" y="20" text-anchor="middle" style="dominant-baseline: central">my-project</text></g>
 <g class="text-layer">
-<text class="text fg" x="16" y="78.4">Changes not staged for commit:                                                  </text>
-<text class="text fg" x="16" y="100.8">  (use &quot;git add &lt;file&gt;...&quot; to update what will be committed)                    </text>
-<text class="text fg" x="16" y="123.19999999999999">  (use &quot;git restore &lt;file&gt;...&quot; to discard changes in working directory)         </text>
-<text class="text fg" x="16" y="145.6">        modified:   examples/svgs/macos-style.svg                               </text>
-<text class="text fg" x="16" y="168">        modified:   examples/svgs/word-navigation-test.svg                      </text>
-<text class="text fg" x="16" y="190.39999999999998">        modified:   examples/svgs/word-selection-test.svg                       </text>
-<text class="text fg" x="16" y="212.79999999999998">        modified:   src/pipeline/svg-emitter.ts                                 </text>
+<text class="text fg" x="16" y="56">Your branch is ahead of &apos;origin/feat/rearch&apos; by 2 commits.                      </text>
+<text class="text fg" x="16" y="78.4">  (use &quot;git push&quot; to publish your local commits)                                </text>
+<text class="text fg" x="16" y="123.19999999999999">Changes not staged for commit:                                                  </text>
+<text class="text fg" x="16" y="145.6">  (use &quot;git add &lt;file&gt;...&quot; to update what will be committed)                    </text>
+<text class="text fg" x="16" y="168">  (use &quot;git restore &lt;file&gt;...&quot; to discard changes in working directory)         </text>
+<text class="text fg" x="16" y="190.39999999999998">        modified:   examples/svgs/macos-style.svg                               </text>
+<text class="text fg" x="16" y="212.79999999999998">        modified:   src/animator/svg-animator.ts                                </text>
 <text class="text fg" x="16" y="257.6">no changes added to commit (use &quot;git add&quot; and/or &quot;git commit -a&quot;)               </text>
 <text class="text f13" x="16" y="280">❯</text>
 <text class="text fg" x="25.6" y="280"> git add .                                                                     </text>
@@ -1846,8 +1860,8 @@
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.496421;0.502761;1.000000"
-      dur="9.78s"
+      keyTimes="0.000000;0.496966;0.503137;1.000000"
+      dur="9.72s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -1869,13 +1883,13 @@
 <circle cx="62" cy="20" r="6" fill="#27c93f"/>
 <text class="text fg" x="362" y="20" text-anchor="middle" style="dominant-baseline: central">my-project</text></g>
 <g class="text-layer">
-<text class="text fg" x="16" y="78.4">Changes not staged for commit:                                                  </text>
-<text class="text fg" x="16" y="100.8">  (use &quot;git add &lt;file&gt;...&quot; to update what will be committed)                    </text>
-<text class="text fg" x="16" y="123.19999999999999">  (use &quot;git restore &lt;file&gt;...&quot; to discard changes in working directory)         </text>
-<text class="text fg" x="16" y="145.6">        modified:   examples/svgs/macos-style.svg                               </text>
-<text class="text fg" x="16" y="168">        modified:   examples/svgs/word-navigation-test.svg                      </text>
-<text class="text fg" x="16" y="190.39999999999998">        modified:   examples/svgs/word-selection-test.svg                       </text>
-<text class="text fg" x="16" y="212.79999999999998">        modified:   src/pipeline/svg-emitter.ts                                 </text>
+<text class="text fg" x="16" y="56">Your branch is ahead of &apos;origin/feat/rearch&apos; by 2 commits.                      </text>
+<text class="text fg" x="16" y="78.4">  (use &quot;git push&quot; to publish your local commits)                                </text>
+<text class="text fg" x="16" y="123.19999999999999">Changes not staged for commit:                                                  </text>
+<text class="text fg" x="16" y="145.6">  (use &quot;git add &lt;file&gt;...&quot; to update what will be committed)                    </text>
+<text class="text fg" x="16" y="168">  (use &quot;git restore &lt;file&gt;...&quot; to discard changes in working directory)         </text>
+<text class="text fg" x="16" y="190.39999999999998">        modified:   examples/svgs/macos-style.svg                               </text>
+<text class="text fg" x="16" y="212.79999999999998">        modified:   src/animator/svg-animator.ts                                </text>
 <text class="text fg" x="16" y="257.6">no changes added to commit (use &quot;git add&quot; and/or &quot;git commit -a&quot;)               </text>
 <text class="text f13" x="16" y="280">❯</text>
 <text class="text fg" x="25.6" y="280"> git add .                                                                     </text>
@@ -1891,8 +1905,8 @@
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.502761;0.509102;1.000000"
-      dur="9.78s"
+      keyTimes="0.000000;0.503137;0.509308;1.000000"
+      dur="9.72s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -1914,13 +1928,13 @@
 <circle cx="62" cy="20" r="6" fill="#27c93f"/>
 <text class="text fg" x="362" y="20" text-anchor="middle" style="dominant-baseline: central">my-project</text></g>
 <g class="text-layer">
-<text class="text fg" x="16" y="78.4">Changes not staged for commit:                                                  </text>
-<text class="text fg" x="16" y="100.8">  (use &quot;git add &lt;file&gt;...&quot; to update what will be committed)                    </text>
-<text class="text fg" x="16" y="123.19999999999999">  (use &quot;git restore &lt;file&gt;...&quot; to discard changes in working directory)         </text>
-<text class="text fg" x="16" y="145.6">        modified:   examples/svgs/macos-style.svg                               </text>
-<text class="text fg" x="16" y="168">        modified:   examples/svgs/word-navigation-test.svg                      </text>
-<text class="text fg" x="16" y="190.39999999999998">        modified:   examples/svgs/word-selection-test.svg                       </text>
-<text class="text fg" x="16" y="212.79999999999998">        modified:   src/pipeline/svg-emitter.ts                                 </text>
+<text class="text fg" x="16" y="56">Your branch is ahead of &apos;origin/feat/rearch&apos; by 2 commits.                      </text>
+<text class="text fg" x="16" y="78.4">  (use &quot;git push&quot; to publish your local commits)                                </text>
+<text class="text fg" x="16" y="123.19999999999999">Changes not staged for commit:                                                  </text>
+<text class="text fg" x="16" y="145.6">  (use &quot;git add &lt;file&gt;...&quot; to update what will be committed)                    </text>
+<text class="text fg" x="16" y="168">  (use &quot;git restore &lt;file&gt;...&quot; to discard changes in working directory)         </text>
+<text class="text fg" x="16" y="190.39999999999998">        modified:   examples/svgs/macos-style.svg                               </text>
+<text class="text fg" x="16" y="212.79999999999998">        modified:   src/animator/svg-animator.ts                                </text>
 <text class="text fg" x="16" y="257.6">no changes added to commit (use &quot;git add&quot; and/or &quot;git commit -a&quot;)               </text>
 <text class="text f13" x="16" y="280">❯</text>
 <text class="text fg" x="25.6" y="280"> git add .                                                                     </text>
@@ -1936,8 +1950,8 @@
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.509102;0.515238;1.000000"
-      dur="9.78s"
+      keyTimes="0.000000;0.509308;0.515479;1.000000"
+      dur="9.72s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -1959,13 +1973,13 @@
 <circle cx="62" cy="20" r="6" fill="#27c93f"/>
 <text class="text fg" x="362" y="20" text-anchor="middle" style="dominant-baseline: central">my-project</text></g>
 <g class="text-layer">
-<text class="text fg" x="16" y="78.4">Changes not staged for commit:                                                  </text>
-<text class="text fg" x="16" y="100.8">  (use &quot;git add &lt;file&gt;...&quot; to update what will be committed)                    </text>
-<text class="text fg" x="16" y="123.19999999999999">  (use &quot;git restore &lt;file&gt;...&quot; to discard changes in working directory)         </text>
-<text class="text fg" x="16" y="145.6">        modified:   examples/svgs/macos-style.svg                               </text>
-<text class="text fg" x="16" y="168">        modified:   examples/svgs/word-navigation-test.svg                      </text>
-<text class="text fg" x="16" y="190.39999999999998">        modified:   examples/svgs/word-selection-test.svg                       </text>
-<text class="text fg" x="16" y="212.79999999999998">        modified:   src/pipeline/svg-emitter.ts                                 </text>
+<text class="text fg" x="16" y="56">Your branch is ahead of &apos;origin/feat/rearch&apos; by 2 commits.                      </text>
+<text class="text fg" x="16" y="78.4">  (use &quot;git push&quot; to publish your local commits)                                </text>
+<text class="text fg" x="16" y="123.19999999999999">Changes not staged for commit:                                                  </text>
+<text class="text fg" x="16" y="145.6">  (use &quot;git add &lt;file&gt;...&quot; to update what will be committed)                    </text>
+<text class="text fg" x="16" y="168">  (use &quot;git restore &lt;file&gt;...&quot; to discard changes in working directory)         </text>
+<text class="text fg" x="16" y="190.39999999999998">        modified:   examples/svgs/macos-style.svg                               </text>
+<text class="text fg" x="16" y="212.79999999999998">        modified:   src/animator/svg-animator.ts                                </text>
 <text class="text fg" x="16" y="257.6">no changes added to commit (use &quot;git add&quot; and/or &quot;git commit -a&quot;)               </text>
 <text class="text f13" x="16" y="280">❯</text>
 <text class="text fg" x="25.6" y="280"> git add .                                                                     </text>
@@ -1981,8 +1995,8 @@
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.515238;0.521477;1.000000"
-      dur="9.78s"
+      keyTimes="0.000000;0.515479;0.521753;1.000000"
+      dur="9.72s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -2004,13 +2018,13 @@
 <circle cx="62" cy="20" r="6" fill="#27c93f"/>
 <text class="text fg" x="362" y="20" text-anchor="middle" style="dominant-baseline: central">my-project</text></g>
 <g class="text-layer">
-<text class="text fg" x="16" y="78.4">Changes not staged for commit:                                                  </text>
-<text class="text fg" x="16" y="100.8">  (use &quot;git add &lt;file&gt;...&quot; to update what will be committed)                    </text>
-<text class="text fg" x="16" y="123.19999999999999">  (use &quot;git restore &lt;file&gt;...&quot; to discard changes in working directory)         </text>
-<text class="text fg" x="16" y="145.6">        modified:   examples/svgs/macos-style.svg                               </text>
-<text class="text fg" x="16" y="168">        modified:   examples/svgs/word-navigation-test.svg                      </text>
-<text class="text fg" x="16" y="190.39999999999998">        modified:   examples/svgs/word-selection-test.svg                       </text>
-<text class="text fg" x="16" y="212.79999999999998">        modified:   src/pipeline/svg-emitter.ts                                 </text>
+<text class="text fg" x="16" y="56">Your branch is ahead of &apos;origin/feat/rearch&apos; by 2 commits.                      </text>
+<text class="text fg" x="16" y="78.4">  (use &quot;git push&quot; to publish your local commits)                                </text>
+<text class="text fg" x="16" y="123.19999999999999">Changes not staged for commit:                                                  </text>
+<text class="text fg" x="16" y="145.6">  (use &quot;git add &lt;file&gt;...&quot; to update what will be committed)                    </text>
+<text class="text fg" x="16" y="168">  (use &quot;git restore &lt;file&gt;...&quot; to discard changes in working directory)         </text>
+<text class="text fg" x="16" y="190.39999999999998">        modified:   examples/svgs/macos-style.svg                               </text>
+<text class="text fg" x="16" y="212.79999999999998">        modified:   src/animator/svg-animator.ts                                </text>
 <text class="text fg" x="16" y="257.6">no changes added to commit (use &quot;git add&quot; and/or &quot;git commit -a&quot;)               </text>
 <text class="text f13" x="16" y="280">❯</text>
 <text class="text fg" x="25.6" y="280"> git add .                                                                     </text>
@@ -2026,8 +2040,8 @@
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.521477;0.527511;1.000000"
-      dur="9.78s"
+      keyTimes="0.000000;0.521753;0.528129;1.000000"
+      dur="9.72s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -2049,13 +2063,13 @@
 <circle cx="62" cy="20" r="6" fill="#27c93f"/>
 <text class="text fg" x="362" y="20" text-anchor="middle" style="dominant-baseline: central">my-project</text></g>
 <g class="text-layer">
-<text class="text fg" x="16" y="78.4">Changes not staged for commit:                                                  </text>
-<text class="text fg" x="16" y="100.8">  (use &quot;git add &lt;file&gt;...&quot; to update what will be committed)                    </text>
-<text class="text fg" x="16" y="123.19999999999999">  (use &quot;git restore &lt;file&gt;...&quot; to discard changes in working directory)         </text>
-<text class="text fg" x="16" y="145.6">        modified:   examples/svgs/macos-style.svg                               </text>
-<text class="text fg" x="16" y="168">        modified:   examples/svgs/word-navigation-test.svg                      </text>
-<text class="text fg" x="16" y="190.39999999999998">        modified:   examples/svgs/word-selection-test.svg                       </text>
-<text class="text fg" x="16" y="212.79999999999998">        modified:   src/pipeline/svg-emitter.ts                                 </text>
+<text class="text fg" x="16" y="56">Your branch is ahead of &apos;origin/feat/rearch&apos; by 2 commits.                      </text>
+<text class="text fg" x="16" y="78.4">  (use &quot;git push&quot; to publish your local commits)                                </text>
+<text class="text fg" x="16" y="123.19999999999999">Changes not staged for commit:                                                  </text>
+<text class="text fg" x="16" y="145.6">  (use &quot;git add &lt;file&gt;...&quot; to update what will be committed)                    </text>
+<text class="text fg" x="16" y="168">  (use &quot;git restore &lt;file&gt;...&quot; to discard changes in working directory)         </text>
+<text class="text fg" x="16" y="190.39999999999998">        modified:   examples/svgs/macos-style.svg                               </text>
+<text class="text fg" x="16" y="212.79999999999998">        modified:   src/animator/svg-animator.ts                                </text>
 <text class="text fg" x="16" y="257.6">no changes added to commit (use &quot;git add&quot; and/or &quot;git commit -a&quot;)               </text>
 <text class="text f13" x="16" y="280">❯</text>
 <text class="text fg" x="25.6" y="280"> git add .                                                                     </text>
@@ -2071,8 +2085,8 @@
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.527511;0.533647;1.000000"
-      dur="9.78s"
+      keyTimes="0.000000;0.528129;0.534403;1.000000"
+      dur="9.72s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -2094,13 +2108,13 @@
 <circle cx="62" cy="20" r="6" fill="#27c93f"/>
 <text class="text fg" x="362" y="20" text-anchor="middle" style="dominant-baseline: central">my-project</text></g>
 <g class="text-layer">
-<text class="text fg" x="16" y="78.4">Changes not staged for commit:                                                  </text>
-<text class="text fg" x="16" y="100.8">  (use &quot;git add &lt;file&gt;...&quot; to update what will be committed)                    </text>
-<text class="text fg" x="16" y="123.19999999999999">  (use &quot;git restore &lt;file&gt;...&quot; to discard changes in working directory)         </text>
-<text class="text fg" x="16" y="145.6">        modified:   examples/svgs/macos-style.svg                               </text>
-<text class="text fg" x="16" y="168">        modified:   examples/svgs/word-navigation-test.svg                      </text>
-<text class="text fg" x="16" y="190.39999999999998">        modified:   examples/svgs/word-selection-test.svg                       </text>
-<text class="text fg" x="16" y="212.79999999999998">        modified:   src/pipeline/svg-emitter.ts                                 </text>
+<text class="text fg" x="16" y="56">Your branch is ahead of &apos;origin/feat/rearch&apos; by 2 commits.                      </text>
+<text class="text fg" x="16" y="78.4">  (use &quot;git push&quot; to publish your local commits)                                </text>
+<text class="text fg" x="16" y="123.19999999999999">Changes not staged for commit:                                                  </text>
+<text class="text fg" x="16" y="145.6">  (use &quot;git add &lt;file&gt;...&quot; to update what will be committed)                    </text>
+<text class="text fg" x="16" y="168">  (use &quot;git restore &lt;file&gt;...&quot; to discard changes in working directory)         </text>
+<text class="text fg" x="16" y="190.39999999999998">        modified:   examples/svgs/macos-style.svg                               </text>
+<text class="text fg" x="16" y="212.79999999999998">        modified:   src/animator/svg-animator.ts                                </text>
 <text class="text fg" x="16" y="257.6">no changes added to commit (use &quot;git add&quot; and/or &quot;git commit -a&quot;)               </text>
 <text class="text f13" x="16" y="280">❯</text>
 <text class="text fg" x="25.6" y="280"> git add .                                                                     </text>
@@ -2116,8 +2130,8 @@
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.533647;0.539885;1.000000"
-      dur="9.78s"
+      keyTimes="0.000000;0.534403;0.540780;1.000000"
+      dur="9.72s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -2139,13 +2153,13 @@
 <circle cx="62" cy="20" r="6" fill="#27c93f"/>
 <text class="text fg" x="362" y="20" text-anchor="middle" style="dominant-baseline: central">my-project</text></g>
 <g class="text-layer">
-<text class="text fg" x="16" y="78.4">Changes not staged for commit:                                                  </text>
-<text class="text fg" x="16" y="100.8">  (use &quot;git add &lt;file&gt;...&quot; to update what will be committed)                    </text>
-<text class="text fg" x="16" y="123.19999999999999">  (use &quot;git restore &lt;file&gt;...&quot; to discard changes in working directory)         </text>
-<text class="text fg" x="16" y="145.6">        modified:   examples/svgs/macos-style.svg                               </text>
-<text class="text fg" x="16" y="168">        modified:   examples/svgs/word-navigation-test.svg                      </text>
-<text class="text fg" x="16" y="190.39999999999998">        modified:   examples/svgs/word-selection-test.svg                       </text>
-<text class="text fg" x="16" y="212.79999999999998">        modified:   src/pipeline/svg-emitter.ts                                 </text>
+<text class="text fg" x="16" y="56">Your branch is ahead of &apos;origin/feat/rearch&apos; by 2 commits.                      </text>
+<text class="text fg" x="16" y="78.4">  (use &quot;git push&quot; to publish your local commits)                                </text>
+<text class="text fg" x="16" y="123.19999999999999">Changes not staged for commit:                                                  </text>
+<text class="text fg" x="16" y="145.6">  (use &quot;git add &lt;file&gt;...&quot; to update what will be committed)                    </text>
+<text class="text fg" x="16" y="168">  (use &quot;git restore &lt;file&gt;...&quot; to discard changes in working directory)         </text>
+<text class="text fg" x="16" y="190.39999999999998">        modified:   examples/svgs/macos-style.svg                               </text>
+<text class="text fg" x="16" y="212.79999999999998">        modified:   src/animator/svg-animator.ts                                </text>
 <text class="text fg" x="16" y="257.6">no changes added to commit (use &quot;git add&quot; and/or &quot;git commit -a&quot;)               </text>
 <text class="text f13" x="16" y="280">❯</text>
 <text class="text fg" x="25.6" y="280"> git add .                                                                     </text>
@@ -2161,8 +2175,8 @@
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.539885;0.546124;1.000000"
-      dur="9.78s"
+      keyTimes="0.000000;0.540780;0.546848;1.000000"
+      dur="9.72s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -2184,13 +2198,13 @@
 <circle cx="62" cy="20" r="6" fill="#27c93f"/>
 <text class="text fg" x="362" y="20" text-anchor="middle" style="dominant-baseline: central">my-project</text></g>
 <g class="text-layer">
-<text class="text fg" x="16" y="78.4">Changes not staged for commit:                                                  </text>
-<text class="text fg" x="16" y="100.8">  (use &quot;git add &lt;file&gt;...&quot; to update what will be committed)                    </text>
-<text class="text fg" x="16" y="123.19999999999999">  (use &quot;git restore &lt;file&gt;...&quot; to discard changes in working directory)         </text>
-<text class="text fg" x="16" y="145.6">        modified:   examples/svgs/macos-style.svg                               </text>
-<text class="text fg" x="16" y="168">        modified:   examples/svgs/word-navigation-test.svg                      </text>
-<text class="text fg" x="16" y="190.39999999999998">        modified:   examples/svgs/word-selection-test.svg                       </text>
-<text class="text fg" x="16" y="212.79999999999998">        modified:   src/pipeline/svg-emitter.ts                                 </text>
+<text class="text fg" x="16" y="56">Your branch is ahead of &apos;origin/feat/rearch&apos; by 2 commits.                      </text>
+<text class="text fg" x="16" y="78.4">  (use &quot;git push&quot; to publish your local commits)                                </text>
+<text class="text fg" x="16" y="123.19999999999999">Changes not staged for commit:                                                  </text>
+<text class="text fg" x="16" y="145.6">  (use &quot;git add &lt;file&gt;...&quot; to update what will be committed)                    </text>
+<text class="text fg" x="16" y="168">  (use &quot;git restore &lt;file&gt;...&quot; to discard changes in working directory)         </text>
+<text class="text fg" x="16" y="190.39999999999998">        modified:   examples/svgs/macos-style.svg                               </text>
+<text class="text fg" x="16" y="212.79999999999998">        modified:   src/animator/svg-animator.ts                                </text>
 <text class="text fg" x="16" y="257.6">no changes added to commit (use &quot;git add&quot; and/or &quot;git commit -a&quot;)               </text>
 <text class="text f13" x="16" y="280">❯</text>
 <text class="text fg" x="25.6" y="280"> git add .                                                                     </text>
@@ -2206,8 +2220,8 @@
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.546124;0.552362;1.000000"
-      dur="9.78s"
+      keyTimes="0.000000;0.546848;0.552916;1.000000"
+      dur="9.72s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -2229,13 +2243,13 @@
 <circle cx="62" cy="20" r="6" fill="#27c93f"/>
 <text class="text fg" x="362" y="20" text-anchor="middle" style="dominant-baseline: central">my-project</text></g>
 <g class="text-layer">
-<text class="text fg" x="16" y="78.4">Changes not staged for commit:                                                  </text>
-<text class="text fg" x="16" y="100.8">  (use &quot;git add &lt;file&gt;...&quot; to update what will be committed)                    </text>
-<text class="text fg" x="16" y="123.19999999999999">  (use &quot;git restore &lt;file&gt;...&quot; to discard changes in working directory)         </text>
-<text class="text fg" x="16" y="145.6">        modified:   examples/svgs/macos-style.svg                               </text>
-<text class="text fg" x="16" y="168">        modified:   examples/svgs/word-navigation-test.svg                      </text>
-<text class="text fg" x="16" y="190.39999999999998">        modified:   examples/svgs/word-selection-test.svg                       </text>
-<text class="text fg" x="16" y="212.79999999999998">        modified:   src/pipeline/svg-emitter.ts                                 </text>
+<text class="text fg" x="16" y="56">Your branch is ahead of &apos;origin/feat/rearch&apos; by 2 commits.                      </text>
+<text class="text fg" x="16" y="78.4">  (use &quot;git push&quot; to publish your local commits)                                </text>
+<text class="text fg" x="16" y="123.19999999999999">Changes not staged for commit:                                                  </text>
+<text class="text fg" x="16" y="145.6">  (use &quot;git add &lt;file&gt;...&quot; to update what will be committed)                    </text>
+<text class="text fg" x="16" y="168">  (use &quot;git restore &lt;file&gt;...&quot; to discard changes in working directory)         </text>
+<text class="text fg" x="16" y="190.39999999999998">        modified:   examples/svgs/macos-style.svg                               </text>
+<text class="text fg" x="16" y="212.79999999999998">        modified:   src/animator/svg-animator.ts                                </text>
 <text class="text fg" x="16" y="257.6">no changes added to commit (use &quot;git add&quot; and/or &quot;git commit -a&quot;)               </text>
 <text class="text f13" x="16" y="280">❯</text>
 <text class="text fg" x="25.6" y="280"> git add .                                                                     </text>
@@ -2251,8 +2265,8 @@
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.552362;0.558703;1.000000"
-      dur="9.78s"
+      keyTimes="0.000000;0.552916;0.559087;1.000000"
+      dur="9.72s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -2274,13 +2288,13 @@
 <circle cx="62" cy="20" r="6" fill="#27c93f"/>
 <text class="text fg" x="362" y="20" text-anchor="middle" style="dominant-baseline: central">my-project</text></g>
 <g class="text-layer">
-<text class="text fg" x="16" y="78.4">Changes not staged for commit:                                                  </text>
-<text class="text fg" x="16" y="100.8">  (use &quot;git add &lt;file&gt;...&quot; to update what will be committed)                    </text>
-<text class="text fg" x="16" y="123.19999999999999">  (use &quot;git restore &lt;file&gt;...&quot; to discard changes in working directory)         </text>
-<text class="text fg" x="16" y="145.6">        modified:   examples/svgs/macos-style.svg                               </text>
-<text class="text fg" x="16" y="168">        modified:   examples/svgs/word-navigation-test.svg                      </text>
-<text class="text fg" x="16" y="190.39999999999998">        modified:   examples/svgs/word-selection-test.svg                       </text>
-<text class="text fg" x="16" y="212.79999999999998">        modified:   src/pipeline/svg-emitter.ts                                 </text>
+<text class="text fg" x="16" y="56">Your branch is ahead of &apos;origin/feat/rearch&apos; by 2 commits.                      </text>
+<text class="text fg" x="16" y="78.4">  (use &quot;git push&quot; to publish your local commits)                                </text>
+<text class="text fg" x="16" y="123.19999999999999">Changes not staged for commit:                                                  </text>
+<text class="text fg" x="16" y="145.6">  (use &quot;git add &lt;file&gt;...&quot; to update what will be committed)                    </text>
+<text class="text fg" x="16" y="168">  (use &quot;git restore &lt;file&gt;...&quot; to discard changes in working directory)         </text>
+<text class="text fg" x="16" y="190.39999999999998">        modified:   examples/svgs/macos-style.svg                               </text>
+<text class="text fg" x="16" y="212.79999999999998">        modified:   src/animator/svg-animator.ts                                </text>
 <text class="text fg" x="16" y="257.6">no changes added to commit (use &quot;git add&quot; and/or &quot;git commit -a&quot;)               </text>
 <text class="text f13" x="16" y="280">❯</text>
 <text class="text fg" x="25.6" y="280"> git add .                                                                     </text>
@@ -2296,8 +2310,8 @@
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.558703;0.565146;1.000000"
-      dur="9.78s"
+      keyTimes="0.000000;0.559087;0.565360;1.000000"
+      dur="9.72s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -2319,13 +2333,13 @@
 <circle cx="62" cy="20" r="6" fill="#27c93f"/>
 <text class="text fg" x="362" y="20" text-anchor="middle" style="dominant-baseline: central">my-project</text></g>
 <g class="text-layer">
-<text class="text fg" x="16" y="78.4">Changes not staged for commit:                                                  </text>
-<text class="text fg" x="16" y="100.8">  (use &quot;git add &lt;file&gt;...&quot; to update what will be committed)                    </text>
-<text class="text fg" x="16" y="123.19999999999999">  (use &quot;git restore &lt;file&gt;...&quot; to discard changes in working directory)         </text>
-<text class="text fg" x="16" y="145.6">        modified:   examples/svgs/macos-style.svg                               </text>
-<text class="text fg" x="16" y="168">        modified:   examples/svgs/word-navigation-test.svg                      </text>
-<text class="text fg" x="16" y="190.39999999999998">        modified:   examples/svgs/word-selection-test.svg                       </text>
-<text class="text fg" x="16" y="212.79999999999998">        modified:   src/pipeline/svg-emitter.ts                                 </text>
+<text class="text fg" x="16" y="56">Your branch is ahead of &apos;origin/feat/rearch&apos; by 2 commits.                      </text>
+<text class="text fg" x="16" y="78.4">  (use &quot;git push&quot; to publish your local commits)                                </text>
+<text class="text fg" x="16" y="123.19999999999999">Changes not staged for commit:                                                  </text>
+<text class="text fg" x="16" y="145.6">  (use &quot;git add &lt;file&gt;...&quot; to update what will be committed)                    </text>
+<text class="text fg" x="16" y="168">  (use &quot;git restore &lt;file&gt;...&quot; to discard changes in working directory)         </text>
+<text class="text fg" x="16" y="190.39999999999998">        modified:   examples/svgs/macos-style.svg                               </text>
+<text class="text fg" x="16" y="212.79999999999998">        modified:   src/animator/svg-animator.ts                                </text>
 <text class="text fg" x="16" y="257.6">no changes added to commit (use &quot;git add&quot; and/or &quot;git commit -a&quot;)               </text>
 <text class="text f13" x="16" y="280">❯</text>
 <text class="text fg" x="25.6" y="280"> git add .                                                                     </text>
@@ -2341,8 +2355,8 @@
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.565146;0.571589;1.000000"
-      dur="9.78s"
+      keyTimes="0.000000;0.565360;0.571531;1.000000"
+      dur="9.72s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -2364,13 +2378,13 @@
 <circle cx="62" cy="20" r="6" fill="#27c93f"/>
 <text class="text fg" x="362" y="20" text-anchor="middle" style="dominant-baseline: central">my-project</text></g>
 <g class="text-layer">
-<text class="text fg" x="16" y="78.4">Changes not staged for commit:                                                  </text>
-<text class="text fg" x="16" y="100.8">  (use &quot;git add &lt;file&gt;...&quot; to update what will be committed)                    </text>
-<text class="text fg" x="16" y="123.19999999999999">  (use &quot;git restore &lt;file&gt;...&quot; to discard changes in working directory)         </text>
-<text class="text fg" x="16" y="145.6">        modified:   examples/svgs/macos-style.svg                               </text>
-<text class="text fg" x="16" y="168">        modified:   examples/svgs/word-navigation-test.svg                      </text>
-<text class="text fg" x="16" y="190.39999999999998">        modified:   examples/svgs/word-selection-test.svg                       </text>
-<text class="text fg" x="16" y="212.79999999999998">        modified:   src/pipeline/svg-emitter.ts                                 </text>
+<text class="text fg" x="16" y="56">Your branch is ahead of &apos;origin/feat/rearch&apos; by 2 commits.                      </text>
+<text class="text fg" x="16" y="78.4">  (use &quot;git push&quot; to publish your local commits)                                </text>
+<text class="text fg" x="16" y="123.19999999999999">Changes not staged for commit:                                                  </text>
+<text class="text fg" x="16" y="145.6">  (use &quot;git add &lt;file&gt;...&quot; to update what will be committed)                    </text>
+<text class="text fg" x="16" y="168">  (use &quot;git restore &lt;file&gt;...&quot; to discard changes in working directory)         </text>
+<text class="text fg" x="16" y="190.39999999999998">        modified:   examples/svgs/macos-style.svg                               </text>
+<text class="text fg" x="16" y="212.79999999999998">        modified:   src/animator/svg-animator.ts                                </text>
 <text class="text fg" x="16" y="257.6">no changes added to commit (use &quot;git add&quot; and/or &quot;git commit -a&quot;)               </text>
 <text class="text f13" x="16" y="280">❯</text>
 <text class="text fg" x="25.6" y="280"> git add .                                                                     </text>
@@ -2386,8 +2400,8 @@
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.571589;0.578135;1.000000"
-      dur="9.78s"
+      keyTimes="0.000000;0.571531;0.577805;1.000000"
+      dur="9.72s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -2409,13 +2423,13 @@
 <circle cx="62" cy="20" r="6" fill="#27c93f"/>
 <text class="text fg" x="362" y="20" text-anchor="middle" style="dominant-baseline: central">my-project</text></g>
 <g class="text-layer">
-<text class="text fg" x="16" y="78.4">Changes not staged for commit:                                                  </text>
-<text class="text fg" x="16" y="100.8">  (use &quot;git add &lt;file&gt;...&quot; to update what will be committed)                    </text>
-<text class="text fg" x="16" y="123.19999999999999">  (use &quot;git restore &lt;file&gt;...&quot; to discard changes in working directory)         </text>
-<text class="text fg" x="16" y="145.6">        modified:   examples/svgs/macos-style.svg                               </text>
-<text class="text fg" x="16" y="168">        modified:   examples/svgs/word-navigation-test.svg                      </text>
-<text class="text fg" x="16" y="190.39999999999998">        modified:   examples/svgs/word-selection-test.svg                       </text>
-<text class="text fg" x="16" y="212.79999999999998">        modified:   src/pipeline/svg-emitter.ts                                 </text>
+<text class="text fg" x="16" y="56">Your branch is ahead of &apos;origin/feat/rearch&apos; by 2 commits.                      </text>
+<text class="text fg" x="16" y="78.4">  (use &quot;git push&quot; to publish your local commits)                                </text>
+<text class="text fg" x="16" y="123.19999999999999">Changes not staged for commit:                                                  </text>
+<text class="text fg" x="16" y="145.6">  (use &quot;git add &lt;file&gt;...&quot; to update what will be committed)                    </text>
+<text class="text fg" x="16" y="168">  (use &quot;git restore &lt;file&gt;...&quot; to discard changes in working directory)         </text>
+<text class="text fg" x="16" y="190.39999999999998">        modified:   examples/svgs/macos-style.svg                               </text>
+<text class="text fg" x="16" y="212.79999999999998">        modified:   src/animator/svg-animator.ts                                </text>
 <text class="text fg" x="16" y="257.6">no changes added to commit (use &quot;git add&quot; and/or &quot;git commit -a&quot;)               </text>
 <text class="text f13" x="16" y="280">❯</text>
 <text class="text fg" x="25.6" y="280"> git add .                                                                     </text>
@@ -2431,8 +2445,8 @@
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.578135;0.584782;1.000000"
-      dur="9.78s"
+      keyTimes="0.000000;0.577805;0.584182;1.000000"
+      dur="9.72s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -2454,13 +2468,13 @@
 <circle cx="62" cy="20" r="6" fill="#27c93f"/>
 <text class="text fg" x="362" y="20" text-anchor="middle" style="dominant-baseline: central">my-project</text></g>
 <g class="text-layer">
-<text class="text fg" x="16" y="78.4">Changes not staged for commit:                                                  </text>
-<text class="text fg" x="16" y="100.8">  (use &quot;git add &lt;file&gt;...&quot; to update what will be committed)                    </text>
-<text class="text fg" x="16" y="123.19999999999999">  (use &quot;git restore &lt;file&gt;...&quot; to discard changes in working directory)         </text>
-<text class="text fg" x="16" y="145.6">        modified:   examples/svgs/macos-style.svg                               </text>
-<text class="text fg" x="16" y="168">        modified:   examples/svgs/word-navigation-test.svg                      </text>
-<text class="text fg" x="16" y="190.39999999999998">        modified:   examples/svgs/word-selection-test.svg                       </text>
-<text class="text fg" x="16" y="212.79999999999998">        modified:   src/pipeline/svg-emitter.ts                                 </text>
+<text class="text fg" x="16" y="56">Your branch is ahead of &apos;origin/feat/rearch&apos; by 2 commits.                      </text>
+<text class="text fg" x="16" y="78.4">  (use &quot;git push&quot; to publish your local commits)                                </text>
+<text class="text fg" x="16" y="123.19999999999999">Changes not staged for commit:                                                  </text>
+<text class="text fg" x="16" y="145.6">  (use &quot;git add &lt;file&gt;...&quot; to update what will be committed)                    </text>
+<text class="text fg" x="16" y="168">  (use &quot;git restore &lt;file&gt;...&quot; to discard changes in working directory)         </text>
+<text class="text fg" x="16" y="190.39999999999998">        modified:   examples/svgs/macos-style.svg                               </text>
+<text class="text fg" x="16" y="212.79999999999998">        modified:   src/animator/svg-animator.ts                                </text>
 <text class="text fg" x="16" y="257.6">no changes added to commit (use &quot;git add&quot; and/or &quot;git commit -a&quot;)               </text>
 <text class="text f13" x="16" y="280">❯</text>
 <text class="text fg" x="25.6" y="280"> git add .                                                                     </text>
@@ -2476,8 +2490,8 @@
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.584782;0.591327;1.000000"
-      dur="9.78s"
+      keyTimes="0.000000;0.584182;0.590456;1.000000"
+      dur="9.72s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -2499,13 +2513,13 @@
 <circle cx="62" cy="20" r="6" fill="#27c93f"/>
 <text class="text fg" x="362" y="20" text-anchor="middle" style="dominant-baseline: central">my-project</text></g>
 <g class="text-layer">
-<text class="text fg" x="16" y="78.4">Changes not staged for commit:                                                  </text>
-<text class="text fg" x="16" y="100.8">  (use &quot;git add &lt;file&gt;...&quot; to update what will be committed)                    </text>
-<text class="text fg" x="16" y="123.19999999999999">  (use &quot;git restore &lt;file&gt;...&quot; to discard changes in working directory)         </text>
-<text class="text fg" x="16" y="145.6">        modified:   examples/svgs/macos-style.svg                               </text>
-<text class="text fg" x="16" y="168">        modified:   examples/svgs/word-navigation-test.svg                      </text>
-<text class="text fg" x="16" y="190.39999999999998">        modified:   examples/svgs/word-selection-test.svg                       </text>
-<text class="text fg" x="16" y="212.79999999999998">        modified:   src/pipeline/svg-emitter.ts                                 </text>
+<text class="text fg" x="16" y="56">Your branch is ahead of &apos;origin/feat/rearch&apos; by 2 commits.                      </text>
+<text class="text fg" x="16" y="78.4">  (use &quot;git push&quot; to publish your local commits)                                </text>
+<text class="text fg" x="16" y="123.19999999999999">Changes not staged for commit:                                                  </text>
+<text class="text fg" x="16" y="145.6">  (use &quot;git add &lt;file&gt;...&quot; to update what will be committed)                    </text>
+<text class="text fg" x="16" y="168">  (use &quot;git restore &lt;file&gt;...&quot; to discard changes in working directory)         </text>
+<text class="text fg" x="16" y="190.39999999999998">        modified:   examples/svgs/macos-style.svg                               </text>
+<text class="text fg" x="16" y="212.79999999999998">        modified:   src/animator/svg-animator.ts                                </text>
 <text class="text fg" x="16" y="257.6">no changes added to commit (use &quot;git add&quot; and/or &quot;git commit -a&quot;)               </text>
 <text class="text f13" x="16" y="280">❯</text>
 <text class="text fg" x="25.6" y="280"> git add .                                                                     </text>
@@ -2521,8 +2535,8 @@
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.591327;0.597873;1.000000"
-      dur="9.78s"
+      keyTimes="0.000000;0.590456;0.596729;1.000000"
+      dur="9.72s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -2544,13 +2558,13 @@
 <circle cx="62" cy="20" r="6" fill="#27c93f"/>
 <text class="text fg" x="362" y="20" text-anchor="middle" style="dominant-baseline: central">my-project</text></g>
 <g class="text-layer">
-<text class="text fg" x="16" y="78.4">Changes not staged for commit:                                                  </text>
-<text class="text fg" x="16" y="100.8">  (use &quot;git add &lt;file&gt;...&quot; to update what will be committed)                    </text>
-<text class="text fg" x="16" y="123.19999999999999">  (use &quot;git restore &lt;file&gt;...&quot; to discard changes in working directory)         </text>
-<text class="text fg" x="16" y="145.6">        modified:   examples/svgs/macos-style.svg                               </text>
-<text class="text fg" x="16" y="168">        modified:   examples/svgs/word-navigation-test.svg                      </text>
-<text class="text fg" x="16" y="190.39999999999998">        modified:   examples/svgs/word-selection-test.svg                       </text>
-<text class="text fg" x="16" y="212.79999999999998">        modified:   src/pipeline/svg-emitter.ts                                 </text>
+<text class="text fg" x="16" y="56">Your branch is ahead of &apos;origin/feat/rearch&apos; by 2 commits.                      </text>
+<text class="text fg" x="16" y="78.4">  (use &quot;git push&quot; to publish your local commits)                                </text>
+<text class="text fg" x="16" y="123.19999999999999">Changes not staged for commit:                                                  </text>
+<text class="text fg" x="16" y="145.6">  (use &quot;git add &lt;file&gt;...&quot; to update what will be committed)                    </text>
+<text class="text fg" x="16" y="168">  (use &quot;git restore &lt;file&gt;...&quot; to discard changes in working directory)         </text>
+<text class="text fg" x="16" y="190.39999999999998">        modified:   examples/svgs/macos-style.svg                               </text>
+<text class="text fg" x="16" y="212.79999999999998">        modified:   src/animator/svg-animator.ts                                </text>
 <text class="text fg" x="16" y="257.6">no changes added to commit (use &quot;git add&quot; and/or &quot;git commit -a&quot;)               </text>
 <text class="text f13" x="16" y="280">❯</text>
 <text class="text fg" x="25.6" y="280"> git add .                                                                     </text>
@@ -2566,8 +2580,8 @@
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.597873;0.641133;1.000000"
-      dur="9.78s"
+      keyTimes="0.000000;0.596729;0.639515;1.000000"
+      dur="9.72s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -2589,13 +2603,13 @@
 <circle cx="62" cy="20" r="6" fill="#27c93f"/>
 <text class="text fg" x="362" y="20" text-anchor="middle" style="dominant-baseline: central">my-project</text></g>
 <g class="text-layer">
-<text class="text fg" x="16" y="78.4">Changes not staged for commit:                                                  </text>
-<text class="text fg" x="16" y="100.8">  (use &quot;git add &lt;file&gt;...&quot; to update what will be committed)                    </text>
-<text class="text fg" x="16" y="123.19999999999999">  (use &quot;git restore &lt;file&gt;...&quot; to discard changes in working directory)         </text>
-<text class="text fg" x="16" y="145.6">        modified:   examples/svgs/macos-style.svg                               </text>
-<text class="text fg" x="16" y="168">        modified:   examples/svgs/word-navigation-test.svg                      </text>
-<text class="text fg" x="16" y="190.39999999999998">        modified:   examples/svgs/word-selection-test.svg                       </text>
-<text class="text fg" x="16" y="212.79999999999998">        modified:   src/pipeline/svg-emitter.ts                                 </text>
+<text class="text fg" x="16" y="56">Your branch is ahead of &apos;origin/feat/rearch&apos; by 2 commits.                      </text>
+<text class="text fg" x="16" y="78.4">  (use &quot;git push&quot; to publish your local commits)                                </text>
+<text class="text fg" x="16" y="123.19999999999999">Changes not staged for commit:                                                  </text>
+<text class="text fg" x="16" y="145.6">  (use &quot;git add &lt;file&gt;...&quot; to update what will be committed)                    </text>
+<text class="text fg" x="16" y="168">  (use &quot;git restore &lt;file&gt;...&quot; to discard changes in working directory)         </text>
+<text class="text fg" x="16" y="190.39999999999998">        modified:   examples/svgs/macos-style.svg                               </text>
+<text class="text fg" x="16" y="212.79999999999998">        modified:   src/animator/svg-animator.ts                                </text>
 <text class="text fg" x="16" y="257.6">no changes added to commit (use &quot;git add&quot; and/or &quot;git commit -a&quot;)               </text>
 <text class="text f13" x="16" y="280">❯</text>
 <text class="text fg" x="25.6" y="280"> git add .                                                                     </text>
@@ -2611,8 +2625,8 @@
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.641133;0.653406;1.000000"
-      dur="9.78s"
+      keyTimes="0.000000;0.639515;0.651342;1.000000"
+      dur="9.72s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -2634,13 +2648,12 @@
 <circle cx="62" cy="20" r="6" fill="#27c93f"/>
 <text class="text fg" x="362" y="20" text-anchor="middle" style="dominant-baseline: central">my-project</text></g>
 <g class="text-layer">
-<text class="text fg" x="16" y="56">Changes not staged for commit:                                                  </text>
-<text class="text fg" x="16" y="78.4">  (use &quot;git add &lt;file&gt;...&quot; to update what will be committed)                    </text>
-<text class="text fg" x="16" y="100.8">  (use &quot;git restore &lt;file&gt;...&quot; to discard changes in working directory)         </text>
-<text class="text fg" x="16" y="123.19999999999999">        modified:   examples/svgs/macos-style.svg                               </text>
-<text class="text fg" x="16" y="145.6">        modified:   examples/svgs/word-navigation-test.svg                      </text>
-<text class="text fg" x="16" y="168">        modified:   examples/svgs/word-selection-test.svg                       </text>
-<text class="text fg" x="16" y="190.39999999999998">        modified:   src/pipeline/svg-emitter.ts                                 </text>
+<text class="text fg" x="16" y="56">  (use &quot;git push&quot; to publish your local commits)                                </text>
+<text class="text fg" x="16" y="100.8">Changes not staged for commit:                                                  </text>
+<text class="text fg" x="16" y="123.19999999999999">  (use &quot;git add &lt;file&gt;...&quot; to update what will be committed)                    </text>
+<text class="text fg" x="16" y="145.6">  (use &quot;git restore &lt;file&gt;...&quot; to discard changes in working directory)         </text>
+<text class="text fg" x="16" y="168">        modified:   examples/svgs/macos-style.svg                               </text>
+<text class="text fg" x="16" y="190.39999999999998">        modified:   src/animator/svg-animator.ts                                </text>
 <text class="text fg" x="16" y="235.2">no changes added to commit (use &quot;git add&quot; and/or &quot;git commit -a&quot;)               </text>
 <text class="text f13" x="16" y="257.6">❯</text>
 <text class="text fg" x="25.6" y="257.6"> git add .                                                                     </text>
@@ -2653,8 +2666,8 @@
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.653406;0.667826;1.000000"
-      dur="9.78s"
+      keyTimes="0.000000;0.651342;0.665844;1.000000"
+      dur="9.72s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -2676,18 +2689,18 @@
 <circle cx="62" cy="20" r="6" fill="#27c93f"/>
 <text class="text fg" x="362" y="20" text-anchor="middle" style="dominant-baseline: central">my-project</text></g>
 <g class="text-layer">
-<text class="text fg" x="16" y="56">  (use &quot;git restore &lt;file&gt;...&quot; to discard changes in working directory)         </text>
-<text class="text fg" x="16" y="78.4">        modified:   examples/svgs/macos-style.svg                               </text>
-<text class="text fg" x="16" y="100.8">        modified:   examples/svgs/word-navigation-test.svg                      </text>
-<text class="text fg" x="16" y="123.19999999999999">        modified:   examples/svgs/word-selection-test.svg                       </text>
-<text class="text fg" x="16" y="145.6">        modified:   src/pipeline/svg-emitter.ts                                 </text>
+<text class="text fg" x="16" y="56">Changes not staged for commit:                                                  </text>
+<text class="text fg" x="16" y="78.4">  (use &quot;git add &lt;file&gt;...&quot; to update what will be committed)                    </text>
+<text class="text fg" x="16" y="100.8">  (use &quot;git restore &lt;file&gt;...&quot; to discard changes in working directory)         </text>
+<text class="text fg" x="16" y="123.19999999999999">        modified:   examples/svgs/macos-style.svg                               </text>
+<text class="text fg" x="16" y="145.6">        modified:   src/animator/svg-animator.ts                                </text>
 <text class="text fg" x="16" y="190.39999999999998">no changes added to commit (use &quot;git add&quot; and/or &quot;git commit -a&quot;)               </text>
 <text class="text f13" x="16" y="212.79999999999998">❯</text>
 <text class="text fg" x="25.6" y="212.79999999999998"> git add .                                                                     </text>
 <text class="text f13" x="16" y="257.6">❯</text>
 <text class="text fg" x="25.6" y="257.6"> git commit -m &apos;Add new feature&apos;                                               </text>
-<text class="text fg" x="16" y="280">[feat/rearch 15f2c61] Add new feature                                           </text>
-<text class="text fg" x="16" y="302.4"> 4 files changed, 928 insertions(+), 891 deletions(-)                           </text>
+<text class="text fg" x="16" y="280">[feat/rearch c812636] Add new feature                                           </text>
+<text class="text fg" x="16" y="302.4"> 2 files changed, 898 insertions(+), 596 deletions(-)                           </text>
 <text class="text f13" x="16" y="324.79999999999995">❯</text>
 </g>
 <g class="cursor-layer">
@@ -2699,8 +2712,8 @@
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.667826;0.679587;1.000000"
-      dur="9.78s"
+      keyTimes="0.000000;0.665844;0.677466;1.000000"
+      dur="9.72s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -2722,17 +2735,17 @@
 <circle cx="62" cy="20" r="6" fill="#27c93f"/>
 <text class="text fg" x="362" y="20" text-anchor="middle" style="dominant-baseline: central">my-project</text></g>
 <g class="text-layer">
-<text class="text fg" x="16" y="56">        modified:   examples/svgs/macos-style.svg                               </text>
-<text class="text fg" x="16" y="78.4">        modified:   examples/svgs/word-navigation-test.svg                      </text>
-<text class="text fg" x="16" y="100.8">        modified:   examples/svgs/word-selection-test.svg                       </text>
-<text class="text fg" x="16" y="123.19999999999999">        modified:   src/pipeline/svg-emitter.ts                                 </text>
+<text class="text fg" x="16" y="56">  (use &quot;git add &lt;file&gt;...&quot; to update what will be committed)                    </text>
+<text class="text fg" x="16" y="78.4">  (use &quot;git restore &lt;file&gt;...&quot; to discard changes in working directory)         </text>
+<text class="text fg" x="16" y="100.8">        modified:   examples/svgs/macos-style.svg                               </text>
+<text class="text fg" x="16" y="123.19999999999999">        modified:   src/animator/svg-animator.ts                                </text>
 <text class="text fg" x="16" y="168">no changes added to commit (use &quot;git add&quot; and/or &quot;git commit -a&quot;)               </text>
 <text class="text f13" x="16" y="190.39999999999998">❯</text>
 <text class="text fg" x="25.6" y="190.39999999999998"> git add .                                                                     </text>
 <text class="text f13" x="16" y="235.2">❯</text>
 <text class="text fg" x="25.6" y="235.2"> git commit -m &apos;Add new feature&apos;                                               </text>
-<text class="text fg" x="16" y="257.6">[feat/rearch 15f2c61] Add new feature                                           </text>
-<text class="text fg" x="16" y="280"> 4 files changed, 928 insertions(+), 891 deletions(-)                           </text>
+<text class="text fg" x="16" y="257.6">[feat/rearch c812636] Add new feature                                           </text>
+<text class="text fg" x="16" y="280"> 2 files changed, 898 insertions(+), 596 deletions(-)                           </text>
 <text class="text f13" x="16" y="302.4">❯</text>
 <text class="text f13" x="16" y="324.79999999999995">❯</text>
 </g>
@@ -2745,8 +2758,8 @@
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.679587;0.691655;1.000000"
-      dur="9.78s"
+      keyTimes="0.000000;0.677466;0.688985;1.000000"
+      dur="9.72s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -2768,16 +2781,16 @@
 <circle cx="62" cy="20" r="6" fill="#27c93f"/>
 <text class="text fg" x="362" y="20" text-anchor="middle" style="dominant-baseline: central">my-project</text></g>
 <g class="text-layer">
-<text class="text fg" x="16" y="56">        modified:   examples/svgs/word-navigation-test.svg                      </text>
-<text class="text fg" x="16" y="78.4">        modified:   examples/svgs/word-selection-test.svg                       </text>
-<text class="text fg" x="16" y="100.8">        modified:   src/pipeline/svg-emitter.ts                                 </text>
+<text class="text fg" x="16" y="56">  (use &quot;git restore &lt;file&gt;...&quot; to discard changes in working directory)         </text>
+<text class="text fg" x="16" y="78.4">        modified:   examples/svgs/macos-style.svg                               </text>
+<text class="text fg" x="16" y="100.8">        modified:   src/animator/svg-animator.ts                                </text>
 <text class="text fg" x="16" y="145.6">no changes added to commit (use &quot;git add&quot; and/or &quot;git commit -a&quot;)               </text>
 <text class="text f13" x="16" y="168">❯</text>
 <text class="text fg" x="25.6" y="168"> git add .                                                                     </text>
 <text class="text f13" x="16" y="212.79999999999998">❯</text>
 <text class="text fg" x="25.6" y="212.79999999999998"> git commit -m &apos;Add new feature&apos;                                               </text>
-<text class="text fg" x="16" y="235.2">[feat/rearch 15f2c61] Add new feature                                           </text>
-<text class="text fg" x="16" y="257.6"> 4 files changed, 928 insertions(+), 891 deletions(-)                           </text>
+<text class="text fg" x="16" y="235.2">[feat/rearch c812636] Add new feature                                           </text>
+<text class="text fg" x="16" y="257.6"> 2 files changed, 898 insertions(+), 596 deletions(-)                           </text>
 <text class="text f13" x="16" y="280">❯</text>
 <text class="text f13" x="16" y="302.4">❯</text>
 <text class="text f13" x="16" y="324.79999999999995">❯</text>
@@ -2791,8 +2804,8 @@
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.691655;0.897014;1.000000"
-      dur="9.78s"
+      keyTimes="0.000000;0.688985;0.896225;1.000000"
+      dur="9.72s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -2814,16 +2827,16 @@
 <circle cx="62" cy="20" r="6" fill="#27c93f"/>
 <text class="text fg" x="362" y="20" text-anchor="middle" style="dominant-baseline: central">my-project</text></g>
 <g class="text-layer">
-<text class="text fg" x="16" y="56">        modified:   examples/svgs/word-navigation-test.svg                      </text>
-<text class="text fg" x="16" y="78.4">        modified:   examples/svgs/word-selection-test.svg                       </text>
-<text class="text fg" x="16" y="100.8">        modified:   src/pipeline/svg-emitter.ts                                 </text>
+<text class="text fg" x="16" y="56">  (use &quot;git restore &lt;file&gt;...&quot; to discard changes in working directory)         </text>
+<text class="text fg" x="16" y="78.4">        modified:   examples/svgs/macos-style.svg                               </text>
+<text class="text fg" x="16" y="100.8">        modified:   src/animator/svg-animator.ts                                </text>
 <text class="text fg" x="16" y="145.6">no changes added to commit (use &quot;git add&quot; and/or &quot;git commit -a&quot;)               </text>
 <text class="text f13" x="16" y="168">❯</text>
 <text class="text fg" x="25.6" y="168"> git add .                                                                     </text>
 <text class="text f13" x="16" y="212.79999999999998">❯</text>
 <text class="text fg" x="25.6" y="212.79999999999998"> git commit -m &apos;Add new feature&apos;                                               </text>
-<text class="text fg" x="16" y="235.2">[feat/rearch 15f2c61] Add new feature                                           </text>
-<text class="text fg" x="16" y="257.6"> 4 files changed, 928 insertions(+), 891 deletions(-)                           </text>
+<text class="text fg" x="16" y="235.2">[feat/rearch c812636] Add new feature                                           </text>
+<text class="text fg" x="16" y="257.6"> 2 files changed, 898 insertions(+), 596 deletions(-)                           </text>
 <text class="text f13" x="16" y="280">❯</text>
 <text class="text f13" x="16" y="302.4">❯</text>
 <text class="text f13" x="16" y="324.79999999999995">❯</text>
@@ -2837,8 +2850,8 @@
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.897014;0.897730;1.000000"
-      dur="9.78s"
+      keyTimes="0.000000;0.896225;0.897151;1.000000"
+      dur="9.72s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -2860,16 +2873,16 @@
 <circle cx="62" cy="20" r="6" fill="#27c93f"/>
 <text class="text fg" x="362" y="20" text-anchor="middle" style="dominant-baseline: central">my-project</text></g>
 <g class="text-layer">
-<text class="text fg" x="16" y="56">        modified:   examples/svgs/word-navigation-test.svg                      </text>
-<text class="text fg" x="16" y="78.4">        modified:   examples/svgs/word-selection-test.svg                       </text>
-<text class="text fg" x="16" y="100.8">        modified:   src/pipeline/svg-emitter.ts                                 </text>
+<text class="text fg" x="16" y="56">  (use &quot;git restore &lt;file&gt;...&quot; to discard changes in working directory)         </text>
+<text class="text fg" x="16" y="78.4">        modified:   examples/svgs/macos-style.svg                               </text>
+<text class="text fg" x="16" y="100.8">        modified:   src/animator/svg-animator.ts                                </text>
 <text class="text fg" x="16" y="145.6">no changes added to commit (use &quot;git add&quot; and/or &quot;git commit -a&quot;)               </text>
 <text class="text f13" x="16" y="168">❯</text>
 <text class="text fg" x="25.6" y="168"> git add .                                                                     </text>
 <text class="text f13" x="16" y="212.79999999999998">❯</text>
 <text class="text fg" x="25.6" y="212.79999999999998"> git commit -m &apos;Add new feature&apos;                                               </text>
-<text class="text fg" x="16" y="235.2">[feat/rearch 15f2c61] Add new feature                                           </text>
-<text class="text fg" x="16" y="257.6"> 4 files changed, 928 insertions(+), 891 deletions(-)                           </text>
+<text class="text fg" x="16" y="235.2">[feat/rearch c812636] Add new feature                                           </text>
+<text class="text fg" x="16" y="257.6"> 2 files changed, 898 insertions(+), 596 deletions(-)                           </text>
 <text class="text f13" x="16" y="280">❯</text>
 <text class="text f13" x="16" y="302.4">❯</text>
 <text class="text f13" x="16" y="324.79999999999995">❯</text>
@@ -2883,11 +2896,12 @@
     <animate
       attributeName="visibility"
       values="hidden;visible;visible"
-      keyTimes="0.000000;0.897730;1.000000"
-      dur="9.78s"
+      keyTimes="0.000000;0.897151;1.000000"
+      dur="9.72s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
     />
+  </g>
   </g>
 </svg>
