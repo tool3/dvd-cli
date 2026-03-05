@@ -166,7 +166,7 @@ export class CDExecutor {
       autoHeight: !options.height,
       maxLineLength: 0,
       maxLines: 0,
-      scroll: !!(options.width && options.height),
+      scroll: !!options.height, // Enable scroll when height is fixed (content can exceed it)
       scrollOffset: 0,
       isExecutingCommand: false,
     };
@@ -276,17 +276,23 @@ export class CDExecutor {
     grid = processInput(grid, content);
 
     // Calculate final cursor position
+    // Always use our tracked cursor position (adjustedCursorX is the position within current line)
+    // Account for visual line wrapping when text exceeds visible columns
     let finalCursorX: number;
     let finalCursorY: number;
 
     if (this.context.autoWidth) {
-      // For auto width, use tracked cursor position (no wrapping)
+      // For auto width, no wrapping - cursor stays on same line
       finalCursorY = Math.max(0, Math.min(visibleCursorY, maxVisibleRows - 1));
       finalCursorX = adjustedCursorX;
     } else {
-      // For fixed width, use VTerminal's cursor (accounts for wrapping)
-      finalCursorY = Math.max(0, Math.min(grid.cursor.row, maxVisibleRows - 1));
-      finalCursorX = grid.cursor.col;
+      // For fixed width, calculate how many lines the cursor has wrapped
+      const cursorWrapRows = Math.floor(adjustedCursorX / visibleCols);
+      const wrappedCursorX = adjustedCursorX % visibleCols;
+      const wrappedCursorY = visibleCursorY + cursorWrapRows;
+
+      finalCursorY = Math.max(0, Math.min(wrappedCursorY, maxVisibleRows - 1));
+      finalCursorX = wrappedCursorX;
     }
 
     // Coalesce grid to spans
@@ -325,6 +331,7 @@ export class CDExecutor {
         borderRadius: this.context.borderRadius,
         padding: this.context.padding,
         cursorBlink: this.context.cursorBlink,
+        activeCursor,
         selection,
       }
     );

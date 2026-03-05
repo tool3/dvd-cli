@@ -362,10 +362,12 @@ export function emit(
     const cursorX = padding + cursor.col * charWidth;
     const cursorY = contentStartY + cursor.row * lineHeight;
     const cursorColor = theme.cursor ?? theme.foreground;
+    // Use cursor-active class when actively typing (no blink)
+    const cursorClass = options.activeCursor ? 'cursor-active' : 'cursor';
 
     parts.push('<g class="cursor-layer">');
     parts.push(
-      `<rect class="cursor" x="${cursorX}" y="${cursorY}" ` +
+      `<rect class="${cursorClass}" x="${cursorX}" y="${cursorY}" ` +
         `width="${charWidth}" height="${lineHeight}" fill="${cursorColor}"/>`
     );
     parts.push('</g>');

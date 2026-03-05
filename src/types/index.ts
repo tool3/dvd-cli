@@ -243,6 +243,7 @@ export interface EmitterOptions {
   borderWidth?: number;
   borderRadius?: number;
   cursorBlink?: boolean;
+  activeCursor?: boolean;
   selection?: { start: number; end: number; row: number } | null;
 }
 
