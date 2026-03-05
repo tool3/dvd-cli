@@ -122,6 +122,11 @@ interface ExecutorContext {
   // Custom cursor config
   cursorStyle?: 'block' | 'bar' | 'underline';
   cursorColor?: string;
+
+  // Font config
+  fontFamily?: string;
+  embedFont?: boolean;
+  fontData?: string;
 }
 
 // ============================================================================
@@ -368,6 +373,10 @@ export class CDExecutor {
         // Cursor config
         cursorStyle: this.context.cursorStyle,
         cursorColor: this.context.cursorColor,
+        // Font config
+        fontFamily: this.context.fontFamily,
+        embedFont: this.context.embedFont,
+        fontData: this.context.fontData,
       }
     );
 
@@ -1035,6 +1044,35 @@ export class CDExecutor {
       case 'CursorColor':
         this.context.cursorColor = value;
         break;
+      // Font config
+      case 'FontFamily':
+        this.context.fontFamily = value;
+        break;
+      case 'EmbedFont':
+        // Read font file and base64 encode it
+        this.embedFontFromPath(value);
+        break;
+    }
+  }
+
+  private embedFontFromPath(fontPath: string): void {
+    try {
+      const fs = require('fs');
+      const path = require('path');
+
+      // Resolve path relative to current working directory
+      const resolvedPath = path.resolve(fontPath);
+
+      if (!fs.existsSync(resolvedPath)) {
+        console.warn(`Font file not found: ${resolvedPath}`);
+        return;
+      }
+
+      const fontBuffer = fs.readFileSync(resolvedPath);
+      this.context.fontData = fontBuffer.toString('base64');
+      this.context.embedFont = true;
+    } catch (err) {
+      console.warn(`Failed to embed font: ${err}`);
     }
   }
 

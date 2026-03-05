@@ -1,0 +1,1242 @@
+<svg width="500" height="200" xmlns="http://www.w3.org/2000/svg">
+  <defs><clipPath id="rounded-corners"><rect x="0" y="0" width="500" height="200" rx="8" ry="8"/></clipPath></defs>
+  <style>
+    
+.text {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 16px;
+  dominant-baseline: text-before-edge;
+  text-rendering: geometricPrecision;
+  white-space: pre;
+}
+.bold { font-weight: bold; }
+.italic { font-style: italic; }
+.uline { text-decoration: underline; }
+.strike { text-decoration: line-through; }
+.dim { opacity: 0.5; }
+.fg { fill: #f8f8f2; }
+.f0 { fill: #21222c; }
+.f1 { fill: #ff5555; }
+.f2 { fill: #50fa7b; }
+.f3 { fill: #f1fa8c; }
+.f4 { fill: #bd93f9; }
+.f5 { fill: #ff79c6; }
+.f6 { fill: #8be9fd; }
+.f7 { fill: #f8f8f2; }
+.f8 { fill: #6272a4; }
+.f9 { fill: #ff6e6e; }
+.f10 { fill: #69ff94; }
+.f11 { fill: #ffffa5; }
+.f12 { fill: #d6acff; }
+.f13 { fill: #ff92df; }
+.f14 { fill: #a4ffff; }
+.f15 { fill: #ffffff; }
+.bg { fill: #282a36; }
+.b0 { fill: #21222c; }
+.b1 { fill: #ff5555; }
+.b2 { fill: #50fa7b; }
+.b3 { fill: #f1fa8c; }
+.b4 { fill: #bd93f9; }
+.b5 { fill: #ff79c6; }
+.b6 { fill: #8be9fd; }
+.b7 { fill: #f8f8f2; }
+.b8 { fill: #6272a4; }
+.b9 { fill: #ff6e6e; }
+.b10 { fill: #69ff94; }
+.b11 { fill: #ffffa5; }
+.b12 { fill: #d6acff; }
+.b13 { fill: #ff92df; }
+.b14 { fill: #a4ffff; }
+.b15 { fill: #ffffff; }
+.cursor { animation: blink 1s step-end infinite; }
+@keyframes blink {
+  0%, 50% { opacity: 1; }
+  50.01%, 100% { opacity: 0; }
+}
+.cursor-active { opacity: 1; }
+
+  </style>
+
+  <g clip-path="url(#rounded-corners)">
+  <!-- Persistent background - never animated -->
+  <rect width="100%" height="100%" fill="#282a36" rx="8" ry="8" />
+
+  <!-- Animated frames with discrete visibility transitions -->
+  
+  <g id="frame-0" visibility="visible">
+    <rect class="window-bg" x="0" y="0" width="500" height="200" fill="#282a36" rx="8" ry="8"/>
+<g class="text-layer">
+<text class="text f13" x="16" y="16">❯</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor" x="35.2" y="16" width="9.6" height="22.4" fill="#f8f8f2"/>
+</g>
+    <animate
+      attributeName="visibility"
+      values="visible;hidden;hidden"
+      keyTimes="0.000000;0.010122;1.000000"
+      dur="5.24s"
+      repeatCount="indefinite"
+      calcMode="discrete"
+      fill="freeze"
+    />
+  </g>
+
+  <g id="frame-1" visibility="hidden">
+    <rect class="window-bg" x="0" y="0" width="500" height="200" fill="#282a36" rx="8" ry="8"/>
+<g class="text-layer">
+<text class="text f13" x="16" y="16">❯</text>
+<text class="text fg" x="25.6" y="16"> U                                             </text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="44.8" y="16" width="9.6" height="22.4" fill="#f8f8f2"/>
+</g>
+    <animate
+      attributeName="visibility"
+      values="hidden;visible;hidden;hidden"
+      keyTimes="0.000000;0.010122;0.019672;1.000000"
+      dur="5.24s"
+      repeatCount="indefinite"
+      calcMode="discrete"
+      fill="freeze"
+    />
+  </g>
+
+  <g id="frame-2" visibility="hidden">
+    <rect class="window-bg" x="0" y="0" width="500" height="200" fill="#282a36" rx="8" ry="8"/>
+<g class="text-layer">
+<text class="text f13" x="16" y="16">❯</text>
+<text class="text fg" x="25.6" y="16"> Us                                            </text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="54.4" y="16" width="9.6" height="22.4" fill="#f8f8f2"/>
+</g>
+    <animate
+      attributeName="visibility"
+      values="hidden;visible;hidden;hidden"
+      keyTimes="0.000000;0.019672;0.029603;1.000000"
+      dur="5.24s"
+      repeatCount="indefinite"
+      calcMode="discrete"
+      fill="freeze"
+    />
+  </g>
+
+  <g id="frame-3" visibility="hidden">
+    <rect class="window-bg" x="0" y="0" width="500" height="200" fill="#282a36" rx="8" ry="8"/>
+<g class="text-layer">
+<text class="text f13" x="16" y="16">❯</text>
+<text class="text fg" x="25.6" y="16"> Usi                                           </text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="64" y="16" width="9.6" height="22.4" fill="#f8f8f2"/>
+</g>
+    <animate
+      attributeName="visibility"
+      values="hidden;visible;hidden;hidden"
+      keyTimes="0.000000;0.029603;0.039534;1.000000"
+      dur="5.24s"
+      repeatCount="indefinite"
+      calcMode="discrete"
+      fill="freeze"
+    />
+  </g>
+
+  <g id="frame-4" visibility="hidden">
+    <rect class="window-bg" x="0" y="0" width="500" height="200" fill="#282a36" rx="8" ry="8"/>
+<g class="text-layer">
+<text class="text f13" x="16" y="16">❯</text>
+<text class="text fg" x="25.6" y="16"> Usin                                          </text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="73.6" y="16" width="9.6" height="22.4" fill="#f8f8f2"/>
+</g>
+    <animate
+      attributeName="visibility"
+      values="hidden;visible;hidden;hidden"
+      keyTimes="0.000000;0.039534;0.049656;1.000000"
+      dur="5.24s"
+      repeatCount="indefinite"
+      calcMode="discrete"
+      fill="freeze"
+    />
+  </g>
+
+  <g id="frame-5" visibility="hidden">
+    <rect class="window-bg" x="0" y="0" width="500" height="200" fill="#282a36" rx="8" ry="8"/>
+<g class="text-layer">
+<text class="text f13" x="16" y="16">❯</text>
+<text class="text fg" x="25.6" y="16"> Using                                         </text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="83.2" y="16" width="9.6" height="22.4" fill="#f8f8f2"/>
+</g>
+    <animate
+      attributeName="visibility"
+      values="hidden;visible;hidden;hidden"
+      keyTimes="0.000000;0.049656;0.059587;1.000000"
+      dur="5.24s"
+      repeatCount="indefinite"
+      calcMode="discrete"
+      fill="freeze"
+    />
+  </g>
+
+  <g id="frame-6" visibility="hidden">
+    <rect class="window-bg" x="0" y="0" width="500" height="200" fill="#282a36" rx="8" ry="8"/>
+<g class="text-layer">
+<text class="text f13" x="16" y="16">❯</text>
+<text class="text fg" x="25.6" y="16"> Using                                         </text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="92.8" y="16" width="9.6" height="22.4" fill="#f8f8f2"/>
+</g>
+    <animate
+      attributeName="visibility"
+      values="hidden;visible;hidden;hidden"
+      keyTimes="0.000000;0.059587;0.069519;1.000000"
+      dur="5.24s"
+      repeatCount="indefinite"
+      calcMode="discrete"
+      fill="freeze"
+    />
+  </g>
+
+  <g id="frame-7" visibility="hidden">
+    <rect class="window-bg" x="0" y="0" width="500" height="200" fill="#282a36" rx="8" ry="8"/>
+<g class="text-layer">
+<text class="text f13" x="16" y="16">❯</text>
+<text class="text fg" x="25.6" y="16"> Using J                                       </text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="102.39999999999999" y="16" width="9.6" height="22.4" fill="#f8f8f2"/>
+</g>
+    <animate
+      attributeName="visibility"
+      values="hidden;visible;hidden;hidden"
+      keyTimes="0.000000;0.069519;0.079450;1.000000"
+      dur="5.24s"
+      repeatCount="indefinite"
+      calcMode="discrete"
+      fill="freeze"
+    />
+  </g>
+
+  <g id="frame-8" visibility="hidden">
+    <rect class="window-bg" x="0" y="0" width="500" height="200" fill="#282a36" rx="8" ry="8"/>
+<g class="text-layer">
+<text class="text f13" x="16" y="16">❯</text>
+<text class="text fg" x="25.6" y="16"> Using Je                                      </text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="112" y="16" width="9.6" height="22.4" fill="#f8f8f2"/>
+</g>
+    <animate
+      attributeName="visibility"
+      values="hidden;visible;hidden;hidden"
+      keyTimes="0.000000;0.079450;0.089190;1.000000"
+      dur="5.24s"
+      repeatCount="indefinite"
+      calcMode="discrete"
+      fill="freeze"
+    />
+  </g>
+
+  <g id="frame-9" visibility="hidden">
+    <rect class="window-bg" x="0" y="0" width="500" height="200" fill="#282a36" rx="8" ry="8"/>
+<g class="text-layer">
+<text class="text f13" x="16" y="16">❯</text>
+<text class="text fg" x="25.6" y="16"> Using Jet                                     </text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="121.6" y="16" width="9.6" height="22.4" fill="#f8f8f2"/>
+</g>
+    <animate
+      attributeName="visibility"
+      values="hidden;visible;hidden;hidden"
+      keyTimes="0.000000;0.089190;0.099121;1.000000"
+      dur="5.24s"
+      repeatCount="indefinite"
+      calcMode="discrete"
+      fill="freeze"
+    />
+  </g>
+
+  <g id="frame-10" visibility="hidden">
+    <rect class="window-bg" x="0" y="0" width="500" height="200" fill="#282a36" rx="8" ry="8"/>
+<g class="text-layer">
+<text class="text f13" x="16" y="16">❯</text>
+<text class="text fg" x="25.6" y="16"> Using JetB                                    </text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="131.2" y="16" width="9.6" height="22.4" fill="#f8f8f2"/>
+</g>
+    <animate
+      attributeName="visibility"
+      values="hidden;visible;hidden;hidden"
+      keyTimes="0.000000;0.099121;0.108862;1.000000"
+      dur="5.24s"
+      repeatCount="indefinite"
+      calcMode="discrete"
+      fill="freeze"
+    />
+  </g>
+
+  <g id="frame-11" visibility="hidden">
+    <rect class="window-bg" x="0" y="0" width="500" height="200" fill="#282a36" rx="8" ry="8"/>
+<g class="text-layer">
+<text class="text f13" x="16" y="16">❯</text>
+<text class="text fg" x="25.6" y="16"> Using JetBr                                   </text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="140.8" y="16" width="9.6" height="22.4" fill="#f8f8f2"/>
+</g>
+    <animate
+      attributeName="visibility"
+      values="hidden;visible;hidden;hidden"
+      keyTimes="0.000000;0.108862;0.118602;1.000000"
+      dur="5.24s"
+      repeatCount="indefinite"
+      calcMode="discrete"
+      fill="freeze"
+    />
+  </g>
+
+  <g id="frame-12" visibility="hidden">
+    <rect class="window-bg" x="0" y="0" width="500" height="200" fill="#282a36" rx="8" ry="8"/>
+<g class="text-layer">
+<text class="text f13" x="16" y="16">❯</text>
+<text class="text fg" x="25.6" y="16"> Using JetBra                                  </text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="150.4" y="16" width="9.6" height="22.4" fill="#f8f8f2"/>
+</g>
+    <animate
+      attributeName="visibility"
+      values="hidden;visible;hidden;hidden"
+      keyTimes="0.000000;0.118602;0.128342;1.000000"
+      dur="5.24s"
+      repeatCount="indefinite"
+      calcMode="discrete"
+      fill="freeze"
+    />
+  </g>
+
+  <g id="frame-13" visibility="hidden">
+    <rect class="window-bg" x="0" y="0" width="500" height="200" fill="#282a36" rx="8" ry="8"/>
+<g class="text-layer">
+<text class="text f13" x="16" y="16">❯</text>
+<text class="text fg" x="25.6" y="16"> Using JetBrai                                 </text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="160" y="16" width="9.6" height="22.4" fill="#f8f8f2"/>
+</g>
+    <animate
+      attributeName="visibility"
+      values="hidden;visible;hidden;hidden"
+      keyTimes="0.000000;0.128342;0.138083;1.000000"
+      dur="5.24s"
+      repeatCount="indefinite"
+      calcMode="discrete"
+      fill="freeze"
+    />
+  </g>
+
+  <g id="frame-14" visibility="hidden">
+    <rect class="window-bg" x="0" y="0" width="500" height="200" fill="#282a36" rx="8" ry="8"/>
+<g class="text-layer">
+<text class="text f13" x="16" y="16">❯</text>
+<text class="text fg" x="25.6" y="16"> Using JetBrain                                </text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="169.6" y="16" width="9.6" height="22.4" fill="#f8f8f2"/>
+</g>
+    <animate
+      attributeName="visibility"
+      values="hidden;visible;hidden;hidden"
+      keyTimes="0.000000;0.138083;0.148014;1.000000"
+      dur="5.24s"
+      repeatCount="indefinite"
+      calcMode="discrete"
+      fill="freeze"
+    />
+  </g>
+
+  <g id="frame-15" visibility="hidden">
+    <rect class="window-bg" x="0" y="0" width="500" height="200" fill="#282a36" rx="8" ry="8"/>
+<g class="text-layer">
+<text class="text f13" x="16" y="16">❯</text>
+<text class="text fg" x="25.6" y="16"> Using JetBrains                               </text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="179.2" y="16" width="9.6" height="22.4" fill="#f8f8f2"/>
+</g>
+    <animate
+      attributeName="visibility"
+      values="hidden;visible;hidden;hidden"
+      keyTimes="0.000000;0.148014;0.157754;1.000000"
+      dur="5.24s"
+      repeatCount="indefinite"
+      calcMode="discrete"
+      fill="freeze"
+    />
+  </g>
+
+  <g id="frame-16" visibility="hidden">
+    <rect class="window-bg" x="0" y="0" width="500" height="200" fill="#282a36" rx="8" ry="8"/>
+<g class="text-layer">
+<text class="text f13" x="16" y="16">❯</text>
+<text class="text fg" x="25.6" y="16"> Using JetBrains                               </text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="188.79999999999998" y="16" width="9.6" height="22.4" fill="#f8f8f2"/>
+</g>
+    <animate
+      attributeName="visibility"
+      values="hidden;visible;hidden;hidden"
+      keyTimes="0.000000;0.157754;0.167494;1.000000"
+      dur="5.24s"
+      repeatCount="indefinite"
+      calcMode="discrete"
+      fill="freeze"
+    />
+  </g>
+
+  <g id="frame-17" visibility="hidden">
+    <rect class="window-bg" x="0" y="0" width="500" height="200" fill="#282a36" rx="8" ry="8"/>
+<g class="text-layer">
+<text class="text f13" x="16" y="16">❯</text>
+<text class="text fg" x="25.6" y="16"> Using JetBrains M                             </text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="198.4" y="16" width="9.6" height="22.4" fill="#f8f8f2"/>
+</g>
+    <animate
+      attributeName="visibility"
+      values="hidden;visible;hidden;hidden"
+      keyTimes="0.000000;0.167494;0.177426;1.000000"
+      dur="5.24s"
+      repeatCount="indefinite"
+      calcMode="discrete"
+      fill="freeze"
+    />
+  </g>
+
+  <g id="frame-18" visibility="hidden">
+    <rect class="window-bg" x="0" y="0" width="500" height="200" fill="#282a36" rx="8" ry="8"/>
+<g class="text-layer">
+<text class="text f13" x="16" y="16">❯</text>
+<text class="text fg" x="25.6" y="16"> Using JetBrains Mo                            </text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="208" y="16" width="9.6" height="22.4" fill="#f8f8f2"/>
+</g>
+    <animate
+      attributeName="visibility"
+      values="hidden;visible;hidden;hidden"
+      keyTimes="0.000000;0.177426;0.187166;1.000000"
+      dur="5.24s"
+      repeatCount="indefinite"
+      calcMode="discrete"
+      fill="freeze"
+    />
+  </g>
+
+  <g id="frame-19" visibility="hidden">
+    <rect class="window-bg" x="0" y="0" width="500" height="200" fill="#282a36" rx="8" ry="8"/>
+<g class="text-layer">
+<text class="text f13" x="16" y="16">❯</text>
+<text class="text fg" x="25.6" y="16"> Using JetBrains Mon                           </text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="217.6" y="16" width="9.6" height="22.4" fill="#f8f8f2"/>
+</g>
+    <animate
+      attributeName="visibility"
+      values="hidden;visible;hidden;hidden"
+      keyTimes="0.000000;0.187166;0.196906;1.000000"
+      dur="5.24s"
+      repeatCount="indefinite"
+      calcMode="discrete"
+      fill="freeze"
+    />
+  </g>
+
+  <g id="frame-20" visibility="hidden">
+    <rect class="window-bg" x="0" y="0" width="500" height="200" fill="#282a36" rx="8" ry="8"/>
+<g class="text-layer">
+<text class="text f13" x="16" y="16">❯</text>
+<text class="text fg" x="25.6" y="16"> Using JetBrains Mono                          </text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="227.2" y="16" width="9.6" height="22.4" fill="#f8f8f2"/>
+</g>
+    <animate
+      attributeName="visibility"
+      values="hidden;visible;hidden;hidden"
+      keyTimes="0.000000;0.196906;0.206646;1.000000"
+      dur="5.24s"
+      repeatCount="indefinite"
+      calcMode="discrete"
+      fill="freeze"
+    />
+  </g>
+
+  <g id="frame-21" visibility="hidden">
+    <rect class="window-bg" x="0" y="0" width="500" height="200" fill="#282a36" rx="8" ry="8"/>
+<g class="text-layer">
+<text class="text f13" x="16" y="16">❯</text>
+<text class="text fg" x="25.6" y="16"> Using JetBrains Mono                          </text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="236.79999999999998" y="16" width="9.6" height="22.4" fill="#f8f8f2"/>
+</g>
+    <animate
+      attributeName="visibility"
+      values="hidden;visible;hidden;hidden"
+      keyTimes="0.000000;0.206646;0.216578;1.000000"
+      dur="5.24s"
+      repeatCount="indefinite"
+      calcMode="discrete"
+      fill="freeze"
+    />
+  </g>
+
+  <g id="frame-22" visibility="hidden">
+    <rect class="window-bg" x="0" y="0" width="500" height="200" fill="#282a36" rx="8" ry="8"/>
+<g class="text-layer">
+<text class="text f13" x="16" y="16">❯</text>
+<text class="text fg" x="25.6" y="16"> Using JetBrains Mono f                        </text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="246.39999999999998" y="16" width="9.6" height="22.4" fill="#f8f8f2"/>
+</g>
+    <animate
+      attributeName="visibility"
+      values="hidden;visible;hidden;hidden"
+      keyTimes="0.000000;0.216578;0.226318;1.000000"
+      dur="5.24s"
+      repeatCount="indefinite"
+      calcMode="discrete"
+      fill="freeze"
+    />
+  </g>
+
+  <g id="frame-23" visibility="hidden">
+    <rect class="window-bg" x="0" y="0" width="500" height="200" fill="#282a36" rx="8" ry="8"/>
+<g class="text-layer">
+<text class="text f13" x="16" y="16">❯</text>
+<text class="text fg" x="25.6" y="16"> Using JetBrains Mono fo                       </text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="256" y="16" width="9.6" height="22.4" fill="#f8f8f2"/>
+</g>
+    <animate
+      attributeName="visibility"
+      values="hidden;visible;hidden;hidden"
+      keyTimes="0.000000;0.226318;0.236058;1.000000"
+      dur="5.24s"
+      repeatCount="indefinite"
+      calcMode="discrete"
+      fill="freeze"
+    />
+  </g>
+
+  <g id="frame-24" visibility="hidden">
+    <rect class="window-bg" x="0" y="0" width="500" height="200" fill="#282a36" rx="8" ry="8"/>
+<g class="text-layer">
+<text class="text f13" x="16" y="16">❯</text>
+<text class="text fg" x="25.6" y="16"> Using JetBrains Mono fon                      </text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="265.6" y="16" width="9.6" height="22.4" fill="#f8f8f2"/>
+</g>
+    <animate
+      attributeName="visibility"
+      values="hidden;visible;hidden;hidden"
+      keyTimes="0.000000;0.236058;0.245989;1.000000"
+      dur="5.24s"
+      repeatCount="indefinite"
+      calcMode="discrete"
+      fill="freeze"
+    />
+  </g>
+
+  <g id="frame-25" visibility="hidden">
+    <rect class="window-bg" x="0" y="0" width="500" height="200" fill="#282a36" rx="8" ry="8"/>
+<g class="text-layer">
+<text class="text f13" x="16" y="16">❯</text>
+<text class="text fg" x="25.6" y="16"> Using JetBrains Mono font                     </text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="275.2" y="16" width="9.6" height="22.4" fill="#f8f8f2"/>
+</g>
+    <animate
+      attributeName="visibility"
+      values="hidden;visible;hidden;hidden"
+      keyTimes="0.000000;0.245989;0.341673;1.000000"
+      dur="5.24s"
+      repeatCount="indefinite"
+      calcMode="discrete"
+      fill="freeze"
+    />
+  </g>
+
+  <g id="frame-26" visibility="hidden">
+    <rect class="window-bg" x="0" y="0" width="500" height="200" fill="#282a36" rx="8" ry="8"/>
+<g class="text-layer">
+<text class="text f13" x="16" y="16">❯</text>
+<text class="text fg" x="25.6" y="16"> Using JetBrains Mono font                     </text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor" x="275.2" y="16" width="9.6" height="22.4" fill="#f8f8f2"/>
+</g>
+    <animate
+      attributeName="visibility"
+      values="hidden;visible;hidden;hidden"
+      keyTimes="0.000000;0.341673;0.361154;1.000000"
+      dur="5.24s"
+      repeatCount="indefinite"
+      calcMode="discrete"
+      fill="freeze"
+    />
+  </g>
+
+  <g id="frame-27" visibility="hidden">
+    <rect class="window-bg" x="0" y="0" width="500" height="200" fill="#282a36" rx="8" ry="8"/>
+<g class="text-layer">
+<text class="text f13" x="16" y="16">❯</text>
+<text class="text fg" x="25.6" y="16"> Using JetBrains Mono font                     </text>
+</g>
+    <animate
+      attributeName="visibility"
+      values="hidden;visible;hidden;hidden"
+      keyTimes="0.000000;0.361154;0.381398;1.000000"
+      dur="5.24s"
+      repeatCount="indefinite"
+      calcMode="discrete"
+      fill="freeze"
+    />
+  </g>
+
+  <g id="frame-28" visibility="hidden">
+    <rect class="window-bg" x="0" y="0" width="500" height="200" fill="#282a36" rx="8" ry="8"/>
+<g class="text-layer">
+<text class="text f13" x="16" y="16">❯</text>
+<text class="text fg" x="25.6" y="16"> Using JetBrains Mono font                     </text>
+<text class="text fg" x="16" y="38.4">/bin/sh: Using: command not found               </text>
+<text class="text f13" x="16" y="60.8">❯</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor" x="35.2" y="60.8" width="9.6" height="22.4" fill="#f8f8f2"/>
+</g>
+    <animate
+      attributeName="visibility"
+      values="hidden;visible;hidden;hidden"
+      keyTimes="0.000000;0.381398;0.391138;1.000000"
+      dur="5.24s"
+      repeatCount="indefinite"
+      calcMode="discrete"
+      fill="freeze"
+    />
+  </g>
+
+  <g id="frame-29" visibility="hidden">
+    <rect class="window-bg" x="0" y="0" width="500" height="200" fill="#282a36" rx="8" ry="8"/>
+<g class="text-layer">
+<text class="text f13" x="16" y="16">❯</text>
+<text class="text fg" x="25.6" y="16"> Using JetBrains Mono font                     </text>
+<text class="text fg" x="16" y="38.4">/bin/sh: Using: command not found               </text>
+<text class="text f13" x="16" y="60.8">❯</text>
+<text class="text fg" x="25.6" y="60.8"> O                                             </text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="44.8" y="60.8" width="9.6" height="22.4" fill="#f8f8f2"/>
+</g>
+    <animate
+      attributeName="visibility"
+      values="hidden;visible;hidden;hidden"
+      keyTimes="0.000000;0.391138;0.400879;1.000000"
+      dur="5.24s"
+      repeatCount="indefinite"
+      calcMode="discrete"
+      fill="freeze"
+    />
+  </g>
+
+  <g id="frame-30" visibility="hidden">
+    <rect class="window-bg" x="0" y="0" width="500" height="200" fill="#282a36" rx="8" ry="8"/>
+<g class="text-layer">
+<text class="text f13" x="16" y="16">❯</text>
+<text class="text fg" x="25.6" y="16"> Using JetBrains Mono font                     </text>
+<text class="text fg" x="16" y="38.4">/bin/sh: Using: command not found               </text>
+<text class="text f13" x="16" y="60.8">❯</text>
+<text class="text fg" x="25.6" y="60.8"> Or                                            </text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="54.4" y="60.8" width="9.6" height="22.4" fill="#f8f8f2"/>
+</g>
+    <animate
+      attributeName="visibility"
+      values="hidden;visible;hidden;hidden"
+      keyTimes="0.000000;0.400879;0.410810;1.000000"
+      dur="5.24s"
+      repeatCount="indefinite"
+      calcMode="discrete"
+      fill="freeze"
+    />
+  </g>
+
+  <g id="frame-31" visibility="hidden">
+    <rect class="window-bg" x="0" y="0" width="500" height="200" fill="#282a36" rx="8" ry="8"/>
+<g class="text-layer">
+<text class="text f13" x="16" y="16">❯</text>
+<text class="text fg" x="25.6" y="16"> Using JetBrains Mono font                     </text>
+<text class="text fg" x="16" y="38.4">/bin/sh: Using: command not found               </text>
+<text class="text f13" x="16" y="60.8">❯</text>
+<text class="text fg" x="25.6" y="60.8"> Or                                            </text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="64" y="60.8" width="9.6" height="22.4" fill="#f8f8f2"/>
+</g>
+    <animate
+      attributeName="visibility"
+      values="hidden;visible;hidden;hidden"
+      keyTimes="0.000000;0.410810;0.420550;1.000000"
+      dur="5.24s"
+      repeatCount="indefinite"
+      calcMode="discrete"
+      fill="freeze"
+    />
+  </g>
+
+  <g id="frame-32" visibility="hidden">
+    <rect class="window-bg" x="0" y="0" width="500" height="200" fill="#282a36" rx="8" ry="8"/>
+<g class="text-layer">
+<text class="text f13" x="16" y="16">❯</text>
+<text class="text fg" x="25.6" y="16"> Using JetBrains Mono font                     </text>
+<text class="text fg" x="16" y="38.4">/bin/sh: Using: command not found               </text>
+<text class="text f13" x="16" y="60.8">❯</text>
+<text class="text fg" x="25.6" y="60.8"> Or f                                          </text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="73.6" y="60.8" width="9.6" height="22.4" fill="#f8f8f2"/>
+</g>
+    <animate
+      attributeName="visibility"
+      values="hidden;visible;hidden;hidden"
+      keyTimes="0.000000;0.420550;0.430290;1.000000"
+      dur="5.24s"
+      repeatCount="indefinite"
+      calcMode="discrete"
+      fill="freeze"
+    />
+  </g>
+
+  <g id="frame-33" visibility="hidden">
+    <rect class="window-bg" x="0" y="0" width="500" height="200" fill="#282a36" rx="8" ry="8"/>
+<g class="text-layer">
+<text class="text f13" x="16" y="16">❯</text>
+<text class="text fg" x="25.6" y="16"> Using JetBrains Mono font                     </text>
+<text class="text fg" x="16" y="38.4">/bin/sh: Using: command not found               </text>
+<text class="text f13" x="16" y="60.8">❯</text>
+<text class="text fg" x="25.6" y="60.8"> Or fa                                         </text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="83.2" y="60.8" width="9.6" height="22.4" fill="#f8f8f2"/>
+</g>
+    <animate
+      attributeName="visibility"
+      values="hidden;visible;hidden;hidden"
+      keyTimes="0.000000;0.430290;0.440222;1.000000"
+      dur="5.24s"
+      repeatCount="indefinite"
+      calcMode="discrete"
+      fill="freeze"
+    />
+  </g>
+
+  <g id="frame-34" visibility="hidden">
+    <rect class="window-bg" x="0" y="0" width="500" height="200" fill="#282a36" rx="8" ry="8"/>
+<g class="text-layer">
+<text class="text f13" x="16" y="16">❯</text>
+<text class="text fg" x="25.6" y="16"> Using JetBrains Mono font                     </text>
+<text class="text fg" x="16" y="38.4">/bin/sh: Using: command not found               </text>
+<text class="text f13" x="16" y="60.8">❯</text>
+<text class="text fg" x="25.6" y="60.8"> Or fal                                        </text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="92.8" y="60.8" width="9.6" height="22.4" fill="#f8f8f2"/>
+</g>
+    <animate
+      attributeName="visibility"
+      values="hidden;visible;hidden;hidden"
+      keyTimes="0.000000;0.440222;0.450153;1.000000"
+      dur="5.24s"
+      repeatCount="indefinite"
+      calcMode="discrete"
+      fill="freeze"
+    />
+  </g>
+
+  <g id="frame-35" visibility="hidden">
+    <rect class="window-bg" x="0" y="0" width="500" height="200" fill="#282a36" rx="8" ry="8"/>
+<g class="text-layer">
+<text class="text f13" x="16" y="16">❯</text>
+<text class="text fg" x="25.6" y="16"> Using JetBrains Mono font                     </text>
+<text class="text fg" x="16" y="38.4">/bin/sh: Using: command not found               </text>
+<text class="text f13" x="16" y="60.8">❯</text>
+<text class="text fg" x="25.6" y="60.8"> Or fall                                       </text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="102.39999999999999" y="60.8" width="9.6" height="22.4" fill="#f8f8f2"/>
+</g>
+    <animate
+      attributeName="visibility"
+      values="hidden;visible;hidden;hidden"
+      keyTimes="0.000000;0.450153;0.459893;1.000000"
+      dur="5.24s"
+      repeatCount="indefinite"
+      calcMode="discrete"
+      fill="freeze"
+    />
+  </g>
+
+  <g id="frame-36" visibility="hidden">
+    <rect class="window-bg" x="0" y="0" width="500" height="200" fill="#282a36" rx="8" ry="8"/>
+<g class="text-layer">
+<text class="text f13" x="16" y="16">❯</text>
+<text class="text fg" x="25.6" y="16"> Using JetBrains Mono font                     </text>
+<text class="text fg" x="16" y="38.4">/bin/sh: Using: command not found               </text>
+<text class="text f13" x="16" y="60.8">❯</text>
+<text class="text fg" x="25.6" y="60.8"> Or fallb                                      </text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="112" y="60.8" width="9.6" height="22.4" fill="#f8f8f2"/>
+</g>
+    <animate
+      attributeName="visibility"
+      values="hidden;visible;hidden;hidden"
+      keyTimes="0.000000;0.459893;0.469824;1.000000"
+      dur="5.24s"
+      repeatCount="indefinite"
+      calcMode="discrete"
+      fill="freeze"
+    />
+  </g>
+
+  <g id="frame-37" visibility="hidden">
+    <rect class="window-bg" x="0" y="0" width="500" height="200" fill="#282a36" rx="8" ry="8"/>
+<g class="text-layer">
+<text class="text f13" x="16" y="16">❯</text>
+<text class="text fg" x="25.6" y="16"> Using JetBrains Mono font                     </text>
+<text class="text fg" x="16" y="38.4">/bin/sh: Using: command not found               </text>
+<text class="text f13" x="16" y="60.8">❯</text>
+<text class="text fg" x="25.6" y="60.8"> Or fallba                                     </text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="121.6" y="60.8" width="9.6" height="22.4" fill="#f8f8f2"/>
+</g>
+    <animate
+      attributeName="visibility"
+      values="hidden;visible;hidden;hidden"
+      keyTimes="0.000000;0.469824;0.479756;1.000000"
+      dur="5.24s"
+      repeatCount="indefinite"
+      calcMode="discrete"
+      fill="freeze"
+    />
+  </g>
+
+  <g id="frame-38" visibility="hidden">
+    <rect class="window-bg" x="0" y="0" width="500" height="200" fill="#282a36" rx="8" ry="8"/>
+<g class="text-layer">
+<text class="text f13" x="16" y="16">❯</text>
+<text class="text fg" x="25.6" y="16"> Using JetBrains Mono font                     </text>
+<text class="text fg" x="16" y="38.4">/bin/sh: Using: command not found               </text>
+<text class="text f13" x="16" y="60.8">❯</text>
+<text class="text fg" x="25.6" y="60.8"> Or fallbac                                    </text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="131.2" y="60.8" width="9.6" height="22.4" fill="#f8f8f2"/>
+</g>
+    <animate
+      attributeName="visibility"
+      values="hidden;visible;hidden;hidden"
+      keyTimes="0.000000;0.479756;0.489496;1.000000"
+      dur="5.24s"
+      repeatCount="indefinite"
+      calcMode="discrete"
+      fill="freeze"
+    />
+  </g>
+
+  <g id="frame-39" visibility="hidden">
+    <rect class="window-bg" x="0" y="0" width="500" height="200" fill="#282a36" rx="8" ry="8"/>
+<g class="text-layer">
+<text class="text f13" x="16" y="16">❯</text>
+<text class="text fg" x="25.6" y="16"> Using JetBrains Mono font                     </text>
+<text class="text fg" x="16" y="38.4">/bin/sh: Using: command not found               </text>
+<text class="text f13" x="16" y="60.8">❯</text>
+<text class="text fg" x="25.6" y="60.8"> Or fallback                                   </text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="140.8" y="60.8" width="9.6" height="22.4" fill="#f8f8f2"/>
+</g>
+    <animate
+      attributeName="visibility"
+      values="hidden;visible;hidden;hidden"
+      keyTimes="0.000000;0.489496;0.499236;1.000000"
+      dur="5.24s"
+      repeatCount="indefinite"
+      calcMode="discrete"
+      fill="freeze"
+    />
+  </g>
+
+  <g id="frame-40" visibility="hidden">
+    <rect class="window-bg" x="0" y="0" width="500" height="200" fill="#282a36" rx="8" ry="8"/>
+<g class="text-layer">
+<text class="text f13" x="16" y="16">❯</text>
+<text class="text fg" x="25.6" y="16"> Using JetBrains Mono font                     </text>
+<text class="text fg" x="16" y="38.4">/bin/sh: Using: command not found               </text>
+<text class="text f13" x="16" y="60.8">❯</text>
+<text class="text fg" x="25.6" y="60.8"> Or fallback                                   </text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="150.4" y="60.8" width="9.6" height="22.4" fill="#f8f8f2"/>
+</g>
+    <animate
+      attributeName="visibility"
+      values="hidden;visible;hidden;hidden"
+      keyTimes="0.000000;0.499236;0.509167;1.000000"
+      dur="5.24s"
+      repeatCount="indefinite"
+      calcMode="discrete"
+      fill="freeze"
+    />
+  </g>
+
+  <g id="frame-41" visibility="hidden">
+    <rect class="window-bg" x="0" y="0" width="500" height="200" fill="#282a36" rx="8" ry="8"/>
+<g class="text-layer">
+<text class="text f13" x="16" y="16">❯</text>
+<text class="text fg" x="25.6" y="16"> Using JetBrains Mono font                     </text>
+<text class="text fg" x="16" y="38.4">/bin/sh: Using: command not found               </text>
+<text class="text f13" x="16" y="60.8">❯</text>
+<text class="text fg" x="25.6" y="60.8"> Or fallback t                                 </text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="160" y="60.8" width="9.6" height="22.4" fill="#f8f8f2"/>
+</g>
+    <animate
+      attributeName="visibility"
+      values="hidden;visible;hidden;hidden"
+      keyTimes="0.000000;0.509167;0.518908;1.000000"
+      dur="5.24s"
+      repeatCount="indefinite"
+      calcMode="discrete"
+      fill="freeze"
+    />
+  </g>
+
+  <g id="frame-42" visibility="hidden">
+    <rect class="window-bg" x="0" y="0" width="500" height="200" fill="#282a36" rx="8" ry="8"/>
+<g class="text-layer">
+<text class="text f13" x="16" y="16">❯</text>
+<text class="text fg" x="25.6" y="16"> Using JetBrains Mono font                     </text>
+<text class="text fg" x="16" y="38.4">/bin/sh: Using: command not found               </text>
+<text class="text f13" x="16" y="60.8">❯</text>
+<text class="text fg" x="25.6" y="60.8"> Or fallback to                                </text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="169.6" y="60.8" width="9.6" height="22.4" fill="#f8f8f2"/>
+</g>
+    <animate
+      attributeName="visibility"
+      values="hidden;visible;hidden;hidden"
+      keyTimes="0.000000;0.518908;0.528648;1.000000"
+      dur="5.24s"
+      repeatCount="indefinite"
+      calcMode="discrete"
+      fill="freeze"
+    />
+  </g>
+
+  <g id="frame-43" visibility="hidden">
+    <rect class="window-bg" x="0" y="0" width="500" height="200" fill="#282a36" rx="8" ry="8"/>
+<g class="text-layer">
+<text class="text f13" x="16" y="16">❯</text>
+<text class="text fg" x="25.6" y="16"> Using JetBrains Mono font                     </text>
+<text class="text fg" x="16" y="38.4">/bin/sh: Using: command not found               </text>
+<text class="text f13" x="16" y="60.8">❯</text>
+<text class="text fg" x="25.6" y="60.8"> Or fallback to                                </text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="179.2" y="60.8" width="9.6" height="22.4" fill="#f8f8f2"/>
+</g>
+    <animate
+      attributeName="visibility"
+      values="hidden;visible;hidden;hidden"
+      keyTimes="0.000000;0.528648;0.538579;1.000000"
+      dur="5.24s"
+      repeatCount="indefinite"
+      calcMode="discrete"
+      fill="freeze"
+    />
+  </g>
+
+  <g id="frame-44" visibility="hidden">
+    <rect class="window-bg" x="0" y="0" width="500" height="200" fill="#282a36" rx="8" ry="8"/>
+<g class="text-layer">
+<text class="text f13" x="16" y="16">❯</text>
+<text class="text fg" x="25.6" y="16"> Using JetBrains Mono font                     </text>
+<text class="text fg" x="16" y="38.4">/bin/sh: Using: command not found               </text>
+<text class="text f13" x="16" y="60.8">❯</text>
+<text class="text fg" x="25.6" y="60.8"> Or fallback to m                              </text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="188.79999999999998" y="60.8" width="9.6" height="22.4" fill="#f8f8f2"/>
+</g>
+    <animate
+      attributeName="visibility"
+      values="hidden;visible;hidden;hidden"
+      keyTimes="0.000000;0.538579;0.548510;1.000000"
+      dur="5.24s"
+      repeatCount="indefinite"
+      calcMode="discrete"
+      fill="freeze"
+    />
+  </g>
+
+  <g id="frame-45" visibility="hidden">
+    <rect class="window-bg" x="0" y="0" width="500" height="200" fill="#282a36" rx="8" ry="8"/>
+<g class="text-layer">
+<text class="text f13" x="16" y="16">❯</text>
+<text class="text fg" x="25.6" y="16"> Using JetBrains Mono font                     </text>
+<text class="text fg" x="16" y="38.4">/bin/sh: Using: command not found               </text>
+<text class="text f13" x="16" y="60.8">❯</text>
+<text class="text fg" x="25.6" y="60.8"> Or fallback to mo                             </text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="198.4" y="60.8" width="9.6" height="22.4" fill="#f8f8f2"/>
+</g>
+    <animate
+      attributeName="visibility"
+      values="hidden;visible;hidden;hidden"
+      keyTimes="0.000000;0.548510;0.558251;1.000000"
+      dur="5.24s"
+      repeatCount="indefinite"
+      calcMode="discrete"
+      fill="freeze"
+    />
+  </g>
+
+  <g id="frame-46" visibility="hidden">
+    <rect class="window-bg" x="0" y="0" width="500" height="200" fill="#282a36" rx="8" ry="8"/>
+<g class="text-layer">
+<text class="text f13" x="16" y="16">❯</text>
+<text class="text fg" x="25.6" y="16"> Using JetBrains Mono font                     </text>
+<text class="text fg" x="16" y="38.4">/bin/sh: Using: command not found               </text>
+<text class="text f13" x="16" y="60.8">❯</text>
+<text class="text fg" x="25.6" y="60.8"> Or fallback to mon                            </text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="208" y="60.8" width="9.6" height="22.4" fill="#f8f8f2"/>
+</g>
+    <animate
+      attributeName="visibility"
+      values="hidden;visible;hidden;hidden"
+      keyTimes="0.000000;0.558251;0.568182;1.000000"
+      dur="5.24s"
+      repeatCount="indefinite"
+      calcMode="discrete"
+      fill="freeze"
+    />
+  </g>
+
+  <g id="frame-47" visibility="hidden">
+    <rect class="window-bg" x="0" y="0" width="500" height="200" fill="#282a36" rx="8" ry="8"/>
+<g class="text-layer">
+<text class="text f13" x="16" y="16">❯</text>
+<text class="text fg" x="25.6" y="16"> Using JetBrains Mono font                     </text>
+<text class="text fg" x="16" y="38.4">/bin/sh: Using: command not found               </text>
+<text class="text f13" x="16" y="60.8">❯</text>
+<text class="text fg" x="25.6" y="60.8"> Or fallback to mono                           </text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="217.6" y="60.8" width="9.6" height="22.4" fill="#f8f8f2"/>
+</g>
+    <animate
+      attributeName="visibility"
+      values="hidden;visible;hidden;hidden"
+      keyTimes="0.000000;0.568182;0.577922;1.000000"
+      dur="5.24s"
+      repeatCount="indefinite"
+      calcMode="discrete"
+      fill="freeze"
+    />
+  </g>
+
+  <g id="frame-48" visibility="hidden">
+    <rect class="window-bg" x="0" y="0" width="500" height="200" fill="#282a36" rx="8" ry="8"/>
+<g class="text-layer">
+<text class="text f13" x="16" y="16">❯</text>
+<text class="text fg" x="25.6" y="16"> Using JetBrains Mono font                     </text>
+<text class="text fg" x="16" y="38.4">/bin/sh: Using: command not found               </text>
+<text class="text f13" x="16" y="60.8">❯</text>
+<text class="text fg" x="25.6" y="60.8"> Or fallback to monos                          </text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="227.2" y="60.8" width="9.6" height="22.4" fill="#f8f8f2"/>
+</g>
+    <animate
+      attributeName="visibility"
+      values="hidden;visible;hidden;hidden"
+      keyTimes="0.000000;0.577922;0.587853;1.000000"
+      dur="5.24s"
+      repeatCount="indefinite"
+      calcMode="discrete"
+      fill="freeze"
+    />
+  </g>
+
+  <g id="frame-49" visibility="hidden">
+    <rect class="window-bg" x="0" y="0" width="500" height="200" fill="#282a36" rx="8" ry="8"/>
+<g class="text-layer">
+<text class="text f13" x="16" y="16">❯</text>
+<text class="text fg" x="25.6" y="16"> Using JetBrains Mono font                     </text>
+<text class="text fg" x="16" y="38.4">/bin/sh: Using: command not found               </text>
+<text class="text f13" x="16" y="60.8">❯</text>
+<text class="text fg" x="25.6" y="60.8"> Or fallback to monosp                         </text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="236.79999999999998" y="60.8" width="9.6" height="22.4" fill="#f8f8f2"/>
+</g>
+    <animate
+      attributeName="visibility"
+      values="hidden;visible;hidden;hidden"
+      keyTimes="0.000000;0.587853;0.597785;1.000000"
+      dur="5.24s"
+      repeatCount="indefinite"
+      calcMode="discrete"
+      fill="freeze"
+    />
+  </g>
+
+  <g id="frame-50" visibility="hidden">
+    <rect class="window-bg" x="0" y="0" width="500" height="200" fill="#282a36" rx="8" ry="8"/>
+<g class="text-layer">
+<text class="text f13" x="16" y="16">❯</text>
+<text class="text fg" x="25.6" y="16"> Using JetBrains Mono font                     </text>
+<text class="text fg" x="16" y="38.4">/bin/sh: Using: command not found               </text>
+<text class="text f13" x="16" y="60.8">❯</text>
+<text class="text fg" x="25.6" y="60.8"> Or fallback to monospa                        </text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="246.39999999999998" y="60.8" width="9.6" height="22.4" fill="#f8f8f2"/>
+</g>
+    <animate
+      attributeName="visibility"
+      values="hidden;visible;hidden;hidden"
+      keyTimes="0.000000;0.597785;0.607525;1.000000"
+      dur="5.24s"
+      repeatCount="indefinite"
+      calcMode="discrete"
+      fill="freeze"
+    />
+  </g>
+
+  <g id="frame-51" visibility="hidden">
+    <rect class="window-bg" x="0" y="0" width="500" height="200" fill="#282a36" rx="8" ry="8"/>
+<g class="text-layer">
+<text class="text f13" x="16" y="16">❯</text>
+<text class="text fg" x="25.6" y="16"> Using JetBrains Mono font                     </text>
+<text class="text fg" x="16" y="38.4">/bin/sh: Using: command not found               </text>
+<text class="text f13" x="16" y="60.8">❯</text>
+<text class="text fg" x="25.6" y="60.8"> Or fallback to monospac                       </text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="256" y="60.8" width="9.6" height="22.4" fill="#f8f8f2"/>
+</g>
+    <animate
+      attributeName="visibility"
+      values="hidden;visible;hidden;hidden"
+      keyTimes="0.000000;0.607525;0.617456;1.000000"
+      dur="5.24s"
+      repeatCount="indefinite"
+      calcMode="discrete"
+      fill="freeze"
+    />
+  </g>
+
+  <g id="frame-52" visibility="hidden">
+    <rect class="window-bg" x="0" y="0" width="500" height="200" fill="#282a36" rx="8" ry="8"/>
+<g class="text-layer">
+<text class="text f13" x="16" y="16">❯</text>
+<text class="text fg" x="25.6" y="16"> Using JetBrains Mono font                     </text>
+<text class="text fg" x="16" y="38.4">/bin/sh: Using: command not found               </text>
+<text class="text f13" x="16" y="60.8">❯</text>
+<text class="text fg" x="25.6" y="60.8"> Or fallback to monospace                      </text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="265.6" y="60.8" width="9.6" height="22.4" fill="#f8f8f2"/>
+</g>
+    <animate
+      attributeName="visibility"
+      values="hidden;visible;hidden;hidden"
+      keyTimes="0.000000;0.617456;0.808824;1.000000"
+      dur="5.24s"
+      repeatCount="indefinite"
+      calcMode="discrete"
+      fill="freeze"
+    />
+  </g>
+
+  <g id="frame-53" visibility="hidden">
+    <rect class="window-bg" x="0" y="0" width="500" height="200" fill="#282a36" rx="8" ry="8"/>
+<g class="text-layer">
+<text class="text f13" x="16" y="16">❯</text>
+<text class="text fg" x="25.6" y="16"> Using JetBrains Mono font                     </text>
+<text class="text fg" x="16" y="38.4">/bin/sh: Using: command not found               </text>
+<text class="text f13" x="16" y="60.8">❯</text>
+<text class="text fg" x="25.6" y="60.8"> Or fallback to monospace                      </text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor" x="265.6" y="60.8" width="9.6" height="22.4" fill="#f8f8f2"/>
+</g>
+    <animate
+      attributeName="visibility"
+      values="hidden;visible;hidden;hidden"
+      keyTimes="0.000000;0.808824;0.809015;1.000000"
+      dur="5.24s"
+      repeatCount="indefinite"
+      calcMode="discrete"
+      fill="freeze"
+    />
+  </g>
+
+  <g id="frame-54" visibility="hidden">
+    <rect class="window-bg" x="0" y="0" width="500" height="200" fill="#282a36" rx="8" ry="8"/>
+<g class="text-layer">
+<text class="text f13" x="16" y="16">❯</text>
+<text class="text fg" x="25.6" y="16"> Using JetBrains Mono font                     </text>
+<text class="text fg" x="16" y="38.4">/bin/sh: Using: command not found               </text>
+<text class="text f13" x="16" y="60.8">❯</text>
+<text class="text fg" x="25.6" y="60.8"> Or fallback to monospace                      </text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor" x="265.6" y="60.8" width="9.6" height="22.4" fill="#f8f8f2"/>
+</g>
+    <animate
+      attributeName="visibility"
+      values="hidden;visible;visible"
+      keyTimes="0.000000;0.809015;1.000000"
+      dur="5.24s"
+      repeatCount="indefinite"
+      calcMode="discrete"
+      fill="freeze"
+    />
+  </g>
+  </g>
+</svg>

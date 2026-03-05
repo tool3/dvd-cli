@@ -58,7 +58,16 @@ export function generateStylesheet(theme: Theme, options: EmitterOptions): strin
   }
 
   // Base text styles
-  const fontFamily = options.embedFont ? "'DVDMono', monospace" : "'SF Mono', 'Monaco', 'Menlo', 'Consolas', monospace";
+  // Priority: embedded font > custom fontFamily > default system fonts
+  const defaultFonts = "'SF Mono', 'Monaco', 'Menlo', 'Consolas', monospace";
+  let fontFamily: string;
+  if (options.embedFont && options.fontData) {
+    fontFamily = "'DVDMono', monospace";
+  } else if (options.fontFamily) {
+    fontFamily = `'${options.fontFamily}', monospace`;
+  } else {
+    fontFamily = defaultFonts;
+  }
   lines.push(`.text {
   font-family: ${fontFamily};
   font-size: ${fontSize}px;

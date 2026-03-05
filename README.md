@@ -162,6 +162,13 @@ All available `Set` commands for configuring your terminal recording:
 | `Set FontSize <px>` | Font size in pixels | 14 |
 | `Set Padding <px>` | Content padding in pixels | 16 |
 
+### Font
+
+| Command | Description | Default |
+|---------|-------------|---------|
+| `Set FontFamily <name>` | Font family name (system font or web font) | SF Mono, Monaco, etc. |
+| `Set EmbedFont <path>` | Embed a font file (woff2, ttf, otf) into the SVG | none |
+
 ### Appearance
 
 | Command | Description | Default |

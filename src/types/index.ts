@@ -237,6 +237,7 @@ export interface EmitterOptions {
   watermark?: string;
   embedFont?: boolean;
   fontData?: string;
+  fontFamily?: string;
   headerBackground?: string;
   footerBackground?: string;
   borderColor?: string;
