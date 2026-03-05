@@ -1,0 +1,25 @@
+# Neofetch Test - Fixed Dimensions
+# Tests neofetch with explicit width and height
+# Content scrolls to fit within fixed viewport
+
+Output examples/svgs/neofetch-fixed-dimensions.svg
+
+Set Theme github-dark
+Set Template macos
+Set TypingSpeed 30ms
+Set FontSize 16
+Set Width 1000
+Set Height 600
+Set Scroll false
+
+Type "neofetch"
+
+Sleep 500ms
+
+Enter
+
+Sleep 2s
+
+Type "Fixed dimensions mode!"
+
+Sleep 1s

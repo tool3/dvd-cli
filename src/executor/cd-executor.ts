@@ -94,6 +94,7 @@ interface ExecutorContext {
   autoHeight: boolean;
   maxLineLength: number;
   maxLines: number;
+  maxVisualRow: number; // Track max row after VTerminal processing (accounts for cursor positioning)
 
   // Scrolling
   scroll: boolean;
@@ -128,6 +129,9 @@ interface ExecutorContext {
   fontFamily?: string;
   embedFont?: boolean;
   fontData?: string;
+
+  // Line height multiplier (default 1.4)
+  lineHeight: number;
 }
 
 // ============================================================================
@@ -187,9 +191,13 @@ export class CDExecutor {
       autoHeight: !options.height,
       maxLineLength: 0,
       maxLines: 0,
+      maxVisualRow: 0,
       scroll: !!options.height, // Enable scroll when height is fixed (content can exceed it)
       scrollOffset: 0,
       isExecutingCommand: false,
+
+      // Line height multiplier (default 1.4)
+      lineHeight: 1.4,
     };
   }
 
@@ -202,22 +210,18 @@ export class CDExecutor {
 
     // Build display line with or without prompt
     let displayLine: string;
-    let adjustedCursorX: number;
 
     if (this.context.isExecutingCommand) {
       displayLine = this.context.currentLine;
-      adjustedCursorX = this.context.cursorX;
     } else {
       displayLine = this.context.promptPrefix + this.context.currentLine;
-      const prefixLength = this.stripAnsi(this.context.promptPrefix).length;
-      adjustedCursorX = this.context.cursorX + prefixLength;
     }
 
     buffer[this.context.cursorY] = displayLine;
 
     // Calculate layout constants
     const charWidth = this.context.fontSize * 0.6;
-    const lineHeight = this.context.fontSize * 1.4;
+    const lineHeight = this.context.fontSize * this.context.lineHeight;
     const padding = this.context.padding ?? 16;
     const headerHeight = this.context.template === 'minimal' ? 0 : 40;
     const contentStartY = headerHeight + padding;
@@ -243,12 +247,13 @@ export class CDExecutor {
     }
 
     // Handle scrolling
+    // When scroll is enabled (or height is fixed), auto-scroll to keep cursor visible
+    // When scroll is explicitly disabled, show all content without scrolling
     let visibleBuffer: string[];
-    let visibleCursorY: number;
+
+    const visibleLines = this.getVisibleLineCount();
 
     if (this.context.scroll) {
-      const visibleLines = this.getVisibleLineCount();
-
       // Auto-scroll to keep cursor visible
       if (this.context.cursorY >= this.context.scrollOffset + visibleLines) {
         // Cursor is below visible area - scroll down
@@ -261,10 +266,10 @@ export class CDExecutor {
       const startLine = this.context.scrollOffset;
       const endLine = Math.min(startLine + visibleLines, buffer.length);
       visibleBuffer = buffer.slice(startLine, endLine);
-      visibleCursorY = this.context.cursorY - this.context.scrollOffset;
     } else {
+      // No scrolling - show all content
       visibleBuffer = buffer;
-      visibleCursorY = this.context.cursorY;
+      this.context.scrollOffset = 0;
     }
 
     // Update VTerminal grid with current content
@@ -300,29 +305,25 @@ export class CDExecutor {
     let grid = createGridState(gridWidth, gridHeight);
     grid = processInput(grid, content);
 
-    // Calculate final cursor position
-    let finalCursorX: number;
-    let finalCursorY: number;
+    // Use VTerminal's cursor position - it correctly handles cursor positioning
+    // sequences (like those in neofetch) and places the cursor at the end of
+    // the actual rendered content
+    // Don't clamp when:
+    // - autoHeight is true (dimensions will be recalculated later)
+    // - scroll is false (all content is shown without viewport clipping)
+    const shouldClampCursor = !this.context.autoHeight && this.context.scroll;
+    const finalCursorY = shouldClampCursor
+      ? Math.max(0, Math.min(grid.cursor.row, maxVisibleRows - 1))
+      : grid.cursor.row;
+    const finalCursorX = grid.cursor.col;
 
-    if (this.context.autoWidth) {
-      // For auto width, no wrapping - use tracked position directly
-      finalCursorY = Math.max(0, Math.min(visibleCursorY, maxVisibleRows - 1));
-      finalCursorX = adjustedCursorX;
-    } else {
-      // For fixed width, we need to account for line wrapping
-      // Calculate the visual row by counting wrapped lines in all content up to cursor line,
-      // then add the wrap offset within the current line
-      let visualRow = 0;
-      for (let i = 0; i < visibleCursorY && i < visibleBuffer.length; i++) {
-        const lineLength = this.stripAnsi(visibleBuffer[i]).length;
-        visualRow += Math.max(1, Math.ceil(lineLength / visibleCols));
+    // Track max visual row for auto-height (accounts for cursor positioning in commands like neofetch)
+    if (this.context.autoHeight) {
+      // The cursor row after VTerminal processing represents the actual visual row
+      // Add 1 for zero-indexing (row 22 means 23 rows of content)
+      if (grid.cursor.row + 1 > this.context.maxVisualRow) {
+        this.context.maxVisualRow = grid.cursor.row + 1;
       }
-      // Add wrap offset within current line
-      const cursorWrapRows = Math.floor(adjustedCursorX / visibleCols);
-      visualRow += cursorWrapRows;
-
-      finalCursorY = Math.max(0, Math.min(visualRow, maxVisibleRows - 1));
-      finalCursorX = adjustedCursorX % visibleCols;
     }
 
     // Coalesce grid to spans
@@ -379,6 +380,8 @@ export class CDExecutor {
         fontFamily: this.context.fontFamily,
         embedFont: this.context.embedFont,
         fontData: this.context.fontData,
+        // Line height
+        lineHeight: this.context.fontSize * this.context.lineHeight,
       }
     );
 
@@ -421,7 +424,7 @@ export class CDExecutor {
   private getVisibleLineCount(): number {
     const headerHeight = this.context.template === 'minimal' ? 0 : 40;
     const padding = this.context.padding ?? 16;
-    const lineHeight = this.context.fontSize * 1.4;
+    const lineHeight = this.context.fontSize * this.context.lineHeight;
     const watermarkHeight = this.context.watermark ? lineHeight : 0;
     const contentHeight = this.context.height - headerHeight - padding - watermarkHeight - padding;
     return Math.floor(contentHeight / lineHeight);
@@ -533,11 +536,12 @@ export class CDExecutor {
         const trimmedOutput = output.endsWith('\n') ? output.slice(0, -1) : output;
         const outputLines = trimmedOutput.split('\n');
 
+        // Store output lines (with ANSI codes) for rendering
         for (let i = 0; i < outputLines.length; i++) {
           this.context.lines[outputStartLine + i] = outputLines[i];
         }
 
-        // Position cursor on line after the last output line (where prompt will go)
+        // Position cursor after output
         this.context.cursorY = outputStartLine + outputLines.length;
         this.context.cursorX = 0;
 
@@ -972,6 +976,9 @@ export class CDExecutor {
       case 'FontSize':
         this.context.fontSize = parseInt(value, 10);
         break;
+      case 'LineHeight':
+        this.context.lineHeight = parseFloat(value);
+        break;
       case 'TypingSpeed':
         this.context.typingSpeed = parseInt(value, 10);
         break;
@@ -1140,7 +1147,7 @@ export class CDExecutor {
 
   private updateGridDimensions(): void {
     const charWidth = this.context.fontSize * 0.6;
-    const lineHeight = this.context.fontSize * 1.4;
+    const lineHeight = this.context.fontSize * this.context.lineHeight;
     const padding = this.context.padding ?? 16;
     const headerHeight = this.context.template === 'minimal' ? 0 : 40;
     const termWidth = Math.floor((this.context.width - padding * 2) / charWidth);
@@ -1152,7 +1159,7 @@ export class CDExecutor {
   private recalculateDimensionsAndRerender(): void {
     const padding = this.context.padding ?? 16;
     const headerHeight = this.context.template === 'minimal' ? 0 : 40;
-    const lineHeight = this.context.fontSize * 1.4;
+    const lineHeight = this.context.fontSize * this.context.lineHeight;
     const charWidth = this.context.fontSize * 0.6;
 
     if (this.context.autoWidth) {
@@ -1163,7 +1170,10 @@ export class CDExecutor {
 
     if (this.context.autoHeight) {
       const watermarkHeight = this.context.watermark ? lineHeight : 0;
-      this.context.height = Math.ceil(headerHeight + padding + this.context.maxLines * lineHeight + watermarkHeight + padding);
+      // Use maxVisualRow (actual rendered rows after VTerminal processing) instead of maxLines
+      // This correctly handles cursor positioning commands in programs like neofetch
+      const rows = this.context.maxVisualRow > 0 ? this.context.maxVisualRow : this.context.maxLines;
+      this.context.height = Math.ceil(headerHeight + padding + rows * lineHeight + watermarkHeight + padding);
       if (this.context.height < 100) this.context.height = 100;
     }
 
@@ -1187,6 +1197,9 @@ export class CDExecutor {
         borderRadius: this.context.borderRadius,
         padding: this.context.padding,
         cursorBlink: this.context.cursorBlink,
+        lineHeight: this.context.fontSize * this.context.lineHeight,
+        cursorStyle: this.context.cursorStyle,
+        cursorColor: this.context.cursorColor,
       });
 
       this.context.frames[i].svg = svg;
