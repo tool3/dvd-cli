@@ -47,11 +47,11 @@
 .b14 { fill: #56d4dd; }
 .b15 { fill: #f0f6fc; }
 .cursor { animation: blink 1s step-end infinite; }
-.cursor-active { opacity: 1; }
 @keyframes blink {
   0%, 50% { opacity: 1; }
   50.01%, 100% { opacity: 0; }
 }
+.cursor-active { opacity: 1; }
 </style>
 <rect class="window-bg" x="0" y="0" width="800" height="400" fill="#0d1117" rx="8" ry="8"/>
 <g class="chrome"><rect class="header-bg" x="0" y="0" width="800" height="40" fill="#0d1117" rx="8" ry="8"/>

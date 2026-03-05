@@ -105,13 +105,18 @@ export function generateStylesheet(theme: Theme, options: EmitterOptions): strin
     lines.push(`.b${i} { fill: ${color}; }`);
   });
 
-  // Cursor animation
-  lines.push(`.cursor { animation: blink 1s step-end infinite; }`);
-  lines.push(`.cursor-active { opacity: 1; }`);
-  lines.push(`@keyframes blink {
+  // Cursor styles
+  const cursorBlink = options.cursorBlink !== false; // Default to true
+  if (cursorBlink) {
+    lines.push(`.cursor { animation: blink 1s step-end infinite; }`);
+    lines.push(`@keyframes blink {
   0%, 50% { opacity: 1; }
   50.01%, 100% { opacity: 0; }
 }`);
+  } else {
+    lines.push(`.cursor { opacity: 1; }`);
+  }
+  lines.push(`.cursor-active { opacity: 1; }`);
 
   return lines.join('\n');
 }
@@ -196,9 +201,10 @@ function generateChrome(config: ChromeConfig): string {
   // Title text
   if (title) {
     const titleX = width / 2;
-    const titleY = headerHeight / 2 + 4;
+    const titleY = headerHeight / 2;
+    // Use style attribute to override .text class's dominant-baseline
     parts.push(
-      `<text class="text fg" x="${titleX}" y="${titleY}" text-anchor="middle" dominant-baseline="middle">${escapeXml(title)}</text>`
+      `<text class="text fg" x="${titleX}" y="${titleY}" text-anchor="middle" style="dominant-baseline: central">${escapeXml(title)}</text>`
     );
   }
 
@@ -332,6 +338,24 @@ export function emit(
     }
   }
   parts.push('</g>');
+
+  // Selection layer
+  if (options.selection) {
+    const { start, end, row } = options.selection;
+    const selStart = Math.min(start, end);
+    const selEnd = Math.max(start, end);
+    const selectionX = padding + selStart * charWidth;
+    const selectionY = contentStartY + row * lineHeight;
+    const selectionWidth = (selEnd - selStart) * charWidth;
+    const selectionColor = theme.selection ?? '#44475a';
+
+    parts.push('<g class="selection-layer">');
+    parts.push(
+      `<rect x="${selectionX}" y="${selectionY}" ` +
+        `width="${selectionWidth}" height="${lineHeight}" fill="${selectionColor}" opacity="0.5"/>`
+    );
+    parts.push('</g>');
+  }
 
   // Cursor layer
   if (cursor && cursorVisible) {

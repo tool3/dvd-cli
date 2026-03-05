@@ -56,10 +56,10 @@ function getSVGDimensions(svg: string): { width: number; height: number } {
 /**
  * Create CSS keyframes for animation
  *
- * Each frame should be visible from its timestamp until the next frame's timestamp.
- * Frame visibility: [thisFrame.timestamp, nextFrame.timestamp)
- *
- * Uses exact percentage values to ensure seamless transitions between frames.
+ * Strategy: Use step-start timing with clean transitions.
+ * - Each frame is visible from its start time until the next frame's start time
+ * - No gaps or overlaps in the percentage values
+ * - Uses step-start timing so transitions happen instantly at the keyframe point
  */
 function createKeyframes(frames: TerminalFrame[]): string {
   if (frames.length === 0) return '';
@@ -69,29 +69,34 @@ function createKeyframes(frames: TerminalFrame[]): string {
 
   const css: string[] = [];
 
-  // Pre-calculate all frame percentages with consistent precision
+  // Calculate frame start percentages with high precision
   const framePercents = frames.map(f => (f.timestamp / totalDuration) * 100);
-  framePercents.push(100); // End marker
 
   for (let i = 0; i < frames.length; i++) {
-    const frameStart = framePercents[i];
-    const frameEnd = framePercents[i + 1];
+    const startPercent = framePercents[i];
+    const endPercent = i < frames.length - 1 ? framePercents[i + 1] : 100;
 
-    // Use higher precision (4 decimal places) to avoid gaps
-    // Frame is invisible before its start, visible during its time, invisible after
     if (i === 0) {
-      // First frame: visible from 0% to when second frame starts
+      // First frame: visible from 0%, becomes hidden when next frame starts
       css.push(`
     @keyframes frame-${i}-anim {
-      0%, ${frameEnd.toFixed(4)}% { opacity: 1; }
-      ${(frameEnd + 0.0001).toFixed(4)}%, 100% { opacity: 0; }
+      0%, ${endPercent.toFixed(6)}% { opacity: 1; }
+      ${endPercent.toFixed(6)}% { opacity: 0; }
+    }`);
+    } else if (i === frames.length - 1) {
+      // Last frame: hidden until start, then visible through end
+      css.push(`
+    @keyframes frame-${i}-anim {
+      0%, ${startPercent.toFixed(6)}% { opacity: 0; }
+      ${startPercent.toFixed(6)}% { opacity: 1; }
     }`);
     } else {
+      // Middle frames: hidden, then visible, then hidden
       css.push(`
     @keyframes frame-${i}-anim {
-      0%, ${(frameStart - 0.0001).toFixed(4)}% { opacity: 0; }
-      ${frameStart.toFixed(4)}%, ${frameEnd.toFixed(4)}% { opacity: 1; }
-      ${(frameEnd + 0.0001).toFixed(4)}%, 100% { opacity: 0; }
+      0%, ${startPercent.toFixed(6)}% { opacity: 0; }
+      ${startPercent.toFixed(6)}%, ${endPercent.toFixed(6)}% { opacity: 1; }
+      ${endPercent.toFixed(6)}% { opacity: 0; }
     }`);
     }
   }
@@ -142,9 +147,9 @@ export async function createAnimatedSVG(
 
     .frame {
       animation-duration: ${animationDuration}s;
-      animation-timing-function: step-end;
+      animation-timing-function: step-start;
       animation-iteration-count: ${animationIterationCount};
-      animation-fill-mode: forwards;
+      animation-fill-mode: both;
     }
 
     ${frames.map((_, i) => `

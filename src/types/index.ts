@@ -242,6 +242,8 @@ export interface EmitterOptions {
   borderColor?: string;
   borderWidth?: number;
   borderRadius?: number;
+  cursorBlink?: boolean;
+  selection?: { start: number; end: number; row: number } | null;
 }
 
 // ============================================================================

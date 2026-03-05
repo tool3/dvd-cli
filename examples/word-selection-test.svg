@@ -1,393 +1,307 @@
 <svg width="800" height="400" xmlns="http://www.w3.org/2000/svg">
   <style>
+    /* Base styles from first frame */
+    
+.text {
+  font-family: 'SF Mono', 'Monaco', 'Menlo', 'Consolas', monospace;
+  font-size: 16px;
+  dominant-baseline: text-before-edge;
+  text-rendering: geometricPrecision;
+  white-space: pre;
+}
+.bold { font-weight: bold; }
+.italic { font-style: italic; }
+.uline { text-decoration: underline; }
+.strike { text-decoration: line-through; }
+.dim { opacity: 0.5; }
+.fg { fill: #f8f8f2; }
+.f0 { fill: #21222c; }
+.f1 { fill: #ff5555; }
+.f2 { fill: #50fa7b; }
+.f3 { fill: #f1fa8c; }
+.f4 { fill: #bd93f9; }
+.f5 { fill: #ff79c6; }
+.f6 { fill: #8be9fd; }
+.f7 { fill: #f8f8f2; }
+.f8 { fill: #6272a4; }
+.f9 { fill: #ff6e6e; }
+.f10 { fill: #69ff94; }
+.f11 { fill: #ffffa5; }
+.f12 { fill: #d6acff; }
+.f13 { fill: #ff92df; }
+.f14 { fill: #a4ffff; }
+.f15 { fill: #ffffff; }
+.bg { fill: #282a36; }
+.b0 { fill: #21222c; }
+.b1 { fill: #ff5555; }
+.b2 { fill: #50fa7b; }
+.b3 { fill: #f1fa8c; }
+.b4 { fill: #bd93f9; }
+.b5 { fill: #ff79c6; }
+.b6 { fill: #8be9fd; }
+.b7 { fill: #f8f8f2; }
+.b8 { fill: #6272a4; }
+.b9 { fill: #ff6e6e; }
+.b10 { fill: #69ff94; }
+.b11 { fill: #ffffa5; }
+.b12 { fill: #d6acff; }
+.b13 { fill: #ff92df; }
+.b14 { fill: #a4ffff; }
+.b15 { fill: #ffffff; }
+.cursor { animation: blink 1s step-end infinite; }
+@keyframes blink {
+  0%, 50% { opacity: 1; }
+  50.01%, 100% { opacity: 0; }
+}
+.cursor-active { opacity: 1; }
+
+
+    /* Animation keyframes */
     
     @keyframes frame-0-anim {
-      0% { opacity: 1; }
-      1.00% { opacity: 1; }
-      1.01% { opacity: 0; }
-      100% { opacity: 0; }
-    }@keyframes frame-1-anim {
-      0% { opacity: 0; }
-      0.00% { opacity: 0; }
-      1.00% { opacity: 1; }
-      1.98% { opacity: 1; }
-      1.99% { opacity: 0; }
-      100% { opacity: 0; }
+      0%, 0.996241% { opacity: 1; }
+      0.996241% { opacity: 0; }
+    }
+    @keyframes frame-1-anim {
+      0%, 0.996241% { opacity: 0; }
+      0.996241%, 1.992481% { opacity: 1; }
+      1.992481% { opacity: 0; }
     }
     @keyframes frame-2-anim {
-      0% { opacity: 0; }
-      1.00% { opacity: 0; }
-      1.98% { opacity: 1; }
-      2.96% { opacity: 1; }
-      2.97% { opacity: 0; }
-      100% { opacity: 0; }
+      0%, 1.992481% { opacity: 0; }
+      1.992481%, 2.951128% { opacity: 1; }
+      2.951128% { opacity: 0; }
     }
     @keyframes frame-3-anim {
-      0% { opacity: 0; }
-      1.98% { opacity: 0; }
-      2.96% { opacity: 1; }
-      3.94% { opacity: 1; }
-      3.95% { opacity: 0; }
-      100% { opacity: 0; }
+      0%, 2.951128% { opacity: 0; }
+      2.951128%, 3.928571% { opacity: 1; }
+      3.928571% { opacity: 0; }
     }
     @keyframes frame-4-anim {
-      0% { opacity: 0; }
-      2.96% { opacity: 0; }
-      3.94% { opacity: 1; }
-      4.94% { opacity: 1; }
-      4.95% { opacity: 0; }
-      100% { opacity: 0; }
+      0%, 3.928571% { opacity: 0; }
+      3.928571%, 4.906015% { opacity: 1; }
+      4.906015% { opacity: 0; }
     }
     @keyframes frame-5-anim {
-      0% { opacity: 0; }
-      3.94% { opacity: 0; }
-      4.94% { opacity: 1; }
-      5.92% { opacity: 1; }
-      5.93% { opacity: 0; }
-      100% { opacity: 0; }
+      0%, 4.906015% { opacity: 0; }
+      4.906015%, 5.883459% { opacity: 1; }
+      5.883459% { opacity: 0; }
     }
     @keyframes frame-6-anim {
-      0% { opacity: 0; }
-      4.94% { opacity: 0; }
-      5.92% { opacity: 1; }
-      6.88% { opacity: 1; }
-      6.89% { opacity: 0; }
-      100% { opacity: 0; }
+      0%, 5.883459% { opacity: 0; }
+      5.883459%, 6.860902% { opacity: 1; }
+      6.860902% { opacity: 0; }
     }
     @keyframes frame-7-anim {
-      0% { opacity: 0; }
-      5.92% { opacity: 0; }
-      6.88% { opacity: 1; }
-      7.88% { opacity: 1; }
-      7.89% { opacity: 0; }
-      100% { opacity: 0; }
+      0%, 6.860902% { opacity: 0; }
+      6.860902%, 7.857143% { opacity: 1; }
+      7.857143% { opacity: 0; }
     }
     @keyframes frame-8-anim {
-      0% { opacity: 0; }
-      6.88% { opacity: 0; }
-      7.88% { opacity: 1; }
-      8.88% { opacity: 1; }
-      8.89% { opacity: 0; }
-      100% { opacity: 0; }
+      0%, 7.857143% { opacity: 0; }
+      7.857143%, 8.853383% { opacity: 1; }
+      8.853383% { opacity: 0; }
     }
     @keyframes frame-9-anim {
-      0% { opacity: 0; }
-      7.88% { opacity: 0; }
-      8.88% { opacity: 1; }
-      9.86% { opacity: 1; }
-      9.87% { opacity: 0; }
-      100% { opacity: 0; }
+      0%, 8.853383% { opacity: 0; }
+      8.853383%, 9.830827% { opacity: 1; }
+      9.830827% { opacity: 0; }
     }
     @keyframes frame-10-anim {
-      0% { opacity: 0; }
-      8.88% { opacity: 0; }
-      9.86% { opacity: 1; }
-      10.84% { opacity: 1; }
-      10.85% { opacity: 0; }
-      100% { opacity: 0; }
+      0%, 9.830827% { opacity: 0; }
+      9.830827%, 10.827068% { opacity: 1; }
+      10.827068% { opacity: 0; }
     }
     @keyframes frame-11-anim {
-      0% { opacity: 0; }
-      9.86% { opacity: 0; }
-      10.84% { opacity: 1; }
-      11.81% { opacity: 1; }
-      11.82% { opacity: 0; }
-      100% { opacity: 0; }
+      0%, 10.827068% { opacity: 0; }
+      10.827068%, 11.842105% { opacity: 1; }
+      11.842105% { opacity: 0; }
     }
     @keyframes frame-12-anim {
-      0% { opacity: 0; }
-      10.84% { opacity: 0; }
-      11.81% { opacity: 1; }
-      12.79% { opacity: 1; }
-      12.80% { opacity: 0; }
-      100% { opacity: 0; }
+      0%, 11.842105% { opacity: 0; }
+      11.842105%, 12.819549% { opacity: 1; }
+      12.819549% { opacity: 0; }
     }
     @keyframes frame-13-anim {
-      0% { opacity: 0; }
-      11.81% { opacity: 0; }
-      12.79% { opacity: 1; }
-      13.79% { opacity: 1; }
-      13.80% { opacity: 0; }
-      100% { opacity: 0; }
+      0%, 12.819549% { opacity: 0; }
+      12.819549%, 13.796992% { opacity: 1; }
+      13.796992% { opacity: 0; }
     }
     @keyframes frame-14-anim {
-      0% { opacity: 0; }
-      12.79% { opacity: 0; }
-      13.79% { opacity: 1; }
-      14.77% { opacity: 1; }
-      14.78% { opacity: 0; }
-      100% { opacity: 0; }
+      0%, 13.796992% { opacity: 0; }
+      13.796992%, 14.812030% { opacity: 1; }
+      14.812030% { opacity: 0; }
     }
     @keyframes frame-15-anim {
-      0% { opacity: 0; }
-      13.79% { opacity: 0; }
-      14.77% { opacity: 1; }
-      15.75% { opacity: 1; }
-      15.76% { opacity: 0; }
-      100% { opacity: 0; }
+      0%, 14.812030% { opacity: 0; }
+      14.812030%, 15.808271% { opacity: 1; }
+      15.808271% { opacity: 0; }
     }
     @keyframes frame-16-anim {
-      0% { opacity: 0; }
-      14.77% { opacity: 0; }
-      15.75% { opacity: 1; }
-      16.73% { opacity: 1; }
-      16.74% { opacity: 0; }
-      100% { opacity: 0; }
+      0%, 15.808271% { opacity: 0; }
+      15.808271%, 16.785714% { opacity: 1; }
+      16.785714% { opacity: 0; }
     }
     @keyframes frame-17-anim {
-      0% { opacity: 0; }
-      15.75% { opacity: 0; }
-      16.73% { opacity: 1; }
-      17.71% { opacity: 1; }
-      17.72% { opacity: 0; }
-      100% { opacity: 0; }
+      0%, 16.785714% { opacity: 0; }
+      16.785714%, 17.781955% { opacity: 1; }
+      17.781955% { opacity: 0; }
     }
     @keyframes frame-18-anim {
-      0% { opacity: 0; }
-      16.73% { opacity: 0; }
-      17.71% { opacity: 1; }
-      18.69% { opacity: 1; }
-      18.70% { opacity: 0; }
-      100% { opacity: 0; }
+      0%, 17.781955% { opacity: 0; }
+      17.781955%, 18.796992% { opacity: 1; }
+      18.796992% { opacity: 0; }
     }
     @keyframes frame-19-anim {
-      0% { opacity: 0; }
-      17.71% { opacity: 0; }
-      18.69% { opacity: 1; }
-      19.67% { opacity: 1; }
-      19.68% { opacity: 0; }
-      100% { opacity: 0; }
+      0%, 18.796992% { opacity: 0; }
+      18.796992%, 19.774436% { opacity: 1; }
+      19.774436% { opacity: 0; }
     }
     @keyframes frame-20-anim {
-      0% { opacity: 0; }
-      18.69% { opacity: 0; }
-      19.67% { opacity: 1; }
-      20.65% { opacity: 1; }
-      20.66% { opacity: 0; }
-      100% { opacity: 0; }
+      0%, 19.774436% { opacity: 0; }
+      19.774436%, 20.751880% { opacity: 1; }
+      20.751880% { opacity: 0; }
     }
     @keyframes frame-21-anim {
-      0% { opacity: 0; }
-      19.67% { opacity: 0; }
-      20.65% { opacity: 1; }
-      21.63% { opacity: 1; }
-      21.64% { opacity: 0; }
-      100% { opacity: 0; }
+      0%, 20.751880% { opacity: 0; }
+      20.751880%, 21.748120% { opacity: 1; }
+      21.748120% { opacity: 0; }
     }
     @keyframes frame-22-anim {
-      0% { opacity: 0; }
-      20.65% { opacity: 0; }
-      21.63% { opacity: 1; }
-      22.61% { opacity: 1; }
-      22.62% { opacity: 0; }
-      100% { opacity: 0; }
+      0%, 21.748120% { opacity: 0; }
+      21.748120%, 22.763158% { opacity: 1; }
+      22.763158% { opacity: 0; }
     }
     @keyframes frame-23-anim {
-      0% { opacity: 0; }
-      21.63% { opacity: 0; }
-      22.61% { opacity: 1; }
-      23.57% { opacity: 1; }
-      23.58% { opacity: 0; }
-      100% { opacity: 0; }
+      0%, 22.763158% { opacity: 0; }
+      22.763158%, 23.796992% { opacity: 1; }
+      23.796992% { opacity: 0; }
     }
     @keyframes frame-24-anim {
-      0% { opacity: 0; }
-      22.61% { opacity: 0; }
-      23.57% { opacity: 1; }
-      24.55% { opacity: 1; }
-      24.56% { opacity: 0; }
-      100% { opacity: 0; }
+      0%, 23.796992% { opacity: 0; }
+      23.796992%, 24.812030% { opacity: 1; }
+      24.812030% { opacity: 0; }
     }
     @keyframes frame-25-anim {
-      0% { opacity: 0; }
-      23.57% { opacity: 0; }
-      24.55% { opacity: 1; }
-      25.53% { opacity: 1; }
-      25.54% { opacity: 0; }
-      100% { opacity: 0; }
+      0%, 24.812030% { opacity: 0; }
+      24.812030%, 25.864662% { opacity: 1; }
+      25.864662% { opacity: 0; }
     }
     @keyframes frame-26-anim {
-      0% { opacity: 0; }
-      24.55% { opacity: 0; }
-      25.53% { opacity: 1; }
-      26.49% { opacity: 1; }
-      26.50% { opacity: 0; }
-      100% { opacity: 0; }
+      0%, 25.864662% { opacity: 0; }
+      25.864662%, 26.860902% { opacity: 1; }
+      26.860902% { opacity: 0; }
     }
     @keyframes frame-27-anim {
-      0% { opacity: 0; }
-      25.53% { opacity: 0; }
-      26.49% { opacity: 1; }
-      27.48% { opacity: 1; }
-      27.49% { opacity: 0; }
-      100% { opacity: 0; }
+      0%, 26.860902% { opacity: 0; }
+      26.860902%, 27.875940% { opacity: 1; }
+      27.875940% { opacity: 0; }
     }
     @keyframes frame-28-anim {
-      0% { opacity: 0; }
-      26.49% { opacity: 0; }
-      27.48% { opacity: 1; }
-      37.13% { opacity: 1; }
-      37.14% { opacity: 0; }
-      100% { opacity: 0; }
+      0%, 27.875940% { opacity: 0; }
+      27.875940%, 37.368421% { opacity: 1; }
+      37.368421% { opacity: 0; }
     }
     @keyframes frame-29-anim {
-      0% { opacity: 0; }
-      27.48% { opacity: 0; }
-      37.13% { opacity: 1; }
-      38.09% { opacity: 1; }
-      38.10% { opacity: 0; }
-      100% { opacity: 0; }
+      0%, 37.368421% { opacity: 0; }
+      37.368421%, 38.383459% { opacity: 1; }
+      38.383459% { opacity: 0; }
     }
     @keyframes frame-30-anim {
-      0% { opacity: 0; }
-      37.13% { opacity: 0; }
-      38.09% { opacity: 1; }
-      47.70% { opacity: 1; }
-      47.71% { opacity: 0; }
-      100% { opacity: 0; }
+      0%, 38.383459% { opacity: 0; }
+      38.383459%, 47.875940% { opacity: 1; }
+      47.875940% { opacity: 0; }
     }
     @keyframes frame-31-anim {
-      0% { opacity: 0; }
-      38.09% { opacity: 0; }
-      47.70% { opacity: 1; }
-      48.64% { opacity: 1; }
-      48.65% { opacity: 0; }
-      100% { opacity: 0; }
+      0%, 47.875940% { opacity: 0; }
+      47.875940%, 48.890977% { opacity: 1; }
+      48.890977% { opacity: 0; }
     }
     @keyframes frame-32-anim {
-      0% { opacity: 0; }
-      47.70% { opacity: 0; }
-      48.64% { opacity: 1; }
-      49.64% { opacity: 1; }
-      49.65% { opacity: 0; }
-      100% { opacity: 0; }
+      0%, 48.890977% { opacity: 0; }
+      48.890977%, 49.887218% { opacity: 1; }
+      49.887218% { opacity: 0; }
     }
     @keyframes frame-33-anim {
-      0% { opacity: 0; }
-      48.64% { opacity: 0; }
-      49.64% { opacity: 1; }
-      50.62% { opacity: 1; }
-      50.63% { opacity: 0; }
-      100% { opacity: 0; }
+      0%, 49.887218% { opacity: 0; }
+      49.887218%, 50.902256% { opacity: 1; }
+      50.902256% { opacity: 0; }
     }
     @keyframes frame-34-anim {
-      0% { opacity: 0; }
-      49.64% { opacity: 0; }
-      50.62% { opacity: 1; }
-      51.59% { opacity: 1; }
-      51.60% { opacity: 0; }
-      100% { opacity: 0; }
+      0%, 50.902256% { opacity: 0; }
+      50.902256%, 51.898496% { opacity: 1; }
+      51.898496% { opacity: 0; }
     }
     @keyframes frame-35-anim {
-      0% { opacity: 0; }
-      50.62% { opacity: 0; }
-      51.59% { opacity: 1; }
-      61.24% { opacity: 1; }
-      61.25% { opacity: 0; }
-      100% { opacity: 0; }
+      0%, 51.898496% { opacity: 0; }
+      51.898496%, 61.390977% { opacity: 1; }
+      61.390977% { opacity: 0; }
     }
     @keyframes frame-36-anim {
-      0% { opacity: 0; }
-      51.59% { opacity: 0; }
-      61.24% { opacity: 1; }
-      61.24% { opacity: 1; }
-      61.25% { opacity: 0; }
-      100% { opacity: 0; }
+      0%, 61.390977% { opacity: 0; }
+      61.390977%, 61.428571% { opacity: 1; }
+      61.428571% { opacity: 0; }
     }
     @keyframes frame-37-anim {
-      0% { opacity: 0; }
-      61.24% { opacity: 0; }
-      61.24% { opacity: 1; }
-      63.20% { opacity: 1; }
-      63.21% { opacity: 0; }
-      100% { opacity: 0; }
+      0%, 61.428571% { opacity: 0; }
+      61.428571%, 63.383459% { opacity: 1; }
+      63.383459% { opacity: 0; }
     }
     @keyframes frame-38-anim {
-      0% { opacity: 0; }
-      61.24% { opacity: 0; }
-      63.20% { opacity: 1; }
-      64.20% { opacity: 1; }
-      64.21% { opacity: 0; }
-      100% { opacity: 0; }
+      0%, 63.383459% { opacity: 0; }
+      63.383459%, 64.360902% { opacity: 1; }
+      64.360902% { opacity: 0; }
     }
     @keyframes frame-39-anim {
-      0% { opacity: 0; }
-      63.20% { opacity: 0; }
-      64.20% { opacity: 1; }
-      65.18% { opacity: 1; }
-      65.19% { opacity: 0; }
-      100% { opacity: 0; }
+      0%, 64.360902% { opacity: 0; }
+      64.360902%, 65.338346% { opacity: 1; }
+      65.338346% { opacity: 0; }
     }
     @keyframes frame-40-anim {
-      0% { opacity: 0; }
-      64.20% { opacity: 0; }
-      65.18% { opacity: 1; }
-      66.14% { opacity: 1; }
-      66.15% { opacity: 0; }
-      100% { opacity: 0; }
+      0%, 65.338346% { opacity: 0; }
+      65.338346%, 66.315789% { opacity: 1; }
+      66.315789% { opacity: 0; }
     }
     @keyframes frame-41-anim {
-      0% { opacity: 0; }
-      65.18% { opacity: 0; }
-      66.14% { opacity: 1; }
-      67.14% { opacity: 1; }
-      67.15% { opacity: 0; }
-      100% { opacity: 0; }
+      0%, 66.315789% { opacity: 0; }
+      66.315789%, 67.293233% { opacity: 1; }
+      67.293233% { opacity: 0; }
     }
     @keyframes frame-42-anim {
-      0% { opacity: 0; }
-      66.14% { opacity: 0; }
-      67.14% { opacity: 1; }
-      76.77% { opacity: 1; }
-      76.78% { opacity: 0; }
-      100% { opacity: 0; }
+      0%, 67.293233% { opacity: 0; }
+      67.293233%, 76.748120% { opacity: 1; }
+      76.748120% { opacity: 0; }
     }
     @keyframes frame-43-anim {
-      0% { opacity: 0; }
-      67.14% { opacity: 0; }
-      76.77% { opacity: 1; }
-      78.72% { opacity: 1; }
-      78.73% { opacity: 0; }
-      100% { opacity: 0; }
+      0%, 76.748120% { opacity: 0; }
+      76.748120%, 78.703008% { opacity: 1; }
+      78.703008% { opacity: 0; }
     }
     @keyframes frame-44-anim {
-      0% { opacity: 0; }
-      76.77% { opacity: 0; }
-      78.72% { opacity: 1; }
-      80.77% { opacity: 1; }
-      80.78% { opacity: 0; }
-      100% { opacity: 0; }
+      0%, 78.703008% { opacity: 0; }
+      78.703008%, 80.977444% { opacity: 1; }
+      80.977444% { opacity: 0; }
     }
     @keyframes frame-45-anim {
-      0% { opacity: 0; }
-      78.72% { opacity: 0; }
-      80.77% { opacity: 1; }
-      100.00% { opacity: 1; }
-      100.01% { opacity: 0; }
-      100% { opacity: 0; }
+      0%, 80.977444% { opacity: 0; }
+      80.977444%, 99.943609% { opacity: 1; }
+      99.943609% { opacity: 0; }
     }
     @keyframes frame-46-anim {
-      0% { opacity: 0; }
-      80.77% { opacity: 0; }
-      100.00% { opacity: 1; }
-      100.00% { opacity: 1; }
-      100.01% { opacity: 0; }
-      100% { opacity: 0; }
+      0%, 99.943609% { opacity: 0; }
+      99.943609%, 100.000000% { opacity: 1; }
+      100.000000% { opacity: 0; }
     }
     @keyframes frame-47-anim {
-      0% { opacity: 0; }
-      100.00% { opacity: 0; }
-      100.00% { opacity: 1; }
-      100.00% { opacity: 1; }
-      100.01% { opacity: 0; }
-      100% { opacity: 0; }
+      0%, 100.000000% { opacity: 0; }
+      100.000000% { opacity: 1; }
     }
 
     .frame {
-      animation-duration: 6.20s;
-      animation-timing-function: step-end;
+      animation-duration: 6.32s;
+      animation-timing-function: step-start;
       animation-iteration-count: infinite;
-      animation-fill-mode: forwards;
+      animation-fill-mode: both;
     }
 
     
@@ -541,1079 +455,649 @@
     
     <g id="frame-0">
       
-  <style>
-    .cursor {
-      animation: blink 1s step-end infinite;
-    }
-    .cursor-active {
-      /* No animation - solid cursor during typing/movement */
-    }
-    @keyframes blink {
-      0%, 50% { opacity: 1; }
-      50.01%, 100% { opacity: 0; }
-    }
-  </style>
-  <rect width="800" height="400" fill="#1e1e1e" rx="6" ry="6"/>
-  <g class="content f0">
-    <text x="16" y="32" fill="#e5e510" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="16" xml:space="preserve">&gt;</text>
-    <text x="25.6" y="32" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="16" xml:space="preserve"> </text>
-    <rect class="cursor f0" x="35.2" y="16" width="9.6" height="22.4" fill="#ffffff"/>
-  </g>
+
+<rect class="window-bg" x="0" y="0" width="800" height="400" fill="#282a36" rx="0" ry="0"/>
+<g class="text-layer">
+<text class="text f3" x="16" y="16">&gt;</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor" x="35.2" y="16" width="9.6" height="22.4" fill="#f8f8f2"/>
+</g>
 
     </g>
     <g id="frame-1">
       
-  <style>
-    .cursor {
-      animation: blink 1s step-end infinite;
-    }
-    .cursor-active {
-      /* No animation - solid cursor during typing/movement */
-    }
-    @keyframes blink {
-      0%, 50% { opacity: 1; }
-      50.01%, 100% { opacity: 0; }
-    }
-  </style>
-  <rect width="800" height="400" fill="#1e1e1e" rx="6" ry="6"/>
-  <g class="content f1">
-    <text x="16" y="32" fill="#e5e510" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="16" xml:space="preserve">&gt;</text>
-    <text x="25.6" y="32" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="16" xml:space="preserve"> s</text>
-    <rect class="cursor-active f1" x="44.8" y="16" width="9.6" height="22.4" fill="#ffffff"/>
-  </g>
+
+<rect class="window-bg" x="0" y="0" width="800" height="400" fill="#282a36" rx="0" ry="0"/>
+<g class="text-layer">
+<text class="text f3" x="16" y="16">&gt;</text>
+<text class="text fg" x="25.6" y="16"> s                                                                             </text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor" x="44.8" y="16" width="9.6" height="22.4" fill="#f8f8f2"/>
+</g>
 
     </g>
     <g id="frame-2">
       
-  <style>
-    .cursor {
-      animation: blink 1s step-end infinite;
-    }
-    .cursor-active {
-      /* No animation - solid cursor during typing/movement */
-    }
-    @keyframes blink {
-      0%, 50% { opacity: 1; }
-      50.01%, 100% { opacity: 0; }
-    }
-  </style>
-  <rect width="800" height="400" fill="#1e1e1e" rx="6" ry="6"/>
-  <g class="content f2">
-    <text x="16" y="32" fill="#e5e510" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="16" xml:space="preserve">&gt;</text>
-    <text x="25.6" y="32" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="16" xml:space="preserve"> se</text>
-    <rect class="cursor-active f2" x="54.4" y="16" width="9.6" height="22.4" fill="#ffffff"/>
-  </g>
+
+<rect class="window-bg" x="0" y="0" width="800" height="400" fill="#282a36" rx="0" ry="0"/>
+<g class="text-layer">
+<text class="text f3" x="16" y="16">&gt;</text>
+<text class="text fg" x="25.6" y="16"> se                                                                            </text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor" x="54.4" y="16" width="9.6" height="22.4" fill="#f8f8f2"/>
+</g>
 
     </g>
     <g id="frame-3">
       
-  <style>
-    .cursor {
-      animation: blink 1s step-end infinite;
-    }
-    .cursor-active {
-      /* No animation - solid cursor during typing/movement */
-    }
-    @keyframes blink {
-      0%, 50% { opacity: 1; }
-      50.01%, 100% { opacity: 0; }
-    }
-  </style>
-  <rect width="800" height="400" fill="#1e1e1e" rx="6" ry="6"/>
-  <g class="content f3">
-    <text x="16" y="32" fill="#e5e510" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="16" xml:space="preserve">&gt;</text>
-    <text x="25.6" y="32" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="16" xml:space="preserve"> sel</text>
-    <rect class="cursor-active f3" x="64" y="16" width="9.6" height="22.4" fill="#ffffff"/>
-  </g>
+
+<rect class="window-bg" x="0" y="0" width="800" height="400" fill="#282a36" rx="0" ry="0"/>
+<g class="text-layer">
+<text class="text f3" x="16" y="16">&gt;</text>
+<text class="text fg" x="25.6" y="16"> sel                                                                           </text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor" x="64" y="16" width="9.6" height="22.4" fill="#f8f8f2"/>
+</g>
 
     </g>
     <g id="frame-4">
       
-  <style>
-    .cursor {
-      animation: blink 1s step-end infinite;
-    }
-    .cursor-active {
-      /* No animation - solid cursor during typing/movement */
-    }
-    @keyframes blink {
-      0%, 50% { opacity: 1; }
-      50.01%, 100% { opacity: 0; }
-    }
-  </style>
-  <rect width="800" height="400" fill="#1e1e1e" rx="6" ry="6"/>
-  <g class="content f4">
-    <text x="16" y="32" fill="#e5e510" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="16" xml:space="preserve">&gt;</text>
-    <text x="25.6" y="32" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="16" xml:space="preserve"> sele</text>
-    <rect class="cursor-active f4" x="73.6" y="16" width="9.6" height="22.4" fill="#ffffff"/>
-  </g>
+
+<rect class="window-bg" x="0" y="0" width="800" height="400" fill="#282a36" rx="0" ry="0"/>
+<g class="text-layer">
+<text class="text f3" x="16" y="16">&gt;</text>
+<text class="text fg" x="25.6" y="16"> sele                                                                          </text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor" x="73.6" y="16" width="9.6" height="22.4" fill="#f8f8f2"/>
+</g>
 
     </g>
     <g id="frame-5">
       
-  <style>
-    .cursor {
-      animation: blink 1s step-end infinite;
-    }
-    .cursor-active {
-      /* No animation - solid cursor during typing/movement */
-    }
-    @keyframes blink {
-      0%, 50% { opacity: 1; }
-      50.01%, 100% { opacity: 0; }
-    }
-  </style>
-  <rect width="800" height="400" fill="#1e1e1e" rx="6" ry="6"/>
-  <g class="content f5">
-    <text x="16" y="32" fill="#e5e510" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="16" xml:space="preserve">&gt;</text>
-    <text x="25.6" y="32" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="16" xml:space="preserve"> selec</text>
-    <rect class="cursor-active f5" x="83.2" y="16" width="9.6" height="22.4" fill="#ffffff"/>
-  </g>
+
+<rect class="window-bg" x="0" y="0" width="800" height="400" fill="#282a36" rx="0" ry="0"/>
+<g class="text-layer">
+<text class="text f3" x="16" y="16">&gt;</text>
+<text class="text fg" x="25.6" y="16"> selec                                                                         </text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor" x="83.2" y="16" width="9.6" height="22.4" fill="#f8f8f2"/>
+</g>
 
     </g>
     <g id="frame-6">
       
-  <style>
-    .cursor {
-      animation: blink 1s step-end infinite;
-    }
-    .cursor-active {
-      /* No animation - solid cursor during typing/movement */
-    }
-    @keyframes blink {
-      0%, 50% { opacity: 1; }
-      50.01%, 100% { opacity: 0; }
-    }
-  </style>
-  <rect width="800" height="400" fill="#1e1e1e" rx="6" ry="6"/>
-  <g class="content f6">
-    <text x="16" y="32" fill="#e5e510" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="16" xml:space="preserve">&gt;</text>
-    <text x="25.6" y="32" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="16" xml:space="preserve"> select</text>
-    <rect class="cursor-active f6" x="92.8" y="16" width="9.6" height="22.4" fill="#ffffff"/>
-  </g>
+
+<rect class="window-bg" x="0" y="0" width="800" height="400" fill="#282a36" rx="0" ry="0"/>
+<g class="text-layer">
+<text class="text f3" x="16" y="16">&gt;</text>
+<text class="text fg" x="25.6" y="16"> select                                                                        </text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor" x="92.8" y="16" width="9.6" height="22.4" fill="#f8f8f2"/>
+</g>
 
     </g>
     <g id="frame-7">
       
-  <style>
-    .cursor {
-      animation: blink 1s step-end infinite;
-    }
-    .cursor-active {
-      /* No animation - solid cursor during typing/movement */
-    }
-    @keyframes blink {
-      0%, 50% { opacity: 1; }
-      50.01%, 100% { opacity: 0; }
-    }
-  </style>
-  <rect width="800" height="400" fill="#1e1e1e" rx="6" ry="6"/>
-  <g class="content f7">
-    <text x="16" y="32" fill="#e5e510" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="16" xml:space="preserve">&gt;</text>
-    <text x="25.6" y="32" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="16" xml:space="preserve"> select </text>
-    <rect class="cursor-active f7" x="102.39999999999999" y="16" width="9.6" height="22.4" fill="#ffffff"/>
-  </g>
+
+<rect class="window-bg" x="0" y="0" width="800" height="400" fill="#282a36" rx="0" ry="0"/>
+<g class="text-layer">
+<text class="text f3" x="16" y="16">&gt;</text>
+<text class="text fg" x="25.6" y="16"> select                                                                        </text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor" x="102.39999999999999" y="16" width="9.6" height="22.4" fill="#f8f8f2"/>
+</g>
 
     </g>
     <g id="frame-8">
       
-  <style>
-    .cursor {
-      animation: blink 1s step-end infinite;
-    }
-    .cursor-active {
-      /* No animation - solid cursor during typing/movement */
-    }
-    @keyframes blink {
-      0%, 50% { opacity: 1; }
-      50.01%, 100% { opacity: 0; }
-    }
-  </style>
-  <rect width="800" height="400" fill="#1e1e1e" rx="6" ry="6"/>
-  <g class="content f8">
-    <text x="16" y="32" fill="#e5e510" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="16" xml:space="preserve">&gt;</text>
-    <text x="25.6" y="32" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="16" xml:space="preserve"> select t</text>
-    <rect class="cursor-active f8" x="112" y="16" width="9.6" height="22.4" fill="#ffffff"/>
-  </g>
+
+<rect class="window-bg" x="0" y="0" width="800" height="400" fill="#282a36" rx="0" ry="0"/>
+<g class="text-layer">
+<text class="text f3" x="16" y="16">&gt;</text>
+<text class="text fg" x="25.6" y="16"> select t                                                                      </text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor" x="112" y="16" width="9.6" height="22.4" fill="#f8f8f2"/>
+</g>
 
     </g>
     <g id="frame-9">
       
-  <style>
-    .cursor {
-      animation: blink 1s step-end infinite;
-    }
-    .cursor-active {
-      /* No animation - solid cursor during typing/movement */
-    }
-    @keyframes blink {
-      0%, 50% { opacity: 1; }
-      50.01%, 100% { opacity: 0; }
-    }
-  </style>
-  <rect width="800" height="400" fill="#1e1e1e" rx="6" ry="6"/>
-  <g class="content f9">
-    <text x="16" y="32" fill="#e5e510" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="16" xml:space="preserve">&gt;</text>
-    <text x="25.6" y="32" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="16" xml:space="preserve"> select th</text>
-    <rect class="cursor-active f9" x="121.6" y="16" width="9.6" height="22.4" fill="#ffffff"/>
-  </g>
+
+<rect class="window-bg" x="0" y="0" width="800" height="400" fill="#282a36" rx="0" ry="0"/>
+<g class="text-layer">
+<text class="text f3" x="16" y="16">&gt;</text>
+<text class="text fg" x="25.6" y="16"> select th                                                                     </text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor" x="121.6" y="16" width="9.6" height="22.4" fill="#f8f8f2"/>
+</g>
 
     </g>
     <g id="frame-10">
       
-  <style>
-    .cursor {
-      animation: blink 1s step-end infinite;
-    }
-    .cursor-active {
-      /* No animation - solid cursor during typing/movement */
-    }
-    @keyframes blink {
-      0%, 50% { opacity: 1; }
-      50.01%, 100% { opacity: 0; }
-    }
-  </style>
-  <rect width="800" height="400" fill="#1e1e1e" rx="6" ry="6"/>
-  <g class="content f10">
-    <text x="16" y="32" fill="#e5e510" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="16" xml:space="preserve">&gt;</text>
-    <text x="25.6" y="32" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="16" xml:space="preserve"> select the</text>
-    <rect class="cursor-active f10" x="131.2" y="16" width="9.6" height="22.4" fill="#ffffff"/>
-  </g>
+
+<rect class="window-bg" x="0" y="0" width="800" height="400" fill="#282a36" rx="0" ry="0"/>
+<g class="text-layer">
+<text class="text f3" x="16" y="16">&gt;</text>
+<text class="text fg" x="25.6" y="16"> select the                                                                    </text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor" x="131.2" y="16" width="9.6" height="22.4" fill="#f8f8f2"/>
+</g>
 
     </g>
     <g id="frame-11">
       
-  <style>
-    .cursor {
-      animation: blink 1s step-end infinite;
-    }
-    .cursor-active {
-      /* No animation - solid cursor during typing/movement */
-    }
-    @keyframes blink {
-      0%, 50% { opacity: 1; }
-      50.01%, 100% { opacity: 0; }
-    }
-  </style>
-  <rect width="800" height="400" fill="#1e1e1e" rx="6" ry="6"/>
-  <g class="content f11">
-    <text x="16" y="32" fill="#e5e510" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="16" xml:space="preserve">&gt;</text>
-    <text x="25.6" y="32" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="16" xml:space="preserve"> select thes</text>
-    <rect class="cursor-active f11" x="140.8" y="16" width="9.6" height="22.4" fill="#ffffff"/>
-  </g>
+
+<rect class="window-bg" x="0" y="0" width="800" height="400" fill="#282a36" rx="0" ry="0"/>
+<g class="text-layer">
+<text class="text f3" x="16" y="16">&gt;</text>
+<text class="text fg" x="25.6" y="16"> select thes                                                                   </text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor" x="140.8" y="16" width="9.6" height="22.4" fill="#f8f8f2"/>
+</g>
 
     </g>
     <g id="frame-12">
       
-  <style>
-    .cursor {
-      animation: blink 1s step-end infinite;
-    }
-    .cursor-active {
-      /* No animation - solid cursor during typing/movement */
-    }
-    @keyframes blink {
-      0%, 50% { opacity: 1; }
-      50.01%, 100% { opacity: 0; }
-    }
-  </style>
-  <rect width="800" height="400" fill="#1e1e1e" rx="6" ry="6"/>
-  <g class="content f12">
-    <text x="16" y="32" fill="#e5e510" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="16" xml:space="preserve">&gt;</text>
-    <text x="25.6" y="32" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="16" xml:space="preserve"> select these</text>
-    <rect class="cursor-active f12" x="150.4" y="16" width="9.6" height="22.4" fill="#ffffff"/>
-  </g>
+
+<rect class="window-bg" x="0" y="0" width="800" height="400" fill="#282a36" rx="0" ry="0"/>
+<g class="text-layer">
+<text class="text f3" x="16" y="16">&gt;</text>
+<text class="text fg" x="25.6" y="16"> select these                                                                  </text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor" x="150.4" y="16" width="9.6" height="22.4" fill="#f8f8f2"/>
+</g>
 
     </g>
     <g id="frame-13">
       
-  <style>
-    .cursor {
-      animation: blink 1s step-end infinite;
-    }
-    .cursor-active {
-      /* No animation - solid cursor during typing/movement */
-    }
-    @keyframes blink {
-      0%, 50% { opacity: 1; }
-      50.01%, 100% { opacity: 0; }
-    }
-  </style>
-  <rect width="800" height="400" fill="#1e1e1e" rx="6" ry="6"/>
-  <g class="content f13">
-    <text x="16" y="32" fill="#e5e510" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="16" xml:space="preserve">&gt;</text>
-    <text x="25.6" y="32" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="16" xml:space="preserve"> select these </text>
-    <rect class="cursor-active f13" x="160" y="16" width="9.6" height="22.4" fill="#ffffff"/>
-  </g>
+
+<rect class="window-bg" x="0" y="0" width="800" height="400" fill="#282a36" rx="0" ry="0"/>
+<g class="text-layer">
+<text class="text f3" x="16" y="16">&gt;</text>
+<text class="text fg" x="25.6" y="16"> select these                                                                  </text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor" x="160" y="16" width="9.6" height="22.4" fill="#f8f8f2"/>
+</g>
 
     </g>
     <g id="frame-14">
       
-  <style>
-    .cursor {
-      animation: blink 1s step-end infinite;
-    }
-    .cursor-active {
-      /* No animation - solid cursor during typing/movement */
-    }
-    @keyframes blink {
-      0%, 50% { opacity: 1; }
-      50.01%, 100% { opacity: 0; }
-    }
-  </style>
-  <rect width="800" height="400" fill="#1e1e1e" rx="6" ry="6"/>
-  <g class="content f14">
-    <text x="16" y="32" fill="#e5e510" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="16" xml:space="preserve">&gt;</text>
-    <text x="25.6" y="32" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="16" xml:space="preserve"> select these w</text>
-    <rect class="cursor-active f14" x="169.6" y="16" width="9.6" height="22.4" fill="#ffffff"/>
-  </g>
+
+<rect class="window-bg" x="0" y="0" width="800" height="400" fill="#282a36" rx="0" ry="0"/>
+<g class="text-layer">
+<text class="text f3" x="16" y="16">&gt;</text>
+<text class="text fg" x="25.6" y="16"> select these w                                                                </text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor" x="169.6" y="16" width="9.6" height="22.4" fill="#f8f8f2"/>
+</g>
 
     </g>
     <g id="frame-15">
       
-  <style>
-    .cursor {
-      animation: blink 1s step-end infinite;
-    }
-    .cursor-active {
-      /* No animation - solid cursor during typing/movement */
-    }
-    @keyframes blink {
-      0%, 50% { opacity: 1; }
-      50.01%, 100% { opacity: 0; }
-    }
-  </style>
-  <rect width="800" height="400" fill="#1e1e1e" rx="6" ry="6"/>
-  <g class="content f15">
-    <text x="16" y="32" fill="#e5e510" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="16" xml:space="preserve">&gt;</text>
-    <text x="25.6" y="32" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="16" xml:space="preserve"> select these wo</text>
-    <rect class="cursor-active f15" x="179.2" y="16" width="9.6" height="22.4" fill="#ffffff"/>
-  </g>
+
+<rect class="window-bg" x="0" y="0" width="800" height="400" fill="#282a36" rx="0" ry="0"/>
+<g class="text-layer">
+<text class="text f3" x="16" y="16">&gt;</text>
+<text class="text fg" x="25.6" y="16"> select these wo                                                               </text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor" x="179.2" y="16" width="9.6" height="22.4" fill="#f8f8f2"/>
+</g>
 
     </g>
     <g id="frame-16">
       
-  <style>
-    .cursor {
-      animation: blink 1s step-end infinite;
-    }
-    .cursor-active {
-      /* No animation - solid cursor during typing/movement */
-    }
-    @keyframes blink {
-      0%, 50% { opacity: 1; }
-      50.01%, 100% { opacity: 0; }
-    }
-  </style>
-  <rect width="800" height="400" fill="#1e1e1e" rx="6" ry="6"/>
-  <g class="content f16">
-    <text x="16" y="32" fill="#e5e510" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="16" xml:space="preserve">&gt;</text>
-    <text x="25.6" y="32" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="16" xml:space="preserve"> select these wor</text>
-    <rect class="cursor-active f16" x="188.79999999999998" y="16" width="9.6" height="22.4" fill="#ffffff"/>
-  </g>
+
+<rect class="window-bg" x="0" y="0" width="800" height="400" fill="#282a36" rx="0" ry="0"/>
+<g class="text-layer">
+<text class="text f3" x="16" y="16">&gt;</text>
+<text class="text fg" x="25.6" y="16"> select these wor                                                              </text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor" x="188.79999999999998" y="16" width="9.6" height="22.4" fill="#f8f8f2"/>
+</g>
 
     </g>
     <g id="frame-17">
       
-  <style>
-    .cursor {
-      animation: blink 1s step-end infinite;
-    }
-    .cursor-active {
-      /* No animation - solid cursor during typing/movement */
-    }
-    @keyframes blink {
-      0%, 50% { opacity: 1; }
-      50.01%, 100% { opacity: 0; }
-    }
-  </style>
-  <rect width="800" height="400" fill="#1e1e1e" rx="6" ry="6"/>
-  <g class="content f17">
-    <text x="16" y="32" fill="#e5e510" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="16" xml:space="preserve">&gt;</text>
-    <text x="25.6" y="32" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="16" xml:space="preserve"> select these word</text>
-    <rect class="cursor-active f17" x="198.4" y="16" width="9.6" height="22.4" fill="#ffffff"/>
-  </g>
+
+<rect class="window-bg" x="0" y="0" width="800" height="400" fill="#282a36" rx="0" ry="0"/>
+<g class="text-layer">
+<text class="text f3" x="16" y="16">&gt;</text>
+<text class="text fg" x="25.6" y="16"> select these word                                                             </text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor" x="198.4" y="16" width="9.6" height="22.4" fill="#f8f8f2"/>
+</g>
 
     </g>
     <g id="frame-18">
       
-  <style>
-    .cursor {
-      animation: blink 1s step-end infinite;
-    }
-    .cursor-active {
-      /* No animation - solid cursor during typing/movement */
-    }
-    @keyframes blink {
-      0%, 50% { opacity: 1; }
-      50.01%, 100% { opacity: 0; }
-    }
-  </style>
-  <rect width="800" height="400" fill="#1e1e1e" rx="6" ry="6"/>
-  <g class="content f18">
-    <text x="16" y="32" fill="#e5e510" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="16" xml:space="preserve">&gt;</text>
-    <text x="25.6" y="32" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="16" xml:space="preserve"> select these words</text>
-    <rect class="cursor-active f18" x="208" y="16" width="9.6" height="22.4" fill="#ffffff"/>
-  </g>
+
+<rect class="window-bg" x="0" y="0" width="800" height="400" fill="#282a36" rx="0" ry="0"/>
+<g class="text-layer">
+<text class="text f3" x="16" y="16">&gt;</text>
+<text class="text fg" x="25.6" y="16"> select these words                                                            </text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor" x="208" y="16" width="9.6" height="22.4" fill="#f8f8f2"/>
+</g>
 
     </g>
     <g id="frame-19">
       
-  <style>
-    .cursor {
-      animation: blink 1s step-end infinite;
-    }
-    .cursor-active {
-      /* No animation - solid cursor during typing/movement */
-    }
-    @keyframes blink {
-      0%, 50% { opacity: 1; }
-      50.01%, 100% { opacity: 0; }
-    }
-  </style>
-  <rect width="800" height="400" fill="#1e1e1e" rx="6" ry="6"/>
-  <g class="content f19">
-    <text x="16" y="32" fill="#e5e510" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="16" xml:space="preserve">&gt;</text>
-    <text x="25.6" y="32" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="16" xml:space="preserve"> select these words </text>
-    <rect class="cursor-active f19" x="217.6" y="16" width="9.6" height="22.4" fill="#ffffff"/>
-  </g>
+
+<rect class="window-bg" x="0" y="0" width="800" height="400" fill="#282a36" rx="0" ry="0"/>
+<g class="text-layer">
+<text class="text f3" x="16" y="16">&gt;</text>
+<text class="text fg" x="25.6" y="16"> select these words                                                            </text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor" x="217.6" y="16" width="9.6" height="22.4" fill="#f8f8f2"/>
+</g>
 
     </g>
     <g id="frame-20">
       
-  <style>
-    .cursor {
-      animation: blink 1s step-end infinite;
-    }
-    .cursor-active {
-      /* No animation - solid cursor during typing/movement */
-    }
-    @keyframes blink {
-      0%, 50% { opacity: 1; }
-      50.01%, 100% { opacity: 0; }
-    }
-  </style>
-  <rect width="800" height="400" fill="#1e1e1e" rx="6" ry="6"/>
-  <g class="content f20">
-    <text x="16" y="32" fill="#e5e510" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="16" xml:space="preserve">&gt;</text>
-    <text x="25.6" y="32" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="16" xml:space="preserve"> select these words c</text>
-    <rect class="cursor-active f20" x="227.2" y="16" width="9.6" height="22.4" fill="#ffffff"/>
-  </g>
+
+<rect class="window-bg" x="0" y="0" width="800" height="400" fill="#282a36" rx="0" ry="0"/>
+<g class="text-layer">
+<text class="text f3" x="16" y="16">&gt;</text>
+<text class="text fg" x="25.6" y="16"> select these words c                                                          </text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor" x="227.2" y="16" width="9.6" height="22.4" fill="#f8f8f2"/>
+</g>
 
     </g>
     <g id="frame-21">
       
-  <style>
-    .cursor {
-      animation: blink 1s step-end infinite;
-    }
-    .cursor-active {
-      /* No animation - solid cursor during typing/movement */
-    }
-    @keyframes blink {
-      0%, 50% { opacity: 1; }
-      50.01%, 100% { opacity: 0; }
-    }
-  </style>
-  <rect width="800" height="400" fill="#1e1e1e" rx="6" ry="6"/>
-  <g class="content f21">
-    <text x="16" y="32" fill="#e5e510" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="16" xml:space="preserve">&gt;</text>
-    <text x="25.6" y="32" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="16" xml:space="preserve"> select these words ca</text>
-    <rect class="cursor-active f21" x="236.79999999999998" y="16" width="9.6" height="22.4" fill="#ffffff"/>
-  </g>
+
+<rect class="window-bg" x="0" y="0" width="800" height="400" fill="#282a36" rx="0" ry="0"/>
+<g class="text-layer">
+<text class="text f3" x="16" y="16">&gt;</text>
+<text class="text fg" x="25.6" y="16"> select these words ca                                                         </text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor" x="236.79999999999998" y="16" width="9.6" height="22.4" fill="#f8f8f2"/>
+</g>
 
     </g>
     <g id="frame-22">
       
-  <style>
-    .cursor {
-      animation: blink 1s step-end infinite;
-    }
-    .cursor-active {
-      /* No animation - solid cursor during typing/movement */
-    }
-    @keyframes blink {
-      0%, 50% { opacity: 1; }
-      50.01%, 100% { opacity: 0; }
-    }
-  </style>
-  <rect width="800" height="400" fill="#1e1e1e" rx="6" ry="6"/>
-  <g class="content f22">
-    <text x="16" y="32" fill="#e5e510" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="16" xml:space="preserve">&gt;</text>
-    <text x="25.6" y="32" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="16" xml:space="preserve"> select these words car</text>
-    <rect class="cursor-active f22" x="246.39999999999998" y="16" width="9.6" height="22.4" fill="#ffffff"/>
-  </g>
+
+<rect class="window-bg" x="0" y="0" width="800" height="400" fill="#282a36" rx="0" ry="0"/>
+<g class="text-layer">
+<text class="text f3" x="16" y="16">&gt;</text>
+<text class="text fg" x="25.6" y="16"> select these words car                                                        </text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor" x="246.39999999999998" y="16" width="9.6" height="22.4" fill="#f8f8f2"/>
+</g>
 
     </g>
     <g id="frame-23">
       
-  <style>
-    .cursor {
-      animation: blink 1s step-end infinite;
-    }
-    .cursor-active {
-      /* No animation - solid cursor during typing/movement */
-    }
-    @keyframes blink {
-      0%, 50% { opacity: 1; }
-      50.01%, 100% { opacity: 0; }
-    }
-  </style>
-  <rect width="800" height="400" fill="#1e1e1e" rx="6" ry="6"/>
-  <g class="content f23">
-    <text x="16" y="32" fill="#e5e510" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="16" xml:space="preserve">&gt;</text>
-    <text x="25.6" y="32" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="16" xml:space="preserve"> select these words care</text>
-    <rect class="cursor-active f23" x="256" y="16" width="9.6" height="22.4" fill="#ffffff"/>
-  </g>
+
+<rect class="window-bg" x="0" y="0" width="800" height="400" fill="#282a36" rx="0" ry="0"/>
+<g class="text-layer">
+<text class="text f3" x="16" y="16">&gt;</text>
+<text class="text fg" x="25.6" y="16"> select these words care                                                       </text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor" x="256" y="16" width="9.6" height="22.4" fill="#f8f8f2"/>
+</g>
 
     </g>
     <g id="frame-24">
       
-  <style>
-    .cursor {
-      animation: blink 1s step-end infinite;
-    }
-    .cursor-active {
-      /* No animation - solid cursor during typing/movement */
-    }
-    @keyframes blink {
-      0%, 50% { opacity: 1; }
-      50.01%, 100% { opacity: 0; }
-    }
-  </style>
-  <rect width="800" height="400" fill="#1e1e1e" rx="6" ry="6"/>
-  <g class="content f24">
-    <text x="16" y="32" fill="#e5e510" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="16" xml:space="preserve">&gt;</text>
-    <text x="25.6" y="32" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="16" xml:space="preserve"> select these words caref</text>
-    <rect class="cursor-active f24" x="265.6" y="16" width="9.6" height="22.4" fill="#ffffff"/>
-  </g>
+
+<rect class="window-bg" x="0" y="0" width="800" height="400" fill="#282a36" rx="0" ry="0"/>
+<g class="text-layer">
+<text class="text f3" x="16" y="16">&gt;</text>
+<text class="text fg" x="25.6" y="16"> select these words caref                                                      </text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor" x="265.6" y="16" width="9.6" height="22.4" fill="#f8f8f2"/>
+</g>
 
     </g>
     <g id="frame-25">
       
-  <style>
-    .cursor {
-      animation: blink 1s step-end infinite;
-    }
-    .cursor-active {
-      /* No animation - solid cursor during typing/movement */
-    }
-    @keyframes blink {
-      0%, 50% { opacity: 1; }
-      50.01%, 100% { opacity: 0; }
-    }
-  </style>
-  <rect width="800" height="400" fill="#1e1e1e" rx="6" ry="6"/>
-  <g class="content f25">
-    <text x="16" y="32" fill="#e5e510" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="16" xml:space="preserve">&gt;</text>
-    <text x="25.6" y="32" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="16" xml:space="preserve"> select these words carefu</text>
-    <rect class="cursor-active f25" x="275.2" y="16" width="9.6" height="22.4" fill="#ffffff"/>
-  </g>
+
+<rect class="window-bg" x="0" y="0" width="800" height="400" fill="#282a36" rx="0" ry="0"/>
+<g class="text-layer">
+<text class="text f3" x="16" y="16">&gt;</text>
+<text class="text fg" x="25.6" y="16"> select these words carefu                                                     </text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor" x="275.2" y="16" width="9.6" height="22.4" fill="#f8f8f2"/>
+</g>
 
     </g>
     <g id="frame-26">
       
-  <style>
-    .cursor {
-      animation: blink 1s step-end infinite;
-    }
-    .cursor-active {
-      /* No animation - solid cursor during typing/movement */
-    }
-    @keyframes blink {
-      0%, 50% { opacity: 1; }
-      50.01%, 100% { opacity: 0; }
-    }
-  </style>
-  <rect width="800" height="400" fill="#1e1e1e" rx="6" ry="6"/>
-  <g class="content f26">
-    <text x="16" y="32" fill="#e5e510" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="16" xml:space="preserve">&gt;</text>
-    <text x="25.6" y="32" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="16" xml:space="preserve"> select these words careful</text>
-    <rect class="cursor-active f26" x="284.8" y="16" width="9.6" height="22.4" fill="#ffffff"/>
-  </g>
+
+<rect class="window-bg" x="0" y="0" width="800" height="400" fill="#282a36" rx="0" ry="0"/>
+<g class="text-layer">
+<text class="text f3" x="16" y="16">&gt;</text>
+<text class="text fg" x="25.6" y="16"> select these words careful                                                    </text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor" x="284.8" y="16" width="9.6" height="22.4" fill="#f8f8f2"/>
+</g>
 
     </g>
     <g id="frame-27">
       
-  <style>
-    .cursor {
-      animation: blink 1s step-end infinite;
-    }
-    .cursor-active {
-      /* No animation - solid cursor during typing/movement */
-    }
-    @keyframes blink {
-      0%, 50% { opacity: 1; }
-      50.01%, 100% { opacity: 0; }
-    }
-  </style>
-  <rect width="800" height="400" fill="#1e1e1e" rx="6" ry="6"/>
-  <g class="content f27">
-    <text x="16" y="32" fill="#e5e510" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="16" xml:space="preserve">&gt;</text>
-    <text x="25.6" y="32" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="16" xml:space="preserve"> select these words carefull</text>
-    <rect class="cursor-active f27" x="294.4" y="16" width="9.6" height="22.4" fill="#ffffff"/>
-  </g>
+
+<rect class="window-bg" x="0" y="0" width="800" height="400" fill="#282a36" rx="0" ry="0"/>
+<g class="text-layer">
+<text class="text f3" x="16" y="16">&gt;</text>
+<text class="text fg" x="25.6" y="16"> select these words carefull                                                   </text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor" x="294.4" y="16" width="9.6" height="22.4" fill="#f8f8f2"/>
+</g>
 
     </g>
     <g id="frame-28">
       
-  <style>
-    .cursor {
-      animation: blink 1s step-end infinite;
-    }
-    .cursor-active {
-      /* No animation - solid cursor during typing/movement */
-    }
-    @keyframes blink {
-      0%, 50% { opacity: 1; }
-      50.01%, 100% { opacity: 0; }
-    }
-  </style>
-  <rect width="800" height="400" fill="#1e1e1e" rx="6" ry="6"/>
-  <g class="content f28">
-    <text x="16" y="32" fill="#e5e510" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="16" xml:space="preserve">&gt;</text>
-    <text x="25.6" y="32" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="16" xml:space="preserve"> select these words carefully</text>
-    <rect class="cursor-active f28" x="304" y="16" width="9.6" height="22.4" fill="#ffffff"/>
-  </g>
+
+<rect class="window-bg" x="0" y="0" width="800" height="400" fill="#282a36" rx="0" ry="0"/>
+<g class="text-layer">
+<text class="text f3" x="16" y="16">&gt;</text>
+<text class="text fg" x="25.6" y="16"> select these words carefully                                                  </text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor" x="304" y="16" width="9.6" height="22.4" fill="#f8f8f2"/>
+</g>
 
     </g>
     <g id="frame-29">
       
-  <style>
-    .cursor {
-      animation: blink 1s step-end infinite;
-    }
-    .cursor-active {
-      /* No animation - solid cursor during typing/movement */
-    }
-    @keyframes blink {
-      0%, 50% { opacity: 1; }
-      50.01%, 100% { opacity: 0; }
-    }
-  </style>
-  <rect width="800" height="400" fill="#1e1e1e" rx="6" ry="6"/>
-  <g class="content f29">
-    <text x="16" y="32" fill="#e5e510" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="16" xml:space="preserve">&gt;</text>
-    <text x="25.6" y="32" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="16" xml:space="preserve"> select these words carefully</text>
-    <rect class="cursor f29" x="304" y="16" width="9.6" height="22.4" fill="#ffffff"/>
-  </g>
+
+<rect class="window-bg" x="0" y="0" width="800" height="400" fill="#282a36" rx="0" ry="0"/>
+<g class="text-layer">
+<text class="text f3" x="16" y="16">&gt;</text>
+<text class="text fg" x="25.6" y="16"> select these words carefully                                                  </text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor" x="304" y="16" width="9.6" height="22.4" fill="#f8f8f2"/>
+</g>
 
     </g>
     <g id="frame-30">
       
-  <style>
-    .cursor {
-      animation: blink 1s step-end infinite;
-    }
-    .cursor-active {
-      /* No animation - solid cursor during typing/movement */
-    }
-    @keyframes blink {
-      0%, 50% { opacity: 1; }
-      50.01%, 100% { opacity: 0; }
-    }
-  </style>
-  <rect width="800" height="400" fill="#1e1e1e" rx="6" ry="6"/>
-  <g class="content f30">
-    <text x="16" y="32" fill="#e5e510" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="16" xml:space="preserve">&gt;</text>
-    <text x="25.6" y="32" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="16" xml:space="preserve"> select these words carefully</text>
-    <rect class="selection f30" x="217.6" y="16" width="86.39999999999999" height="22.4" fill="#264f78" opacity="0.3"/>
-    <rect class="cursor-active f30" x="217.6" y="16" width="9.6" height="22.4" fill="#ffffff"/>
-    <text class="cursor-active f30" x="217.6" y="32" fill="#1e1e1e" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="16" xml:space="preserve">c</text>
-  </g>
+
+<rect class="window-bg" x="0" y="0" width="800" height="400" fill="#282a36" rx="0" ry="0"/>
+<g class="text-layer">
+<text class="text f3" x="16" y="16">&gt;</text>
+<text class="text fg" x="25.6" y="16"> select these words carefully                                                  </text>
+</g>
+<g class="selection-layer">
+<rect x="217.6" y="16" width="86.39999999999999" height="22.4" fill="#44475a" opacity="0.5"/>
+</g>
+<g class="cursor-layer">
+<rect class="cursor" x="217.6" y="16" width="9.6" height="22.4" fill="#f8f8f2"/>
+</g>
 
     </g>
     <g id="frame-31">
       
-  <style>
-    .cursor {
-      animation: blink 1s step-end infinite;
-    }
-    .cursor-active {
-      /* No animation - solid cursor during typing/movement */
-    }
-    @keyframes blink {
-      0%, 50% { opacity: 1; }
-      50.01%, 100% { opacity: 0; }
-    }
-  </style>
-  <rect width="800" height="400" fill="#1e1e1e" rx="6" ry="6"/>
-  <g class="content f31">
-    <text x="16" y="32" fill="#e5e510" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="16" xml:space="preserve">&gt;</text>
-    <text x="25.6" y="32" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="16" xml:space="preserve"> select these words carefully</text>
-    <rect class="selection f31" x="217.6" y="16" width="86.39999999999999" height="22.4" fill="#264f78" opacity="0.3"/>
-    <rect class="cursor f31" x="217.6" y="16" width="9.6" height="22.4" fill="#ffffff"/>
-    <text class="cursor f31" x="217.6" y="32" fill="#1e1e1e" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="16" xml:space="preserve">c</text>
-  </g>
+
+<rect class="window-bg" x="0" y="0" width="800" height="400" fill="#282a36" rx="0" ry="0"/>
+<g class="text-layer">
+<text class="text f3" x="16" y="16">&gt;</text>
+<text class="text fg" x="25.6" y="16"> select these words carefully                                                  </text>
+</g>
+<g class="selection-layer">
+<rect x="217.6" y="16" width="86.39999999999999" height="22.4" fill="#44475a" opacity="0.5"/>
+</g>
+<g class="cursor-layer">
+<rect class="cursor" x="217.6" y="16" width="9.6" height="22.4" fill="#f8f8f2"/>
+</g>
 
     </g>
     <g id="frame-32">
       
-  <style>
-    .cursor {
-      animation: blink 1s step-end infinite;
-    }
-    .cursor-active {
-      /* No animation - solid cursor during typing/movement */
-    }
-    @keyframes blink {
-      0%, 50% { opacity: 1; }
-      50.01%, 100% { opacity: 0; }
-    }
-  </style>
-  <rect width="800" height="400" fill="#1e1e1e" rx="6" ry="6"/>
-  <g class="content f32">
-    <text x="16" y="32" fill="#e5e510" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="16" xml:space="preserve">&gt;</text>
-    <text x="25.6" y="32" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="16" xml:space="preserve"> select these words carefully</text>
-    <rect class="selection f32" x="160" y="16" width="144" height="22.4" fill="#264f78" opacity="0.3"/>
-    <rect class="cursor-active f32" x="160" y="16" width="9.6" height="22.4" fill="#ffffff"/>
-    <text class="cursor-active f32" x="160" y="32" fill="#1e1e1e" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="16" xml:space="preserve">w</text>
-  </g>
+
+<rect class="window-bg" x="0" y="0" width="800" height="400" fill="#282a36" rx="0" ry="0"/>
+<g class="text-layer">
+<text class="text f3" x="16" y="16">&gt;</text>
+<text class="text fg" x="25.6" y="16"> select these words carefully                                                  </text>
+</g>
+<g class="selection-layer">
+<rect x="160" y="16" width="144" height="22.4" fill="#44475a" opacity="0.5"/>
+</g>
+<g class="cursor-layer">
+<rect class="cursor" x="160" y="16" width="9.6" height="22.4" fill="#f8f8f2"/>
+</g>
 
     </g>
     <g id="frame-33">
       
-  <style>
-    .cursor {
-      animation: blink 1s step-end infinite;
-    }
-    .cursor-active {
-      /* No animation - solid cursor during typing/movement */
-    }
-    @keyframes blink {
-      0%, 50% { opacity: 1; }
-      50.01%, 100% { opacity: 0; }
-    }
-  </style>
-  <rect width="800" height="400" fill="#1e1e1e" rx="6" ry="6"/>
-  <g class="content f33">
-    <text x="16" y="32" fill="#e5e510" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="16" xml:space="preserve">&gt;</text>
-    <text x="25.6" y="32" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="16" xml:space="preserve"> select these words carefully</text>
-    <rect class="selection f33" x="150.4" y="16" width="153.6" height="22.4" fill="#264f78" opacity="0.3"/>
-    <rect class="cursor-active f33" x="150.4" y="16" width="9.6" height="22.4" fill="#ffffff"/>
-    <text class="cursor-active f33" x="150.4" y="32" fill="#1e1e1e" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="16" xml:space="preserve"> </text>
-  </g>
+
+<rect class="window-bg" x="0" y="0" width="800" height="400" fill="#282a36" rx="0" ry="0"/>
+<g class="text-layer">
+<text class="text f3" x="16" y="16">&gt;</text>
+<text class="text fg" x="25.6" y="16"> select these words carefully                                                  </text>
+</g>
+<g class="selection-layer">
+<rect x="150.4" y="16" width="153.6" height="22.4" fill="#44475a" opacity="0.5"/>
+</g>
+<g class="cursor-layer">
+<rect class="cursor" x="150.4" y="16" width="9.6" height="22.4" fill="#f8f8f2"/>
+</g>
 
     </g>
     <g id="frame-34">
       
-  <style>
-    .cursor {
-      animation: blink 1s step-end infinite;
-    }
-    .cursor-active {
-      /* No animation - solid cursor during typing/movement */
-    }
-    @keyframes blink {
-      0%, 50% { opacity: 1; }
-      50.01%, 100% { opacity: 0; }
-    }
-  </style>
-  <rect width="800" height="400" fill="#1e1e1e" rx="6" ry="6"/>
-  <g class="content f34">
-    <text x="16" y="32" fill="#e5e510" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="16" xml:space="preserve">&gt;</text>
-    <text x="25.6" y="32" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="16" xml:space="preserve"> select these words carefully</text>
-    <rect class="selection f34" x="140.8" y="16" width="163.2" height="22.4" fill="#264f78" opacity="0.3"/>
-    <rect class="cursor-active f34" x="140.8" y="16" width="9.6" height="22.4" fill="#ffffff"/>
-    <text class="cursor-active f34" x="140.8" y="32" fill="#1e1e1e" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="16" xml:space="preserve">e</text>
-  </g>
+
+<rect class="window-bg" x="0" y="0" width="800" height="400" fill="#282a36" rx="0" ry="0"/>
+<g class="text-layer">
+<text class="text f3" x="16" y="16">&gt;</text>
+<text class="text fg" x="25.6" y="16"> select these words carefully                                                  </text>
+</g>
+<g class="selection-layer">
+<rect x="140.8" y="16" width="163.2" height="22.4" fill="#44475a" opacity="0.5"/>
+</g>
+<g class="cursor-layer">
+<rect class="cursor" x="140.8" y="16" width="9.6" height="22.4" fill="#f8f8f2"/>
+</g>
 
     </g>
     <g id="frame-35">
       
-  <style>
-    .cursor {
-      animation: blink 1s step-end infinite;
-    }
-    .cursor-active {
-      /* No animation - solid cursor during typing/movement */
-    }
-    @keyframes blink {
-      0%, 50% { opacity: 1; }
-      50.01%, 100% { opacity: 0; }
-    }
-  </style>
-  <rect width="800" height="400" fill="#1e1e1e" rx="6" ry="6"/>
-  <g class="content f35">
-    <text x="16" y="32" fill="#e5e510" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="16" xml:space="preserve">&gt;</text>
-    <text x="25.6" y="32" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="16" xml:space="preserve"> select these words carefully</text>
-    <rect class="selection f35" x="131.2" y="16" width="172.79999999999998" height="22.4" fill="#264f78" opacity="0.3"/>
-    <rect class="cursor-active f35" x="131.2" y="16" width="9.6" height="22.4" fill="#ffffff"/>
-    <text class="cursor-active f35" x="131.2" y="32" fill="#1e1e1e" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="16" xml:space="preserve">s</text>
-  </g>
+
+<rect class="window-bg" x="0" y="0" width="800" height="400" fill="#282a36" rx="0" ry="0"/>
+<g class="text-layer">
+<text class="text f3" x="16" y="16">&gt;</text>
+<text class="text fg" x="25.6" y="16"> select these words carefully                                                  </text>
+</g>
+<g class="selection-layer">
+<rect x="131.2" y="16" width="172.79999999999998" height="22.4" fill="#44475a" opacity="0.5"/>
+</g>
+<g class="cursor-layer">
+<rect class="cursor" x="131.2" y="16" width="9.6" height="22.4" fill="#f8f8f2"/>
+</g>
 
     </g>
     <g id="frame-36">
       
-  <style>
-    .cursor {
-      animation: blink 1s step-end infinite;
-    }
-    .cursor-active {
-      /* No animation - solid cursor during typing/movement */
-    }
-    @keyframes blink {
-      0%, 50% { opacity: 1; }
-      50.01%, 100% { opacity: 0; }
-    }
-  </style>
-  <rect width="800" height="400" fill="#1e1e1e" rx="6" ry="6"/>
-  <g class="content f36">
-    <text x="16" y="32" fill="#e5e510" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="16" xml:space="preserve">&gt;</text>
-    <text x="25.6" y="32" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="16" xml:space="preserve"> select these words carefully</text>
-    <rect class="selection f36" x="131.2" y="16" width="172.79999999999998" height="22.4" fill="#264f78" opacity="0.3"/>
-    <rect class="cursor f36" x="131.2" y="16" width="9.6" height="22.4" fill="#ffffff"/>
-    <text class="cursor f36" x="131.2" y="32" fill="#1e1e1e" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="16" xml:space="preserve">s</text>
-  </g>
+
+<rect class="window-bg" x="0" y="0" width="800" height="400" fill="#282a36" rx="0" ry="0"/>
+<g class="text-layer">
+<text class="text f3" x="16" y="16">&gt;</text>
+<text class="text fg" x="25.6" y="16"> select these words carefully                                                  </text>
+</g>
+<g class="selection-layer">
+<rect x="131.2" y="16" width="172.79999999999998" height="22.4" fill="#44475a" opacity="0.5"/>
+</g>
+<g class="cursor-layer">
+<rect class="cursor" x="131.2" y="16" width="9.6" height="22.4" fill="#f8f8f2"/>
+</g>
 
     </g>
     <g id="frame-37">
       
-  <style>
-    .cursor {
-      animation: blink 1s step-end infinite;
-    }
-    .cursor-active {
-      /* No animation - solid cursor during typing/movement */
-    }
-    @keyframes blink {
-      0%, 50% { opacity: 1; }
-      50.01%, 100% { opacity: 0; }
-    }
-  </style>
-  <rect width="800" height="400" fill="#1e1e1e" rx="6" ry="6"/>
-  <g class="content f37">
-    <text x="16" y="32" fill="#e5e510" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="16" xml:space="preserve">&gt;</text>
-    <text x="25.6" y="32" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="16" xml:space="preserve"> select the</text>
-    <rect class="cursor-active f37" x="131.2" y="16" width="9.6" height="22.4" fill="#ffffff"/>
-  </g>
+
+<rect class="window-bg" x="0" y="0" width="800" height="400" fill="#282a36" rx="0" ry="0"/>
+<g class="text-layer">
+<text class="text f3" x="16" y="16">&gt;</text>
+<text class="text fg" x="25.6" y="16"> select the                                                                    </text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor" x="131.2" y="16" width="9.6" height="22.4" fill="#f8f8f2"/>
+</g>
 
     </g>
     <g id="frame-38">
       
-  <style>
-    .cursor {
-      animation: blink 1s step-end infinite;
-    }
-    .cursor-active {
-      /* No animation - solid cursor during typing/movement */
-    }
-    @keyframes blink {
-      0%, 50% { opacity: 1; }
-      50.01%, 100% { opacity: 0; }
-    }
-  </style>
-  <rect width="800" height="400" fill="#1e1e1e" rx="6" ry="6"/>
-  <g class="content f38">
-    <text x="16" y="32" fill="#e5e510" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="16" xml:space="preserve">&gt;</text>
-    <text x="25.6" y="32" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="16" xml:space="preserve"> select thei</text>
-    <rect class="cursor-active f38" x="140.8" y="16" width="9.6" height="22.4" fill="#ffffff"/>
-  </g>
+
+<rect class="window-bg" x="0" y="0" width="800" height="400" fill="#282a36" rx="0" ry="0"/>
+<g class="text-layer">
+<text class="text f3" x="16" y="16">&gt;</text>
+<text class="text fg" x="25.6" y="16"> select thei                                                                   </text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor" x="140.8" y="16" width="9.6" height="22.4" fill="#f8f8f2"/>
+</g>
 
     </g>
     <g id="frame-39">
       
-  <style>
-    .cursor {
-      animation: blink 1s step-end infinite;
-    }
-    .cursor-active {
-      /* No animation - solid cursor during typing/movement */
-    }
-    @keyframes blink {
-      0%, 50% { opacity: 1; }
-      50.01%, 100% { opacity: 0; }
-    }
-  </style>
-  <rect width="800" height="400" fill="#1e1e1e" rx="6" ry="6"/>
-  <g class="content f39">
-    <text x="16" y="32" fill="#e5e510" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="16" xml:space="preserve">&gt;</text>
-    <text x="25.6" y="32" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="16" xml:space="preserve"> select theit</text>
-    <rect class="cursor-active f39" x="150.4" y="16" width="9.6" height="22.4" fill="#ffffff"/>
-  </g>
+
+<rect class="window-bg" x="0" y="0" width="800" height="400" fill="#282a36" rx="0" ry="0"/>
+<g class="text-layer">
+<text class="text f3" x="16" y="16">&gt;</text>
+<text class="text fg" x="25.6" y="16"> select theit                                                                  </text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor" x="150.4" y="16" width="9.6" height="22.4" fill="#f8f8f2"/>
+</g>
 
     </g>
     <g id="frame-40">
       
-  <style>
-    .cursor {
-      animation: blink 1s step-end infinite;
-    }
-    .cursor-active {
-      /* No animation - solid cursor during typing/movement */
-    }
-    @keyframes blink {
-      0%, 50% { opacity: 1; }
-      50.01%, 100% { opacity: 0; }
-    }
-  </style>
-  <rect width="800" height="400" fill="#1e1e1e" rx="6" ry="6"/>
-  <g class="content f40">
-    <text x="16" y="32" fill="#e5e510" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="16" xml:space="preserve">&gt;</text>
-    <text x="25.6" y="32" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="16" xml:space="preserve"> select theite</text>
-    <rect class="cursor-active f40" x="160" y="16" width="9.6" height="22.4" fill="#ffffff"/>
-  </g>
+
+<rect class="window-bg" x="0" y="0" width="800" height="400" fill="#282a36" rx="0" ry="0"/>
+<g class="text-layer">
+<text class="text f3" x="16" y="16">&gt;</text>
+<text class="text fg" x="25.6" y="16"> select theite                                                                 </text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor" x="160" y="16" width="9.6" height="22.4" fill="#f8f8f2"/>
+</g>
 
     </g>
     <g id="frame-41">
       
-  <style>
-    .cursor {
-      animation: blink 1s step-end infinite;
-    }
-    .cursor-active {
-      /* No animation - solid cursor during typing/movement */
-    }
-    @keyframes blink {
-      0%, 50% { opacity: 1; }
-      50.01%, 100% { opacity: 0; }
-    }
-  </style>
-  <rect width="800" height="400" fill="#1e1e1e" rx="6" ry="6"/>
-  <g class="content f41">
-    <text x="16" y="32" fill="#e5e510" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="16" xml:space="preserve">&gt;</text>
-    <text x="25.6" y="32" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="16" xml:space="preserve"> select theitem</text>
-    <rect class="cursor-active f41" x="169.6" y="16" width="9.6" height="22.4" fill="#ffffff"/>
-  </g>
+
+<rect class="window-bg" x="0" y="0" width="800" height="400" fill="#282a36" rx="0" ry="0"/>
+<g class="text-layer">
+<text class="text f3" x="16" y="16">&gt;</text>
+<text class="text fg" x="25.6" y="16"> select theitem                                                                </text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor" x="169.6" y="16" width="9.6" height="22.4" fill="#f8f8f2"/>
+</g>
 
     </g>
     <g id="frame-42">
       
-  <style>
-    .cursor {
-      animation: blink 1s step-end infinite;
-    }
-    .cursor-active {
-      /* No animation - solid cursor during typing/movement */
-    }
-    @keyframes blink {
-      0%, 50% { opacity: 1; }
-      50.01%, 100% { opacity: 0; }
-    }
-  </style>
-  <rect width="800" height="400" fill="#1e1e1e" rx="6" ry="6"/>
-  <g class="content f42">
-    <text x="16" y="32" fill="#e5e510" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="16" xml:space="preserve">&gt;</text>
-    <text x="25.6" y="32" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="16" xml:space="preserve"> select theitems</text>
-    <rect class="cursor-active f42" x="179.2" y="16" width="9.6" height="22.4" fill="#ffffff"/>
-  </g>
+
+<rect class="window-bg" x="0" y="0" width="800" height="400" fill="#282a36" rx="0" ry="0"/>
+<g class="text-layer">
+<text class="text f3" x="16" y="16">&gt;</text>
+<text class="text fg" x="25.6" y="16"> select theitems                                                               </text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor" x="179.2" y="16" width="9.6" height="22.4" fill="#f8f8f2"/>
+</g>
 
     </g>
     <g id="frame-43">
       
-  <style>
-    .cursor {
-      animation: blink 1s step-end infinite;
-    }
-    .cursor-active {
-      /* No animation - solid cursor during typing/movement */
-    }
-    @keyframes blink {
-      0%, 50% { opacity: 1; }
-      50.01%, 100% { opacity: 0; }
-    }
-  </style>
-  <rect width="800" height="400" fill="#1e1e1e" rx="6" ry="6"/>
-  <g class="content f43">
-    <text x="16" y="32" fill="#e5e510" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="16" xml:space="preserve">&gt;</text>
-    <text x="25.6" y="32" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="16" xml:space="preserve"> select theitems</text>
-    <rect class="cursor f43" x="179.2" y="16" width="9.6" height="22.4" fill="#ffffff"/>
-  </g>
+
+<rect class="window-bg" x="0" y="0" width="800" height="400" fill="#282a36" rx="0" ry="0"/>
+<g class="text-layer">
+<text class="text f3" x="16" y="16">&gt;</text>
+<text class="text fg" x="25.6" y="16"> select theitems                                                               </text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor" x="179.2" y="16" width="9.6" height="22.4" fill="#f8f8f2"/>
+</g>
 
     </g>
     <g id="frame-44">
       
-  <style>
-    .cursor {
-      animation: blink 1s step-end infinite;
-    }
-    .cursor-active {
-      /* No animation - solid cursor during typing/movement */
-    }
-    @keyframes blink {
-      0%, 50% { opacity: 1; }
-      50.01%, 100% { opacity: 0; }
-    }
-  </style>
-  <rect width="800" height="400" fill="#1e1e1e" rx="6" ry="6"/>
-  <g class="content f44">
-    <text x="16" y="32" fill="#e5e510" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="16" xml:space="preserve">&gt;</text>
-    <text x="25.6" y="32" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="16" xml:space="preserve"> select theitems</text>
-  </g>
+
+<rect class="window-bg" x="0" y="0" width="800" height="400" fill="#282a36" rx="0" ry="0"/>
+<g class="text-layer">
+<text class="text f3" x="16" y="16">&gt;</text>
+<text class="text fg" x="25.6" y="16"> select theitems                                                               </text>
+</g>
 
     </g>
     <g id="frame-45">
       
-  <style>
-    .cursor {
-      animation: blink 1s step-end infinite;
-    }
-    .cursor-active {
-      /* No animation - solid cursor during typing/movement */
-    }
-    @keyframes blink {
-      0%, 50% { opacity: 1; }
-      50.01%, 100% { opacity: 0; }
-    }
-  </style>
-  <rect width="800" height="400" fill="#1e1e1e" rx="6" ry="6"/>
-  <g class="content f45">
-    <text x="16" y="32" fill="#e5e510" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="16" xml:space="preserve">&gt;</text>
-    <text x="25.6" y="32" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="16" xml:space="preserve"> select theitems</text>
-    <text x="16" y="54.4" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="16" xml:space="preserve">/bin/sh: -c: line 1: syntax error: unexpected end of file</text>
-    <text x="16" y="76.8" fill="#e5e510" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="16" xml:space="preserve">&gt;</text>
-    <text x="25.6" y="76.8" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="16" xml:space="preserve"> </text>
-    <rect class="cursor f45" x="35.2" y="60.8" width="9.6" height="22.4" fill="#ffffff"/>
-  </g>
+
+<rect class="window-bg" x="0" y="0" width="800" height="400" fill="#282a36" rx="0" ry="0"/>
+<g class="text-layer">
+<text class="text f3" x="16" y="16">&gt;</text>
+<text class="text fg" x="25.6" y="16"> select theitems                                                               </text>
+<text class="text fg" x="16" y="38.4">/bin/sh: -c: line 1: syntax error: unexpected end of file                       </text>
+<text class="text f3" x="16" y="83.19999999999999">&gt;</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor" x="35.2" y="83.19999999999999" width="9.6" height="22.4" fill="#f8f8f2"/>
+</g>
 
     </g>
     <g id="frame-46">
       
-  <style>
-    .cursor {
-      animation: blink 1s step-end infinite;
-    }
-    .cursor-active {
-      /* No animation - solid cursor during typing/movement */
-    }
-    @keyframes blink {
-      0%, 50% { opacity: 1; }
-      50.01%, 100% { opacity: 0; }
-    }
-  </style>
-  <rect width="800" height="400" fill="#1e1e1e" rx="6" ry="6"/>
-  <g class="content f46">
-    <text x="16" y="32" fill="#e5e510" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="16" xml:space="preserve">&gt;</text>
-    <text x="25.6" y="32" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="16" xml:space="preserve"> select theitems</text>
-    <text x="16" y="54.4" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="16" xml:space="preserve">/bin/sh: -c: line 1: syntax error: unexpected end of file</text>
-    <text x="16" y="76.8" fill="#e5e510" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="16" xml:space="preserve">&gt;</text>
-    <text x="25.6" y="76.8" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="16" xml:space="preserve"> </text>
-    <rect class="cursor f46" x="35.2" y="60.8" width="9.6" height="22.4" fill="#ffffff"/>
-  </g>
+
+<rect class="window-bg" x="0" y="0" width="800" height="400" fill="#282a36" rx="0" ry="0"/>
+<g class="text-layer">
+<text class="text f3" x="16" y="16">&gt;</text>
+<text class="text fg" x="25.6" y="16"> select theitems                                                               </text>
+<text class="text fg" x="16" y="38.4">/bin/sh: -c: line 1: syntax error: unexpected end of file                       </text>
+<text class="text f3" x="16" y="83.19999999999999">&gt;</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor" x="35.2" y="83.19999999999999" width="9.6" height="22.4" fill="#f8f8f2"/>
+</g>
 
     </g>
     <g id="frame-47">
       
-  <style>
-    .cursor {
-      animation: blink 1s step-end infinite;
-    }
-    .cursor-active {
-      /* No animation - solid cursor during typing/movement */
-    }
-    @keyframes blink {
-      0%, 50% { opacity: 1; }
-      50.01%, 100% { opacity: 0; }
-    }
-  </style>
-  <rect width="800" height="400" fill="#1e1e1e" rx="6" ry="6"/>
-  <g class="content f47">
-    <text x="16" y="32" fill="#e5e510" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="16" xml:space="preserve">&gt;</text>
-    <text x="25.6" y="32" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="16" xml:space="preserve"> select theitems</text>
-    <text x="16" y="54.4" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="16" xml:space="preserve">/bin/sh: -c: line 1: syntax error: unexpected end of file</text>
-    <text x="16" y="76.8" fill="#e5e510" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="16" xml:space="preserve">&gt;</text>
-    <text x="25.6" y="76.8" fill="#d4d4d4" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="16" xml:space="preserve"> </text>
-  </g>
+
+<rect class="window-bg" x="0" y="0" width="800" height="400" fill="#282a36" rx="0" ry="0"/>
+<g class="text-layer">
+<text class="text f3" x="16" y="16">&gt;</text>
+<text class="text fg" x="25.6" y="16"> select theitems                                                               </text>
+<text class="text fg" x="16" y="38.4">/bin/sh: -c: line 1: syntax error: unexpected end of file                       </text>
+<text class="text f3" x="16" y="83.19999999999999">&gt;</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor" x="35.2" y="83.19999999999999" width="9.6" height="22.4" fill="#f8f8f2"/>
+</g>
 
     </g>
   </defs>

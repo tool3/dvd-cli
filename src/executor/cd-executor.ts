@@ -213,6 +213,16 @@ export class CDExecutor {
 
     if (this.context.scroll) {
       const visibleLines = this.getVisibleLineCount();
+
+      // Auto-scroll to keep cursor visible
+      if (this.context.cursorY >= this.context.scrollOffset + visibleLines) {
+        // Cursor is below visible area - scroll down
+        this.context.scrollOffset = this.context.cursorY - visibleLines + 1;
+      } else if (this.context.cursorY < this.context.scrollOffset) {
+        // Cursor is above visible area - scroll up
+        this.context.scrollOffset = this.context.cursorY;
+      }
+
       const startLine = this.context.scrollOffset;
       const endLine = Math.min(startLine + visibleLines, buffer.length);
       visibleBuffer = buffer.slice(startLine, endLine);
@@ -258,6 +268,18 @@ export class CDExecutor {
     // Coalesce grid to spans
     const rows = coalesce(grid, this.context.theme);
 
+    // Build selection object if there's an active selection
+    const selection =
+      this.context.selectionStart !== undefined &&
+      this.context.selectionEnd !== undefined &&
+      this.context.selectionStart !== this.context.selectionEnd
+        ? {
+            start: this.context.selectionStart + (this.context.isExecutingCommand ? 0 : this.stripAnsi(this.context.promptPrefix).length),
+            end: this.context.selectionEnd + (this.context.isExecutingCommand ? 0 : this.stripAnsi(this.context.promptPrefix).length),
+            row: visibleCursorY,
+          }
+        : null;
+
     // Generate SVG using the new emitter
     // When showCursor is true, always render the cursor - the CSS blink animation handles visibility
     const { svg } = emit(
@@ -278,6 +300,8 @@ export class CDExecutor {
         borderWidth: this.context.borderWidth,
         borderRadius: this.context.borderRadius,
         padding: this.context.padding,
+        cursorBlink: this.context.cursorBlink,
+        selection,
       }
     );
 
@@ -963,6 +987,7 @@ export class CDExecutor {
         borderWidth: this.context.borderWidth,
         borderRadius: this.context.borderRadius,
         padding: this.context.padding,
+        cursorBlink: this.context.cursorBlink,
       });
 
       this.context.frames[i].svg = svg;
