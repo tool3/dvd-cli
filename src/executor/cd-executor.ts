@@ -181,26 +181,24 @@ export class CDExecutor {
 
     // Build display line with or without prompt
     let displayLine: string;
-    let adjustedCursorX: number;
 
     if (this.context.isExecutingCommand) {
       displayLine = this.context.currentLine;
-      adjustedCursorX = this.context.cursorX;
     } else {
       displayLine = this.context.promptPrefix + this.context.currentLine;
-      const prefixLength = this.stripAnsi(this.context.promptPrefix).length;
-      adjustedCursorX = this.context.cursorX + prefixLength;
     }
 
     buffer[this.context.cursorY] = displayLine;
 
     // Calculate layout constants
+    const charWidth = this.context.fontSize * 0.6;
     const lineHeight = this.context.fontSize * 1.4;
     const padding = this.context.padding ?? 16;
     const headerHeight = this.context.template === 'minimal' ? 0 : 40;
     const contentStartY = headerHeight + padding;
     const maxContentHeight = this.context.height - contentStartY - padding;
     const maxVisibleRows = Math.floor(maxContentHeight / lineHeight);
+    const visibleCols = Math.floor((this.context.width - padding * 2) / charWidth);
 
     // Track max dimensions for auto-sizing
     if (!this.context.scroll && (this.context.autoWidth || this.context.autoHeight)) {
@@ -217,7 +215,6 @@ export class CDExecutor {
 
     // Handle scrolling
     let visibleBuffer: string[];
-    let visibleCursorY: number;
 
     if (this.context.scroll) {
       const visibleLines = this.getVisibleLineCount();
@@ -234,37 +231,36 @@ export class CDExecutor {
       const startLine = this.context.scrollOffset;
       const endLine = Math.min(startLine + visibleLines, buffer.length);
       visibleBuffer = buffer.slice(startLine, endLine);
-      visibleCursorY = this.context.cursorY - this.context.scrollOffset;
     } else {
       visibleBuffer = buffer;
-      visibleCursorY = this.context.cursorY;
     }
-
-    // Clamp cursor Y to fit within SVG viewport (cursor X can extend beyond if auto-width)
-    const finalCursorY = Math.max(0, Math.min(visibleCursorY, maxVisibleRows - 1));
-    const finalCursorX = adjustedCursorX;
 
     // Update VTerminal grid with current content
     const content = visibleBuffer.join('\n');
 
-    // Calculate grid dimensions - when not scrolling, expand to fit content
-    let gridWidth = this.context.grid.width;
+    // Calculate grid dimensions
+    // Use fixed width matching SVG visible columns so text wraps correctly
+    const gridWidth = visibleCols;
     let gridHeight = this.context.grid.height;
 
     if (!this.context.scroll) {
-      // Expand grid to fit all content
+      // Expand height to fit all content plus potential wrapped lines
       const contentLines = visibleBuffer;
-      gridHeight = Math.max(gridHeight, contentLines.length + 1);
-
-      // Find max line length (without ANSI codes)
+      // Each line could wrap multiple times
+      let estimatedRows = 0;
       for (const line of contentLines) {
         const lineLength = this.stripAnsi(line).length;
-        gridWidth = Math.max(gridWidth, lineLength + 1);
+        estimatedRows += Math.ceil(lineLength / visibleCols) || 1;
       }
+      gridHeight = Math.max(gridHeight, estimatedRows + 5);
     }
 
     let grid = createGridState(gridWidth, gridHeight);
     grid = processInput(grid, content);
+
+    // Use VTerminal's cursor position - it accounts for line wrapping
+    const finalCursorY = Math.max(0, Math.min(grid.cursor.row, maxVisibleRows - 1));
+    const finalCursorX = grid.cursor.col;
 
     // Coalesce grid to spans
     const rows = coalesce(grid, this.context.theme);
