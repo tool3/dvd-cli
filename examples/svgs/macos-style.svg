@@ -81,8 +81,8 @@
     <animate
       attributeName="visibility"
       values="visible;hidden;hidden"
-      keyTimes="0.000000;0.005591;1.000000"
-      dur="9.66s"
+      keyTimes="0.000000;0.005508;1.000000"
+      dur="9.62s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -108,8 +108,8 @@
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.005591;0.010975;1.000000"
-      dur="9.66s"
+      keyTimes="0.000000;0.005508;0.010912;1.000000"
+      dur="9.62s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -135,8 +135,8 @@
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.010975;0.016359;1.000000"
-      dur="9.66s"
+      keyTimes="0.000000;0.010912;0.016317;1.000000"
+      dur="9.62s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -162,8 +162,8 @@
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.016359;0.021744;1.000000"
-      dur="9.66s"
+      keyTimes="0.000000;0.016317;0.021617;1.000000"
+      dur="9.62s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -189,8 +189,8 @@
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.021744;0.027128;1.000000"
-      dur="9.66s"
+      keyTimes="0.000000;0.021617;0.027125;1.000000"
+      dur="9.62s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -216,8 +216,8 @@
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.027128;0.032512;1.000000"
-      dur="9.66s"
+      keyTimes="0.000000;0.027125;0.032426;1.000000"
+      dur="9.62s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -243,8 +243,8 @@
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.032512;0.037793;1.000000"
-      dur="9.66s"
+      keyTimes="0.000000;0.032426;0.037830;1.000000"
+      dur="9.62s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -270,8 +270,8 @@
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.037793;0.043280;1.000000"
-      dur="9.66s"
+      keyTimes="0.000000;0.037830;0.043338;1.000000"
+      dur="9.62s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -297,8 +297,8 @@
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.043280;0.048664;1.000000"
-      dur="9.66s"
+      keyTimes="0.000000;0.043338;0.048639;1.000000"
+      dur="9.62s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -324,8 +324,8 @@
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.048664;0.054048;1.000000"
-      dur="9.66s"
+      keyTimes="0.000000;0.048639;0.053939;1.000000"
+      dur="9.62s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -351,8 +351,8 @@
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.054048;0.095568;1.000000"
-      dur="9.66s"
+      keyTimes="0.000000;0.053939;0.095718;1.000000"
+      dur="9.62s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -378,8 +378,8 @@
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.095568;0.106130;1.000000"
-      dur="9.66s"
+      keyTimes="0.000000;0.095718;0.106527;1.000000"
+      dur="9.62s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -402,8 +402,8 @@
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.106130;0.119279;1.000000"
-      dur="9.66s"
+      keyTimes="0.000000;0.106527;0.120661;1.000000"
+      dur="9.62s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -419,14 +419,15 @@
 <circle cx="62" cy="20" r="6" fill="#27c93f"/>
 <text class="text fg" x="362" y="20" text-anchor="middle" style="dominant-baseline: central">my-project</text></g>
 <g class="text-layer">
-<text class="text fg" x="16" y="78.4">Changes not staged for commit:                                                  </text>
-<text class="text fg" x="16" y="100.8">  (use &quot;git add &lt;file&gt;...&quot; to update what will be committed)                    </text>
-<text class="text fg" x="16" y="123.19999999999999">  (use &quot;git restore &lt;file&gt;...&quot; to discard changes in working directory)         </text>
-<text class="text fg" x="16" y="145.6">        modified:   examples/svgs/macos-style.svg                               </text>
-<text class="text fg" x="16" y="168">        modified:   src/animator/svg-animator.ts                                </text>
-<text class="text fg" x="16" y="212.79999999999998">Untracked files:                                                                </text>
-<text class="text fg" x="16" y="235.2">  (use &quot;git add &lt;file&gt;...&quot; to include in what will be committed)                </text>
-<text class="text fg" x="16" y="257.6">        neofetch.tape                                                           </text>
+<text class="text fg" x="16" y="56">        modified:   src/types/index.ts                                          </text>
+<text class="text fg" x="16" y="100.8">Untracked files:                                                                </text>
+<text class="text fg" x="16" y="123.19999999999999">  (use &quot;git add &lt;file&gt;...&quot; to include in what will be committed)                </text>
+<text class="text fg" x="16" y="145.6">        examples/custom-font-test.cd                                            </text>
+<text class="text fg" x="16" y="168">        examples/embed-font-test.cd                                             </text>
+<text class="text fg" x="16" y="190.39999999999998">        examples/fonts/                                                         </text>
+<text class="text fg" x="16" y="212.79999999999998">        examples/svgs/custom-font-test.svg                                      </text>
+<text class="text fg" x="16" y="235.2">        examples/svgs/embed-font-test.svg                                       </text>
+<text class="text fg" x="16" y="257.6">        neofetch.gif                                                            </text>
 <text class="text fg" x="16" y="302.4">no changes added to commit (use &quot;git add&quot; and/or &quot;git commit -a&quot;)               </text>
 <text class="text f13" x="16" y="324.79999999999995">❯</text>
 </g>
@@ -437,8 +438,8 @@
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.119279;0.224063;1.000000"
-      dur="9.66s"
+      keyTimes="0.000000;0.120661;0.225941;1.000000"
+      dur="9.62s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -454,14 +455,15 @@
 <circle cx="62" cy="20" r="6" fill="#27c93f"/>
 <text class="text fg" x="362" y="20" text-anchor="middle" style="dominant-baseline: central">my-project</text></g>
 <g class="text-layer">
-<text class="text fg" x="16" y="78.4">Changes not staged for commit:                                                  </text>
-<text class="text fg" x="16" y="100.8">  (use &quot;git add &lt;file&gt;...&quot; to update what will be committed)                    </text>
-<text class="text fg" x="16" y="123.19999999999999">  (use &quot;git restore &lt;file&gt;...&quot; to discard changes in working directory)         </text>
-<text class="text fg" x="16" y="145.6">        modified:   examples/svgs/macos-style.svg                               </text>
-<text class="text fg" x="16" y="168">        modified:   src/animator/svg-animator.ts                                </text>
-<text class="text fg" x="16" y="212.79999999999998">Untracked files:                                                                </text>
-<text class="text fg" x="16" y="235.2">  (use &quot;git add &lt;file&gt;...&quot; to include in what will be committed)                </text>
-<text class="text fg" x="16" y="257.6">        neofetch.tape                                                           </text>
+<text class="text fg" x="16" y="56">        modified:   src/types/index.ts                                          </text>
+<text class="text fg" x="16" y="100.8">Untracked files:                                                                </text>
+<text class="text fg" x="16" y="123.19999999999999">  (use &quot;git add &lt;file&gt;...&quot; to include in what will be committed)                </text>
+<text class="text fg" x="16" y="145.6">        examples/custom-font-test.cd                                            </text>
+<text class="text fg" x="16" y="168">        examples/embed-font-test.cd                                             </text>
+<text class="text fg" x="16" y="190.39999999999998">        examples/fonts/                                                         </text>
+<text class="text fg" x="16" y="212.79999999999998">        examples/svgs/custom-font-test.svg                                      </text>
+<text class="text fg" x="16" y="235.2">        examples/svgs/embed-font-test.svg                                       </text>
+<text class="text fg" x="16" y="257.6">        neofetch.gif                                                            </text>
 <text class="text fg" x="16" y="302.4">no changes added to commit (use &quot;git add&quot; and/or &quot;git commit -a&quot;)               </text>
 <text class="text f13" x="16" y="324.79999999999995">❯</text>
 </g>
@@ -472,8 +474,8 @@
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.224063;0.230275;1.000000"
-      dur="9.66s"
+      keyTimes="0.000000;0.225941;0.232176;1.000000"
+      dur="9.62s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -489,14 +491,15 @@
 <circle cx="62" cy="20" r="6" fill="#27c93f"/>
 <text class="text fg" x="362" y="20" text-anchor="middle" style="dominant-baseline: central">my-project</text></g>
 <g class="text-layer">
-<text class="text fg" x="16" y="78.4">Changes not staged for commit:                                                  </text>
-<text class="text fg" x="16" y="100.8">  (use &quot;git add &lt;file&gt;...&quot; to update what will be committed)                    </text>
-<text class="text fg" x="16" y="123.19999999999999">  (use &quot;git restore &lt;file&gt;...&quot; to discard changes in working directory)         </text>
-<text class="text fg" x="16" y="145.6">        modified:   examples/svgs/macos-style.svg                               </text>
-<text class="text fg" x="16" y="168">        modified:   src/animator/svg-animator.ts                                </text>
-<text class="text fg" x="16" y="212.79999999999998">Untracked files:                                                                </text>
-<text class="text fg" x="16" y="235.2">  (use &quot;git add &lt;file&gt;...&quot; to include in what will be committed)                </text>
-<text class="text fg" x="16" y="257.6">        neofetch.tape                                                           </text>
+<text class="text fg" x="16" y="56">        modified:   src/types/index.ts                                          </text>
+<text class="text fg" x="16" y="100.8">Untracked files:                                                                </text>
+<text class="text fg" x="16" y="123.19999999999999">  (use &quot;git add &lt;file&gt;...&quot; to include in what will be committed)                </text>
+<text class="text fg" x="16" y="145.6">        examples/custom-font-test.cd                                            </text>
+<text class="text fg" x="16" y="168">        examples/embed-font-test.cd                                             </text>
+<text class="text fg" x="16" y="190.39999999999998">        examples/fonts/                                                         </text>
+<text class="text fg" x="16" y="212.79999999999998">        examples/svgs/custom-font-test.svg                                      </text>
+<text class="text fg" x="16" y="235.2">        examples/svgs/embed-font-test.svg                                       </text>
+<text class="text fg" x="16" y="257.6">        neofetch.gif                                                            </text>
 <text class="text fg" x="16" y="302.4">no changes added to commit (use &quot;git add&quot; and/or &quot;git commit -a&quot;)               </text>
 <text class="text f13" x="16" y="324.79999999999995">❯</text>
 <text class="text fg" x="25.6" y="324.79999999999995"> g                                                                             </text>
@@ -508,8 +511,8 @@
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.230275;0.236281;1.000000"
-      dur="9.66s"
+      keyTimes="0.000000;0.232176;0.238308;1.000000"
+      dur="9.62s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -525,14 +528,15 @@
 <circle cx="62" cy="20" r="6" fill="#27c93f"/>
 <text class="text fg" x="362" y="20" text-anchor="middle" style="dominant-baseline: central">my-project</text></g>
 <g class="text-layer">
-<text class="text fg" x="16" y="78.4">Changes not staged for commit:                                                  </text>
-<text class="text fg" x="16" y="100.8">  (use &quot;git add &lt;file&gt;...&quot; to update what will be committed)                    </text>
-<text class="text fg" x="16" y="123.19999999999999">  (use &quot;git restore &lt;file&gt;...&quot; to discard changes in working directory)         </text>
-<text class="text fg" x="16" y="145.6">        modified:   examples/svgs/macos-style.svg                               </text>
-<text class="text fg" x="16" y="168">        modified:   src/animator/svg-animator.ts                                </text>
-<text class="text fg" x="16" y="212.79999999999998">Untracked files:                                                                </text>
-<text class="text fg" x="16" y="235.2">  (use &quot;git add &lt;file&gt;...&quot; to include in what will be committed)                </text>
-<text class="text fg" x="16" y="257.6">        neofetch.tape                                                           </text>
+<text class="text fg" x="16" y="56">        modified:   src/types/index.ts                                          </text>
+<text class="text fg" x="16" y="100.8">Untracked files:                                                                </text>
+<text class="text fg" x="16" y="123.19999999999999">  (use &quot;git add &lt;file&gt;...&quot; to include in what will be committed)                </text>
+<text class="text fg" x="16" y="145.6">        examples/custom-font-test.cd                                            </text>
+<text class="text fg" x="16" y="168">        examples/embed-font-test.cd                                             </text>
+<text class="text fg" x="16" y="190.39999999999998">        examples/fonts/                                                         </text>
+<text class="text fg" x="16" y="212.79999999999998">        examples/svgs/custom-font-test.svg                                      </text>
+<text class="text fg" x="16" y="235.2">        examples/svgs/embed-font-test.svg                                       </text>
+<text class="text fg" x="16" y="257.6">        neofetch.gif                                                            </text>
 <text class="text fg" x="16" y="302.4">no changes added to commit (use &quot;git add&quot; and/or &quot;git commit -a&quot;)               </text>
 <text class="text f13" x="16" y="324.79999999999995">❯</text>
 <text class="text fg" x="25.6" y="324.79999999999995"> gi                                                                            </text>
@@ -544,8 +548,8 @@
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.236281;0.242390;1.000000"
-      dur="9.66s"
+      keyTimes="0.000000;0.238308;0.244440;1.000000"
+      dur="9.62s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -561,14 +565,15 @@
 <circle cx="62" cy="20" r="6" fill="#27c93f"/>
 <text class="text fg" x="362" y="20" text-anchor="middle" style="dominant-baseline: central">my-project</text></g>
 <g class="text-layer">
-<text class="text fg" x="16" y="78.4">Changes not staged for commit:                                                  </text>
-<text class="text fg" x="16" y="100.8">  (use &quot;git add &lt;file&gt;...&quot; to update what will be committed)                    </text>
-<text class="text fg" x="16" y="123.19999999999999">  (use &quot;git restore &lt;file&gt;...&quot; to discard changes in working directory)         </text>
-<text class="text fg" x="16" y="145.6">        modified:   examples/svgs/macos-style.svg                               </text>
-<text class="text fg" x="16" y="168">        modified:   src/animator/svg-animator.ts                                </text>
-<text class="text fg" x="16" y="212.79999999999998">Untracked files:                                                                </text>
-<text class="text fg" x="16" y="235.2">  (use &quot;git add &lt;file&gt;...&quot; to include in what will be committed)                </text>
-<text class="text fg" x="16" y="257.6">        neofetch.tape                                                           </text>
+<text class="text fg" x="16" y="56">        modified:   src/types/index.ts                                          </text>
+<text class="text fg" x="16" y="100.8">Untracked files:                                                                </text>
+<text class="text fg" x="16" y="123.19999999999999">  (use &quot;git add &lt;file&gt;...&quot; to include in what will be committed)                </text>
+<text class="text fg" x="16" y="145.6">        examples/custom-font-test.cd                                            </text>
+<text class="text fg" x="16" y="168">        examples/embed-font-test.cd                                             </text>
+<text class="text fg" x="16" y="190.39999999999998">        examples/fonts/                                                         </text>
+<text class="text fg" x="16" y="212.79999999999998">        examples/svgs/custom-font-test.svg                                      </text>
+<text class="text fg" x="16" y="235.2">        examples/svgs/embed-font-test.svg                                       </text>
+<text class="text fg" x="16" y="257.6">        neofetch.gif                                                            </text>
 <text class="text fg" x="16" y="302.4">no changes added to commit (use &quot;git add&quot; and/or &quot;git commit -a&quot;)               </text>
 <text class="text f13" x="16" y="324.79999999999995">❯</text>
 <text class="text fg" x="25.6" y="324.79999999999995"> git                                                                           </text>
@@ -580,8 +585,8 @@
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.242390;0.248602;1.000000"
-      dur="9.66s"
+      keyTimes="0.000000;0.244440;0.250572;1.000000"
+      dur="9.62s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -597,14 +602,15 @@
 <circle cx="62" cy="20" r="6" fill="#27c93f"/>
 <text class="text fg" x="362" y="20" text-anchor="middle" style="dominant-baseline: central">my-project</text></g>
 <g class="text-layer">
-<text class="text fg" x="16" y="78.4">Changes not staged for commit:                                                  </text>
-<text class="text fg" x="16" y="100.8">  (use &quot;git add &lt;file&gt;...&quot; to update what will be committed)                    </text>
-<text class="text fg" x="16" y="123.19999999999999">  (use &quot;git restore &lt;file&gt;...&quot; to discard changes in working directory)         </text>
-<text class="text fg" x="16" y="145.6">        modified:   examples/svgs/macos-style.svg                               </text>
-<text class="text fg" x="16" y="168">        modified:   src/animator/svg-animator.ts                                </text>
-<text class="text fg" x="16" y="212.79999999999998">Untracked files:                                                                </text>
-<text class="text fg" x="16" y="235.2">  (use &quot;git add &lt;file&gt;...&quot; to include in what will be committed)                </text>
-<text class="text fg" x="16" y="257.6">        neofetch.tape                                                           </text>
+<text class="text fg" x="16" y="56">        modified:   src/types/index.ts                                          </text>
+<text class="text fg" x="16" y="100.8">Untracked files:                                                                </text>
+<text class="text fg" x="16" y="123.19999999999999">  (use &quot;git add &lt;file&gt;...&quot; to include in what will be committed)                </text>
+<text class="text fg" x="16" y="145.6">        examples/custom-font-test.cd                                            </text>
+<text class="text fg" x="16" y="168">        examples/embed-font-test.cd                                             </text>
+<text class="text fg" x="16" y="190.39999999999998">        examples/fonts/                                                         </text>
+<text class="text fg" x="16" y="212.79999999999998">        examples/svgs/custom-font-test.svg                                      </text>
+<text class="text fg" x="16" y="235.2">        examples/svgs/embed-font-test.svg                                       </text>
+<text class="text fg" x="16" y="257.6">        neofetch.gif                                                            </text>
 <text class="text fg" x="16" y="302.4">no changes added to commit (use &quot;git add&quot; and/or &quot;git commit -a&quot;)               </text>
 <text class="text f13" x="16" y="324.79999999999995">❯</text>
 <text class="text fg" x="25.6" y="324.79999999999995"> git                                                                           </text>
@@ -616,8 +622,8 @@
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.248602;0.254918;1.000000"
-      dur="9.66s"
+      keyTimes="0.000000;0.250572;0.256807;1.000000"
+      dur="9.62s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -633,14 +639,15 @@
 <circle cx="62" cy="20" r="6" fill="#27c93f"/>
 <text class="text fg" x="362" y="20" text-anchor="middle" style="dominant-baseline: central">my-project</text></g>
 <g class="text-layer">
-<text class="text fg" x="16" y="78.4">Changes not staged for commit:                                                  </text>
-<text class="text fg" x="16" y="100.8">  (use &quot;git add &lt;file&gt;...&quot; to update what will be committed)                    </text>
-<text class="text fg" x="16" y="123.19999999999999">  (use &quot;git restore &lt;file&gt;...&quot; to discard changes in working directory)         </text>
-<text class="text fg" x="16" y="145.6">        modified:   examples/svgs/macos-style.svg                               </text>
-<text class="text fg" x="16" y="168">        modified:   src/animator/svg-animator.ts                                </text>
-<text class="text fg" x="16" y="212.79999999999998">Untracked files:                                                                </text>
-<text class="text fg" x="16" y="235.2">  (use &quot;git add &lt;file&gt;...&quot; to include in what will be committed)                </text>
-<text class="text fg" x="16" y="257.6">        neofetch.tape                                                           </text>
+<text class="text fg" x="16" y="56">        modified:   src/types/index.ts                                          </text>
+<text class="text fg" x="16" y="100.8">Untracked files:                                                                </text>
+<text class="text fg" x="16" y="123.19999999999999">  (use &quot;git add &lt;file&gt;...&quot; to include in what will be committed)                </text>
+<text class="text fg" x="16" y="145.6">        examples/custom-font-test.cd                                            </text>
+<text class="text fg" x="16" y="168">        examples/embed-font-test.cd                                             </text>
+<text class="text fg" x="16" y="190.39999999999998">        examples/fonts/                                                         </text>
+<text class="text fg" x="16" y="212.79999999999998">        examples/svgs/custom-font-test.svg                                      </text>
+<text class="text fg" x="16" y="235.2">        examples/svgs/embed-font-test.svg                                       </text>
+<text class="text fg" x="16" y="257.6">        neofetch.gif                                                            </text>
 <text class="text fg" x="16" y="302.4">no changes added to commit (use &quot;git add&quot; and/or &quot;git commit -a&quot;)               </text>
 <text class="text f13" x="16" y="324.79999999999995">❯</text>
 <text class="text fg" x="25.6" y="324.79999999999995"> git a                                                                         </text>
@@ -652,8 +659,8 @@
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.254918;0.261131;1.000000"
-      dur="9.66s"
+      keyTimes="0.000000;0.256807;0.262939;1.000000"
+      dur="9.62s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -669,14 +676,15 @@
 <circle cx="62" cy="20" r="6" fill="#27c93f"/>
 <text class="text fg" x="362" y="20" text-anchor="middle" style="dominant-baseline: central">my-project</text></g>
 <g class="text-layer">
-<text class="text fg" x="16" y="78.4">Changes not staged for commit:                                                  </text>
-<text class="text fg" x="16" y="100.8">  (use &quot;git add &lt;file&gt;...&quot; to update what will be committed)                    </text>
-<text class="text fg" x="16" y="123.19999999999999">  (use &quot;git restore &lt;file&gt;...&quot; to discard changes in working directory)         </text>
-<text class="text fg" x="16" y="145.6">        modified:   examples/svgs/macos-style.svg                               </text>
-<text class="text fg" x="16" y="168">        modified:   src/animator/svg-animator.ts                                </text>
-<text class="text fg" x="16" y="212.79999999999998">Untracked files:                                                                </text>
-<text class="text fg" x="16" y="235.2">  (use &quot;git add &lt;file&gt;...&quot; to include in what will be committed)                </text>
-<text class="text fg" x="16" y="257.6">        neofetch.tape                                                           </text>
+<text class="text fg" x="16" y="56">        modified:   src/types/index.ts                                          </text>
+<text class="text fg" x="16" y="100.8">Untracked files:                                                                </text>
+<text class="text fg" x="16" y="123.19999999999999">  (use &quot;git add &lt;file&gt;...&quot; to include in what will be committed)                </text>
+<text class="text fg" x="16" y="145.6">        examples/custom-font-test.cd                                            </text>
+<text class="text fg" x="16" y="168">        examples/embed-font-test.cd                                             </text>
+<text class="text fg" x="16" y="190.39999999999998">        examples/fonts/                                                         </text>
+<text class="text fg" x="16" y="212.79999999999998">        examples/svgs/custom-font-test.svg                                      </text>
+<text class="text fg" x="16" y="235.2">        examples/svgs/embed-font-test.svg                                       </text>
+<text class="text fg" x="16" y="257.6">        neofetch.gif                                                            </text>
 <text class="text fg" x="16" y="302.4">no changes added to commit (use &quot;git add&quot; and/or &quot;git commit -a&quot;)               </text>
 <text class="text f13" x="16" y="324.79999999999995">❯</text>
 <text class="text fg" x="25.6" y="324.79999999999995"> git ad                                                                        </text>
@@ -688,8 +696,8 @@
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.261131;0.267343;1.000000"
-      dur="9.66s"
+      keyTimes="0.000000;0.262939;0.269071;1.000000"
+      dur="9.62s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -705,14 +713,15 @@
 <circle cx="62" cy="20" r="6" fill="#27c93f"/>
 <text class="text fg" x="362" y="20" text-anchor="middle" style="dominant-baseline: central">my-project</text></g>
 <g class="text-layer">
-<text class="text fg" x="16" y="78.4">Changes not staged for commit:                                                  </text>
-<text class="text fg" x="16" y="100.8">  (use &quot;git add &lt;file&gt;...&quot; to update what will be committed)                    </text>
-<text class="text fg" x="16" y="123.19999999999999">  (use &quot;git restore &lt;file&gt;...&quot; to discard changes in working directory)         </text>
-<text class="text fg" x="16" y="145.6">        modified:   examples/svgs/macos-style.svg                               </text>
-<text class="text fg" x="16" y="168">        modified:   src/animator/svg-animator.ts                                </text>
-<text class="text fg" x="16" y="212.79999999999998">Untracked files:                                                                </text>
-<text class="text fg" x="16" y="235.2">  (use &quot;git add &lt;file&gt;...&quot; to include in what will be committed)                </text>
-<text class="text fg" x="16" y="257.6">        neofetch.tape                                                           </text>
+<text class="text fg" x="16" y="56">        modified:   src/types/index.ts                                          </text>
+<text class="text fg" x="16" y="100.8">Untracked files:                                                                </text>
+<text class="text fg" x="16" y="123.19999999999999">  (use &quot;git add &lt;file&gt;...&quot; to include in what will be committed)                </text>
+<text class="text fg" x="16" y="145.6">        examples/custom-font-test.cd                                            </text>
+<text class="text fg" x="16" y="168">        examples/embed-font-test.cd                                             </text>
+<text class="text fg" x="16" y="190.39999999999998">        examples/fonts/                                                         </text>
+<text class="text fg" x="16" y="212.79999999999998">        examples/svgs/custom-font-test.svg                                      </text>
+<text class="text fg" x="16" y="235.2">        examples/svgs/embed-font-test.svg                                       </text>
+<text class="text fg" x="16" y="257.6">        neofetch.gif                                                            </text>
 <text class="text fg" x="16" y="302.4">no changes added to commit (use &quot;git add&quot; and/or &quot;git commit -a&quot;)               </text>
 <text class="text f13" x="16" y="324.79999999999995">❯</text>
 <text class="text fg" x="25.6" y="324.79999999999995"> git add                                                                       </text>
@@ -724,8 +733,8 @@
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.267343;0.273659;1.000000"
-      dur="9.66s"
+      keyTimes="0.000000;0.269071;0.275203;1.000000"
+      dur="9.62s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -741,14 +750,15 @@
 <circle cx="62" cy="20" r="6" fill="#27c93f"/>
 <text class="text fg" x="362" y="20" text-anchor="middle" style="dominant-baseline: central">my-project</text></g>
 <g class="text-layer">
-<text class="text fg" x="16" y="78.4">Changes not staged for commit:                                                  </text>
-<text class="text fg" x="16" y="100.8">  (use &quot;git add &lt;file&gt;...&quot; to update what will be committed)                    </text>
-<text class="text fg" x="16" y="123.19999999999999">  (use &quot;git restore &lt;file&gt;...&quot; to discard changes in working directory)         </text>
-<text class="text fg" x="16" y="145.6">        modified:   examples/svgs/macos-style.svg                               </text>
-<text class="text fg" x="16" y="168">        modified:   src/animator/svg-animator.ts                                </text>
-<text class="text fg" x="16" y="212.79999999999998">Untracked files:                                                                </text>
-<text class="text fg" x="16" y="235.2">  (use &quot;git add &lt;file&gt;...&quot; to include in what will be committed)                </text>
-<text class="text fg" x="16" y="257.6">        neofetch.tape                                                           </text>
+<text class="text fg" x="16" y="56">        modified:   src/types/index.ts                                          </text>
+<text class="text fg" x="16" y="100.8">Untracked files:                                                                </text>
+<text class="text fg" x="16" y="123.19999999999999">  (use &quot;git add &lt;file&gt;...&quot; to include in what will be committed)                </text>
+<text class="text fg" x="16" y="145.6">        examples/custom-font-test.cd                                            </text>
+<text class="text fg" x="16" y="168">        examples/embed-font-test.cd                                             </text>
+<text class="text fg" x="16" y="190.39999999999998">        examples/fonts/                                                         </text>
+<text class="text fg" x="16" y="212.79999999999998">        examples/svgs/custom-font-test.svg                                      </text>
+<text class="text fg" x="16" y="235.2">        examples/svgs/embed-font-test.svg                                       </text>
+<text class="text fg" x="16" y="257.6">        neofetch.gif                                                            </text>
 <text class="text fg" x="16" y="302.4">no changes added to commit (use &quot;git add&quot; and/or &quot;git commit -a&quot;)               </text>
 <text class="text f13" x="16" y="324.79999999999995">❯</text>
 <text class="text fg" x="25.6" y="324.79999999999995"> git add                                                                       </text>
@@ -760,8 +770,8 @@
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.273659;0.280079;1.000000"
-      dur="9.66s"
+      keyTimes="0.000000;0.275203;0.281334;1.000000"
+      dur="9.62s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -777,14 +787,15 @@
 <circle cx="62" cy="20" r="6" fill="#27c93f"/>
 <text class="text fg" x="362" y="20" text-anchor="middle" style="dominant-baseline: central">my-project</text></g>
 <g class="text-layer">
-<text class="text fg" x="16" y="78.4">Changes not staged for commit:                                                  </text>
-<text class="text fg" x="16" y="100.8">  (use &quot;git add &lt;file&gt;...&quot; to update what will be committed)                    </text>
-<text class="text fg" x="16" y="123.19999999999999">  (use &quot;git restore &lt;file&gt;...&quot; to discard changes in working directory)         </text>
-<text class="text fg" x="16" y="145.6">        modified:   examples/svgs/macos-style.svg                               </text>
-<text class="text fg" x="16" y="168">        modified:   src/animator/svg-animator.ts                                </text>
-<text class="text fg" x="16" y="212.79999999999998">Untracked files:                                                                </text>
-<text class="text fg" x="16" y="235.2">  (use &quot;git add &lt;file&gt;...&quot; to include in what will be committed)                </text>
-<text class="text fg" x="16" y="257.6">        neofetch.tape                                                           </text>
+<text class="text fg" x="16" y="56">        modified:   src/types/index.ts                                          </text>
+<text class="text fg" x="16" y="100.8">Untracked files:                                                                </text>
+<text class="text fg" x="16" y="123.19999999999999">  (use &quot;git add &lt;file&gt;...&quot; to include in what will be committed)                </text>
+<text class="text fg" x="16" y="145.6">        examples/custom-font-test.cd                                            </text>
+<text class="text fg" x="16" y="168">        examples/embed-font-test.cd                                             </text>
+<text class="text fg" x="16" y="190.39999999999998">        examples/fonts/                                                         </text>
+<text class="text fg" x="16" y="212.79999999999998">        examples/svgs/custom-font-test.svg                                      </text>
+<text class="text fg" x="16" y="235.2">        examples/svgs/embed-font-test.svg                                       </text>
+<text class="text fg" x="16" y="257.6">        neofetch.gif                                                            </text>
 <text class="text fg" x="16" y="302.4">no changes added to commit (use &quot;git add&quot; and/or &quot;git commit -a&quot;)               </text>
 <text class="text f13" x="16" y="324.79999999999995">❯</text>
 <text class="text fg" x="25.6" y="324.79999999999995"> git add .                                                                     </text>
@@ -796,8 +807,8 @@
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.280079;0.323359;1.000000"
-      dur="9.66s"
+      keyTimes="0.000000;0.281334;0.324361;1.000000"
+      dur="9.62s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -813,14 +824,15 @@
 <circle cx="62" cy="20" r="6" fill="#27c93f"/>
 <text class="text fg" x="362" y="20" text-anchor="middle" style="dominant-baseline: central">my-project</text></g>
 <g class="text-layer">
-<text class="text fg" x="16" y="78.4">Changes not staged for commit:                                                  </text>
-<text class="text fg" x="16" y="100.8">  (use &quot;git add &lt;file&gt;...&quot; to update what will be committed)                    </text>
-<text class="text fg" x="16" y="123.19999999999999">  (use &quot;git restore &lt;file&gt;...&quot; to discard changes in working directory)         </text>
-<text class="text fg" x="16" y="145.6">        modified:   examples/svgs/macos-style.svg                               </text>
-<text class="text fg" x="16" y="168">        modified:   src/animator/svg-animator.ts                                </text>
-<text class="text fg" x="16" y="212.79999999999998">Untracked files:                                                                </text>
-<text class="text fg" x="16" y="235.2">  (use &quot;git add &lt;file&gt;...&quot; to include in what will be committed)                </text>
-<text class="text fg" x="16" y="257.6">        neofetch.tape                                                           </text>
+<text class="text fg" x="16" y="56">        modified:   src/types/index.ts                                          </text>
+<text class="text fg" x="16" y="100.8">Untracked files:                                                                </text>
+<text class="text fg" x="16" y="123.19999999999999">  (use &quot;git add &lt;file&gt;...&quot; to include in what will be committed)                </text>
+<text class="text fg" x="16" y="145.6">        examples/custom-font-test.cd                                            </text>
+<text class="text fg" x="16" y="168">        examples/embed-font-test.cd                                             </text>
+<text class="text fg" x="16" y="190.39999999999998">        examples/fonts/                                                         </text>
+<text class="text fg" x="16" y="212.79999999999998">        examples/svgs/custom-font-test.svg                                      </text>
+<text class="text fg" x="16" y="235.2">        examples/svgs/embed-font-test.svg                                       </text>
+<text class="text fg" x="16" y="257.6">        neofetch.gif                                                            </text>
 <text class="text fg" x="16" y="302.4">no changes added to commit (use &quot;git add&quot; and/or &quot;git commit -a&quot;)               </text>
 <text class="text f13" x="16" y="324.79999999999995">❯</text>
 <text class="text fg" x="25.6" y="324.79999999999995"> git add .                                                                     </text>
@@ -832,8 +844,8 @@
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.323359;0.335473;1.000000"
-      dur="9.66s"
+      keyTimes="0.000000;0.324361;0.336001;1.000000"
+      dur="9.62s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -849,14 +861,14 @@
 <circle cx="62" cy="20" r="6" fill="#27c93f"/>
 <text class="text fg" x="362" y="20" text-anchor="middle" style="dominant-baseline: central">my-project</text></g>
 <g class="text-layer">
-<text class="text fg" x="16" y="56">Changes not staged for commit:                                                  </text>
-<text class="text fg" x="16" y="78.4">  (use &quot;git add &lt;file&gt;...&quot; to update what will be committed)                    </text>
-<text class="text fg" x="16" y="100.8">  (use &quot;git restore &lt;file&gt;...&quot; to discard changes in working directory)         </text>
-<text class="text fg" x="16" y="123.19999999999999">        modified:   examples/svgs/macos-style.svg                               </text>
-<text class="text fg" x="16" y="145.6">        modified:   src/animator/svg-animator.ts                                </text>
-<text class="text fg" x="16" y="190.39999999999998">Untracked files:                                                                </text>
-<text class="text fg" x="16" y="212.79999999999998">  (use &quot;git add &lt;file&gt;...&quot; to include in what will be committed)                </text>
-<text class="text fg" x="16" y="235.2">        neofetch.tape                                                           </text>
+<text class="text fg" x="16" y="78.4">Untracked files:                                                                </text>
+<text class="text fg" x="16" y="100.8">  (use &quot;git add &lt;file&gt;...&quot; to include in what will be committed)                </text>
+<text class="text fg" x="16" y="123.19999999999999">        examples/custom-font-test.cd                                            </text>
+<text class="text fg" x="16" y="145.6">        examples/embed-font-test.cd                                             </text>
+<text class="text fg" x="16" y="168">        examples/fonts/                                                         </text>
+<text class="text fg" x="16" y="190.39999999999998">        examples/svgs/custom-font-test.svg                                      </text>
+<text class="text fg" x="16" y="212.79999999999998">        examples/svgs/embed-font-test.svg                                       </text>
+<text class="text fg" x="16" y="235.2">        neofetch.gif                                                            </text>
 <text class="text fg" x="16" y="280">no changes added to commit (use &quot;git add&quot; and/or &quot;git commit -a&quot;)               </text>
 <text class="text f13" x="16" y="302.4">❯</text>
 <text class="text fg" x="25.6" y="302.4"> git add .                                                                     </text>
@@ -865,8 +877,8 @@
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.335473;0.348312;1.000000"
-      dur="9.66s"
+      keyTimes="0.000000;0.336001;0.351278;1.000000"
+      dur="9.62s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -882,13 +894,14 @@
 <circle cx="62" cy="20" r="6" fill="#27c93f"/>
 <text class="text fg" x="362" y="20" text-anchor="middle" style="dominant-baseline: central">my-project</text></g>
 <g class="text-layer">
-<text class="text fg" x="16" y="56">  (use &quot;git add &lt;file&gt;...&quot; to update what will be committed)                    </text>
-<text class="text fg" x="16" y="78.4">  (use &quot;git restore &lt;file&gt;...&quot; to discard changes in working directory)         </text>
-<text class="text fg" x="16" y="100.8">        modified:   examples/svgs/macos-style.svg                               </text>
-<text class="text fg" x="16" y="123.19999999999999">        modified:   src/animator/svg-animator.ts                                </text>
-<text class="text fg" x="16" y="168">Untracked files:                                                                </text>
-<text class="text fg" x="16" y="190.39999999999998">  (use &quot;git add &lt;file&gt;...&quot; to include in what will be committed)                </text>
-<text class="text fg" x="16" y="212.79999999999998">        neofetch.tape                                                           </text>
+<text class="text fg" x="16" y="56">Untracked files:                                                                </text>
+<text class="text fg" x="16" y="78.4">  (use &quot;git add &lt;file&gt;...&quot; to include in what will be committed)                </text>
+<text class="text fg" x="16" y="100.8">        examples/custom-font-test.cd                                            </text>
+<text class="text fg" x="16" y="123.19999999999999">        examples/embed-font-test.cd                                             </text>
+<text class="text fg" x="16" y="145.6">        examples/fonts/                                                         </text>
+<text class="text fg" x="16" y="168">        examples/svgs/custom-font-test.svg                                      </text>
+<text class="text fg" x="16" y="190.39999999999998">        examples/svgs/embed-font-test.svg                                       </text>
+<text class="text fg" x="16" y="212.79999999999998">        neofetch.gif                                                            </text>
 <text class="text fg" x="16" y="257.6">no changes added to commit (use &quot;git add&quot; and/or &quot;git commit -a&quot;)               </text>
 <text class="text f13" x="16" y="280">❯</text>
 <text class="text fg" x="25.6" y="280"> git add .                                                                     </text>
@@ -901,8 +914,8 @@
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.348312;0.401222;1.000000"
-      dur="9.66s"
+      keyTimes="0.000000;0.351278;0.404178;1.000000"
+      dur="9.62s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -918,13 +931,14 @@
 <circle cx="62" cy="20" r="6" fill="#27c93f"/>
 <text class="text fg" x="362" y="20" text-anchor="middle" style="dominant-baseline: central">my-project</text></g>
 <g class="text-layer">
-<text class="text fg" x="16" y="56">  (use &quot;git add &lt;file&gt;...&quot; to update what will be committed)                    </text>
-<text class="text fg" x="16" y="78.4">  (use &quot;git restore &lt;file&gt;...&quot; to discard changes in working directory)         </text>
-<text class="text fg" x="16" y="100.8">        modified:   examples/svgs/macos-style.svg                               </text>
-<text class="text fg" x="16" y="123.19999999999999">        modified:   src/animator/svg-animator.ts                                </text>
-<text class="text fg" x="16" y="168">Untracked files:                                                                </text>
-<text class="text fg" x="16" y="190.39999999999998">  (use &quot;git add &lt;file&gt;...&quot; to include in what will be committed)                </text>
-<text class="text fg" x="16" y="212.79999999999998">        neofetch.tape                                                           </text>
+<text class="text fg" x="16" y="56">Untracked files:                                                                </text>
+<text class="text fg" x="16" y="78.4">  (use &quot;git add &lt;file&gt;...&quot; to include in what will be committed)                </text>
+<text class="text fg" x="16" y="100.8">        examples/custom-font-test.cd                                            </text>
+<text class="text fg" x="16" y="123.19999999999999">        examples/embed-font-test.cd                                             </text>
+<text class="text fg" x="16" y="145.6">        examples/fonts/                                                         </text>
+<text class="text fg" x="16" y="168">        examples/svgs/custom-font-test.svg                                      </text>
+<text class="text fg" x="16" y="190.39999999999998">        examples/svgs/embed-font-test.svg                                       </text>
+<text class="text fg" x="16" y="212.79999999999998">        neofetch.gif                                                            </text>
 <text class="text fg" x="16" y="257.6">no changes added to commit (use &quot;git add&quot; and/or &quot;git commit -a&quot;)               </text>
 <text class="text f13" x="16" y="280">❯</text>
 <text class="text fg" x="25.6" y="280"> git add .                                                                     </text>
@@ -937,8 +951,8 @@
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.401222;0.407538;1.000000"
-      dur="9.66s"
+      keyTimes="0.000000;0.404178;0.410310;1.000000"
+      dur="9.62s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -954,13 +968,14 @@
 <circle cx="62" cy="20" r="6" fill="#27c93f"/>
 <text class="text fg" x="362" y="20" text-anchor="middle" style="dominant-baseline: central">my-project</text></g>
 <g class="text-layer">
-<text class="text fg" x="16" y="56">  (use &quot;git add &lt;file&gt;...&quot; to update what will be committed)                    </text>
-<text class="text fg" x="16" y="78.4">  (use &quot;git restore &lt;file&gt;...&quot; to discard changes in working directory)         </text>
-<text class="text fg" x="16" y="100.8">        modified:   examples/svgs/macos-style.svg                               </text>
-<text class="text fg" x="16" y="123.19999999999999">        modified:   src/animator/svg-animator.ts                                </text>
-<text class="text fg" x="16" y="168">Untracked files:                                                                </text>
-<text class="text fg" x="16" y="190.39999999999998">  (use &quot;git add &lt;file&gt;...&quot; to include in what will be committed)                </text>
-<text class="text fg" x="16" y="212.79999999999998">        neofetch.tape                                                           </text>
+<text class="text fg" x="16" y="56">Untracked files:                                                                </text>
+<text class="text fg" x="16" y="78.4">  (use &quot;git add &lt;file&gt;...&quot; to include in what will be committed)                </text>
+<text class="text fg" x="16" y="100.8">        examples/custom-font-test.cd                                            </text>
+<text class="text fg" x="16" y="123.19999999999999">        examples/embed-font-test.cd                                             </text>
+<text class="text fg" x="16" y="145.6">        examples/fonts/                                                         </text>
+<text class="text fg" x="16" y="168">        examples/svgs/custom-font-test.svg                                      </text>
+<text class="text fg" x="16" y="190.39999999999998">        examples/svgs/embed-font-test.svg                                       </text>
+<text class="text fg" x="16" y="212.79999999999998">        neofetch.gif                                                            </text>
 <text class="text fg" x="16" y="257.6">no changes added to commit (use &quot;git add&quot; and/or &quot;git commit -a&quot;)               </text>
 <text class="text f13" x="16" y="280">❯</text>
 <text class="text fg" x="25.6" y="280"> git add .                                                                     </text>
@@ -974,8 +989,8 @@
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.407538;0.413854;1.000000"
-      dur="9.66s"
+      keyTimes="0.000000;0.410310;0.416441;1.000000"
+      dur="9.62s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -991,13 +1006,14 @@
 <circle cx="62" cy="20" r="6" fill="#27c93f"/>
 <text class="text fg" x="362" y="20" text-anchor="middle" style="dominant-baseline: central">my-project</text></g>
 <g class="text-layer">
-<text class="text fg" x="16" y="56">  (use &quot;git add &lt;file&gt;...&quot; to update what will be committed)                    </text>
-<text class="text fg" x="16" y="78.4">  (use &quot;git restore &lt;file&gt;...&quot; to discard changes in working directory)         </text>
-<text class="text fg" x="16" y="100.8">        modified:   examples/svgs/macos-style.svg                               </text>
-<text class="text fg" x="16" y="123.19999999999999">        modified:   src/animator/svg-animator.ts                                </text>
-<text class="text fg" x="16" y="168">Untracked files:                                                                </text>
-<text class="text fg" x="16" y="190.39999999999998">  (use &quot;git add &lt;file&gt;...&quot; to include in what will be committed)                </text>
-<text class="text fg" x="16" y="212.79999999999998">        neofetch.tape                                                           </text>
+<text class="text fg" x="16" y="56">Untracked files:                                                                </text>
+<text class="text fg" x="16" y="78.4">  (use &quot;git add &lt;file&gt;...&quot; to include in what will be committed)                </text>
+<text class="text fg" x="16" y="100.8">        examples/custom-font-test.cd                                            </text>
+<text class="text fg" x="16" y="123.19999999999999">        examples/embed-font-test.cd                                             </text>
+<text class="text fg" x="16" y="145.6">        examples/fonts/                                                         </text>
+<text class="text fg" x="16" y="168">        examples/svgs/custom-font-test.svg                                      </text>
+<text class="text fg" x="16" y="190.39999999999998">        examples/svgs/embed-font-test.svg                                       </text>
+<text class="text fg" x="16" y="212.79999999999998">        neofetch.gif                                                            </text>
 <text class="text fg" x="16" y="257.6">no changes added to commit (use &quot;git add&quot; and/or &quot;git commit -a&quot;)               </text>
 <text class="text f13" x="16" y="280">❯</text>
 <text class="text fg" x="25.6" y="280"> git add .                                                                     </text>
@@ -1011,8 +1027,8 @@
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.413854;0.420170;1.000000"
-      dur="9.66s"
+      keyTimes="0.000000;0.416441;0.422573;1.000000"
+      dur="9.62s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -1028,13 +1044,14 @@
 <circle cx="62" cy="20" r="6" fill="#27c93f"/>
 <text class="text fg" x="362" y="20" text-anchor="middle" style="dominant-baseline: central">my-project</text></g>
 <g class="text-layer">
-<text class="text fg" x="16" y="56">  (use &quot;git add &lt;file&gt;...&quot; to update what will be committed)                    </text>
-<text class="text fg" x="16" y="78.4">  (use &quot;git restore &lt;file&gt;...&quot; to discard changes in working directory)         </text>
-<text class="text fg" x="16" y="100.8">        modified:   examples/svgs/macos-style.svg                               </text>
-<text class="text fg" x="16" y="123.19999999999999">        modified:   src/animator/svg-animator.ts                                </text>
-<text class="text fg" x="16" y="168">Untracked files:                                                                </text>
-<text class="text fg" x="16" y="190.39999999999998">  (use &quot;git add &lt;file&gt;...&quot; to include in what will be committed)                </text>
-<text class="text fg" x="16" y="212.79999999999998">        neofetch.tape                                                           </text>
+<text class="text fg" x="16" y="56">Untracked files:                                                                </text>
+<text class="text fg" x="16" y="78.4">  (use &quot;git add &lt;file&gt;...&quot; to include in what will be committed)                </text>
+<text class="text fg" x="16" y="100.8">        examples/custom-font-test.cd                                            </text>
+<text class="text fg" x="16" y="123.19999999999999">        examples/embed-font-test.cd                                             </text>
+<text class="text fg" x="16" y="145.6">        examples/fonts/                                                         </text>
+<text class="text fg" x="16" y="168">        examples/svgs/custom-font-test.svg                                      </text>
+<text class="text fg" x="16" y="190.39999999999998">        examples/svgs/embed-font-test.svg                                       </text>
+<text class="text fg" x="16" y="212.79999999999998">        neofetch.gif                                                            </text>
 <text class="text fg" x="16" y="257.6">no changes added to commit (use &quot;git add&quot; and/or &quot;git commit -a&quot;)               </text>
 <text class="text f13" x="16" y="280">❯</text>
 <text class="text fg" x="25.6" y="280"> git add .                                                                     </text>
@@ -1048,8 +1065,8 @@
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.420170;0.426693;1.000000"
-      dur="9.66s"
+      keyTimes="0.000000;0.422573;0.428705;1.000000"
+      dur="9.62s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -1065,13 +1082,14 @@
 <circle cx="62" cy="20" r="6" fill="#27c93f"/>
 <text class="text fg" x="362" y="20" text-anchor="middle" style="dominant-baseline: central">my-project</text></g>
 <g class="text-layer">
-<text class="text fg" x="16" y="56">  (use &quot;git add &lt;file&gt;...&quot; to update what will be committed)                    </text>
-<text class="text fg" x="16" y="78.4">  (use &quot;git restore &lt;file&gt;...&quot; to discard changes in working directory)         </text>
-<text class="text fg" x="16" y="100.8">        modified:   examples/svgs/macos-style.svg                               </text>
-<text class="text fg" x="16" y="123.19999999999999">        modified:   src/animator/svg-animator.ts                                </text>
-<text class="text fg" x="16" y="168">Untracked files:                                                                </text>
-<text class="text fg" x="16" y="190.39999999999998">  (use &quot;git add &lt;file&gt;...&quot; to include in what will be committed)                </text>
-<text class="text fg" x="16" y="212.79999999999998">        neofetch.tape                                                           </text>
+<text class="text fg" x="16" y="56">Untracked files:                                                                </text>
+<text class="text fg" x="16" y="78.4">  (use &quot;git add &lt;file&gt;...&quot; to include in what will be committed)                </text>
+<text class="text fg" x="16" y="100.8">        examples/custom-font-test.cd                                            </text>
+<text class="text fg" x="16" y="123.19999999999999">        examples/embed-font-test.cd                                             </text>
+<text class="text fg" x="16" y="145.6">        examples/fonts/                                                         </text>
+<text class="text fg" x="16" y="168">        examples/svgs/custom-font-test.svg                                      </text>
+<text class="text fg" x="16" y="190.39999999999998">        examples/svgs/embed-font-test.svg                                       </text>
+<text class="text fg" x="16" y="212.79999999999998">        neofetch.gif                                                            </text>
 <text class="text fg" x="16" y="257.6">no changes added to commit (use &quot;git add&quot; and/or &quot;git commit -a&quot;)               </text>
 <text class="text f13" x="16" y="280">❯</text>
 <text class="text fg" x="25.6" y="280"> git add .                                                                     </text>
@@ -1085,8 +1103,8 @@
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.426693;0.433423;1.000000"
-      dur="9.66s"
+      keyTimes="0.000000;0.428705;0.434733;1.000000"
+      dur="9.62s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -1102,13 +1120,14 @@
 <circle cx="62" cy="20" r="6" fill="#27c93f"/>
 <text class="text fg" x="362" y="20" text-anchor="middle" style="dominant-baseline: central">my-project</text></g>
 <g class="text-layer">
-<text class="text fg" x="16" y="56">  (use &quot;git add &lt;file&gt;...&quot; to update what will be committed)                    </text>
-<text class="text fg" x="16" y="78.4">  (use &quot;git restore &lt;file&gt;...&quot; to discard changes in working directory)         </text>
-<text class="text fg" x="16" y="100.8">        modified:   examples/svgs/macos-style.svg                               </text>
-<text class="text fg" x="16" y="123.19999999999999">        modified:   src/animator/svg-animator.ts                                </text>
-<text class="text fg" x="16" y="168">Untracked files:                                                                </text>
-<text class="text fg" x="16" y="190.39999999999998">  (use &quot;git add &lt;file&gt;...&quot; to include in what will be committed)                </text>
-<text class="text fg" x="16" y="212.79999999999998">        neofetch.tape                                                           </text>
+<text class="text fg" x="16" y="56">Untracked files:                                                                </text>
+<text class="text fg" x="16" y="78.4">  (use &quot;git add &lt;file&gt;...&quot; to include in what will be committed)                </text>
+<text class="text fg" x="16" y="100.8">        examples/custom-font-test.cd                                            </text>
+<text class="text fg" x="16" y="123.19999999999999">        examples/embed-font-test.cd                                             </text>
+<text class="text fg" x="16" y="145.6">        examples/fonts/                                                         </text>
+<text class="text fg" x="16" y="168">        examples/svgs/custom-font-test.svg                                      </text>
+<text class="text fg" x="16" y="190.39999999999998">        examples/svgs/embed-font-test.svg                                       </text>
+<text class="text fg" x="16" y="212.79999999999998">        neofetch.gif                                                            </text>
 <text class="text fg" x="16" y="257.6">no changes added to commit (use &quot;git add&quot; and/or &quot;git commit -a&quot;)               </text>
 <text class="text f13" x="16" y="280">❯</text>
 <text class="text fg" x="25.6" y="280"> git add .                                                                     </text>
@@ -1122,8 +1141,8 @@
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.433423;0.440257;1.000000"
-      dur="9.66s"
+      keyTimes="0.000000;0.434733;0.440865;1.000000"
+      dur="9.62s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -1139,13 +1158,14 @@
 <circle cx="62" cy="20" r="6" fill="#27c93f"/>
 <text class="text fg" x="362" y="20" text-anchor="middle" style="dominant-baseline: central">my-project</text></g>
 <g class="text-layer">
-<text class="text fg" x="16" y="56">  (use &quot;git add &lt;file&gt;...&quot; to update what will be committed)                    </text>
-<text class="text fg" x="16" y="78.4">  (use &quot;git restore &lt;file&gt;...&quot; to discard changes in working directory)         </text>
-<text class="text fg" x="16" y="100.8">        modified:   examples/svgs/macos-style.svg                               </text>
-<text class="text fg" x="16" y="123.19999999999999">        modified:   src/animator/svg-animator.ts                                </text>
-<text class="text fg" x="16" y="168">Untracked files:                                                                </text>
-<text class="text fg" x="16" y="190.39999999999998">  (use &quot;git add &lt;file&gt;...&quot; to include in what will be committed)                </text>
-<text class="text fg" x="16" y="212.79999999999998">        neofetch.tape                                                           </text>
+<text class="text fg" x="16" y="56">Untracked files:                                                                </text>
+<text class="text fg" x="16" y="78.4">  (use &quot;git add &lt;file&gt;...&quot; to include in what will be committed)                </text>
+<text class="text fg" x="16" y="100.8">        examples/custom-font-test.cd                                            </text>
+<text class="text fg" x="16" y="123.19999999999999">        examples/embed-font-test.cd                                             </text>
+<text class="text fg" x="16" y="145.6">        examples/fonts/                                                         </text>
+<text class="text fg" x="16" y="168">        examples/svgs/custom-font-test.svg                                      </text>
+<text class="text fg" x="16" y="190.39999999999998">        examples/svgs/embed-font-test.svg                                       </text>
+<text class="text fg" x="16" y="212.79999999999998">        neofetch.gif                                                            </text>
 <text class="text fg" x="16" y="257.6">no changes added to commit (use &quot;git add&quot; and/or &quot;git commit -a&quot;)               </text>
 <text class="text f13" x="16" y="280">❯</text>
 <text class="text fg" x="25.6" y="280"> git add .                                                                     </text>
@@ -1159,8 +1179,8 @@
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.440257;0.446573;1.000000"
-      dur="9.66s"
+      keyTimes="0.000000;0.440865;0.446996;1.000000"
+      dur="9.62s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -1176,13 +1196,14 @@
 <circle cx="62" cy="20" r="6" fill="#27c93f"/>
 <text class="text fg" x="362" y="20" text-anchor="middle" style="dominant-baseline: central">my-project</text></g>
 <g class="text-layer">
-<text class="text fg" x="16" y="56">  (use &quot;git add &lt;file&gt;...&quot; to update what will be committed)                    </text>
-<text class="text fg" x="16" y="78.4">  (use &quot;git restore &lt;file&gt;...&quot; to discard changes in working directory)         </text>
-<text class="text fg" x="16" y="100.8">        modified:   examples/svgs/macos-style.svg                               </text>
-<text class="text fg" x="16" y="123.19999999999999">        modified:   src/animator/svg-animator.ts                                </text>
-<text class="text fg" x="16" y="168">Untracked files:                                                                </text>
-<text class="text fg" x="16" y="190.39999999999998">  (use &quot;git add &lt;file&gt;...&quot; to include in what will be committed)                </text>
-<text class="text fg" x="16" y="212.79999999999998">        neofetch.tape                                                           </text>
+<text class="text fg" x="16" y="56">Untracked files:                                                                </text>
+<text class="text fg" x="16" y="78.4">  (use &quot;git add &lt;file&gt;...&quot; to include in what will be committed)                </text>
+<text class="text fg" x="16" y="100.8">        examples/custom-font-test.cd                                            </text>
+<text class="text fg" x="16" y="123.19999999999999">        examples/embed-font-test.cd                                             </text>
+<text class="text fg" x="16" y="145.6">        examples/fonts/                                                         </text>
+<text class="text fg" x="16" y="168">        examples/svgs/custom-font-test.svg                                      </text>
+<text class="text fg" x="16" y="190.39999999999998">        examples/svgs/embed-font-test.svg                                       </text>
+<text class="text fg" x="16" y="212.79999999999998">        neofetch.gif                                                            </text>
 <text class="text fg" x="16" y="257.6">no changes added to commit (use &quot;git add&quot; and/or &quot;git commit -a&quot;)               </text>
 <text class="text f13" x="16" y="280">❯</text>
 <text class="text fg" x="25.6" y="280"> git add .                                                                     </text>
@@ -1196,8 +1217,8 @@
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.446573;0.452889;1.000000"
-      dur="9.66s"
+      keyTimes="0.000000;0.446996;0.453024;1.000000"
+      dur="9.62s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -1213,13 +1234,14 @@
 <circle cx="62" cy="20" r="6" fill="#27c93f"/>
 <text class="text fg" x="362" y="20" text-anchor="middle" style="dominant-baseline: central">my-project</text></g>
 <g class="text-layer">
-<text class="text fg" x="16" y="56">  (use &quot;git add &lt;file&gt;...&quot; to update what will be committed)                    </text>
-<text class="text fg" x="16" y="78.4">  (use &quot;git restore &lt;file&gt;...&quot; to discard changes in working directory)         </text>
-<text class="text fg" x="16" y="100.8">        modified:   examples/svgs/macos-style.svg                               </text>
-<text class="text fg" x="16" y="123.19999999999999">        modified:   src/animator/svg-animator.ts                                </text>
-<text class="text fg" x="16" y="168">Untracked files:                                                                </text>
-<text class="text fg" x="16" y="190.39999999999998">  (use &quot;git add &lt;file&gt;...&quot; to include in what will be committed)                </text>
-<text class="text fg" x="16" y="212.79999999999998">        neofetch.tape                                                           </text>
+<text class="text fg" x="16" y="56">Untracked files:                                                                </text>
+<text class="text fg" x="16" y="78.4">  (use &quot;git add &lt;file&gt;...&quot; to include in what will be committed)                </text>
+<text class="text fg" x="16" y="100.8">        examples/custom-font-test.cd                                            </text>
+<text class="text fg" x="16" y="123.19999999999999">        examples/embed-font-test.cd                                             </text>
+<text class="text fg" x="16" y="145.6">        examples/fonts/                                                         </text>
+<text class="text fg" x="16" y="168">        examples/svgs/custom-font-test.svg                                      </text>
+<text class="text fg" x="16" y="190.39999999999998">        examples/svgs/embed-font-test.svg                                       </text>
+<text class="text fg" x="16" y="212.79999999999998">        neofetch.gif                                                            </text>
 <text class="text fg" x="16" y="257.6">no changes added to commit (use &quot;git add&quot; and/or &quot;git commit -a&quot;)               </text>
 <text class="text f13" x="16" y="280">❯</text>
 <text class="text fg" x="25.6" y="280"> git add .                                                                     </text>
@@ -1233,8 +1255,8 @@
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.452889;0.459308;1.000000"
-      dur="9.66s"
+      keyTimes="0.000000;0.453024;0.458948;1.000000"
+      dur="9.62s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -1250,13 +1272,14 @@
 <circle cx="62" cy="20" r="6" fill="#27c93f"/>
 <text class="text fg" x="362" y="20" text-anchor="middle" style="dominant-baseline: central">my-project</text></g>
 <g class="text-layer">
-<text class="text fg" x="16" y="56">  (use &quot;git add &lt;file&gt;...&quot; to update what will be committed)                    </text>
-<text class="text fg" x="16" y="78.4">  (use &quot;git restore &lt;file&gt;...&quot; to discard changes in working directory)         </text>
-<text class="text fg" x="16" y="100.8">        modified:   examples/svgs/macos-style.svg                               </text>
-<text class="text fg" x="16" y="123.19999999999999">        modified:   src/animator/svg-animator.ts                                </text>
-<text class="text fg" x="16" y="168">Untracked files:                                                                </text>
-<text class="text fg" x="16" y="190.39999999999998">  (use &quot;git add &lt;file&gt;...&quot; to include in what will be committed)                </text>
-<text class="text fg" x="16" y="212.79999999999998">        neofetch.tape                                                           </text>
+<text class="text fg" x="16" y="56">Untracked files:                                                                </text>
+<text class="text fg" x="16" y="78.4">  (use &quot;git add &lt;file&gt;...&quot; to include in what will be committed)                </text>
+<text class="text fg" x="16" y="100.8">        examples/custom-font-test.cd                                            </text>
+<text class="text fg" x="16" y="123.19999999999999">        examples/embed-font-test.cd                                             </text>
+<text class="text fg" x="16" y="145.6">        examples/fonts/                                                         </text>
+<text class="text fg" x="16" y="168">        examples/svgs/custom-font-test.svg                                      </text>
+<text class="text fg" x="16" y="190.39999999999998">        examples/svgs/embed-font-test.svg                                       </text>
+<text class="text fg" x="16" y="212.79999999999998">        neofetch.gif                                                            </text>
 <text class="text fg" x="16" y="257.6">no changes added to commit (use &quot;git add&quot; and/or &quot;git commit -a&quot;)               </text>
 <text class="text f13" x="16" y="280">❯</text>
 <text class="text fg" x="25.6" y="280"> git add .                                                                     </text>
@@ -1270,8 +1293,8 @@
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.459308;0.465624;1.000000"
-      dur="9.66s"
+      keyTimes="0.000000;0.458948;0.464872;1.000000"
+      dur="9.62s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -1287,13 +1310,14 @@
 <circle cx="62" cy="20" r="6" fill="#27c93f"/>
 <text class="text fg" x="362" y="20" text-anchor="middle" style="dominant-baseline: central">my-project</text></g>
 <g class="text-layer">
-<text class="text fg" x="16" y="56">  (use &quot;git add &lt;file&gt;...&quot; to update what will be committed)                    </text>
-<text class="text fg" x="16" y="78.4">  (use &quot;git restore &lt;file&gt;...&quot; to discard changes in working directory)         </text>
-<text class="text fg" x="16" y="100.8">        modified:   examples/svgs/macos-style.svg                               </text>
-<text class="text fg" x="16" y="123.19999999999999">        modified:   src/animator/svg-animator.ts                                </text>
-<text class="text fg" x="16" y="168">Untracked files:                                                                </text>
-<text class="text fg" x="16" y="190.39999999999998">  (use &quot;git add &lt;file&gt;...&quot; to include in what will be committed)                </text>
-<text class="text fg" x="16" y="212.79999999999998">        neofetch.tape                                                           </text>
+<text class="text fg" x="16" y="56">Untracked files:                                                                </text>
+<text class="text fg" x="16" y="78.4">  (use &quot;git add &lt;file&gt;...&quot; to include in what will be committed)                </text>
+<text class="text fg" x="16" y="100.8">        examples/custom-font-test.cd                                            </text>
+<text class="text fg" x="16" y="123.19999999999999">        examples/embed-font-test.cd                                             </text>
+<text class="text fg" x="16" y="145.6">        examples/fonts/                                                         </text>
+<text class="text fg" x="16" y="168">        examples/svgs/custom-font-test.svg                                      </text>
+<text class="text fg" x="16" y="190.39999999999998">        examples/svgs/embed-font-test.svg                                       </text>
+<text class="text fg" x="16" y="212.79999999999998">        neofetch.gif                                                            </text>
 <text class="text fg" x="16" y="257.6">no changes added to commit (use &quot;git add&quot; and/or &quot;git commit -a&quot;)               </text>
 <text class="text f13" x="16" y="280">❯</text>
 <text class="text fg" x="25.6" y="280"> git add .                                                                     </text>
@@ -1307,8 +1331,8 @@
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.465624;0.471837;1.000000"
-      dur="9.66s"
+      keyTimes="0.000000;0.464872;0.470796;1.000000"
+      dur="9.62s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -1324,13 +1348,14 @@
 <circle cx="62" cy="20" r="6" fill="#27c93f"/>
 <text class="text fg" x="362" y="20" text-anchor="middle" style="dominant-baseline: central">my-project</text></g>
 <g class="text-layer">
-<text class="text fg" x="16" y="56">  (use &quot;git add &lt;file&gt;...&quot; to update what will be committed)                    </text>
-<text class="text fg" x="16" y="78.4">  (use &quot;git restore &lt;file&gt;...&quot; to discard changes in working directory)         </text>
-<text class="text fg" x="16" y="100.8">        modified:   examples/svgs/macos-style.svg                               </text>
-<text class="text fg" x="16" y="123.19999999999999">        modified:   src/animator/svg-animator.ts                                </text>
-<text class="text fg" x="16" y="168">Untracked files:                                                                </text>
-<text class="text fg" x="16" y="190.39999999999998">  (use &quot;git add &lt;file&gt;...&quot; to include in what will be committed)                </text>
-<text class="text fg" x="16" y="212.79999999999998">        neofetch.tape                                                           </text>
+<text class="text fg" x="16" y="56">Untracked files:                                                                </text>
+<text class="text fg" x="16" y="78.4">  (use &quot;git add &lt;file&gt;...&quot; to include in what will be committed)                </text>
+<text class="text fg" x="16" y="100.8">        examples/custom-font-test.cd                                            </text>
+<text class="text fg" x="16" y="123.19999999999999">        examples/embed-font-test.cd                                             </text>
+<text class="text fg" x="16" y="145.6">        examples/fonts/                                                         </text>
+<text class="text fg" x="16" y="168">        examples/svgs/custom-font-test.svg                                      </text>
+<text class="text fg" x="16" y="190.39999999999998">        examples/svgs/embed-font-test.svg                                       </text>
+<text class="text fg" x="16" y="212.79999999999998">        neofetch.gif                                                            </text>
 <text class="text fg" x="16" y="257.6">no changes added to commit (use &quot;git add&quot; and/or &quot;git commit -a&quot;)               </text>
 <text class="text f13" x="16" y="280">❯</text>
 <text class="text fg" x="25.6" y="280"> git add .                                                                     </text>
@@ -1344,8 +1369,8 @@
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.471837;0.478049;1.000000"
-      dur="9.66s"
+      keyTimes="0.000000;0.470796;0.476824;1.000000"
+      dur="9.62s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -1361,13 +1386,14 @@
 <circle cx="62" cy="20" r="6" fill="#27c93f"/>
 <text class="text fg" x="362" y="20" text-anchor="middle" style="dominant-baseline: central">my-project</text></g>
 <g class="text-layer">
-<text class="text fg" x="16" y="56">  (use &quot;git add &lt;file&gt;...&quot; to update what will be committed)                    </text>
-<text class="text fg" x="16" y="78.4">  (use &quot;git restore &lt;file&gt;...&quot; to discard changes in working directory)         </text>
-<text class="text fg" x="16" y="100.8">        modified:   examples/svgs/macos-style.svg                               </text>
-<text class="text fg" x="16" y="123.19999999999999">        modified:   src/animator/svg-animator.ts                                </text>
-<text class="text fg" x="16" y="168">Untracked files:                                                                </text>
-<text class="text fg" x="16" y="190.39999999999998">  (use &quot;git add &lt;file&gt;...&quot; to include in what will be committed)                </text>
-<text class="text fg" x="16" y="212.79999999999998">        neofetch.tape                                                           </text>
+<text class="text fg" x="16" y="56">Untracked files:                                                                </text>
+<text class="text fg" x="16" y="78.4">  (use &quot;git add &lt;file&gt;...&quot; to include in what will be committed)                </text>
+<text class="text fg" x="16" y="100.8">        examples/custom-font-test.cd                                            </text>
+<text class="text fg" x="16" y="123.19999999999999">        examples/embed-font-test.cd                                             </text>
+<text class="text fg" x="16" y="145.6">        examples/fonts/                                                         </text>
+<text class="text fg" x="16" y="168">        examples/svgs/custom-font-test.svg                                      </text>
+<text class="text fg" x="16" y="190.39999999999998">        examples/svgs/embed-font-test.svg                                       </text>
+<text class="text fg" x="16" y="212.79999999999998">        neofetch.gif                                                            </text>
 <text class="text fg" x="16" y="257.6">no changes added to commit (use &quot;git add&quot; and/or &quot;git commit -a&quot;)               </text>
 <text class="text f13" x="16" y="280">❯</text>
 <text class="text fg" x="25.6" y="280"> git add .                                                                     </text>
@@ -1381,8 +1407,8 @@
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.478049;0.484158;1.000000"
-      dur="9.66s"
+      keyTimes="0.000000;0.476824;0.482852;1.000000"
+      dur="9.62s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -1398,13 +1424,14 @@
 <circle cx="62" cy="20" r="6" fill="#27c93f"/>
 <text class="text fg" x="362" y="20" text-anchor="middle" style="dominant-baseline: central">my-project</text></g>
 <g class="text-layer">
-<text class="text fg" x="16" y="56">  (use &quot;git add &lt;file&gt;...&quot; to update what will be committed)                    </text>
-<text class="text fg" x="16" y="78.4">  (use &quot;git restore &lt;file&gt;...&quot; to discard changes in working directory)         </text>
-<text class="text fg" x="16" y="100.8">        modified:   examples/svgs/macos-style.svg                               </text>
-<text class="text fg" x="16" y="123.19999999999999">        modified:   src/animator/svg-animator.ts                                </text>
-<text class="text fg" x="16" y="168">Untracked files:                                                                </text>
-<text class="text fg" x="16" y="190.39999999999998">  (use &quot;git add &lt;file&gt;...&quot; to include in what will be committed)                </text>
-<text class="text fg" x="16" y="212.79999999999998">        neofetch.tape                                                           </text>
+<text class="text fg" x="16" y="56">Untracked files:                                                                </text>
+<text class="text fg" x="16" y="78.4">  (use &quot;git add &lt;file&gt;...&quot; to include in what will be committed)                </text>
+<text class="text fg" x="16" y="100.8">        examples/custom-font-test.cd                                            </text>
+<text class="text fg" x="16" y="123.19999999999999">        examples/embed-font-test.cd                                             </text>
+<text class="text fg" x="16" y="145.6">        examples/fonts/                                                         </text>
+<text class="text fg" x="16" y="168">        examples/svgs/custom-font-test.svg                                      </text>
+<text class="text fg" x="16" y="190.39999999999998">        examples/svgs/embed-font-test.svg                                       </text>
+<text class="text fg" x="16" y="212.79999999999998">        neofetch.gif                                                            </text>
 <text class="text fg" x="16" y="257.6">no changes added to commit (use &quot;git add&quot; and/or &quot;git commit -a&quot;)               </text>
 <text class="text f13" x="16" y="280">❯</text>
 <text class="text fg" x="25.6" y="280"> git add .                                                                     </text>
@@ -1418,8 +1445,8 @@
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.484158;0.490474;1.000000"
-      dur="9.66s"
+      keyTimes="0.000000;0.482852;0.488984;1.000000"
+      dur="9.62s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -1435,13 +1462,14 @@
 <circle cx="62" cy="20" r="6" fill="#27c93f"/>
 <text class="text fg" x="362" y="20" text-anchor="middle" style="dominant-baseline: central">my-project</text></g>
 <g class="text-layer">
-<text class="text fg" x="16" y="56">  (use &quot;git add &lt;file&gt;...&quot; to update what will be committed)                    </text>
-<text class="text fg" x="16" y="78.4">  (use &quot;git restore &lt;file&gt;...&quot; to discard changes in working directory)         </text>
-<text class="text fg" x="16" y="100.8">        modified:   examples/svgs/macos-style.svg                               </text>
-<text class="text fg" x="16" y="123.19999999999999">        modified:   src/animator/svg-animator.ts                                </text>
-<text class="text fg" x="16" y="168">Untracked files:                                                                </text>
-<text class="text fg" x="16" y="190.39999999999998">  (use &quot;git add &lt;file&gt;...&quot; to include in what will be committed)                </text>
-<text class="text fg" x="16" y="212.79999999999998">        neofetch.tape                                                           </text>
+<text class="text fg" x="16" y="56">Untracked files:                                                                </text>
+<text class="text fg" x="16" y="78.4">  (use &quot;git add &lt;file&gt;...&quot; to include in what will be committed)                </text>
+<text class="text fg" x="16" y="100.8">        examples/custom-font-test.cd                                            </text>
+<text class="text fg" x="16" y="123.19999999999999">        examples/embed-font-test.cd                                             </text>
+<text class="text fg" x="16" y="145.6">        examples/fonts/                                                         </text>
+<text class="text fg" x="16" y="168">        examples/svgs/custom-font-test.svg                                      </text>
+<text class="text fg" x="16" y="190.39999999999998">        examples/svgs/embed-font-test.svg                                       </text>
+<text class="text fg" x="16" y="212.79999999999998">        neofetch.gif                                                            </text>
 <text class="text fg" x="16" y="257.6">no changes added to commit (use &quot;git add&quot; and/or &quot;git commit -a&quot;)               </text>
 <text class="text f13" x="16" y="280">❯</text>
 <text class="text fg" x="25.6" y="280"> git add .                                                                     </text>
@@ -1455,8 +1483,8 @@
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.490474;0.496687;1.000000"
-      dur="9.66s"
+      keyTimes="0.000000;0.488984;0.494908;1.000000"
+      dur="9.62s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -1472,13 +1500,14 @@
 <circle cx="62" cy="20" r="6" fill="#27c93f"/>
 <text class="text fg" x="362" y="20" text-anchor="middle" style="dominant-baseline: central">my-project</text></g>
 <g class="text-layer">
-<text class="text fg" x="16" y="56">  (use &quot;git add &lt;file&gt;...&quot; to update what will be committed)                    </text>
-<text class="text fg" x="16" y="78.4">  (use &quot;git restore &lt;file&gt;...&quot; to discard changes in working directory)         </text>
-<text class="text fg" x="16" y="100.8">        modified:   examples/svgs/macos-style.svg                               </text>
-<text class="text fg" x="16" y="123.19999999999999">        modified:   src/animator/svg-animator.ts                                </text>
-<text class="text fg" x="16" y="168">Untracked files:                                                                </text>
-<text class="text fg" x="16" y="190.39999999999998">  (use &quot;git add &lt;file&gt;...&quot; to include in what will be committed)                </text>
-<text class="text fg" x="16" y="212.79999999999998">        neofetch.tape                                                           </text>
+<text class="text fg" x="16" y="56">Untracked files:                                                                </text>
+<text class="text fg" x="16" y="78.4">  (use &quot;git add &lt;file&gt;...&quot; to include in what will be committed)                </text>
+<text class="text fg" x="16" y="100.8">        examples/custom-font-test.cd                                            </text>
+<text class="text fg" x="16" y="123.19999999999999">        examples/embed-font-test.cd                                             </text>
+<text class="text fg" x="16" y="145.6">        examples/fonts/                                                         </text>
+<text class="text fg" x="16" y="168">        examples/svgs/custom-font-test.svg                                      </text>
+<text class="text fg" x="16" y="190.39999999999998">        examples/svgs/embed-font-test.svg                                       </text>
+<text class="text fg" x="16" y="212.79999999999998">        neofetch.gif                                                            </text>
 <text class="text fg" x="16" y="257.6">no changes added to commit (use &quot;git add&quot; and/or &quot;git commit -a&quot;)               </text>
 <text class="text f13" x="16" y="280">❯</text>
 <text class="text fg" x="25.6" y="280"> git add .                                                                     </text>
@@ -1492,8 +1521,8 @@
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.496687;0.502899;1.000000"
-      dur="9.66s"
+      keyTimes="0.000000;0.494908;0.500831;1.000000"
+      dur="9.62s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -1509,13 +1538,14 @@
 <circle cx="62" cy="20" r="6" fill="#27c93f"/>
 <text class="text fg" x="362" y="20" text-anchor="middle" style="dominant-baseline: central">my-project</text></g>
 <g class="text-layer">
-<text class="text fg" x="16" y="56">  (use &quot;git add &lt;file&gt;...&quot; to update what will be committed)                    </text>
-<text class="text fg" x="16" y="78.4">  (use &quot;git restore &lt;file&gt;...&quot; to discard changes in working directory)         </text>
-<text class="text fg" x="16" y="100.8">        modified:   examples/svgs/macos-style.svg                               </text>
-<text class="text fg" x="16" y="123.19999999999999">        modified:   src/animator/svg-animator.ts                                </text>
-<text class="text fg" x="16" y="168">Untracked files:                                                                </text>
-<text class="text fg" x="16" y="190.39999999999998">  (use &quot;git add &lt;file&gt;...&quot; to include in what will be committed)                </text>
-<text class="text fg" x="16" y="212.79999999999998">        neofetch.tape                                                           </text>
+<text class="text fg" x="16" y="56">Untracked files:                                                                </text>
+<text class="text fg" x="16" y="78.4">  (use &quot;git add &lt;file&gt;...&quot; to include in what will be committed)                </text>
+<text class="text fg" x="16" y="100.8">        examples/custom-font-test.cd                                            </text>
+<text class="text fg" x="16" y="123.19999999999999">        examples/embed-font-test.cd                                             </text>
+<text class="text fg" x="16" y="145.6">        examples/fonts/                                                         </text>
+<text class="text fg" x="16" y="168">        examples/svgs/custom-font-test.svg                                      </text>
+<text class="text fg" x="16" y="190.39999999999998">        examples/svgs/embed-font-test.svg                                       </text>
+<text class="text fg" x="16" y="212.79999999999998">        neofetch.gif                                                            </text>
 <text class="text fg" x="16" y="257.6">no changes added to commit (use &quot;git add&quot; and/or &quot;git commit -a&quot;)               </text>
 <text class="text f13" x="16" y="280">❯</text>
 <text class="text fg" x="25.6" y="280"> git add .                                                                     </text>
@@ -1529,8 +1559,8 @@
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.502899;0.509112;1.000000"
-      dur="9.66s"
+      keyTimes="0.000000;0.500831;0.506859;1.000000"
+      dur="9.62s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -1546,13 +1576,14 @@
 <circle cx="62" cy="20" r="6" fill="#27c93f"/>
 <text class="text fg" x="362" y="20" text-anchor="middle" style="dominant-baseline: central">my-project</text></g>
 <g class="text-layer">
-<text class="text fg" x="16" y="56">  (use &quot;git add &lt;file&gt;...&quot; to update what will be committed)                    </text>
-<text class="text fg" x="16" y="78.4">  (use &quot;git restore &lt;file&gt;...&quot; to discard changes in working directory)         </text>
-<text class="text fg" x="16" y="100.8">        modified:   examples/svgs/macos-style.svg                               </text>
-<text class="text fg" x="16" y="123.19999999999999">        modified:   src/animator/svg-animator.ts                                </text>
-<text class="text fg" x="16" y="168">Untracked files:                                                                </text>
-<text class="text fg" x="16" y="190.39999999999998">  (use &quot;git add &lt;file&gt;...&quot; to include in what will be committed)                </text>
-<text class="text fg" x="16" y="212.79999999999998">        neofetch.tape                                                           </text>
+<text class="text fg" x="16" y="56">Untracked files:                                                                </text>
+<text class="text fg" x="16" y="78.4">  (use &quot;git add &lt;file&gt;...&quot; to include in what will be committed)                </text>
+<text class="text fg" x="16" y="100.8">        examples/custom-font-test.cd                                            </text>
+<text class="text fg" x="16" y="123.19999999999999">        examples/embed-font-test.cd                                             </text>
+<text class="text fg" x="16" y="145.6">        examples/fonts/                                                         </text>
+<text class="text fg" x="16" y="168">        examples/svgs/custom-font-test.svg                                      </text>
+<text class="text fg" x="16" y="190.39999999999998">        examples/svgs/embed-font-test.svg                                       </text>
+<text class="text fg" x="16" y="212.79999999999998">        neofetch.gif                                                            </text>
 <text class="text fg" x="16" y="257.6">no changes added to commit (use &quot;git add&quot; and/or &quot;git commit -a&quot;)               </text>
 <text class="text f13" x="16" y="280">❯</text>
 <text class="text fg" x="25.6" y="280"> git add .                                                                     </text>
@@ -1566,8 +1597,8 @@
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.509112;0.515428;1.000000"
-      dur="9.66s"
+      keyTimes="0.000000;0.506859;0.512991;1.000000"
+      dur="9.62s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -1583,13 +1614,14 @@
 <circle cx="62" cy="20" r="6" fill="#27c93f"/>
 <text class="text fg" x="362" y="20" text-anchor="middle" style="dominant-baseline: central">my-project</text></g>
 <g class="text-layer">
-<text class="text fg" x="16" y="56">  (use &quot;git add &lt;file&gt;...&quot; to update what will be committed)                    </text>
-<text class="text fg" x="16" y="78.4">  (use &quot;git restore &lt;file&gt;...&quot; to discard changes in working directory)         </text>
-<text class="text fg" x="16" y="100.8">        modified:   examples/svgs/macos-style.svg                               </text>
-<text class="text fg" x="16" y="123.19999999999999">        modified:   src/animator/svg-animator.ts                                </text>
-<text class="text fg" x="16" y="168">Untracked files:                                                                </text>
-<text class="text fg" x="16" y="190.39999999999998">  (use &quot;git add &lt;file&gt;...&quot; to include in what will be committed)                </text>
-<text class="text fg" x="16" y="212.79999999999998">        neofetch.tape                                                           </text>
+<text class="text fg" x="16" y="56">Untracked files:                                                                </text>
+<text class="text fg" x="16" y="78.4">  (use &quot;git add &lt;file&gt;...&quot; to include in what will be committed)                </text>
+<text class="text fg" x="16" y="100.8">        examples/custom-font-test.cd                                            </text>
+<text class="text fg" x="16" y="123.19999999999999">        examples/embed-font-test.cd                                             </text>
+<text class="text fg" x="16" y="145.6">        examples/fonts/                                                         </text>
+<text class="text fg" x="16" y="168">        examples/svgs/custom-font-test.svg                                      </text>
+<text class="text fg" x="16" y="190.39999999999998">        examples/svgs/embed-font-test.svg                                       </text>
+<text class="text fg" x="16" y="212.79999999999998">        neofetch.gif                                                            </text>
 <text class="text fg" x="16" y="257.6">no changes added to commit (use &quot;git add&quot; and/or &quot;git commit -a&quot;)               </text>
 <text class="text f13" x="16" y="280">❯</text>
 <text class="text fg" x="25.6" y="280"> git add .                                                                     </text>
@@ -1603,8 +1635,8 @@
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.515428;0.521640;1.000000"
-      dur="9.66s"
+      keyTimes="0.000000;0.512991;0.519123;1.000000"
+      dur="9.62s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -1620,13 +1652,14 @@
 <circle cx="62" cy="20" r="6" fill="#27c93f"/>
 <text class="text fg" x="362" y="20" text-anchor="middle" style="dominant-baseline: central">my-project</text></g>
 <g class="text-layer">
-<text class="text fg" x="16" y="56">  (use &quot;git add &lt;file&gt;...&quot; to update what will be committed)                    </text>
-<text class="text fg" x="16" y="78.4">  (use &quot;git restore &lt;file&gt;...&quot; to discard changes in working directory)         </text>
-<text class="text fg" x="16" y="100.8">        modified:   examples/svgs/macos-style.svg                               </text>
-<text class="text fg" x="16" y="123.19999999999999">        modified:   src/animator/svg-animator.ts                                </text>
-<text class="text fg" x="16" y="168">Untracked files:                                                                </text>
-<text class="text fg" x="16" y="190.39999999999998">  (use &quot;git add &lt;file&gt;...&quot; to include in what will be committed)                </text>
-<text class="text fg" x="16" y="212.79999999999998">        neofetch.tape                                                           </text>
+<text class="text fg" x="16" y="56">Untracked files:                                                                </text>
+<text class="text fg" x="16" y="78.4">  (use &quot;git add &lt;file&gt;...&quot; to include in what will be committed)                </text>
+<text class="text fg" x="16" y="100.8">        examples/custom-font-test.cd                                            </text>
+<text class="text fg" x="16" y="123.19999999999999">        examples/embed-font-test.cd                                             </text>
+<text class="text fg" x="16" y="145.6">        examples/fonts/                                                         </text>
+<text class="text fg" x="16" y="168">        examples/svgs/custom-font-test.svg                                      </text>
+<text class="text fg" x="16" y="190.39999999999998">        examples/svgs/embed-font-test.svg                                       </text>
+<text class="text fg" x="16" y="212.79999999999998">        neofetch.gif                                                            </text>
 <text class="text fg" x="16" y="257.6">no changes added to commit (use &quot;git add&quot; and/or &quot;git commit -a&quot;)               </text>
 <text class="text f13" x="16" y="280">❯</text>
 <text class="text fg" x="25.6" y="280"> git add .                                                                     </text>
@@ -1640,8 +1673,8 @@
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.521640;0.527853;1.000000"
-      dur="9.66s"
+      keyTimes="0.000000;0.519123;0.525255;1.000000"
+      dur="9.62s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -1657,13 +1690,14 @@
 <circle cx="62" cy="20" r="6" fill="#27c93f"/>
 <text class="text fg" x="362" y="20" text-anchor="middle" style="dominant-baseline: central">my-project</text></g>
 <g class="text-layer">
-<text class="text fg" x="16" y="56">  (use &quot;git add &lt;file&gt;...&quot; to update what will be committed)                    </text>
-<text class="text fg" x="16" y="78.4">  (use &quot;git restore &lt;file&gt;...&quot; to discard changes in working directory)         </text>
-<text class="text fg" x="16" y="100.8">        modified:   examples/svgs/macos-style.svg                               </text>
-<text class="text fg" x="16" y="123.19999999999999">        modified:   src/animator/svg-animator.ts                                </text>
-<text class="text fg" x="16" y="168">Untracked files:                                                                </text>
-<text class="text fg" x="16" y="190.39999999999998">  (use &quot;git add &lt;file&gt;...&quot; to include in what will be committed)                </text>
-<text class="text fg" x="16" y="212.79999999999998">        neofetch.tape                                                           </text>
+<text class="text fg" x="16" y="56">Untracked files:                                                                </text>
+<text class="text fg" x="16" y="78.4">  (use &quot;git add &lt;file&gt;...&quot; to include in what will be committed)                </text>
+<text class="text fg" x="16" y="100.8">        examples/custom-font-test.cd                                            </text>
+<text class="text fg" x="16" y="123.19999999999999">        examples/embed-font-test.cd                                             </text>
+<text class="text fg" x="16" y="145.6">        examples/fonts/                                                         </text>
+<text class="text fg" x="16" y="168">        examples/svgs/custom-font-test.svg                                      </text>
+<text class="text fg" x="16" y="190.39999999999998">        examples/svgs/embed-font-test.svg                                       </text>
+<text class="text fg" x="16" y="212.79999999999998">        neofetch.gif                                                            </text>
 <text class="text fg" x="16" y="257.6">no changes added to commit (use &quot;git add&quot; and/or &quot;git commit -a&quot;)               </text>
 <text class="text f13" x="16" y="280">❯</text>
 <text class="text fg" x="25.6" y="280"> git add .                                                                     </text>
@@ -1677,8 +1711,8 @@
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.527853;0.534065;1.000000"
-      dur="9.66s"
+      keyTimes="0.000000;0.525255;0.531386;1.000000"
+      dur="9.62s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -1694,13 +1728,14 @@
 <circle cx="62" cy="20" r="6" fill="#27c93f"/>
 <text class="text fg" x="362" y="20" text-anchor="middle" style="dominant-baseline: central">my-project</text></g>
 <g class="text-layer">
-<text class="text fg" x="16" y="56">  (use &quot;git add &lt;file&gt;...&quot; to update what will be committed)                    </text>
-<text class="text fg" x="16" y="78.4">  (use &quot;git restore &lt;file&gt;...&quot; to discard changes in working directory)         </text>
-<text class="text fg" x="16" y="100.8">        modified:   examples/svgs/macos-style.svg                               </text>
-<text class="text fg" x="16" y="123.19999999999999">        modified:   src/animator/svg-animator.ts                                </text>
-<text class="text fg" x="16" y="168">Untracked files:                                                                </text>
-<text class="text fg" x="16" y="190.39999999999998">  (use &quot;git add &lt;file&gt;...&quot; to include in what will be committed)                </text>
-<text class="text fg" x="16" y="212.79999999999998">        neofetch.tape                                                           </text>
+<text class="text fg" x="16" y="56">Untracked files:                                                                </text>
+<text class="text fg" x="16" y="78.4">  (use &quot;git add &lt;file&gt;...&quot; to include in what will be committed)                </text>
+<text class="text fg" x="16" y="100.8">        examples/custom-font-test.cd                                            </text>
+<text class="text fg" x="16" y="123.19999999999999">        examples/embed-font-test.cd                                             </text>
+<text class="text fg" x="16" y="145.6">        examples/fonts/                                                         </text>
+<text class="text fg" x="16" y="168">        examples/svgs/custom-font-test.svg                                      </text>
+<text class="text fg" x="16" y="190.39999999999998">        examples/svgs/embed-font-test.svg                                       </text>
+<text class="text fg" x="16" y="212.79999999999998">        neofetch.gif                                                            </text>
 <text class="text fg" x="16" y="257.6">no changes added to commit (use &quot;git add&quot; and/or &quot;git commit -a&quot;)               </text>
 <text class="text f13" x="16" y="280">❯</text>
 <text class="text fg" x="25.6" y="280"> git add .                                                                     </text>
@@ -1714,8 +1749,8 @@
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.534065;0.539967;1.000000"
-      dur="9.66s"
+      keyTimes="0.000000;0.531386;0.537518;1.000000"
+      dur="9.62s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -1731,13 +1766,14 @@
 <circle cx="62" cy="20" r="6" fill="#27c93f"/>
 <text class="text fg" x="362" y="20" text-anchor="middle" style="dominant-baseline: central">my-project</text></g>
 <g class="text-layer">
-<text class="text fg" x="16" y="56">  (use &quot;git add &lt;file&gt;...&quot; to update what will be committed)                    </text>
-<text class="text fg" x="16" y="78.4">  (use &quot;git restore &lt;file&gt;...&quot; to discard changes in working directory)         </text>
-<text class="text fg" x="16" y="100.8">        modified:   examples/svgs/macos-style.svg                               </text>
-<text class="text fg" x="16" y="123.19999999999999">        modified:   src/animator/svg-animator.ts                                </text>
-<text class="text fg" x="16" y="168">Untracked files:                                                                </text>
-<text class="text fg" x="16" y="190.39999999999998">  (use &quot;git add &lt;file&gt;...&quot; to include in what will be committed)                </text>
-<text class="text fg" x="16" y="212.79999999999998">        neofetch.tape                                                           </text>
+<text class="text fg" x="16" y="56">Untracked files:                                                                </text>
+<text class="text fg" x="16" y="78.4">  (use &quot;git add &lt;file&gt;...&quot; to include in what will be committed)                </text>
+<text class="text fg" x="16" y="100.8">        examples/custom-font-test.cd                                            </text>
+<text class="text fg" x="16" y="123.19999999999999">        examples/embed-font-test.cd                                             </text>
+<text class="text fg" x="16" y="145.6">        examples/fonts/                                                         </text>
+<text class="text fg" x="16" y="168">        examples/svgs/custom-font-test.svg                                      </text>
+<text class="text fg" x="16" y="190.39999999999998">        examples/svgs/embed-font-test.svg                                       </text>
+<text class="text fg" x="16" y="212.79999999999998">        neofetch.gif                                                            </text>
 <text class="text fg" x="16" y="257.6">no changes added to commit (use &quot;git add&quot; and/or &quot;git commit -a&quot;)               </text>
 <text class="text f13" x="16" y="280">❯</text>
 <text class="text fg" x="25.6" y="280"> git add .                                                                     </text>
@@ -1751,8 +1787,8 @@
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.539967;0.546076;1.000000"
-      dur="9.66s"
+      keyTimes="0.000000;0.537518;0.543650;1.000000"
+      dur="9.62s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -1768,13 +1804,14 @@
 <circle cx="62" cy="20" r="6" fill="#27c93f"/>
 <text class="text fg" x="362" y="20" text-anchor="middle" style="dominant-baseline: central">my-project</text></g>
 <g class="text-layer">
-<text class="text fg" x="16" y="56">  (use &quot;git add &lt;file&gt;...&quot; to update what will be committed)                    </text>
-<text class="text fg" x="16" y="78.4">  (use &quot;git restore &lt;file&gt;...&quot; to discard changes in working directory)         </text>
-<text class="text fg" x="16" y="100.8">        modified:   examples/svgs/macos-style.svg                               </text>
-<text class="text fg" x="16" y="123.19999999999999">        modified:   src/animator/svg-animator.ts                                </text>
-<text class="text fg" x="16" y="168">Untracked files:                                                                </text>
-<text class="text fg" x="16" y="190.39999999999998">  (use &quot;git add &lt;file&gt;...&quot; to include in what will be committed)                </text>
-<text class="text fg" x="16" y="212.79999999999998">        neofetch.tape                                                           </text>
+<text class="text fg" x="16" y="56">Untracked files:                                                                </text>
+<text class="text fg" x="16" y="78.4">  (use &quot;git add &lt;file&gt;...&quot; to include in what will be committed)                </text>
+<text class="text fg" x="16" y="100.8">        examples/custom-font-test.cd                                            </text>
+<text class="text fg" x="16" y="123.19999999999999">        examples/embed-font-test.cd                                             </text>
+<text class="text fg" x="16" y="145.6">        examples/fonts/                                                         </text>
+<text class="text fg" x="16" y="168">        examples/svgs/custom-font-test.svg                                      </text>
+<text class="text fg" x="16" y="190.39999999999998">        examples/svgs/embed-font-test.svg                                       </text>
+<text class="text fg" x="16" y="212.79999999999998">        neofetch.gif                                                            </text>
 <text class="text fg" x="16" y="257.6">no changes added to commit (use &quot;git add&quot; and/or &quot;git commit -a&quot;)               </text>
 <text class="text f13" x="16" y="280">❯</text>
 <text class="text fg" x="25.6" y="280"> git add .                                                                     </text>
@@ -1788,8 +1825,8 @@
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.546076;0.552081;1.000000"
-      dur="9.66s"
+      keyTimes="0.000000;0.543650;0.549782;1.000000"
+      dur="9.62s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -1805,13 +1842,14 @@
 <circle cx="62" cy="20" r="6" fill="#27c93f"/>
 <text class="text fg" x="362" y="20" text-anchor="middle" style="dominant-baseline: central">my-project</text></g>
 <g class="text-layer">
-<text class="text fg" x="16" y="56">  (use &quot;git add &lt;file&gt;...&quot; to update what will be committed)                    </text>
-<text class="text fg" x="16" y="78.4">  (use &quot;git restore &lt;file&gt;...&quot; to discard changes in working directory)         </text>
-<text class="text fg" x="16" y="100.8">        modified:   examples/svgs/macos-style.svg                               </text>
-<text class="text fg" x="16" y="123.19999999999999">        modified:   src/animator/svg-animator.ts                                </text>
-<text class="text fg" x="16" y="168">Untracked files:                                                                </text>
-<text class="text fg" x="16" y="190.39999999999998">  (use &quot;git add &lt;file&gt;...&quot; to include in what will be committed)                </text>
-<text class="text fg" x="16" y="212.79999999999998">        neofetch.tape                                                           </text>
+<text class="text fg" x="16" y="56">Untracked files:                                                                </text>
+<text class="text fg" x="16" y="78.4">  (use &quot;git add &lt;file&gt;...&quot; to include in what will be committed)                </text>
+<text class="text fg" x="16" y="100.8">        examples/custom-font-test.cd                                            </text>
+<text class="text fg" x="16" y="123.19999999999999">        examples/embed-font-test.cd                                             </text>
+<text class="text fg" x="16" y="145.6">        examples/fonts/                                                         </text>
+<text class="text fg" x="16" y="168">        examples/svgs/custom-font-test.svg                                      </text>
+<text class="text fg" x="16" y="190.39999999999998">        examples/svgs/embed-font-test.svg                                       </text>
+<text class="text fg" x="16" y="212.79999999999998">        neofetch.gif                                                            </text>
 <text class="text fg" x="16" y="257.6">no changes added to commit (use &quot;git add&quot; and/or &quot;git commit -a&quot;)               </text>
 <text class="text f13" x="16" y="280">❯</text>
 <text class="text fg" x="25.6" y="280"> git add .                                                                     </text>
@@ -1825,8 +1863,8 @@
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.552081;0.558294;1.000000"
-      dur="9.66s"
+      keyTimes="0.000000;0.549782;0.556017;1.000000"
+      dur="9.62s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -1842,13 +1880,14 @@
 <circle cx="62" cy="20" r="6" fill="#27c93f"/>
 <text class="text fg" x="362" y="20" text-anchor="middle" style="dominant-baseline: central">my-project</text></g>
 <g class="text-layer">
-<text class="text fg" x="16" y="56">  (use &quot;git add &lt;file&gt;...&quot; to update what will be committed)                    </text>
-<text class="text fg" x="16" y="78.4">  (use &quot;git restore &lt;file&gt;...&quot; to discard changes in working directory)         </text>
-<text class="text fg" x="16" y="100.8">        modified:   examples/svgs/macos-style.svg                               </text>
-<text class="text fg" x="16" y="123.19999999999999">        modified:   src/animator/svg-animator.ts                                </text>
-<text class="text fg" x="16" y="168">Untracked files:                                                                </text>
-<text class="text fg" x="16" y="190.39999999999998">  (use &quot;git add &lt;file&gt;...&quot; to include in what will be committed)                </text>
-<text class="text fg" x="16" y="212.79999999999998">        neofetch.tape                                                           </text>
+<text class="text fg" x="16" y="56">Untracked files:                                                                </text>
+<text class="text fg" x="16" y="78.4">  (use &quot;git add &lt;file&gt;...&quot; to include in what will be committed)                </text>
+<text class="text fg" x="16" y="100.8">        examples/custom-font-test.cd                                            </text>
+<text class="text fg" x="16" y="123.19999999999999">        examples/embed-font-test.cd                                             </text>
+<text class="text fg" x="16" y="145.6">        examples/fonts/                                                         </text>
+<text class="text fg" x="16" y="168">        examples/svgs/custom-font-test.svg                                      </text>
+<text class="text fg" x="16" y="190.39999999999998">        examples/svgs/embed-font-test.svg                                       </text>
+<text class="text fg" x="16" y="212.79999999999998">        neofetch.gif                                                            </text>
 <text class="text fg" x="16" y="257.6">no changes added to commit (use &quot;git add&quot; and/or &quot;git commit -a&quot;)               </text>
 <text class="text f13" x="16" y="280">❯</text>
 <text class="text fg" x="25.6" y="280"> git add .                                                                     </text>
@@ -1862,8 +1901,8 @@
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.558294;0.564403;1.000000"
-      dur="9.66s"
+      keyTimes="0.000000;0.556017;0.562357;1.000000"
+      dur="9.62s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -1879,13 +1918,14 @@
 <circle cx="62" cy="20" r="6" fill="#27c93f"/>
 <text class="text fg" x="362" y="20" text-anchor="middle" style="dominant-baseline: central">my-project</text></g>
 <g class="text-layer">
-<text class="text fg" x="16" y="56">  (use &quot;git add &lt;file&gt;...&quot; to update what will be committed)                    </text>
-<text class="text fg" x="16" y="78.4">  (use &quot;git restore &lt;file&gt;...&quot; to discard changes in working directory)         </text>
-<text class="text fg" x="16" y="100.8">        modified:   examples/svgs/macos-style.svg                               </text>
-<text class="text fg" x="16" y="123.19999999999999">        modified:   src/animator/svg-animator.ts                                </text>
-<text class="text fg" x="16" y="168">Untracked files:                                                                </text>
-<text class="text fg" x="16" y="190.39999999999998">  (use &quot;git add &lt;file&gt;...&quot; to include in what will be committed)                </text>
-<text class="text fg" x="16" y="212.79999999999998">        neofetch.tape                                                           </text>
+<text class="text fg" x="16" y="56">Untracked files:                                                                </text>
+<text class="text fg" x="16" y="78.4">  (use &quot;git add &lt;file&gt;...&quot; to include in what will be committed)                </text>
+<text class="text fg" x="16" y="100.8">        examples/custom-font-test.cd                                            </text>
+<text class="text fg" x="16" y="123.19999999999999">        examples/embed-font-test.cd                                             </text>
+<text class="text fg" x="16" y="145.6">        examples/fonts/                                                         </text>
+<text class="text fg" x="16" y="168">        examples/svgs/custom-font-test.svg                                      </text>
+<text class="text fg" x="16" y="190.39999999999998">        examples/svgs/embed-font-test.svg                                       </text>
+<text class="text fg" x="16" y="212.79999999999998">        neofetch.gif                                                            </text>
 <text class="text fg" x="16" y="257.6">no changes added to commit (use &quot;git add&quot; and/or &quot;git commit -a&quot;)               </text>
 <text class="text f13" x="16" y="280">❯</text>
 <text class="text fg" x="25.6" y="280"> git add .                                                                     </text>
@@ -1899,8 +1939,8 @@
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.564403;0.570408;1.000000"
-      dur="9.66s"
+      keyTimes="0.000000;0.562357;0.568697;1.000000"
+      dur="9.62s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -1916,13 +1956,14 @@
 <circle cx="62" cy="20" r="6" fill="#27c93f"/>
 <text class="text fg" x="362" y="20" text-anchor="middle" style="dominant-baseline: central">my-project</text></g>
 <g class="text-layer">
-<text class="text fg" x="16" y="56">  (use &quot;git add &lt;file&gt;...&quot; to update what will be committed)                    </text>
-<text class="text fg" x="16" y="78.4">  (use &quot;git restore &lt;file&gt;...&quot; to discard changes in working directory)         </text>
-<text class="text fg" x="16" y="100.8">        modified:   examples/svgs/macos-style.svg                               </text>
-<text class="text fg" x="16" y="123.19999999999999">        modified:   src/animator/svg-animator.ts                                </text>
-<text class="text fg" x="16" y="168">Untracked files:                                                                </text>
-<text class="text fg" x="16" y="190.39999999999998">  (use &quot;git add &lt;file&gt;...&quot; to include in what will be committed)                </text>
-<text class="text fg" x="16" y="212.79999999999998">        neofetch.tape                                                           </text>
+<text class="text fg" x="16" y="56">Untracked files:                                                                </text>
+<text class="text fg" x="16" y="78.4">  (use &quot;git add &lt;file&gt;...&quot; to include in what will be committed)                </text>
+<text class="text fg" x="16" y="100.8">        examples/custom-font-test.cd                                            </text>
+<text class="text fg" x="16" y="123.19999999999999">        examples/embed-font-test.cd                                             </text>
+<text class="text fg" x="16" y="145.6">        examples/fonts/                                                         </text>
+<text class="text fg" x="16" y="168">        examples/svgs/custom-font-test.svg                                      </text>
+<text class="text fg" x="16" y="190.39999999999998">        examples/svgs/embed-font-test.svg                                       </text>
+<text class="text fg" x="16" y="212.79999999999998">        neofetch.gif                                                            </text>
 <text class="text fg" x="16" y="257.6">no changes added to commit (use &quot;git add&quot; and/or &quot;git commit -a&quot;)               </text>
 <text class="text f13" x="16" y="280">❯</text>
 <text class="text fg" x="25.6" y="280"> git add .                                                                     </text>
@@ -1936,8 +1977,8 @@
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.570408;0.576517;1.000000"
-      dur="9.66s"
+      keyTimes="0.000000;0.568697;0.574621;1.000000"
+      dur="9.62s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -1953,13 +1994,14 @@
 <circle cx="62" cy="20" r="6" fill="#27c93f"/>
 <text class="text fg" x="362" y="20" text-anchor="middle" style="dominant-baseline: central">my-project</text></g>
 <g class="text-layer">
-<text class="text fg" x="16" y="56">  (use &quot;git add &lt;file&gt;...&quot; to update what will be committed)                    </text>
-<text class="text fg" x="16" y="78.4">  (use &quot;git restore &lt;file&gt;...&quot; to discard changes in working directory)         </text>
-<text class="text fg" x="16" y="100.8">        modified:   examples/svgs/macos-style.svg                               </text>
-<text class="text fg" x="16" y="123.19999999999999">        modified:   src/animator/svg-animator.ts                                </text>
-<text class="text fg" x="16" y="168">Untracked files:                                                                </text>
-<text class="text fg" x="16" y="190.39999999999998">  (use &quot;git add &lt;file&gt;...&quot; to include in what will be committed)                </text>
-<text class="text fg" x="16" y="212.79999999999998">        neofetch.tape                                                           </text>
+<text class="text fg" x="16" y="56">Untracked files:                                                                </text>
+<text class="text fg" x="16" y="78.4">  (use &quot;git add &lt;file&gt;...&quot; to include in what will be committed)                </text>
+<text class="text fg" x="16" y="100.8">        examples/custom-font-test.cd                                            </text>
+<text class="text fg" x="16" y="123.19999999999999">        examples/embed-font-test.cd                                             </text>
+<text class="text fg" x="16" y="145.6">        examples/fonts/                                                         </text>
+<text class="text fg" x="16" y="168">        examples/svgs/custom-font-test.svg                                      </text>
+<text class="text fg" x="16" y="190.39999999999998">        examples/svgs/embed-font-test.svg                                       </text>
+<text class="text fg" x="16" y="212.79999999999998">        neofetch.gif                                                            </text>
 <text class="text fg" x="16" y="257.6">no changes added to commit (use &quot;git add&quot; and/or &quot;git commit -a&quot;)               </text>
 <text class="text f13" x="16" y="280">❯</text>
 <text class="text fg" x="25.6" y="280"> git add .                                                                     </text>
@@ -1973,8 +2015,8 @@
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.576517;0.582522;1.000000"
-      dur="9.66s"
+      keyTimes="0.000000;0.574621;0.580752;1.000000"
+      dur="9.62s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -1990,13 +2032,14 @@
 <circle cx="62" cy="20" r="6" fill="#27c93f"/>
 <text class="text fg" x="362" y="20" text-anchor="middle" style="dominant-baseline: central">my-project</text></g>
 <g class="text-layer">
-<text class="text fg" x="16" y="56">  (use &quot;git add &lt;file&gt;...&quot; to update what will be committed)                    </text>
-<text class="text fg" x="16" y="78.4">  (use &quot;git restore &lt;file&gt;...&quot; to discard changes in working directory)         </text>
-<text class="text fg" x="16" y="100.8">        modified:   examples/svgs/macos-style.svg                               </text>
-<text class="text fg" x="16" y="123.19999999999999">        modified:   src/animator/svg-animator.ts                                </text>
-<text class="text fg" x="16" y="168">Untracked files:                                                                </text>
-<text class="text fg" x="16" y="190.39999999999998">  (use &quot;git add &lt;file&gt;...&quot; to include in what will be committed)                </text>
-<text class="text fg" x="16" y="212.79999999999998">        neofetch.tape                                                           </text>
+<text class="text fg" x="16" y="56">Untracked files:                                                                </text>
+<text class="text fg" x="16" y="78.4">  (use &quot;git add &lt;file&gt;...&quot; to include in what will be committed)                </text>
+<text class="text fg" x="16" y="100.8">        examples/custom-font-test.cd                                            </text>
+<text class="text fg" x="16" y="123.19999999999999">        examples/embed-font-test.cd                                             </text>
+<text class="text fg" x="16" y="145.6">        examples/fonts/                                                         </text>
+<text class="text fg" x="16" y="168">        examples/svgs/custom-font-test.svg                                      </text>
+<text class="text fg" x="16" y="190.39999999999998">        examples/svgs/embed-font-test.svg                                       </text>
+<text class="text fg" x="16" y="212.79999999999998">        neofetch.gif                                                            </text>
 <text class="text fg" x="16" y="257.6">no changes added to commit (use &quot;git add&quot; and/or &quot;git commit -a&quot;)               </text>
 <text class="text f13" x="16" y="280">❯</text>
 <text class="text fg" x="25.6" y="280"> git add .                                                                     </text>
@@ -2010,8 +2053,8 @@
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.582522;0.588735;1.000000"
-      dur="9.66s"
+      keyTimes="0.000000;0.580752;0.586884;1.000000"
+      dur="9.62s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -2027,13 +2070,14 @@
 <circle cx="62" cy="20" r="6" fill="#27c93f"/>
 <text class="text fg" x="362" y="20" text-anchor="middle" style="dominant-baseline: central">my-project</text></g>
 <g class="text-layer">
-<text class="text fg" x="16" y="56">  (use &quot;git add &lt;file&gt;...&quot; to update what will be committed)                    </text>
-<text class="text fg" x="16" y="78.4">  (use &quot;git restore &lt;file&gt;...&quot; to discard changes in working directory)         </text>
-<text class="text fg" x="16" y="100.8">        modified:   examples/svgs/macos-style.svg                               </text>
-<text class="text fg" x="16" y="123.19999999999999">        modified:   src/animator/svg-animator.ts                                </text>
-<text class="text fg" x="16" y="168">Untracked files:                                                                </text>
-<text class="text fg" x="16" y="190.39999999999998">  (use &quot;git add &lt;file&gt;...&quot; to include in what will be committed)                </text>
-<text class="text fg" x="16" y="212.79999999999998">        neofetch.tape                                                           </text>
+<text class="text fg" x="16" y="56">Untracked files:                                                                </text>
+<text class="text fg" x="16" y="78.4">  (use &quot;git add &lt;file&gt;...&quot; to include in what will be committed)                </text>
+<text class="text fg" x="16" y="100.8">        examples/custom-font-test.cd                                            </text>
+<text class="text fg" x="16" y="123.19999999999999">        examples/embed-font-test.cd                                             </text>
+<text class="text fg" x="16" y="145.6">        examples/fonts/                                                         </text>
+<text class="text fg" x="16" y="168">        examples/svgs/custom-font-test.svg                                      </text>
+<text class="text fg" x="16" y="190.39999999999998">        examples/svgs/embed-font-test.svg                                       </text>
+<text class="text fg" x="16" y="212.79999999999998">        neofetch.gif                                                            </text>
 <text class="text fg" x="16" y="257.6">no changes added to commit (use &quot;git add&quot; and/or &quot;git commit -a&quot;)               </text>
 <text class="text f13" x="16" y="280">❯</text>
 <text class="text fg" x="25.6" y="280"> git add .                                                                     </text>
@@ -2047,8 +2091,8 @@
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.588735;0.594947;1.000000"
-      dur="9.66s"
+      keyTimes="0.000000;0.586884;0.592912;1.000000"
+      dur="9.62s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -2064,13 +2108,14 @@
 <circle cx="62" cy="20" r="6" fill="#27c93f"/>
 <text class="text fg" x="362" y="20" text-anchor="middle" style="dominant-baseline: central">my-project</text></g>
 <g class="text-layer">
-<text class="text fg" x="16" y="56">  (use &quot;git add &lt;file&gt;...&quot; to update what will be committed)                    </text>
-<text class="text fg" x="16" y="78.4">  (use &quot;git restore &lt;file&gt;...&quot; to discard changes in working directory)         </text>
-<text class="text fg" x="16" y="100.8">        modified:   examples/svgs/macos-style.svg                               </text>
-<text class="text fg" x="16" y="123.19999999999999">        modified:   src/animator/svg-animator.ts                                </text>
-<text class="text fg" x="16" y="168">Untracked files:                                                                </text>
-<text class="text fg" x="16" y="190.39999999999998">  (use &quot;git add &lt;file&gt;...&quot; to include in what will be committed)                </text>
-<text class="text fg" x="16" y="212.79999999999998">        neofetch.tape                                                           </text>
+<text class="text fg" x="16" y="56">Untracked files:                                                                </text>
+<text class="text fg" x="16" y="78.4">  (use &quot;git add &lt;file&gt;...&quot; to include in what will be committed)                </text>
+<text class="text fg" x="16" y="100.8">        examples/custom-font-test.cd                                            </text>
+<text class="text fg" x="16" y="123.19999999999999">        examples/embed-font-test.cd                                             </text>
+<text class="text fg" x="16" y="145.6">        examples/fonts/                                                         </text>
+<text class="text fg" x="16" y="168">        examples/svgs/custom-font-test.svg                                      </text>
+<text class="text fg" x="16" y="190.39999999999998">        examples/svgs/embed-font-test.svg                                       </text>
+<text class="text fg" x="16" y="212.79999999999998">        neofetch.gif                                                            </text>
 <text class="text fg" x="16" y="257.6">no changes added to commit (use &quot;git add&quot; and/or &quot;git commit -a&quot;)               </text>
 <text class="text f13" x="16" y="280">❯</text>
 <text class="text fg" x="25.6" y="280"> git add .                                                                     </text>
@@ -2084,8 +2129,8 @@
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.594947;0.637813;1.000000"
-      dur="9.66s"
+      keyTimes="0.000000;0.592912;0.635627;1.000000"
+      dur="9.62s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -2101,13 +2146,14 @@
 <circle cx="62" cy="20" r="6" fill="#27c93f"/>
 <text class="text fg" x="362" y="20" text-anchor="middle" style="dominant-baseline: central">my-project</text></g>
 <g class="text-layer">
-<text class="text fg" x="16" y="56">  (use &quot;git add &lt;file&gt;...&quot; to update what will be committed)                    </text>
-<text class="text fg" x="16" y="78.4">  (use &quot;git restore &lt;file&gt;...&quot; to discard changes in working directory)         </text>
-<text class="text fg" x="16" y="100.8">        modified:   examples/svgs/macos-style.svg                               </text>
-<text class="text fg" x="16" y="123.19999999999999">        modified:   src/animator/svg-animator.ts                                </text>
-<text class="text fg" x="16" y="168">Untracked files:                                                                </text>
-<text class="text fg" x="16" y="190.39999999999998">  (use &quot;git add &lt;file&gt;...&quot; to include in what will be committed)                </text>
-<text class="text fg" x="16" y="212.79999999999998">        neofetch.tape                                                           </text>
+<text class="text fg" x="16" y="56">Untracked files:                                                                </text>
+<text class="text fg" x="16" y="78.4">  (use &quot;git add &lt;file&gt;...&quot; to include in what will be committed)                </text>
+<text class="text fg" x="16" y="100.8">        examples/custom-font-test.cd                                            </text>
+<text class="text fg" x="16" y="123.19999999999999">        examples/embed-font-test.cd                                             </text>
+<text class="text fg" x="16" y="145.6">        examples/fonts/                                                         </text>
+<text class="text fg" x="16" y="168">        examples/svgs/custom-font-test.svg                                      </text>
+<text class="text fg" x="16" y="190.39999999999998">        examples/svgs/embed-font-test.svg                                       </text>
+<text class="text fg" x="16" y="212.79999999999998">        neofetch.gif                                                            </text>
 <text class="text fg" x="16" y="257.6">no changes added to commit (use &quot;git add&quot; and/or &quot;git commit -a&quot;)               </text>
 <text class="text f13" x="16" y="280">❯</text>
 <text class="text fg" x="25.6" y="280"> git add .                                                                     </text>
@@ -2121,8 +2167,8 @@
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.637813;0.649617;1.000000"
-      dur="9.66s"
+      keyTimes="0.000000;0.635627;0.647163;1.000000"
+      dur="9.62s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -2138,12 +2184,13 @@
 <circle cx="62" cy="20" r="6" fill="#27c93f"/>
 <text class="text fg" x="362" y="20" text-anchor="middle" style="dominant-baseline: central">my-project</text></g>
 <g class="text-layer">
-<text class="text fg" x="16" y="56">  (use &quot;git restore &lt;file&gt;...&quot; to discard changes in working directory)         </text>
-<text class="text fg" x="16" y="78.4">        modified:   examples/svgs/macos-style.svg                               </text>
-<text class="text fg" x="16" y="100.8">        modified:   src/animator/svg-animator.ts                                </text>
-<text class="text fg" x="16" y="145.6">Untracked files:                                                                </text>
-<text class="text fg" x="16" y="168">  (use &quot;git add &lt;file&gt;...&quot; to include in what will be committed)                </text>
-<text class="text fg" x="16" y="190.39999999999998">        neofetch.tape                                                           </text>
+<text class="text fg" x="16" y="56">  (use &quot;git add &lt;file&gt;...&quot; to include in what will be committed)                </text>
+<text class="text fg" x="16" y="78.4">        examples/custom-font-test.cd                                            </text>
+<text class="text fg" x="16" y="100.8">        examples/embed-font-test.cd                                             </text>
+<text class="text fg" x="16" y="123.19999999999999">        examples/fonts/                                                         </text>
+<text class="text fg" x="16" y="145.6">        examples/svgs/custom-font-test.svg                                      </text>
+<text class="text fg" x="16" y="168">        examples/svgs/embed-font-test.svg                                       </text>
+<text class="text fg" x="16" y="190.39999999999998">        neofetch.gif                                                            </text>
 <text class="text fg" x="16" y="235.2">no changes added to commit (use &quot;git add&quot; and/or &quot;git commit -a&quot;)               </text>
 <text class="text f13" x="16" y="257.6">❯</text>
 <text class="text fg" x="25.6" y="257.6"> git add .                                                                     </text>
@@ -2154,8 +2201,8 @@
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.649617;0.664320;1.000000"
-      dur="9.66s"
+      keyTimes="0.000000;0.647163;0.662336;1.000000"
+      dur="9.62s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -2171,17 +2218,19 @@
 <circle cx="62" cy="20" r="6" fill="#27c93f"/>
 <text class="text fg" x="362" y="20" text-anchor="middle" style="dominant-baseline: central">my-project</text></g>
 <g class="text-layer">
-<text class="text fg" x="16" y="78.4">Untracked files:                                                                </text>
-<text class="text fg" x="16" y="100.8">  (use &quot;git add &lt;file&gt;...&quot; to include in what will be committed)                </text>
-<text class="text fg" x="16" y="123.19999999999999">        neofetch.tape                                                           </text>
-<text class="text fg" x="16" y="168">no changes added to commit (use &quot;git add&quot; and/or &quot;git commit -a&quot;)               </text>
-<text class="text f13" x="16" y="190.39999999999998">❯</text>
-<text class="text fg" x="25.6" y="190.39999999999998"> git add .                                                                     </text>
-<text class="text f13" x="16" y="235.2">❯</text>
-<text class="text fg" x="25.6" y="235.2"> git commit -m &apos;Add new feature&apos;                                               </text>
-<text class="text fg" x="16" y="257.6">[feat/rearch d729d9a] Add new feature                                           </text>
-<text class="text fg" x="16" y="280"> 3 files changed, 571 insertions(+), 523 deletions(-)                           </text>
-<text class="text fg" x="16" y="302.4"> create mode 100644 neofetch.tape                                               </text>
+<text class="text fg" x="16" y="56">no changes added to commit (use &quot;git add&quot; and/or &quot;git commit -a&quot;)               </text>
+<text class="text f13" x="16" y="78.4">❯</text>
+<text class="text fg" x="25.6" y="78.4"> git add .                                                                     </text>
+<text class="text f13" x="16" y="123.19999999999999">❯</text>
+<text class="text fg" x="25.6" y="123.19999999999999"> git commit -m &apos;Add new feature&apos;                                               </text>
+<text class="text fg" x="16" y="145.6">[feat/rearch 65b022b] Add new feature                                           </text>
+<text class="text fg" x="16" y="168"> 15 files changed, 4324 insertions(+), 2417 deletions(-)                        </text>
+<text class="text fg" x="16" y="190.39999999999998"> create mode 100644 examples/custom-font-test.cd                                </text>
+<text class="text fg" x="16" y="212.79999999999998"> create mode 100644 examples/embed-font-test.cd                                 </text>
+<text class="text fg" x="16" y="235.2"> create mode 100644 examples/fonts/JetBrainsMono-Regular.woff2                  </text>
+<text class="text fg" x="16" y="257.6"> create mode 100644 examples/svgs/custom-font-test.svg                          </text>
+<text class="text fg" x="16" y="280"> create mode 100644 examples/svgs/embed-font-test.svg                           </text>
+<text class="text fg" x="16" y="302.4"> create mode 100644 neofetch.gif                                                </text>
 <text class="text f13" x="16" y="324.79999999999995">❯</text>
 </g>
 <g class="cursor-layer">
@@ -2191,8 +2240,8 @@
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.664320;0.675916;1.000000"
-      dur="9.66s"
+      keyTimes="0.000000;0.662336;0.674080;1.000000"
+      dur="9.62s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -2208,17 +2257,18 @@
 <circle cx="62" cy="20" r="6" fill="#27c93f"/>
 <text class="text fg" x="362" y="20" text-anchor="middle" style="dominant-baseline: central">my-project</text></g>
 <g class="text-layer">
-<text class="text fg" x="16" y="56">Untracked files:                                                                </text>
-<text class="text fg" x="16" y="78.4">  (use &quot;git add &lt;file&gt;...&quot; to include in what will be committed)                </text>
-<text class="text fg" x="16" y="100.8">        neofetch.tape                                                           </text>
-<text class="text fg" x="16" y="145.6">no changes added to commit (use &quot;git add&quot; and/or &quot;git commit -a&quot;)               </text>
-<text class="text f13" x="16" y="168">❯</text>
-<text class="text fg" x="25.6" y="168"> git add .                                                                     </text>
-<text class="text f13" x="16" y="212.79999999999998">❯</text>
-<text class="text fg" x="25.6" y="212.79999999999998"> git commit -m &apos;Add new feature&apos;                                               </text>
-<text class="text fg" x="16" y="235.2">[feat/rearch d729d9a] Add new feature                                           </text>
-<text class="text fg" x="16" y="257.6"> 3 files changed, 571 insertions(+), 523 deletions(-)                           </text>
-<text class="text fg" x="16" y="280"> create mode 100644 neofetch.tape                                               </text>
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="25.6" y="56"> git add .                                                                     </text>
+<text class="text f13" x="16" y="100.8">❯</text>
+<text class="text fg" x="25.6" y="100.8"> git commit -m &apos;Add new feature&apos;                                               </text>
+<text class="text fg" x="16" y="123.19999999999999">[feat/rearch 65b022b] Add new feature                                           </text>
+<text class="text fg" x="16" y="145.6"> 15 files changed, 4324 insertions(+), 2417 deletions(-)                        </text>
+<text class="text fg" x="16" y="168"> create mode 100644 examples/custom-font-test.cd                                </text>
+<text class="text fg" x="16" y="190.39999999999998"> create mode 100644 examples/embed-font-test.cd                                 </text>
+<text class="text fg" x="16" y="212.79999999999998"> create mode 100644 examples/fonts/JetBrainsMono-Regular.woff2                  </text>
+<text class="text fg" x="16" y="235.2"> create mode 100644 examples/svgs/custom-font-test.svg                          </text>
+<text class="text fg" x="16" y="257.6"> create mode 100644 examples/svgs/embed-font-test.svg                           </text>
+<text class="text fg" x="16" y="280"> create mode 100644 neofetch.gif                                                </text>
 <text class="text f13" x="16" y="302.4">❯</text>
 <text class="text f13" x="16" y="324.79999999999995">❯</text>
 </g>
@@ -2229,8 +2279,8 @@
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.675916;0.687513;1.000000"
-      dur="9.66s"
+      keyTimes="0.000000;0.674080;0.685928;1.000000"
+      dur="9.62s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -2246,16 +2296,16 @@
 <circle cx="62" cy="20" r="6" fill="#27c93f"/>
 <text class="text fg" x="362" y="20" text-anchor="middle" style="dominant-baseline: central">my-project</text></g>
 <g class="text-layer">
-<text class="text fg" x="16" y="56">  (use &quot;git add &lt;file&gt;...&quot; to include in what will be committed)                </text>
-<text class="text fg" x="16" y="78.4">        neofetch.tape                                                           </text>
-<text class="text fg" x="16" y="123.19999999999999">no changes added to commit (use &quot;git add&quot; and/or &quot;git commit -a&quot;)               </text>
-<text class="text f13" x="16" y="145.6">❯</text>
-<text class="text fg" x="25.6" y="145.6"> git add .                                                                     </text>
-<text class="text f13" x="16" y="190.39999999999998">❯</text>
-<text class="text fg" x="25.6" y="190.39999999999998"> git commit -m &apos;Add new feature&apos;                                               </text>
-<text class="text fg" x="16" y="212.79999999999998">[feat/rearch d729d9a] Add new feature                                           </text>
-<text class="text fg" x="16" y="235.2"> 3 files changed, 571 insertions(+), 523 deletions(-)                           </text>
-<text class="text fg" x="16" y="257.6"> create mode 100644 neofetch.tape                                               </text>
+<text class="text f13" x="16" y="78.4">❯</text>
+<text class="text fg" x="25.6" y="78.4"> git commit -m &apos;Add new feature&apos;                                               </text>
+<text class="text fg" x="16" y="100.8">[feat/rearch 65b022b] Add new feature                                           </text>
+<text class="text fg" x="16" y="123.19999999999999"> 15 files changed, 4324 insertions(+), 2417 deletions(-)                        </text>
+<text class="text fg" x="16" y="145.6"> create mode 100644 examples/custom-font-test.cd                                </text>
+<text class="text fg" x="16" y="168"> create mode 100644 examples/embed-font-test.cd                                 </text>
+<text class="text fg" x="16" y="190.39999999999998"> create mode 100644 examples/fonts/JetBrainsMono-Regular.woff2                  </text>
+<text class="text fg" x="16" y="212.79999999999998"> create mode 100644 examples/svgs/custom-font-test.svg                          </text>
+<text class="text fg" x="16" y="235.2"> create mode 100644 examples/svgs/embed-font-test.svg                           </text>
+<text class="text fg" x="16" y="257.6"> create mode 100644 neofetch.gif                                                </text>
 <text class="text f13" x="16" y="280">❯</text>
 <text class="text f13" x="16" y="302.4">❯</text>
 <text class="text f13" x="16" y="324.79999999999995">❯</text>
@@ -2267,8 +2317,8 @@
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.687513;0.895631;1.000000"
-      dur="9.66s"
+      keyTimes="0.000000;0.685928;0.895136;1.000000"
+      dur="9.62s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -2284,16 +2334,16 @@
 <circle cx="62" cy="20" r="6" fill="#27c93f"/>
 <text class="text fg" x="362" y="20" text-anchor="middle" style="dominant-baseline: central">my-project</text></g>
 <g class="text-layer">
-<text class="text fg" x="16" y="56">  (use &quot;git add &lt;file&gt;...&quot; to include in what will be committed)                </text>
-<text class="text fg" x="16" y="78.4">        neofetch.tape                                                           </text>
-<text class="text fg" x="16" y="123.19999999999999">no changes added to commit (use &quot;git add&quot; and/or &quot;git commit -a&quot;)               </text>
-<text class="text f13" x="16" y="145.6">❯</text>
-<text class="text fg" x="25.6" y="145.6"> git add .                                                                     </text>
-<text class="text f13" x="16" y="190.39999999999998">❯</text>
-<text class="text fg" x="25.6" y="190.39999999999998"> git commit -m &apos;Add new feature&apos;                                               </text>
-<text class="text fg" x="16" y="212.79999999999998">[feat/rearch d729d9a] Add new feature                                           </text>
-<text class="text fg" x="16" y="235.2"> 3 files changed, 571 insertions(+), 523 deletions(-)                           </text>
-<text class="text fg" x="16" y="257.6"> create mode 100644 neofetch.tape                                               </text>
+<text class="text f13" x="16" y="78.4">❯</text>
+<text class="text fg" x="25.6" y="78.4"> git commit -m &apos;Add new feature&apos;                                               </text>
+<text class="text fg" x="16" y="100.8">[feat/rearch 65b022b] Add new feature                                           </text>
+<text class="text fg" x="16" y="123.19999999999999"> 15 files changed, 4324 insertions(+), 2417 deletions(-)                        </text>
+<text class="text fg" x="16" y="145.6"> create mode 100644 examples/custom-font-test.cd                                </text>
+<text class="text fg" x="16" y="168"> create mode 100644 examples/embed-font-test.cd                                 </text>
+<text class="text fg" x="16" y="190.39999999999998"> create mode 100644 examples/fonts/JetBrainsMono-Regular.woff2                  </text>
+<text class="text fg" x="16" y="212.79999999999998"> create mode 100644 examples/svgs/custom-font-test.svg                          </text>
+<text class="text fg" x="16" y="235.2"> create mode 100644 examples/svgs/embed-font-test.svg                           </text>
+<text class="text fg" x="16" y="257.6"> create mode 100644 neofetch.gif                                                </text>
 <text class="text f13" x="16" y="280">❯</text>
 <text class="text f13" x="16" y="302.4">❯</text>
 <text class="text f13" x="16" y="324.79999999999995">❯</text>
@@ -2305,8 +2355,8 @@
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.895631;0.896459;1.000000"
-      dur="9.66s"
+      keyTimes="0.000000;0.895136;0.896072;1.000000"
+      dur="9.62s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -2322,16 +2372,16 @@
 <circle cx="62" cy="20" r="6" fill="#27c93f"/>
 <text class="text fg" x="362" y="20" text-anchor="middle" style="dominant-baseline: central">my-project</text></g>
 <g class="text-layer">
-<text class="text fg" x="16" y="56">  (use &quot;git add &lt;file&gt;...&quot; to include in what will be committed)                </text>
-<text class="text fg" x="16" y="78.4">        neofetch.tape                                                           </text>
-<text class="text fg" x="16" y="123.19999999999999">no changes added to commit (use &quot;git add&quot; and/or &quot;git commit -a&quot;)               </text>
-<text class="text f13" x="16" y="145.6">❯</text>
-<text class="text fg" x="25.6" y="145.6"> git add .                                                                     </text>
-<text class="text f13" x="16" y="190.39999999999998">❯</text>
-<text class="text fg" x="25.6" y="190.39999999999998"> git commit -m &apos;Add new feature&apos;                                               </text>
-<text class="text fg" x="16" y="212.79999999999998">[feat/rearch d729d9a] Add new feature                                           </text>
-<text class="text fg" x="16" y="235.2"> 3 files changed, 571 insertions(+), 523 deletions(-)                           </text>
-<text class="text fg" x="16" y="257.6"> create mode 100644 neofetch.tape                                               </text>
+<text class="text f13" x="16" y="78.4">❯</text>
+<text class="text fg" x="25.6" y="78.4"> git commit -m &apos;Add new feature&apos;                                               </text>
+<text class="text fg" x="16" y="100.8">[feat/rearch 65b022b] Add new feature                                           </text>
+<text class="text fg" x="16" y="123.19999999999999"> 15 files changed, 4324 insertions(+), 2417 deletions(-)                        </text>
+<text class="text fg" x="16" y="145.6"> create mode 100644 examples/custom-font-test.cd                                </text>
+<text class="text fg" x="16" y="168"> create mode 100644 examples/embed-font-test.cd                                 </text>
+<text class="text fg" x="16" y="190.39999999999998"> create mode 100644 examples/fonts/JetBrainsMono-Regular.woff2                  </text>
+<text class="text fg" x="16" y="212.79999999999998"> create mode 100644 examples/svgs/custom-font-test.svg                          </text>
+<text class="text fg" x="16" y="235.2"> create mode 100644 examples/svgs/embed-font-test.svg                           </text>
+<text class="text fg" x="16" y="257.6"> create mode 100644 neofetch.gif                                                </text>
 <text class="text f13" x="16" y="280">❯</text>
 <text class="text f13" x="16" y="302.4">❯</text>
 <text class="text f13" x="16" y="324.79999999999995">❯</text>
@@ -2343,8 +2393,8 @@
     <animate
       attributeName="visibility"
       values="hidden;visible;visible"
-      keyTimes="0.000000;0.896459;1.000000"
-      dur="9.66s"
+      keyTimes="0.000000;0.896072;1.000000"
+      dur="9.62s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"

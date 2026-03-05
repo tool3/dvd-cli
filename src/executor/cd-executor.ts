@@ -64,6 +64,7 @@ interface ExecutorContext {
   frames: TerminalFrame[];
   frameData: FrameData[];
   startTime: number;
+  captureOverhead: number; // Accumulated time spent in frame capture (to subtract from timestamps)
 
   // Configuration
   width: number;
@@ -166,6 +167,7 @@ export class CDExecutor {
       frames: [],
       frameData: [],
       startTime: Date.now(),
+      captureOverhead: 0,
 
       // Configuration
       width,
@@ -394,7 +396,8 @@ export class CDExecutor {
       selectionEnd: this.context.selectionEnd,
     };
 
-    const timestamp = Date.now() - this.context.startTime;
+    // Subtract accumulated capture overhead to get accurate animation timing
+    const timestamp = Date.now() - this.context.startTime - this.context.captureOverhead;
 
     const frame: TerminalFrame = {
       timestamp,
@@ -451,8 +454,12 @@ export class CDExecutor {
       this.context.currentLine = before + char + after;
       this.context.cursorX++;
 
+      // Sleep first, then capture frame
       await this.sleep(delay);
+      const captureStart = Date.now();
       this.captureFrame(true, true);
+      // Track capture overhead to subtract from future timestamps
+      this.context.captureOverhead += Date.now() - captureStart;
     }
   }
 
