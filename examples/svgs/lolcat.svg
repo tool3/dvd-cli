@@ -13,40 +13,40 @@
 .uline { text-decoration: underline; }
 .strike { text-decoration: line-through; }
 .dim { opacity: 0.5; }
-.fg { fill: #f8f8f2; }
-.f0 { fill: #21222c; }
-.f1 { fill: #ff5555; }
-.f2 { fill: #50fa7b; }
-.f3 { fill: #f1fa8c; }
-.f4 { fill: #bd93f9; }
-.f5 { fill: #ff79c6; }
-.f6 { fill: #8be9fd; }
-.f7 { fill: #f8f8f2; }
-.f8 { fill: #6272a4; }
-.f9 { fill: #ff6e6e; }
-.f10 { fill: #69ff94; }
-.f11 { fill: #ffffa5; }
-.f12 { fill: #d6acff; }
-.f13 { fill: #ff92df; }
-.f14 { fill: #a4ffff; }
-.f15 { fill: #ffffff; }
-.bg { fill: #282a36; }
-.b0 { fill: #21222c; }
-.b1 { fill: #ff5555; }
-.b2 { fill: #50fa7b; }
-.b3 { fill: #f1fa8c; }
-.b4 { fill: #bd93f9; }
-.b5 { fill: #ff79c6; }
-.b6 { fill: #8be9fd; }
-.b7 { fill: #f8f8f2; }
-.b8 { fill: #6272a4; }
-.b9 { fill: #ff6e6e; }
-.b10 { fill: #69ff94; }
-.b11 { fill: #ffffa5; }
-.b12 { fill: #d6acff; }
-.b13 { fill: #ff92df; }
-.b14 { fill: #a4ffff; }
-.b15 { fill: #ffffff; }
+.fg { fill: #c9d1d9; }
+.f0 { fill: #000000; }
+.f1 { fill: #ff7b72; }
+.f2 { fill: #3fb950; }
+.f3 { fill: #d29922; }
+.f4 { fill: #58a6ff; }
+.f5 { fill: #bc8cff; }
+.f6 { fill: #39c5cf; }
+.f7 { fill: #b1bac4; }
+.f8 { fill: #6e7681; }
+.f9 { fill: #ffa198; }
+.f10 { fill: #56d364; }
+.f11 { fill: #e3b341; }
+.f12 { fill: #79c0ff; }
+.f13 { fill: #d2a8ff; }
+.f14 { fill: #56d4dd; }
+.f15 { fill: #f0f6fc; }
+.bg { fill: #1e1e1e; }
+.b0 { fill: #000000; }
+.b1 { fill: #ff7b72; }
+.b2 { fill: #3fb950; }
+.b3 { fill: #d29922; }
+.b4 { fill: #58a6ff; }
+.b5 { fill: #bc8cff; }
+.b6 { fill: #39c5cf; }
+.b7 { fill: #b1bac4; }
+.b8 { fill: #6e7681; }
+.b9 { fill: #ffa198; }
+.b10 { fill: #56d364; }
+.b11 { fill: #e3b341; }
+.b12 { fill: #79c0ff; }
+.b13 { fill: #d2a8ff; }
+.b14 { fill: #56d4dd; }
+.b15 { fill: #f0f6fc; }
 .cursor { animation: blink 1s step-end infinite; }
 @keyframes blink {
   0%, 50% { opacity: 1; }
@@ -57,26 +57,31 @@
   </style>
 
   <!-- Persistent background - never animated -->
-  <rect width="100%" height="100%" fill="#282a36" />
+  <rect width="100%" height="100%" fill="#1e1e1e" />
 
   <!-- Animated frames with discrete visibility transitions -->
   
   <g id="frame-0" visibility="visible">
     
 
-<rect class="window-bg" x="0" y="0" width="600" height="600" fill="#282a36" rx="8" ry="8"/>
+<rect class="window-bg" x="0" y="0" width="600" height="600" fill="#1e1e1e" rx="8" ry="8"/>
+<g class="chrome"><rect class="header-bg" x="0" y="0" width="600" height="40" fill="#1e1e1e" rx="8" ry="8"/>
+<rect x="0" y="32" width="600" height="8" fill="#1e1e1e"/>
+<circle cx="22" cy="20" r="6" fill="#ff5f56"/>
+<circle cx="42" cy="20" r="6" fill="#ffbd2e"/>
+<circle cx="62" cy="20" r="6" fill="#27c93f"/></g>
 <g class="text-layer">
-<text class="text f13" x="16" y="16">❯</text>
+<text class="text f13" x="16" y="56">❯</text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor" x="30.4" y="16" width="7.199999999999999" height="16.799999999999997" fill="#f8f8f2"/>
+<rect class="cursor" x="30.4" y="56" width="7.199999999999999" height="16.799999999999997" fill="#c9d1d9"/>
 </g>
 
     <animate
       attributeName="visibility"
       values="visible;hidden;hidden"
-      keyTimes="0.000000;0.007051;1.000000"
-      dur="7.66s"
+      keyTimes="0.000000;0.007160;1.000000"
+      dur="7.68s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -86,20 +91,25 @@
   <g id="frame-1" visibility="hidden">
     
 
-<rect class="window-bg" x="0" y="0" width="600" height="600" fill="#282a36" rx="8" ry="8"/>
+<rect class="window-bg" x="0" y="0" width="600" height="600" fill="#1e1e1e" rx="8" ry="8"/>
+<g class="chrome"><rect class="header-bg" x="0" y="0" width="600" height="40" fill="#1e1e1e" rx="8" ry="8"/>
+<rect x="0" y="32" width="600" height="8" fill="#1e1e1e"/>
+<circle cx="22" cy="20" r="6" fill="#ff5f56"/>
+<circle cx="42" cy="20" r="6" fill="#ffbd2e"/>
+<circle cx="62" cy="20" r="6" fill="#27c93f"/></g>
 <g class="text-layer">
-<text class="text f13" x="16" y="16">❯</text>
-<text class="text fg" x="23.2" y="16"> l                                                                           </text>
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="23.2" y="56"> l                                                                           </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor-active" x="37.599999999999994" y="16" width="7.199999999999999" height="16.799999999999997" fill="#f8f8f2"/>
+<rect class="cursor-active" x="37.599999999999994" y="56" width="7.199999999999999" height="16.799999999999997" fill="#c9d1d9"/>
 </g>
 
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.007051;0.013842;1.000000"
-      dur="7.66s"
+      keyTimes="0.000000;0.007160;0.014059;1.000000"
+      dur="7.68s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -109,20 +119,25 @@
   <g id="frame-2" visibility="hidden">
     
 
-<rect class="window-bg" x="0" y="0" width="600" height="600" fill="#282a36" rx="8" ry="8"/>
+<rect class="window-bg" x="0" y="0" width="600" height="600" fill="#1e1e1e" rx="8" ry="8"/>
+<g class="chrome"><rect class="header-bg" x="0" y="0" width="600" height="40" fill="#1e1e1e" rx="8" ry="8"/>
+<rect x="0" y="32" width="600" height="8" fill="#1e1e1e"/>
+<circle cx="22" cy="20" r="6" fill="#ff5f56"/>
+<circle cx="42" cy="20" r="6" fill="#ffbd2e"/>
+<circle cx="62" cy="20" r="6" fill="#27c93f"/></g>
 <g class="text-layer">
-<text class="text f13" x="16" y="16">❯</text>
-<text class="text fg" x="23.2" y="16"> lo                                                                          </text>
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="23.2" y="56"> lo                                                                          </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor-active" x="44.8" y="16" width="7.199999999999999" height="16.799999999999997" fill="#f8f8f2"/>
+<rect class="cursor-active" x="44.8" y="56" width="7.199999999999999" height="16.799999999999997" fill="#c9d1d9"/>
 </g>
 
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.013842;0.020763;1.000000"
-      dur="7.66s"
+      keyTimes="0.000000;0.014059;0.020958;1.000000"
+      dur="7.68s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -132,20 +147,25 @@
   <g id="frame-3" visibility="hidden">
     
 
-<rect class="window-bg" x="0" y="0" width="600" height="600" fill="#282a36" rx="8" ry="8"/>
+<rect class="window-bg" x="0" y="0" width="600" height="600" fill="#1e1e1e" rx="8" ry="8"/>
+<g class="chrome"><rect class="header-bg" x="0" y="0" width="600" height="40" fill="#1e1e1e" rx="8" ry="8"/>
+<rect x="0" y="32" width="600" height="8" fill="#1e1e1e"/>
+<circle cx="22" cy="20" r="6" fill="#ff5f56"/>
+<circle cx="42" cy="20" r="6" fill="#ffbd2e"/>
+<circle cx="62" cy="20" r="6" fill="#27c93f"/></g>
 <g class="text-layer">
-<text class="text f13" x="16" y="16">❯</text>
-<text class="text fg" x="23.2" y="16"> lol                                                                         </text>
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="23.2" y="56"> lol                                                                         </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor-active" x="52" y="16" width="7.199999999999999" height="16.799999999999997" fill="#f8f8f2"/>
+<rect class="cursor-active" x="52" y="56" width="7.199999999999999" height="16.799999999999997" fill="#c9d1d9"/>
 </g>
 
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.020763;0.027553;1.000000"
-      dur="7.66s"
+      keyTimes="0.000000;0.020958;0.027727;1.000000"
+      dur="7.68s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -155,20 +175,25 @@
   <g id="frame-4" visibility="hidden">
     
 
-<rect class="window-bg" x="0" y="0" width="600" height="600" fill="#282a36" rx="8" ry="8"/>
+<rect class="window-bg" x="0" y="0" width="600" height="600" fill="#1e1e1e" rx="8" ry="8"/>
+<g class="chrome"><rect class="header-bg" x="0" y="0" width="600" height="40" fill="#1e1e1e" rx="8" ry="8"/>
+<rect x="0" y="32" width="600" height="8" fill="#1e1e1e"/>
+<circle cx="22" cy="20" r="6" fill="#ff5f56"/>
+<circle cx="42" cy="20" r="6" fill="#ffbd2e"/>
+<circle cx="62" cy="20" r="6" fill="#27c93f"/></g>
 <g class="text-layer">
-<text class="text f13" x="16" y="16">❯</text>
-<text class="text fg" x="23.2" y="16"> lolc                                                                        </text>
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="23.2" y="56"> lolc                                                                        </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor-active" x="59.199999999999996" y="16" width="7.199999999999999" height="16.799999999999997" fill="#f8f8f2"/>
+<rect class="cursor-active" x="59.199999999999996" y="56" width="7.199999999999999" height="16.799999999999997" fill="#c9d1d9"/>
 </g>
 
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.027553;0.034604;1.000000"
-      dur="7.66s"
+      keyTimes="0.000000;0.027727;0.035017;1.000000"
+      dur="7.68s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -178,20 +203,25 @@
   <g id="frame-5" visibility="hidden">
     
 
-<rect class="window-bg" x="0" y="0" width="600" height="600" fill="#282a36" rx="8" ry="8"/>
+<rect class="window-bg" x="0" y="0" width="600" height="600" fill="#1e1e1e" rx="8" ry="8"/>
+<g class="chrome"><rect class="header-bg" x="0" y="0" width="600" height="40" fill="#1e1e1e" rx="8" ry="8"/>
+<rect x="0" y="32" width="600" height="8" fill="#1e1e1e"/>
+<circle cx="22" cy="20" r="6" fill="#ff5f56"/>
+<circle cx="42" cy="20" r="6" fill="#ffbd2e"/>
+<circle cx="62" cy="20" r="6" fill="#27c93f"/></g>
 <g class="text-layer">
-<text class="text f13" x="16" y="16">❯</text>
-<text class="text fg" x="23.2" y="16"> lolca                                                                       </text>
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="23.2" y="56"> lolca                                                                       </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor-active" x="66.39999999999999" y="16" width="7.199999999999999" height="16.799999999999997" fill="#f8f8f2"/>
+<rect class="cursor-active" x="66.39999999999999" y="56" width="7.199999999999999" height="16.799999999999997" fill="#c9d1d9"/>
 </g>
 
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.034604;0.041525;1.000000"
-      dur="7.66s"
+      keyTimes="0.000000;0.035017;0.042046;1.000000"
+      dur="7.68s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -201,20 +231,25 @@
   <g id="frame-6" visibility="hidden">
     
 
-<rect class="window-bg" x="0" y="0" width="600" height="600" fill="#282a36" rx="8" ry="8"/>
+<rect class="window-bg" x="0" y="0" width="600" height="600" fill="#1e1e1e" rx="8" ry="8"/>
+<g class="chrome"><rect class="header-bg" x="0" y="0" width="600" height="40" fill="#1e1e1e" rx="8" ry="8"/>
+<rect x="0" y="32" width="600" height="8" fill="#1e1e1e"/>
+<circle cx="22" cy="20" r="6" fill="#ff5f56"/>
+<circle cx="42" cy="20" r="6" fill="#ffbd2e"/>
+<circle cx="62" cy="20" r="6" fill="#27c93f"/></g>
 <g class="text-layer">
-<text class="text f13" x="16" y="16">❯</text>
-<text class="text fg" x="23.2" y="16"> lolcat                                                                      </text>
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="23.2" y="56"> lolcat                                                                      </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor-active" x="73.6" y="16" width="7.199999999999999" height="16.799999999999997" fill="#f8f8f2"/>
+<rect class="cursor-active" x="73.6" y="56" width="7.199999999999999" height="16.799999999999997" fill="#c9d1d9"/>
 </g>
 
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.041525;0.048315;1.000000"
-      dur="7.66s"
+      keyTimes="0.000000;0.042046;0.049076;1.000000"
+      dur="7.68s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -224,20 +259,25 @@
   <g id="frame-7" visibility="hidden">
     
 
-<rect class="window-bg" x="0" y="0" width="600" height="600" fill="#282a36" rx="8" ry="8"/>
+<rect class="window-bg" x="0" y="0" width="600" height="600" fill="#1e1e1e" rx="8" ry="8"/>
+<g class="chrome"><rect class="header-bg" x="0" y="0" width="600" height="40" fill="#1e1e1e" rx="8" ry="8"/>
+<rect x="0" y="32" width="600" height="8" fill="#1e1e1e"/>
+<circle cx="22" cy="20" r="6" fill="#ff5f56"/>
+<circle cx="42" cy="20" r="6" fill="#ffbd2e"/>
+<circle cx="62" cy="20" r="6" fill="#27c93f"/></g>
 <g class="text-layer">
-<text class="text f13" x="16" y="16">❯</text>
-<text class="text fg" x="23.2" y="16"> lolcat                                                                      </text>
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="23.2" y="56"> lolcat                                                                      </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor-active" x="80.8" y="16" width="7.199999999999999" height="16.799999999999997" fill="#f8f8f2"/>
+<rect class="cursor-active" x="80.8" y="56" width="7.199999999999999" height="16.799999999999997" fill="#c9d1d9"/>
 </g>
 
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.048315;0.055106;1.000000"
-      dur="7.66s"
+      keyTimes="0.000000;0.049076;0.056105;1.000000"
+      dur="7.68s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -247,20 +287,25 @@
   <g id="frame-8" visibility="hidden">
     
 
-<rect class="window-bg" x="0" y="0" width="600" height="600" fill="#282a36" rx="8" ry="8"/>
+<rect class="window-bg" x="0" y="0" width="600" height="600" fill="#1e1e1e" rx="8" ry="8"/>
+<g class="chrome"><rect class="header-bg" x="0" y="0" width="600" height="40" fill="#1e1e1e" rx="8" ry="8"/>
+<rect x="0" y="32" width="600" height="8" fill="#1e1e1e"/>
+<circle cx="22" cy="20" r="6" fill="#ff5f56"/>
+<circle cx="42" cy="20" r="6" fill="#ffbd2e"/>
+<circle cx="62" cy="20" r="6" fill="#27c93f"/></g>
 <g class="text-layer">
-<text class="text f13" x="16" y="16">❯</text>
-<text class="text fg" x="23.2" y="16"> lolcat -                                                                    </text>
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="23.2" y="56"> lolcat -                                                                    </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor-active" x="88" y="16" width="7.199999999999999" height="16.799999999999997" fill="#f8f8f2"/>
+<rect class="cursor-active" x="88" y="56" width="7.199999999999999" height="16.799999999999997" fill="#c9d1d9"/>
 </g>
 
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.055106;0.061896;1.000000"
-      dur="7.66s"
+      keyTimes="0.000000;0.056105;0.063135;1.000000"
+      dur="7.68s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -270,20 +315,25 @@
   <g id="frame-9" visibility="hidden">
     
 
-<rect class="window-bg" x="0" y="0" width="600" height="600" fill="#282a36" rx="8" ry="8"/>
+<rect class="window-bg" x="0" y="0" width="600" height="600" fill="#1e1e1e" rx="8" ry="8"/>
+<g class="chrome"><rect class="header-bg" x="0" y="0" width="600" height="40" fill="#1e1e1e" rx="8" ry="8"/>
+<rect x="0" y="32" width="600" height="8" fill="#1e1e1e"/>
+<circle cx="22" cy="20" r="6" fill="#ff5f56"/>
+<circle cx="42" cy="20" r="6" fill="#ffbd2e"/>
+<circle cx="62" cy="20" r="6" fill="#27c93f"/></g>
 <g class="text-layer">
-<text class="text f13" x="16" y="16">❯</text>
-<text class="text fg" x="23.2" y="16"> lolcat --                                                                   </text>
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="23.2" y="56"> lolcat --                                                                   </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor-active" x="95.19999999999999" y="16" width="7.199999999999999" height="16.799999999999997" fill="#f8f8f2"/>
+<rect class="cursor-active" x="95.19999999999999" y="56" width="7.199999999999999" height="16.799999999999997" fill="#c9d1d9"/>
 </g>
 
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.061896;0.068817;1.000000"
-      dur="7.66s"
+      keyTimes="0.000000;0.063135;0.069904;1.000000"
+      dur="7.68s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -293,20 +343,25 @@
   <g id="frame-10" visibility="hidden">
     
 
-<rect class="window-bg" x="0" y="0" width="600" height="600" fill="#282a36" rx="8" ry="8"/>
+<rect class="window-bg" x="0" y="0" width="600" height="600" fill="#1e1e1e" rx="8" ry="8"/>
+<g class="chrome"><rect class="header-bg" x="0" y="0" width="600" height="40" fill="#1e1e1e" rx="8" ry="8"/>
+<rect x="0" y="32" width="600" height="8" fill="#1e1e1e"/>
+<circle cx="22" cy="20" r="6" fill="#ff5f56"/>
+<circle cx="42" cy="20" r="6" fill="#ffbd2e"/>
+<circle cx="62" cy="20" r="6" fill="#27c93f"/></g>
 <g class="text-layer">
-<text class="text f13" x="16" y="16">❯</text>
-<text class="text fg" x="23.2" y="16"> lolcat --h                                                                  </text>
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="23.2" y="56"> lolcat --h                                                                  </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor-active" x="102.39999999999999" y="16" width="7.199999999999999" height="16.799999999999997" fill="#f8f8f2"/>
+<rect class="cursor-active" x="102.39999999999999" y="56" width="7.199999999999999" height="16.799999999999997" fill="#c9d1d9"/>
 </g>
 
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.068817;0.075738;1.000000"
-      dur="7.66s"
+      keyTimes="0.000000;0.069904;0.077063;1.000000"
+      dur="7.68s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -316,20 +371,25 @@
   <g id="frame-11" visibility="hidden">
     
 
-<rect class="window-bg" x="0" y="0" width="600" height="600" fill="#282a36" rx="8" ry="8"/>
+<rect class="window-bg" x="0" y="0" width="600" height="600" fill="#1e1e1e" rx="8" ry="8"/>
+<g class="chrome"><rect class="header-bg" x="0" y="0" width="600" height="40" fill="#1e1e1e" rx="8" ry="8"/>
+<rect x="0" y="32" width="600" height="8" fill="#1e1e1e"/>
+<circle cx="22" cy="20" r="6" fill="#ff5f56"/>
+<circle cx="42" cy="20" r="6" fill="#ffbd2e"/>
+<circle cx="62" cy="20" r="6" fill="#27c93f"/></g>
 <g class="text-layer">
-<text class="text f13" x="16" y="16">❯</text>
-<text class="text fg" x="23.2" y="16"> lolcat --he                                                                 </text>
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="23.2" y="56"> lolcat --he                                                                 </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor-active" x="109.6" y="16" width="7.199999999999999" height="16.799999999999997" fill="#f8f8f2"/>
+<rect class="cursor-active" x="109.6" y="56" width="7.199999999999999" height="16.799999999999997" fill="#c9d1d9"/>
 </g>
 
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.075738;0.082528;1.000000"
-      dur="7.66s"
+      keyTimes="0.000000;0.077063;0.084353;1.000000"
+      dur="7.68s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -339,20 +399,25 @@
   <g id="frame-12" visibility="hidden">
     
 
-<rect class="window-bg" x="0" y="0" width="600" height="600" fill="#282a36" rx="8" ry="8"/>
+<rect class="window-bg" x="0" y="0" width="600" height="600" fill="#1e1e1e" rx="8" ry="8"/>
+<g class="chrome"><rect class="header-bg" x="0" y="0" width="600" height="40" fill="#1e1e1e" rx="8" ry="8"/>
+<rect x="0" y="32" width="600" height="8" fill="#1e1e1e"/>
+<circle cx="22" cy="20" r="6" fill="#ff5f56"/>
+<circle cx="42" cy="20" r="6" fill="#ffbd2e"/>
+<circle cx="62" cy="20" r="6" fill="#27c93f"/></g>
 <g class="text-layer">
-<text class="text f13" x="16" y="16">❯</text>
-<text class="text fg" x="23.2" y="16"> lolcat --hel                                                                </text>
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="23.2" y="56"> lolcat --hel                                                                </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor-active" x="116.79999999999998" y="16" width="7.199999999999999" height="16.799999999999997" fill="#f8f8f2"/>
+<rect class="cursor-active" x="116.79999999999998" y="56" width="7.199999999999999" height="16.799999999999997" fill="#c9d1d9"/>
 </g>
 
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.082528;0.089580;1.000000"
-      dur="7.66s"
+      keyTimes="0.000000;0.084353;0.091382;1.000000"
+      dur="7.68s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -362,20 +427,25 @@
   <g id="frame-13" visibility="hidden">
     
 
-<rect class="window-bg" x="0" y="0" width="600" height="600" fill="#282a36" rx="8" ry="8"/>
+<rect class="window-bg" x="0" y="0" width="600" height="600" fill="#1e1e1e" rx="8" ry="8"/>
+<g class="chrome"><rect class="header-bg" x="0" y="0" width="600" height="40" fill="#1e1e1e" rx="8" ry="8"/>
+<rect x="0" y="32" width="600" height="8" fill="#1e1e1e"/>
+<circle cx="22" cy="20" r="6" fill="#ff5f56"/>
+<circle cx="42" cy="20" r="6" fill="#ffbd2e"/>
+<circle cx="62" cy="20" r="6" fill="#27c93f"/></g>
 <g class="text-layer">
-<text class="text f13" x="16" y="16">❯</text>
-<text class="text fg" x="23.2" y="16"> lolcat --help                                                               </text>
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="23.2" y="56"> lolcat --help                                                               </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor-active" x="123.99999999999999" y="16" width="7.199999999999999" height="16.799999999999997" fill="#f8f8f2"/>
+<rect class="cursor-active" x="123.99999999999999" y="56" width="7.199999999999999" height="16.799999999999997" fill="#c9d1d9"/>
 </g>
 
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.089580;0.155262;1.000000"
-      dur="7.66s"
+      keyTimes="0.000000;0.091382;0.157381;1.000000"
+      dur="7.68s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -385,20 +455,25 @@
   <g id="frame-14" visibility="hidden">
     
 
-<rect class="window-bg" x="0" y="0" width="600" height="600" fill="#282a36" rx="8" ry="8"/>
+<rect class="window-bg" x="0" y="0" width="600" height="600" fill="#1e1e1e" rx="8" ry="8"/>
+<g class="chrome"><rect class="header-bg" x="0" y="0" width="600" height="40" fill="#1e1e1e" rx="8" ry="8"/>
+<rect x="0" y="32" width="600" height="8" fill="#1e1e1e"/>
+<circle cx="22" cy="20" r="6" fill="#ff5f56"/>
+<circle cx="42" cy="20" r="6" fill="#ffbd2e"/>
+<circle cx="62" cy="20" r="6" fill="#27c93f"/></g>
 <g class="text-layer">
-<text class="text f13" x="16" y="16">❯</text>
-<text class="text fg" x="23.2" y="16"> lolcat --help                                                               </text>
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="23.2" y="56"> lolcat --help                                                               </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor" x="123.99999999999999" y="16" width="7.199999999999999" height="16.799999999999997" fill="#f8f8f2"/>
+<rect class="cursor" x="123.99999999999999" y="56" width="7.199999999999999" height="16.799999999999997" fill="#c9d1d9"/>
 </g>
 
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.155262;0.168843;1.000000"
-      dur="7.66s"
+      keyTimes="0.000000;0.157381;0.171570;1.000000"
+      dur="7.68s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -408,17 +483,22 @@
   <g id="frame-15" visibility="hidden">
     
 
-<rect class="window-bg" x="0" y="0" width="600" height="600" fill="#282a36" rx="8" ry="8"/>
+<rect class="window-bg" x="0" y="0" width="600" height="600" fill="#1e1e1e" rx="8" ry="8"/>
+<g class="chrome"><rect class="header-bg" x="0" y="0" width="600" height="40" fill="#1e1e1e" rx="8" ry="8"/>
+<rect x="0" y="32" width="600" height="8" fill="#1e1e1e"/>
+<circle cx="22" cy="20" r="6" fill="#ff5f56"/>
+<circle cx="42" cy="20" r="6" fill="#ffbd2e"/>
+<circle cx="62" cy="20" r="6" fill="#27c93f"/></g>
 <g class="text-layer">
-<text class="text f13" x="16" y="16">❯</text>
-<text class="text fg" x="23.2" y="16"> lolcat --help                                                               </text>
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="23.2" y="56"> lolcat --help                                                               </text>
 </g>
 
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.168843;0.185949;1.000000"
-      dur="7.66s"
+      keyTimes="0.000000;0.171570;0.187581;1.000000"
+      dur="7.68s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -428,94 +508,99 @@
   <g id="frame-16" visibility="hidden">
     
 
-<rect class="window-bg" x="0" y="0" width="600" height="600" fill="#282a36" rx="8" ry="8"/>
+<rect class="window-bg" x="0" y="0" width="600" height="600" fill="#1e1e1e" rx="8" ry="8"/>
+<g class="chrome"><rect class="header-bg" x="0" y="0" width="600" height="40" fill="#1e1e1e" rx="8" ry="8"/>
+<rect x="0" y="32" width="600" height="8" fill="#1e1e1e"/>
+<circle cx="22" cy="20" r="6" fill="#ff5f56"/>
+<circle cx="42" cy="20" r="6" fill="#ffbd2e"/>
+<circle cx="62" cy="20" r="6" fill="#27c93f"/></g>
 <g class="text-layer">
-<text class="text f13" x="16" y="16">❯</text>
-<text class="text fg" x="23.2" y="16"> lolcat --help                                                               </text>
-<text class="text" x="16" y="49.599999999999994" fill="#87ff00">Usage</text>
-<text class="text" x="52" y="49.599999999999994" fill="#afff00">: lolcat </text>
-<text class="text" x="116.79999999999998" y="49.599999999999994" fill="#afd700">[</text>
-<text class="text" x="123.99999999999999" y="49.599999999999994" fill="#d7d700">OPTION]..</text>
-<text class="text" x="188.79999999999998" y="49.599999999999994" fill="#d7af00">.</text>
-<text class="text" x="195.99999999999997" y="49.599999999999994" fill="#ffaf00"> [FILE].</text>
-<text class="text" x="253.59999999999997" y="49.599999999999994" fill="#ff8700">..</text>
-<text class="text" x="16" y="83.19999999999999" fill="#d7d700">Concaten</text>
-<text class="text" x="73.6" y="83.19999999999999" fill="#d7af00">a</text>
-<text class="text" x="80.8" y="83.19999999999999" fill="#ffaf00">te FILE(</text>
-<text class="text" x="138.39999999999998" y="83.19999999999999" fill="#ff8700">s), or st</text>
-<text class="text" x="203.2" y="83.19999999999999" fill="#ff5f5f">andard inp</text>
-<text class="text" x="275.2" y="83.19999999999999" fill="#ff5f87">u</text>
-<text class="text" x="282.4" y="83.19999999999999" fill="#ff0087">t, to st</text>
-<text class="text" x="339.99999999999994" y="83.19999999999999" fill="#ff00af">andard o</text>
-<text class="text" x="397.59999999999997" y="83.19999999999999" fill="#d700af">u</text>
-<text class="text" x="404.79999999999995" y="83.19999999999999" fill="#d700d7">tput.</text>
-<text class="text" x="16" y="99.99999999999999" fill="#d7af00">W</text>
-<text class="text" x="23.2" y="99.99999999999999" fill="#ffaf00">ith no F</text>
-<text class="text" x="80.8" y="99.99999999999999" fill="#ff8700">ILE, or w</text>
-<text class="text" x="145.6" y="99.99999999999999" fill="#ff5f5f">hen FILE i</text>
-<text class="text" x="217.59999999999997" y="99.99999999999999" fill="#ff5f87">s</text>
-<text class="text" x="224.79999999999998" y="99.99999999999999" fill="#ff0087"> -, read</text>
-<text class="text" x="282.4" y="99.99999999999999" fill="#ff00af"> standar</text>
-<text class="text" x="339.99999999999994" y="99.99999999999999" fill="#d700af">d</text>
-<text class="text" x="347.2" y="99.99999999999999" fill="#d700d7"> input.</text>
-<text class="text" x="30.4" y="133.59999999999997" fill="#ff5f5f">-p, --spre</text>
-<text class="text" x="102.39999999999999" y="133.59999999999997" fill="#ff5f87">a</text>
-<text class="text" x="109.6" y="133.59999999999997" fill="#ff0087">d=&lt;f&gt;   </text>
-<text class="text" x="167.2" y="133.59999999999997" fill="#ff00af">   Rainb</text>
-<text class="text" x="224.79999999999998" y="133.59999999999997" fill="#d700af">o</text>
-<text class="text" x="231.99999999999997" y="133.59999999999997" fill="#d700d7">w spread (</text>
-<text class="text" x="304" y="133.59999999999997" fill="#af00d7">d</text>
-<text class="text" x="311.2" y="133.59999999999997" fill="#af00ff">efault: </text>
-<text class="text" x="368.79999999999995" y="133.59999999999997" fill="#8700ff">3.0)</text>
-<text class="text" x="16" y="150.39999999999998" fill="#ff5f5f">  -F</text>
-<text class="text" x="44.8" y="150.39999999999998" fill="#ff5f87">,</text>
-<text class="text" x="52" y="150.39999999999998" fill="#ff0087"> --freq=</text>
-<text class="text" x="109.6" y="150.39999999999998" fill="#ff00af">&lt;f&gt;     </text>
-<text class="text" x="174.39999999999998" y="150.39999999999998" fill="#d700d7">  Rainbow </text>
-<text class="text" x="246.39999999999998" y="150.39999999999998" fill="#af00d7">f</text>
-<text class="text" x="253.59999999999997" y="150.39999999999998" fill="#af00ff">requency</text>
-<text class="text" x="311.2" y="150.39999999999998" fill="#8700ff"> (default</text>
-<text class="text" x="375.99999999999994" y="150.39999999999998" fill="#5f5fff">: 0.1)</text>
-<text class="text" x="16" y="167.2" fill="#ff0087">  -S,</text>
-<text class="text" x="52" y="167.2" fill="#ff00af"> --seed=</text>
-<text class="text" x="109.6" y="167.2" fill="#d700af">&lt;</text>
-<text class="text" x="116.79999999999998" y="167.2" fill="#d700d7">i&gt;        </text>
-<text class="text" x="188.79999999999998" y="167.2" fill="#af00d7">R</text>
-<text class="text" x="195.99999999999997" y="167.2" fill="#af00ff">ainbow s</text>
-<text class="text" x="253.59999999999997" y="167.2" fill="#8700ff">eed, 0 = </text>
-<text class="text" x="318.4" y="167.2" fill="#5f5fff">random (de</text>
-<text class="text" x="390.4" y="167.2" fill="#5f87ff">f</text>
-<text class="text" x="397.59999999999997" y="167.2" fill="#0087ff">ault: 0)</text>
-<text class="text" x="16" y="183.99999999999997" fill="#ff00af">  -a,</text>
-<text class="text" x="59.199999999999996" y="183.99999999999997" fill="#d700d7">--animate </text>
-<text class="text" x="138.39999999999998" y="183.99999999999997" fill="#af00ff">       E</text>
-<text class="text" x="195.99999999999997" y="183.99999999999997" fill="#8700ff">nable psy</text>
-<text class="text" x="260.79999999999995" y="183.99999999999997" fill="#5f5fff">chedelics</text>
-<text class="text" x="16" y="200.79999999999995" fill="#d700d7">  -d, --</text>
-<text class="text" x="73.6" y="200.79999999999995" fill="#af00d7">d</text>
-<text class="text" x="80.8" y="200.79999999999995" fill="#af00ff">uration=</text>
-<text class="text" x="138.39999999999998" y="200.79999999999995" fill="#8700ff">&lt;i&gt;    An</text>
-<text class="text" x="203.2" y="200.79999999999995" fill="#5f5fff">imation du</text>
-<text class="text" x="275.2" y="200.79999999999995" fill="#5f87ff">r</text>
-<text class="text" x="282.4" y="200.79999999999995" fill="#0087ff">ation (d</text>
-<text class="text" x="339.99999999999994" y="200.79999999999995" fill="#00afff">efault: </text>
-<text class="text" x="397.59999999999997" y="200.79999999999995" fill="#00afd7">1</text>
-<text class="text" x="404.79999999999995" y="200.79999999999995" fill="#00d7d7">2)</text>
-<text class="text" x="23.2" y="217.59999999999997" fill="#af00ff"> -s, --s</text>
-<text class="text" x="80.8" y="217.59999999999997" fill="#8700ff">peed=&lt;f&gt; </text>
-<text class="text" x="145.6" y="217.59999999999997" fill="#5f5fff">      Anim</text>
-<text class="text" x="217.59999999999997" y="217.59999999999997" fill="#5f87ff">a</text>
-<text class="text" x="224.79999999999998" y="217.59999999999997" fill="#0087ff">tion spe</text>
-<text class="text" x="282.4" y="217.59999999999997" fill="#00afff">ed (defa</text>
-<text class="text" x="339.99999999999994" y="217.59999999999997" fill="#00afd7">u</text>
-<text class="text" x="347.2" y="217.59999999999997" fill="#00d7d7">lt: 20.0)</text>
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="23.2" y="56"> lolcat --help                                                               </text>
+<text class="text" x="16" y="89.6" fill="#00ffaf">Usa</text>
+<text class="text" x="37.599999999999994" y="89.6" fill="#00ff87">ge: lolc</text>
+<text class="text" x="95.19999999999999" y="89.6" fill="#5fff87">a</text>
+<text class="text" x="102.39999999999999" y="89.6" fill="#5fff5f">t [OPTION]</text>
+<text class="text" x="174.39999999999998" y="89.6" fill="#87ff00">... [FILE</text>
+<text class="text" x="239.2" y="89.6" fill="#afff00">]...</text>
+<text class="text" x="16" y="123.19999999999999" fill="#5fff5f">Concat</text>
+<text class="text" x="59.199999999999996" y="123.19999999999999" fill="#87ff00">enate FIL</text>
+<text class="text" x="123.99999999999999" y="123.19999999999999" fill="#afff00">E(s), or</text>
+<text class="text" x="188.79999999999998" y="123.19999999999999" fill="#d7d700">standard </text>
+<text class="text" x="253.59999999999997" y="123.19999999999999" fill="#d7af00">i</text>
+<text class="text" x="260.79999999999995" y="123.19999999999999" fill="#ffaf00">nput, to </text>
+<text class="text" x="325.59999999999997" y="123.19999999999999" fill="#ff8700">standard</text>
+<text class="text" x="390.4" y="123.19999999999999" fill="#ff5f5f">output.</text>
+<text class="text" x="16" y="140" fill="#87ff00">With no</text>
+<text class="text" x="66.39999999999999" y="140" fill="#afff00"> FILE, o</text>
+<text class="text" x="123.99999999999999" y="140" fill="#afd700">r</text>
+<text class="text" x="131.2" y="140" fill="#d7d700"> when FIL</text>
+<text class="text" x="195.99999999999997" y="140" fill="#d7af00">E</text>
+<text class="text" x="203.2" y="140" fill="#ffaf00"> is -, re</text>
+<text class="text" x="268" y="140" fill="#ff8700">ad stand</text>
+<text class="text" x="325.59999999999997" y="140" fill="#ff875f">a</text>
+<text class="text" x="332.79999999999995" y="140" fill="#ff5f5f">rd input.</text>
+<text class="text" x="16" y="173.59999999999997" fill="#d7d700">  -p, --s</text>
+<text class="text" x="80.8" y="173.59999999999997" fill="#d7af00">p</text>
+<text class="text" x="88" y="173.59999999999997" fill="#ffaf00">read=&lt;f&gt; </text>
+<text class="text" x="152.79999999999998" y="173.59999999999997" fill="#ff8700">     Rai</text>
+<text class="text" x="210.39999999999998" y="173.59999999999997" fill="#ff875f">n</text>
+<text class="text" x="217.59999999999997" y="173.59999999999997" fill="#ff5f5f">bow sprea</text>
+<text class="text" x="282.4" y="173.59999999999997" fill="#ff5f87">d</text>
+<text class="text" x="289.59999999999997" y="173.59999999999997" fill="#ff0087"> (defaul</text>
+<text class="text" x="347.2" y="173.59999999999997" fill="#ff00af">t: 3.0)</text>
+<text class="text" x="30.4" y="190.39999999999998" fill="#ffaf00">-F, --fre</text>
+<text class="text" x="95.19999999999999" y="190.39999999999998" fill="#ff8700">q=&lt;f&gt;   </text>
+<text class="text" x="160" y="190.39999999999998" fill="#ff5f5f">    Rainb</text>
+<text class="text" x="224.79999999999998" y="190.39999999999998" fill="#ff5f87">o</text>
+<text class="text" x="231.99999999999997" y="190.39999999999998" fill="#ff0087">w freque</text>
+<text class="text" x="289.59999999999997" y="190.39999999999998" fill="#ff00af">ncy (defa</text>
+<text class="text" x="354.4" y="190.39999999999998" fill="#d700af">u</text>
+<text class="text" x="361.59999999999997" y="190.39999999999998" fill="#d700d7">lt: 0.1)</text>
+<text class="text" x="16" y="207.2" fill="#ffaf00">  -</text>
+<text class="text" x="37.599999999999994" y="207.2" fill="#ff8700">S, --see</text>
+<text class="text" x="95.19999999999999" y="207.2" fill="#ff875f">d</text>
+<text class="text" x="102.39999999999999" y="207.2" fill="#ff5f5f">=&lt;i&gt;     </text>
+<text class="text" x="174.39999999999998" y="207.2" fill="#ff0087">  Rainbo</text>
+<text class="text" x="231.99999999999997" y="207.2" fill="#ff00af">w seed, 0</text>
+<text class="text" x="304" y="207.2" fill="#d700d7">= random </text>
+<text class="text" x="368.79999999999995" y="207.2" fill="#af00d7">(</text>
+<text class="text" x="375.99999999999994" y="207.2" fill="#af00ff">default:</text>
+<text class="text" x="433.59999999999997" y="207.2" fill="#8700ff"> 0)</text>
+<text class="text" x="16" y="223.99999999999997" fill="#ff8700">  -</text>
+<text class="text" x="37.599999999999994" y="223.99999999999997" fill="#ff875f">a</text>
+<text class="text" x="44.8" y="223.99999999999997" fill="#ff5f5f">, --anima</text>
+<text class="text" x="109.6" y="223.99999999999997" fill="#ff5f87">t</text>
+<text class="text" x="116.79999999999998" y="223.99999999999997" fill="#ff0087">e       </text>
+<text class="text" x="174.39999999999998" y="223.99999999999997" fill="#ff00af">  Enable </text>
+<text class="text" x="239.2" y="223.99999999999997" fill="#d700af">p</text>
+<text class="text" x="246.39999999999998" y="223.99999999999997" fill="#d700d7">sychedeli</text>
+<text class="text" x="311.2" y="223.99999999999997" fill="#af00d7">c</text>
+<text class="text" x="318.4" y="223.99999999999997" fill="#af00ff">s</text>
+<text class="text" x="16" y="240.79999999999995" fill="#ff5f5f">  -d,</text>
+<text class="text" x="59.199999999999996" y="240.79999999999995" fill="#ff0087">--durati</text>
+<text class="text" x="116.79999999999998" y="240.79999999999995" fill="#ff00af">on=&lt;i&gt;   </text>
+<text class="text" x="188.79999999999998" y="240.79999999999995" fill="#d700d7">Animation</text>
+<text class="text" x="260.79999999999995" y="240.79999999999995" fill="#af00ff">duration</text>
+<text class="text" x="318.4" y="240.79999999999995" fill="#8700ff"> (default</text>
+<text class="text" x="383.2" y="240.79999999999995" fill="#5f5fff">: 12)</text>
+<text class="text" x="16" y="257.59999999999997" fill="#ff0087">  -s, </text>
+<text class="text" x="59.199999999999996" y="257.59999999999997" fill="#ff00af">--speed=&lt;</text>
+<text class="text" x="123.99999999999999" y="257.59999999999997" fill="#d700af">f</text>
+<text class="text" x="131.2" y="257.59999999999997" fill="#d700d7">&gt;       A</text>
+<text class="text" x="195.99999999999997" y="257.59999999999997" fill="#af00d7">n</text>
+<text class="text" x="203.2" y="257.59999999999997" fill="#af00ff">imation </text>
+<text class="text" x="260.79999999999995" y="257.59999999999997" fill="#8700ff">speed (de</text>
+<text class="text" x="325.59999999999997" y="257.59999999999997" fill="#5f5fff">fault: 20.</text>
+<text class="text" x="397.59999999999997" y="257.59999999999997" fill="#5f87ff">0</text>
+<text class="text" x="404.79999999999995" y="257.59999999999997" fill="#0087ff">)</text>
 </g>
 
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.185949;0.204231;1.000000"
-      dur="7.66s"
+      keyTimes="0.000000;0.187581;0.206587;1.000000"
+      dur="7.68s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -525,202 +610,193 @@
   <g id="frame-17" visibility="hidden">
     
 
-<rect class="window-bg" x="0" y="0" width="600" height="600" fill="#282a36" rx="8" ry="8"/>
+<rect class="window-bg" x="0" y="0" width="600" height="600" fill="#1e1e1e" rx="8" ry="8"/>
+<g class="chrome"><rect class="header-bg" x="0" y="0" width="600" height="40" fill="#1e1e1e" rx="8" ry="8"/>
+<rect x="0" y="32" width="600" height="8" fill="#1e1e1e"/>
+<circle cx="22" cy="20" r="6" fill="#ff5f56"/>
+<circle cx="42" cy="20" r="6" fill="#ffbd2e"/>
+<circle cx="62" cy="20" r="6" fill="#27c93f"/></g>
 <g class="text-layer">
-<text class="text f13" x="16" y="16">❯</text>
-<text class="text fg" x="23.2" y="16"> lolcat --help                                                               </text>
-<text class="text" x="16" y="49.599999999999994" fill="#87ff00">Usage</text>
-<text class="text" x="52" y="49.599999999999994" fill="#afff00">: lolcat </text>
-<text class="text" x="116.79999999999998" y="49.599999999999994" fill="#afd700">[</text>
-<text class="text" x="123.99999999999999" y="49.599999999999994" fill="#d7d700">OPTION]..</text>
-<text class="text" x="188.79999999999998" y="49.599999999999994" fill="#d7af00">.</text>
-<text class="text" x="195.99999999999997" y="49.599999999999994" fill="#ffaf00"> [FILE].</text>
-<text class="text" x="253.59999999999997" y="49.599999999999994" fill="#ff8700">..</text>
-<text class="text" x="16" y="83.19999999999999" fill="#d7d700">Concaten</text>
-<text class="text" x="73.6" y="83.19999999999999" fill="#d7af00">a</text>
-<text class="text" x="80.8" y="83.19999999999999" fill="#ffaf00">te FILE(</text>
-<text class="text" x="138.39999999999998" y="83.19999999999999" fill="#ff8700">s), or st</text>
-<text class="text" x="203.2" y="83.19999999999999" fill="#ff5f5f">andard inp</text>
-<text class="text" x="275.2" y="83.19999999999999" fill="#ff5f87">u</text>
-<text class="text" x="282.4" y="83.19999999999999" fill="#ff0087">t, to st</text>
-<text class="text" x="339.99999999999994" y="83.19999999999999" fill="#ff00af">andard o</text>
-<text class="text" x="397.59999999999997" y="83.19999999999999" fill="#d700af">u</text>
-<text class="text" x="404.79999999999995" y="83.19999999999999" fill="#d700d7">tput.</text>
-<text class="text" x="16" y="99.99999999999999" fill="#d7af00">W</text>
-<text class="text" x="23.2" y="99.99999999999999" fill="#ffaf00">ith no F</text>
-<text class="text" x="80.8" y="99.99999999999999" fill="#ff8700">ILE, or w</text>
-<text class="text" x="145.6" y="99.99999999999999" fill="#ff5f5f">hen FILE i</text>
-<text class="text" x="217.59999999999997" y="99.99999999999999" fill="#ff5f87">s</text>
-<text class="text" x="224.79999999999998" y="99.99999999999999" fill="#ff0087"> -, read</text>
-<text class="text" x="282.4" y="99.99999999999999" fill="#ff00af"> standar</text>
-<text class="text" x="339.99999999999994" y="99.99999999999999" fill="#d700af">d</text>
-<text class="text" x="347.2" y="99.99999999999999" fill="#d700d7"> input.</text>
-<text class="text" x="30.4" y="133.59999999999997" fill="#ff5f5f">-p, --spre</text>
-<text class="text" x="102.39999999999999" y="133.59999999999997" fill="#ff5f87">a</text>
-<text class="text" x="109.6" y="133.59999999999997" fill="#ff0087">d=&lt;f&gt;   </text>
-<text class="text" x="167.2" y="133.59999999999997" fill="#ff00af">   Rainb</text>
-<text class="text" x="224.79999999999998" y="133.59999999999997" fill="#d700af">o</text>
-<text class="text" x="231.99999999999997" y="133.59999999999997" fill="#d700d7">w spread (</text>
-<text class="text" x="304" y="133.59999999999997" fill="#af00d7">d</text>
-<text class="text" x="311.2" y="133.59999999999997" fill="#af00ff">efault: </text>
-<text class="text" x="368.79999999999995" y="133.59999999999997" fill="#8700ff">3.0)</text>
-<text class="text" x="16" y="150.39999999999998" fill="#ff5f5f">  -F</text>
-<text class="text" x="44.8" y="150.39999999999998" fill="#ff5f87">,</text>
-<text class="text" x="52" y="150.39999999999998" fill="#ff0087"> --freq=</text>
-<text class="text" x="109.6" y="150.39999999999998" fill="#ff00af">&lt;f&gt;     </text>
-<text class="text" x="174.39999999999998" y="150.39999999999998" fill="#d700d7">  Rainbow </text>
-<text class="text" x="246.39999999999998" y="150.39999999999998" fill="#af00d7">f</text>
-<text class="text" x="253.59999999999997" y="150.39999999999998" fill="#af00ff">requency</text>
-<text class="text" x="311.2" y="150.39999999999998" fill="#8700ff"> (default</text>
-<text class="text" x="375.99999999999994" y="150.39999999999998" fill="#5f5fff">: 0.1)</text>
-<text class="text" x="16" y="167.2" fill="#ff0087">  -S,</text>
-<text class="text" x="52" y="167.2" fill="#ff00af"> --seed=</text>
-<text class="text" x="109.6" y="167.2" fill="#d700af">&lt;</text>
-<text class="text" x="116.79999999999998" y="167.2" fill="#d700d7">i&gt;        </text>
-<text class="text" x="188.79999999999998" y="167.2" fill="#af00d7">R</text>
-<text class="text" x="195.99999999999997" y="167.2" fill="#af00ff">ainbow s</text>
-<text class="text" x="253.59999999999997" y="167.2" fill="#8700ff">eed, 0 = </text>
-<text class="text" x="318.4" y="167.2" fill="#5f5fff">random (de</text>
-<text class="text" x="390.4" y="167.2" fill="#5f87ff">f</text>
-<text class="text" x="397.59999999999997" y="167.2" fill="#0087ff">ault: 0)</text>
-<text class="text" x="16" y="183.99999999999997" fill="#ff00af">  -a,</text>
-<text class="text" x="59.199999999999996" y="183.99999999999997" fill="#d700d7">--animate </text>
-<text class="text" x="138.39999999999998" y="183.99999999999997" fill="#af00ff">       E</text>
-<text class="text" x="195.99999999999997" y="183.99999999999997" fill="#8700ff">nable psy</text>
-<text class="text" x="260.79999999999995" y="183.99999999999997" fill="#5f5fff">chedelics</text>
-<text class="text" x="16" y="200.79999999999995" fill="#d700d7">  -d, --</text>
-<text class="text" x="73.6" y="200.79999999999995" fill="#af00d7">d</text>
-<text class="text" x="80.8" y="200.79999999999995" fill="#af00ff">uration=</text>
-<text class="text" x="138.39999999999998" y="200.79999999999995" fill="#8700ff">&lt;i&gt;    An</text>
-<text class="text" x="203.2" y="200.79999999999995" fill="#5f5fff">imation du</text>
-<text class="text" x="275.2" y="200.79999999999995" fill="#5f87ff">r</text>
-<text class="text" x="282.4" y="200.79999999999995" fill="#0087ff">ation (d</text>
-<text class="text" x="339.99999999999994" y="200.79999999999995" fill="#00afff">efault: </text>
-<text class="text" x="397.59999999999997" y="200.79999999999995" fill="#00afd7">1</text>
-<text class="text" x="404.79999999999995" y="200.79999999999995" fill="#00d7d7">2)</text>
-<text class="text" x="23.2" y="217.59999999999997" fill="#af00ff"> -s, --s</text>
-<text class="text" x="80.8" y="217.59999999999997" fill="#8700ff">peed=&lt;f&gt; </text>
-<text class="text" x="145.6" y="217.59999999999997" fill="#5f5fff">      Anim</text>
-<text class="text" x="217.59999999999997" y="217.59999999999997" fill="#5f87ff">a</text>
-<text class="text" x="224.79999999999998" y="217.59999999999997" fill="#0087ff">tion spe</text>
-<text class="text" x="282.4" y="217.59999999999997" fill="#00afff">ed (defa</text>
-<text class="text" x="339.99999999999994" y="217.59999999999997" fill="#00afd7">u</text>
-<text class="text" x="347.2" y="217.59999999999997" fill="#00d7d7">lt: 20.0)</text>
-<text class="text" x="23.2" y="234.39999999999998" fill="#8700ff"> -i, --in</text>
-<text class="text" x="88" y="234.39999999999998" fill="#5f5fff">vert      </text>
-<text class="text" x="167.2" y="234.39999999999998" fill="#0087ff">   Inver</text>
-<text class="text" x="224.79999999999998" y="234.39999999999998" fill="#00afff">t fg and</text>
-<text class="text" x="289.59999999999997" y="234.39999999999998" fill="#00d7d7">bg</text>
-<text class="text" x="30.4" y="251.19999999999996" fill="#5f5fff">-t, --true</text>
-<text class="text" x="102.39999999999999" y="251.19999999999996" fill="#5f87ff">c</text>
-<text class="text" x="109.6" y="251.19999999999996" fill="#0087ff">olor    </text>
-<text class="text" x="167.2" y="251.19999999999996" fill="#00afff">   24-bi</text>
-<text class="text" x="224.79999999999998" y="251.19999999999996" fill="#00afd7">t</text>
-<text class="text" x="231.99999999999997" y="251.19999999999996" fill="#00d7d7"> (truecolo</text>
-<text class="text" x="304" y="251.19999999999996" fill="#00d7af">r</text>
-<text class="text" x="311.2" y="251.19999999999996" fill="#00ffaf">)</text>
-<text class="text" x="16" y="267.99999999999994" fill="#5f5fff">  -f</text>
-<text class="text" x="44.8" y="267.99999999999994" fill="#5f87ff">,</text>
-<text class="text" x="52" y="267.99999999999994" fill="#0087ff"> --force</text>
-<text class="text" x="174.39999999999998" y="267.99999999999994" fill="#00d7d7">  Force co</text>
-<text class="text" x="246.39999999999998" y="267.99999999999994" fill="#00d7af">l</text>
-<text class="text" x="253.59999999999997" y="267.99999999999994" fill="#00ffaf">or even </text>
-<text class="text" x="311.2" y="267.99999999999994" fill="#00ff87">when std</text>
-<text class="text" x="368.79999999999995" y="267.99999999999994" fill="#5fff87">o</text>
-<text class="text" x="375.99999999999994" y="267.99999999999994" fill="#5fff5f">ut is not </text>
-<text class="text" x="447.99999999999994" y="267.99999999999994" fill="#87ff5f">a</text>
-<text class="text" x="455.19999999999993" y="267.99999999999994" fill="#87ff00"> tty</text>
-<text class="text" x="16" y="284.79999999999995" fill="#0087ff">  -v,</text>
-<text class="text" x="52" y="284.79999999999995" fill="#00afff"> --versi</text>
-<text class="text" x="109.6" y="284.79999999999995" fill="#00afd7">o</text>
-<text class="text" x="116.79999999999998" y="284.79999999999995" fill="#00d7d7">n         </text>
-<text class="text" x="188.79999999999998" y="284.79999999999995" fill="#00d7af">P</text>
-<text class="text" x="195.99999999999997" y="284.79999999999995" fill="#00ffaf">rint ver</text>
-<text class="text" x="253.59999999999997" y="284.79999999999995" fill="#00ff87">sion and</text>
-<text class="text" x="318.4" y="284.79999999999995" fill="#5fff5f">exit</text>
-<text class="text" x="16" y="301.59999999999997" fill="#00afff">  -h,</text>
-<text class="text" x="59.199999999999996" y="301.59999999999997" fill="#00d7d7">--help    </text>
-<text class="text" x="138.39999999999998" y="301.59999999999997" fill="#00ffaf">       S</text>
-<text class="text" x="195.99999999999997" y="301.59999999999997" fill="#00ff87">how this</text>
-<text class="text" x="260.79999999999995" y="301.59999999999997" fill="#5fff5f">message</text>
-<text class="text" x="16" y="335.19999999999993" fill="#00d7af">E</text>
-<text class="text" x="23.2" y="335.19999999999993" fill="#00ffaf">xamples:</text>
-<text class="text" x="23.2" y="351.99999999999994" fill="#00ff87"> lolcat </text>
-<text class="text" x="80.8" y="351.99999999999994" fill="#5fff87">f</text>
-<text class="text" x="88" y="351.99999999999994" fill="#5fff5f"> - g      </text>
-<text class="text" x="160" y="351.99999999999994" fill="#87ff5f">O</text>
-<text class="text" x="167.2" y="351.99999999999994" fill="#87ff00">utput f&apos;</text>
-<text class="text" x="224.79999999999998" y="351.99999999999994" fill="#afff00">s conten</text>
-<text class="text" x="282.4" y="351.99999999999994" fill="#afd700">t</text>
-<text class="text" x="289.59999999999997" y="351.99999999999994" fill="#d7d700">s, then st</text>
-<text class="text" x="361.59999999999997" y="351.99999999999994" fill="#d7af00">d</text>
-<text class="text" x="368.79999999999995" y="351.99999999999994" fill="#ffaf00">in, then</text>
-<text class="text" x="426.4" y="351.99999999999994" fill="#ff8700"> g&apos;s con</text>
-<text class="text" x="483.99999999999994" y="351.99999999999994" fill="#ff875f">t</text>
-<text class="text" x="491.19999999999993" y="351.99999999999994" fill="#ff5f5f">ents.</text>
-<text class="text" x="30.4" y="368.79999999999995" fill="#5fff5f">lolcat    </text>
-<text class="text" x="109.6" y="368.79999999999995" fill="#87ff00">       C</text>
-<text class="text" x="167.2" y="368.79999999999995" fill="#afff00">opy stan</text>
-<text class="text" x="224.79999999999998" y="368.79999999999995" fill="#afd700">d</text>
-<text class="text" x="231.99999999999997" y="368.79999999999995" fill="#d7d700">ard input </text>
-<text class="text" x="304" y="368.79999999999995" fill="#d7af00">t</text>
-<text class="text" x="311.2" y="368.79999999999995" fill="#ffaf00">o standa</text>
-<text class="text" x="368.79999999999995" y="368.79999999999995" fill="#ff8700">rd outpu</text>
-<text class="text" x="426.4" y="368.79999999999995" fill="#ff875f">t</text>
-<text class="text" x="433.59999999999997" y="368.79999999999995" fill="#ff5f5f">.</text>
-<text class="text" x="16" y="385.5999999999999" fill="#5fff5f">  fo</text>
-<text class="text" x="44.8" y="385.5999999999999" fill="#87ff5f">r</text>
-<text class="text" x="52" y="385.5999999999999" fill="#87ff00">tune | l</text>
-<text class="text" x="109.6" y="385.5999999999999" fill="#afff00">olcat  D</text>
-<text class="text" x="167.2" y="385.5999999999999" fill="#afd700">i</text>
-<text class="text" x="174.39999999999998" y="385.5999999999999" fill="#d7d700">splay a ra</text>
-<text class="text" x="246.39999999999998" y="385.5999999999999" fill="#d7af00">i</text>
-<text class="text" x="253.59999999999997" y="385.5999999999999" fill="#ffaf00">nbow coo</text>
-<text class="text" x="311.2" y="385.5999999999999" fill="#ff8700">kie.</text>
-<text class="text" x="16" y="419.19999999999993" fill="#afff00">Repor</text>
-<text class="text" x="52" y="419.19999999999993" fill="#afd700">t</text>
-<text class="text" x="59.199999999999996" y="419.19999999999993" fill="#d7d700"> lolcat bu</text>
-<text class="text" x="131.2" y="419.19999999999993" fill="#d7af00">g</text>
-<text class="text" x="138.39999999999998" y="419.19999999999993" fill="#ffaf00">s to &lt;ht</text>
-<text class="text" x="195.99999999999997" y="419.19999999999993" fill="#ff8700">tps://gi</text>
-<text class="text" x="253.59999999999997" y="419.19999999999993" fill="#ff875f">t</text>
-<text class="text" x="260.79999999999995" y="419.19999999999993" fill="#ff5f5f">hub.com/bu</text>
-<text class="text" x="332.79999999999995" y="419.19999999999993" fill="#ff0087">syloop/lo</text>
-<text class="text" x="397.59999999999997" y="419.19999999999993" fill="#ff00af">lcat/iss</text>
-<text class="text" x="455.19999999999993" y="419.19999999999993" fill="#d700af">u</text>
-<text class="text" x="462.4" y="419.19999999999993" fill="#d700d7">es&gt;</text>
-<text class="text" x="16" y="435.99999999999994" fill="#d7d700">lolcat h</text>
-<text class="text" x="73.6" y="435.99999999999994" fill="#d7af00">o</text>
-<text class="text" x="80.8" y="435.99999999999994" fill="#ffaf00">me page:</text>
-<text class="text" x="138.39999999999998" y="435.99999999999994" fill="#ff8700"> &lt;https:</text>
-<text class="text" x="195.99999999999997" y="435.99999999999994" fill="#ff875f">/</text>
-<text class="text" x="203.2" y="435.99999999999994" fill="#ff5f5f">/github.co</text>
-<text class="text" x="275.2" y="435.99999999999994" fill="#ff0087">m/busyloo</text>
-<text class="text" x="339.99999999999994" y="435.99999999999994" fill="#ff00af">p/lolcat</text>
-<text class="text" x="397.59999999999997" y="435.99999999999994" fill="#d700af">/</text>
-<text class="text" x="404.79999999999995" y="435.99999999999994" fill="#d700d7">&gt;</text>
-<text class="text" x="16" y="452.79999999999995" fill="#d7af00">R</text>
-<text class="text" x="23.2" y="452.79999999999995" fill="#ffaf00">eport lo</text>
-<text class="text" x="80.8" y="452.79999999999995" fill="#ff8700">lcat tra</text>
-<text class="text" x="138.39999999999998" y="452.79999999999995" fill="#ff875f">n</text>
-<text class="text" x="145.6" y="452.79999999999995" fill="#ff5f5f">slation bu</text>
-<text class="text" x="217.59999999999997" y="452.79999999999995" fill="#ff0087">gs to &lt;ht</text>
-<text class="text" x="282.4" y="452.79999999999995" fill="#ff00af">tp://spe</text>
-<text class="text" x="339.99999999999994" y="452.79999999999995" fill="#d700af">a</text>
-<text class="text" x="347.2" y="452.79999999999995" fill="#d700d7">klolcat.co</text>
-<text class="text" x="419.19999999999993" y="452.79999999999995" fill="#af00d7">m</text>
-<text class="text" x="426.4" y="452.79999999999995" fill="#af00ff">/&gt;</text>
-<text class="text f13" x="16" y="486.3999999999999">❯</text>
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="23.2" y="56"> lolcat --help                                                               </text>
+<text class="text" x="16" y="89.6" fill="#00ffaf">Usa</text>
+<text class="text" x="37.599999999999994" y="89.6" fill="#00ff87">ge: lolc</text>
+<text class="text" x="95.19999999999999" y="89.6" fill="#5fff87">a</text>
+<text class="text" x="102.39999999999999" y="89.6" fill="#5fff5f">t [OPTION]</text>
+<text class="text" x="174.39999999999998" y="89.6" fill="#87ff00">... [FILE</text>
+<text class="text" x="239.2" y="89.6" fill="#afff00">]...</text>
+<text class="text" x="16" y="123.19999999999999" fill="#5fff5f">Concat</text>
+<text class="text" x="59.199999999999996" y="123.19999999999999" fill="#87ff00">enate FIL</text>
+<text class="text" x="123.99999999999999" y="123.19999999999999" fill="#afff00">E(s), or</text>
+<text class="text" x="188.79999999999998" y="123.19999999999999" fill="#d7d700">standard </text>
+<text class="text" x="253.59999999999997" y="123.19999999999999" fill="#d7af00">i</text>
+<text class="text" x="260.79999999999995" y="123.19999999999999" fill="#ffaf00">nput, to </text>
+<text class="text" x="325.59999999999997" y="123.19999999999999" fill="#ff8700">standard</text>
+<text class="text" x="390.4" y="123.19999999999999" fill="#ff5f5f">output.</text>
+<text class="text" x="16" y="140" fill="#87ff00">With no</text>
+<text class="text" x="66.39999999999999" y="140" fill="#afff00"> FILE, o</text>
+<text class="text" x="123.99999999999999" y="140" fill="#afd700">r</text>
+<text class="text" x="131.2" y="140" fill="#d7d700"> when FIL</text>
+<text class="text" x="195.99999999999997" y="140" fill="#d7af00">E</text>
+<text class="text" x="203.2" y="140" fill="#ffaf00"> is -, re</text>
+<text class="text" x="268" y="140" fill="#ff8700">ad stand</text>
+<text class="text" x="325.59999999999997" y="140" fill="#ff875f">a</text>
+<text class="text" x="332.79999999999995" y="140" fill="#ff5f5f">rd input.</text>
+<text class="text" x="16" y="173.59999999999997" fill="#d7d700">  -p, --s</text>
+<text class="text" x="80.8" y="173.59999999999997" fill="#d7af00">p</text>
+<text class="text" x="88" y="173.59999999999997" fill="#ffaf00">read=&lt;f&gt; </text>
+<text class="text" x="152.79999999999998" y="173.59999999999997" fill="#ff8700">     Rai</text>
+<text class="text" x="210.39999999999998" y="173.59999999999997" fill="#ff875f">n</text>
+<text class="text" x="217.59999999999997" y="173.59999999999997" fill="#ff5f5f">bow sprea</text>
+<text class="text" x="282.4" y="173.59999999999997" fill="#ff5f87">d</text>
+<text class="text" x="289.59999999999997" y="173.59999999999997" fill="#ff0087"> (defaul</text>
+<text class="text" x="347.2" y="173.59999999999997" fill="#ff00af">t: 3.0)</text>
+<text class="text" x="30.4" y="190.39999999999998" fill="#ffaf00">-F, --fre</text>
+<text class="text" x="95.19999999999999" y="190.39999999999998" fill="#ff8700">q=&lt;f&gt;   </text>
+<text class="text" x="160" y="190.39999999999998" fill="#ff5f5f">    Rainb</text>
+<text class="text" x="224.79999999999998" y="190.39999999999998" fill="#ff5f87">o</text>
+<text class="text" x="231.99999999999997" y="190.39999999999998" fill="#ff0087">w freque</text>
+<text class="text" x="289.59999999999997" y="190.39999999999998" fill="#ff00af">ncy (defa</text>
+<text class="text" x="354.4" y="190.39999999999998" fill="#d700af">u</text>
+<text class="text" x="361.59999999999997" y="190.39999999999998" fill="#d700d7">lt: 0.1)</text>
+<text class="text" x="16" y="207.2" fill="#ffaf00">  -</text>
+<text class="text" x="37.599999999999994" y="207.2" fill="#ff8700">S, --see</text>
+<text class="text" x="95.19999999999999" y="207.2" fill="#ff875f">d</text>
+<text class="text" x="102.39999999999999" y="207.2" fill="#ff5f5f">=&lt;i&gt;     </text>
+<text class="text" x="174.39999999999998" y="207.2" fill="#ff0087">  Rainbo</text>
+<text class="text" x="231.99999999999997" y="207.2" fill="#ff00af">w seed, 0</text>
+<text class="text" x="304" y="207.2" fill="#d700d7">= random </text>
+<text class="text" x="368.79999999999995" y="207.2" fill="#af00d7">(</text>
+<text class="text" x="375.99999999999994" y="207.2" fill="#af00ff">default:</text>
+<text class="text" x="433.59999999999997" y="207.2" fill="#8700ff"> 0)</text>
+<text class="text" x="16" y="223.99999999999997" fill="#ff8700">  -</text>
+<text class="text" x="37.599999999999994" y="223.99999999999997" fill="#ff875f">a</text>
+<text class="text" x="44.8" y="223.99999999999997" fill="#ff5f5f">, --anima</text>
+<text class="text" x="109.6" y="223.99999999999997" fill="#ff5f87">t</text>
+<text class="text" x="116.79999999999998" y="223.99999999999997" fill="#ff0087">e       </text>
+<text class="text" x="174.39999999999998" y="223.99999999999997" fill="#ff00af">  Enable </text>
+<text class="text" x="239.2" y="223.99999999999997" fill="#d700af">p</text>
+<text class="text" x="246.39999999999998" y="223.99999999999997" fill="#d700d7">sychedeli</text>
+<text class="text" x="311.2" y="223.99999999999997" fill="#af00d7">c</text>
+<text class="text" x="318.4" y="223.99999999999997" fill="#af00ff">s</text>
+<text class="text" x="16" y="240.79999999999995" fill="#ff5f5f">  -d,</text>
+<text class="text" x="59.199999999999996" y="240.79999999999995" fill="#ff0087">--durati</text>
+<text class="text" x="116.79999999999998" y="240.79999999999995" fill="#ff00af">on=&lt;i&gt;   </text>
+<text class="text" x="188.79999999999998" y="240.79999999999995" fill="#d700d7">Animation</text>
+<text class="text" x="260.79999999999995" y="240.79999999999995" fill="#af00ff">duration</text>
+<text class="text" x="318.4" y="240.79999999999995" fill="#8700ff"> (default</text>
+<text class="text" x="383.2" y="240.79999999999995" fill="#5f5fff">: 12)</text>
+<text class="text" x="16" y="257.59999999999997" fill="#ff0087">  -s, </text>
+<text class="text" x="59.199999999999996" y="257.59999999999997" fill="#ff00af">--speed=&lt;</text>
+<text class="text" x="123.99999999999999" y="257.59999999999997" fill="#d700af">f</text>
+<text class="text" x="131.2" y="257.59999999999997" fill="#d700d7">&gt;       A</text>
+<text class="text" x="195.99999999999997" y="257.59999999999997" fill="#af00d7">n</text>
+<text class="text" x="203.2" y="257.59999999999997" fill="#af00ff">imation </text>
+<text class="text" x="260.79999999999995" y="257.59999999999997" fill="#8700ff">speed (de</text>
+<text class="text" x="325.59999999999997" y="257.59999999999997" fill="#5f5fff">fault: 20.</text>
+<text class="text" x="397.59999999999997" y="257.59999999999997" fill="#5f87ff">0</text>
+<text class="text" x="404.79999999999995" y="257.59999999999997" fill="#0087ff">)</text>
+<text class="text" x="16" y="274.4" fill="#ff00af">  -i, -</text>
+<text class="text" x="66.39999999999999" y="274.4" fill="#d700af">-</text>
+<text class="text" x="73.6" y="274.4" fill="#d700d7">invert   </text>
+<text class="text" x="145.6" y="274.4" fill="#af00ff">      In</text>
+<text class="text" x="203.2" y="274.4" fill="#8700ff">vert fg a</text>
+<text class="text" x="268" y="274.4" fill="#5f5fff">nd bg</text>
+<text class="text" x="16" y="291.19999999999993" fill="#d700d7">  -t, --t</text>
+<text class="text" x="80.8" y="291.19999999999993" fill="#af00d7">r</text>
+<text class="text" x="88" y="291.19999999999993" fill="#af00ff">uecolor </text>
+<text class="text" x="145.6" y="291.19999999999993" fill="#8700ff">      24-</text>
+<text class="text" x="210.39999999999998" y="291.19999999999993" fill="#5f5fff">bit (truec</text>
+<text class="text" x="282.4" y="291.19999999999993" fill="#5f87ff">o</text>
+<text class="text" x="289.59999999999997" y="291.19999999999993" fill="#0087ff">lor)</text>
+<text class="text" x="30.4" y="307.99999999999994" fill="#af00ff">-f, --fo</text>
+<text class="text" x="88" y="307.99999999999994" fill="#8700ff">rce      </text>
+<text class="text" x="152.79999999999998" y="307.99999999999994" fill="#5f5fff">     Force</text>
+<text class="text" x="231.99999999999997" y="307.99999999999994" fill="#0087ff">color ev</text>
+<text class="text" x="289.59999999999997" y="307.99999999999994" fill="#00afff">en when </text>
+<text class="text" x="347.2" y="307.99999999999994" fill="#00afd7">st</text>
+<text class="text" x="361.59999999999997" y="307.99999999999994" fill="#00d7d7">dout is n</text>
+<text class="text" x="426.4" y="307.99999999999994" fill="#00d7af">o</text>
+<text class="text" x="433.59999999999997" y="307.99999999999994" fill="#00ffaf">t a tty</text>
+<text class="text" x="30.4" y="324.79999999999995" fill="#8700ff">-v, --ver</text>
+<text class="text" x="95.19999999999999" y="324.79999999999995" fill="#5f5fff">sion      </text>
+<text class="text" x="174.39999999999998" y="324.79999999999995" fill="#0087ff">  Print </text>
+<text class="text" x="231.99999999999997" y="324.79999999999995" fill="#00afff">version </text>
+<text class="text" x="289.59999999999997" y="324.79999999999995" fill="#00afd7">an</text>
+<text class="text" x="304" y="324.79999999999995" fill="#00d7d7">d exit</text>
+<text class="text" x="16" y="341.59999999999997" fill="#8700ff">  -</text>
+<text class="text" x="37.599999999999994" y="341.59999999999997" fill="#5f5fff">h, --help </text>
+<text class="text" x="174.39999999999998" y="341.59999999999997" fill="#00afff">  Show t</text>
+<text class="text" x="231.99999999999997" y="341.59999999999997" fill="#00afd7">hi</text>
+<text class="text" x="246.39999999999998" y="341.59999999999997" fill="#00d7d7">s message</text>
+<text class="text" x="16" y="375.19999999999993" fill="#0087ff">Exampl</text>
+<text class="text" x="59.199999999999996" y="375.19999999999993" fill="#00afff">es:</text>
+<text class="text" x="16" y="391.99999999999994" fill="#00afff">  lolc</text>
+<text class="text" x="59.199999999999996" y="391.99999999999994" fill="#00afd7">at</text>
+<text class="text" x="73.6" y="391.99999999999994" fill="#00d7d7"> f - g   </text>
+<text class="text" x="145.6" y="391.99999999999994" fill="#00ffaf">  Output</text>
+<text class="text" x="203.2" y="391.99999999999994" fill="#00ff87"> f&apos;s cont</text>
+<text class="text" x="268" y="391.99999999999994" fill="#5fff5f">ents, then</text>
+<text class="text" x="347.2" y="391.99999999999994" fill="#87ff00">stdin, t</text>
+<text class="text" x="404.79999999999995" y="391.99999999999994" fill="#afff00">hen g&apos;s </text>
+<text class="text" x="462.4" y="391.99999999999994" fill="#afd700">c</text>
+<text class="text" x="469.59999999999997" y="391.99999999999994" fill="#d7d700">ontents.</text>
+<text class="text" x="16" y="408.79999999999995" fill="#00d7d7">  lolcat </text>
+<text class="text" x="145.6" y="408.79999999999995" fill="#00ff87">  Copy st</text>
+<text class="text" x="210.39999999999998" y="408.79999999999995" fill="#5fff5f">andard inp</text>
+<text class="text" x="282.4" y="408.79999999999995" fill="#87ff5f">u</text>
+<text class="text" x="289.59999999999997" y="408.79999999999995" fill="#87ff00">t to sta</text>
+<text class="text" x="347.2" y="408.79999999999995" fill="#afff00">ndard ou</text>
+<text class="text" x="404.79999999999995" y="408.79999999999995" fill="#afd700">t</text>
+<text class="text" x="411.99999999999994" y="408.79999999999995" fill="#d7d700">put.</text>
+<text class="text" x="30.4" y="425.5999999999999" fill="#00ffaf">fortune </text>
+<text class="text" x="88" y="425.5999999999999" fill="#00ff87">| lolcat </text>
+<text class="text" x="152.79999999999998" y="425.5999999999999" fill="#5fff5f"> Display a</text>
+<text class="text" x="231.99999999999997" y="425.5999999999999" fill="#87ff00">rainbow </text>
+<text class="text" x="289.59999999999997" y="425.5999999999999" fill="#afff00">cookie.</text>
+<text class="text" x="16" y="459.19999999999993" fill="#00ff87">Rep</text>
+<text class="text" x="37.599999999999994" y="459.19999999999993" fill="#5fff5f">ort lolcat</text>
+<text class="text" x="116.79999999999998" y="459.19999999999993" fill="#87ff00">bugs to </text>
+<text class="text" x="174.39999999999998" y="459.19999999999993" fill="#afff00">&lt;https:/</text>
+<text class="text" x="231.99999999999997" y="459.19999999999993" fill="#afd700">/</text>
+<text class="text" x="239.2" y="459.19999999999993" fill="#d7d700">github.com</text>
+<text class="text" x="311.2" y="459.19999999999993" fill="#d7af00">/</text>
+<text class="text" x="318.4" y="459.19999999999993" fill="#ffaf00">busyloop</text>
+<text class="text" x="375.99999999999994" y="459.19999999999993" fill="#ff8700">/lolcat/</text>
+<text class="text" x="433.59999999999997" y="459.19999999999993" fill="#ff875f">i</text>
+<text class="text" x="440.79999999999995" y="459.19999999999993" fill="#ff5f5f">ssues&gt;</text>
+<text class="text" x="16" y="475.99999999999994" fill="#5fff5f">lolca</text>
+<text class="text" x="52" y="475.99999999999994" fill="#87ff5f">t</text>
+<text class="text" x="59.199999999999996" y="475.99999999999994" fill="#87ff00"> home pa</text>
+<text class="text" x="116.79999999999998" y="475.99999999999994" fill="#afff00">ge: &lt;htt</text>
+<text class="text" x="174.39999999999998" y="475.99999999999994" fill="#afd700">p</text>
+<text class="text" x="181.6" y="475.99999999999994" fill="#d7d700">s://github</text>
+<text class="text" x="253.59999999999997" y="475.99999999999994" fill="#d7af00">.</text>
+<text class="text" x="260.79999999999995" y="475.99999999999994" fill="#ffaf00">com/busy</text>
+<text class="text" x="318.4" y="475.99999999999994" fill="#ff8700">loop/lol</text>
+<text class="text" x="375.99999999999994" y="475.99999999999994" fill="#ff875f">c</text>
+<text class="text" x="383.2" y="475.99999999999994" fill="#ff5f5f">at/&gt;</text>
+<text class="text" x="16" y="492.79999999999995" fill="#87ff00">Report</text>
+<text class="text" x="59.199999999999996" y="492.79999999999995" fill="#afff00"> lolcat </text>
+<text class="text" x="116.79999999999998" y="492.79999999999995" fill="#afd700">t</text>
+<text class="text" x="123.99999999999999" y="492.79999999999995" fill="#d7d700">ranslation</text>
+<text class="text" x="203.2" y="492.79999999999995" fill="#ffaf00">bugs to </text>
+<text class="text" x="260.79999999999995" y="492.79999999999995" fill="#ff8700">&lt;http://</text>
+<text class="text" x="318.4" y="492.79999999999995" fill="#ff875f">s</text>
+<text class="text" x="325.59999999999997" y="492.79999999999995" fill="#ff5f5f">peaklolcat</text>
+<text class="text" x="397.59999999999997" y="492.79999999999995" fill="#ff5f87">.</text>
+<text class="text" x="404.79999999999995" y="492.79999999999995" fill="#ff0087">com/&gt;</text>
+<text class="text f13" x="16" y="526.3999999999999">❯</text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor" x="30.4" y="486.3999999999999" width="7.199999999999999" height="16.799999999999997" fill="#f8f8f2"/>
+<rect class="cursor" x="30.4" y="526.3999999999999" width="7.199999999999999" height="16.799999999999997" fill="#c9d1d9"/>
 </g>
 
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.204231;0.864586;1.000000"
-      dur="7.66s"
+      keyTimes="0.000000;0.206587;0.864879;1.000000"
+      dur="7.68s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -730,202 +806,193 @@
   <g id="frame-18" visibility="hidden">
     
 
-<rect class="window-bg" x="0" y="0" width="600" height="600" fill="#282a36" rx="8" ry="8"/>
+<rect class="window-bg" x="0" y="0" width="600" height="600" fill="#1e1e1e" rx="8" ry="8"/>
+<g class="chrome"><rect class="header-bg" x="0" y="0" width="600" height="40" fill="#1e1e1e" rx="8" ry="8"/>
+<rect x="0" y="32" width="600" height="8" fill="#1e1e1e"/>
+<circle cx="22" cy="20" r="6" fill="#ff5f56"/>
+<circle cx="42" cy="20" r="6" fill="#ffbd2e"/>
+<circle cx="62" cy="20" r="6" fill="#27c93f"/></g>
 <g class="text-layer">
-<text class="text f13" x="16" y="16">❯</text>
-<text class="text fg" x="23.2" y="16"> lolcat --help                                                               </text>
-<text class="text" x="16" y="49.599999999999994" fill="#87ff00">Usage</text>
-<text class="text" x="52" y="49.599999999999994" fill="#afff00">: lolcat </text>
-<text class="text" x="116.79999999999998" y="49.599999999999994" fill="#afd700">[</text>
-<text class="text" x="123.99999999999999" y="49.599999999999994" fill="#d7d700">OPTION]..</text>
-<text class="text" x="188.79999999999998" y="49.599999999999994" fill="#d7af00">.</text>
-<text class="text" x="195.99999999999997" y="49.599999999999994" fill="#ffaf00"> [FILE].</text>
-<text class="text" x="253.59999999999997" y="49.599999999999994" fill="#ff8700">..</text>
-<text class="text" x="16" y="83.19999999999999" fill="#d7d700">Concaten</text>
-<text class="text" x="73.6" y="83.19999999999999" fill="#d7af00">a</text>
-<text class="text" x="80.8" y="83.19999999999999" fill="#ffaf00">te FILE(</text>
-<text class="text" x="138.39999999999998" y="83.19999999999999" fill="#ff8700">s), or st</text>
-<text class="text" x="203.2" y="83.19999999999999" fill="#ff5f5f">andard inp</text>
-<text class="text" x="275.2" y="83.19999999999999" fill="#ff5f87">u</text>
-<text class="text" x="282.4" y="83.19999999999999" fill="#ff0087">t, to st</text>
-<text class="text" x="339.99999999999994" y="83.19999999999999" fill="#ff00af">andard o</text>
-<text class="text" x="397.59999999999997" y="83.19999999999999" fill="#d700af">u</text>
-<text class="text" x="404.79999999999995" y="83.19999999999999" fill="#d700d7">tput.</text>
-<text class="text" x="16" y="99.99999999999999" fill="#d7af00">W</text>
-<text class="text" x="23.2" y="99.99999999999999" fill="#ffaf00">ith no F</text>
-<text class="text" x="80.8" y="99.99999999999999" fill="#ff8700">ILE, or w</text>
-<text class="text" x="145.6" y="99.99999999999999" fill="#ff5f5f">hen FILE i</text>
-<text class="text" x="217.59999999999997" y="99.99999999999999" fill="#ff5f87">s</text>
-<text class="text" x="224.79999999999998" y="99.99999999999999" fill="#ff0087"> -, read</text>
-<text class="text" x="282.4" y="99.99999999999999" fill="#ff00af"> standar</text>
-<text class="text" x="339.99999999999994" y="99.99999999999999" fill="#d700af">d</text>
-<text class="text" x="347.2" y="99.99999999999999" fill="#d700d7"> input.</text>
-<text class="text" x="30.4" y="133.59999999999997" fill="#ff5f5f">-p, --spre</text>
-<text class="text" x="102.39999999999999" y="133.59999999999997" fill="#ff5f87">a</text>
-<text class="text" x="109.6" y="133.59999999999997" fill="#ff0087">d=&lt;f&gt;   </text>
-<text class="text" x="167.2" y="133.59999999999997" fill="#ff00af">   Rainb</text>
-<text class="text" x="224.79999999999998" y="133.59999999999997" fill="#d700af">o</text>
-<text class="text" x="231.99999999999997" y="133.59999999999997" fill="#d700d7">w spread (</text>
-<text class="text" x="304" y="133.59999999999997" fill="#af00d7">d</text>
-<text class="text" x="311.2" y="133.59999999999997" fill="#af00ff">efault: </text>
-<text class="text" x="368.79999999999995" y="133.59999999999997" fill="#8700ff">3.0)</text>
-<text class="text" x="16" y="150.39999999999998" fill="#ff5f5f">  -F</text>
-<text class="text" x="44.8" y="150.39999999999998" fill="#ff5f87">,</text>
-<text class="text" x="52" y="150.39999999999998" fill="#ff0087"> --freq=</text>
-<text class="text" x="109.6" y="150.39999999999998" fill="#ff00af">&lt;f&gt;     </text>
-<text class="text" x="174.39999999999998" y="150.39999999999998" fill="#d700d7">  Rainbow </text>
-<text class="text" x="246.39999999999998" y="150.39999999999998" fill="#af00d7">f</text>
-<text class="text" x="253.59999999999997" y="150.39999999999998" fill="#af00ff">requency</text>
-<text class="text" x="311.2" y="150.39999999999998" fill="#8700ff"> (default</text>
-<text class="text" x="375.99999999999994" y="150.39999999999998" fill="#5f5fff">: 0.1)</text>
-<text class="text" x="16" y="167.2" fill="#ff0087">  -S,</text>
-<text class="text" x="52" y="167.2" fill="#ff00af"> --seed=</text>
-<text class="text" x="109.6" y="167.2" fill="#d700af">&lt;</text>
-<text class="text" x="116.79999999999998" y="167.2" fill="#d700d7">i&gt;        </text>
-<text class="text" x="188.79999999999998" y="167.2" fill="#af00d7">R</text>
-<text class="text" x="195.99999999999997" y="167.2" fill="#af00ff">ainbow s</text>
-<text class="text" x="253.59999999999997" y="167.2" fill="#8700ff">eed, 0 = </text>
-<text class="text" x="318.4" y="167.2" fill="#5f5fff">random (de</text>
-<text class="text" x="390.4" y="167.2" fill="#5f87ff">f</text>
-<text class="text" x="397.59999999999997" y="167.2" fill="#0087ff">ault: 0)</text>
-<text class="text" x="16" y="183.99999999999997" fill="#ff00af">  -a,</text>
-<text class="text" x="59.199999999999996" y="183.99999999999997" fill="#d700d7">--animate </text>
-<text class="text" x="138.39999999999998" y="183.99999999999997" fill="#af00ff">       E</text>
-<text class="text" x="195.99999999999997" y="183.99999999999997" fill="#8700ff">nable psy</text>
-<text class="text" x="260.79999999999995" y="183.99999999999997" fill="#5f5fff">chedelics</text>
-<text class="text" x="16" y="200.79999999999995" fill="#d700d7">  -d, --</text>
-<text class="text" x="73.6" y="200.79999999999995" fill="#af00d7">d</text>
-<text class="text" x="80.8" y="200.79999999999995" fill="#af00ff">uration=</text>
-<text class="text" x="138.39999999999998" y="200.79999999999995" fill="#8700ff">&lt;i&gt;    An</text>
-<text class="text" x="203.2" y="200.79999999999995" fill="#5f5fff">imation du</text>
-<text class="text" x="275.2" y="200.79999999999995" fill="#5f87ff">r</text>
-<text class="text" x="282.4" y="200.79999999999995" fill="#0087ff">ation (d</text>
-<text class="text" x="339.99999999999994" y="200.79999999999995" fill="#00afff">efault: </text>
-<text class="text" x="397.59999999999997" y="200.79999999999995" fill="#00afd7">1</text>
-<text class="text" x="404.79999999999995" y="200.79999999999995" fill="#00d7d7">2)</text>
-<text class="text" x="23.2" y="217.59999999999997" fill="#af00ff"> -s, --s</text>
-<text class="text" x="80.8" y="217.59999999999997" fill="#8700ff">peed=&lt;f&gt; </text>
-<text class="text" x="145.6" y="217.59999999999997" fill="#5f5fff">      Anim</text>
-<text class="text" x="217.59999999999997" y="217.59999999999997" fill="#5f87ff">a</text>
-<text class="text" x="224.79999999999998" y="217.59999999999997" fill="#0087ff">tion spe</text>
-<text class="text" x="282.4" y="217.59999999999997" fill="#00afff">ed (defa</text>
-<text class="text" x="339.99999999999994" y="217.59999999999997" fill="#00afd7">u</text>
-<text class="text" x="347.2" y="217.59999999999997" fill="#00d7d7">lt: 20.0)</text>
-<text class="text" x="23.2" y="234.39999999999998" fill="#8700ff"> -i, --in</text>
-<text class="text" x="88" y="234.39999999999998" fill="#5f5fff">vert      </text>
-<text class="text" x="167.2" y="234.39999999999998" fill="#0087ff">   Inver</text>
-<text class="text" x="224.79999999999998" y="234.39999999999998" fill="#00afff">t fg and</text>
-<text class="text" x="289.59999999999997" y="234.39999999999998" fill="#00d7d7">bg</text>
-<text class="text" x="30.4" y="251.19999999999996" fill="#5f5fff">-t, --true</text>
-<text class="text" x="102.39999999999999" y="251.19999999999996" fill="#5f87ff">c</text>
-<text class="text" x="109.6" y="251.19999999999996" fill="#0087ff">olor    </text>
-<text class="text" x="167.2" y="251.19999999999996" fill="#00afff">   24-bi</text>
-<text class="text" x="224.79999999999998" y="251.19999999999996" fill="#00afd7">t</text>
-<text class="text" x="231.99999999999997" y="251.19999999999996" fill="#00d7d7"> (truecolo</text>
-<text class="text" x="304" y="251.19999999999996" fill="#00d7af">r</text>
-<text class="text" x="311.2" y="251.19999999999996" fill="#00ffaf">)</text>
-<text class="text" x="16" y="267.99999999999994" fill="#5f5fff">  -f</text>
-<text class="text" x="44.8" y="267.99999999999994" fill="#5f87ff">,</text>
-<text class="text" x="52" y="267.99999999999994" fill="#0087ff"> --force</text>
-<text class="text" x="174.39999999999998" y="267.99999999999994" fill="#00d7d7">  Force co</text>
-<text class="text" x="246.39999999999998" y="267.99999999999994" fill="#00d7af">l</text>
-<text class="text" x="253.59999999999997" y="267.99999999999994" fill="#00ffaf">or even </text>
-<text class="text" x="311.2" y="267.99999999999994" fill="#00ff87">when std</text>
-<text class="text" x="368.79999999999995" y="267.99999999999994" fill="#5fff87">o</text>
-<text class="text" x="375.99999999999994" y="267.99999999999994" fill="#5fff5f">ut is not </text>
-<text class="text" x="447.99999999999994" y="267.99999999999994" fill="#87ff5f">a</text>
-<text class="text" x="455.19999999999993" y="267.99999999999994" fill="#87ff00"> tty</text>
-<text class="text" x="16" y="284.79999999999995" fill="#0087ff">  -v,</text>
-<text class="text" x="52" y="284.79999999999995" fill="#00afff"> --versi</text>
-<text class="text" x="109.6" y="284.79999999999995" fill="#00afd7">o</text>
-<text class="text" x="116.79999999999998" y="284.79999999999995" fill="#00d7d7">n         </text>
-<text class="text" x="188.79999999999998" y="284.79999999999995" fill="#00d7af">P</text>
-<text class="text" x="195.99999999999997" y="284.79999999999995" fill="#00ffaf">rint ver</text>
-<text class="text" x="253.59999999999997" y="284.79999999999995" fill="#00ff87">sion and</text>
-<text class="text" x="318.4" y="284.79999999999995" fill="#5fff5f">exit</text>
-<text class="text" x="16" y="301.59999999999997" fill="#00afff">  -h,</text>
-<text class="text" x="59.199999999999996" y="301.59999999999997" fill="#00d7d7">--help    </text>
-<text class="text" x="138.39999999999998" y="301.59999999999997" fill="#00ffaf">       S</text>
-<text class="text" x="195.99999999999997" y="301.59999999999997" fill="#00ff87">how this</text>
-<text class="text" x="260.79999999999995" y="301.59999999999997" fill="#5fff5f">message</text>
-<text class="text" x="16" y="335.19999999999993" fill="#00d7af">E</text>
-<text class="text" x="23.2" y="335.19999999999993" fill="#00ffaf">xamples:</text>
-<text class="text" x="23.2" y="351.99999999999994" fill="#00ff87"> lolcat </text>
-<text class="text" x="80.8" y="351.99999999999994" fill="#5fff87">f</text>
-<text class="text" x="88" y="351.99999999999994" fill="#5fff5f"> - g      </text>
-<text class="text" x="160" y="351.99999999999994" fill="#87ff5f">O</text>
-<text class="text" x="167.2" y="351.99999999999994" fill="#87ff00">utput f&apos;</text>
-<text class="text" x="224.79999999999998" y="351.99999999999994" fill="#afff00">s conten</text>
-<text class="text" x="282.4" y="351.99999999999994" fill="#afd700">t</text>
-<text class="text" x="289.59999999999997" y="351.99999999999994" fill="#d7d700">s, then st</text>
-<text class="text" x="361.59999999999997" y="351.99999999999994" fill="#d7af00">d</text>
-<text class="text" x="368.79999999999995" y="351.99999999999994" fill="#ffaf00">in, then</text>
-<text class="text" x="426.4" y="351.99999999999994" fill="#ff8700"> g&apos;s con</text>
-<text class="text" x="483.99999999999994" y="351.99999999999994" fill="#ff875f">t</text>
-<text class="text" x="491.19999999999993" y="351.99999999999994" fill="#ff5f5f">ents.</text>
-<text class="text" x="30.4" y="368.79999999999995" fill="#5fff5f">lolcat    </text>
-<text class="text" x="109.6" y="368.79999999999995" fill="#87ff00">       C</text>
-<text class="text" x="167.2" y="368.79999999999995" fill="#afff00">opy stan</text>
-<text class="text" x="224.79999999999998" y="368.79999999999995" fill="#afd700">d</text>
-<text class="text" x="231.99999999999997" y="368.79999999999995" fill="#d7d700">ard input </text>
-<text class="text" x="304" y="368.79999999999995" fill="#d7af00">t</text>
-<text class="text" x="311.2" y="368.79999999999995" fill="#ffaf00">o standa</text>
-<text class="text" x="368.79999999999995" y="368.79999999999995" fill="#ff8700">rd outpu</text>
-<text class="text" x="426.4" y="368.79999999999995" fill="#ff875f">t</text>
-<text class="text" x="433.59999999999997" y="368.79999999999995" fill="#ff5f5f">.</text>
-<text class="text" x="16" y="385.5999999999999" fill="#5fff5f">  fo</text>
-<text class="text" x="44.8" y="385.5999999999999" fill="#87ff5f">r</text>
-<text class="text" x="52" y="385.5999999999999" fill="#87ff00">tune | l</text>
-<text class="text" x="109.6" y="385.5999999999999" fill="#afff00">olcat  D</text>
-<text class="text" x="167.2" y="385.5999999999999" fill="#afd700">i</text>
-<text class="text" x="174.39999999999998" y="385.5999999999999" fill="#d7d700">splay a ra</text>
-<text class="text" x="246.39999999999998" y="385.5999999999999" fill="#d7af00">i</text>
-<text class="text" x="253.59999999999997" y="385.5999999999999" fill="#ffaf00">nbow coo</text>
-<text class="text" x="311.2" y="385.5999999999999" fill="#ff8700">kie.</text>
-<text class="text" x="16" y="419.19999999999993" fill="#afff00">Repor</text>
-<text class="text" x="52" y="419.19999999999993" fill="#afd700">t</text>
-<text class="text" x="59.199999999999996" y="419.19999999999993" fill="#d7d700"> lolcat bu</text>
-<text class="text" x="131.2" y="419.19999999999993" fill="#d7af00">g</text>
-<text class="text" x="138.39999999999998" y="419.19999999999993" fill="#ffaf00">s to &lt;ht</text>
-<text class="text" x="195.99999999999997" y="419.19999999999993" fill="#ff8700">tps://gi</text>
-<text class="text" x="253.59999999999997" y="419.19999999999993" fill="#ff875f">t</text>
-<text class="text" x="260.79999999999995" y="419.19999999999993" fill="#ff5f5f">hub.com/bu</text>
-<text class="text" x="332.79999999999995" y="419.19999999999993" fill="#ff0087">syloop/lo</text>
-<text class="text" x="397.59999999999997" y="419.19999999999993" fill="#ff00af">lcat/iss</text>
-<text class="text" x="455.19999999999993" y="419.19999999999993" fill="#d700af">u</text>
-<text class="text" x="462.4" y="419.19999999999993" fill="#d700d7">es&gt;</text>
-<text class="text" x="16" y="435.99999999999994" fill="#d7d700">lolcat h</text>
-<text class="text" x="73.6" y="435.99999999999994" fill="#d7af00">o</text>
-<text class="text" x="80.8" y="435.99999999999994" fill="#ffaf00">me page:</text>
-<text class="text" x="138.39999999999998" y="435.99999999999994" fill="#ff8700"> &lt;https:</text>
-<text class="text" x="195.99999999999997" y="435.99999999999994" fill="#ff875f">/</text>
-<text class="text" x="203.2" y="435.99999999999994" fill="#ff5f5f">/github.co</text>
-<text class="text" x="275.2" y="435.99999999999994" fill="#ff0087">m/busyloo</text>
-<text class="text" x="339.99999999999994" y="435.99999999999994" fill="#ff00af">p/lolcat</text>
-<text class="text" x="397.59999999999997" y="435.99999999999994" fill="#d700af">/</text>
-<text class="text" x="404.79999999999995" y="435.99999999999994" fill="#d700d7">&gt;</text>
-<text class="text" x="16" y="452.79999999999995" fill="#d7af00">R</text>
-<text class="text" x="23.2" y="452.79999999999995" fill="#ffaf00">eport lo</text>
-<text class="text" x="80.8" y="452.79999999999995" fill="#ff8700">lcat tra</text>
-<text class="text" x="138.39999999999998" y="452.79999999999995" fill="#ff875f">n</text>
-<text class="text" x="145.6" y="452.79999999999995" fill="#ff5f5f">slation bu</text>
-<text class="text" x="217.59999999999997" y="452.79999999999995" fill="#ff0087">gs to &lt;ht</text>
-<text class="text" x="282.4" y="452.79999999999995" fill="#ff00af">tp://spe</text>
-<text class="text" x="339.99999999999994" y="452.79999999999995" fill="#d700af">a</text>
-<text class="text" x="347.2" y="452.79999999999995" fill="#d700d7">klolcat.co</text>
-<text class="text" x="419.19999999999993" y="452.79999999999995" fill="#af00d7">m</text>
-<text class="text" x="426.4" y="452.79999999999995" fill="#af00ff">/&gt;</text>
-<text class="text f13" x="16" y="486.3999999999999">❯</text>
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="23.2" y="56"> lolcat --help                                                               </text>
+<text class="text" x="16" y="89.6" fill="#00ffaf">Usa</text>
+<text class="text" x="37.599999999999994" y="89.6" fill="#00ff87">ge: lolc</text>
+<text class="text" x="95.19999999999999" y="89.6" fill="#5fff87">a</text>
+<text class="text" x="102.39999999999999" y="89.6" fill="#5fff5f">t [OPTION]</text>
+<text class="text" x="174.39999999999998" y="89.6" fill="#87ff00">... [FILE</text>
+<text class="text" x="239.2" y="89.6" fill="#afff00">]...</text>
+<text class="text" x="16" y="123.19999999999999" fill="#5fff5f">Concat</text>
+<text class="text" x="59.199999999999996" y="123.19999999999999" fill="#87ff00">enate FIL</text>
+<text class="text" x="123.99999999999999" y="123.19999999999999" fill="#afff00">E(s), or</text>
+<text class="text" x="188.79999999999998" y="123.19999999999999" fill="#d7d700">standard </text>
+<text class="text" x="253.59999999999997" y="123.19999999999999" fill="#d7af00">i</text>
+<text class="text" x="260.79999999999995" y="123.19999999999999" fill="#ffaf00">nput, to </text>
+<text class="text" x="325.59999999999997" y="123.19999999999999" fill="#ff8700">standard</text>
+<text class="text" x="390.4" y="123.19999999999999" fill="#ff5f5f">output.</text>
+<text class="text" x="16" y="140" fill="#87ff00">With no</text>
+<text class="text" x="66.39999999999999" y="140" fill="#afff00"> FILE, o</text>
+<text class="text" x="123.99999999999999" y="140" fill="#afd700">r</text>
+<text class="text" x="131.2" y="140" fill="#d7d700"> when FIL</text>
+<text class="text" x="195.99999999999997" y="140" fill="#d7af00">E</text>
+<text class="text" x="203.2" y="140" fill="#ffaf00"> is -, re</text>
+<text class="text" x="268" y="140" fill="#ff8700">ad stand</text>
+<text class="text" x="325.59999999999997" y="140" fill="#ff875f">a</text>
+<text class="text" x="332.79999999999995" y="140" fill="#ff5f5f">rd input.</text>
+<text class="text" x="16" y="173.59999999999997" fill="#d7d700">  -p, --s</text>
+<text class="text" x="80.8" y="173.59999999999997" fill="#d7af00">p</text>
+<text class="text" x="88" y="173.59999999999997" fill="#ffaf00">read=&lt;f&gt; </text>
+<text class="text" x="152.79999999999998" y="173.59999999999997" fill="#ff8700">     Rai</text>
+<text class="text" x="210.39999999999998" y="173.59999999999997" fill="#ff875f">n</text>
+<text class="text" x="217.59999999999997" y="173.59999999999997" fill="#ff5f5f">bow sprea</text>
+<text class="text" x="282.4" y="173.59999999999997" fill="#ff5f87">d</text>
+<text class="text" x="289.59999999999997" y="173.59999999999997" fill="#ff0087"> (defaul</text>
+<text class="text" x="347.2" y="173.59999999999997" fill="#ff00af">t: 3.0)</text>
+<text class="text" x="30.4" y="190.39999999999998" fill="#ffaf00">-F, --fre</text>
+<text class="text" x="95.19999999999999" y="190.39999999999998" fill="#ff8700">q=&lt;f&gt;   </text>
+<text class="text" x="160" y="190.39999999999998" fill="#ff5f5f">    Rainb</text>
+<text class="text" x="224.79999999999998" y="190.39999999999998" fill="#ff5f87">o</text>
+<text class="text" x="231.99999999999997" y="190.39999999999998" fill="#ff0087">w freque</text>
+<text class="text" x="289.59999999999997" y="190.39999999999998" fill="#ff00af">ncy (defa</text>
+<text class="text" x="354.4" y="190.39999999999998" fill="#d700af">u</text>
+<text class="text" x="361.59999999999997" y="190.39999999999998" fill="#d700d7">lt: 0.1)</text>
+<text class="text" x="16" y="207.2" fill="#ffaf00">  -</text>
+<text class="text" x="37.599999999999994" y="207.2" fill="#ff8700">S, --see</text>
+<text class="text" x="95.19999999999999" y="207.2" fill="#ff875f">d</text>
+<text class="text" x="102.39999999999999" y="207.2" fill="#ff5f5f">=&lt;i&gt;     </text>
+<text class="text" x="174.39999999999998" y="207.2" fill="#ff0087">  Rainbo</text>
+<text class="text" x="231.99999999999997" y="207.2" fill="#ff00af">w seed, 0</text>
+<text class="text" x="304" y="207.2" fill="#d700d7">= random </text>
+<text class="text" x="368.79999999999995" y="207.2" fill="#af00d7">(</text>
+<text class="text" x="375.99999999999994" y="207.2" fill="#af00ff">default:</text>
+<text class="text" x="433.59999999999997" y="207.2" fill="#8700ff"> 0)</text>
+<text class="text" x="16" y="223.99999999999997" fill="#ff8700">  -</text>
+<text class="text" x="37.599999999999994" y="223.99999999999997" fill="#ff875f">a</text>
+<text class="text" x="44.8" y="223.99999999999997" fill="#ff5f5f">, --anima</text>
+<text class="text" x="109.6" y="223.99999999999997" fill="#ff5f87">t</text>
+<text class="text" x="116.79999999999998" y="223.99999999999997" fill="#ff0087">e       </text>
+<text class="text" x="174.39999999999998" y="223.99999999999997" fill="#ff00af">  Enable </text>
+<text class="text" x="239.2" y="223.99999999999997" fill="#d700af">p</text>
+<text class="text" x="246.39999999999998" y="223.99999999999997" fill="#d700d7">sychedeli</text>
+<text class="text" x="311.2" y="223.99999999999997" fill="#af00d7">c</text>
+<text class="text" x="318.4" y="223.99999999999997" fill="#af00ff">s</text>
+<text class="text" x="16" y="240.79999999999995" fill="#ff5f5f">  -d,</text>
+<text class="text" x="59.199999999999996" y="240.79999999999995" fill="#ff0087">--durati</text>
+<text class="text" x="116.79999999999998" y="240.79999999999995" fill="#ff00af">on=&lt;i&gt;   </text>
+<text class="text" x="188.79999999999998" y="240.79999999999995" fill="#d700d7">Animation</text>
+<text class="text" x="260.79999999999995" y="240.79999999999995" fill="#af00ff">duration</text>
+<text class="text" x="318.4" y="240.79999999999995" fill="#8700ff"> (default</text>
+<text class="text" x="383.2" y="240.79999999999995" fill="#5f5fff">: 12)</text>
+<text class="text" x="16" y="257.59999999999997" fill="#ff0087">  -s, </text>
+<text class="text" x="59.199999999999996" y="257.59999999999997" fill="#ff00af">--speed=&lt;</text>
+<text class="text" x="123.99999999999999" y="257.59999999999997" fill="#d700af">f</text>
+<text class="text" x="131.2" y="257.59999999999997" fill="#d700d7">&gt;       A</text>
+<text class="text" x="195.99999999999997" y="257.59999999999997" fill="#af00d7">n</text>
+<text class="text" x="203.2" y="257.59999999999997" fill="#af00ff">imation </text>
+<text class="text" x="260.79999999999995" y="257.59999999999997" fill="#8700ff">speed (de</text>
+<text class="text" x="325.59999999999997" y="257.59999999999997" fill="#5f5fff">fault: 20.</text>
+<text class="text" x="397.59999999999997" y="257.59999999999997" fill="#5f87ff">0</text>
+<text class="text" x="404.79999999999995" y="257.59999999999997" fill="#0087ff">)</text>
+<text class="text" x="16" y="274.4" fill="#ff00af">  -i, -</text>
+<text class="text" x="66.39999999999999" y="274.4" fill="#d700af">-</text>
+<text class="text" x="73.6" y="274.4" fill="#d700d7">invert   </text>
+<text class="text" x="145.6" y="274.4" fill="#af00ff">      In</text>
+<text class="text" x="203.2" y="274.4" fill="#8700ff">vert fg a</text>
+<text class="text" x="268" y="274.4" fill="#5f5fff">nd bg</text>
+<text class="text" x="16" y="291.19999999999993" fill="#d700d7">  -t, --t</text>
+<text class="text" x="80.8" y="291.19999999999993" fill="#af00d7">r</text>
+<text class="text" x="88" y="291.19999999999993" fill="#af00ff">uecolor </text>
+<text class="text" x="145.6" y="291.19999999999993" fill="#8700ff">      24-</text>
+<text class="text" x="210.39999999999998" y="291.19999999999993" fill="#5f5fff">bit (truec</text>
+<text class="text" x="282.4" y="291.19999999999993" fill="#5f87ff">o</text>
+<text class="text" x="289.59999999999997" y="291.19999999999993" fill="#0087ff">lor)</text>
+<text class="text" x="30.4" y="307.99999999999994" fill="#af00ff">-f, --fo</text>
+<text class="text" x="88" y="307.99999999999994" fill="#8700ff">rce      </text>
+<text class="text" x="152.79999999999998" y="307.99999999999994" fill="#5f5fff">     Force</text>
+<text class="text" x="231.99999999999997" y="307.99999999999994" fill="#0087ff">color ev</text>
+<text class="text" x="289.59999999999997" y="307.99999999999994" fill="#00afff">en when </text>
+<text class="text" x="347.2" y="307.99999999999994" fill="#00afd7">st</text>
+<text class="text" x="361.59999999999997" y="307.99999999999994" fill="#00d7d7">dout is n</text>
+<text class="text" x="426.4" y="307.99999999999994" fill="#00d7af">o</text>
+<text class="text" x="433.59999999999997" y="307.99999999999994" fill="#00ffaf">t a tty</text>
+<text class="text" x="30.4" y="324.79999999999995" fill="#8700ff">-v, --ver</text>
+<text class="text" x="95.19999999999999" y="324.79999999999995" fill="#5f5fff">sion      </text>
+<text class="text" x="174.39999999999998" y="324.79999999999995" fill="#0087ff">  Print </text>
+<text class="text" x="231.99999999999997" y="324.79999999999995" fill="#00afff">version </text>
+<text class="text" x="289.59999999999997" y="324.79999999999995" fill="#00afd7">an</text>
+<text class="text" x="304" y="324.79999999999995" fill="#00d7d7">d exit</text>
+<text class="text" x="16" y="341.59999999999997" fill="#8700ff">  -</text>
+<text class="text" x="37.599999999999994" y="341.59999999999997" fill="#5f5fff">h, --help </text>
+<text class="text" x="174.39999999999998" y="341.59999999999997" fill="#00afff">  Show t</text>
+<text class="text" x="231.99999999999997" y="341.59999999999997" fill="#00afd7">hi</text>
+<text class="text" x="246.39999999999998" y="341.59999999999997" fill="#00d7d7">s message</text>
+<text class="text" x="16" y="375.19999999999993" fill="#0087ff">Exampl</text>
+<text class="text" x="59.199999999999996" y="375.19999999999993" fill="#00afff">es:</text>
+<text class="text" x="16" y="391.99999999999994" fill="#00afff">  lolc</text>
+<text class="text" x="59.199999999999996" y="391.99999999999994" fill="#00afd7">at</text>
+<text class="text" x="73.6" y="391.99999999999994" fill="#00d7d7"> f - g   </text>
+<text class="text" x="145.6" y="391.99999999999994" fill="#00ffaf">  Output</text>
+<text class="text" x="203.2" y="391.99999999999994" fill="#00ff87"> f&apos;s cont</text>
+<text class="text" x="268" y="391.99999999999994" fill="#5fff5f">ents, then</text>
+<text class="text" x="347.2" y="391.99999999999994" fill="#87ff00">stdin, t</text>
+<text class="text" x="404.79999999999995" y="391.99999999999994" fill="#afff00">hen g&apos;s </text>
+<text class="text" x="462.4" y="391.99999999999994" fill="#afd700">c</text>
+<text class="text" x="469.59999999999997" y="391.99999999999994" fill="#d7d700">ontents.</text>
+<text class="text" x="16" y="408.79999999999995" fill="#00d7d7">  lolcat </text>
+<text class="text" x="145.6" y="408.79999999999995" fill="#00ff87">  Copy st</text>
+<text class="text" x="210.39999999999998" y="408.79999999999995" fill="#5fff5f">andard inp</text>
+<text class="text" x="282.4" y="408.79999999999995" fill="#87ff5f">u</text>
+<text class="text" x="289.59999999999997" y="408.79999999999995" fill="#87ff00">t to sta</text>
+<text class="text" x="347.2" y="408.79999999999995" fill="#afff00">ndard ou</text>
+<text class="text" x="404.79999999999995" y="408.79999999999995" fill="#afd700">t</text>
+<text class="text" x="411.99999999999994" y="408.79999999999995" fill="#d7d700">put.</text>
+<text class="text" x="30.4" y="425.5999999999999" fill="#00ffaf">fortune </text>
+<text class="text" x="88" y="425.5999999999999" fill="#00ff87">| lolcat </text>
+<text class="text" x="152.79999999999998" y="425.5999999999999" fill="#5fff5f"> Display a</text>
+<text class="text" x="231.99999999999997" y="425.5999999999999" fill="#87ff00">rainbow </text>
+<text class="text" x="289.59999999999997" y="425.5999999999999" fill="#afff00">cookie.</text>
+<text class="text" x="16" y="459.19999999999993" fill="#00ff87">Rep</text>
+<text class="text" x="37.599999999999994" y="459.19999999999993" fill="#5fff5f">ort lolcat</text>
+<text class="text" x="116.79999999999998" y="459.19999999999993" fill="#87ff00">bugs to </text>
+<text class="text" x="174.39999999999998" y="459.19999999999993" fill="#afff00">&lt;https:/</text>
+<text class="text" x="231.99999999999997" y="459.19999999999993" fill="#afd700">/</text>
+<text class="text" x="239.2" y="459.19999999999993" fill="#d7d700">github.com</text>
+<text class="text" x="311.2" y="459.19999999999993" fill="#d7af00">/</text>
+<text class="text" x="318.4" y="459.19999999999993" fill="#ffaf00">busyloop</text>
+<text class="text" x="375.99999999999994" y="459.19999999999993" fill="#ff8700">/lolcat/</text>
+<text class="text" x="433.59999999999997" y="459.19999999999993" fill="#ff875f">i</text>
+<text class="text" x="440.79999999999995" y="459.19999999999993" fill="#ff5f5f">ssues&gt;</text>
+<text class="text" x="16" y="475.99999999999994" fill="#5fff5f">lolca</text>
+<text class="text" x="52" y="475.99999999999994" fill="#87ff5f">t</text>
+<text class="text" x="59.199999999999996" y="475.99999999999994" fill="#87ff00"> home pa</text>
+<text class="text" x="116.79999999999998" y="475.99999999999994" fill="#afff00">ge: &lt;htt</text>
+<text class="text" x="174.39999999999998" y="475.99999999999994" fill="#afd700">p</text>
+<text class="text" x="181.6" y="475.99999999999994" fill="#d7d700">s://github</text>
+<text class="text" x="253.59999999999997" y="475.99999999999994" fill="#d7af00">.</text>
+<text class="text" x="260.79999999999995" y="475.99999999999994" fill="#ffaf00">com/busy</text>
+<text class="text" x="318.4" y="475.99999999999994" fill="#ff8700">loop/lol</text>
+<text class="text" x="375.99999999999994" y="475.99999999999994" fill="#ff875f">c</text>
+<text class="text" x="383.2" y="475.99999999999994" fill="#ff5f5f">at/&gt;</text>
+<text class="text" x="16" y="492.79999999999995" fill="#87ff00">Report</text>
+<text class="text" x="59.199999999999996" y="492.79999999999995" fill="#afff00"> lolcat </text>
+<text class="text" x="116.79999999999998" y="492.79999999999995" fill="#afd700">t</text>
+<text class="text" x="123.99999999999999" y="492.79999999999995" fill="#d7d700">ranslation</text>
+<text class="text" x="203.2" y="492.79999999999995" fill="#ffaf00">bugs to </text>
+<text class="text" x="260.79999999999995" y="492.79999999999995" fill="#ff8700">&lt;http://</text>
+<text class="text" x="318.4" y="492.79999999999995" fill="#ff875f">s</text>
+<text class="text" x="325.59999999999997" y="492.79999999999995" fill="#ff5f5f">peaklolcat</text>
+<text class="text" x="397.59999999999997" y="492.79999999999995" fill="#ff5f87">.</text>
+<text class="text" x="404.79999999999995" y="492.79999999999995" fill="#ff0087">com/&gt;</text>
+<text class="text f13" x="16" y="526.3999999999999">❯</text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor" x="30.4" y="486.3999999999999" width="7.199999999999999" height="16.799999999999997" fill="#f8f8f2"/>
+<rect class="cursor" x="30.4" y="526.3999999999999" width="7.199999999999999" height="16.799999999999997" fill="#c9d1d9"/>
 </g>
 
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.864586;0.869418;1.000000"
-      dur="7.66s"
+      keyTimes="0.000000;0.864879;0.869826;1.000000"
+      dur="7.68s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -935,202 +1002,193 @@
   <g id="frame-19" visibility="hidden">
     
 
-<rect class="window-bg" x="0" y="0" width="600" height="600" fill="#282a36" rx="8" ry="8"/>
+<rect class="window-bg" x="0" y="0" width="600" height="600" fill="#1e1e1e" rx="8" ry="8"/>
+<g class="chrome"><rect class="header-bg" x="0" y="0" width="600" height="40" fill="#1e1e1e" rx="8" ry="8"/>
+<rect x="0" y="32" width="600" height="8" fill="#1e1e1e"/>
+<circle cx="22" cy="20" r="6" fill="#ff5f56"/>
+<circle cx="42" cy="20" r="6" fill="#ffbd2e"/>
+<circle cx="62" cy="20" r="6" fill="#27c93f"/></g>
 <g class="text-layer">
-<text class="text f13" x="16" y="16">❯</text>
-<text class="text fg" x="23.2" y="16"> lolcat --help                                                               </text>
-<text class="text" x="16" y="49.599999999999994" fill="#87ff00">Usage</text>
-<text class="text" x="52" y="49.599999999999994" fill="#afff00">: lolcat </text>
-<text class="text" x="116.79999999999998" y="49.599999999999994" fill="#afd700">[</text>
-<text class="text" x="123.99999999999999" y="49.599999999999994" fill="#d7d700">OPTION]..</text>
-<text class="text" x="188.79999999999998" y="49.599999999999994" fill="#d7af00">.</text>
-<text class="text" x="195.99999999999997" y="49.599999999999994" fill="#ffaf00"> [FILE].</text>
-<text class="text" x="253.59999999999997" y="49.599999999999994" fill="#ff8700">..</text>
-<text class="text" x="16" y="83.19999999999999" fill="#d7d700">Concaten</text>
-<text class="text" x="73.6" y="83.19999999999999" fill="#d7af00">a</text>
-<text class="text" x="80.8" y="83.19999999999999" fill="#ffaf00">te FILE(</text>
-<text class="text" x="138.39999999999998" y="83.19999999999999" fill="#ff8700">s), or st</text>
-<text class="text" x="203.2" y="83.19999999999999" fill="#ff5f5f">andard inp</text>
-<text class="text" x="275.2" y="83.19999999999999" fill="#ff5f87">u</text>
-<text class="text" x="282.4" y="83.19999999999999" fill="#ff0087">t, to st</text>
-<text class="text" x="339.99999999999994" y="83.19999999999999" fill="#ff00af">andard o</text>
-<text class="text" x="397.59999999999997" y="83.19999999999999" fill="#d700af">u</text>
-<text class="text" x="404.79999999999995" y="83.19999999999999" fill="#d700d7">tput.</text>
-<text class="text" x="16" y="99.99999999999999" fill="#d7af00">W</text>
-<text class="text" x="23.2" y="99.99999999999999" fill="#ffaf00">ith no F</text>
-<text class="text" x="80.8" y="99.99999999999999" fill="#ff8700">ILE, or w</text>
-<text class="text" x="145.6" y="99.99999999999999" fill="#ff5f5f">hen FILE i</text>
-<text class="text" x="217.59999999999997" y="99.99999999999999" fill="#ff5f87">s</text>
-<text class="text" x="224.79999999999998" y="99.99999999999999" fill="#ff0087"> -, read</text>
-<text class="text" x="282.4" y="99.99999999999999" fill="#ff00af"> standar</text>
-<text class="text" x="339.99999999999994" y="99.99999999999999" fill="#d700af">d</text>
-<text class="text" x="347.2" y="99.99999999999999" fill="#d700d7"> input.</text>
-<text class="text" x="30.4" y="133.59999999999997" fill="#ff5f5f">-p, --spre</text>
-<text class="text" x="102.39999999999999" y="133.59999999999997" fill="#ff5f87">a</text>
-<text class="text" x="109.6" y="133.59999999999997" fill="#ff0087">d=&lt;f&gt;   </text>
-<text class="text" x="167.2" y="133.59999999999997" fill="#ff00af">   Rainb</text>
-<text class="text" x="224.79999999999998" y="133.59999999999997" fill="#d700af">o</text>
-<text class="text" x="231.99999999999997" y="133.59999999999997" fill="#d700d7">w spread (</text>
-<text class="text" x="304" y="133.59999999999997" fill="#af00d7">d</text>
-<text class="text" x="311.2" y="133.59999999999997" fill="#af00ff">efault: </text>
-<text class="text" x="368.79999999999995" y="133.59999999999997" fill="#8700ff">3.0)</text>
-<text class="text" x="16" y="150.39999999999998" fill="#ff5f5f">  -F</text>
-<text class="text" x="44.8" y="150.39999999999998" fill="#ff5f87">,</text>
-<text class="text" x="52" y="150.39999999999998" fill="#ff0087"> --freq=</text>
-<text class="text" x="109.6" y="150.39999999999998" fill="#ff00af">&lt;f&gt;     </text>
-<text class="text" x="174.39999999999998" y="150.39999999999998" fill="#d700d7">  Rainbow </text>
-<text class="text" x="246.39999999999998" y="150.39999999999998" fill="#af00d7">f</text>
-<text class="text" x="253.59999999999997" y="150.39999999999998" fill="#af00ff">requency</text>
-<text class="text" x="311.2" y="150.39999999999998" fill="#8700ff"> (default</text>
-<text class="text" x="375.99999999999994" y="150.39999999999998" fill="#5f5fff">: 0.1)</text>
-<text class="text" x="16" y="167.2" fill="#ff0087">  -S,</text>
-<text class="text" x="52" y="167.2" fill="#ff00af"> --seed=</text>
-<text class="text" x="109.6" y="167.2" fill="#d700af">&lt;</text>
-<text class="text" x="116.79999999999998" y="167.2" fill="#d700d7">i&gt;        </text>
-<text class="text" x="188.79999999999998" y="167.2" fill="#af00d7">R</text>
-<text class="text" x="195.99999999999997" y="167.2" fill="#af00ff">ainbow s</text>
-<text class="text" x="253.59999999999997" y="167.2" fill="#8700ff">eed, 0 = </text>
-<text class="text" x="318.4" y="167.2" fill="#5f5fff">random (de</text>
-<text class="text" x="390.4" y="167.2" fill="#5f87ff">f</text>
-<text class="text" x="397.59999999999997" y="167.2" fill="#0087ff">ault: 0)</text>
-<text class="text" x="16" y="183.99999999999997" fill="#ff00af">  -a,</text>
-<text class="text" x="59.199999999999996" y="183.99999999999997" fill="#d700d7">--animate </text>
-<text class="text" x="138.39999999999998" y="183.99999999999997" fill="#af00ff">       E</text>
-<text class="text" x="195.99999999999997" y="183.99999999999997" fill="#8700ff">nable psy</text>
-<text class="text" x="260.79999999999995" y="183.99999999999997" fill="#5f5fff">chedelics</text>
-<text class="text" x="16" y="200.79999999999995" fill="#d700d7">  -d, --</text>
-<text class="text" x="73.6" y="200.79999999999995" fill="#af00d7">d</text>
-<text class="text" x="80.8" y="200.79999999999995" fill="#af00ff">uration=</text>
-<text class="text" x="138.39999999999998" y="200.79999999999995" fill="#8700ff">&lt;i&gt;    An</text>
-<text class="text" x="203.2" y="200.79999999999995" fill="#5f5fff">imation du</text>
-<text class="text" x="275.2" y="200.79999999999995" fill="#5f87ff">r</text>
-<text class="text" x="282.4" y="200.79999999999995" fill="#0087ff">ation (d</text>
-<text class="text" x="339.99999999999994" y="200.79999999999995" fill="#00afff">efault: </text>
-<text class="text" x="397.59999999999997" y="200.79999999999995" fill="#00afd7">1</text>
-<text class="text" x="404.79999999999995" y="200.79999999999995" fill="#00d7d7">2)</text>
-<text class="text" x="23.2" y="217.59999999999997" fill="#af00ff"> -s, --s</text>
-<text class="text" x="80.8" y="217.59999999999997" fill="#8700ff">peed=&lt;f&gt; </text>
-<text class="text" x="145.6" y="217.59999999999997" fill="#5f5fff">      Anim</text>
-<text class="text" x="217.59999999999997" y="217.59999999999997" fill="#5f87ff">a</text>
-<text class="text" x="224.79999999999998" y="217.59999999999997" fill="#0087ff">tion spe</text>
-<text class="text" x="282.4" y="217.59999999999997" fill="#00afff">ed (defa</text>
-<text class="text" x="339.99999999999994" y="217.59999999999997" fill="#00afd7">u</text>
-<text class="text" x="347.2" y="217.59999999999997" fill="#00d7d7">lt: 20.0)</text>
-<text class="text" x="23.2" y="234.39999999999998" fill="#8700ff"> -i, --in</text>
-<text class="text" x="88" y="234.39999999999998" fill="#5f5fff">vert      </text>
-<text class="text" x="167.2" y="234.39999999999998" fill="#0087ff">   Inver</text>
-<text class="text" x="224.79999999999998" y="234.39999999999998" fill="#00afff">t fg and</text>
-<text class="text" x="289.59999999999997" y="234.39999999999998" fill="#00d7d7">bg</text>
-<text class="text" x="30.4" y="251.19999999999996" fill="#5f5fff">-t, --true</text>
-<text class="text" x="102.39999999999999" y="251.19999999999996" fill="#5f87ff">c</text>
-<text class="text" x="109.6" y="251.19999999999996" fill="#0087ff">olor    </text>
-<text class="text" x="167.2" y="251.19999999999996" fill="#00afff">   24-bi</text>
-<text class="text" x="224.79999999999998" y="251.19999999999996" fill="#00afd7">t</text>
-<text class="text" x="231.99999999999997" y="251.19999999999996" fill="#00d7d7"> (truecolo</text>
-<text class="text" x="304" y="251.19999999999996" fill="#00d7af">r</text>
-<text class="text" x="311.2" y="251.19999999999996" fill="#00ffaf">)</text>
-<text class="text" x="16" y="267.99999999999994" fill="#5f5fff">  -f</text>
-<text class="text" x="44.8" y="267.99999999999994" fill="#5f87ff">,</text>
-<text class="text" x="52" y="267.99999999999994" fill="#0087ff"> --force</text>
-<text class="text" x="174.39999999999998" y="267.99999999999994" fill="#00d7d7">  Force co</text>
-<text class="text" x="246.39999999999998" y="267.99999999999994" fill="#00d7af">l</text>
-<text class="text" x="253.59999999999997" y="267.99999999999994" fill="#00ffaf">or even </text>
-<text class="text" x="311.2" y="267.99999999999994" fill="#00ff87">when std</text>
-<text class="text" x="368.79999999999995" y="267.99999999999994" fill="#5fff87">o</text>
-<text class="text" x="375.99999999999994" y="267.99999999999994" fill="#5fff5f">ut is not </text>
-<text class="text" x="447.99999999999994" y="267.99999999999994" fill="#87ff5f">a</text>
-<text class="text" x="455.19999999999993" y="267.99999999999994" fill="#87ff00"> tty</text>
-<text class="text" x="16" y="284.79999999999995" fill="#0087ff">  -v,</text>
-<text class="text" x="52" y="284.79999999999995" fill="#00afff"> --versi</text>
-<text class="text" x="109.6" y="284.79999999999995" fill="#00afd7">o</text>
-<text class="text" x="116.79999999999998" y="284.79999999999995" fill="#00d7d7">n         </text>
-<text class="text" x="188.79999999999998" y="284.79999999999995" fill="#00d7af">P</text>
-<text class="text" x="195.99999999999997" y="284.79999999999995" fill="#00ffaf">rint ver</text>
-<text class="text" x="253.59999999999997" y="284.79999999999995" fill="#00ff87">sion and</text>
-<text class="text" x="318.4" y="284.79999999999995" fill="#5fff5f">exit</text>
-<text class="text" x="16" y="301.59999999999997" fill="#00afff">  -h,</text>
-<text class="text" x="59.199999999999996" y="301.59999999999997" fill="#00d7d7">--help    </text>
-<text class="text" x="138.39999999999998" y="301.59999999999997" fill="#00ffaf">       S</text>
-<text class="text" x="195.99999999999997" y="301.59999999999997" fill="#00ff87">how this</text>
-<text class="text" x="260.79999999999995" y="301.59999999999997" fill="#5fff5f">message</text>
-<text class="text" x="16" y="335.19999999999993" fill="#00d7af">E</text>
-<text class="text" x="23.2" y="335.19999999999993" fill="#00ffaf">xamples:</text>
-<text class="text" x="23.2" y="351.99999999999994" fill="#00ff87"> lolcat </text>
-<text class="text" x="80.8" y="351.99999999999994" fill="#5fff87">f</text>
-<text class="text" x="88" y="351.99999999999994" fill="#5fff5f"> - g      </text>
-<text class="text" x="160" y="351.99999999999994" fill="#87ff5f">O</text>
-<text class="text" x="167.2" y="351.99999999999994" fill="#87ff00">utput f&apos;</text>
-<text class="text" x="224.79999999999998" y="351.99999999999994" fill="#afff00">s conten</text>
-<text class="text" x="282.4" y="351.99999999999994" fill="#afd700">t</text>
-<text class="text" x="289.59999999999997" y="351.99999999999994" fill="#d7d700">s, then st</text>
-<text class="text" x="361.59999999999997" y="351.99999999999994" fill="#d7af00">d</text>
-<text class="text" x="368.79999999999995" y="351.99999999999994" fill="#ffaf00">in, then</text>
-<text class="text" x="426.4" y="351.99999999999994" fill="#ff8700"> g&apos;s con</text>
-<text class="text" x="483.99999999999994" y="351.99999999999994" fill="#ff875f">t</text>
-<text class="text" x="491.19999999999993" y="351.99999999999994" fill="#ff5f5f">ents.</text>
-<text class="text" x="30.4" y="368.79999999999995" fill="#5fff5f">lolcat    </text>
-<text class="text" x="109.6" y="368.79999999999995" fill="#87ff00">       C</text>
-<text class="text" x="167.2" y="368.79999999999995" fill="#afff00">opy stan</text>
-<text class="text" x="224.79999999999998" y="368.79999999999995" fill="#afd700">d</text>
-<text class="text" x="231.99999999999997" y="368.79999999999995" fill="#d7d700">ard input </text>
-<text class="text" x="304" y="368.79999999999995" fill="#d7af00">t</text>
-<text class="text" x="311.2" y="368.79999999999995" fill="#ffaf00">o standa</text>
-<text class="text" x="368.79999999999995" y="368.79999999999995" fill="#ff8700">rd outpu</text>
-<text class="text" x="426.4" y="368.79999999999995" fill="#ff875f">t</text>
-<text class="text" x="433.59999999999997" y="368.79999999999995" fill="#ff5f5f">.</text>
-<text class="text" x="16" y="385.5999999999999" fill="#5fff5f">  fo</text>
-<text class="text" x="44.8" y="385.5999999999999" fill="#87ff5f">r</text>
-<text class="text" x="52" y="385.5999999999999" fill="#87ff00">tune | l</text>
-<text class="text" x="109.6" y="385.5999999999999" fill="#afff00">olcat  D</text>
-<text class="text" x="167.2" y="385.5999999999999" fill="#afd700">i</text>
-<text class="text" x="174.39999999999998" y="385.5999999999999" fill="#d7d700">splay a ra</text>
-<text class="text" x="246.39999999999998" y="385.5999999999999" fill="#d7af00">i</text>
-<text class="text" x="253.59999999999997" y="385.5999999999999" fill="#ffaf00">nbow coo</text>
-<text class="text" x="311.2" y="385.5999999999999" fill="#ff8700">kie.</text>
-<text class="text" x="16" y="419.19999999999993" fill="#afff00">Repor</text>
-<text class="text" x="52" y="419.19999999999993" fill="#afd700">t</text>
-<text class="text" x="59.199999999999996" y="419.19999999999993" fill="#d7d700"> lolcat bu</text>
-<text class="text" x="131.2" y="419.19999999999993" fill="#d7af00">g</text>
-<text class="text" x="138.39999999999998" y="419.19999999999993" fill="#ffaf00">s to &lt;ht</text>
-<text class="text" x="195.99999999999997" y="419.19999999999993" fill="#ff8700">tps://gi</text>
-<text class="text" x="253.59999999999997" y="419.19999999999993" fill="#ff875f">t</text>
-<text class="text" x="260.79999999999995" y="419.19999999999993" fill="#ff5f5f">hub.com/bu</text>
-<text class="text" x="332.79999999999995" y="419.19999999999993" fill="#ff0087">syloop/lo</text>
-<text class="text" x="397.59999999999997" y="419.19999999999993" fill="#ff00af">lcat/iss</text>
-<text class="text" x="455.19999999999993" y="419.19999999999993" fill="#d700af">u</text>
-<text class="text" x="462.4" y="419.19999999999993" fill="#d700d7">es&gt;</text>
-<text class="text" x="16" y="435.99999999999994" fill="#d7d700">lolcat h</text>
-<text class="text" x="73.6" y="435.99999999999994" fill="#d7af00">o</text>
-<text class="text" x="80.8" y="435.99999999999994" fill="#ffaf00">me page:</text>
-<text class="text" x="138.39999999999998" y="435.99999999999994" fill="#ff8700"> &lt;https:</text>
-<text class="text" x="195.99999999999997" y="435.99999999999994" fill="#ff875f">/</text>
-<text class="text" x="203.2" y="435.99999999999994" fill="#ff5f5f">/github.co</text>
-<text class="text" x="275.2" y="435.99999999999994" fill="#ff0087">m/busyloo</text>
-<text class="text" x="339.99999999999994" y="435.99999999999994" fill="#ff00af">p/lolcat</text>
-<text class="text" x="397.59999999999997" y="435.99999999999994" fill="#d700af">/</text>
-<text class="text" x="404.79999999999995" y="435.99999999999994" fill="#d700d7">&gt;</text>
-<text class="text" x="16" y="452.79999999999995" fill="#d7af00">R</text>
-<text class="text" x="23.2" y="452.79999999999995" fill="#ffaf00">eport lo</text>
-<text class="text" x="80.8" y="452.79999999999995" fill="#ff8700">lcat tra</text>
-<text class="text" x="138.39999999999998" y="452.79999999999995" fill="#ff875f">n</text>
-<text class="text" x="145.6" y="452.79999999999995" fill="#ff5f5f">slation bu</text>
-<text class="text" x="217.59999999999997" y="452.79999999999995" fill="#ff0087">gs to &lt;ht</text>
-<text class="text" x="282.4" y="452.79999999999995" fill="#ff00af">tp://spe</text>
-<text class="text" x="339.99999999999994" y="452.79999999999995" fill="#d700af">a</text>
-<text class="text" x="347.2" y="452.79999999999995" fill="#d700d7">klolcat.co</text>
-<text class="text" x="419.19999999999993" y="452.79999999999995" fill="#af00d7">m</text>
-<text class="text" x="426.4" y="452.79999999999995" fill="#af00ff">/&gt;</text>
-<text class="text f13" x="16" y="486.3999999999999">❯</text>
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="23.2" y="56"> lolcat --help                                                               </text>
+<text class="text" x="16" y="89.6" fill="#00ffaf">Usa</text>
+<text class="text" x="37.599999999999994" y="89.6" fill="#00ff87">ge: lolc</text>
+<text class="text" x="95.19999999999999" y="89.6" fill="#5fff87">a</text>
+<text class="text" x="102.39999999999999" y="89.6" fill="#5fff5f">t [OPTION]</text>
+<text class="text" x="174.39999999999998" y="89.6" fill="#87ff00">... [FILE</text>
+<text class="text" x="239.2" y="89.6" fill="#afff00">]...</text>
+<text class="text" x="16" y="123.19999999999999" fill="#5fff5f">Concat</text>
+<text class="text" x="59.199999999999996" y="123.19999999999999" fill="#87ff00">enate FIL</text>
+<text class="text" x="123.99999999999999" y="123.19999999999999" fill="#afff00">E(s), or</text>
+<text class="text" x="188.79999999999998" y="123.19999999999999" fill="#d7d700">standard </text>
+<text class="text" x="253.59999999999997" y="123.19999999999999" fill="#d7af00">i</text>
+<text class="text" x="260.79999999999995" y="123.19999999999999" fill="#ffaf00">nput, to </text>
+<text class="text" x="325.59999999999997" y="123.19999999999999" fill="#ff8700">standard</text>
+<text class="text" x="390.4" y="123.19999999999999" fill="#ff5f5f">output.</text>
+<text class="text" x="16" y="140" fill="#87ff00">With no</text>
+<text class="text" x="66.39999999999999" y="140" fill="#afff00"> FILE, o</text>
+<text class="text" x="123.99999999999999" y="140" fill="#afd700">r</text>
+<text class="text" x="131.2" y="140" fill="#d7d700"> when FIL</text>
+<text class="text" x="195.99999999999997" y="140" fill="#d7af00">E</text>
+<text class="text" x="203.2" y="140" fill="#ffaf00"> is -, re</text>
+<text class="text" x="268" y="140" fill="#ff8700">ad stand</text>
+<text class="text" x="325.59999999999997" y="140" fill="#ff875f">a</text>
+<text class="text" x="332.79999999999995" y="140" fill="#ff5f5f">rd input.</text>
+<text class="text" x="16" y="173.59999999999997" fill="#d7d700">  -p, --s</text>
+<text class="text" x="80.8" y="173.59999999999997" fill="#d7af00">p</text>
+<text class="text" x="88" y="173.59999999999997" fill="#ffaf00">read=&lt;f&gt; </text>
+<text class="text" x="152.79999999999998" y="173.59999999999997" fill="#ff8700">     Rai</text>
+<text class="text" x="210.39999999999998" y="173.59999999999997" fill="#ff875f">n</text>
+<text class="text" x="217.59999999999997" y="173.59999999999997" fill="#ff5f5f">bow sprea</text>
+<text class="text" x="282.4" y="173.59999999999997" fill="#ff5f87">d</text>
+<text class="text" x="289.59999999999997" y="173.59999999999997" fill="#ff0087"> (defaul</text>
+<text class="text" x="347.2" y="173.59999999999997" fill="#ff00af">t: 3.0)</text>
+<text class="text" x="30.4" y="190.39999999999998" fill="#ffaf00">-F, --fre</text>
+<text class="text" x="95.19999999999999" y="190.39999999999998" fill="#ff8700">q=&lt;f&gt;   </text>
+<text class="text" x="160" y="190.39999999999998" fill="#ff5f5f">    Rainb</text>
+<text class="text" x="224.79999999999998" y="190.39999999999998" fill="#ff5f87">o</text>
+<text class="text" x="231.99999999999997" y="190.39999999999998" fill="#ff0087">w freque</text>
+<text class="text" x="289.59999999999997" y="190.39999999999998" fill="#ff00af">ncy (defa</text>
+<text class="text" x="354.4" y="190.39999999999998" fill="#d700af">u</text>
+<text class="text" x="361.59999999999997" y="190.39999999999998" fill="#d700d7">lt: 0.1)</text>
+<text class="text" x="16" y="207.2" fill="#ffaf00">  -</text>
+<text class="text" x="37.599999999999994" y="207.2" fill="#ff8700">S, --see</text>
+<text class="text" x="95.19999999999999" y="207.2" fill="#ff875f">d</text>
+<text class="text" x="102.39999999999999" y="207.2" fill="#ff5f5f">=&lt;i&gt;     </text>
+<text class="text" x="174.39999999999998" y="207.2" fill="#ff0087">  Rainbo</text>
+<text class="text" x="231.99999999999997" y="207.2" fill="#ff00af">w seed, 0</text>
+<text class="text" x="304" y="207.2" fill="#d700d7">= random </text>
+<text class="text" x="368.79999999999995" y="207.2" fill="#af00d7">(</text>
+<text class="text" x="375.99999999999994" y="207.2" fill="#af00ff">default:</text>
+<text class="text" x="433.59999999999997" y="207.2" fill="#8700ff"> 0)</text>
+<text class="text" x="16" y="223.99999999999997" fill="#ff8700">  -</text>
+<text class="text" x="37.599999999999994" y="223.99999999999997" fill="#ff875f">a</text>
+<text class="text" x="44.8" y="223.99999999999997" fill="#ff5f5f">, --anima</text>
+<text class="text" x="109.6" y="223.99999999999997" fill="#ff5f87">t</text>
+<text class="text" x="116.79999999999998" y="223.99999999999997" fill="#ff0087">e       </text>
+<text class="text" x="174.39999999999998" y="223.99999999999997" fill="#ff00af">  Enable </text>
+<text class="text" x="239.2" y="223.99999999999997" fill="#d700af">p</text>
+<text class="text" x="246.39999999999998" y="223.99999999999997" fill="#d700d7">sychedeli</text>
+<text class="text" x="311.2" y="223.99999999999997" fill="#af00d7">c</text>
+<text class="text" x="318.4" y="223.99999999999997" fill="#af00ff">s</text>
+<text class="text" x="16" y="240.79999999999995" fill="#ff5f5f">  -d,</text>
+<text class="text" x="59.199999999999996" y="240.79999999999995" fill="#ff0087">--durati</text>
+<text class="text" x="116.79999999999998" y="240.79999999999995" fill="#ff00af">on=&lt;i&gt;   </text>
+<text class="text" x="188.79999999999998" y="240.79999999999995" fill="#d700d7">Animation</text>
+<text class="text" x="260.79999999999995" y="240.79999999999995" fill="#af00ff">duration</text>
+<text class="text" x="318.4" y="240.79999999999995" fill="#8700ff"> (default</text>
+<text class="text" x="383.2" y="240.79999999999995" fill="#5f5fff">: 12)</text>
+<text class="text" x="16" y="257.59999999999997" fill="#ff0087">  -s, </text>
+<text class="text" x="59.199999999999996" y="257.59999999999997" fill="#ff00af">--speed=&lt;</text>
+<text class="text" x="123.99999999999999" y="257.59999999999997" fill="#d700af">f</text>
+<text class="text" x="131.2" y="257.59999999999997" fill="#d700d7">&gt;       A</text>
+<text class="text" x="195.99999999999997" y="257.59999999999997" fill="#af00d7">n</text>
+<text class="text" x="203.2" y="257.59999999999997" fill="#af00ff">imation </text>
+<text class="text" x="260.79999999999995" y="257.59999999999997" fill="#8700ff">speed (de</text>
+<text class="text" x="325.59999999999997" y="257.59999999999997" fill="#5f5fff">fault: 20.</text>
+<text class="text" x="397.59999999999997" y="257.59999999999997" fill="#5f87ff">0</text>
+<text class="text" x="404.79999999999995" y="257.59999999999997" fill="#0087ff">)</text>
+<text class="text" x="16" y="274.4" fill="#ff00af">  -i, -</text>
+<text class="text" x="66.39999999999999" y="274.4" fill="#d700af">-</text>
+<text class="text" x="73.6" y="274.4" fill="#d700d7">invert   </text>
+<text class="text" x="145.6" y="274.4" fill="#af00ff">      In</text>
+<text class="text" x="203.2" y="274.4" fill="#8700ff">vert fg a</text>
+<text class="text" x="268" y="274.4" fill="#5f5fff">nd bg</text>
+<text class="text" x="16" y="291.19999999999993" fill="#d700d7">  -t, --t</text>
+<text class="text" x="80.8" y="291.19999999999993" fill="#af00d7">r</text>
+<text class="text" x="88" y="291.19999999999993" fill="#af00ff">uecolor </text>
+<text class="text" x="145.6" y="291.19999999999993" fill="#8700ff">      24-</text>
+<text class="text" x="210.39999999999998" y="291.19999999999993" fill="#5f5fff">bit (truec</text>
+<text class="text" x="282.4" y="291.19999999999993" fill="#5f87ff">o</text>
+<text class="text" x="289.59999999999997" y="291.19999999999993" fill="#0087ff">lor)</text>
+<text class="text" x="30.4" y="307.99999999999994" fill="#af00ff">-f, --fo</text>
+<text class="text" x="88" y="307.99999999999994" fill="#8700ff">rce      </text>
+<text class="text" x="152.79999999999998" y="307.99999999999994" fill="#5f5fff">     Force</text>
+<text class="text" x="231.99999999999997" y="307.99999999999994" fill="#0087ff">color ev</text>
+<text class="text" x="289.59999999999997" y="307.99999999999994" fill="#00afff">en when </text>
+<text class="text" x="347.2" y="307.99999999999994" fill="#00afd7">st</text>
+<text class="text" x="361.59999999999997" y="307.99999999999994" fill="#00d7d7">dout is n</text>
+<text class="text" x="426.4" y="307.99999999999994" fill="#00d7af">o</text>
+<text class="text" x="433.59999999999997" y="307.99999999999994" fill="#00ffaf">t a tty</text>
+<text class="text" x="30.4" y="324.79999999999995" fill="#8700ff">-v, --ver</text>
+<text class="text" x="95.19999999999999" y="324.79999999999995" fill="#5f5fff">sion      </text>
+<text class="text" x="174.39999999999998" y="324.79999999999995" fill="#0087ff">  Print </text>
+<text class="text" x="231.99999999999997" y="324.79999999999995" fill="#00afff">version </text>
+<text class="text" x="289.59999999999997" y="324.79999999999995" fill="#00afd7">an</text>
+<text class="text" x="304" y="324.79999999999995" fill="#00d7d7">d exit</text>
+<text class="text" x="16" y="341.59999999999997" fill="#8700ff">  -</text>
+<text class="text" x="37.599999999999994" y="341.59999999999997" fill="#5f5fff">h, --help </text>
+<text class="text" x="174.39999999999998" y="341.59999999999997" fill="#00afff">  Show t</text>
+<text class="text" x="231.99999999999997" y="341.59999999999997" fill="#00afd7">hi</text>
+<text class="text" x="246.39999999999998" y="341.59999999999997" fill="#00d7d7">s message</text>
+<text class="text" x="16" y="375.19999999999993" fill="#0087ff">Exampl</text>
+<text class="text" x="59.199999999999996" y="375.19999999999993" fill="#00afff">es:</text>
+<text class="text" x="16" y="391.99999999999994" fill="#00afff">  lolc</text>
+<text class="text" x="59.199999999999996" y="391.99999999999994" fill="#00afd7">at</text>
+<text class="text" x="73.6" y="391.99999999999994" fill="#00d7d7"> f - g   </text>
+<text class="text" x="145.6" y="391.99999999999994" fill="#00ffaf">  Output</text>
+<text class="text" x="203.2" y="391.99999999999994" fill="#00ff87"> f&apos;s cont</text>
+<text class="text" x="268" y="391.99999999999994" fill="#5fff5f">ents, then</text>
+<text class="text" x="347.2" y="391.99999999999994" fill="#87ff00">stdin, t</text>
+<text class="text" x="404.79999999999995" y="391.99999999999994" fill="#afff00">hen g&apos;s </text>
+<text class="text" x="462.4" y="391.99999999999994" fill="#afd700">c</text>
+<text class="text" x="469.59999999999997" y="391.99999999999994" fill="#d7d700">ontents.</text>
+<text class="text" x="16" y="408.79999999999995" fill="#00d7d7">  lolcat </text>
+<text class="text" x="145.6" y="408.79999999999995" fill="#00ff87">  Copy st</text>
+<text class="text" x="210.39999999999998" y="408.79999999999995" fill="#5fff5f">andard inp</text>
+<text class="text" x="282.4" y="408.79999999999995" fill="#87ff5f">u</text>
+<text class="text" x="289.59999999999997" y="408.79999999999995" fill="#87ff00">t to sta</text>
+<text class="text" x="347.2" y="408.79999999999995" fill="#afff00">ndard ou</text>
+<text class="text" x="404.79999999999995" y="408.79999999999995" fill="#afd700">t</text>
+<text class="text" x="411.99999999999994" y="408.79999999999995" fill="#d7d700">put.</text>
+<text class="text" x="30.4" y="425.5999999999999" fill="#00ffaf">fortune </text>
+<text class="text" x="88" y="425.5999999999999" fill="#00ff87">| lolcat </text>
+<text class="text" x="152.79999999999998" y="425.5999999999999" fill="#5fff5f"> Display a</text>
+<text class="text" x="231.99999999999997" y="425.5999999999999" fill="#87ff00">rainbow </text>
+<text class="text" x="289.59999999999997" y="425.5999999999999" fill="#afff00">cookie.</text>
+<text class="text" x="16" y="459.19999999999993" fill="#00ff87">Rep</text>
+<text class="text" x="37.599999999999994" y="459.19999999999993" fill="#5fff5f">ort lolcat</text>
+<text class="text" x="116.79999999999998" y="459.19999999999993" fill="#87ff00">bugs to </text>
+<text class="text" x="174.39999999999998" y="459.19999999999993" fill="#afff00">&lt;https:/</text>
+<text class="text" x="231.99999999999997" y="459.19999999999993" fill="#afd700">/</text>
+<text class="text" x="239.2" y="459.19999999999993" fill="#d7d700">github.com</text>
+<text class="text" x="311.2" y="459.19999999999993" fill="#d7af00">/</text>
+<text class="text" x="318.4" y="459.19999999999993" fill="#ffaf00">busyloop</text>
+<text class="text" x="375.99999999999994" y="459.19999999999993" fill="#ff8700">/lolcat/</text>
+<text class="text" x="433.59999999999997" y="459.19999999999993" fill="#ff875f">i</text>
+<text class="text" x="440.79999999999995" y="459.19999999999993" fill="#ff5f5f">ssues&gt;</text>
+<text class="text" x="16" y="475.99999999999994" fill="#5fff5f">lolca</text>
+<text class="text" x="52" y="475.99999999999994" fill="#87ff5f">t</text>
+<text class="text" x="59.199999999999996" y="475.99999999999994" fill="#87ff00"> home pa</text>
+<text class="text" x="116.79999999999998" y="475.99999999999994" fill="#afff00">ge: &lt;htt</text>
+<text class="text" x="174.39999999999998" y="475.99999999999994" fill="#afd700">p</text>
+<text class="text" x="181.6" y="475.99999999999994" fill="#d7d700">s://github</text>
+<text class="text" x="253.59999999999997" y="475.99999999999994" fill="#d7af00">.</text>
+<text class="text" x="260.79999999999995" y="475.99999999999994" fill="#ffaf00">com/busy</text>
+<text class="text" x="318.4" y="475.99999999999994" fill="#ff8700">loop/lol</text>
+<text class="text" x="375.99999999999994" y="475.99999999999994" fill="#ff875f">c</text>
+<text class="text" x="383.2" y="475.99999999999994" fill="#ff5f5f">at/&gt;</text>
+<text class="text" x="16" y="492.79999999999995" fill="#87ff00">Report</text>
+<text class="text" x="59.199999999999996" y="492.79999999999995" fill="#afff00"> lolcat </text>
+<text class="text" x="116.79999999999998" y="492.79999999999995" fill="#afd700">t</text>
+<text class="text" x="123.99999999999999" y="492.79999999999995" fill="#d7d700">ranslation</text>
+<text class="text" x="203.2" y="492.79999999999995" fill="#ffaf00">bugs to </text>
+<text class="text" x="260.79999999999995" y="492.79999999999995" fill="#ff8700">&lt;http://</text>
+<text class="text" x="318.4" y="492.79999999999995" fill="#ff875f">s</text>
+<text class="text" x="325.59999999999997" y="492.79999999999995" fill="#ff5f5f">peaklolcat</text>
+<text class="text" x="397.59999999999997" y="492.79999999999995" fill="#ff5f87">.</text>
+<text class="text" x="404.79999999999995" y="492.79999999999995" fill="#ff0087">com/&gt;</text>
+<text class="text f13" x="16" y="526.3999999999999">❯</text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor" x="30.4" y="486.3999999999999" width="7.199999999999999" height="16.799999999999997" fill="#f8f8f2"/>
+<rect class="cursor" x="30.4" y="526.3999999999999" width="7.199999999999999" height="16.799999999999997" fill="#c9d1d9"/>
 </g>
 
     <animate
       attributeName="visibility"
       values="hidden;visible;visible"
-      keyTimes="0.000000;0.869418;1.000000"
-      dur="7.66s"
+      keyTimes="0.000000;0.869826;1.000000"
+      dur="7.68s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"

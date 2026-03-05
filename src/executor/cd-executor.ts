@@ -280,23 +280,28 @@ export class CDExecutor {
     grid = processInput(grid, content);
 
     // Calculate final cursor position
-    // Always use our tracked cursor position (adjustedCursorX is the position within current line)
-    // Account for visual line wrapping when text exceeds visible columns
     let finalCursorX: number;
     let finalCursorY: number;
 
     if (this.context.autoWidth) {
-      // For auto width, no wrapping - cursor stays on same line
+      // For auto width, no wrapping - use tracked position directly
       finalCursorY = Math.max(0, Math.min(visibleCursorY, maxVisibleRows - 1));
       finalCursorX = adjustedCursorX;
     } else {
-      // For fixed width, calculate how many lines the cursor has wrapped
+      // For fixed width, we need to account for line wrapping
+      // Calculate the visual row by counting wrapped lines in all content up to cursor line,
+      // then add the wrap offset within the current line
+      let visualRow = 0;
+      for (let i = 0; i < visibleCursorY && i < visibleBuffer.length; i++) {
+        const lineLength = this.stripAnsi(visibleBuffer[i]).length;
+        visualRow += Math.max(1, Math.ceil(lineLength / visibleCols));
+      }
+      // Add wrap offset within current line
       const cursorWrapRows = Math.floor(adjustedCursorX / visibleCols);
-      const wrappedCursorX = adjustedCursorX % visibleCols;
-      const wrappedCursorY = visibleCursorY + cursorWrapRows;
+      visualRow += cursorWrapRows;
 
-      finalCursorY = Math.max(0, Math.min(wrappedCursorY, maxVisibleRows - 1));
-      finalCursorX = wrappedCursorX;
+      finalCursorY = Math.max(0, Math.min(visualRow, maxVisibleRows - 1));
+      finalCursorX = adjustedCursorX % visibleCols;
     }
 
     // Coalesce grid to spans
