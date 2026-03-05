@@ -155,7 +155,7 @@ export class CDExecutor {
       typingSpeed: 50,
       title: options.title,
       template: options.template || 'minimal',
-      theme: options.theme || pipelineThemes.dracula,
+      theme: options.theme || pipelineThemes.dark,
       promptPrefix: '\x1b[95m❯\x1b[0m ',
       cursorBlink: true,
 
