@@ -49,160 +49,241 @@
 .b14 { fill: #a4ffff; }
 .b15 { fill: #ffffff; }
 .cursor { animation: blink 1s step-end infinite; }
-.cursor-active { opacity: 1; }
 @keyframes blink {
   0%, 50% { opacity: 1; }
   50.01%, 100% { opacity: 0; }
 }
+.cursor-active { opacity: 1; }
 
 
     /* Animation keyframes */
     
     @keyframes frame-0-anim {
-      0%, 0.7742% { opacity: 1; }
-      0.7743%, 100% { opacity: 0; }
+      0% { opacity: 1; }
+      0.7585% { opacity: 1; }
+      0.7586% { opacity: 0; }
+      100% { opacity: 0; }
     }
     @keyframes frame-1-anim {
-      0%, 0.7741% { opacity: 0; }
-      0.7742%, 1.5191% { opacity: 1; }
-      1.5192%, 100% { opacity: 0; }
+      0% { opacity: 0; }
+      0.7584% { opacity: 0; }
+      0.7585% { opacity: 1; }
+      1.5023% { opacity: 1; }
+      1.5024% { opacity: 0; }
+      100% { opacity: 0; }
     }
     @keyframes frame-2-anim {
-      0%, 1.5190% { opacity: 0; }
-      1.5191%, 2.2787% { opacity: 1; }
-      2.2788%, 100% { opacity: 0; }
+      0% { opacity: 0; }
+      1.5022% { opacity: 0; }
+      1.5023% { opacity: 1; }
+      2.2462% { opacity: 1; }
+      2.2463% { opacity: 0; }
+      100% { opacity: 0; }
     }
     @keyframes frame-3-anim {
-      0%, 2.2786% { opacity: 0; }
-      2.2787%, 3.0237% { opacity: 1; }
-      3.0238%, 100% { opacity: 0; }
+      0% { opacity: 0; }
+      2.2461% { opacity: 0; }
+      2.2462% { opacity: 1; }
+      2.9901% { opacity: 1; }
+      2.9902% { opacity: 0; }
+      100% { opacity: 0; }
     }
     @keyframes frame-4-anim {
-      0%, 3.0236% { opacity: 0; }
-      3.0237%, 3.7686% { opacity: 1; }
-      3.7687%, 100% { opacity: 0; }
+      0% { opacity: 0; }
+      2.9900% { opacity: 0; }
+      2.9901% { opacity: 1; }
+      3.7340% { opacity: 1; }
+      3.7341% { opacity: 0; }
+      100% { opacity: 0; }
     }
     @keyframes frame-5-anim {
-      0%, 3.7685% { opacity: 0; }
-      3.7686%, 4.5136% { opacity: 1; }
-      4.5137%, 100% { opacity: 0; }
+      0% { opacity: 0; }
+      3.7339% { opacity: 0; }
+      3.7340% { opacity: 1; }
+      4.4778% { opacity: 1; }
+      4.4779% { opacity: 0; }
+      100% { opacity: 0; }
     }
     @keyframes frame-6-anim {
-      0%, 4.5135% { opacity: 0; }
-      4.5136%, 5.2732% { opacity: 1; }
-      5.2733%, 100% { opacity: 0; }
+      0% { opacity: 0; }
+      4.4777% { opacity: 0; }
+      4.4778% { opacity: 1; }
+      5.2363% { opacity: 1; }
+      5.2364% { opacity: 0; }
+      100% { opacity: 0; }
     }
     @keyframes frame-7-anim {
-      0%, 5.2731% { opacity: 0; }
-      5.2732%, 6.0181% { opacity: 1; }
-      6.0182%, 100% { opacity: 0; }
+      0% { opacity: 0; }
+      5.2362% { opacity: 0; }
+      5.2363% { opacity: 1; }
+      6.0093% { opacity: 1; }
+      6.0094% { opacity: 0; }
+      100% { opacity: 0; }
     }
     @keyframes frame-8-anim {
-      0%, 6.0180% { opacity: 0; }
-      6.0181%, 6.7777% { opacity: 1; }
-      6.7778%, 100% { opacity: 0; }
+      0% { opacity: 0; }
+      6.0092% { opacity: 0; }
+      6.0093% { opacity: 1; }
+      6.7386% { opacity: 1; }
+      6.7387% { opacity: 0; }
+      100% { opacity: 0; }
     }
     @keyframes frame-9-anim {
-      0%, 6.7776% { opacity: 0; }
-      6.7777%, 7.5372% { opacity: 1; }
-      7.5373%, 100% { opacity: 0; }
+      0% { opacity: 0; }
+      6.7385% { opacity: 0; }
+      6.7386% { opacity: 1; }
+      7.4971% { opacity: 1; }
+      7.4972% { opacity: 0; }
+      100% { opacity: 0; }
     }
     @keyframes frame-10-anim {
-      0%, 7.5371% { opacity: 0; }
-      7.5372%, 8.2822% { opacity: 1; }
-      8.2823%, 100% { opacity: 0; }
+      0% { opacity: 0; }
+      7.4970% { opacity: 0; }
+      7.4971% { opacity: 1; }
+      8.2410% { opacity: 1; }
+      8.2411% { opacity: 0; }
+      100% { opacity: 0; }
     }
     @keyframes frame-11-anim {
-      0%, 8.2821% { opacity: 0; }
-      8.2822%, 9.0418% { opacity: 1; }
-      9.0419%, 100% { opacity: 0; }
+      0% { opacity: 0; }
+      8.2409% { opacity: 0; }
+      8.2410% { opacity: 1; }
+      8.9994% { opacity: 1; }
+      8.9995% { opacity: 0; }
+      100% { opacity: 0; }
     }
     @keyframes frame-12-anim {
-      0%, 9.0417% { opacity: 0; }
-      9.0418%, 9.7867% { opacity: 1; }
-      9.7868%, 100% { opacity: 0; }
+      0% { opacity: 0; }
+      8.9993% { opacity: 0; }
+      8.9994% { opacity: 1; }
+      9.7579% { opacity: 1; }
+      9.7580% { opacity: 0; }
+      100% { opacity: 0; }
     }
     @keyframes frame-13-anim {
-      0%, 9.7866% { opacity: 0; }
-      9.7867%, 10.5317% { opacity: 1; }
-      10.5318%, 100% { opacity: 0; }
+      0% { opacity: 0; }
+      9.7578% { opacity: 0; }
+      9.7579% { opacity: 1; }
+      10.5163% { opacity: 1; }
+      10.5164% { opacity: 0; }
+      100% { opacity: 0; }
     }
     @keyframes frame-14-anim {
-      0%, 10.5316% { opacity: 0; }
-      10.5317%, 11.2913% { opacity: 1; }
-      11.2914%, 100% { opacity: 0; }
+      0% { opacity: 0; }
+      10.5162% { opacity: 0; }
+      10.5163% { opacity: 1; }
+      11.2894% { opacity: 1; }
+      11.2895% { opacity: 0; }
+      100% { opacity: 0; }
     }
     @keyframes frame-15-anim {
-      0%, 11.2912% { opacity: 0; }
-      11.2913%, 12.0362% { opacity: 1; }
-      12.0363%, 100% { opacity: 0; }
+      0% { opacity: 0; }
+      11.2893% { opacity: 0; }
+      11.2894% { opacity: 1; }
+      12.0478% { opacity: 1; }
+      12.0479% { opacity: 0; }
+      100% { opacity: 0; }
     }
     @keyframes frame-16-anim {
-      0%, 12.0361% { opacity: 0; }
-      12.0362%, 12.7812% { opacity: 1; }
-      12.7813%, 100% { opacity: 0; }
+      0% { opacity: 0; }
+      12.0477% { opacity: 0; }
+      12.0478% { opacity: 1; }
+      12.8063% { opacity: 1; }
+      12.8064% { opacity: 0; }
+      100% { opacity: 0; }
     }
     @keyframes frame-17-anim {
-      0%, 12.7811% { opacity: 0; }
-      12.7812%, 13.5261% { opacity: 1; }
-      13.5262%, 100% { opacity: 0; }
+      0% { opacity: 0; }
+      12.8062% { opacity: 0; }
+      12.8063% { opacity: 1; }
+      13.5648% { opacity: 1; }
+      13.5649% { opacity: 0; }
+      100% { opacity: 0; }
     }
     @keyframes frame-18-anim {
-      0%, 13.5260% { opacity: 0; }
-      13.5261%, 14.2711% { opacity: 1; }
-      14.2712%, 100% { opacity: 0; }
+      0% { opacity: 0; }
+      13.5647% { opacity: 0; }
+      13.5648% { opacity: 1; }
+      14.3232% { opacity: 1; }
+      14.3233% { opacity: 0; }
+      100% { opacity: 0; }
     }
     @keyframes frame-19-anim {
-      0%, 14.2710% { opacity: 0; }
-      14.2711%, 15.0307% { opacity: 1; }
-      15.0308%, 100% { opacity: 0; }
+      0% { opacity: 0; }
+      14.3231% { opacity: 0; }
+      14.3232% { opacity: 1; }
+      15.0817% { opacity: 1; }
+      15.0818% { opacity: 0; }
+      100% { opacity: 0; }
     }
     @keyframes frame-20-anim {
-      0%, 15.0306% { opacity: 0; }
-      15.0307%, 15.7756% { opacity: 1; }
-      15.7757%, 100% { opacity: 0; }
+      0% { opacity: 0; }
+      15.0816% { opacity: 0; }
+      15.0817% { opacity: 1; }
+      15.8547% { opacity: 1; }
+      15.8548% { opacity: 0; }
+      100% { opacity: 0; }
     }
     @keyframes frame-21-anim {
-      0%, 15.7755% { opacity: 0; }
-      15.7756%, 16.5206% { opacity: 1; }
-      16.5207%, 100% { opacity: 0; }
+      0% { opacity: 0; }
+      15.8546% { opacity: 0; }
+      15.8547% { opacity: 1; }
+      16.6132% { opacity: 1; }
+      16.6133% { opacity: 0; }
+      100% { opacity: 0; }
     }
     @keyframes frame-22-anim {
-      0%, 16.5205% { opacity: 0; }
-      16.5206%, 23.8533% { opacity: 1; }
-      23.8534%, 100% { opacity: 0; }
+      0% { opacity: 0; }
+      16.6131% { opacity: 0; }
+      16.6132% { opacity: 1; }
+      23.9352% { opacity: 1; }
+      23.9353% { opacity: 0; }
+      100% { opacity: 0; }
     }
     @keyframes frame-23-anim {
-      0%, 23.8532% { opacity: 0; }
-      23.8533%, 25.3433% { opacity: 1; }
-      25.3434%, 100% { opacity: 0; }
+      0% { opacity: 0; }
+      23.9351% { opacity: 0; }
+      23.9352% { opacity: 1; }
+      25.4084% { opacity: 1; }
+      25.4085% { opacity: 0; }
+      100% { opacity: 0; }
     }
     @keyframes frame-24-anim {
-      0%, 25.3432% { opacity: 0; }
-      25.3433%, 26.9208% { opacity: 1; }
-      26.9209%, 100% { opacity: 0; }
+      0% { opacity: 0; }
+      25.4083% { opacity: 0; }
+      25.4084% { opacity: 1; }
+      27.0128% { opacity: 1; }
+      27.0129% { opacity: 0; }
+      100% { opacity: 0; }
     }
     @keyframes frame-25-anim {
-      0%, 26.9207% { opacity: 0; }
-      26.9208%, 99.9854% { opacity: 1; }
-      99.9855%, 100% { opacity: 0; }
+      0% { opacity: 0; }
+      27.0127% { opacity: 0; }
+      27.0128% { opacity: 1; }
+      99.9854% { opacity: 1; }
+      99.9855% { opacity: 0; }
+      100% { opacity: 0; }
     }
     @keyframes frame-26-anim {
-      0%, 99.9853% { opacity: 0; }
-      99.9854%, 100.0000% { opacity: 1; }
-      100.0001%, 100% { opacity: 0; }
+      0% { opacity: 0; }
+      99.9853% { opacity: 0; }
+      99.9854% { opacity: 1; }
+      100.0000% { opacity: 1; }
+      100.0001% { opacity: 0; }
+      100% { opacity: 0; }
     }
     @keyframes frame-27-anim {
-      0%, 99.9999% { opacity: 0; }
-      100.0000%, 100.0000% { opacity: 1; }
-      100.0001%, 100% { opacity: 0; }
+      0% { opacity: 0; }
+      99.9999% { opacity: 0; }
+      100.0000% { opacity: 1; }
+      100% { opacity: 1; }
     }
 
     .frame {
-      animation-duration: 7.85s;
-      animation-timing-function: step-end;
+      animation-duration: 7.86s;
+      animation-timing-function: linear;
       animation-iteration-count: infinite;
-      animation-fill-mode: forwards;
+      animation-fill-mode: both;
     }
 
     
@@ -297,7 +378,7 @@
     <g id="frame-0">
       
 
-<rect class="window-bg" x="0" y="0" width="695" height="290" fill="#282a36" rx="0" ry="0"/>
+<rect class="window-bg" x="0" y="0" width="695" height="290" fill="#282a36" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f13" x="16" y="16">❯</text>
 </g>
@@ -309,7 +390,7 @@
     <g id="frame-1">
       
 
-<rect class="window-bg" x="0" y="0" width="695" height="290" fill="#282a36" rx="0" ry="0"/>
+<rect class="window-bg" x="0" y="0" width="695" height="290" fill="#282a36" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f13" x="16" y="16">❯</text>
 <text class="text fg" x="43.599999999999994" y="16"> e                        </text>
@@ -322,7 +403,7 @@
     <g id="frame-2">
       
 
-<rect class="window-bg" x="0" y="0" width="695" height="290" fill="#282a36" rx="0" ry="0"/>
+<rect class="window-bg" x="0" y="0" width="695" height="290" fill="#282a36" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f13" x="16" y="16">❯</text>
 <text class="text fg" x="43.599999999999994" y="16"> ec                       </text>
@@ -335,7 +416,7 @@
     <g id="frame-3">
       
 
-<rect class="window-bg" x="0" y="0" width="695" height="290" fill="#282a36" rx="0" ry="0"/>
+<rect class="window-bg" x="0" y="0" width="695" height="290" fill="#282a36" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f13" x="16" y="16">❯</text>
 <text class="text fg" x="43.599999999999994" y="16"> ech                      </text>
@@ -348,7 +429,7 @@
     <g id="frame-4">
       
 
-<rect class="window-bg" x="0" y="0" width="695" height="290" fill="#282a36" rx="0" ry="0"/>
+<rect class="window-bg" x="0" y="0" width="695" height="290" fill="#282a36" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f13" x="16" y="16">❯</text>
 <text class="text fg" x="43.599999999999994" y="16"> echo                     </text>
@@ -361,7 +442,7 @@
     <g id="frame-5">
       
 
-<rect class="window-bg" x="0" y="0" width="695" height="290" fill="#282a36" rx="0" ry="0"/>
+<rect class="window-bg" x="0" y="0" width="695" height="290" fill="#282a36" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f13" x="16" y="16">❯</text>
 <text class="text fg" x="43.599999999999994" y="16"> echo                     </text>
@@ -374,7 +455,7 @@
     <g id="frame-6">
       
 
-<rect class="window-bg" x="0" y="0" width="695" height="290" fill="#282a36" rx="0" ry="0"/>
+<rect class="window-bg" x="0" y="0" width="695" height="290" fill="#282a36" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f13" x="16" y="16">❯</text>
 <text class="text fg" x="43.599999999999994" y="16"> echo &apos;                   </text>
@@ -387,7 +468,7 @@
     <g id="frame-7">
       
 
-<rect class="window-bg" x="0" y="0" width="695" height="290" fill="#282a36" rx="0" ry="0"/>
+<rect class="window-bg" x="0" y="0" width="695" height="290" fill="#282a36" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f13" x="16" y="16">❯</text>
 <text class="text fg" x="43.599999999999994" y="16"> echo &apos;W                  </text>
@@ -400,7 +481,7 @@
     <g id="frame-8">
       
 
-<rect class="window-bg" x="0" y="0" width="695" height="290" fill="#282a36" rx="0" ry="0"/>
+<rect class="window-bg" x="0" y="0" width="695" height="290" fill="#282a36" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f13" x="16" y="16">❯</text>
 <text class="text fg" x="43.599999999999994" y="16"> echo &apos;We                 </text>
@@ -413,7 +494,7 @@
     <g id="frame-9">
       
 
-<rect class="window-bg" x="0" y="0" width="695" height="290" fill="#282a36" rx="0" ry="0"/>
+<rect class="window-bg" x="0" y="0" width="695" height="290" fill="#282a36" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f13" x="16" y="16">❯</text>
 <text class="text fg" x="43.599999999999994" y="16"> echo &apos;Wel                </text>
@@ -426,7 +507,7 @@
     <g id="frame-10">
       
 
-<rect class="window-bg" x="0" y="0" width="695" height="290" fill="#282a36" rx="0" ry="0"/>
+<rect class="window-bg" x="0" y="0" width="695" height="290" fill="#282a36" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f13" x="16" y="16">❯</text>
 <text class="text fg" x="43.599999999999994" y="16"> echo &apos;Welc               </text>
@@ -439,7 +520,7 @@
     <g id="frame-11">
       
 
-<rect class="window-bg" x="0" y="0" width="695" height="290" fill="#282a36" rx="0" ry="0"/>
+<rect class="window-bg" x="0" y="0" width="695" height="290" fill="#282a36" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f13" x="16" y="16">❯</text>
 <text class="text fg" x="43.599999999999994" y="16"> echo &apos;Welco              </text>
@@ -452,7 +533,7 @@
     <g id="frame-12">
       
 
-<rect class="window-bg" x="0" y="0" width="695" height="290" fill="#282a36" rx="0" ry="0"/>
+<rect class="window-bg" x="0" y="0" width="695" height="290" fill="#282a36" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f13" x="16" y="16">❯</text>
 <text class="text fg" x="43.599999999999994" y="16"> echo &apos;Welcom             </text>
@@ -465,7 +546,7 @@
     <g id="frame-13">
       
 
-<rect class="window-bg" x="0" y="0" width="695" height="290" fill="#282a36" rx="0" ry="0"/>
+<rect class="window-bg" x="0" y="0" width="695" height="290" fill="#282a36" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f13" x="16" y="16">❯</text>
 <text class="text fg" x="43.599999999999994" y="16"> echo &apos;Welcome            </text>
@@ -478,7 +559,7 @@
     <g id="frame-14">
       
 
-<rect class="window-bg" x="0" y="0" width="695" height="290" fill="#282a36" rx="0" ry="0"/>
+<rect class="window-bg" x="0" y="0" width="695" height="290" fill="#282a36" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f13" x="16" y="16">❯</text>
 <text class="text fg" x="43.599999999999994" y="16"> echo &apos;Welcome            </text>
@@ -491,7 +572,7 @@
     <g id="frame-15">
       
 
-<rect class="window-bg" x="0" y="0" width="695" height="290" fill="#282a36" rx="0" ry="0"/>
+<rect class="window-bg" x="0" y="0" width="695" height="290" fill="#282a36" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f13" x="16" y="16">❯</text>
 <text class="text fg" x="43.599999999999994" y="16"> echo &apos;Welcome t          </text>
@@ -504,7 +585,7 @@
     <g id="frame-16">
       
 
-<rect class="window-bg" x="0" y="0" width="695" height="290" fill="#282a36" rx="0" ry="0"/>
+<rect class="window-bg" x="0" y="0" width="695" height="290" fill="#282a36" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f13" x="16" y="16">❯</text>
 <text class="text fg" x="43.599999999999994" y="16"> echo &apos;Welcome to         </text>
@@ -517,7 +598,7 @@
     <g id="frame-17">
       
 
-<rect class="window-bg" x="0" y="0" width="695" height="290" fill="#282a36" rx="0" ry="0"/>
+<rect class="window-bg" x="0" y="0" width="695" height="290" fill="#282a36" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f13" x="16" y="16">❯</text>
 <text class="text fg" x="43.599999999999994" y="16"> echo &apos;Welcome to         </text>
@@ -530,7 +611,7 @@
     <g id="frame-18">
       
 
-<rect class="window-bg" x="0" y="0" width="695" height="290" fill="#282a36" rx="0" ry="0"/>
+<rect class="window-bg" x="0" y="0" width="695" height="290" fill="#282a36" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f13" x="16" y="16">❯</text>
 <text class="text fg" x="43.599999999999994" y="16"> echo &apos;Welcome to V       </text>
@@ -543,7 +624,7 @@
     <g id="frame-19">
       
 
-<rect class="window-bg" x="0" y="0" width="695" height="290" fill="#282a36" rx="0" ry="0"/>
+<rect class="window-bg" x="0" y="0" width="695" height="290" fill="#282a36" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f13" x="16" y="16">❯</text>
 <text class="text fg" x="43.599999999999994" y="16"> echo &apos;Welcome to VH      </text>
@@ -556,7 +637,7 @@
     <g id="frame-20">
       
 
-<rect class="window-bg" x="0" y="0" width="695" height="290" fill="#282a36" rx="0" ry="0"/>
+<rect class="window-bg" x="0" y="0" width="695" height="290" fill="#282a36" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f13" x="16" y="16">❯</text>
 <text class="text fg" x="43.599999999999994" y="16"> echo &apos;Welcome to VHS     </text>
@@ -569,7 +650,7 @@
     <g id="frame-21">
       
 
-<rect class="window-bg" x="0" y="0" width="695" height="290" fill="#282a36" rx="0" ry="0"/>
+<rect class="window-bg" x="0" y="0" width="695" height="290" fill="#282a36" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f13" x="16" y="16">❯</text>
 <text class="text fg" x="43.599999999999994" y="16"> echo &apos;Welcome to VHS!    </text>
@@ -582,7 +663,7 @@
     <g id="frame-22">
       
 
-<rect class="window-bg" x="0" y="0" width="695" height="290" fill="#282a36" rx="0" ry="0"/>
+<rect class="window-bg" x="0" y="0" width="695" height="290" fill="#282a36" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f13" x="16" y="16">❯</text>
 <text class="text fg" x="43.599999999999994" y="16"> echo &apos;Welcome to VHS!&apos;   </text>
@@ -595,7 +676,7 @@
     <g id="frame-23">
       
 
-<rect class="window-bg" x="0" y="0" width="695" height="290" fill="#282a36" rx="0" ry="0"/>
+<rect class="window-bg" x="0" y="0" width="695" height="290" fill="#282a36" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f13" x="16" y="16">❯</text>
 <text class="text fg" x="43.599999999999994" y="16"> echo &apos;Welcome to VHS!&apos;   </text>
@@ -608,7 +689,7 @@
     <g id="frame-24">
       
 
-<rect class="window-bg" x="0" y="0" width="695" height="290" fill="#282a36" rx="0" ry="0"/>
+<rect class="window-bg" x="0" y="0" width="695" height="290" fill="#282a36" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f13" x="16" y="16">❯</text>
 <text class="text fg" x="43.599999999999994" y="16"> echo &apos;Welcome to VHS!&apos;   </text>
@@ -618,7 +699,7 @@
     <g id="frame-25">
       
 
-<rect class="window-bg" x="0" y="0" width="695" height="290" fill="#282a36" rx="0" ry="0"/>
+<rect class="window-bg" x="0" y="0" width="695" height="290" fill="#282a36" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f13" x="16" y="16">❯</text>
 <text class="text fg" x="43.599999999999994" y="16"> echo &apos;Welcome to VHS!&apos;   </text>
@@ -633,7 +714,7 @@
     <g id="frame-26">
       
 
-<rect class="window-bg" x="0" y="0" width="695" height="290" fill="#282a36" rx="0" ry="0"/>
+<rect class="window-bg" x="0" y="0" width="695" height="290" fill="#282a36" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f13" x="16" y="16">❯</text>
 <text class="text fg" x="43.599999999999994" y="16"> echo &apos;Welcome to VHS!&apos;   </text>
@@ -648,7 +729,7 @@
     <g id="frame-27">
       
 
-<rect class="window-bg" x="0" y="0" width="695" height="290" fill="#282a36" rx="0" ry="0"/>
+<rect class="window-bg" x="0" y="0" width="695" height="290" fill="#282a36" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f13" x="16" y="16">❯</text>
 <text class="text fg" x="43.599999999999994" y="16"> echo &apos;Welcome to VHS!&apos;   </text>

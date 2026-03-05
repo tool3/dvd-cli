@@ -234,7 +234,7 @@ export function emit(
   const lineHeight = options.lineHeight ?? fontSize * 1.4;
   const charWidth = options.charWidth ?? fontSize * 0.6;
   const padding = options.padding ?? 16;
-  const borderRadius = options.borderRadius ?? (template === 'minimal' ? 0 : 8);
+  const borderRadius = options.borderRadius ?? 8;
   const borderWidth = options.borderWidth ?? 0;
   const borderColor = options.borderColor ?? theme.foreground;
 

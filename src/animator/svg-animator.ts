@@ -56,10 +56,9 @@ function getSVGDimensions(svg: string): { width: number; height: number } {
 /**
  * Create CSS keyframes for animation
  *
- * Strategy: Use step-start timing with clean transitions.
- * - Each frame is visible from its start time until the next frame's start time
- * - No gaps or overlaps in the percentage values
- * - Uses step-start timing so transitions happen instantly at the keyframe point
+ * Strategy: Each frame has opacity 0 by default, becomes visible at its start time,
+ * and becomes hidden when the next frame starts.
+ * Uses linear timing with instant opacity changes (0 to 1 or 1 to 0).
  */
 function createKeyframes(frames: TerminalFrame[]): string {
   if (frames.length === 0) return '';
@@ -69,7 +68,7 @@ function createKeyframes(frames: TerminalFrame[]): string {
 
   const css: string[] = [];
 
-  // Calculate frame start percentages with high precision
+  // Calculate frame start percentages
   const framePercents = frames.map(f => (f.timestamp / totalDuration) * 100);
 
   for (let i = 0; i < frames.length; i++) {
@@ -77,26 +76,33 @@ function createKeyframes(frames: TerminalFrame[]): string {
     const endPercent = i < frames.length - 1 ? framePercents[i + 1] : 100;
 
     if (i === 0) {
-      // First frame: visible from 0%, becomes hidden when next frame starts
+      // First frame: visible from start until next frame begins
       css.push(`
     @keyframes frame-${i}-anim {
-      0%, ${endPercent.toFixed(6)}% { opacity: 1; }
-      ${endPercent.toFixed(6)}% { opacity: 0; }
+      0% { opacity: 1; }
+      ${endPercent.toFixed(4)}% { opacity: 1; }
+      ${(endPercent + 0.0001).toFixed(4)}% { opacity: 0; }
+      100% { opacity: 0; }
     }`);
     } else if (i === frames.length - 1) {
-      // Last frame: hidden until start, then visible through end
+      // Last frame: hidden until start, then visible to end
       css.push(`
     @keyframes frame-${i}-anim {
-      0%, ${startPercent.toFixed(6)}% { opacity: 0; }
-      ${startPercent.toFixed(6)}% { opacity: 1; }
+      0% { opacity: 0; }
+      ${(startPercent - 0.0001).toFixed(4)}% { opacity: 0; }
+      ${startPercent.toFixed(4)}% { opacity: 1; }
+      100% { opacity: 1; }
     }`);
     } else {
-      // Middle frames: hidden, then visible, then hidden
+      // Middle frames: hidden, visible during their window, then hidden
       css.push(`
     @keyframes frame-${i}-anim {
-      0%, ${startPercent.toFixed(6)}% { opacity: 0; }
-      ${startPercent.toFixed(6)}%, ${endPercent.toFixed(6)}% { opacity: 1; }
-      ${endPercent.toFixed(6)}% { opacity: 0; }
+      0% { opacity: 0; }
+      ${(startPercent - 0.0001).toFixed(4)}% { opacity: 0; }
+      ${startPercent.toFixed(4)}% { opacity: 1; }
+      ${endPercent.toFixed(4)}% { opacity: 1; }
+      ${(endPercent + 0.0001).toFixed(4)}% { opacity: 0; }
+      100% { opacity: 0; }
     }`);
     }
   }
@@ -147,7 +153,7 @@ export async function createAnimatedSVG(
 
     .frame {
       animation-duration: ${animationDuration}s;
-      animation-timing-function: step-start;
+      animation-timing-function: linear;
       animation-iteration-count: ${animationIterationCount};
       animation-fill-mode: both;
     }

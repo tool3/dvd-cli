@@ -59,407 +59,645 @@
     /* Animation keyframes */
     
     @keyframes frame-0-anim {
-      0%, 0.714191% { opacity: 1; }
-      0.714191% { opacity: 0; }
+      0% { opacity: 1; }
+      0.7180% { opacity: 1; }
+      0.7181% { opacity: 0; }
+      100% { opacity: 0; }
     }
     @keyframes frame-1-anim {
-      0%, 0.714191% { opacity: 0; }
-      0.714191%, 1.415157% { opacity: 1; }
-      1.415157% { opacity: 0; }
+      0% { opacity: 0; }
+      0.7179% { opacity: 0; }
+      0.7180% { opacity: 1; }
+      1.4227% { opacity: 1; }
+      1.4228% { opacity: 0; }
+      100% { opacity: 0; }
     }
     @keyframes frame-2-anim {
-      0%, 1.415157% { opacity: 0; }
-      1.415157%, 2.102896% { opacity: 1; }
-      2.102896% { opacity: 0; }
+      0% { opacity: 0; }
+      1.4226% { opacity: 0; }
+      1.4227% { opacity: 1; }
+      2.1141% { opacity: 1; }
+      2.1142% { opacity: 0; }
+      100% { opacity: 0; }
     }
     @keyframes frame-3-anim {
-      0%, 2.102896% { opacity: 0; }
-      2.102896%, 2.790636% { opacity: 1; }
-      2.790636% { opacity: 0; }
+      0% { opacity: 0; }
+      2.1140% { opacity: 0; }
+      2.1141% { opacity: 1; }
+      2.8055% { opacity: 1; }
+      2.8056% { opacity: 0; }
+      100% { opacity: 0; }
     }
     @keyframes frame-4-anim {
-      0%, 2.790636% { opacity: 0; }
-      2.790636%, 3.478376% { opacity: 1; }
-      3.478376% { opacity: 0; }
+      0% { opacity: 0; }
+      2.8054% { opacity: 0; }
+      2.8055% { opacity: 1; }
+      3.4969% { opacity: 1; }
+      3.4970% { opacity: 0; }
+      100% { opacity: 0; }
     }
     @keyframes frame-5-anim {
-      0%, 3.478376% { opacity: 0; }
-      3.478376%, 4.166116% { opacity: 1; }
-      4.166116% { opacity: 0; }
+      0% { opacity: 0; }
+      3.4968% { opacity: 0; }
+      3.4969% { opacity: 1; }
+      4.1883% { opacity: 1; }
+      4.1884% { opacity: 0; }
+      100% { opacity: 0; }
     }
     @keyframes frame-6-anim {
-      0%, 4.166116% { opacity: 0; }
-      4.166116%, 4.853855% { opacity: 1; }
-      4.853855% { opacity: 0; }
+      0% { opacity: 0; }
+      4.1882% { opacity: 0; }
+      4.1883% { opacity: 1; }
+      4.8664% { opacity: 1; }
+      4.8665% { opacity: 0; }
+      100% { opacity: 0; }
     }
     @keyframes frame-7-anim {
-      0%, 4.853855% { opacity: 0; }
-      4.853855%, 5.568047% { opacity: 1; }
-      5.568047% { opacity: 0; }
+      0% { opacity: 0; }
+      4.8663% { opacity: 0; }
+      4.8664% { opacity: 1; }
+      5.5578% { opacity: 1; }
+      5.5579% { opacity: 0; }
+      100% { opacity: 0; }
     }
     @keyframes frame-8-anim {
-      0%, 5.568047% { opacity: 0; }
-      5.568047%, 6.269012% { opacity: 1; }
-      6.269012% { opacity: 0; }
+      0% { opacity: 0; }
+      5.5577% { opacity: 0; }
+      5.5578% { opacity: 1; }
+      6.2492% { opacity: 1; }
+      6.2493% { opacity: 0; }
+      100% { opacity: 0; }
     }
     @keyframes frame-9-anim {
-      0%, 6.269012% { opacity: 0; }
-      6.269012%, 7.009655% { opacity: 1; }
-      7.009655% { opacity: 0; }
+      0% { opacity: 0; }
+      6.2491% { opacity: 0; }
+      6.2492% { opacity: 1; }
+      6.9406% { opacity: 1; }
+      6.9407% { opacity: 0; }
+      100% { opacity: 0; }
     }
     @keyframes frame-10-anim {
-      0%, 7.009655% { opacity: 0; }
-      7.009655%, 7.750298% { opacity: 1; }
-      7.750298% { opacity: 0; }
+      0% { opacity: 0; }
+      6.9405% { opacity: 0; }
+      6.9406% { opacity: 1; }
+      7.6453% { opacity: 1; }
+      7.6454% { opacity: 0; }
+      100% { opacity: 0; }
     }
     @keyframes frame-11-anim {
-      0%, 7.750298% { opacity: 0; }
-      7.750298%, 8.490940% { opacity: 1; }
-      8.490940% { opacity: 0; }
+      0% { opacity: 0; }
+      7.6452% { opacity: 0; }
+      7.6453% { opacity: 1; }
+      8.3367% { opacity: 1; }
+      8.3368% { opacity: 0; }
+      100% { opacity: 0; }
     }
     @keyframes frame-12-anim {
-      0%, 8.490940% { opacity: 0; }
-      8.490940%, 9.205132% { opacity: 1; }
-      9.205132% { opacity: 0; }
+      0% { opacity: 0; }
+      8.3366% { opacity: 0; }
+      8.3367% { opacity: 1; }
+      9.0148% { opacity: 1; }
+      9.0149% { opacity: 0; }
+      100% { opacity: 0; }
     }
     @keyframes frame-13-anim {
-      0%, 9.205132% { opacity: 0; }
-      9.205132%, 9.906097% { opacity: 1; }
-      9.906097% { opacity: 0; }
+      0% { opacity: 0; }
+      9.0147% { opacity: 0; }
+      9.0148% { opacity: 1; }
+      9.7062% { opacity: 1; }
+      9.7063% { opacity: 0; }
+      100% { opacity: 0; }
     }
     @keyframes frame-14-anim {
-      0%, 9.906097% { opacity: 0; }
-      9.906097%, 10.633514% { opacity: 1; }
-      10.633514% { opacity: 0; }
+      0% { opacity: 0; }
+      9.7061% { opacity: 0; }
+      9.7062% { opacity: 1; }
+      10.4108% { opacity: 1; }
+      10.4109% { opacity: 0; }
+      100% { opacity: 0; }
     }
     @keyframes frame-15-anim {
-      0%, 10.633514% { opacity: 0; }
-      10.633514%, 11.347705% { opacity: 1; }
-      11.347705% { opacity: 0; }
+      0% { opacity: 0; }
+      10.4107% { opacity: 0; }
+      10.4108% { opacity: 1; }
+      11.0890% { opacity: 1; }
+      11.0891% { opacity: 0; }
+      100% { opacity: 0; }
     }
     @keyframes frame-16-anim {
-      0%, 11.347705% { opacity: 0; }
-      11.347705%, 12.061897% { opacity: 1; }
-      12.061897% { opacity: 0; }
+      0% { opacity: 0; }
+      11.0889% { opacity: 0; }
+      11.0890% { opacity: 1; }
+      11.7936% { opacity: 1; }
+      11.7937% { opacity: 0; }
+      100% { opacity: 0; }
     }
     @keyframes frame-17-anim {
-      0%, 12.061897% { opacity: 0; }
-      12.061897%, 12.762862% { opacity: 1; }
-      12.762862% { opacity: 0; }
+      0% { opacity: 0; }
+      11.7935% { opacity: 0; }
+      11.7936% { opacity: 1; }
+      12.4850% { opacity: 1; }
+      12.4851% { opacity: 0; }
+      100% { opacity: 0; }
     }
     @keyframes frame-18-anim {
-      0%, 12.762862% { opacity: 0; }
-      12.762862%, 13.463828% { opacity: 1; }
-      13.463828% { opacity: 0; }
+      0% { opacity: 0; }
+      12.4849% { opacity: 0; }
+      12.4850% { opacity: 1; }
+      13.1897% { opacity: 1; }
+      13.1898% { opacity: 0; }
+      100% { opacity: 0; }
     }
     @keyframes frame-19-anim {
-      0%, 13.463828% { opacity: 0; }
-      13.463828%, 14.178019% { opacity: 1; }
-      14.178019% { opacity: 0; }
+      0% { opacity: 0; }
+      13.1896% { opacity: 0; }
+      13.1897% { opacity: 1; }
+      13.8944% { opacity: 1; }
+      13.8945% { opacity: 0; }
+      100% { opacity: 0; }
     }
     @keyframes frame-20-anim {
-      0%, 14.178019% { opacity: 0; }
-      14.178019%, 14.945113% { opacity: 1; }
-      14.945113% { opacity: 0; }
+      0% { opacity: 0; }
+      13.8943% { opacity: 0; }
+      13.8944% { opacity: 1; }
+      14.6124% { opacity: 1; }
+      14.6125% { opacity: 0; }
+      100% { opacity: 0; }
     }
     @keyframes frame-21-anim {
-      0%, 14.945113% { opacity: 0; }
-      14.945113%, 15.659304% { opacity: 1; }
-      15.659304% { opacity: 0; }
+      0% { opacity: 0; }
+      14.6123% { opacity: 0; }
+      14.6124% { opacity: 1; }
+      15.3171% { opacity: 1; }
+      15.3172% { opacity: 0; }
+      100% { opacity: 0; }
     }
     @keyframes frame-22-anim {
-      0%, 15.659304% { opacity: 0; }
-      15.659304%, 16.399947% { opacity: 1; }
-      16.399947% { opacity: 0; }
+      0% { opacity: 0; }
+      15.3170% { opacity: 0; }
+      15.3171% { opacity: 1; }
+      16.0218% { opacity: 1; }
+      16.0219% { opacity: 0; }
+      100% { opacity: 0; }
     }
     @keyframes frame-23-anim {
-      0%, 16.399947% { opacity: 0; }
-      16.399947%, 21.743156% { opacity: 1; }
-      21.743156% { opacity: 0; }
+      0% { opacity: 0; }
+      16.0217% { opacity: 0; }
+      16.0218% { opacity: 1; }
+      21.3934% { opacity: 1; }
+      21.3935% { opacity: 0; }
+      100% { opacity: 0; }
     }
     @keyframes frame-24-anim {
-      0%, 21.743156% { opacity: 0; }
-      21.743156%, 23.118635% { opacity: 1; }
-      23.118635% { opacity: 0; }
+      0% { opacity: 0; }
+      21.3933% { opacity: 0; }
+      21.3934% { opacity: 1; }
+      22.7629% { opacity: 1; }
+      22.7630% { opacity: 0; }
+      100% { opacity: 0; }
     }
     @keyframes frame-25-anim {
-      0%, 23.118635% { opacity: 0; }
-      23.118635%, 24.639598% { opacity: 1; }
-      24.639598% { opacity: 0; }
+      0% { opacity: 0; }
+      22.7628% { opacity: 0; }
+      22.7629% { opacity: 1; }
+      24.2388% { opacity: 1; }
+      24.2389% { opacity: 0; }
+      100% { opacity: 0; }
     }
     @keyframes frame-26-anim {
-      0%, 24.639598% { opacity: 0; }
-      24.639598%, 31.292157% { opacity: 1; }
-      31.292157% { opacity: 0; }
+      0% { opacity: 0; }
+      24.2387% { opacity: 0; }
+      24.2388% { opacity: 1; }
+      30.9134% { opacity: 1; }
+      30.9135% { opacity: 0; }
+      100% { opacity: 0; }
     }
     @keyframes frame-27-anim {
-      0%, 31.292157% { opacity: 0; }
-      31.292157%, 31.993123% { opacity: 1; }
-      31.993123% { opacity: 0; }
+      0% { opacity: 0; }
+      30.9133% { opacity: 0; }
+      30.9134% { opacity: 1; }
+      31.6181% { opacity: 1; }
+      31.6182% { opacity: 0; }
+      100% { opacity: 0; }
     }
     @keyframes frame-28-anim {
-      0%, 31.993123% { opacity: 0; }
-      31.993123%, 32.680862% { opacity: 1; }
-      32.680862% { opacity: 0; }
+      0% { opacity: 0; }
+      31.6180% { opacity: 0; }
+      31.6181% { opacity: 1; }
+      32.3228% { opacity: 1; }
+      32.3229% { opacity: 0; }
+      100% { opacity: 0; }
     }
     @keyframes frame-29-anim {
-      0%, 32.680862% { opacity: 0; }
-      32.680862%, 33.368602% { opacity: 1; }
-      33.368602% { opacity: 0; }
+      0% { opacity: 0; }
+      32.3227% { opacity: 0; }
+      32.3228% { opacity: 1; }
+      33.0275% { opacity: 1; }
+      33.0276% { opacity: 0; }
+      100% { opacity: 0; }
     }
     @keyframes frame-30-anim {
-      0%, 33.368602% { opacity: 0; }
-      33.368602%, 34.069568% { opacity: 1; }
-      34.069568% { opacity: 0; }
+      0% { opacity: 0; }
+      33.0274% { opacity: 0; }
+      33.0275% { opacity: 1; }
+      33.7455% { opacity: 1; }
+      33.7456% { opacity: 0; }
+      100% { opacity: 0; }
     }
     @keyframes frame-31-anim {
-      0%, 34.069568% { opacity: 0; }
-      34.069568%, 34.744081% { opacity: 1; }
-      34.744081% { opacity: 0; }
+      0% { opacity: 0; }
+      33.7454% { opacity: 0; }
+      33.7455% { opacity: 1; }
+      34.4369% { opacity: 1; }
+      34.4370% { opacity: 0; }
+      100% { opacity: 0; }
     }
     @keyframes frame-32-anim {
-      0%, 34.744081% { opacity: 0; }
-      34.744081%, 35.445047% { opacity: 1; }
-      35.445047% { opacity: 0; }
+      0% { opacity: 0; }
+      34.4368% { opacity: 0; }
+      34.4369% { opacity: 1; }
+      35.1682% { opacity: 1; }
+      35.1683% { opacity: 0; }
+      100% { opacity: 0; }
     }
     @keyframes frame-33-anim {
-      0%, 35.445047% { opacity: 0; }
-      35.445047%, 36.146012% { opacity: 1; }
-      36.146012% { opacity: 0; }
+      0% { opacity: 0; }
+      35.1681% { opacity: 0; }
+      35.1682% { opacity: 1; }
+      35.8729% { opacity: 1; }
+      35.8730% { opacity: 0; }
+      100% { opacity: 0; }
     }
     @keyframes frame-34-anim {
-      0%, 36.146012% { opacity: 0; }
-      36.146012%, 36.833752% { opacity: 1; }
-      36.833752% { opacity: 0; }
+      0% { opacity: 0; }
+      35.8728% { opacity: 0; }
+      35.8729% { opacity: 1; }
+      36.5909% { opacity: 1; }
+      36.5910% { opacity: 0; }
+      100% { opacity: 0; }
     }
     @keyframes frame-35-anim {
-      0%, 36.833752% { opacity: 0; }
-      36.833752%, 37.521492% { opacity: 1; }
-      37.521492% { opacity: 0; }
+      0% { opacity: 0; }
+      36.5908% { opacity: 0; }
+      36.5909% { opacity: 1; }
+      37.2956% { opacity: 1; }
+      37.2957% { opacity: 0; }
+      100% { opacity: 0; }
     }
     @keyframes frame-36-anim {
-      0%, 37.521492% { opacity: 0; }
-      37.521492%, 38.209232% { opacity: 1; }
-      38.209232% { opacity: 0; }
+      0% { opacity: 0; }
+      37.2955% { opacity: 0; }
+      37.2956% { opacity: 1; }
+      38.0269% { opacity: 1; }
+      38.0270% { opacity: 0; }
+      100% { opacity: 0; }
     }
     @keyframes frame-37-anim {
-      0%, 38.209232% { opacity: 0; }
-      38.209232%, 38.910197% { opacity: 1; }
-      38.910197% { opacity: 0; }
+      0% { opacity: 0; }
+      38.0268% { opacity: 0; }
+      38.0269% { opacity: 1; }
+      38.7448% { opacity: 1; }
+      38.7449% { opacity: 0; }
+      100% { opacity: 0; }
     }
     @keyframes frame-38-anim {
-      0%, 38.910197% { opacity: 0; }
-      38.910197%, 39.611163% { opacity: 1; }
-      39.611163% { opacity: 0; }
+      0% { opacity: 0; }
+      38.7447% { opacity: 0; }
+      38.7448% { opacity: 1; }
+      39.4761% { opacity: 1; }
+      39.4762% { opacity: 0; }
+      100% { opacity: 0; }
     }
     @keyframes frame-39-anim {
-      0%, 39.611163% { opacity: 0; }
-      39.611163%, 40.312128% { opacity: 1; }
-      40.312128% { opacity: 0; }
+      0% { opacity: 0; }
+      39.4760% { opacity: 0; }
+      39.4761% { opacity: 1; }
+      40.1941% { opacity: 1; }
+      40.1942% { opacity: 0; }
+      100% { opacity: 0; }
     }
     @keyframes frame-40-anim {
-      0%, 40.312128% { opacity: 0; }
-      40.312128%, 41.013094% { opacity: 1; }
-      41.013094% { opacity: 0; }
+      0% { opacity: 0; }
+      40.1940% { opacity: 0; }
+      40.1941% { opacity: 1; }
+      40.9520% { opacity: 1; }
+      40.9521% { opacity: 0; }
+      100% { opacity: 0; }
     }
     @keyframes frame-41-anim {
-      0%, 41.013094% { opacity: 0; }
-      41.013094%, 41.727285% { opacity: 1; }
-      41.727285% { opacity: 0; }
+      0% { opacity: 0; }
+      40.9519% { opacity: 0; }
+      40.9520% { opacity: 1; }
+      41.6966% { opacity: 1; }
+      41.6967% { opacity: 0; }
+      100% { opacity: 0; }
     }
     @keyframes frame-42-anim {
-      0%, 41.727285% { opacity: 0; }
-      41.727285%, 42.428250% { opacity: 1; }
-      42.428250% { opacity: 0; }
+      0% { opacity: 0; }
+      41.6965% { opacity: 0; }
+      41.6966% { opacity: 1; }
+      42.4146% { opacity: 1; }
+      42.4147% { opacity: 0; }
+      100% { opacity: 0; }
     }
     @keyframes frame-43-anim {
-      0%, 42.428250% { opacity: 0; }
-      42.428250%, 43.129216% { opacity: 1; }
-      43.129216% { opacity: 0; }
+      0% { opacity: 0; }
+      42.4145% { opacity: 0; }
+      42.4146% { opacity: 1; }
+      43.1193% { opacity: 1; }
+      43.1194% { opacity: 0; }
+      100% { opacity: 0; }
     }
     @keyframes frame-44-anim {
-      0%, 43.129216% { opacity: 0; }
-      43.129216%, 43.843407% { opacity: 1; }
-      43.843407% { opacity: 0; }
+      0% { opacity: 0; }
+      43.1192% { opacity: 0; }
+      43.1193% { opacity: 1; }
+      43.8506% { opacity: 1; }
+      43.8507% { opacity: 0; }
+      100% { opacity: 0; }
     }
     @keyframes frame-45-anim {
-      0%, 43.843407% { opacity: 0; }
-      43.843407%, 44.557598% { opacity: 1; }
-      44.557598% { opacity: 0; }
+      0% { opacity: 0; }
+      43.8505% { opacity: 0; }
+      43.8506% { opacity: 1; }
+      44.5552% { opacity: 1; }
+      44.5553% { opacity: 0; }
+      100% { opacity: 0; }
     }
     @keyframes frame-46-anim {
-      0%, 44.557598% { opacity: 0; }
-      44.557598%, 45.245338% { opacity: 1; }
-      45.245338% { opacity: 0; }
+      0% { opacity: 0; }
+      44.5551% { opacity: 0; }
+      44.5552% { opacity: 1; }
+      45.2732% { opacity: 1; }
+      45.2733% { opacity: 0; }
+      100% { opacity: 0; }
     }
     @keyframes frame-47-anim {
-      0%, 45.245338% { opacity: 0; }
-      45.245338%, 46.012432% { opacity: 1; }
-      46.012432% { opacity: 0; }
+      0% { opacity: 0; }
+      45.2731% { opacity: 0; }
+      45.2732% { opacity: 1; }
+      45.9646% { opacity: 1; }
+      45.9647% { opacity: 0; }
+      100% { opacity: 0; }
     }
     @keyframes frame-48-anim {
-      0%, 46.012432% { opacity: 0; }
-      46.012432%, 46.753075% { opacity: 1; }
-      46.753075% { opacity: 0; }
+      0% { opacity: 0; }
+      45.9645% { opacity: 0; }
+      45.9646% { opacity: 1; }
+      46.6959% { opacity: 1; }
+      46.6960% { opacity: 0; }
+      100% { opacity: 0; }
     }
     @keyframes frame-49-anim {
-      0%, 46.753075% { opacity: 0; }
-      46.753075%, 47.506944% { opacity: 1; }
-      47.506944% { opacity: 0; }
+      0% { opacity: 0; }
+      46.6958% { opacity: 0; }
+      46.6959% { opacity: 1; }
+      47.4139% { opacity: 1; }
+      47.4140% { opacity: 0; }
+      100% { opacity: 0; }
     }
     @keyframes frame-50-anim {
-      0%, 47.506944% { opacity: 0; }
-      47.506944%, 48.274038% { opacity: 1; }
-      48.274038% { opacity: 0; }
+      0% { opacity: 0; }
+      47.4138% { opacity: 0; }
+      47.4139% { opacity: 1; }
+      48.1452% { opacity: 1; }
+      48.1453% { opacity: 0; }
+      100% { opacity: 0; }
     }
     @keyframes frame-51-anim {
-      0%, 48.274038% { opacity: 0; }
-      48.274038%, 49.067584% { opacity: 1; }
-      49.067584% { opacity: 0; }
+      0% { opacity: 0; }
+      48.1451% { opacity: 0; }
+      48.1452% { opacity: 1; }
+      48.8765% { opacity: 1; }
+      48.8766% { opacity: 0; }
+      100% { opacity: 0; }
     }
     @keyframes frame-52-anim {
-      0%, 49.067584% { opacity: 0; }
-      49.067584%, 49.847904% { opacity: 1; }
-      49.847904% { opacity: 0; }
+      0% { opacity: 0; }
+      48.8764% { opacity: 0; }
+      48.8765% { opacity: 1; }
+      49.5945% { opacity: 1; }
+      49.5946% { opacity: 0; }
+      100% { opacity: 0; }
     }
     @keyframes frame-53-anim {
-      0%, 49.847904% { opacity: 0; }
-      49.847904%, 50.588546% { opacity: 1; }
-      50.588546% { opacity: 0; }
+      0% { opacity: 0; }
+      49.5944% { opacity: 0; }
+      49.5945% { opacity: 1; }
+      50.3125% { opacity: 1; }
+      50.3126% { opacity: 0; }
+      100% { opacity: 0; }
     }
     @keyframes frame-54-anim {
-      0%, 50.588546% { opacity: 0; }
-      50.588546%, 51.355641% { opacity: 1; }
-      51.355641% { opacity: 0; }
+      0% { opacity: 0; }
+      50.3124% { opacity: 0; }
+      50.3125% { opacity: 1; }
+      51.0304% { opacity: 1; }
+      51.0305% { opacity: 0; }
+      100% { opacity: 0; }
     }
     @keyframes frame-55-anim {
-      0%, 51.355641% { opacity: 0; }
-      51.355641%, 52.109509% { opacity: 1; }
-      52.109509% { opacity: 0; }
+      0% { opacity: 0; }
+      51.0303% { opacity: 0; }
+      51.0304% { opacity: 1; }
+      51.7750% { opacity: 1; }
+      51.7751% { opacity: 0; }
+      100% { opacity: 0; }
     }
     @keyframes frame-56-anim {
-      0%, 52.109509% { opacity: 0; }
-      52.109509%, 52.876604% { opacity: 1; }
-      52.876604% { opacity: 0; }
+      0% { opacity: 0; }
+      51.7749% { opacity: 0; }
+      51.7750% { opacity: 1; }
+      52.4930% { opacity: 1; }
+      52.4931% { opacity: 0; }
+      100% { opacity: 0; }
     }
     @keyframes frame-57-anim {
-      0%, 52.876604% { opacity: 0; }
-      52.876604%, 53.630472% { opacity: 1; }
-      53.630472% { opacity: 0; }
+      0% { opacity: 0; }
+      52.4929% { opacity: 0; }
+      52.4930% { opacity: 1; }
+      53.2376% { opacity: 1; }
+      53.2377% { opacity: 0; }
+      100% { opacity: 0; }
     }
     @keyframes frame-58-anim {
-      0%, 53.630472% { opacity: 0; }
-      53.630472%, 54.384341% { opacity: 1; }
-      54.384341% { opacity: 0; }
+      0% { opacity: 0; }
+      53.2375% { opacity: 0; }
+      53.2376% { opacity: 1; }
+      53.9689% { opacity: 1; }
+      53.9690% { opacity: 0; }
+      100% { opacity: 0; }
     }
     @keyframes frame-59-anim {
-      0%, 54.384341% { opacity: 0; }
-      54.384341%, 55.085306% { opacity: 1; }
-      55.085306% { opacity: 0; }
+      0% { opacity: 0; }
+      53.9688% { opacity: 0; }
+      53.9689% { opacity: 1; }
+      54.7268% { opacity: 1; }
+      54.7269% { opacity: 0; }
+      100% { opacity: 0; }
     }
     @keyframes frame-60-anim {
-      0%, 55.085306% { opacity: 0; }
-      55.085306%, 55.812723% { opacity: 1; }
-      55.812723% { opacity: 0; }
+      0% { opacity: 0; }
+      54.7267% { opacity: 0; }
+      54.7268% { opacity: 1; }
+      55.4448% { opacity: 1; }
+      55.4449% { opacity: 0; }
+      100% { opacity: 0; }
     }
     @keyframes frame-61-anim {
-      0%, 55.812723% { opacity: 0; }
-      55.812723%, 56.526914% { opacity: 1; }
-      56.526914% { opacity: 0; }
+      0% { opacity: 0; }
+      55.4447% { opacity: 0; }
+      55.4448% { opacity: 1; }
+      56.1627% { opacity: 1; }
+      56.1628% { opacity: 0; }
+      100% { opacity: 0; }
     }
     @keyframes frame-62-anim {
-      0%, 56.526914% { opacity: 0; }
-      56.526914%, 57.227880% { opacity: 1; }
-      57.227880% { opacity: 0; }
+      0% { opacity: 0; }
+      56.1626% { opacity: 0; }
+      56.1627% { opacity: 1; }
+      56.8807% { opacity: 1; }
+      56.8808% { opacity: 0; }
+      100% { opacity: 0; }
     }
     @keyframes frame-63-anim {
-      0%, 57.227880% { opacity: 0; }
-      57.227880%, 57.942071% { opacity: 1; }
-      57.942071% { opacity: 0; }
+      0% { opacity: 0; }
+      56.8806% { opacity: 0; }
+      56.8807% { opacity: 1; }
+      57.6120% { opacity: 1; }
+      57.6121% { opacity: 0; }
+      100% { opacity: 0; }
     }
     @keyframes frame-64-anim {
-      0%, 57.942071% { opacity: 0; }
-      57.942071%, 58.656262% { opacity: 1; }
-      58.656262% { opacity: 0; }
+      0% { opacity: 0; }
+      57.6119% { opacity: 0; }
+      57.6120% { opacity: 1; }
+      58.3433% { opacity: 1; }
+      58.3434% { opacity: 0; }
+      100% { opacity: 0; }
     }
     @keyframes frame-65-anim {
-      0%, 58.656262% { opacity: 0; }
-      58.656262%, 59.370454% { opacity: 1; }
-      59.370454% { opacity: 0; }
+      0% { opacity: 0; }
+      58.3432% { opacity: 0; }
+      58.3433% { opacity: 1; }
+      59.0879% { opacity: 1; }
+      59.0880% { opacity: 0; }
+      100% { opacity: 0; }
     }
     @keyframes frame-66-anim {
-      0%, 59.370454% { opacity: 0; }
-      59.370454%, 60.084645% { opacity: 1; }
-      60.084645% { opacity: 0; }
+      0% { opacity: 0; }
+      59.0878% { opacity: 0; }
+      59.0879% { opacity: 1; }
+      59.8325% { opacity: 1; }
+      59.8326% { opacity: 0; }
+      100% { opacity: 0; }
     }
     @keyframes frame-67-anim {
-      0%, 60.084645% { opacity: 0; }
-      60.084645%, 60.798836% { opacity: 1; }
-      60.798836% { opacity: 0; }
+      0% { opacity: 0; }
+      59.8324% { opacity: 0; }
+      59.8325% { opacity: 1; }
+      60.5903% { opacity: 1; }
+      60.5904% { opacity: 0; }
+      100% { opacity: 0; }
     }
     @keyframes frame-68-anim {
-      0%, 60.798836% { opacity: 0; }
-      60.798836%, 61.499802% { opacity: 1; }
-      61.499802% { opacity: 0; }
+      0% { opacity: 0; }
+      60.5902% { opacity: 0; }
+      60.5903% { opacity: 1; }
+      61.3349% { opacity: 1; }
+      61.3350% { opacity: 0; }
+      100% { opacity: 0; }
     }
     @keyframes frame-69-anim {
-      0%, 61.499802% { opacity: 0; }
-      61.499802%, 62.213993% { opacity: 1; }
-      62.213993% { opacity: 0; }
+      0% { opacity: 0; }
+      61.3348% { opacity: 0; }
+      61.3349% { opacity: 1; }
+      62.0795% { opacity: 1; }
+      62.0796% { opacity: 0; }
+      100% { opacity: 0; }
     }
     @keyframes frame-70-anim {
-      0%, 62.213993% { opacity: 0; }
-      62.213993%, 62.928184% { opacity: 1; }
-      62.928184% { opacity: 0; }
+      0% { opacity: 0; }
+      62.0794% { opacity: 0; }
+      62.0795% { opacity: 1; }
+      62.8374% { opacity: 1; }
+      62.8375% { opacity: 0; }
+      100% { opacity: 0; }
     }
     @keyframes frame-71-anim {
-      0%, 62.928184% { opacity: 0; }
-      62.928184%, 63.629150% { opacity: 1; }
-      63.629150% { opacity: 0; }
+      0% { opacity: 0; }
+      62.8373% { opacity: 0; }
+      62.8374% { opacity: 1; }
+      63.5820% { opacity: 1; }
+      63.5821% { opacity: 0; }
+      100% { opacity: 0; }
     }
     @keyframes frame-72-anim {
-      0%, 63.629150% { opacity: 0; }
-      63.629150%, 64.343341% { opacity: 1; }
-      64.343341% { opacity: 0; }
+      0% { opacity: 0; }
+      63.5819% { opacity: 0; }
+      63.5820% { opacity: 1; }
+      64.3133% { opacity: 1; }
+      64.3134% { opacity: 0; }
+      100% { opacity: 0; }
     }
     @keyframes frame-73-anim {
-      0%, 64.343341% { opacity: 0; }
-      64.343341%, 65.057532% { opacity: 1; }
-      65.057532% { opacity: 0; }
+      0% { opacity: 0; }
+      64.3132% { opacity: 0; }
+      64.3133% { opacity: 1; }
+      65.0312% { opacity: 1; }
+      65.0313% { opacity: 0; }
+      100% { opacity: 0; }
     }
     @keyframes frame-74-anim {
-      0%, 65.057532% { opacity: 0; }
-      65.057532%, 70.400741% { opacity: 1; }
-      70.400741% { opacity: 0; }
+      0% { opacity: 0; }
+      65.0311% { opacity: 0; }
+      65.0312% { opacity: 1; }
+      70.4029% { opacity: 1; }
+      70.4030% { opacity: 0; }
+      100% { opacity: 0; }
     }
     @keyframes frame-75-anim {
-      0%, 70.400741% { opacity: 0; }
-      70.400741%, 71.802672% { opacity: 1; }
-      71.802672% { opacity: 0; }
+      0% { opacity: 0; }
+      70.4028% { opacity: 0; }
+      70.4029% { opacity: 1; }
+      71.7990% { opacity: 1; }
+      71.7991% { opacity: 0; }
+      100% { opacity: 0; }
     }
     @keyframes frame-76-anim {
-      0%, 71.802672% { opacity: 0; }
-      71.802672%, 73.297183% { opacity: 1; }
-      73.297183% { opacity: 0; }
+      0% { opacity: 0; }
+      71.7989% { opacity: 0; }
+      71.7990% { opacity: 1; }
+      73.2482% { opacity: 1; }
+      73.2483% { opacity: 0; }
+      100% { opacity: 0; }
     }
     @keyframes frame-77-anim {
-      0%, 73.297183% { opacity: 0; }
-      73.297183%, 99.894194% { opacity: 1; }
-      99.894194% { opacity: 0; }
+      0% { opacity: 0; }
+      73.2481% { opacity: 0; }
+      73.2482% { opacity: 1; }
+      99.9202% { opacity: 1; }
+      99.9203% { opacity: 0; }
+      100% { opacity: 0; }
     }
     @keyframes frame-78-anim {
-      0%, 99.894194% { opacity: 0; }
-      99.894194%, 100.000000% { opacity: 1; }
-      100.000000% { opacity: 0; }
+      0% { opacity: 0; }
+      99.9201% { opacity: 0; }
+      99.9202% { opacity: 1; }
+      100.0000% { opacity: 1; }
+      100.0001% { opacity: 0; }
+      100% { opacity: 0; }
     }
     @keyframes frame-79-anim {
-      0%, 100.000000% { opacity: 0; }
-      100.000000% { opacity: 1; }
+      0% { opacity: 0; }
+      99.9999% { opacity: 0; }
+      100.0000% { opacity: 1; }
+      100% { opacity: 1; }
     }
 
     .frame {
-      animation-duration: 8.56s;
-      animation-timing-function: step-start;
+      animation-duration: 8.52s;
+      animation-timing-function: linear;
       animation-iteration-count: infinite;
       animation-fill-mode: both;
     }
@@ -712,7 +950,7 @@
     <g id="frame-0">
       
 
-<rect class="window-bg" x="0" y="0" width="1200" height="700" fill="#282a36" rx="0" ry="0"/>
+<rect class="window-bg" x="0" y="0" width="1200" height="700" fill="#282a36" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f13" x="16" y="16">❯</text>
 </g>
@@ -724,7 +962,7 @@
     <g id="frame-1">
       
 
-<rect class="window-bg" x="0" y="0" width="1200" height="700" fill="#282a36" rx="0" ry="0"/>
+<rect class="window-bg" x="0" y="0" width="1200" height="700" fill="#282a36" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f13" x="16" y="16">❯</text>
 <text class="text fg" x="28" y="16"> #                                                                                              </text>
@@ -737,7 +975,7 @@
     <g id="frame-2">
       
 
-<rect class="window-bg" x="0" y="0" width="1200" height="700" fill="#282a36" rx="0" ry="0"/>
+<rect class="window-bg" x="0" y="0" width="1200" height="700" fill="#282a36" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f13" x="16" y="16">❯</text>
 <text class="text fg" x="28" y="16"> #                                                                                              </text>
@@ -750,7 +988,7 @@
     <g id="frame-3">
       
 
-<rect class="window-bg" x="0" y="0" width="1200" height="700" fill="#282a36" rx="0" ry="0"/>
+<rect class="window-bg" x="0" y="0" width="1200" height="700" fill="#282a36" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f13" x="16" y="16">❯</text>
 <text class="text fg" x="28" y="16"> # T                                                                                            </text>
@@ -763,7 +1001,7 @@
     <g id="frame-4">
       
 
-<rect class="window-bg" x="0" y="0" width="1200" height="700" fill="#282a36" rx="0" ry="0"/>
+<rect class="window-bg" x="0" y="0" width="1200" height="700" fill="#282a36" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f13" x="16" y="16">❯</text>
 <text class="text fg" x="28" y="16"> # Th                                                                                           </text>
@@ -776,7 +1014,7 @@
     <g id="frame-5">
       
 
-<rect class="window-bg" x="0" y="0" width="1200" height="700" fill="#282a36" rx="0" ry="0"/>
+<rect class="window-bg" x="0" y="0" width="1200" height="700" fill="#282a36" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f13" x="16" y="16">❯</text>
 <text class="text fg" x="28" y="16"> # Thi                                                                                          </text>
@@ -789,7 +1027,7 @@
     <g id="frame-6">
       
 
-<rect class="window-bg" x="0" y="0" width="1200" height="700" fill="#282a36" rx="0" ry="0"/>
+<rect class="window-bg" x="0" y="0" width="1200" height="700" fill="#282a36" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f13" x="16" y="16">❯</text>
 <text class="text fg" x="28" y="16"> # This                                                                                         </text>
@@ -802,7 +1040,7 @@
     <g id="frame-7">
       
 
-<rect class="window-bg" x="0" y="0" width="1200" height="700" fill="#282a36" rx="0" ry="0"/>
+<rect class="window-bg" x="0" y="0" width="1200" height="700" fill="#282a36" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f13" x="16" y="16">❯</text>
 <text class="text fg" x="28" y="16"> # This                                                                                         </text>
@@ -815,7 +1053,7 @@
     <g id="frame-8">
       
 
-<rect class="window-bg" x="0" y="0" width="1200" height="700" fill="#282a36" rx="0" ry="0"/>
+<rect class="window-bg" x="0" y="0" width="1200" height="700" fill="#282a36" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f13" x="16" y="16">❯</text>
 <text class="text fg" x="28" y="16"> # This u                                                                                       </text>
@@ -828,7 +1066,7 @@
     <g id="frame-9">
       
 
-<rect class="window-bg" x="0" y="0" width="1200" height="700" fill="#282a36" rx="0" ry="0"/>
+<rect class="window-bg" x="0" y="0" width="1200" height="700" fill="#282a36" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f13" x="16" y="16">❯</text>
 <text class="text fg" x="28" y="16"> # This us                                                                                      </text>
@@ -841,7 +1079,7 @@
     <g id="frame-10">
       
 
-<rect class="window-bg" x="0" y="0" width="1200" height="700" fill="#282a36" rx="0" ry="0"/>
+<rect class="window-bg" x="0" y="0" width="1200" height="700" fill="#282a36" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f13" x="16" y="16">❯</text>
 <text class="text fg" x="28" y="16"> # This use                                                                                     </text>
@@ -854,7 +1092,7 @@
     <g id="frame-11">
       
 
-<rect class="window-bg" x="0" y="0" width="1200" height="700" fill="#282a36" rx="0" ry="0"/>
+<rect class="window-bg" x="0" y="0" width="1200" height="700" fill="#282a36" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f13" x="16" y="16">❯</text>
 <text class="text fg" x="28" y="16"> # This uses                                                                                    </text>
@@ -867,7 +1105,7 @@
     <g id="frame-12">
       
 
-<rect class="window-bg" x="0" y="0" width="1200" height="700" fill="#282a36" rx="0" ry="0"/>
+<rect class="window-bg" x="0" y="0" width="1200" height="700" fill="#282a36" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f13" x="16" y="16">❯</text>
 <text class="text fg" x="28" y="16"> # This uses                                                                                    </text>
@@ -880,7 +1118,7 @@
     <g id="frame-13">
       
 
-<rect class="window-bg" x="0" y="0" width="1200" height="700" fill="#282a36" rx="0" ry="0"/>
+<rect class="window-bg" x="0" y="0" width="1200" height="700" fill="#282a36" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f13" x="16" y="16">❯</text>
 <text class="text fg" x="28" y="16"> # This uses a                                                                                  </text>
@@ -893,7 +1131,7 @@
     <g id="frame-14">
       
 
-<rect class="window-bg" x="0" y="0" width="1200" height="700" fill="#282a36" rx="0" ry="0"/>
+<rect class="window-bg" x="0" y="0" width="1200" height="700" fill="#282a36" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f13" x="16" y="16">❯</text>
 <text class="text fg" x="28" y="16"> # This uses a                                                                                  </text>
@@ -906,7 +1144,7 @@
     <g id="frame-15">
       
 
-<rect class="window-bg" x="0" y="0" width="1200" height="700" fill="#282a36" rx="0" ry="0"/>
+<rect class="window-bg" x="0" y="0" width="1200" height="700" fill="#282a36" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f13" x="16" y="16">❯</text>
 <text class="text fg" x="28" y="16"> # This uses a 2                                                                                </text>
@@ -919,7 +1157,7 @@
     <g id="frame-16">
       
 
-<rect class="window-bg" x="0" y="0" width="1200" height="700" fill="#282a36" rx="0" ry="0"/>
+<rect class="window-bg" x="0" y="0" width="1200" height="700" fill="#282a36" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f13" x="16" y="16">❯</text>
 <text class="text fg" x="28" y="16"> # This uses a 20                                                                               </text>
@@ -932,7 +1170,7 @@
     <g id="frame-17">
       
 
-<rect class="window-bg" x="0" y="0" width="1200" height="700" fill="#282a36" rx="0" ry="0"/>
+<rect class="window-bg" x="0" y="0" width="1200" height="700" fill="#282a36" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f13" x="16" y="16">❯</text>
 <text class="text fg" x="28" y="16"> # This uses a 20p                                                                              </text>
@@ -945,7 +1183,7 @@
     <g id="frame-18">
       
 
-<rect class="window-bg" x="0" y="0" width="1200" height="700" fill="#282a36" rx="0" ry="0"/>
+<rect class="window-bg" x="0" y="0" width="1200" height="700" fill="#282a36" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f13" x="16" y="16">❯</text>
 <text class="text fg" x="28" y="16"> # This uses a 20px                                                                             </text>
@@ -958,7 +1196,7 @@
     <g id="frame-19">
       
 
-<rect class="window-bg" x="0" y="0" width="1200" height="700" fill="#282a36" rx="0" ry="0"/>
+<rect class="window-bg" x="0" y="0" width="1200" height="700" fill="#282a36" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f13" x="16" y="16">❯</text>
 <text class="text fg" x="28" y="16"> # This uses a 20px                                                                             </text>
@@ -971,7 +1209,7 @@
     <g id="frame-20">
       
 
-<rect class="window-bg" x="0" y="0" width="1200" height="700" fill="#282a36" rx="0" ry="0"/>
+<rect class="window-bg" x="0" y="0" width="1200" height="700" fill="#282a36" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f13" x="16" y="16">❯</text>
 <text class="text fg" x="28" y="16"> # This uses a 20px f                                                                           </text>
@@ -984,7 +1222,7 @@
     <g id="frame-21">
       
 
-<rect class="window-bg" x="0" y="0" width="1200" height="700" fill="#282a36" rx="0" ry="0"/>
+<rect class="window-bg" x="0" y="0" width="1200" height="700" fill="#282a36" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f13" x="16" y="16">❯</text>
 <text class="text fg" x="28" y="16"> # This uses a 20px fo                                                                          </text>
@@ -997,7 +1235,7 @@
     <g id="frame-22">
       
 
-<rect class="window-bg" x="0" y="0" width="1200" height="700" fill="#282a36" rx="0" ry="0"/>
+<rect class="window-bg" x="0" y="0" width="1200" height="700" fill="#282a36" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f13" x="16" y="16">❯</text>
 <text class="text fg" x="28" y="16"> # This uses a 20px fon                                                                         </text>
@@ -1010,7 +1248,7 @@
     <g id="frame-23">
       
 
-<rect class="window-bg" x="0" y="0" width="1200" height="700" fill="#282a36" rx="0" ry="0"/>
+<rect class="window-bg" x="0" y="0" width="1200" height="700" fill="#282a36" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f13" x="16" y="16">❯</text>
 <text class="text fg" x="28" y="16"> # This uses a 20px font                                                                        </text>
@@ -1023,7 +1261,7 @@
     <g id="frame-24">
       
 
-<rect class="window-bg" x="0" y="0" width="1200" height="700" fill="#282a36" rx="0" ry="0"/>
+<rect class="window-bg" x="0" y="0" width="1200" height="700" fill="#282a36" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f13" x="16" y="16">❯</text>
 <text class="text fg" x="28" y="16"> # This uses a 20px font                                                                        </text>
@@ -1036,7 +1274,7 @@
     <g id="frame-25">
       
 
-<rect class="window-bg" x="0" y="0" width="1200" height="700" fill="#282a36" rx="0" ry="0"/>
+<rect class="window-bg" x="0" y="0" width="1200" height="700" fill="#282a36" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f13" x="16" y="16">❯</text>
 <text class="text fg" x="28" y="16"> # This uses a 20px font                                                                        </text>
@@ -1046,7 +1284,7 @@
     <g id="frame-26">
       
 
-<rect class="window-bg" x="0" y="0" width="1200" height="700" fill="#282a36" rx="0" ry="0"/>
+<rect class="window-bg" x="0" y="0" width="1200" height="700" fill="#282a36" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f13" x="16" y="16">❯</text>
 <text class="text fg" x="28" y="16"> # This uses a 20px font                                                                        </text>
@@ -1060,7 +1298,7 @@
     <g id="frame-27">
       
 
-<rect class="window-bg" x="0" y="0" width="1200" height="700" fill="#282a36" rx="0" ry="0"/>
+<rect class="window-bg" x="0" y="0" width="1200" height="700" fill="#282a36" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f13" x="16" y="16">❯</text>
 <text class="text fg" x="28" y="16"> # This uses a 20px font                                                                        </text>
@@ -1074,7 +1312,7 @@
     <g id="frame-28">
       
 
-<rect class="window-bg" x="0" y="0" width="1200" height="700" fill="#282a36" rx="0" ry="0"/>
+<rect class="window-bg" x="0" y="0" width="1200" height="700" fill="#282a36" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f13" x="16" y="16">❯</text>
 <text class="text fg" x="28" y="16"> # This uses a 20px font                                                                        </text>
@@ -1089,7 +1327,7 @@
     <g id="frame-29">
       
 
-<rect class="window-bg" x="0" y="0" width="1200" height="700" fill="#282a36" rx="0" ry="0"/>
+<rect class="window-bg" x="0" y="0" width="1200" height="700" fill="#282a36" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f13" x="16" y="16">❯</text>
 <text class="text fg" x="28" y="16"> # This uses a 20px font                                                                        </text>
@@ -1104,7 +1342,7 @@
     <g id="frame-30">
       
 
-<rect class="window-bg" x="0" y="0" width="1200" height="700" fill="#282a36" rx="0" ry="0"/>
+<rect class="window-bg" x="0" y="0" width="1200" height="700" fill="#282a36" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f13" x="16" y="16">❯</text>
 <text class="text fg" x="28" y="16"> # This uses a 20px font                                                                        </text>
@@ -1119,7 +1357,7 @@
     <g id="frame-31">
       
 
-<rect class="window-bg" x="0" y="0" width="1200" height="700" fill="#282a36" rx="0" ry="0"/>
+<rect class="window-bg" x="0" y="0" width="1200" height="700" fill="#282a36" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f13" x="16" y="16">❯</text>
 <text class="text fg" x="28" y="16"> # This uses a 20px font                                                                        </text>
@@ -1134,7 +1372,7 @@
     <g id="frame-32">
       
 
-<rect class="window-bg" x="0" y="0" width="1200" height="700" fill="#282a36" rx="0" ry="0"/>
+<rect class="window-bg" x="0" y="0" width="1200" height="700" fill="#282a36" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f13" x="16" y="16">❯</text>
 <text class="text fg" x="28" y="16"> # This uses a 20px font                                                                        </text>
@@ -1149,7 +1387,7 @@
     <g id="frame-33">
       
 
-<rect class="window-bg" x="0" y="0" width="1200" height="700" fill="#282a36" rx="0" ry="0"/>
+<rect class="window-bg" x="0" y="0" width="1200" height="700" fill="#282a36" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f13" x="16" y="16">❯</text>
 <text class="text fg" x="28" y="16"> # This uses a 20px font                                                                        </text>
@@ -1164,7 +1402,7 @@
     <g id="frame-34">
       
 
-<rect class="window-bg" x="0" y="0" width="1200" height="700" fill="#282a36" rx="0" ry="0"/>
+<rect class="window-bg" x="0" y="0" width="1200" height="700" fill="#282a36" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f13" x="16" y="16">❯</text>
 <text class="text fg" x="28" y="16"> # This uses a 20px font                                                                        </text>
@@ -1179,7 +1417,7 @@
     <g id="frame-35">
       
 
-<rect class="window-bg" x="0" y="0" width="1200" height="700" fill="#282a36" rx="0" ry="0"/>
+<rect class="window-bg" x="0" y="0" width="1200" height="700" fill="#282a36" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f13" x="16" y="16">❯</text>
 <text class="text fg" x="28" y="16"> # This uses a 20px font                                                                        </text>
@@ -1194,7 +1432,7 @@
     <g id="frame-36">
       
 
-<rect class="window-bg" x="0" y="0" width="1200" height="700" fill="#282a36" rx="0" ry="0"/>
+<rect class="window-bg" x="0" y="0" width="1200" height="700" fill="#282a36" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f13" x="16" y="16">❯</text>
 <text class="text fg" x="28" y="16"> # This uses a 20px font                                                                        </text>
@@ -1209,7 +1447,7 @@
     <g id="frame-37">
       
 
-<rect class="window-bg" x="0" y="0" width="1200" height="700" fill="#282a36" rx="0" ry="0"/>
+<rect class="window-bg" x="0" y="0" width="1200" height="700" fill="#282a36" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f13" x="16" y="16">❯</text>
 <text class="text fg" x="28" y="16"> # This uses a 20px font                                                                        </text>
@@ -1224,7 +1462,7 @@
     <g id="frame-38">
       
 
-<rect class="window-bg" x="0" y="0" width="1200" height="700" fill="#282a36" rx="0" ry="0"/>
+<rect class="window-bg" x="0" y="0" width="1200" height="700" fill="#282a36" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f13" x="16" y="16">❯</text>
 <text class="text fg" x="28" y="16"> # This uses a 20px font                                                                        </text>
@@ -1239,7 +1477,7 @@
     <g id="frame-39">
       
 
-<rect class="window-bg" x="0" y="0" width="1200" height="700" fill="#282a36" rx="0" ry="0"/>
+<rect class="window-bg" x="0" y="0" width="1200" height="700" fill="#282a36" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f13" x="16" y="16">❯</text>
 <text class="text fg" x="28" y="16"> # This uses a 20px font                                                                        </text>
@@ -1254,7 +1492,7 @@
     <g id="frame-40">
       
 
-<rect class="window-bg" x="0" y="0" width="1200" height="700" fill="#282a36" rx="0" ry="0"/>
+<rect class="window-bg" x="0" y="0" width="1200" height="700" fill="#282a36" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f13" x="16" y="16">❯</text>
 <text class="text fg" x="28" y="16"> # This uses a 20px font                                                                        </text>
@@ -1269,7 +1507,7 @@
     <g id="frame-41">
       
 
-<rect class="window-bg" x="0" y="0" width="1200" height="700" fill="#282a36" rx="0" ry="0"/>
+<rect class="window-bg" x="0" y="0" width="1200" height="700" fill="#282a36" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f13" x="16" y="16">❯</text>
 <text class="text fg" x="28" y="16"> # This uses a 20px font                                                                        </text>
@@ -1284,7 +1522,7 @@
     <g id="frame-42">
       
 
-<rect class="window-bg" x="0" y="0" width="1200" height="700" fill="#282a36" rx="0" ry="0"/>
+<rect class="window-bg" x="0" y="0" width="1200" height="700" fill="#282a36" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f13" x="16" y="16">❯</text>
 <text class="text fg" x="28" y="16"> # This uses a 20px font                                                                        </text>
@@ -1299,7 +1537,7 @@
     <g id="frame-43">
       
 
-<rect class="window-bg" x="0" y="0" width="1200" height="700" fill="#282a36" rx="0" ry="0"/>
+<rect class="window-bg" x="0" y="0" width="1200" height="700" fill="#282a36" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f13" x="16" y="16">❯</text>
 <text class="text fg" x="28" y="16"> # This uses a 20px font                                                                        </text>
@@ -1314,7 +1552,7 @@
     <g id="frame-44">
       
 
-<rect class="window-bg" x="0" y="0" width="1200" height="700" fill="#282a36" rx="0" ry="0"/>
+<rect class="window-bg" x="0" y="0" width="1200" height="700" fill="#282a36" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f13" x="16" y="16">❯</text>
 <text class="text fg" x="28" y="16"> # This uses a 20px font                                                                        </text>
@@ -1329,7 +1567,7 @@
     <g id="frame-45">
       
 
-<rect class="window-bg" x="0" y="0" width="1200" height="700" fill="#282a36" rx="0" ry="0"/>
+<rect class="window-bg" x="0" y="0" width="1200" height="700" fill="#282a36" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f13" x="16" y="16">❯</text>
 <text class="text fg" x="28" y="16"> # This uses a 20px font                                                                        </text>
@@ -1344,7 +1582,7 @@
     <g id="frame-46">
       
 
-<rect class="window-bg" x="0" y="0" width="1200" height="700" fill="#282a36" rx="0" ry="0"/>
+<rect class="window-bg" x="0" y="0" width="1200" height="700" fill="#282a36" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f13" x="16" y="16">❯</text>
 <text class="text fg" x="28" y="16"> # This uses a 20px font                                                                        </text>
@@ -1359,7 +1597,7 @@
     <g id="frame-47">
       
 
-<rect class="window-bg" x="0" y="0" width="1200" height="700" fill="#282a36" rx="0" ry="0"/>
+<rect class="window-bg" x="0" y="0" width="1200" height="700" fill="#282a36" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f13" x="16" y="16">❯</text>
 <text class="text fg" x="28" y="16"> # This uses a 20px font                                                                        </text>
@@ -1374,7 +1612,7 @@
     <g id="frame-48">
       
 
-<rect class="window-bg" x="0" y="0" width="1200" height="700" fill="#282a36" rx="0" ry="0"/>
+<rect class="window-bg" x="0" y="0" width="1200" height="700" fill="#282a36" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f13" x="16" y="16">❯</text>
 <text class="text fg" x="28" y="16"> # This uses a 20px font                                                                        </text>
@@ -1389,7 +1627,7 @@
     <g id="frame-49">
       
 
-<rect class="window-bg" x="0" y="0" width="1200" height="700" fill="#282a36" rx="0" ry="0"/>
+<rect class="window-bg" x="0" y="0" width="1200" height="700" fill="#282a36" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f13" x="16" y="16">❯</text>
 <text class="text fg" x="28" y="16"> # This uses a 20px font                                                                        </text>
@@ -1404,7 +1642,7 @@
     <g id="frame-50">
       
 
-<rect class="window-bg" x="0" y="0" width="1200" height="700" fill="#282a36" rx="0" ry="0"/>
+<rect class="window-bg" x="0" y="0" width="1200" height="700" fill="#282a36" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f13" x="16" y="16">❯</text>
 <text class="text fg" x="28" y="16"> # This uses a 20px font                                                                        </text>
@@ -1419,7 +1657,7 @@
     <g id="frame-51">
       
 
-<rect class="window-bg" x="0" y="0" width="1200" height="700" fill="#282a36" rx="0" ry="0"/>
+<rect class="window-bg" x="0" y="0" width="1200" height="700" fill="#282a36" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f13" x="16" y="16">❯</text>
 <text class="text fg" x="28" y="16"> # This uses a 20px font                                                                        </text>
@@ -1434,7 +1672,7 @@
     <g id="frame-52">
       
 
-<rect class="window-bg" x="0" y="0" width="1200" height="700" fill="#282a36" rx="0" ry="0"/>
+<rect class="window-bg" x="0" y="0" width="1200" height="700" fill="#282a36" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f13" x="16" y="16">❯</text>
 <text class="text fg" x="28" y="16"> # This uses a 20px font                                                                        </text>
@@ -1449,7 +1687,7 @@
     <g id="frame-53">
       
 
-<rect class="window-bg" x="0" y="0" width="1200" height="700" fill="#282a36" rx="0" ry="0"/>
+<rect class="window-bg" x="0" y="0" width="1200" height="700" fill="#282a36" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f13" x="16" y="16">❯</text>
 <text class="text fg" x="28" y="16"> # This uses a 20px font                                                                        </text>
@@ -1464,7 +1702,7 @@
     <g id="frame-54">
       
 
-<rect class="window-bg" x="0" y="0" width="1200" height="700" fill="#282a36" rx="0" ry="0"/>
+<rect class="window-bg" x="0" y="0" width="1200" height="700" fill="#282a36" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f13" x="16" y="16">❯</text>
 <text class="text fg" x="28" y="16"> # This uses a 20px font                                                                        </text>
@@ -1479,7 +1717,7 @@
     <g id="frame-55">
       
 
-<rect class="window-bg" x="0" y="0" width="1200" height="700" fill="#282a36" rx="0" ry="0"/>
+<rect class="window-bg" x="0" y="0" width="1200" height="700" fill="#282a36" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f13" x="16" y="16">❯</text>
 <text class="text fg" x="28" y="16"> # This uses a 20px font                                                                        </text>
@@ -1494,7 +1732,7 @@
     <g id="frame-56">
       
 
-<rect class="window-bg" x="0" y="0" width="1200" height="700" fill="#282a36" rx="0" ry="0"/>
+<rect class="window-bg" x="0" y="0" width="1200" height="700" fill="#282a36" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f13" x="16" y="16">❯</text>
 <text class="text fg" x="28" y="16"> # This uses a 20px font                                                                        </text>
@@ -1509,7 +1747,7 @@
     <g id="frame-57">
       
 
-<rect class="window-bg" x="0" y="0" width="1200" height="700" fill="#282a36" rx="0" ry="0"/>
+<rect class="window-bg" x="0" y="0" width="1200" height="700" fill="#282a36" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f13" x="16" y="16">❯</text>
 <text class="text fg" x="28" y="16"> # This uses a 20px font                                                                        </text>
@@ -1524,7 +1762,7 @@
     <g id="frame-58">
       
 
-<rect class="window-bg" x="0" y="0" width="1200" height="700" fill="#282a36" rx="0" ry="0"/>
+<rect class="window-bg" x="0" y="0" width="1200" height="700" fill="#282a36" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f13" x="16" y="16">❯</text>
 <text class="text fg" x="28" y="16"> # This uses a 20px font                                                                        </text>
@@ -1539,7 +1777,7 @@
     <g id="frame-59">
       
 
-<rect class="window-bg" x="0" y="0" width="1200" height="700" fill="#282a36" rx="0" ry="0"/>
+<rect class="window-bg" x="0" y="0" width="1200" height="700" fill="#282a36" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f13" x="16" y="16">❯</text>
 <text class="text fg" x="28" y="16"> # This uses a 20px font                                                                        </text>
@@ -1554,7 +1792,7 @@
     <g id="frame-60">
       
 
-<rect class="window-bg" x="0" y="0" width="1200" height="700" fill="#282a36" rx="0" ry="0"/>
+<rect class="window-bg" x="0" y="0" width="1200" height="700" fill="#282a36" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f13" x="16" y="16">❯</text>
 <text class="text fg" x="28" y="16"> # This uses a 20px font                                                                        </text>
@@ -1569,7 +1807,7 @@
     <g id="frame-61">
       
 
-<rect class="window-bg" x="0" y="0" width="1200" height="700" fill="#282a36" rx="0" ry="0"/>
+<rect class="window-bg" x="0" y="0" width="1200" height="700" fill="#282a36" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f13" x="16" y="16">❯</text>
 <text class="text fg" x="28" y="16"> # This uses a 20px font                                                                        </text>
@@ -1584,7 +1822,7 @@
     <g id="frame-62">
       
 
-<rect class="window-bg" x="0" y="0" width="1200" height="700" fill="#282a36" rx="0" ry="0"/>
+<rect class="window-bg" x="0" y="0" width="1200" height="700" fill="#282a36" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f13" x="16" y="16">❯</text>
 <text class="text fg" x="28" y="16"> # This uses a 20px font                                                                        </text>
@@ -1599,7 +1837,7 @@
     <g id="frame-63">
       
 
-<rect class="window-bg" x="0" y="0" width="1200" height="700" fill="#282a36" rx="0" ry="0"/>
+<rect class="window-bg" x="0" y="0" width="1200" height="700" fill="#282a36" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f13" x="16" y="16">❯</text>
 <text class="text fg" x="28" y="16"> # This uses a 20px font                                                                        </text>
@@ -1614,7 +1852,7 @@
     <g id="frame-64">
       
 
-<rect class="window-bg" x="0" y="0" width="1200" height="700" fill="#282a36" rx="0" ry="0"/>
+<rect class="window-bg" x="0" y="0" width="1200" height="700" fill="#282a36" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f13" x="16" y="16">❯</text>
 <text class="text fg" x="28" y="16"> # This uses a 20px font                                                                        </text>
@@ -1629,7 +1867,7 @@
     <g id="frame-65">
       
 
-<rect class="window-bg" x="0" y="0" width="1200" height="700" fill="#282a36" rx="0" ry="0"/>
+<rect class="window-bg" x="0" y="0" width="1200" height="700" fill="#282a36" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f13" x="16" y="16">❯</text>
 <text class="text fg" x="28" y="16"> # This uses a 20px font                                                                        </text>
@@ -1644,7 +1882,7 @@
     <g id="frame-66">
       
 
-<rect class="window-bg" x="0" y="0" width="1200" height="700" fill="#282a36" rx="0" ry="0"/>
+<rect class="window-bg" x="0" y="0" width="1200" height="700" fill="#282a36" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f13" x="16" y="16">❯</text>
 <text class="text fg" x="28" y="16"> # This uses a 20px font                                                                        </text>
@@ -1659,7 +1897,7 @@
     <g id="frame-67">
       
 
-<rect class="window-bg" x="0" y="0" width="1200" height="700" fill="#282a36" rx="0" ry="0"/>
+<rect class="window-bg" x="0" y="0" width="1200" height="700" fill="#282a36" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f13" x="16" y="16">❯</text>
 <text class="text fg" x="28" y="16"> # This uses a 20px font                                                                        </text>
@@ -1674,7 +1912,7 @@
     <g id="frame-68">
       
 
-<rect class="window-bg" x="0" y="0" width="1200" height="700" fill="#282a36" rx="0" ry="0"/>
+<rect class="window-bg" x="0" y="0" width="1200" height="700" fill="#282a36" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f13" x="16" y="16">❯</text>
 <text class="text fg" x="28" y="16"> # This uses a 20px font                                                                        </text>
@@ -1689,7 +1927,7 @@
     <g id="frame-69">
       
 
-<rect class="window-bg" x="0" y="0" width="1200" height="700" fill="#282a36" rx="0" ry="0"/>
+<rect class="window-bg" x="0" y="0" width="1200" height="700" fill="#282a36" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f13" x="16" y="16">❯</text>
 <text class="text fg" x="28" y="16"> # This uses a 20px font                                                                        </text>
@@ -1704,7 +1942,7 @@
     <g id="frame-70">
       
 
-<rect class="window-bg" x="0" y="0" width="1200" height="700" fill="#282a36" rx="0" ry="0"/>
+<rect class="window-bg" x="0" y="0" width="1200" height="700" fill="#282a36" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f13" x="16" y="16">❯</text>
 <text class="text fg" x="28" y="16"> # This uses a 20px font                                                                        </text>
@@ -1719,7 +1957,7 @@
     <g id="frame-71">
       
 
-<rect class="window-bg" x="0" y="0" width="1200" height="700" fill="#282a36" rx="0" ry="0"/>
+<rect class="window-bg" x="0" y="0" width="1200" height="700" fill="#282a36" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f13" x="16" y="16">❯</text>
 <text class="text fg" x="28" y="16"> # This uses a 20px font                                                                        </text>
@@ -1734,7 +1972,7 @@
     <g id="frame-72">
       
 
-<rect class="window-bg" x="0" y="0" width="1200" height="700" fill="#282a36" rx="0" ry="0"/>
+<rect class="window-bg" x="0" y="0" width="1200" height="700" fill="#282a36" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f13" x="16" y="16">❯</text>
 <text class="text fg" x="28" y="16"> # This uses a 20px font                                                                        </text>
@@ -1749,7 +1987,7 @@
     <g id="frame-73">
       
 
-<rect class="window-bg" x="0" y="0" width="1200" height="700" fill="#282a36" rx="0" ry="0"/>
+<rect class="window-bg" x="0" y="0" width="1200" height="700" fill="#282a36" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f13" x="16" y="16">❯</text>
 <text class="text fg" x="28" y="16"> # This uses a 20px font                                                                        </text>
@@ -1764,7 +2002,7 @@
     <g id="frame-74">
       
 
-<rect class="window-bg" x="0" y="0" width="1200" height="700" fill="#282a36" rx="0" ry="0"/>
+<rect class="window-bg" x="0" y="0" width="1200" height="700" fill="#282a36" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f13" x="16" y="16">❯</text>
 <text class="text fg" x="28" y="16"> # This uses a 20px font                                                                        </text>
@@ -1779,7 +2017,7 @@
     <g id="frame-75">
       
 
-<rect class="window-bg" x="0" y="0" width="1200" height="700" fill="#282a36" rx="0" ry="0"/>
+<rect class="window-bg" x="0" y="0" width="1200" height="700" fill="#282a36" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f13" x="16" y="16">❯</text>
 <text class="text fg" x="28" y="16"> # This uses a 20px font                                                                        </text>
@@ -1794,7 +2032,7 @@
     <g id="frame-76">
       
 
-<rect class="window-bg" x="0" y="0" width="1200" height="700" fill="#282a36" rx="0" ry="0"/>
+<rect class="window-bg" x="0" y="0" width="1200" height="700" fill="#282a36" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f13" x="16" y="16">❯</text>
 <text class="text fg" x="28" y="16"> # This uses a 20px font                                                                        </text>
@@ -1806,7 +2044,7 @@
     <g id="frame-77">
       
 
-<rect class="window-bg" x="0" y="0" width="1200" height="700" fill="#282a36" rx="0" ry="0"/>
+<rect class="window-bg" x="0" y="0" width="1200" height="700" fill="#282a36" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f13" x="16" y="16">❯</text>
 <text class="text fg" x="28" y="16"> # This uses a 20px font                                                                        </text>
@@ -1823,7 +2061,7 @@
     <g id="frame-78">
       
 
-<rect class="window-bg" x="0" y="0" width="1200" height="700" fill="#282a36" rx="0" ry="0"/>
+<rect class="window-bg" x="0" y="0" width="1200" height="700" fill="#282a36" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f13" x="16" y="16">❯</text>
 <text class="text fg" x="28" y="16"> # This uses a 20px font                                                                        </text>
@@ -1840,7 +2078,7 @@
     <g id="frame-79">
       
 
-<rect class="window-bg" x="0" y="0" width="1200" height="700" fill="#282a36" rx="0" ry="0"/>
+<rect class="window-bg" x="0" y="0" width="1200" height="700" fill="#282a36" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f13" x="16" y="16">❯</text>
 <text class="text fg" x="28" y="16"> # This uses a 20px font                                                                        </text>
