@@ -508,8 +508,7 @@ export class CDExecutor {
       });
 
       let output = '';
-      let lastFrameTime = Date.now();
-      const FRAME_INTERVAL = 100;
+      let prevLineCount = 0;
       const outputStartLine = this.context.cursorY;
 
       const processOutput = (data: string) => {
@@ -527,10 +526,11 @@ export class CDExecutor {
           this.context.lines.push('');
         }
 
-        const now = Date.now();
-        if (now - lastFrameTime >= FRAME_INTERVAL) {
+        // Capture frame on each new line for smooth line-by-line animation
+        const currentLineCount = outputLines.length;
+        if (currentLineCount > prevLineCount) {
           this.captureFrame(false);
-          lastFrameTime = now;
+          prevLineCount = currentLineCount;
         }
       };
 
