@@ -15,39 +15,39 @@
 .strike { text-decoration: line-through; }
 .dim { opacity: 0.5; }
 .fg { fill: #f8f8f2; }
-.f0 { fill: #21222c; }
-.f1 { fill: #ff5555; }
-.f2 { fill: #50fa7b; }
-.f3 { fill: #f1fa8c; }
-.f4 { fill: #bd93f9; }
-.f5 { fill: #ff79c6; }
-.f6 { fill: #8be9fd; }
+.f0 { fill: #272822; }
+.f1 { fill: #f92672; }
+.f2 { fill: #a6e22e; }
+.f3 { fill: #f4bf75; }
+.f4 { fill: #66d9ef; }
+.f5 { fill: #ae81ff; }
+.f6 { fill: #a1efe4; }
 .f7 { fill: #f8f8f2; }
-.f8 { fill: #6272a4; }
-.f9 { fill: #ff6e6e; }
-.f10 { fill: #69ff94; }
-.f11 { fill: #ffffa5; }
-.f12 { fill: #d6acff; }
-.f13 { fill: #ff92df; }
-.f14 { fill: #a4ffff; }
-.f15 { fill: #ffffff; }
-.bg { fill: #282a36; }
-.b0 { fill: #21222c; }
-.b1 { fill: #ff5555; }
-.b2 { fill: #50fa7b; }
-.b3 { fill: #f1fa8c; }
-.b4 { fill: #bd93f9; }
-.b5 { fill: #ff79c6; }
-.b6 { fill: #8be9fd; }
+.f8 { fill: #75715e; }
+.f9 { fill: #f92672; }
+.f10 { fill: #a6e22e; }
+.f11 { fill: #f4bf75; }
+.f12 { fill: #66d9ef; }
+.f13 { fill: #ae81ff; }
+.f14 { fill: #a1efe4; }
+.f15 { fill: #f9f8f5; }
+.bg { fill: #272822; }
+.b0 { fill: #272822; }
+.b1 { fill: #f92672; }
+.b2 { fill: #a6e22e; }
+.b3 { fill: #f4bf75; }
+.b4 { fill: #66d9ef; }
+.b5 { fill: #ae81ff; }
+.b6 { fill: #a1efe4; }
 .b7 { fill: #f8f8f2; }
-.b8 { fill: #6272a4; }
-.b9 { fill: #ff6e6e; }
-.b10 { fill: #69ff94; }
-.b11 { fill: #ffffa5; }
-.b12 { fill: #d6acff; }
-.b13 { fill: #ff92df; }
-.b14 { fill: #a4ffff; }
-.b15 { fill: #ffffff; }
+.b8 { fill: #75715e; }
+.b9 { fill: #f92672; }
+.b10 { fill: #a6e22e; }
+.b11 { fill: #f4bf75; }
+.b12 { fill: #66d9ef; }
+.b13 { fill: #ae81ff; }
+.b14 { fill: #a1efe4; }
+.b15 { fill: #f9f8f5; }
 .cursor { animation: blink 1s step-end infinite; }
 @keyframes blink {
   0%, 50% { opacity: 1; }
@@ -59,12 +59,12 @@
 
   <g clip-path="url(#rounded-corners)">
   <!-- Persistent background - never animated -->
-  <rect width="100%" height="100%" fill="#282a36" rx="8" ry="8" />
+  <rect width="100%" height="100%" fill="#272822" rx="8" ry="8" />
 
   <!-- Animated frames with discrete visibility transitions -->
   
   <g id="frame-0" visibility="visible">
-    <rect class="window-bg" x="0" y="0" width="600" height="350" fill="#282a36" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="600" height="350" fill="#272822" rx="8" ry="8"/>
 <g class="chrome"><rect class="header-bg" x="0" y="0" width="600" height="40" fill="#44475a" rx="8" ry="8"/>
 <rect x="0" y="32" width="600" height="8" fill="#44475a"/>
 <circle cx="22" cy="20" r="6" fill="#ff5f56"/>
@@ -81,11 +81,11 @@
 <g class="cursor-layer">
 <rect class="cursor" x="32.8" y="56" width="8.4" height="19.6" fill="#f8f8f2"/>
 </g>
-    <animate attributeName="visibility" values="visible;hidden;hidden" keyTimes="0;0.005295;1" dur="10.20s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+    <animate attributeName="visibility" values="visible;hidden;hidden" keyTimes="0;0.005221;1" dur="10.15s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-1" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="600" height="350" fill="#282a36" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="600" height="350" fill="#272822" rx="8" ry="8"/>
 <g class="chrome"><rect class="header-bg" x="0" y="0" width="600" height="40" fill="#44475a" rx="8" ry="8"/>
 <rect x="0" y="32" width="600" height="8" fill="#44475a"/>
 <circle cx="22" cy="20" r="6" fill="#ff5f56"/>
@@ -103,11 +103,11 @@
 <g class="cursor-layer">
 <rect class="cursor-active" x="41.2" y="56" width="8.4" height="19.6" fill="#f8f8f2"/>
 </g>
-    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.005295;0.010198;1" dur="10.20s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.005221;0.010245;1" dur="10.15s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-2" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="600" height="350" fill="#282a36" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="600" height="350" fill="#272822" rx="8" ry="8"/>
 <g class="chrome"><rect class="header-bg" x="0" y="0" width="600" height="40" fill="#44475a" rx="8" ry="8"/>
 <rect x="0" y="32" width="600" height="8" fill="#44475a"/>
 <circle cx="22" cy="20" r="6" fill="#ff5f56"/>
@@ -125,11 +125,11 @@
 <g class="cursor-layer">
 <rect class="cursor-active" x="49.6" y="56" width="8.4" height="19.6" fill="#f8f8f2"/>
 </g>
-    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.010198;0.015297;1" dur="10.20s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.010245;0.015269;1" dur="10.15s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-3" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="600" height="350" fill="#282a36" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="600" height="350" fill="#272822" rx="8" ry="8"/>
 <g class="chrome"><rect class="header-bg" x="0" y="0" width="600" height="40" fill="#44475a" rx="8" ry="8"/>
 <rect x="0" y="32" width="600" height="8" fill="#44475a"/>
 <circle cx="22" cy="20" r="6" fill="#ff5f56"/>
@@ -147,11 +147,11 @@
 <g class="cursor-layer">
 <rect class="cursor-active" x="58" y="56" width="8.4" height="19.6" fill="#f8f8f2"/>
 </g>
-    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.015297;0.020396;1" dur="10.20s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.015269;0.020195;1" dur="10.15s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-4" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="600" height="350" fill="#282a36" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="600" height="350" fill="#272822" rx="8" ry="8"/>
 <g class="chrome"><rect class="header-bg" x="0" y="0" width="600" height="40" fill="#44475a" rx="8" ry="8"/>
 <rect x="0" y="32" width="600" height="8" fill="#44475a"/>
 <circle cx="22" cy="20" r="6" fill="#ff5f56"/>
@@ -169,11 +169,11 @@
 <g class="cursor-layer">
 <rect class="cursor-active" x="66.4" y="56" width="8.4" height="19.6" fill="#f8f8f2"/>
 </g>
-    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.020396;0.025299;1" dur="10.20s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.020195;0.025121;1" dur="10.15s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-5" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="600" height="350" fill="#282a36" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="600" height="350" fill="#272822" rx="8" ry="8"/>
 <g class="chrome"><rect class="header-bg" x="0" y="0" width="600" height="40" fill="#44475a" rx="8" ry="8"/>
 <rect x="0" y="32" width="600" height="8" fill="#44475a"/>
 <circle cx="22" cy="20" r="6" fill="#ff5f56"/>
@@ -191,11 +191,11 @@
 <g class="cursor-layer">
 <rect class="cursor-active" x="74.8" y="56" width="8.4" height="19.6" fill="#f8f8f2"/>
 </g>
-    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.025299;0.0303;1" dur="10.20s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.025121;0.030243;1" dur="10.15s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-6" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="600" height="350" fill="#282a36" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="600" height="350" fill="#272822" rx="8" ry="8"/>
 <g class="chrome"><rect class="header-bg" x="0" y="0" width="600" height="40" fill="#44475a" rx="8" ry="8"/>
 <rect x="0" y="32" width="600" height="8" fill="#44475a"/>
 <circle cx="22" cy="20" r="6" fill="#ff5f56"/>
@@ -213,11 +213,11 @@
 <g class="cursor-layer">
 <rect class="cursor-active" x="83.2" y="56" width="8.4" height="19.6" fill="#f8f8f2"/>
 </g>
-    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.0303;0.035399;1" dur="10.20s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.030243;0.035366;1" dur="10.15s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-7" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="600" height="350" fill="#282a36" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="600" height="350" fill="#272822" rx="8" ry="8"/>
 <g class="chrome"><rect class="header-bg" x="0" y="0" width="600" height="40" fill="#44475a" rx="8" ry="8"/>
 <rect x="0" y="32" width="600" height="8" fill="#44475a"/>
 <circle cx="22" cy="20" r="6" fill="#ff5f56"/>
@@ -235,11 +235,11 @@
 <g class="cursor-layer">
 <rect class="cursor-active" x="91.6" y="56" width="8.4" height="19.6" fill="#f8f8f2"/>
 </g>
-    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.035399;0.0404;1" dur="10.20s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.035366;0.04039;1" dur="10.15s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-8" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="600" height="350" fill="#282a36" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="600" height="350" fill="#272822" rx="8" ry="8"/>
 <g class="chrome"><rect class="header-bg" x="0" y="0" width="600" height="40" fill="#44475a" rx="8" ry="8"/>
 <rect x="0" y="32" width="600" height="8" fill="#44475a"/>
 <circle cx="22" cy="20" r="6" fill="#ff5f56"/>
@@ -257,11 +257,11 @@
 <g class="cursor-layer">
 <rect class="cursor-active" x="100" y="56" width="8.4" height="19.6" fill="#f8f8f2"/>
 </g>
-    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.0404;0.045303;1" dur="10.20s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.04039;0.045316;1" dur="10.15s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-9" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="600" height="350" fill="#282a36" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="600" height="350" fill="#272822" rx="8" ry="8"/>
 <g class="chrome"><rect class="header-bg" x="0" y="0" width="600" height="40" fill="#44475a" rx="8" ry="8"/>
 <rect x="0" y="32" width="600" height="8" fill="#44475a"/>
 <circle cx="22" cy="20" r="6" fill="#ff5f56"/>
@@ -279,11 +279,11 @@
 <g class="cursor-layer">
 <rect class="cursor-active" x="108.4" y="56" width="8.4" height="19.6" fill="#f8f8f2"/>
 </g>
-    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.045303;0.050304;1" dur="10.20s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.045316;0.050537;1" dur="10.15s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-10" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="600" height="350" fill="#282a36" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="600" height="350" fill="#272822" rx="8" ry="8"/>
 <g class="chrome"><rect class="header-bg" x="0" y="0" width="600" height="40" fill="#44475a" rx="8" ry="8"/>
 <rect x="0" y="32" width="600" height="8" fill="#44475a"/>
 <circle cx="22" cy="20" r="6" fill="#ff5f56"/>
@@ -301,11 +301,11 @@
 <g class="cursor-layer">
 <rect class="cursor-active" x="116.8" y="56" width="8.4" height="19.6" fill="#f8f8f2"/>
 </g>
-    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.050304;0.055501;1" dur="10.20s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.050537;0.055463;1" dur="10.15s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-11" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="600" height="350" fill="#282a36" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="600" height="350" fill="#272822" rx="8" ry="8"/>
 <g class="chrome"><rect class="header-bg" x="0" y="0" width="600" height="40" fill="#44475a" rx="8" ry="8"/>
 <rect x="0" y="32" width="600" height="8" fill="#44475a"/>
 <circle cx="22" cy="20" r="6" fill="#ff5f56"/>
@@ -323,11 +323,11 @@
 <g class="cursor-layer">
 <rect class="cursor-active" x="125.2" y="56" width="8.4" height="19.6" fill="#f8f8f2"/>
 </g>
-    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.055501;0.060698;1" dur="10.20s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.055463;0.060388;1" dur="10.15s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-12" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="600" height="350" fill="#282a36" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="600" height="350" fill="#272822" rx="8" ry="8"/>
 <g class="chrome"><rect class="header-bg" x="0" y="0" width="600" height="40" fill="#44475a" rx="8" ry="8"/>
 <rect x="0" y="32" width="600" height="8" fill="#44475a"/>
 <circle cx="22" cy="20" r="6" fill="#ff5f56"/>
@@ -345,11 +345,11 @@
 <g class="cursor-layer">
 <rect class="cursor-active" x="133.6" y="56" width="8.4" height="19.6" fill="#f8f8f2"/>
 </g>
-    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.060698;0.065895;1" dur="10.20s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.060388;0.065412;1" dur="10.15s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-13" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="600" height="350" fill="#282a36" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="600" height="350" fill="#272822" rx="8" ry="8"/>
 <g class="chrome"><rect class="header-bg" x="0" y="0" width="600" height="40" fill="#44475a" rx="8" ry="8"/>
 <rect x="0" y="32" width="600" height="8" fill="#44475a"/>
 <circle cx="22" cy="20" r="6" fill="#ff5f56"/>
@@ -367,11 +367,11 @@
 <g class="cursor-layer">
 <rect class="cursor-active" x="142" y="56" width="8.4" height="19.6" fill="#f8f8f2"/>
 </g>
-    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.065895;0.073544;1" dur="10.20s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.065412;0.070535;1" dur="10.15s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-14" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="600" height="350" fill="#282a36" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="600" height="350" fill="#272822" rx="8" ry="8"/>
 <g class="chrome"><rect class="header-bg" x="0" y="0" width="600" height="40" fill="#44475a" rx="8" ry="8"/>
 <rect x="0" y="32" width="600" height="8" fill="#44475a"/>
 <circle cx="22" cy="20" r="6" fill="#ff5f56"/>
@@ -389,11 +389,11 @@
 <g class="cursor-layer">
 <rect class="cursor-active" x="150.4" y="56" width="8.4" height="19.6" fill="#f8f8f2"/>
 </g>
-    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.073544;0.080212;1" dur="10.20s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.070535;0.075461;1" dur="10.15s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-15" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="600" height="350" fill="#282a36" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="600" height="350" fill="#272822" rx="8" ry="8"/>
 <g class="chrome"><rect class="header-bg" x="0" y="0" width="600" height="40" fill="#44475a" rx="8" ry="8"/>
 <rect x="0" y="32" width="600" height="8" fill="#44475a"/>
 <circle cx="22" cy="20" r="6" fill="#ff5f56"/>
@@ -411,11 +411,11 @@
 <g class="cursor-layer">
 <rect class="cursor-active" x="158.8" y="56" width="8.4" height="19.6" fill="#f8f8f2"/>
 </g>
-    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.080212;0.085507;1" dur="10.20s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.075461;0.080485;1" dur="10.15s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-16" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="600" height="350" fill="#282a36" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="600" height="350" fill="#272822" rx="8" ry="8"/>
 <g class="chrome"><rect class="header-bg" x="0" y="0" width="600" height="40" fill="#44475a" rx="8" ry="8"/>
 <rect x="0" y="32" width="600" height="8" fill="#44475a"/>
 <circle cx="22" cy="20" r="6" fill="#ff5f56"/>
@@ -433,11 +433,11 @@
 <g class="cursor-layer">
 <rect class="cursor-active" x="167.2" y="56" width="8.4" height="19.6" fill="#f8f8f2"/>
 </g>
-    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.085507;0.090508;1" dur="10.20s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.080485;0.085706;1" dur="10.15s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-17" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="600" height="350" fill="#282a36" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="600" height="350" fill="#272822" rx="8" ry="8"/>
 <g class="chrome"><rect class="header-bg" x="0" y="0" width="600" height="40" fill="#44475a" rx="8" ry="8"/>
 <rect x="0" y="32" width="600" height="8" fill="#44475a"/>
 <circle cx="22" cy="20" r="6" fill="#ff5f56"/>
@@ -455,11 +455,11 @@
 <g class="cursor-layer">
 <rect class="cursor-active" x="175.6" y="56" width="8.4" height="19.6" fill="#f8f8f2"/>
 </g>
-    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.090508;0.095509;1" dur="10.20s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.085706;0.09073;1" dur="10.15s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-18" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="600" height="350" fill="#282a36" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="600" height="350" fill="#272822" rx="8" ry="8"/>
 <g class="chrome"><rect class="header-bg" x="0" y="0" width="600" height="40" fill="#44475a" rx="8" ry="8"/>
 <rect x="0" y="32" width="600" height="8" fill="#44475a"/>
 <circle cx="22" cy="20" r="6" fill="#ff5f56"/>
@@ -477,11 +477,11 @@
 <g class="cursor-layer">
 <rect class="cursor-active" x="184" y="56" width="8.4" height="19.6" fill="#f8f8f2"/>
 </g>
-    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.095509;0.10051;1" dur="10.20s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.09073;0.095754;1" dur="10.15s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-19" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="600" height="350" fill="#282a36" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="600" height="350" fill="#272822" rx="8" ry="8"/>
 <g class="chrome"><rect class="header-bg" x="0" y="0" width="600" height="40" fill="#44475a" rx="8" ry="8"/>
 <rect x="0" y="32" width="600" height="8" fill="#44475a"/>
 <circle cx="22" cy="20" r="6" fill="#ff5f56"/>
@@ -499,11 +499,11 @@
 <g class="cursor-layer">
 <rect class="cursor-active" x="192.4" y="56" width="8.4" height="19.6" fill="#f8f8f2"/>
 </g>
-    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.10051;0.105413;1" dur="10.20s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.095754;0.100778;1" dur="10.15s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-20" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="600" height="350" fill="#282a36" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="600" height="350" fill="#272822" rx="8" ry="8"/>
 <g class="chrome"><rect class="header-bg" x="0" y="0" width="600" height="40" fill="#44475a" rx="8" ry="8"/>
 <rect x="0" y="32" width="600" height="8" fill="#44475a"/>
 <circle cx="22" cy="20" r="6" fill="#ff5f56"/>
@@ -521,11 +521,11 @@
 <g class="cursor-layer">
 <rect class="cursor-active" x="200.8" y="56" width="8.4" height="19.6" fill="#f8f8f2"/>
 </g>
-    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.105413;0.110512;1" dur="10.20s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.100778;0.105802;1" dur="10.15s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-21" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="600" height="350" fill="#282a36" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="600" height="350" fill="#272822" rx="8" ry="8"/>
 <g class="chrome"><rect class="header-bg" x="0" y="0" width="600" height="40" fill="#44475a" rx="8" ry="8"/>
 <rect x="0" y="32" width="600" height="8" fill="#44475a"/>
 <circle cx="22" cy="20" r="6" fill="#ff5f56"/>
@@ -543,11 +543,11 @@
 <g class="cursor-layer">
 <rect class="cursor-active" x="209.2" y="56" width="8.4" height="19.6" fill="#f8f8f2"/>
 </g>
-    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.110512;0.115513;1" dur="10.20s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.105802;0.110728;1" dur="10.15s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-22" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="600" height="350" fill="#282a36" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="600" height="350" fill="#272822" rx="8" ry="8"/>
 <g class="chrome"><rect class="header-bg" x="0" y="0" width="600" height="40" fill="#44475a" rx="8" ry="8"/>
 <rect x="0" y="32" width="600" height="8" fill="#44475a"/>
 <circle cx="22" cy="20" r="6" fill="#ff5f56"/>
@@ -565,11 +565,11 @@
 <g class="cursor-layer">
 <rect class="cursor-active" x="217.6" y="56" width="8.4" height="19.6" fill="#f8f8f2"/>
 </g>
-    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.115513;0.120612;1" dur="10.20s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.110728;0.115851;1" dur="10.15s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-23" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="600" height="350" fill="#282a36" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="600" height="350" fill="#272822" rx="8" ry="8"/>
 <g class="chrome"><rect class="header-bg" x="0" y="0" width="600" height="40" fill="#44475a" rx="8" ry="8"/>
 <rect x="0" y="32" width="600" height="8" fill="#44475a"/>
 <circle cx="22" cy="20" r="6" fill="#ff5f56"/>
@@ -587,11 +587,11 @@
 <g class="cursor-layer">
 <rect class="cursor-active" x="226" y="56" width="8.4" height="19.6" fill="#f8f8f2"/>
 </g>
-    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.120612;0.125711;1" dur="10.20s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.115851;0.120776;1" dur="10.15s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-24" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="600" height="350" fill="#282a36" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="600" height="350" fill="#272822" rx="8" ry="8"/>
 <g class="chrome"><rect class="header-bg" x="0" y="0" width="600" height="40" fill="#44475a" rx="8" ry="8"/>
 <rect x="0" y="32" width="600" height="8" fill="#44475a"/>
 <circle cx="22" cy="20" r="6" fill="#ff5f56"/>
@@ -609,11 +609,11 @@
 <g class="cursor-layer">
 <rect class="cursor-active" x="234.4" y="56" width="8.4" height="19.6" fill="#f8f8f2"/>
 </g>
-    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.125711;0.130712;1" dur="10.20s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.120776;0.125899;1" dur="10.15s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-25" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="600" height="350" fill="#282a36" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="600" height="350" fill="#272822" rx="8" ry="8"/>
 <g class="chrome"><rect class="header-bg" x="0" y="0" width="600" height="40" fill="#44475a" rx="8" ry="8"/>
 <rect x="0" y="32" width="600" height="8" fill="#44475a"/>
 <circle cx="22" cy="20" r="6" fill="#ff5f56"/>
@@ -631,11 +631,11 @@
 <g class="cursor-layer">
 <rect class="cursor-active" x="242.8" y="56" width="8.4" height="19.6" fill="#f8f8f2"/>
 </g>
-    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.130712;0.135713;1" dur="10.20s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.125899;0.130923;1" dur="10.15s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-26" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="600" height="350" fill="#282a36" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="600" height="350" fill="#272822" rx="8" ry="8"/>
 <g class="chrome"><rect class="header-bg" x="0" y="0" width="600" height="40" fill="#44475a" rx="8" ry="8"/>
 <rect x="0" y="32" width="600" height="8" fill="#44475a"/>
 <circle cx="22" cy="20" r="6" fill="#ff5f56"/>
@@ -653,11 +653,11 @@
 <g class="cursor-layer">
 <rect class="cursor-active" x="251.2" y="56" width="8.4" height="19.6" fill="#f8f8f2"/>
 </g>
-    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.135713;0.140714;1" dur="10.20s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.130923;0.135947;1" dur="10.15s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-27" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="600" height="350" fill="#282a36" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="600" height="350" fill="#272822" rx="8" ry="8"/>
 <g class="chrome"><rect class="header-bg" x="0" y="0" width="600" height="40" fill="#44475a" rx="8" ry="8"/>
 <rect x="0" y="32" width="600" height="8" fill="#44475a"/>
 <circle cx="22" cy="20" r="6" fill="#ff5f56"/>
@@ -675,11 +675,11 @@
 <g class="cursor-layer">
 <rect class="cursor-active" x="259.6" y="56" width="8.4" height="19.6" fill="#f8f8f2"/>
 </g>
-    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.140714;0.145715;1" dur="10.20s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.135947;0.140873;1" dur="10.15s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-28" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="600" height="350" fill="#282a36" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="600" height="350" fill="#272822" rx="8" ry="8"/>
 <g class="chrome"><rect class="header-bg" x="0" y="0" width="600" height="40" fill="#44475a" rx="8" ry="8"/>
 <rect x="0" y="32" width="600" height="8" fill="#44475a"/>
 <circle cx="22" cy="20" r="6" fill="#ff5f56"/>
@@ -697,11 +697,11 @@
 <g class="cursor-layer">
 <rect class="cursor-active" x="268" y="56" width="8.4" height="19.6" fill="#f8f8f2"/>
 </g>
-    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.145715;0.150716;1" dur="10.20s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.140873;0.145897;1" dur="10.15s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-29" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="600" height="350" fill="#282a36" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="600" height="350" fill="#272822" rx="8" ry="8"/>
 <g class="chrome"><rect class="header-bg" x="0" y="0" width="600" height="40" fill="#44475a" rx="8" ry="8"/>
 <rect x="0" y="32" width="600" height="8" fill="#44475a"/>
 <circle cx="22" cy="20" r="6" fill="#ff5f56"/>
@@ -719,11 +719,11 @@
 <g class="cursor-layer">
 <rect class="cursor-active" x="276.4" y="56" width="8.4" height="19.6" fill="#f8f8f2"/>
 </g>
-    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.150716;0.155815;1" dur="10.20s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.145897;0.150921;1" dur="10.15s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-30" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="600" height="350" fill="#282a36" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="600" height="350" fill="#272822" rx="8" ry="8"/>
 <g class="chrome"><rect class="header-bg" x="0" y="0" width="600" height="40" fill="#44475a" rx="8" ry="8"/>
 <rect x="0" y="32" width="600" height="8" fill="#44475a"/>
 <circle cx="22" cy="20" r="6" fill="#ff5f56"/>
@@ -741,11 +741,11 @@
 <g class="cursor-layer">
 <rect class="cursor-active" x="284.8" y="56" width="8.4" height="19.6" fill="#f8f8f2"/>
 </g>
-    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.155815;0.160522;1" dur="10.20s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.150921;0.155847;1" dur="10.15s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-31" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="600" height="350" fill="#282a36" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="600" height="350" fill="#272822" rx="8" ry="8"/>
 <g class="chrome"><rect class="header-bg" x="0" y="0" width="600" height="40" fill="#44475a" rx="8" ry="8"/>
 <rect x="0" y="32" width="600" height="8" fill="#44475a"/>
 <circle cx="22" cy="20" r="6" fill="#ff5f56"/>
@@ -763,11 +763,11 @@
 <g class="cursor-layer">
 <rect class="cursor-active" x="293.2" y="56" width="8.4" height="19.6" fill="#f8f8f2"/>
 </g>
-    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.160522;0.165425;1" dur="10.20s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.155847;0.160871;1" dur="10.15s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-32" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="600" height="350" fill="#282a36" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="600" height="350" fill="#272822" rx="8" ry="8"/>
 <g class="chrome"><rect class="header-bg" x="0" y="0" width="600" height="40" fill="#44475a" rx="8" ry="8"/>
 <rect x="0" y="32" width="600" height="8" fill="#44475a"/>
 <circle cx="22" cy="20" r="6" fill="#ff5f56"/>
@@ -785,11 +785,11 @@
 <g class="cursor-layer">
 <rect class="cursor-active" x="301.6" y="56" width="8.4" height="19.6" fill="#f8f8f2"/>
 </g>
-    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.165425;0.170426;1" dur="10.20s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.160871;0.165698;1" dur="10.15s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-33" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="600" height="350" fill="#282a36" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="600" height="350" fill="#272822" rx="8" ry="8"/>
 <g class="chrome"><rect class="header-bg" x="0" y="0" width="600" height="40" fill="#44475a" rx="8" ry="8"/>
 <rect x="0" y="32" width="600" height="8" fill="#44475a"/>
 <circle cx="22" cy="20" r="6" fill="#ff5f56"/>
@@ -807,11 +807,11 @@
 <g class="cursor-layer">
 <rect class="cursor-active" x="310" y="56" width="8.4" height="19.6" fill="#f8f8f2"/>
 </g>
-    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.170426;0.175427;1" dur="10.20s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.165698;0.170919;1" dur="10.15s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-34" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="600" height="350" fill="#282a36" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="600" height="350" fill="#272822" rx="8" ry="8"/>
 <g class="chrome"><rect class="header-bg" x="0" y="0" width="600" height="40" fill="#44475a" rx="8" ry="8"/>
 <rect x="0" y="32" width="600" height="8" fill="#44475a"/>
 <circle cx="22" cy="20" r="6" fill="#ff5f56"/>
@@ -829,11 +829,11 @@
 <g class="cursor-layer">
 <rect class="cursor-active" x="318.4" y="56" width="8.4" height="19.6" fill="#f8f8f2"/>
 </g>
-    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.175427;0.180526;1" dur="10.20s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.170919;0.175943;1" dur="10.15s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-35" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="600" height="350" fill="#282a36" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="600" height="350" fill="#272822" rx="8" ry="8"/>
 <g class="chrome"><rect class="header-bg" x="0" y="0" width="600" height="40" fill="#44475a" rx="8" ry="8"/>
 <rect x="0" y="32" width="600" height="8" fill="#44475a"/>
 <circle cx="22" cy="20" r="6" fill="#ff5f56"/>
@@ -851,11 +851,11 @@
 <g class="cursor-layer">
 <rect class="cursor-active" x="326.8" y="56" width="8.4" height="19.6" fill="#f8f8f2"/>
 </g>
-    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.180526;0.185527;1" dur="10.20s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.175943;0.180967;1" dur="10.15s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-36" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="600" height="350" fill="#282a36" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="600" height="350" fill="#272822" rx="8" ry="8"/>
 <g class="chrome"><rect class="header-bg" x="0" y="0" width="600" height="40" fill="#44475a" rx="8" ry="8"/>
 <rect x="0" y="32" width="600" height="8" fill="#44475a"/>
 <circle cx="22" cy="20" r="6" fill="#ff5f56"/>
@@ -873,11 +873,11 @@
 <g class="cursor-layer">
 <rect class="cursor-active" x="335.2" y="56" width="8.4" height="19.6" fill="#f8f8f2"/>
 </g>
-    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.185527;0.190626;1" dur="10.20s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.180967;0.18609;1" dur="10.15s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-37" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="600" height="350" fill="#282a36" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="600" height="350" fill="#272822" rx="8" ry="8"/>
 <g class="chrome"><rect class="header-bg" x="0" y="0" width="600" height="40" fill="#44475a" rx="8" ry="8"/>
 <rect x="0" y="32" width="600" height="8" fill="#44475a"/>
 <circle cx="22" cy="20" r="6" fill="#ff5f56"/>
@@ -895,11 +895,11 @@
 <g class="cursor-layer">
 <rect class="cursor-active" x="343.6" y="56" width="8.4" height="19.6" fill="#f8f8f2"/>
 </g>
-    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.190626;0.19543;1" dur="10.20s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.18609;0.191016;1" dur="10.15s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-38" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="600" height="350" fill="#282a36" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="600" height="350" fill="#272822" rx="8" ry="8"/>
 <g class="chrome"><rect class="header-bg" x="0" y="0" width="600" height="40" fill="#44475a" rx="8" ry="8"/>
 <rect x="0" y="32" width="600" height="8" fill="#44475a"/>
 <circle cx="22" cy="20" r="6" fill="#ff5f56"/>
@@ -917,11 +917,11 @@
 <g class="cursor-layer">
 <rect class="cursor-active" x="352" y="56" width="8.4" height="19.6" fill="#f8f8f2"/>
 </g>
-    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.19543;0.20053;1" dur="10.20s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.191016;0.195941;1" dur="10.15s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-39" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="600" height="350" fill="#282a36" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="600" height="350" fill="#272822" rx="8" ry="8"/>
 <g class="chrome"><rect class="header-bg" x="0" y="0" width="600" height="40" fill="#44475a" rx="8" ry="8"/>
 <rect x="0" y="32" width="600" height="8" fill="#44475a"/>
 <circle cx="22" cy="20" r="6" fill="#ff5f56"/>
@@ -939,11 +939,11 @@
 <g class="cursor-layer">
 <rect class="cursor-active" x="360.4" y="56" width="8.4" height="19.6" fill="#f8f8f2"/>
 </g>
-    <animate attributeName="visibility" values="hidden;visible;hidden" keyTimes="0;0.20053;1" dur="10.20s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+    <animate attributeName="visibility" values="hidden;visible;hidden" keyTimes="0;0.195941;1" dur="10.15s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-40" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="600" height="350" fill="#282a36" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="600" height="350" fill="#272822" rx="8" ry="8"/>
 <g class="chrome"><rect class="header-bg" x="0" y="0" width="600" height="40" fill="#44475a" rx="8" ry="8"/>
 <rect x="0" y="32" width="600" height="8" fill="#44475a"/>
 <circle cx="22" cy="20" r="6" fill="#ff5f56"/>
@@ -961,11 +961,11 @@
 <g class="cursor-layer">
 <rect class="cursor" x="360.4" y="56" width="8.4" height="19.6" fill="#f8f8f2"/>
 </g>
-    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.20053;0.249951;1" dur="10.20s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.195941;0.245296;1" dur="10.15s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-41" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="600" height="350" fill="#282a36" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="600" height="350" fill="#272822" rx="8" ry="8"/>
 <g class="chrome"><rect class="header-bg" x="0" y="0" width="600" height="40" fill="#44475a" rx="8" ry="8"/>
 <rect x="0" y="32" width="600" height="8" fill="#44475a"/>
 <circle cx="22" cy="20" r="6" fill="#ff5f56"/>
@@ -983,11 +983,11 @@
 <g class="cursor-layer">
 <rect class="cursor" x="360.4" y="56" width="8.4" height="19.6" fill="#f8f8f2"/>
 </g>
-    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.249951;0.260345;1" dur="10.20s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.245296;0.255344;1" dur="10.15s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-42" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="600" height="350" fill="#282a36" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="600" height="350" fill="#272822" rx="8" ry="8"/>
 <g class="chrome"><rect class="header-bg" x="0" y="0" width="600" height="40" fill="#44475a" rx="8" ry="8"/>
 <rect x="0" y="32" width="600" height="8" fill="#44475a"/>
 <circle cx="22" cy="20" r="6" fill="#ff5f56"/>
@@ -1002,11 +1002,11 @@
 <text class="text f13" x="16" y="56">❯</text>
 <text class="text fg" x="24.4" y="56"> echo &apos;Testing header and footer config&apos;</text>
 </g>
-    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.260345;0.261522;1" dur="10.20s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.255344;0.256034;1" dur="10.15s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-43" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="600" height="350" fill="#282a36" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="600" height="350" fill="#272822" rx="8" ry="8"/>
 <g class="chrome"><rect class="header-bg" x="0" y="0" width="600" height="40" fill="#44475a" rx="8" ry="8"/>
 <rect x="0" y="32" width="600" height="8" fill="#44475a"/>
 <circle cx="22" cy="20" r="6" fill="#ff5f56"/>
@@ -1022,11 +1022,11 @@
 <text class="text fg" x="24.4" y="56"> echo &apos;Testing header and footer config&apos;</text>
 <text class="text fg" x="16" y="75.6">Testing header and footer config</text>
 </g>
-    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.261522;0.272014;1" dur="10.20s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.256034;0.266378;1" dur="10.15s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-44" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="600" height="350" fill="#282a36" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="600" height="350" fill="#272822" rx="8" ry="8"/>
 <g class="chrome"><rect class="header-bg" x="0" y="0" width="600" height="40" fill="#44475a" rx="8" ry="8"/>
 <rect x="0" y="32" width="600" height="8" fill="#44475a"/>
 <circle cx="22" cy="20" r="6" fill="#ff5f56"/>
@@ -1046,11 +1046,11 @@
 <g class="cursor-layer">
 <rect class="cursor" x="32.8" y="95.2" width="8.4" height="19.6" fill="#f8f8f2"/>
 </g>
-    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.272014;0.277309;1" dur="10.20s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.266378;0.271599;1" dur="10.15s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-45" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="600" height="350" fill="#282a36" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="600" height="350" fill="#272822" rx="8" ry="8"/>
 <g class="chrome"><rect class="header-bg" x="0" y="0" width="600" height="40" fill="#44475a" rx="8" ry="8"/>
 <rect x="0" y="32" width="600" height="8" fill="#44475a"/>
 <circle cx="22" cy="20" r="6" fill="#ff5f56"/>
@@ -1071,11 +1071,11 @@
 <g class="cursor-layer">
 <rect class="cursor-active" x="41.2" y="95.2" width="8.4" height="19.6" fill="#f8f8f2"/>
 </g>
-    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.277309;0.282016;1" dur="10.20s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.271599;0.276623;1" dur="10.15s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-46" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="600" height="350" fill="#282a36" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="600" height="350" fill="#272822" rx="8" ry="8"/>
 <g class="chrome"><rect class="header-bg" x="0" y="0" width="600" height="40" fill="#44475a" rx="8" ry="8"/>
 <rect x="0" y="32" width="600" height="8" fill="#44475a"/>
 <circle cx="22" cy="20" r="6" fill="#ff5f56"/>
@@ -1096,11 +1096,11 @@
 <g class="cursor-layer">
 <rect class="cursor-active" x="49.6" y="95.2" width="8.4" height="19.6" fill="#f8f8f2"/>
 </g>
-    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.282016;0.287017;1" dur="10.20s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.276623;0.281647;1" dur="10.15s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-47" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="600" height="350" fill="#282a36" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="600" height="350" fill="#272822" rx="8" ry="8"/>
 <g class="chrome"><rect class="header-bg" x="0" y="0" width="600" height="40" fill="#44475a" rx="8" ry="8"/>
 <rect x="0" y="32" width="600" height="8" fill="#44475a"/>
 <circle cx="22" cy="20" r="6" fill="#ff5f56"/>
@@ -1121,11 +1121,11 @@
 <g class="cursor-layer">
 <rect class="cursor-active" x="58" y="95.2" width="8.4" height="19.6" fill="#f8f8f2"/>
 </g>
-    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.287017;0.292018;1" dur="10.20s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.281647;0.286573;1" dur="10.15s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-48" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="600" height="350" fill="#282a36" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="600" height="350" fill="#272822" rx="8" ry="8"/>
 <g class="chrome"><rect class="header-bg" x="0" y="0" width="600" height="40" fill="#44475a" rx="8" ry="8"/>
 <rect x="0" y="32" width="600" height="8" fill="#44475a"/>
 <circle cx="22" cy="20" r="6" fill="#ff5f56"/>
@@ -1146,11 +1146,11 @@
 <g class="cursor-layer">
 <rect class="cursor-active" x="66.4" y="95.2" width="8.4" height="19.6" fill="#f8f8f2"/>
 </g>
-    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.292018;0.296921;1" dur="10.20s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.286573;0.291695;1" dur="10.15s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-49" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="600" height="350" fill="#282a36" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="600" height="350" fill="#272822" rx="8" ry="8"/>
 <g class="chrome"><rect class="header-bg" x="0" y="0" width="600" height="40" fill="#44475a" rx="8" ry="8"/>
 <rect x="0" y="32" width="600" height="8" fill="#44475a"/>
 <circle cx="22" cy="20" r="6" fill="#ff5f56"/>
@@ -1171,11 +1171,11 @@
 <g class="cursor-layer">
 <rect class="cursor-active" x="74.8" y="95.2" width="8.4" height="19.6" fill="#f8f8f2"/>
 </g>
-    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.296921;0.30202;1" dur="10.20s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.291695;0.296621;1" dur="10.15s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-50" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="600" height="350" fill="#282a36" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="600" height="350" fill="#272822" rx="8" ry="8"/>
 <g class="chrome"><rect class="header-bg" x="0" y="0" width="600" height="40" fill="#44475a" rx="8" ry="8"/>
 <rect x="0" y="32" width="600" height="8" fill="#44475a"/>
 <circle cx="22" cy="20" r="6" fill="#ff5f56"/>
@@ -1196,11 +1196,11 @@
 <g class="cursor-layer">
 <rect class="cursor-active" x="83.2" y="95.2" width="8.4" height="19.6" fill="#f8f8f2"/>
 </g>
-    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.30202;0.306923;1" dur="10.20s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.296621;0.301744;1" dur="10.15s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-51" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="600" height="350" fill="#282a36" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="600" height="350" fill="#272822" rx="8" ry="8"/>
 <g class="chrome"><rect class="header-bg" x="0" y="0" width="600" height="40" fill="#44475a" rx="8" ry="8"/>
 <rect x="0" y="32" width="600" height="8" fill="#44475a"/>
 <circle cx="22" cy="20" r="6" fill="#ff5f56"/>
@@ -1221,11 +1221,11 @@
 <g class="cursor-layer">
 <rect class="cursor-active" x="91.6" y="95.2" width="8.4" height="19.6" fill="#f8f8f2"/>
 </g>
-    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.306923;0.311924;1" dur="10.20s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.301744;0.306669;1" dur="10.15s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-52" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="600" height="350" fill="#282a36" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="600" height="350" fill="#272822" rx="8" ry="8"/>
 <g class="chrome"><rect class="header-bg" x="0" y="0" width="600" height="40" fill="#44475a" rx="8" ry="8"/>
 <rect x="0" y="32" width="600" height="8" fill="#44475a"/>
 <circle cx="22" cy="20" r="6" fill="#ff5f56"/>
@@ -1246,11 +1246,11 @@
 <g class="cursor-layer">
 <rect class="cursor-active" x="100" y="95.2" width="8.4" height="19.6" fill="#f8f8f2"/>
 </g>
-    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.311924;0.316925;1" dur="10.20s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.306669;0.311693;1" dur="10.15s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-53" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="600" height="350" fill="#282a36" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="600" height="350" fill="#272822" rx="8" ry="8"/>
 <g class="chrome"><rect class="header-bg" x="0" y="0" width="600" height="40" fill="#44475a" rx="8" ry="8"/>
 <rect x="0" y="32" width="600" height="8" fill="#44475a"/>
 <circle cx="22" cy="20" r="6" fill="#ff5f56"/>
@@ -1271,11 +1271,11 @@
 <g class="cursor-layer">
 <rect class="cursor-active" x="108.4" y="95.2" width="8.4" height="19.6" fill="#f8f8f2"/>
 </g>
-    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.316925;0.322122;1" dur="10.20s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.311693;0.316718;1" dur="10.15s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-54" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="600" height="350" fill="#282a36" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="600" height="350" fill="#272822" rx="8" ry="8"/>
 <g class="chrome"><rect class="header-bg" x="0" y="0" width="600" height="40" fill="#44475a" rx="8" ry="8"/>
 <rect x="0" y="32" width="600" height="8" fill="#44475a"/>
 <circle cx="22" cy="20" r="6" fill="#ff5f56"/>
@@ -1296,11 +1296,11 @@
 <g class="cursor-layer">
 <rect class="cursor-active" x="116.8" y="95.2" width="8.4" height="19.6" fill="#f8f8f2"/>
 </g>
-    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.322122;0.327123;1" dur="10.20s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.316718;0.32184;1" dur="10.15s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-55" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="600" height="350" fill="#282a36" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="600" height="350" fill="#272822" rx="8" ry="8"/>
 <g class="chrome"><rect class="header-bg" x="0" y="0" width="600" height="40" fill="#44475a" rx="8" ry="8"/>
 <rect x="0" y="32" width="600" height="8" fill="#44475a"/>
 <circle cx="22" cy="20" r="6" fill="#ff5f56"/>
@@ -1321,11 +1321,11 @@
 <g class="cursor-layer">
 <rect class="cursor-active" x="125.2" y="95.2" width="8.4" height="19.6" fill="#f8f8f2"/>
 </g>
-    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.327123;0.33232;1" dur="10.20s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.32184;0.326864;1" dur="10.15s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-56" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="600" height="350" fill="#282a36" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="600" height="350" fill="#272822" rx="8" ry="8"/>
 <g class="chrome"><rect class="header-bg" x="0" y="0" width="600" height="40" fill="#44475a" rx="8" ry="8"/>
 <rect x="0" y="32" width="600" height="8" fill="#44475a"/>
 <circle cx="22" cy="20" r="6" fill="#ff5f56"/>
@@ -1346,11 +1346,11 @@
 <g class="cursor-layer">
 <rect class="cursor-active" x="133.6" y="95.2" width="8.4" height="19.6" fill="#f8f8f2"/>
 </g>
-    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.33232;0.336929;1" dur="10.20s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.326864;0.33179;1" dur="10.15s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-57" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="600" height="350" fill="#282a36" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="600" height="350" fill="#272822" rx="8" ry="8"/>
 <g class="chrome"><rect class="header-bg" x="0" y="0" width="600" height="40" fill="#44475a" rx="8" ry="8"/>
 <rect x="0" y="32" width="600" height="8" fill="#44475a"/>
 <circle cx="22" cy="20" r="6" fill="#ff5f56"/>
@@ -1371,11 +1371,11 @@
 <g class="cursor-layer">
 <rect class="cursor-active" x="142" y="95.2" width="8.4" height="19.6" fill="#f8f8f2"/>
 </g>
-    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.336929;0.34193;1" dur="10.20s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.33179;0.336617;1" dur="10.15s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-58" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="600" height="350" fill="#282a36" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="600" height="350" fill="#272822" rx="8" ry="8"/>
 <g class="chrome"><rect class="header-bg" x="0" y="0" width="600" height="40" fill="#44475a" rx="8" ry="8"/>
 <rect x="0" y="32" width="600" height="8" fill="#44475a"/>
 <circle cx="22" cy="20" r="6" fill="#ff5f56"/>
@@ -1396,11 +1396,11 @@
 <g class="cursor-layer">
 <rect class="cursor-active" x="150.4" y="95.2" width="8.4" height="19.6" fill="#f8f8f2"/>
 </g>
-    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.34193;0.347127;1" dur="10.20s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.336617;0.341641;1" dur="10.15s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-59" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="600" height="350" fill="#282a36" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="600" height="350" fill="#272822" rx="8" ry="8"/>
 <g class="chrome"><rect class="header-bg" x="0" y="0" width="600" height="40" fill="#44475a" rx="8" ry="8"/>
 <rect x="0" y="32" width="600" height="8" fill="#44475a"/>
 <circle cx="22" cy="20" r="6" fill="#ff5f56"/>
@@ -1421,11 +1421,11 @@
 <g class="cursor-layer">
 <rect class="cursor-active" x="158.8" y="95.2" width="8.4" height="19.6" fill="#f8f8f2"/>
 </g>
-    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.347127;0.352226;1" dur="10.20s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.341641;0.346567;1" dur="10.15s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-60" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="600" height="350" fill="#282a36" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="600" height="350" fill="#272822" rx="8" ry="8"/>
 <g class="chrome"><rect class="header-bg" x="0" y="0" width="600" height="40" fill="#44475a" rx="8" ry="8"/>
 <rect x="0" y="32" width="600" height="8" fill="#44475a"/>
 <circle cx="22" cy="20" r="6" fill="#ff5f56"/>
@@ -1446,11 +1446,11 @@
 <g class="cursor-layer">
 <rect class="cursor-active" x="167.2" y="95.2" width="8.4" height="19.6" fill="#f8f8f2"/>
 </g>
-    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.352226;0.357129;1" dur="10.20s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.346567;0.351492;1" dur="10.15s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-61" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="600" height="350" fill="#282a36" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="600" height="350" fill="#272822" rx="8" ry="8"/>
 <g class="chrome"><rect class="header-bg" x="0" y="0" width="600" height="40" fill="#44475a" rx="8" ry="8"/>
 <rect x="0" y="32" width="600" height="8" fill="#44475a"/>
 <circle cx="22" cy="20" r="6" fill="#ff5f56"/>
@@ -1471,11 +1471,11 @@
 <g class="cursor-layer">
 <rect class="cursor-active" x="175.6" y="95.2" width="8.4" height="19.6" fill="#f8f8f2"/>
 </g>
-    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.357129;0.36213;1" dur="10.20s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.351492;0.356418;1" dur="10.15s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-62" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="600" height="350" fill="#282a36" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="600" height="350" fill="#272822" rx="8" ry="8"/>
 <g class="chrome"><rect class="header-bg" x="0" y="0" width="600" height="40" fill="#44475a" rx="8" ry="8"/>
 <rect x="0" y="32" width="600" height="8" fill="#44475a"/>
 <circle cx="22" cy="20" r="6" fill="#ff5f56"/>
@@ -1496,11 +1496,11 @@
 <g class="cursor-layer">
 <rect class="cursor-active" x="184" y="95.2" width="8.4" height="19.6" fill="#f8f8f2"/>
 </g>
-    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.36213;0.366739;1" dur="10.20s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.356418;0.361442;1" dur="10.15s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-63" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="600" height="350" fill="#282a36" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="600" height="350" fill="#272822" rx="8" ry="8"/>
 <g class="chrome"><rect class="header-bg" x="0" y="0" width="600" height="40" fill="#44475a" rx="8" ry="8"/>
 <rect x="0" y="32" width="600" height="8" fill="#44475a"/>
 <circle cx="22" cy="20" r="6" fill="#ff5f56"/>
@@ -1521,11 +1521,11 @@
 <g class="cursor-layer">
 <rect class="cursor-active" x="192.4" y="95.2" width="8.4" height="19.6" fill="#f8f8f2"/>
 </g>
-    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.366739;0.372328;1" dur="10.20s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.361442;0.366565;1" dur="10.15s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-64" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="600" height="350" fill="#282a36" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="600" height="350" fill="#272822" rx="8" ry="8"/>
 <g class="chrome"><rect class="header-bg" x="0" y="0" width="600" height="40" fill="#44475a" rx="8" ry="8"/>
 <rect x="0" y="32" width="600" height="8" fill="#44475a"/>
 <circle cx="22" cy="20" r="6" fill="#ff5f56"/>
@@ -1546,11 +1546,11 @@
 <g class="cursor-layer">
 <rect class="cursor-active" x="200.8" y="95.2" width="8.4" height="19.6" fill="#f8f8f2"/>
 </g>
-    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.372328;0.376839;1" dur="10.20s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.366565;0.371589;1" dur="10.15s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-65" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="600" height="350" fill="#282a36" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="600" height="350" fill="#272822" rx="8" ry="8"/>
 <g class="chrome"><rect class="header-bg" x="0" y="0" width="600" height="40" fill="#44475a" rx="8" ry="8"/>
 <rect x="0" y="32" width="600" height="8" fill="#44475a"/>
 <circle cx="22" cy="20" r="6" fill="#ff5f56"/>
@@ -1571,11 +1571,11 @@
 <g class="cursor-layer">
 <rect class="cursor-active" x="209.2" y="95.2" width="8.4" height="19.6" fill="#f8f8f2"/>
 </g>
-    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.376839;0.382134;1" dur="10.20s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.371589;0.376613;1" dur="10.15s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-66" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="600" height="350" fill="#282a36" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="600" height="350" fill="#272822" rx="8" ry="8"/>
 <g class="chrome"><rect class="header-bg" x="0" y="0" width="600" height="40" fill="#44475a" rx="8" ry="8"/>
 <rect x="0" y="32" width="600" height="8" fill="#44475a"/>
 <circle cx="22" cy="20" r="6" fill="#ff5f56"/>
@@ -1596,11 +1596,11 @@
 <g class="cursor-layer">
 <rect class="cursor-active" x="217.6" y="95.2" width="8.4" height="19.6" fill="#f8f8f2"/>
 </g>
-    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.382134;0.386742;1" dur="10.20s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.376613;0.381736;1" dur="10.15s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-67" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="600" height="350" fill="#282a36" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="600" height="350" fill="#272822" rx="8" ry="8"/>
 <g class="chrome"><rect class="header-bg" x="0" y="0" width="600" height="40" fill="#44475a" rx="8" ry="8"/>
 <rect x="0" y="32" width="600" height="8" fill="#44475a"/>
 <circle cx="22" cy="20" r="6" fill="#ff5f56"/>
@@ -1621,11 +1621,11 @@
 <g class="cursor-layer">
 <rect class="cursor-active" x="226" y="95.2" width="8.4" height="19.6" fill="#f8f8f2"/>
 </g>
-    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.386742;0.391743;1" dur="10.20s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.381736;0.386858;1" dur="10.15s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-68" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="600" height="350" fill="#282a36" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="600" height="350" fill="#272822" rx="8" ry="8"/>
 <g class="chrome"><rect class="header-bg" x="0" y="0" width="600" height="40" fill="#44475a" rx="8" ry="8"/>
 <rect x="0" y="32" width="600" height="8" fill="#44475a"/>
 <circle cx="22" cy="20" r="6" fill="#ff5f56"/>
@@ -1646,11 +1646,11 @@
 <g class="cursor-layer">
 <rect class="cursor-active" x="234.4" y="95.2" width="8.4" height="19.6" fill="#f8f8f2"/>
 </g>
-    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.391743;0.396744;1" dur="10.20s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.386858;0.391784;1" dur="10.15s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-69" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="600" height="350" fill="#282a36" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="600" height="350" fill="#272822" rx="8" ry="8"/>
 <g class="chrome"><rect class="header-bg" x="0" y="0" width="600" height="40" fill="#44475a" rx="8" ry="8"/>
 <rect x="0" y="32" width="600" height="8" fill="#44475a"/>
 <circle cx="22" cy="20" r="6" fill="#ff5f56"/>
@@ -1671,11 +1671,11 @@
 <g class="cursor-layer">
 <rect class="cursor-active" x="242.8" y="95.2" width="8.4" height="19.6" fill="#f8f8f2"/>
 </g>
-    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.396744;0.40204;1" dur="10.20s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.391784;0.396808;1" dur="10.15s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-70" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="600" height="350" fill="#282a36" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="600" height="350" fill="#272822" rx="8" ry="8"/>
 <g class="chrome"><rect class="header-bg" x="0" y="0" width="600" height="40" fill="#44475a" rx="8" ry="8"/>
 <rect x="0" y="32" width="600" height="8" fill="#44475a"/>
 <circle cx="22" cy="20" r="6" fill="#ff5f56"/>
@@ -1696,11 +1696,11 @@
 <g class="cursor-layer">
 <rect class="cursor-active" x="251.2" y="95.2" width="8.4" height="19.6" fill="#f8f8f2"/>
 </g>
-    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.40204;0.406746;1" dur="10.20s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.396808;0.401832;1" dur="10.15s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-71" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="600" height="350" fill="#282a36" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="600" height="350" fill="#272822" rx="8" ry="8"/>
 <g class="chrome"><rect class="header-bg" x="0" y="0" width="600" height="40" fill="#44475a" rx="8" ry="8"/>
 <rect x="0" y="32" width="600" height="8" fill="#44475a"/>
 <circle cx="22" cy="20" r="6" fill="#ff5f56"/>
@@ -1721,11 +1721,11 @@
 <g class="cursor-layer">
 <rect class="cursor-active" x="259.6" y="95.2" width="8.4" height="19.6" fill="#f8f8f2"/>
 </g>
-    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.406746;0.411747;1" dur="10.20s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.401832;0.406856;1" dur="10.15s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-72" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="600" height="350" fill="#282a36" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="600" height="350" fill="#272822" rx="8" ry="8"/>
 <g class="chrome"><rect class="header-bg" x="0" y="0" width="600" height="40" fill="#44475a" rx="8" ry="8"/>
 <rect x="0" y="32" width="600" height="8" fill="#44475a"/>
 <circle cx="22" cy="20" r="6" fill="#ff5f56"/>
@@ -1746,11 +1746,11 @@
 <g class="cursor-layer">
 <rect class="cursor-active" x="268" y="95.2" width="8.4" height="19.6" fill="#f8f8f2"/>
 </g>
-    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.411747;0.416944;1" dur="10.20s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.406856;0.411782;1" dur="10.15s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-73" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="600" height="350" fill="#282a36" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="600" height="350" fill="#272822" rx="8" ry="8"/>
 <g class="chrome"><rect class="header-bg" x="0" y="0" width="600" height="40" fill="#44475a" rx="8" ry="8"/>
 <rect x="0" y="32" width="600" height="8" fill="#44475a"/>
 <circle cx="22" cy="20" r="6" fill="#ff5f56"/>
@@ -1771,11 +1771,11 @@
 <g class="cursor-layer">
 <rect class="cursor-active" x="276.4" y="95.2" width="8.4" height="19.6" fill="#f8f8f2"/>
 </g>
-    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.416944;0.422044;1" dur="10.20s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.411782;0.416905;1" dur="10.15s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-74" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="600" height="350" fill="#282a36" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="600" height="350" fill="#272822" rx="8" ry="8"/>
 <g class="chrome"><rect class="header-bg" x="0" y="0" width="600" height="40" fill="#44475a" rx="8" ry="8"/>
 <rect x="0" y="32" width="600" height="8" fill="#44475a"/>
 <circle cx="22" cy="20" r="6" fill="#ff5f56"/>
@@ -1796,11 +1796,11 @@
 <g class="cursor-layer">
 <rect class="cursor-active" x="284.8" y="95.2" width="8.4" height="19.6" fill="#f8f8f2"/>
 </g>
-    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.422044;0.426946;1" dur="10.20s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.416905;0.421929;1" dur="10.15s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-75" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="600" height="350" fill="#282a36" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="600" height="350" fill="#272822" rx="8" ry="8"/>
 <g class="chrome"><rect class="header-bg" x="0" y="0" width="600" height="40" fill="#44475a" rx="8" ry="8"/>
 <rect x="0" y="32" width="600" height="8" fill="#44475a"/>
 <circle cx="22" cy="20" r="6" fill="#ff5f56"/>
@@ -1821,11 +1821,11 @@
 <g class="cursor-layer">
 <rect class="cursor-active" x="293.2" y="95.2" width="8.4" height="19.6" fill="#f8f8f2"/>
 </g>
-    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.426946;0.431751;1" dur="10.20s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.421929;0.426953;1" dur="10.15s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-76" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="600" height="350" fill="#282a36" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="600" height="350" fill="#272822" rx="8" ry="8"/>
 <g class="chrome"><rect class="header-bg" x="0" y="0" width="600" height="40" fill="#44475a" rx="8" ry="8"/>
 <rect x="0" y="32" width="600" height="8" fill="#44475a"/>
 <circle cx="22" cy="20" r="6" fill="#ff5f56"/>
@@ -1846,11 +1846,11 @@
 <g class="cursor-layer">
 <rect class="cursor-active" x="301.6" y="95.2" width="8.4" height="19.6" fill="#f8f8f2"/>
 </g>
-    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.431751;0.436654;1" dur="10.20s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.426953;0.432076;1" dur="10.15s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-77" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="600" height="350" fill="#282a36" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="600" height="350" fill="#272822" rx="8" ry="8"/>
 <g class="chrome"><rect class="header-bg" x="0" y="0" width="600" height="40" fill="#44475a" rx="8" ry="8"/>
 <rect x="0" y="32" width="600" height="8" fill="#44475a"/>
 <circle cx="22" cy="20" r="6" fill="#ff5f56"/>
@@ -1871,11 +1871,11 @@
 <g class="cursor-layer">
 <rect class="cursor-active" x="310" y="95.2" width="8.4" height="19.6" fill="#f8f8f2"/>
 </g>
-    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.436654;0.441655;1" dur="10.20s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.432076;0.437198;1" dur="10.15s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-78" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="600" height="350" fill="#282a36" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="600" height="350" fill="#272822" rx="8" ry="8"/>
 <g class="chrome"><rect class="header-bg" x="0" y="0" width="600" height="40" fill="#44475a" rx="8" ry="8"/>
 <rect x="0" y="32" width="600" height="8" fill="#44475a"/>
 <circle cx="22" cy="20" r="6" fill="#ff5f56"/>
@@ -1896,11 +1896,11 @@
 <g class="cursor-layer">
 <rect class="cursor-active" x="318.4" y="95.2" width="8.4" height="19.6" fill="#f8f8f2"/>
 </g>
-    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.441655;0.446754;1" dur="10.20s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.437198;0.442124;1" dur="10.15s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-79" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="600" height="350" fill="#282a36" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="600" height="350" fill="#272822" rx="8" ry="8"/>
 <g class="chrome"><rect class="header-bg" x="0" y="0" width="600" height="40" fill="#44475a" rx="8" ry="8"/>
 <rect x="0" y="32" width="600" height="8" fill="#44475a"/>
 <circle cx="22" cy="20" r="6" fill="#ff5f56"/>
@@ -1921,11 +1921,11 @@
 <g class="cursor-layer">
 <rect class="cursor-active" x="326.8" y="95.2" width="8.4" height="19.6" fill="#f8f8f2"/>
 </g>
-    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.446754;0.451755;1" dur="10.20s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.442124;0.447148;1" dur="10.15s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-80" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="600" height="350" fill="#282a36" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="600" height="350" fill="#272822" rx="8" ry="8"/>
 <g class="chrome"><rect class="header-bg" x="0" y="0" width="600" height="40" fill="#44475a" rx="8" ry="8"/>
 <rect x="0" y="32" width="600" height="8" fill="#44475a"/>
 <circle cx="22" cy="20" r="6" fill="#ff5f56"/>
@@ -1946,11 +1946,11 @@
 <g class="cursor-layer">
 <rect class="cursor-active" x="335.2" y="95.2" width="8.4" height="19.6" fill="#f8f8f2"/>
 </g>
-    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.451755;0.456756;1" dur="10.20s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.447148;0.452172;1" dur="10.15s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-81" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="600" height="350" fill="#282a36" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="600" height="350" fill="#272822" rx="8" ry="8"/>
 <g class="chrome"><rect class="header-bg" x="0" y="0" width="600" height="40" fill="#44475a" rx="8" ry="8"/>
 <rect x="0" y="32" width="600" height="8" fill="#44475a"/>
 <circle cx="22" cy="20" r="6" fill="#ff5f56"/>
@@ -1971,11 +1971,11 @@
 <g class="cursor-layer">
 <rect class="cursor-active" x="343.6" y="95.2" width="8.4" height="19.6" fill="#f8f8f2"/>
 </g>
-    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.456756;0.461659;1" dur="10.20s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.452172;0.457393;1" dur="10.15s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-82" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="600" height="350" fill="#282a36" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="600" height="350" fill="#272822" rx="8" ry="8"/>
 <g class="chrome"><rect class="header-bg" x="0" y="0" width="600" height="40" fill="#44475a" rx="8" ry="8"/>
 <rect x="0" y="32" width="600" height="8" fill="#44475a"/>
 <circle cx="22" cy="20" r="6" fill="#ff5f56"/>
@@ -1996,11 +1996,11 @@
 <g class="cursor-layer">
 <rect class="cursor-active" x="352" y="95.2" width="8.4" height="19.6" fill="#f8f8f2"/>
 </g>
-    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.461659;0.466758;1" dur="10.20s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.457393;0.46222;1" dur="10.15s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-83" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="600" height="350" fill="#282a36" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="600" height="350" fill="#272822" rx="8" ry="8"/>
 <g class="chrome"><rect class="header-bg" x="0" y="0" width="600" height="40" fill="#44475a" rx="8" ry="8"/>
 <rect x="0" y="32" width="600" height="8" fill="#44475a"/>
 <circle cx="22" cy="20" r="6" fill="#ff5f56"/>
@@ -2021,11 +2021,11 @@
 <g class="cursor-layer">
 <rect class="cursor-active" x="360.4" y="95.2" width="8.4" height="19.6" fill="#f8f8f2"/>
 </g>
-    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.466758;0.471759;1" dur="10.20s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.46222;0.467146;1" dur="10.15s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-84" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="600" height="350" fill="#282a36" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="600" height="350" fill="#272822" rx="8" ry="8"/>
 <g class="chrome"><rect class="header-bg" x="0" y="0" width="600" height="40" fill="#44475a" rx="8" ry="8"/>
 <rect x="0" y="32" width="600" height="8" fill="#44475a"/>
 <circle cx="22" cy="20" r="6" fill="#ff5f56"/>
@@ -2046,11 +2046,11 @@
 <g class="cursor-layer">
 <rect class="cursor-active" x="368.8" y="95.2" width="8.4" height="19.6" fill="#f8f8f2"/>
 </g>
-    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.471759;0.476858;1" dur="10.20s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.467146;0.472072;1" dur="10.15s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-85" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="600" height="350" fill="#282a36" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="600" height="350" fill="#272822" rx="8" ry="8"/>
 <g class="chrome"><rect class="header-bg" x="0" y="0" width="600" height="40" fill="#44475a" rx="8" ry="8"/>
 <rect x="0" y="32" width="600" height="8" fill="#44475a"/>
 <circle cx="22" cy="20" r="6" fill="#ff5f56"/>
@@ -2071,11 +2071,11 @@
 <g class="cursor-layer">
 <rect class="cursor-active" x="377.2" y="95.2" width="8.4" height="19.6" fill="#f8f8f2"/>
 </g>
-    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.476858;0.481859;1" dur="10.20s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.472072;0.477194;1" dur="10.15s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-86" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="600" height="350" fill="#282a36" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="600" height="350" fill="#272822" rx="8" ry="8"/>
 <g class="chrome"><rect class="header-bg" x="0" y="0" width="600" height="40" fill="#44475a" rx="8" ry="8"/>
 <rect x="0" y="32" width="600" height="8" fill="#44475a"/>
 <circle cx="22" cy="20" r="6" fill="#ff5f56"/>
@@ -2096,11 +2096,11 @@
 <g class="cursor-layer">
 <rect class="cursor-active" x="385.6" y="95.2" width="8.4" height="19.6" fill="#f8f8f2"/>
 </g>
-    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.481859;0.486762;1" dur="10.20s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.477194;0.482416;1" dur="10.15s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-87" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="600" height="350" fill="#282a36" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="600" height="350" fill="#272822" rx="8" ry="8"/>
 <g class="chrome"><rect class="header-bg" x="0" y="0" width="600" height="40" fill="#44475a" rx="8" ry="8"/>
 <rect x="0" y="32" width="600" height="8" fill="#44475a"/>
 <circle cx="22" cy="20" r="6" fill="#ff5f56"/>
@@ -2121,11 +2121,11 @@
 <g class="cursor-layer">
 <rect class="cursor-active" x="394" y="95.2" width="8.4" height="19.6" fill="#f8f8f2"/>
 </g>
-    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.486762;0.491567;1" dur="10.20s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.482416;0.48744;1" dur="10.15s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-88" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="600" height="350" fill="#282a36" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="600" height="350" fill="#272822" rx="8" ry="8"/>
 <g class="chrome"><rect class="header-bg" x="0" y="0" width="600" height="40" fill="#44475a" rx="8" ry="8"/>
 <rect x="0" y="32" width="600" height="8" fill="#44475a"/>
 <circle cx="22" cy="20" r="6" fill="#ff5f56"/>
@@ -2146,11 +2146,11 @@
 <g class="cursor-layer">
 <rect class="cursor-active" x="402.4" y="95.2" width="8.4" height="19.6" fill="#f8f8f2"/>
 </g>
-    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.491567;0.496666;1" dur="10.20s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.48744;0.492267;1" dur="10.15s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-89" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="600" height="350" fill="#282a36" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="600" height="350" fill="#272822" rx="8" ry="8"/>
 <g class="chrome"><rect class="header-bg" x="0" y="0" width="600" height="40" fill="#44475a" rx="8" ry="8"/>
 <rect x="0" y="32" width="600" height="8" fill="#44475a"/>
 <circle cx="22" cy="20" r="6" fill="#ff5f56"/>
@@ -2171,11 +2171,11 @@
 <g class="cursor-layer">
 <rect class="cursor-active" x="410.8" y="95.2" width="8.4" height="19.6" fill="#f8f8f2"/>
 </g>
-    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.496666;0.501667;1" dur="10.20s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.492267;0.497291;1" dur="10.15s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-90" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="600" height="350" fill="#282a36" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="600" height="350" fill="#272822" rx="8" ry="8"/>
 <g class="chrome"><rect class="header-bg" x="0" y="0" width="600" height="40" fill="#44475a" rx="8" ry="8"/>
 <rect x="0" y="32" width="600" height="8" fill="#44475a"/>
 <circle cx="22" cy="20" r="6" fill="#ff5f56"/>
@@ -2196,11 +2196,11 @@
 <g class="cursor-layer">
 <rect class="cursor-active" x="419.2" y="95.2" width="8.4" height="19.6" fill="#f8f8f2"/>
 </g>
-    <animate attributeName="visibility" values="hidden;visible;hidden" keyTimes="0;0.501667;1" dur="10.20s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.497291;0.497389;1" dur="10.15s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-91" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="600" height="350" fill="#282a36" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="600" height="350" fill="#272822" rx="8" ry="8"/>
 <g class="chrome"><rect class="header-bg" x="0" y="0" width="600" height="40" fill="#44475a" rx="8" ry="8"/>
 <rect x="0" y="32" width="600" height="8" fill="#44475a"/>
 <circle cx="22" cy="20" r="6" fill="#ff5f56"/>
@@ -2221,11 +2221,11 @@
 <g class="cursor-layer">
 <rect class="cursor" x="419.2" y="95.2" width="8.4" height="19.6" fill="#f8f8f2"/>
 </g>
-    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.501667;0.551285;1" dur="10.20s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.497389;0.547335;1" dur="10.15s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-92" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="600" height="350" fill="#282a36" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="600" height="350" fill="#272822" rx="8" ry="8"/>
 <g class="chrome"><rect class="header-bg" x="0" y="0" width="600" height="40" fill="#44475a" rx="8" ry="8"/>
 <rect x="0" y="32" width="600" height="8" fill="#44475a"/>
 <circle cx="22" cy="20" r="6" fill="#ff5f56"/>
@@ -2246,11 +2246,11 @@
 <g class="cursor-layer">
 <rect class="cursor" x="419.2" y="95.2" width="8.4" height="19.6" fill="#f8f8f2"/>
 </g>
-    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.551285;0.561483;1" dur="10.20s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.547335;0.557876;1" dur="10.15s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-93" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="600" height="350" fill="#282a36" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="600" height="350" fill="#272822" rx="8" ry="8"/>
 <g class="chrome"><rect class="header-bg" x="0" y="0" width="600" height="40" fill="#44475a" rx="8" ry="8"/>
 <rect x="0" y="32" width="600" height="8" fill="#44475a"/>
 <circle cx="22" cy="20" r="6" fill="#ff5f56"/>
@@ -2268,11 +2268,11 @@
 <text class="text f13" x="16" y="95.2">❯</text>
 <text class="text fg" x="24.4" y="95.2"> echo &apos;Header has custom background and border&apos;</text>
 </g>
-    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.561483;0.562071;1" dur="10.20s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.557876;0.559058;1" dur="10.15s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-94" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="600" height="350" fill="#282a36" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="600" height="350" fill="#272822" rx="8" ry="8"/>
 <g class="chrome"><rect class="header-bg" x="0" y="0" width="600" height="40" fill="#44475a" rx="8" ry="8"/>
 <rect x="0" y="32" width="600" height="8" fill="#44475a"/>
 <circle cx="22" cy="20" r="6" fill="#ff5f56"/>
@@ -2291,11 +2291,11 @@
 <text class="text fg" x="24.4" y="95.2"> echo &apos;Header has custom background and border&apos;</text>
 <text class="text fg" x="16" y="114.8">Header has custom background and border</text>
 </g>
-    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.562071;0.572367;1" dur="10.20s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.559058;0.569599;1" dur="10.15s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-95" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="600" height="350" fill="#282a36" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="600" height="350" fill="#272822" rx="8" ry="8"/>
 <g class="chrome"><rect class="header-bg" x="0" y="0" width="600" height="40" fill="#44475a" rx="8" ry="8"/>
 <rect x="0" y="32" width="600" height="8" fill="#44475a"/>
 <circle cx="22" cy="20" r="6" fill="#ff5f56"/>
@@ -2318,11 +2318,11 @@
 <g class="cursor-layer">
 <rect class="cursor" x="32.8" y="134.4" width="8.4" height="19.6" fill="#f8f8f2"/>
 </g>
-    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.572367;0.577564;1" dur="10.20s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.569599;0.575116;1" dur="10.15s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-96" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="600" height="350" fill="#282a36" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="600" height="350" fill="#272822" rx="8" ry="8"/>
 <g class="chrome"><rect class="header-bg" x="0" y="0" width="600" height="40" fill="#44475a" rx="8" ry="8"/>
 <rect x="0" y="32" width="600" height="8" fill="#44475a"/>
 <circle cx="22" cy="20" r="6" fill="#ff5f56"/>
@@ -2346,11 +2346,11 @@
 <g class="cursor-layer">
 <rect class="cursor-active" x="41.2" y="134.4" width="8.4" height="19.6" fill="#f8f8f2"/>
 </g>
-    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.577564;0.582663;1" dur="10.20s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.575116;0.580337;1" dur="10.15s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-97" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="600" height="350" fill="#282a36" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="600" height="350" fill="#272822" rx="8" ry="8"/>
 <g class="chrome"><rect class="header-bg" x="0" y="0" width="600" height="40" fill="#44475a" rx="8" ry="8"/>
 <rect x="0" y="32" width="600" height="8" fill="#44475a"/>
 <circle cx="22" cy="20" r="6" fill="#ff5f56"/>
@@ -2374,11 +2374,11 @@
 <g class="cursor-layer">
 <rect class="cursor-active" x="49.6" y="134.4" width="8.4" height="19.6" fill="#f8f8f2"/>
 </g>
-    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.582663;0.587664;1" dur="10.20s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.580337;0.585361;1" dur="10.15s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-98" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="600" height="350" fill="#282a36" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="600" height="350" fill="#272822" rx="8" ry="8"/>
 <g class="chrome"><rect class="header-bg" x="0" y="0" width="600" height="40" fill="#44475a" rx="8" ry="8"/>
 <rect x="0" y="32" width="600" height="8" fill="#44475a"/>
 <circle cx="22" cy="20" r="6" fill="#ff5f56"/>
@@ -2402,11 +2402,11 @@
 <g class="cursor-layer">
 <rect class="cursor-active" x="58" y="134.4" width="8.4" height="19.6" fill="#f8f8f2"/>
 </g>
-    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.587664;0.592567;1" dur="10.20s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.585361;0.590188;1" dur="10.15s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-99" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="600" height="350" fill="#282a36" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="600" height="350" fill="#272822" rx="8" ry="8"/>
 <g class="chrome"><rect class="header-bg" x="0" y="0" width="600" height="40" fill="#44475a" rx="8" ry="8"/>
 <rect x="0" y="32" width="600" height="8" fill="#44475a"/>
 <circle cx="22" cy="20" r="6" fill="#ff5f56"/>
@@ -2430,11 +2430,11 @@
 <g class="cursor-layer">
 <rect class="cursor-active" x="66.4" y="134.4" width="8.4" height="19.6" fill="#f8f8f2"/>
 </g>
-    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.592567;0.597666;1" dur="10.20s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.590188;0.595015;1" dur="10.15s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-100" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="600" height="350" fill="#282a36" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="600" height="350" fill="#272822" rx="8" ry="8"/>
 <g class="chrome"><rect class="header-bg" x="0" y="0" width="600" height="40" fill="#44475a" rx="8" ry="8"/>
 <rect x="0" y="32" width="600" height="8" fill="#44475a"/>
 <circle cx="22" cy="20" r="6" fill="#ff5f56"/>
@@ -2458,11 +2458,11 @@
 <g class="cursor-layer">
 <rect class="cursor-active" x="74.8" y="134.4" width="8.4" height="19.6" fill="#f8f8f2"/>
 </g>
-    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.597666;0.602667;1" dur="10.20s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.595015;0.600039;1" dur="10.15s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-101" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="600" height="350" fill="#282a36" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="600" height="350" fill="#272822" rx="8" ry="8"/>
 <g class="chrome"><rect class="header-bg" x="0" y="0" width="600" height="40" fill="#44475a" rx="8" ry="8"/>
 <rect x="0" y="32" width="600" height="8" fill="#44475a"/>
 <circle cx="22" cy="20" r="6" fill="#ff5f56"/>
@@ -2486,11 +2486,11 @@
 <g class="cursor-layer">
 <rect class="cursor-active" x="83.2" y="134.4" width="8.4" height="19.6" fill="#f8f8f2"/>
 </g>
-    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.602667;0.60757;1" dur="10.20s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.600039;0.605064;1" dur="10.15s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-102" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="600" height="350" fill="#282a36" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="600" height="350" fill="#272822" rx="8" ry="8"/>
 <g class="chrome"><rect class="header-bg" x="0" y="0" width="600" height="40" fill="#44475a" rx="8" ry="8"/>
 <rect x="0" y="32" width="600" height="8" fill="#44475a"/>
 <circle cx="22" cy="20" r="6" fill="#ff5f56"/>
@@ -2514,11 +2514,11 @@
 <g class="cursor-layer">
 <rect class="cursor-active" x="91.6" y="134.4" width="8.4" height="19.6" fill="#f8f8f2"/>
 </g>
-    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.60757;0.612767;1" dur="10.20s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.605064;0.610088;1" dur="10.15s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-103" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="600" height="350" fill="#282a36" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="600" height="350" fill="#272822" rx="8" ry="8"/>
 <g class="chrome"><rect class="header-bg" x="0" y="0" width="600" height="40" fill="#44475a" rx="8" ry="8"/>
 <rect x="0" y="32" width="600" height="8" fill="#44475a"/>
 <circle cx="22" cy="20" r="6" fill="#ff5f56"/>
@@ -2542,11 +2542,11 @@
 <g class="cursor-layer">
 <rect class="cursor-active" x="100" y="134.4" width="8.4" height="19.6" fill="#f8f8f2"/>
 </g>
-    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.612767;0.618258;1" dur="10.20s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.610088;0.614915;1" dur="10.15s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-104" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="600" height="350" fill="#282a36" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="600" height="350" fill="#272822" rx="8" ry="8"/>
 <g class="chrome"><rect class="header-bg" x="0" y="0" width="600" height="40" fill="#44475a" rx="8" ry="8"/>
 <rect x="0" y="32" width="600" height="8" fill="#44475a"/>
 <circle cx="22" cy="20" r="6" fill="#ff5f56"/>
@@ -2570,11 +2570,11 @@
 <g class="cursor-layer">
 <rect class="cursor-active" x="108.4" y="134.4" width="8.4" height="19.6" fill="#f8f8f2"/>
 </g>
-    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.618258;0.623161;1" dur="10.20s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.614915;0.619939;1" dur="10.15s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-105" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="600" height="350" fill="#282a36" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="600" height="350" fill="#272822" rx="8" ry="8"/>
 <g class="chrome"><rect class="header-bg" x="0" y="0" width="600" height="40" fill="#44475a" rx="8" ry="8"/>
 <rect x="0" y="32" width="600" height="8" fill="#44475a"/>
 <circle cx="22" cy="20" r="6" fill="#ff5f56"/>
@@ -2598,11 +2598,11 @@
 <g class="cursor-layer">
 <rect class="cursor-active" x="116.8" y="134.4" width="8.4" height="19.6" fill="#f8f8f2"/>
 </g>
-    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.623161;0.627574;1" dur="10.20s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.619939;0.624963;1" dur="10.15s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-106" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="600" height="350" fill="#282a36" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="600" height="350" fill="#272822" rx="8" ry="8"/>
 <g class="chrome"><rect class="header-bg" x="0" y="0" width="600" height="40" fill="#44475a" rx="8" ry="8"/>
 <rect x="0" y="32" width="600" height="8" fill="#44475a"/>
 <circle cx="22" cy="20" r="6" fill="#ff5f56"/>
@@ -2626,11 +2626,11 @@
 <g class="cursor-layer">
 <rect class="cursor-active" x="125.2" y="134.4" width="8.4" height="19.6" fill="#f8f8f2"/>
 </g>
-    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.627574;0.632575;1" dur="10.20s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.624963;0.629889;1" dur="10.15s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-107" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="600" height="350" fill="#282a36" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="600" height="350" fill="#272822" rx="8" ry="8"/>
 <g class="chrome"><rect class="header-bg" x="0" y="0" width="600" height="40" fill="#44475a" rx="8" ry="8"/>
 <rect x="0" y="32" width="600" height="8" fill="#44475a"/>
 <circle cx="22" cy="20" r="6" fill="#ff5f56"/>
@@ -2654,11 +2654,11 @@
 <g class="cursor-layer">
 <rect class="cursor-active" x="133.6" y="134.4" width="8.4" height="19.6" fill="#f8f8f2"/>
 </g>
-    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.632575;0.637576;1" dur="10.20s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.629889;0.635011;1" dur="10.15s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-108" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="600" height="350" fill="#282a36" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="600" height="350" fill="#272822" rx="8" ry="8"/>
 <g class="chrome"><rect class="header-bg" x="0" y="0" width="600" height="40" fill="#44475a" rx="8" ry="8"/>
 <rect x="0" y="32" width="600" height="8" fill="#44475a"/>
 <circle cx="22" cy="20" r="6" fill="#ff5f56"/>
@@ -2682,11 +2682,11 @@
 <g class="cursor-layer">
 <rect class="cursor-active" x="142" y="134.4" width="8.4" height="19.6" fill="#f8f8f2"/>
 </g>
-    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.637576;0.642675;1" dur="10.20s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.635011;0.640134;1" dur="10.15s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-109" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="600" height="350" fill="#282a36" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="600" height="350" fill="#272822" rx="8" ry="8"/>
 <g class="chrome"><rect class="header-bg" x="0" y="0" width="600" height="40" fill="#44475a" rx="8" ry="8"/>
 <rect x="0" y="32" width="600" height="8" fill="#44475a"/>
 <circle cx="22" cy="20" r="6" fill="#ff5f56"/>
@@ -2710,11 +2710,11 @@
 <g class="cursor-layer">
 <rect class="cursor-active" x="150.4" y="134.4" width="8.4" height="19.6" fill="#f8f8f2"/>
 </g>
-    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.642675;0.647774;1" dur="10.20s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.640134;0.645158;1" dur="10.15s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-110" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="600" height="350" fill="#282a36" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="600" height="350" fill="#272822" rx="8" ry="8"/>
 <g class="chrome"><rect class="header-bg" x="0" y="0" width="600" height="40" fill="#44475a" rx="8" ry="8"/>
 <rect x="0" y="32" width="600" height="8" fill="#44475a"/>
 <circle cx="22" cy="20" r="6" fill="#ff5f56"/>
@@ -2738,11 +2738,11 @@
 <g class="cursor-layer">
 <rect class="cursor-active" x="158.8" y="134.4" width="8.4" height="19.6" fill="#f8f8f2"/>
 </g>
-    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.647774;0.65356;1" dur="10.20s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.645158;0.650281;1" dur="10.15s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-111" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="600" height="350" fill="#282a36" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="600" height="350" fill="#272822" rx="8" ry="8"/>
 <g class="chrome"><rect class="header-bg" x="0" y="0" width="600" height="40" fill="#44475a" rx="8" ry="8"/>
 <rect x="0" y="32" width="600" height="8" fill="#44475a"/>
 <circle cx="22" cy="20" r="6" fill="#ff5f56"/>
@@ -2766,11 +2766,11 @@
 <g class="cursor-layer">
 <rect class="cursor-active" x="167.2" y="134.4" width="8.4" height="19.6" fill="#f8f8f2"/>
 </g>
-    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.65356;0.657482;1" dur="10.20s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.650281;0.655206;1" dur="10.15s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-112" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="600" height="350" fill="#282a36" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="600" height="350" fill="#272822" rx="8" ry="8"/>
 <g class="chrome"><rect class="header-bg" x="0" y="0" width="600" height="40" fill="#44475a" rx="8" ry="8"/>
 <rect x="0" y="32" width="600" height="8" fill="#44475a"/>
 <circle cx="22" cy="20" r="6" fill="#ff5f56"/>
@@ -2794,11 +2794,11 @@
 <g class="cursor-layer">
 <rect class="cursor-active" x="175.6" y="134.4" width="8.4" height="19.6" fill="#f8f8f2"/>
 </g>
-    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.657482;0.662679;1" dur="10.20s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.655206;0.660231;1" dur="10.15s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-113" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="600" height="350" fill="#282a36" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="600" height="350" fill="#272822" rx="8" ry="8"/>
 <g class="chrome"><rect class="header-bg" x="0" y="0" width="600" height="40" fill="#44475a" rx="8" ry="8"/>
 <rect x="0" y="32" width="600" height="8" fill="#44475a"/>
 <circle cx="22" cy="20" r="6" fill="#ff5f56"/>
@@ -2822,11 +2822,11 @@
 <g class="cursor-layer">
 <rect class="cursor-active" x="184" y="134.4" width="8.4" height="19.6" fill="#f8f8f2"/>
 </g>
-    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.662679;0.667778;1" dur="10.20s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.660231;0.665156;1" dur="10.15s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-114" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="600" height="350" fill="#282a36" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="600" height="350" fill="#272822" rx="8" ry="8"/>
 <g class="chrome"><rect class="header-bg" x="0" y="0" width="600" height="40" fill="#44475a" rx="8" ry="8"/>
 <rect x="0" y="32" width="600" height="8" fill="#44475a"/>
 <circle cx="22" cy="20" r="6" fill="#ff5f56"/>
@@ -2850,11 +2850,11 @@
 <g class="cursor-layer">
 <rect class="cursor-active" x="192.4" y="134.4" width="8.4" height="19.6" fill="#f8f8f2"/>
 </g>
-    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.667778;0.673171;1" dur="10.20s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.665156;0.670279;1" dur="10.15s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-115" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="600" height="350" fill="#282a36" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="600" height="350" fill="#272822" rx="8" ry="8"/>
 <g class="chrome"><rect class="header-bg" x="0" y="0" width="600" height="40" fill="#44475a" rx="8" ry="8"/>
 <rect x="0" y="32" width="600" height="8" fill="#44475a"/>
 <circle cx="22" cy="20" r="6" fill="#ff5f56"/>
@@ -2878,11 +2878,11 @@
 <g class="cursor-layer">
 <rect class="cursor-active" x="200.8" y="134.4" width="8.4" height="19.6" fill="#f8f8f2"/>
 </g>
-    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.673171;0.677878;1" dur="10.20s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.670279;0.675303;1" dur="10.15s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-116" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="600" height="350" fill="#282a36" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="600" height="350" fill="#272822" rx="8" ry="8"/>
 <g class="chrome"><rect class="header-bg" x="0" y="0" width="600" height="40" fill="#44475a" rx="8" ry="8"/>
 <rect x="0" y="32" width="600" height="8" fill="#44475a"/>
 <circle cx="22" cy="20" r="6" fill="#ff5f56"/>
@@ -2906,11 +2906,11 @@
 <g class="cursor-layer">
 <rect class="cursor-active" x="209.2" y="134.4" width="8.4" height="19.6" fill="#f8f8f2"/>
 </g>
-    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.677878;0.682585;1" dur="10.20s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.675303;0.680327;1" dur="10.15s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-117" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="600" height="350" fill="#282a36" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="600" height="350" fill="#272822" rx="8" ry="8"/>
 <g class="chrome"><rect class="header-bg" x="0" y="0" width="600" height="40" fill="#44475a" rx="8" ry="8"/>
 <rect x="0" y="32" width="600" height="8" fill="#44475a"/>
 <circle cx="22" cy="20" r="6" fill="#ff5f56"/>
@@ -2934,11 +2934,11 @@
 <g class="cursor-layer">
 <rect class="cursor-active" x="217.6" y="134.4" width="8.4" height="19.6" fill="#f8f8f2"/>
 </g>
-    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.682585;0.687586;1" dur="10.20s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.680327;0.685351;1" dur="10.15s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-118" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="600" height="350" fill="#282a36" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="600" height="350" fill="#272822" rx="8" ry="8"/>
 <g class="chrome"><rect class="header-bg" x="0" y="0" width="600" height="40" fill="#44475a" rx="8" ry="8"/>
 <rect x="0" y="32" width="600" height="8" fill="#44475a"/>
 <circle cx="22" cy="20" r="6" fill="#ff5f56"/>
@@ -2962,11 +2962,11 @@
 <g class="cursor-layer">
 <rect class="cursor-active" x="226" y="134.4" width="8.4" height="19.6" fill="#f8f8f2"/>
 </g>
-    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.687586;0.692489;1" dur="10.20s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.685351;0.690474;1" dur="10.15s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-119" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="600" height="350" fill="#282a36" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="600" height="350" fill="#272822" rx="8" ry="8"/>
 <g class="chrome"><rect class="header-bg" x="0" y="0" width="600" height="40" fill="#44475a" rx="8" ry="8"/>
 <rect x="0" y="32" width="600" height="8" fill="#44475a"/>
 <circle cx="22" cy="20" r="6" fill="#ff5f56"/>
@@ -2990,11 +2990,11 @@
 <g class="cursor-layer">
 <rect class="cursor-active" x="234.4" y="134.4" width="8.4" height="19.6" fill="#f8f8f2"/>
 </g>
-    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.692489;0.697588;1" dur="10.20s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.690474;0.695498;1" dur="10.15s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-120" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="600" height="350" fill="#282a36" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="600" height="350" fill="#272822" rx="8" ry="8"/>
 <g class="chrome"><rect class="header-bg" x="0" y="0" width="600" height="40" fill="#44475a" rx="8" ry="8"/>
 <rect x="0" y="32" width="600" height="8" fill="#44475a"/>
 <circle cx="22" cy="20" r="6" fill="#ff5f56"/>
@@ -3018,11 +3018,11 @@
 <g class="cursor-layer">
 <rect class="cursor-active" x="242.8" y="134.4" width="8.4" height="19.6" fill="#f8f8f2"/>
 </g>
-    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.697588;0.702785;1" dur="10.20s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.695498;0.700621;1" dur="10.15s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-121" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="600" height="350" fill="#282a36" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="600" height="350" fill="#272822" rx="8" ry="8"/>
 <g class="chrome"><rect class="header-bg" x="0" y="0" width="600" height="40" fill="#44475a" rx="8" ry="8"/>
 <rect x="0" y="32" width="600" height="8" fill="#44475a"/>
 <circle cx="22" cy="20" r="6" fill="#ff5f56"/>
@@ -3046,11 +3046,11 @@
 <g class="cursor-layer">
 <rect class="cursor-active" x="251.2" y="134.4" width="8.4" height="19.6" fill="#f8f8f2"/>
 </g>
-    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.702785;0.707688;1" dur="10.20s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.700621;0.705546;1" dur="10.15s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-122" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="600" height="350" fill="#282a36" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="600" height="350" fill="#272822" rx="8" ry="8"/>
 <g class="chrome"><rect class="header-bg" x="0" y="0" width="600" height="40" fill="#44475a" rx="8" ry="8"/>
 <rect x="0" y="32" width="600" height="8" fill="#44475a"/>
 <circle cx="22" cy="20" r="6" fill="#ff5f56"/>
@@ -3074,11 +3074,11 @@
 <g class="cursor-layer">
 <rect class="cursor-active" x="259.6" y="134.4" width="8.4" height="19.6" fill="#f8f8f2"/>
 </g>
-    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.707688;0.712689;1" dur="10.20s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.705546;0.71057;1" dur="10.15s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-123" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="600" height="350" fill="#282a36" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="600" height="350" fill="#272822" rx="8" ry="8"/>
 <g class="chrome"><rect class="header-bg" x="0" y="0" width="600" height="40" fill="#44475a" rx="8" ry="8"/>
 <rect x="0" y="32" width="600" height="8" fill="#44475a"/>
 <circle cx="22" cy="20" r="6" fill="#ff5f56"/>
@@ -3102,11 +3102,11 @@
 <g class="cursor-layer">
 <rect class="cursor-active" x="268" y="134.4" width="8.4" height="19.6" fill="#f8f8f2"/>
 </g>
-    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.712689;0.717592;1" dur="10.20s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.71057;0.715595;1" dur="10.15s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-124" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="600" height="350" fill="#282a36" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="600" height="350" fill="#272822" rx="8" ry="8"/>
 <g class="chrome"><rect class="header-bg" x="0" y="0" width="600" height="40" fill="#44475a" rx="8" ry="8"/>
 <rect x="0" y="32" width="600" height="8" fill="#44475a"/>
 <circle cx="22" cy="20" r="6" fill="#ff5f56"/>
@@ -3130,11 +3130,11 @@
 <g class="cursor-layer">
 <rect class="cursor-active" x="276.4" y="134.4" width="8.4" height="19.6" fill="#f8f8f2"/>
 </g>
-    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.717592;0.722593;1" dur="10.20s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.715595;0.720717;1" dur="10.15s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-125" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="600" height="350" fill="#282a36" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="600" height="350" fill="#272822" rx="8" ry="8"/>
 <g class="chrome"><rect class="header-bg" x="0" y="0" width="600" height="40" fill="#44475a" rx="8" ry="8"/>
 <rect x="0" y="32" width="600" height="8" fill="#44475a"/>
 <circle cx="22" cy="20" r="6" fill="#ff5f56"/>
@@ -3158,11 +3158,11 @@
 <g class="cursor-layer">
 <rect class="cursor-active" x="284.8" y="134.4" width="8.4" height="19.6" fill="#f8f8f2"/>
 </g>
-    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.722593;0.727496;1" dur="10.20s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.720717;0.72584;1" dur="10.15s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-126" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="600" height="350" fill="#282a36" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="600" height="350" fill="#272822" rx="8" ry="8"/>
 <g class="chrome"><rect class="header-bg" x="0" y="0" width="600" height="40" fill="#44475a" rx="8" ry="8"/>
 <rect x="0" y="32" width="600" height="8" fill="#44475a"/>
 <circle cx="22" cy="20" r="6" fill="#ff5f56"/>
@@ -3186,11 +3186,11 @@
 <g class="cursor-layer">
 <rect class="cursor-active" x="293.2" y="134.4" width="8.4" height="19.6" fill="#f8f8f2"/>
 </g>
-    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.727496;0.732595;1" dur="10.20s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.72584;0.730864;1" dur="10.15s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-127" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="600" height="350" fill="#282a36" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="600" height="350" fill="#272822" rx="8" ry="8"/>
 <g class="chrome"><rect class="header-bg" x="0" y="0" width="600" height="40" fill="#44475a" rx="8" ry="8"/>
 <rect x="0" y="32" width="600" height="8" fill="#44475a"/>
 <circle cx="22" cy="20" r="6" fill="#ff5f56"/>
@@ -3214,11 +3214,11 @@
 <g class="cursor-layer">
 <rect class="cursor-active" x="301.6" y="134.4" width="8.4" height="19.6" fill="#f8f8f2"/>
 </g>
-    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.732595;0.737792;1" dur="10.20s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.730864;0.735691;1" dur="10.15s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-128" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="600" height="350" fill="#282a36" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="600" height="350" fill="#272822" rx="8" ry="8"/>
 <g class="chrome"><rect class="header-bg" x="0" y="0" width="600" height="40" fill="#44475a" rx="8" ry="8"/>
 <rect x="0" y="32" width="600" height="8" fill="#44475a"/>
 <circle cx="22" cy="20" r="6" fill="#ff5f56"/>
@@ -3242,11 +3242,11 @@
 <g class="cursor-layer">
 <rect class="cursor-active" x="310" y="134.4" width="8.4" height="19.6" fill="#f8f8f2"/>
 </g>
-    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.737792;0.742793;1" dur="10.20s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.735691;0.740617;1" dur="10.15s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-129" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="600" height="350" fill="#282a36" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="600" height="350" fill="#272822" rx="8" ry="8"/>
 <g class="chrome"><rect class="header-bg" x="0" y="0" width="600" height="40" fill="#44475a" rx="8" ry="8"/>
 <rect x="0" y="32" width="600" height="8" fill="#44475a"/>
 <circle cx="22" cy="20" r="6" fill="#ff5f56"/>
@@ -3270,11 +3270,11 @@
 <g class="cursor-layer">
 <rect class="cursor-active" x="318.4" y="134.4" width="8.4" height="19.6" fill="#f8f8f2"/>
 </g>
-    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.742793;0.747598;1" dur="10.20s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.740617;0.745739;1" dur="10.15s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-130" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="600" height="350" fill="#282a36" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="600" height="350" fill="#272822" rx="8" ry="8"/>
 <g class="chrome"><rect class="header-bg" x="0" y="0" width="600" height="40" fill="#44475a" rx="8" ry="8"/>
 <rect x="0" y="32" width="600" height="8" fill="#44475a"/>
 <circle cx="22" cy="20" r="6" fill="#ff5f56"/>
@@ -3298,11 +3298,11 @@
 <g class="cursor-layer">
 <rect class="cursor-active" x="326.8" y="134.4" width="8.4" height="19.6" fill="#f8f8f2"/>
 </g>
-    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.747598;0.752599;1" dur="10.20s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.745739;0.750665;1" dur="10.15s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-131" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="600" height="350" fill="#282a36" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="600" height="350" fill="#272822" rx="8" ry="8"/>
 <g class="chrome"><rect class="header-bg" x="0" y="0" width="600" height="40" fill="#44475a" rx="8" ry="8"/>
 <rect x="0" y="32" width="600" height="8" fill="#44475a"/>
 <circle cx="22" cy="20" r="6" fill="#ff5f56"/>
@@ -3326,11 +3326,11 @@
 <g class="cursor-layer">
 <rect class="cursor-active" x="335.2" y="134.4" width="8.4" height="19.6" fill="#f8f8f2"/>
 </g>
-    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.752599;0.757501;1" dur="10.20s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.750665;0.755689;1" dur="10.15s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-132" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="600" height="350" fill="#282a36" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="600" height="350" fill="#272822" rx="8" ry="8"/>
 <g class="chrome"><rect class="header-bg" x="0" y="0" width="600" height="40" fill="#44475a" rx="8" ry="8"/>
 <rect x="0" y="32" width="600" height="8" fill="#44475a"/>
 <circle cx="22" cy="20" r="6" fill="#ff5f56"/>
@@ -3354,11 +3354,11 @@
 <g class="cursor-layer">
 <rect class="cursor-active" x="343.6" y="134.4" width="8.4" height="19.6" fill="#f8f8f2"/>
 </g>
-    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.757501;0.762895;1" dur="10.20s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.755689;0.760812;1" dur="10.15s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-133" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="600" height="350" fill="#282a36" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="600" height="350" fill="#272822" rx="8" ry="8"/>
 <g class="chrome"><rect class="header-bg" x="0" y="0" width="600" height="40" fill="#44475a" rx="8" ry="8"/>
 <rect x="0" y="32" width="600" height="8" fill="#44475a"/>
 <circle cx="22" cy="20" r="6" fill="#ff5f56"/>
@@ -3382,11 +3382,11 @@
 <g class="cursor-layer">
 <rect class="cursor-active" x="352" y="134.4" width="8.4" height="19.6" fill="#f8f8f2"/>
 </g>
-    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.762895;0.768288;1" dur="10.20s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.760812;0.765836;1" dur="10.15s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-134" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="600" height="350" fill="#282a36" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="600" height="350" fill="#272822" rx="8" ry="8"/>
 <g class="chrome"><rect class="header-bg" x="0" y="0" width="600" height="40" fill="#44475a" rx="8" ry="8"/>
 <rect x="0" y="32" width="600" height="8" fill="#44475a"/>
 <circle cx="22" cy="20" r="6" fill="#ff5f56"/>
@@ -3410,11 +3410,11 @@
 <g class="cursor-layer">
 <rect class="cursor-active" x="360.4" y="134.4" width="8.4" height="19.6" fill="#f8f8f2"/>
 </g>
-    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.768288;0.772799;1" dur="10.20s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.765836;0.771057;1" dur="10.15s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-135" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="600" height="350" fill="#282a36" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="600" height="350" fill="#272822" rx="8" ry="8"/>
 <g class="chrome"><rect class="header-bg" x="0" y="0" width="600" height="40" fill="#44475a" rx="8" ry="8"/>
 <rect x="0" y="32" width="600" height="8" fill="#44475a"/>
 <circle cx="22" cy="20" r="6" fill="#ff5f56"/>
@@ -3438,11 +3438,11 @@
 <g class="cursor-layer">
 <rect class="cursor-active" x="368.8" y="134.4" width="8.4" height="19.6" fill="#f8f8f2"/>
 </g>
-    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.772799;0.777702;1" dur="10.20s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.771057;0.775884;1" dur="10.15s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-136" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="600" height="350" fill="#282a36" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="600" height="350" fill="#272822" rx="8" ry="8"/>
 <g class="chrome"><rect class="header-bg" x="0" y="0" width="600" height="40" fill="#44475a" rx="8" ry="8"/>
 <rect x="0" y="32" width="600" height="8" fill="#44475a"/>
 <circle cx="22" cy="20" r="6" fill="#ff5f56"/>
@@ -3466,11 +3466,11 @@
 <g class="cursor-layer">
 <rect class="cursor-active" x="377.2" y="134.4" width="8.4" height="19.6" fill="#f8f8f2"/>
 </g>
-    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.777702;0.782702;1" dur="10.20s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.775884;0.780908;1" dur="10.15s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-137" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="600" height="350" fill="#282a36" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="600" height="350" fill="#272822" rx="8" ry="8"/>
 <g class="chrome"><rect class="header-bg" x="0" y="0" width="600" height="40" fill="#44475a" rx="8" ry="8"/>
 <rect x="0" y="32" width="600" height="8" fill="#44475a"/>
 <circle cx="22" cy="20" r="6" fill="#ff5f56"/>
@@ -3494,11 +3494,11 @@
 <g class="cursor-layer">
 <rect class="cursor-active" x="385.6" y="134.4" width="8.4" height="19.6" fill="#f8f8f2"/>
 </g>
-    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.782702;0.787802;1" dur="10.20s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.780908;0.785932;1" dur="10.15s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-138" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="600" height="350" fill="#282a36" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="600" height="350" fill="#272822" rx="8" ry="8"/>
 <g class="chrome"><rect class="header-bg" x="0" y="0" width="600" height="40" fill="#44475a" rx="8" ry="8"/>
 <rect x="0" y="32" width="600" height="8" fill="#44475a"/>
 <circle cx="22" cy="20" r="6" fill="#ff5f56"/>
@@ -3522,11 +3522,11 @@
 <g class="cursor-layer">
 <rect class="cursor-active" x="394" y="134.4" width="8.4" height="19.6" fill="#f8f8f2"/>
 </g>
-    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.787802;0.792704;1" dur="10.20s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.785932;0.791055;1" dur="10.15s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-139" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="600" height="350" fill="#282a36" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="600" height="350" fill="#272822" rx="8" ry="8"/>
 <g class="chrome"><rect class="header-bg" x="0" y="0" width="600" height="40" fill="#44475a" rx="8" ry="8"/>
 <rect x="0" y="32" width="600" height="8" fill="#44475a"/>
 <circle cx="22" cy="20" r="6" fill="#ff5f56"/>
@@ -3550,11 +3550,11 @@
 <g class="cursor-layer">
 <rect class="cursor-active" x="402.4" y="134.4" width="8.4" height="19.6" fill="#f8f8f2"/>
 </g>
-    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.792704;0.798098;1" dur="10.20s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.791055;0.796079;1" dur="10.15s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-140" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="600" height="350" fill="#282a36" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="600" height="350" fill="#272822" rx="8" ry="8"/>
 <g class="chrome"><rect class="header-bg" x="0" y="0" width="600" height="40" fill="#44475a" rx="8" ry="8"/>
 <rect x="0" y="32" width="600" height="8" fill="#44475a"/>
 <circle cx="22" cy="20" r="6" fill="#ff5f56"/>
@@ -3578,11 +3578,11 @@
 <g class="cursor-layer">
 <rect class="cursor-active" x="410.8" y="134.4" width="8.4" height="19.6" fill="#f8f8f2"/>
 </g>
-    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.798098;0.803099;1" dur="10.20s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.796079;0.801202;1" dur="10.15s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-141" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="600" height="350" fill="#282a36" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="600" height="350" fill="#272822" rx="8" ry="8"/>
 <g class="chrome"><rect class="header-bg" x="0" y="0" width="600" height="40" fill="#44475a" rx="8" ry="8"/>
 <rect x="0" y="32" width="600" height="8" fill="#44475a"/>
 <circle cx="22" cy="20" r="6" fill="#ff5f56"/>
@@ -3606,11 +3606,11 @@
 <g class="cursor-layer">
 <rect class="cursor-active" x="419.2" y="134.4" width="8.4" height="19.6" fill="#f8f8f2"/>
 </g>
-    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.803099;0.802804;1" dur="10.20s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+    <animate attributeName="visibility" values="hidden;visible;hidden" keyTimes="0;0.801202;1" dur="10.15s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-142" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="600" height="350" fill="#282a36" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="600" height="350" fill="#272822" rx="8" ry="8"/>
 <g class="chrome"><rect class="header-bg" x="0" y="0" width="600" height="40" fill="#44475a" rx="8" ry="8"/>
 <rect x="0" y="32" width="600" height="8" fill="#44475a"/>
 <circle cx="22" cy="20" r="6" fill="#ff5f56"/>
@@ -3634,11 +3634,11 @@
 <g class="cursor-layer">
 <rect class="cursor" x="419.2" y="134.4" width="8.4" height="19.6" fill="#f8f8f2"/>
 </g>
-    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.802804;0.901549;1" dur="10.20s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.801202;0.900896;1" dur="10.15s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-143" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="600" height="350" fill="#282a36" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="600" height="350" fill="#272822" rx="8" ry="8"/>
 <g class="chrome"><rect class="header-bg" x="0" y="0" width="600" height="40" fill="#44475a" rx="8" ry="8"/>
 <rect x="0" y="32" width="600" height="8" fill="#44475a"/>
 <circle cx="22" cy="20" r="6" fill="#ff5f56"/>
@@ -3662,11 +3662,11 @@
 <g class="cursor-layer">
 <rect class="cursor" x="419.2" y="134.4" width="8.4" height="19.6" fill="#f8f8f2"/>
 </g>
-    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.901549;0.901942;1" dur="10.20s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.900896;0.901488;1" dur="10.15s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-144" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="600" height="350" fill="#282a36" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="600" height="350" fill="#272822" rx="8" ry="8"/>
 <g class="chrome"><rect class="header-bg" x="0" y="0" width="600" height="40" fill="#44475a" rx="8" ry="8"/>
 <rect x="0" y="32" width="600" height="8" fill="#44475a"/>
 <circle cx="22" cy="20" r="6" fill="#ff5f56"/>
@@ -3690,7 +3690,7 @@
 <g class="cursor-layer">
 <rect class="cursor" x="419.2" y="134.4" width="8.4" height="19.6" fill="#f8f8f2"/>
 </g>
-    <animate attributeName="visibility" values="hidden;visible;visible" keyTimes="0;0.901942;1" dur="10.20s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+    <animate attributeName="visibility" values="hidden;visible;visible" keyTimes="0;0.901488;1" dur="10.15s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
   </g>
 </svg>
