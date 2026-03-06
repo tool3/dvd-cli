@@ -1,5 +1,5 @@
-<svg width="1200" height="700" xmlns="http://www.w3.org/2000/svg">
-  <defs><clipPath id="rounded-corners"><rect x="0" y="0" width="1200" height="700" rx="8" ry="8"/></clipPath></defs>
+<svg width="632" height="172" xmlns="http://www.w3.org/2000/svg">
+  <defs><clipPath id="rounded-corners"><rect x="0" y="0" width="632" height="172" rx="8" ry="8"/></clipPath></defs>
   <style>
     
 .text {
@@ -64,7 +64,7 @@
   <!-- Animated frames with discrete visibility transitions -->
   
   <g id="frame-0" visibility="visible">
-    <rect class="window-bg" x="0" y="0" width="1200" height="700" fill="#1e1e1e" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="632" height="172" fill="#1e1e1e" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f13" x="16" y="16">❯</text>
 </g>
@@ -74,8 +74,8 @@
     <animate
       attributeName="visibility"
       values="visible;hidden;hidden"
-      keyTimes="0.000000;0.006472;1.000000"
-      dur="8.34s"
+      keyTimes="0.000000;0.006364;1.000000"
+      dur="8.33s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -83,19 +83,19 @@
   </g>
 
   <g id="frame-1" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="1200" height="700" fill="#1e1e1e" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="632" height="172" fill="#1e1e1e" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f13" x="16" y="16">❯</text>
-<text class="text fg" x="28" y="16"> #                                                                                              </text>
+<text class="text fg" x="28" y="16"> #                                                             </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor-active" x="52" y="16" width="12" height="28" fill="#c9d1d9"/>
+<rect class="cursor" x="52" y="16" width="12" height="28" fill="#c9d1d9"/>
 </g>
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.006472;0.012466;1.000000"
-      dur="8.34s"
+      keyTimes="0.000000;0.006364;0.012488;1.000000"
+      dur="8.33s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -103,19 +103,19 @@
   </g>
 
   <g id="frame-2" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="1200" height="700" fill="#1e1e1e" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="632" height="172" fill="#1e1e1e" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f13" x="16" y="16">❯</text>
-<text class="text fg" x="28" y="16"> #                                                                                              </text>
+<text class="text fg" x="28" y="16"> #                                                             </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor-active" x="64" y="16" width="12" height="28" fill="#c9d1d9"/>
+<rect class="cursor" x="64" y="16" width="12" height="28" fill="#c9d1d9"/>
 </g>
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.012466;0.018578;1.000000"
-      dur="8.34s"
+      keyTimes="0.000000;0.012488;0.018732;1.000000"
+      dur="8.33s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -123,19 +123,19 @@
   </g>
 
   <g id="frame-3" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="1200" height="700" fill="#1e1e1e" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="632" height="172" fill="#1e1e1e" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f13" x="16" y="16">❯</text>
-<text class="text fg" x="28" y="16"> # T                                                                                            </text>
+<text class="text fg" x="28" y="16"> # T                                                           </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor-active" x="76" y="16" width="12" height="28" fill="#c9d1d9"/>
+<rect class="cursor" x="76" y="16" width="12" height="28" fill="#c9d1d9"/>
 </g>
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.018578;0.024931;1.000000"
-      dur="8.34s"
+      keyTimes="0.000000;0.018732;0.025096;1.000000"
+      dur="8.33s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -143,19 +143,19 @@
   </g>
 
   <g id="frame-4" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="1200" height="700" fill="#1e1e1e" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="632" height="172" fill="#1e1e1e" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f13" x="16" y="16">❯</text>
-<text class="text fg" x="28" y="16"> # Th                                                                                           </text>
+<text class="text fg" x="28" y="16"> # Th                                                          </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor-active" x="88" y="16" width="12" height="28" fill="#c9d1d9"/>
+<rect class="cursor" x="88" y="16" width="12" height="28" fill="#c9d1d9"/>
 </g>
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.024931;0.031164;1.000000"
-      dur="8.34s"
+      keyTimes="0.000000;0.025096;0.031220;1.000000"
+      dur="8.33s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -163,19 +163,19 @@
   </g>
 
   <g id="frame-5" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="1200" height="700" fill="#1e1e1e" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="632" height="172" fill="#1e1e1e" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f13" x="16" y="16">❯</text>
-<text class="text fg" x="28" y="16"> # Thi                                                                                          </text>
+<text class="text fg" x="28" y="16"> # Thi                                                         </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor-active" x="100" y="16" width="12" height="28" fill="#c9d1d9"/>
+<rect class="cursor" x="100" y="16" width="12" height="28" fill="#c9d1d9"/>
 </g>
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.031164;0.037756;1.000000"
-      dur="8.34s"
+      keyTimes="0.000000;0.031220;0.037584;1.000000"
+      dur="8.33s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -183,19 +183,19 @@
   </g>
 
   <g id="frame-6" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="1200" height="700" fill="#1e1e1e" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="632" height="172" fill="#1e1e1e" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f13" x="16" y="16">❯</text>
-<text class="text fg" x="28" y="16"> # This                                                                                         </text>
+<text class="text fg" x="28" y="16"> # This                                                        </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor-active" x="112" y="16" width="12" height="28" fill="#c9d1d9"/>
+<rect class="cursor" x="112" y="16" width="12" height="28" fill="#c9d1d9"/>
 </g>
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.037756;0.043510;1.000000"
-      dur="8.34s"
+      keyTimes="0.000000;0.037584;0.043708;1.000000"
+      dur="8.33s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -203,19 +203,19 @@
   </g>
 
   <g id="frame-7" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="1200" height="700" fill="#1e1e1e" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="632" height="172" fill="#1e1e1e" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f13" x="16" y="16">❯</text>
-<text class="text fg" x="28" y="16"> # This                                                                                         </text>
+<text class="text fg" x="28" y="16"> # This                                                        </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor-active" x="124" y="16" width="12" height="28" fill="#c9d1d9"/>
+<rect class="cursor" x="124" y="16" width="12" height="28" fill="#c9d1d9"/>
 </g>
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.043510;0.049622;1.000000"
-      dur="8.34s"
+      keyTimes="0.000000;0.043708;0.049952;1.000000"
+      dur="8.33s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -223,19 +223,19 @@
   </g>
 
   <g id="frame-8" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="1200" height="700" fill="#1e1e1e" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="632" height="172" fill="#1e1e1e" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f13" x="16" y="16">❯</text>
-<text class="text fg" x="28" y="16"> # This u                                                                                       </text>
+<text class="text fg" x="28" y="16"> # This u                                                      </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor-active" x="136" y="16" width="12" height="28" fill="#c9d1d9"/>
+<rect class="cursor" x="136" y="16" width="12" height="28" fill="#c9d1d9"/>
 </g>
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.049622;0.055855;1.000000"
-      dur="8.34s"
+      keyTimes="0.000000;0.049952;0.056076;1.000000"
+      dur="8.33s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -243,19 +243,19 @@
   </g>
 
   <g id="frame-9" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="1200" height="700" fill="#1e1e1e" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="632" height="172" fill="#1e1e1e" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f13" x="16" y="16">❯</text>
-<text class="text fg" x="28" y="16"> # This us                                                                                      </text>
+<text class="text fg" x="28" y="16"> # This us                                                     </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor-active" x="148" y="16" width="12" height="28" fill="#c9d1d9"/>
+<rect class="cursor" x="148" y="16" width="12" height="28" fill="#c9d1d9"/>
 </g>
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.055855;0.062328;1.000000"
-      dur="8.34s"
+      keyTimes="0.000000;0.056076;0.061960;1.000000"
+      dur="8.33s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -263,19 +263,19 @@
   </g>
 
   <g id="frame-10" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="1200" height="700" fill="#1e1e1e" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="632" height="172" fill="#1e1e1e" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f13" x="16" y="16">❯</text>
-<text class="text fg" x="28" y="16"> # This use                                                                                     </text>
+<text class="text fg" x="28" y="16"> # This use                                                    </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor-active" x="160" y="16" width="12" height="28" fill="#c9d1d9"/>
+<rect class="cursor" x="160" y="16" width="12" height="28" fill="#c9d1d9"/>
 </g>
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.062328;0.068321;1.000000"
-      dur="8.34s"
+      keyTimes="0.000000;0.061960;0.068084;1.000000"
+      dur="8.33s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -283,19 +283,19 @@
   </g>
 
   <g id="frame-11" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="1200" height="700" fill="#1e1e1e" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="632" height="172" fill="#1e1e1e" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f13" x="16" y="16">❯</text>
-<text class="text fg" x="28" y="16"> # This uses                                                                                    </text>
+<text class="text fg" x="28" y="16"> # This uses                                                   </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor-active" x="172" y="16" width="12" height="28" fill="#c9d1d9"/>
+<rect class="cursor" x="172" y="16" width="12" height="28" fill="#c9d1d9"/>
 </g>
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.068321;0.074554;1.000000"
-      dur="8.34s"
+      keyTimes="0.000000;0.068084;0.074087;1.000000"
+      dur="8.33s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -303,19 +303,19 @@
   </g>
 
   <g id="frame-12" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="1200" height="700" fill="#1e1e1e" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="632" height="172" fill="#1e1e1e" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f13" x="16" y="16">❯</text>
-<text class="text fg" x="28" y="16"> # This uses                                                                                    </text>
+<text class="text fg" x="28" y="16"> # This uses                                                   </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor-active" x="184" y="16" width="12" height="28" fill="#c9d1d9"/>
+<rect class="cursor" x="184" y="16" width="12" height="28" fill="#c9d1d9"/>
 </g>
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.074554;0.080307;1.000000"
-      dur="8.34s"
+      keyTimes="0.000000;0.074087;0.080331;1.000000"
+      dur="8.33s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -323,19 +323,19 @@
   </g>
 
   <g id="frame-13" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="1200" height="700" fill="#1e1e1e" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="632" height="172" fill="#1e1e1e" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f13" x="16" y="16">❯</text>
-<text class="text fg" x="28" y="16"> # This uses a                                                                                  </text>
+<text class="text fg" x="28" y="16"> # This uses a                                                 </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor-active" x="196" y="16" width="12" height="28" fill="#c9d1d9"/>
+<rect class="cursor" x="196" y="16" width="12" height="28" fill="#c9d1d9"/>
 </g>
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.080307;0.086659;1.000000"
-      dur="8.34s"
+      keyTimes="0.000000;0.080331;0.086575;1.000000"
+      dur="8.33s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -343,19 +343,19 @@
   </g>
 
   <g id="frame-14" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="1200" height="700" fill="#1e1e1e" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="632" height="172" fill="#1e1e1e" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f13" x="16" y="16">❯</text>
-<text class="text fg" x="28" y="16"> # This uses a                                                                                  </text>
+<text class="text fg" x="28" y="16"> # This uses a                                                 </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor-active" x="208" y="16" width="12" height="28" fill="#c9d1d9"/>
+<rect class="cursor" x="208" y="16" width="12" height="28" fill="#c9d1d9"/>
 </g>
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.086659;0.092892;1.000000"
-      dur="8.34s"
+      keyTimes="0.000000;0.086575;0.092819;1.000000"
+      dur="8.33s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -363,19 +363,19 @@
   </g>
 
   <g id="frame-15" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="1200" height="700" fill="#1e1e1e" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="632" height="172" fill="#1e1e1e" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f13" x="16" y="16">❯</text>
-<text class="text fg" x="28" y="16"> # This uses a 2                                                                                </text>
+<text class="text fg" x="28" y="16"> # This uses a 2                                               </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor-active" x="220" y="16" width="12" height="28" fill="#c9d1d9"/>
+<rect class="cursor" x="220" y="16" width="12" height="28" fill="#c9d1d9"/>
 </g>
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.092892;0.099125;1.000000"
-      dur="8.34s"
+      keyTimes="0.000000;0.092819;0.098823;1.000000"
+      dur="8.33s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -383,19 +383,19 @@
   </g>
 
   <g id="frame-16" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="1200" height="700" fill="#1e1e1e" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="632" height="172" fill="#1e1e1e" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f13" x="16" y="16">❯</text>
-<text class="text fg" x="28" y="16"> # This uses a 20                                                                               </text>
+<text class="text fg" x="28" y="16"> # This uses a 20                                              </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor-active" x="232" y="16" width="12" height="28" fill="#c9d1d9"/>
+<rect class="cursor" x="232" y="16" width="12" height="28" fill="#c9d1d9"/>
 </g>
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.099125;0.105358;1.000000"
-      dur="8.34s"
+      keyTimes="0.000000;0.098823;0.105067;1.000000"
+      dur="8.33s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -403,19 +403,19 @@
   </g>
 
   <g id="frame-17" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="1200" height="700" fill="#1e1e1e" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="632" height="172" fill="#1e1e1e" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f13" x="16" y="16">❯</text>
-<text class="text fg" x="28" y="16"> # This uses a 20p                                                                              </text>
+<text class="text fg" x="28" y="16"> # This uses a 20p                                             </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor-active" x="244" y="16" width="12" height="28" fill="#c9d1d9"/>
+<rect class="cursor" x="244" y="16" width="12" height="28" fill="#c9d1d9"/>
 </g>
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.105358;0.111591;1.000000"
-      dur="8.34s"
+      keyTimes="0.000000;0.105067;0.111191;1.000000"
+      dur="8.33s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -423,19 +423,19 @@
   </g>
 
   <g id="frame-18" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="1200" height="700" fill="#1e1e1e" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="632" height="172" fill="#1e1e1e" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f13" x="16" y="16">❯</text>
-<text class="text fg" x="28" y="16"> # This uses a 20px                                                                             </text>
+<text class="text fg" x="28" y="16"> # This uses a 20px                                            </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor-active" x="256" y="16" width="12" height="28" fill="#c9d1d9"/>
+<rect class="cursor" x="256" y="16" width="12" height="28" fill="#c9d1d9"/>
 </g>
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.111591;0.117464;1.000000"
-      dur="8.34s"
+      keyTimes="0.000000;0.111191;0.117195;1.000000"
+      dur="8.33s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -443,19 +443,19 @@
   </g>
 
   <g id="frame-19" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="1200" height="700" fill="#1e1e1e" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="632" height="172" fill="#1e1e1e" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f13" x="16" y="16">❯</text>
-<text class="text fg" x="28" y="16"> # This uses a 20px                                                                             </text>
+<text class="text fg" x="28" y="16"> # This uses a 20px                                            </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor-active" x="268" y="16" width="12" height="28" fill="#c9d1d9"/>
+<rect class="cursor" x="268" y="16" width="12" height="28" fill="#c9d1d9"/>
 </g>
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.117464;0.123697;1.000000"
-      dur="8.34s"
+      keyTimes="0.000000;0.117195;0.123319;1.000000"
+      dur="8.33s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -463,19 +463,19 @@
   </g>
 
   <g id="frame-20" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="1200" height="700" fill="#1e1e1e" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="632" height="172" fill="#1e1e1e" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f13" x="16" y="16">❯</text>
-<text class="text fg" x="28" y="16"> # This uses a 20px f                                                                           </text>
+<text class="text fg" x="28" y="16"> # This uses a 20px f                                          </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor-active" x="280" y="16" width="12" height="28" fill="#c9d1d9"/>
+<rect class="cursor" x="280" y="16" width="12" height="28" fill="#c9d1d9"/>
 </g>
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.123697;0.130648;1.000000"
-      dur="8.34s"
+      keyTimes="0.000000;0.123319;0.129443;1.000000"
+      dur="8.33s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -483,19 +483,19 @@
   </g>
 
   <g id="frame-21" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="1200" height="700" fill="#1e1e1e" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="632" height="172" fill="#1e1e1e" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f13" x="16" y="16">❯</text>
-<text class="text fg" x="28" y="16"> # This uses a 20px fo                                                                          </text>
+<text class="text fg" x="28" y="16"> # This uses a 20px fo                                         </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor-active" x="292" y="16" width="12" height="28" fill="#c9d1d9"/>
+<rect class="cursor" x="292" y="16" width="12" height="28" fill="#c9d1d9"/>
 </g>
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.130648;0.136162;1.000000"
-      dur="8.34s"
+      keyTimes="0.000000;0.129443;0.135687;1.000000"
+      dur="8.33s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -503,19 +503,19 @@
   </g>
 
   <g id="frame-22" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="1200" height="700" fill="#1e1e1e" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="632" height="172" fill="#1e1e1e" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f13" x="16" y="16">❯</text>
-<text class="text fg" x="28" y="16"> # This uses a 20px fon                                                                         </text>
+<text class="text fg" x="28" y="16"> # This uses a 20px fon                                        </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor-active" x="304" y="16" width="12" height="28" fill="#c9d1d9"/>
+<rect class="cursor" x="304" y="16" width="12" height="28" fill="#c9d1d9"/>
 </g>
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.136162;0.142395;1.000000"
-      dur="8.34s"
+      keyTimes="0.000000;0.135687;0.142171;1.000000"
+      dur="8.33s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -523,30 +523,10 @@
   </g>
 
   <g id="frame-23" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="1200" height="700" fill="#1e1e1e" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="632" height="172" fill="#1e1e1e" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f13" x="16" y="16">❯</text>
-<text class="text fg" x="28" y="16"> # This uses a 20px font                                                                        </text>
-</g>
-<g class="cursor-layer">
-<rect class="cursor-active" x="316" y="16" width="12" height="28" fill="#c9d1d9"/>
-</g>
-    <animate
-      attributeName="visibility"
-      values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.142395;0.190219;1.000000"
-      dur="8.34s"
-      repeatCount="indefinite"
-      calcMode="discrete"
-      fill="freeze"
-    />
-  </g>
-
-  <g id="frame-24" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="1200" height="700" fill="#1e1e1e" rx="8" ry="8"/>
-<g class="text-layer">
-<text class="text f13" x="16" y="16">❯</text>
-<text class="text fg" x="28" y="16"> # This uses a 20px font                                                                        </text>
+<text class="text fg" x="28" y="16"> # This uses a 20px font                                       </text>
 </g>
 <g class="cursor-layer">
 <rect class="cursor" x="316" y="16" width="12" height="28" fill="#c9d1d9"/>
@@ -554,8 +534,28 @@
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.190219;0.202565;1.000000"
-      dur="8.34s"
+      keyTimes="0.000000;0.142171;0.190322;1.000000"
+      dur="8.33s"
+      repeatCount="indefinite"
+      calcMode="discrete"
+      fill="freeze"
+    />
+  </g>
+
+  <g id="frame-24" visibility="hidden">
+    <rect class="window-bg" x="0" y="0" width="632" height="172" fill="#1e1e1e" rx="8" ry="8"/>
+<g class="text-layer">
+<text class="text f13" x="16" y="16">❯</text>
+<text class="text fg" x="28" y="16"> # This uses a 20px font                                       </text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor" x="316" y="16" width="12" height="28" fill="#c9d1d9"/>
+</g>
+    <animate
+      attributeName="visibility"
+      values="hidden;visible;hidden;hidden"
+      keyTimes="0.000000;0.190322;0.202570;1.000000"
+      dur="8.33s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -563,16 +563,16 @@
   </g>
 
   <g id="frame-25" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="1200" height="700" fill="#1e1e1e" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="632" height="172" fill="#1e1e1e" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f13" x="16" y="16">❯</text>
-<text class="text fg" x="28" y="16"> # This uses a 20px font                                                                        </text>
+<text class="text fg" x="28" y="16"> # This uses a 20px font                                       </text>
 </g>
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.202565;0.215870;1.000000"
-      dur="8.34s"
+      keyTimes="0.000000;0.202570;0.215658;1.000000"
+      dur="8.33s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -580,10 +580,10 @@
   </g>
 
   <g id="frame-26" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="1200" height="700" fill="#1e1e1e" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="632" height="172" fill="#1e1e1e" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f13" x="16" y="16">❯</text>
-<text class="text fg" x="28" y="16"> # This uses a 20px font                                                                        </text>
+<text class="text fg" x="28" y="16"> # This uses a 20px font                                       </text>
 <text class="text f13" x="16" y="72">❯</text>
 </g>
 <g class="cursor-layer">
@@ -592,8 +592,8 @@
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.215870;0.275920;1.000000"
-      dur="8.34s"
+      keyTimes="0.000000;0.215658;0.276057;1.000000"
+      dur="8.33s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -601,10 +601,10 @@
   </g>
 
   <g id="frame-27" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="1200" height="700" fill="#1e1e1e" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="632" height="172" fill="#1e1e1e" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f13" x="16" y="16">❯</text>
-<text class="text fg" x="28" y="16"> # This uses a 20px font                                                                        </text>
+<text class="text fg" x="28" y="16"> # This uses a 20px font                                       </text>
 <text class="text f13" x="16" y="72">❯</text>
 </g>
 <g class="cursor-layer">
@@ -613,8 +613,8 @@
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.275920;0.282273;1.000000"
-      dur="8.34s"
+      keyTimes="0.000000;0.276057;0.282301;1.000000"
+      dur="8.33s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -622,21 +622,21 @@
   </g>
 
   <g id="frame-28" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="1200" height="700" fill="#1e1e1e" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="632" height="172" fill="#1e1e1e" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f13" x="16" y="16">❯</text>
-<text class="text fg" x="28" y="16"> # This uses a 20px font                                                                        </text>
+<text class="text fg" x="28" y="16"> # This uses a 20px font                                       </text>
 <text class="text f13" x="16" y="72">❯</text>
-<text class="text fg" x="28" y="72"> e                                                                                              </text>
+<text class="text fg" x="28" y="72"> e                                                             </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor-active" x="52" y="72" width="12" height="28" fill="#c9d1d9"/>
+<rect class="cursor" x="52" y="72" width="12" height="28" fill="#c9d1d9"/>
 </g>
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.282273;0.288266;1.000000"
-      dur="8.34s"
+      keyTimes="0.000000;0.282301;0.288545;1.000000"
+      dur="8.33s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -644,21 +644,21 @@
   </g>
 
   <g id="frame-29" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="1200" height="700" fill="#1e1e1e" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="632" height="172" fill="#1e1e1e" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f13" x="16" y="16">❯</text>
-<text class="text fg" x="28" y="16"> # This uses a 20px font                                                                        </text>
+<text class="text fg" x="28" y="16"> # This uses a 20px font                                       </text>
 <text class="text f13" x="16" y="72">❯</text>
-<text class="text fg" x="28" y="72"> ec                                                                                             </text>
+<text class="text fg" x="28" y="72"> ec                                                            </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor-active" x="64" y="72" width="12" height="28" fill="#c9d1d9"/>
+<rect class="cursor" x="64" y="72" width="12" height="28" fill="#c9d1d9"/>
 </g>
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.288266;0.294498;1.000000"
-      dur="8.34s"
+      keyTimes="0.000000;0.288545;0.294549;1.000000"
+      dur="8.33s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -666,21 +666,21 @@
   </g>
 
   <g id="frame-30" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="1200" height="700" fill="#1e1e1e" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="632" height="172" fill="#1e1e1e" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f13" x="16" y="16">❯</text>
-<text class="text fg" x="28" y="16"> # This uses a 20px font                                                                        </text>
+<text class="text fg" x="28" y="16"> # This uses a 20px font                                       </text>
 <text class="text f13" x="16" y="72">❯</text>
-<text class="text fg" x="28" y="72"> ech                                                                                            </text>
+<text class="text fg" x="28" y="72"> ech                                                           </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor-active" x="76" y="72" width="12" height="28" fill="#c9d1d9"/>
+<rect class="cursor" x="76" y="72" width="12" height="28" fill="#c9d1d9"/>
 </g>
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.294498;0.300611;1.000000"
-      dur="8.34s"
+      keyTimes="0.000000;0.294549;0.300552;1.000000"
+      dur="8.33s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -688,21 +688,21 @@
   </g>
 
   <g id="frame-31" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="1200" height="700" fill="#1e1e1e" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="632" height="172" fill="#1e1e1e" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f13" x="16" y="16">❯</text>
-<text class="text fg" x="28" y="16"> # This uses a 20px font                                                                        </text>
+<text class="text fg" x="28" y="16"> # This uses a 20px font                                       </text>
 <text class="text f13" x="16" y="72">❯</text>
-<text class="text fg" x="28" y="72"> echo                                                                                           </text>
+<text class="text fg" x="28" y="72"> echo                                                          </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor-active" x="88" y="72" width="12" height="28" fill="#c9d1d9"/>
+<rect class="cursor" x="88" y="72" width="12" height="28" fill="#c9d1d9"/>
 </g>
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.300611;0.306844;1.000000"
-      dur="8.34s"
+      keyTimes="0.000000;0.300552;0.306796;1.000000"
+      dur="8.33s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -710,21 +710,21 @@
   </g>
 
   <g id="frame-32" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="1200" height="700" fill="#1e1e1e" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="632" height="172" fill="#1e1e1e" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f13" x="16" y="16">❯</text>
-<text class="text fg" x="28" y="16"> # This uses a 20px font                                                                        </text>
+<text class="text fg" x="28" y="16"> # This uses a 20px font                                       </text>
 <text class="text f13" x="16" y="72">❯</text>
-<text class="text fg" x="28" y="72"> echo                                                                                           </text>
+<text class="text fg" x="28" y="72"> echo                                                          </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor-active" x="100" y="72" width="12" height="28" fill="#c9d1d9"/>
+<rect class="cursor" x="100" y="72" width="12" height="28" fill="#c9d1d9"/>
 </g>
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.306844;0.313077;1.000000"
-      dur="8.34s"
+      keyTimes="0.000000;0.306796;0.313040;1.000000"
+      dur="8.33s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -732,21 +732,21 @@
   </g>
 
   <g id="frame-33" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="1200" height="700" fill="#1e1e1e" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="632" height="172" fill="#1e1e1e" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f13" x="16" y="16">❯</text>
-<text class="text fg" x="28" y="16"> # This uses a 20px font                                                                        </text>
+<text class="text fg" x="28" y="16"> # This uses a 20px font                                       </text>
 <text class="text f13" x="16" y="72">❯</text>
-<text class="text fg" x="28" y="72"> echo &apos;                                                                                         </text>
+<text class="text fg" x="28" y="72"> echo &apos;                                                        </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor-active" x="112" y="72" width="12" height="28" fill="#c9d1d9"/>
+<rect class="cursor" x="112" y="72" width="12" height="28" fill="#c9d1d9"/>
 </g>
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.313077;0.319070;1.000000"
-      dur="8.34s"
+      keyTimes="0.000000;0.313040;0.319044;1.000000"
+      dur="8.33s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -754,21 +754,21 @@
   </g>
 
   <g id="frame-34" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="1200" height="700" fill="#1e1e1e" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="632" height="172" fill="#1e1e1e" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f13" x="16" y="16">❯</text>
-<text class="text fg" x="28" y="16"> # This uses a 20px font                                                                        </text>
+<text class="text fg" x="28" y="16"> # This uses a 20px font                                       </text>
 <text class="text f13" x="16" y="72">❯</text>
-<text class="text fg" x="28" y="72"> echo &apos;G                                                                                        </text>
+<text class="text fg" x="28" y="72"> echo &apos;G                                                       </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor-active" x="124" y="72" width="12" height="28" fill="#c9d1d9"/>
+<rect class="cursor" x="124" y="72" width="12" height="28" fill="#c9d1d9"/>
 </g>
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.319070;0.325183;1.000000"
-      dur="8.34s"
+      keyTimes="0.000000;0.319044;0.325288;1.000000"
+      dur="8.33s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -776,21 +776,21 @@
   </g>
 
   <g id="frame-35" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="1200" height="700" fill="#1e1e1e" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="632" height="172" fill="#1e1e1e" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f13" x="16" y="16">❯</text>
-<text class="text fg" x="28" y="16"> # This uses a 20px font                                                                        </text>
+<text class="text fg" x="28" y="16"> # This uses a 20px font                                       </text>
 <text class="text f13" x="16" y="72">❯</text>
-<text class="text fg" x="28" y="72"> echo &apos;Gr                                                                                       </text>
+<text class="text fg" x="28" y="72"> echo &apos;Gr                                                      </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor-active" x="136" y="72" width="12" height="28" fill="#c9d1d9"/>
+<rect class="cursor" x="136" y="72" width="12" height="28" fill="#c9d1d9"/>
 </g>
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.325183;0.331176;1.000000"
-      dur="8.34s"
+      keyTimes="0.000000;0.325288;0.331532;1.000000"
+      dur="8.33s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -798,21 +798,21 @@
   </g>
 
   <g id="frame-36" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="1200" height="700" fill="#1e1e1e" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="632" height="172" fill="#1e1e1e" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f13" x="16" y="16">❯</text>
-<text class="text fg" x="28" y="16"> # This uses a 20px font                                                                        </text>
+<text class="text fg" x="28" y="16"> # This uses a 20px font                                       </text>
 <text class="text f13" x="16" y="72">❯</text>
-<text class="text fg" x="28" y="72"> echo &apos;Gre                                                                                      </text>
+<text class="text fg" x="28" y="72"> echo &apos;Gre                                                     </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor-active" x="148" y="72" width="12" height="28" fill="#c9d1d9"/>
+<rect class="cursor" x="148" y="72" width="12" height="28" fill="#c9d1d9"/>
 </g>
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.331176;0.337169;1.000000"
-      dur="8.34s"
+      keyTimes="0.000000;0.331532;0.337656;1.000000"
+      dur="8.33s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -820,21 +820,21 @@
   </g>
 
   <g id="frame-37" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="1200" height="700" fill="#1e1e1e" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="632" height="172" fill="#1e1e1e" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f13" x="16" y="16">❯</text>
-<text class="text fg" x="28" y="16"> # This uses a 20px font                                                                        </text>
+<text class="text fg" x="28" y="16"> # This uses a 20px font                                       </text>
 <text class="text f13" x="16" y="72">❯</text>
-<text class="text fg" x="28" y="72"> echo &apos;Grea                                                                                     </text>
+<text class="text fg" x="28" y="72"> echo &apos;Grea                                                    </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor-active" x="160" y="72" width="12" height="28" fill="#c9d1d9"/>
+<rect class="cursor" x="160" y="72" width="12" height="28" fill="#c9d1d9"/>
 </g>
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.337169;0.343282;1.000000"
-      dur="8.34s"
+      keyTimes="0.000000;0.337656;0.343900;1.000000"
+      dur="8.33s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -842,21 +842,21 @@
   </g>
 
   <g id="frame-38" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="1200" height="700" fill="#1e1e1e" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="632" height="172" fill="#1e1e1e" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f13" x="16" y="16">❯</text>
-<text class="text fg" x="28" y="16"> # This uses a 20px font                                                                        </text>
+<text class="text fg" x="28" y="16"> # This uses a 20px font                                       </text>
 <text class="text f13" x="16" y="72">❯</text>
-<text class="text fg" x="28" y="72"> echo &apos;Great                                                                                    </text>
+<text class="text fg" x="28" y="72"> echo &apos;Great                                                   </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor-active" x="172" y="72" width="12" height="28" fill="#c9d1d9"/>
+<rect class="cursor" x="172" y="72" width="12" height="28" fill="#c9d1d9"/>
 </g>
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.343282;0.349275;1.000000"
-      dur="8.34s"
+      keyTimes="0.000000;0.343900;0.350264;1.000000"
+      dur="8.33s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -864,21 +864,21 @@
   </g>
 
   <g id="frame-39" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="1200" height="700" fill="#1e1e1e" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="632" height="172" fill="#1e1e1e" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f13" x="16" y="16">❯</text>
-<text class="text fg" x="28" y="16"> # This uses a 20px font                                                                        </text>
+<text class="text fg" x="28" y="16"> # This uses a 20px font                                       </text>
 <text class="text f13" x="16" y="72">❯</text>
-<text class="text fg" x="28" y="72"> echo &apos;Great                                                                                    </text>
+<text class="text fg" x="28" y="72"> echo &apos;Great                                                   </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor-active" x="184" y="72" width="12" height="28" fill="#c9d1d9"/>
+<rect class="cursor" x="184" y="72" width="12" height="28" fill="#c9d1d9"/>
 </g>
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.349275;0.355627;1.000000"
-      dur="8.34s"
+      keyTimes="0.000000;0.350264;0.355908;1.000000"
+      dur="8.33s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -886,21 +886,21 @@
   </g>
 
   <g id="frame-40" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="1200" height="700" fill="#1e1e1e" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="632" height="172" fill="#1e1e1e" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f13" x="16" y="16">❯</text>
-<text class="text fg" x="28" y="16"> # This uses a 20px font                                                                        </text>
+<text class="text fg" x="28" y="16"> # This uses a 20px font                                       </text>
 <text class="text f13" x="16" y="72">❯</text>
-<text class="text fg" x="28" y="72"> echo &apos;Great f                                                                                  </text>
+<text class="text fg" x="28" y="72"> echo &apos;Great f                                                 </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor-active" x="196" y="72" width="12" height="28" fill="#c9d1d9"/>
+<rect class="cursor" x="196" y="72" width="12" height="28" fill="#c9d1d9"/>
 </g>
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.355627;0.361740;1.000000"
-      dur="8.34s"
+      keyTimes="0.000000;0.355908;0.361792;1.000000"
+      dur="8.33s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -908,21 +908,21 @@
   </g>
 
   <g id="frame-41" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="1200" height="700" fill="#1e1e1e" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="632" height="172" fill="#1e1e1e" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f13" x="16" y="16">❯</text>
-<text class="text fg" x="28" y="16"> # This uses a 20px font                                                                        </text>
+<text class="text fg" x="28" y="16"> # This uses a 20px font                                       </text>
 <text class="text f13" x="16" y="72">❯</text>
-<text class="text fg" x="28" y="72"> echo &apos;Great fo                                                                                 </text>
+<text class="text fg" x="28" y="72"> echo &apos;Great fo                                                </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor-active" x="208" y="72" width="12" height="28" fill="#c9d1d9"/>
+<rect class="cursor" x="208" y="72" width="12" height="28" fill="#c9d1d9"/>
 </g>
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.361740;0.368093;1.000000"
-      dur="8.34s"
+      keyTimes="0.000000;0.361792;0.368036;1.000000"
+      dur="8.33s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -930,21 +930,21 @@
   </g>
 
   <g id="frame-42" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="1200" height="700" fill="#1e1e1e" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="632" height="172" fill="#1e1e1e" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f13" x="16" y="16">❯</text>
-<text class="text fg" x="28" y="16"> # This uses a 20px font                                                                        </text>
+<text class="text fg" x="28" y="16"> # This uses a 20px font                                       </text>
 <text class="text f13" x="16" y="72">❯</text>
-<text class="text fg" x="28" y="72"> echo &apos;Great for                                                                                </text>
+<text class="text fg" x="28" y="72"> echo &apos;Great for                                               </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor-active" x="220" y="72" width="12" height="28" fill="#c9d1d9"/>
+<rect class="cursor" x="220" y="72" width="12" height="28" fill="#c9d1d9"/>
 </g>
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.368093;0.374206;1.000000"
-      dur="8.34s"
+      keyTimes="0.000000;0.368036;0.374280;1.000000"
+      dur="8.33s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -952,21 +952,21 @@
   </g>
 
   <g id="frame-43" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="1200" height="700" fill="#1e1e1e" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="632" height="172" fill="#1e1e1e" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f13" x="16" y="16">❯</text>
-<text class="text fg" x="28" y="16"> # This uses a 20px font                                                                        </text>
+<text class="text fg" x="28" y="16"> # This uses a 20px font                                       </text>
 <text class="text f13" x="16" y="72">❯</text>
-<text class="text fg" x="28" y="72"> echo &apos;Great for                                                                                </text>
+<text class="text fg" x="28" y="72"> echo &apos;Great for                                               </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor-active" x="232" y="72" width="12" height="28" fill="#c9d1d9"/>
+<rect class="cursor" x="232" y="72" width="12" height="28" fill="#c9d1d9"/>
 </g>
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.374206;0.380439;1.000000"
-      dur="8.34s"
+      keyTimes="0.000000;0.374280;0.380644;1.000000"
+      dur="8.33s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -974,21 +974,21 @@
   </g>
 
   <g id="frame-44" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="1200" height="700" fill="#1e1e1e" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="632" height="172" fill="#1e1e1e" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f13" x="16" y="16">❯</text>
-<text class="text fg" x="28" y="16"> # This uses a 20px font                                                                        </text>
+<text class="text fg" x="28" y="16"> # This uses a 20px font                                       </text>
 <text class="text f13" x="16" y="72">❯</text>
-<text class="text fg" x="28" y="72"> echo &apos;Great for p                                                                              </text>
+<text class="text fg" x="28" y="72"> echo &apos;Great for p                                             </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor-active" x="244" y="72" width="12" height="28" fill="#c9d1d9"/>
+<rect class="cursor" x="244" y="72" width="12" height="28" fill="#c9d1d9"/>
 </g>
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.380439;0.386671;1.000000"
-      dur="8.34s"
+      keyTimes="0.000000;0.380644;0.386527;1.000000"
+      dur="8.33s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -996,21 +996,21 @@
   </g>
 
   <g id="frame-45" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="1200" height="700" fill="#1e1e1e" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="632" height="172" fill="#1e1e1e" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f13" x="16" y="16">❯</text>
-<text class="text fg" x="28" y="16"> # This uses a 20px font                                                                        </text>
+<text class="text fg" x="28" y="16"> # This uses a 20px font                                       </text>
 <text class="text f13" x="16" y="72">❯</text>
-<text class="text fg" x="28" y="72"> echo &apos;Great for pr                                                                             </text>
+<text class="text fg" x="28" y="72"> echo &apos;Great for pr                                            </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor-active" x="256" y="72" width="12" height="28" fill="#c9d1d9"/>
+<rect class="cursor" x="256" y="72" width="12" height="28" fill="#c9d1d9"/>
 </g>
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.386671;0.392665;1.000000"
-      dur="8.34s"
+      keyTimes="0.000000;0.386527;0.392771;1.000000"
+      dur="8.33s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -1018,21 +1018,21 @@
   </g>
 
   <g id="frame-46" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="1200" height="700" fill="#1e1e1e" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="632" height="172" fill="#1e1e1e" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f13" x="16" y="16">❯</text>
-<text class="text fg" x="28" y="16"> # This uses a 20px font                                                                        </text>
+<text class="text fg" x="28" y="16"> # This uses a 20px font                                       </text>
 <text class="text f13" x="16" y="72">❯</text>
-<text class="text fg" x="28" y="72"> echo &apos;Great for pre                                                                            </text>
+<text class="text fg" x="28" y="72"> echo &apos;Great for pre                                           </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor-active" x="268" y="72" width="12" height="28" fill="#c9d1d9"/>
+<rect class="cursor" x="268" y="72" width="12" height="28" fill="#c9d1d9"/>
 </g>
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.392665;0.398658;1.000000"
-      dur="8.34s"
+      keyTimes="0.000000;0.392771;0.398775;1.000000"
+      dur="8.33s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -1040,21 +1040,21 @@
   </g>
 
   <g id="frame-47" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="1200" height="700" fill="#1e1e1e" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="632" height="172" fill="#1e1e1e" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f13" x="16" y="16">❯</text>
-<text class="text fg" x="28" y="16"> # This uses a 20px font                                                                        </text>
+<text class="text fg" x="28" y="16"> # This uses a 20px font                                       </text>
 <text class="text f13" x="16" y="72">❯</text>
-<text class="text fg" x="28" y="72"> echo &apos;Great for pres                                                                           </text>
+<text class="text fg" x="28" y="72"> echo &apos;Great for pres                                          </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor-active" x="280" y="72" width="12" height="28" fill="#c9d1d9"/>
+<rect class="cursor" x="280" y="72" width="12" height="28" fill="#c9d1d9"/>
 </g>
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.398658;0.405010;1.000000"
-      dur="8.34s"
+      keyTimes="0.000000;0.398775;0.404659;1.000000"
+      dur="8.33s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -1062,21 +1062,21 @@
   </g>
 
   <g id="frame-48" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="1200" height="700" fill="#1e1e1e" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="632" height="172" fill="#1e1e1e" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f13" x="16" y="16">❯</text>
-<text class="text fg" x="28" y="16"> # This uses a 20px font                                                                        </text>
+<text class="text fg" x="28" y="16"> # This uses a 20px font                                       </text>
 <text class="text f13" x="16" y="72">❯</text>
-<text class="text fg" x="28" y="72"> echo &apos;Great for prese                                                                          </text>
+<text class="text fg" x="28" y="72"> echo &apos;Great for prese                                         </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor-active" x="292" y="72" width="12" height="28" fill="#c9d1d9"/>
+<rect class="cursor" x="292" y="72" width="12" height="28" fill="#c9d1d9"/>
 </g>
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.405010;0.411363;1.000000"
-      dur="8.34s"
+      keyTimes="0.000000;0.404659;0.410903;1.000000"
+      dur="8.33s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -1084,21 +1084,21 @@
   </g>
 
   <g id="frame-49" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="1200" height="700" fill="#1e1e1e" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="632" height="172" fill="#1e1e1e" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f13" x="16" y="16">❯</text>
-<text class="text fg" x="28" y="16"> # This uses a 20px font                                                                        </text>
+<text class="text fg" x="28" y="16"> # This uses a 20px font                                       </text>
 <text class="text f13" x="16" y="72">❯</text>
-<text class="text fg" x="28" y="72"> echo &apos;Great for presen                                                                         </text>
+<text class="text fg" x="28" y="72"> echo &apos;Great for presen                                        </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor-active" x="304" y="72" width="12" height="28" fill="#c9d1d9"/>
+<rect class="cursor" x="304" y="72" width="12" height="28" fill="#c9d1d9"/>
 </g>
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.411363;0.417715;1.000000"
-      dur="8.34s"
+      keyTimes="0.000000;0.410903;0.417027;1.000000"
+      dur="8.33s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -1106,21 +1106,21 @@
   </g>
 
   <g id="frame-50" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="1200" height="700" fill="#1e1e1e" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="632" height="172" fill="#1e1e1e" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f13" x="16" y="16">❯</text>
-<text class="text fg" x="28" y="16"> # This uses a 20px font                                                                        </text>
+<text class="text fg" x="28" y="16"> # This uses a 20px font                                       </text>
 <text class="text f13" x="16" y="72">❯</text>
-<text class="text fg" x="28" y="72"> echo &apos;Great for present                                                                        </text>
+<text class="text fg" x="28" y="72"> echo &apos;Great for present                                       </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor-active" x="316" y="72" width="12" height="28" fill="#c9d1d9"/>
+<rect class="cursor" x="316" y="72" width="12" height="28" fill="#c9d1d9"/>
 </g>
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.417715;0.423589;1.000000"
-      dur="8.34s"
+      keyTimes="0.000000;0.417027;0.423271;1.000000"
+      dur="8.33s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -1128,21 +1128,21 @@
   </g>
 
   <g id="frame-51" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="1200" height="700" fill="#1e1e1e" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="632" height="172" fill="#1e1e1e" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f13" x="16" y="16">❯</text>
-<text class="text fg" x="28" y="16"> # This uses a 20px font                                                                        </text>
+<text class="text fg" x="28" y="16"> # This uses a 20px font                                       </text>
 <text class="text f13" x="16" y="72">❯</text>
-<text class="text fg" x="28" y="72"> echo &apos;Great for presenta                                                                       </text>
+<text class="text fg" x="28" y="72"> echo &apos;Great for presenta                                      </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor-active" x="328" y="72" width="12" height="28" fill="#c9d1d9"/>
+<rect class="cursor" x="328" y="72" width="12" height="28" fill="#c9d1d9"/>
 </g>
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.423589;0.429702;1.000000"
-      dur="8.34s"
+      keyTimes="0.000000;0.423271;0.429395;1.000000"
+      dur="8.33s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -1150,21 +1150,21 @@
   </g>
 
   <g id="frame-52" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="1200" height="700" fill="#1e1e1e" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="632" height="172" fill="#1e1e1e" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f13" x="16" y="16">❯</text>
-<text class="text fg" x="28" y="16"> # This uses a 20px font                                                                        </text>
+<text class="text fg" x="28" y="16"> # This uses a 20px font                                       </text>
 <text class="text f13" x="16" y="72">❯</text>
-<text class="text fg" x="28" y="72"> echo &apos;Great for presentat                                                                      </text>
+<text class="text fg" x="28" y="72"> echo &apos;Great for presentat                                     </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor-active" x="340" y="72" width="12" height="28" fill="#c9d1d9"/>
+<rect class="cursor" x="340" y="72" width="12" height="28" fill="#c9d1d9"/>
 </g>
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.429702;0.435934;1.000000"
-      dur="8.34s"
+      keyTimes="0.000000;0.429395;0.435519;1.000000"
+      dur="8.33s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -1172,21 +1172,21 @@
   </g>
 
   <g id="frame-53" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="1200" height="700" fill="#1e1e1e" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="632" height="172" fill="#1e1e1e" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f13" x="16" y="16">❯</text>
-<text class="text fg" x="28" y="16"> # This uses a 20px font                                                                        </text>
+<text class="text fg" x="28" y="16"> # This uses a 20px font                                       </text>
 <text class="text f13" x="16" y="72">❯</text>
-<text class="text fg" x="28" y="72"> echo &apos;Great for presentati                                                                     </text>
+<text class="text fg" x="28" y="72"> echo &apos;Great for presentati                                    </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor-active" x="352" y="72" width="12" height="28" fill="#c9d1d9"/>
+<rect class="cursor" x="352" y="72" width="12" height="28" fill="#c9d1d9"/>
 </g>
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.435934;0.442167;1.000000"
-      dur="8.34s"
+      keyTimes="0.000000;0.435519;0.441523;1.000000"
+      dur="8.33s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -1194,21 +1194,21 @@
   </g>
 
   <g id="frame-54" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="1200" height="700" fill="#1e1e1e" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="632" height="172" fill="#1e1e1e" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f13" x="16" y="16">❯</text>
-<text class="text fg" x="28" y="16"> # This uses a 20px font                                                                        </text>
+<text class="text fg" x="28" y="16"> # This uses a 20px font                                       </text>
 <text class="text f13" x="16" y="72">❯</text>
-<text class="text fg" x="28" y="72"> echo &apos;Great for presentatio                                                                    </text>
+<text class="text fg" x="28" y="72"> echo &apos;Great for presentatio                                   </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor-active" x="364" y="72" width="12" height="28" fill="#c9d1d9"/>
+<rect class="cursor" x="364" y="72" width="12" height="28" fill="#c9d1d9"/>
 </g>
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.442167;0.447920;1.000000"
-      dur="8.34s"
+      keyTimes="0.000000;0.441523;0.447646;1.000000"
+      dur="8.33s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -1216,21 +1216,21 @@
   </g>
 
   <g id="frame-55" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="1200" height="700" fill="#1e1e1e" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="632" height="172" fill="#1e1e1e" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f13" x="16" y="16">❯</text>
-<text class="text fg" x="28" y="16"> # This uses a 20px font                                                                        </text>
+<text class="text fg" x="28" y="16"> # This uses a 20px font                                       </text>
 <text class="text f13" x="16" y="72">❯</text>
-<text class="text fg" x="28" y="72"> echo &apos;Great for presentation                                                                   </text>
+<text class="text fg" x="28" y="72"> echo &apos;Great for presentation                                  </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor-active" x="376" y="72" width="12" height="28" fill="#c9d1d9"/>
+<rect class="cursor" x="376" y="72" width="12" height="28" fill="#c9d1d9"/>
 </g>
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.447920;0.454033;1.000000"
-      dur="8.34s"
+      keyTimes="0.000000;0.447646;0.454011;1.000000"
+      dur="8.33s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -1238,21 +1238,21 @@
   </g>
 
   <g id="frame-56" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="1200" height="700" fill="#1e1e1e" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="632" height="172" fill="#1e1e1e" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f13" x="16" y="16">❯</text>
-<text class="text fg" x="28" y="16"> # This uses a 20px font                                                                        </text>
+<text class="text fg" x="28" y="16"> # This uses a 20px font                                       </text>
 <text class="text f13" x="16" y="72">❯</text>
-<text class="text fg" x="28" y="72"> echo &apos;Great for presentations                                                                  </text>
+<text class="text fg" x="28" y="72"> echo &apos;Great for presentations                                 </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor-active" x="388" y="72" width="12" height="28" fill="#c9d1d9"/>
+<rect class="cursor" x="388" y="72" width="12" height="28" fill="#c9d1d9"/>
 </g>
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.454033;0.460266;1.000000"
-      dur="8.34s"
+      keyTimes="0.000000;0.454011;0.459894;1.000000"
+      dur="8.33s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -1260,21 +1260,21 @@
   </g>
 
   <g id="frame-57" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="1200" height="700" fill="#1e1e1e" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="632" height="172" fill="#1e1e1e" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f13" x="16" y="16">❯</text>
-<text class="text fg" x="28" y="16"> # This uses a 20px font                                                                        </text>
+<text class="text fg" x="28" y="16"> # This uses a 20px font                                       </text>
 <text class="text f13" x="16" y="72">❯</text>
-<text class="text fg" x="28" y="72"> echo &apos;Great for presentations                                                                  </text>
+<text class="text fg" x="28" y="72"> echo &apos;Great for presentations                                 </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor-active" x="400" y="72" width="12" height="28" fill="#c9d1d9"/>
+<rect class="cursor" x="400" y="72" width="12" height="28" fill="#c9d1d9"/>
 </g>
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.460266;0.466499;1.000000"
-      dur="8.34s"
+      keyTimes="0.000000;0.459894;0.466138;1.000000"
+      dur="8.33s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -1282,21 +1282,21 @@
   </g>
 
   <g id="frame-58" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="1200" height="700" fill="#1e1e1e" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="632" height="172" fill="#1e1e1e" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f13" x="16" y="16">❯</text>
-<text class="text fg" x="28" y="16"> # This uses a 20px font                                                                        </text>
+<text class="text fg" x="28" y="16"> # This uses a 20px font                                       </text>
 <text class="text f13" x="16" y="72">❯</text>
-<text class="text fg" x="28" y="72"> echo &apos;Great for presentations a                                                                </text>
+<text class="text fg" x="28" y="72"> echo &apos;Great for presentations a                               </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor-active" x="412" y="72" width="12" height="28" fill="#c9d1d9"/>
+<rect class="cursor" x="412" y="72" width="12" height="28" fill="#c9d1d9"/>
 </g>
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.466499;0.472851;1.000000"
-      dur="8.34s"
+      keyTimes="0.000000;0.466138;0.472262;1.000000"
+      dur="8.33s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -1304,21 +1304,21 @@
   </g>
 
   <g id="frame-59" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="1200" height="700" fill="#1e1e1e" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="632" height="172" fill="#1e1e1e" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f13" x="16" y="16">❯</text>
-<text class="text fg" x="28" y="16"> # This uses a 20px font                                                                        </text>
+<text class="text fg" x="28" y="16"> # This uses a 20px font                                       </text>
 <text class="text f13" x="16" y="72">❯</text>
-<text class="text fg" x="28" y="72"> echo &apos;Great for presentations an                                                               </text>
+<text class="text fg" x="28" y="72"> echo &apos;Great for presentations an                              </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor-active" x="424" y="72" width="12" height="28" fill="#c9d1d9"/>
+<rect class="cursor" x="424" y="72" width="12" height="28" fill="#c9d1d9"/>
 </g>
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.472851;0.478964;1.000000"
-      dur="8.34s"
+      keyTimes="0.000000;0.472262;0.478386;1.000000"
+      dur="8.33s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -1326,21 +1326,21 @@
   </g>
 
   <g id="frame-60" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="1200" height="700" fill="#1e1e1e" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="632" height="172" fill="#1e1e1e" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f13" x="16" y="16">❯</text>
-<text class="text fg" x="28" y="16"> # This uses a 20px font                                                                        </text>
+<text class="text fg" x="28" y="16"> # This uses a 20px font                                       </text>
 <text class="text f13" x="16" y="72">❯</text>
-<text class="text fg" x="28" y="72"> echo &apos;Great for presentations and                                                              </text>
+<text class="text fg" x="28" y="72"> echo &apos;Great for presentations and                             </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor-active" x="436" y="72" width="12" height="28" fill="#c9d1d9"/>
+<rect class="cursor" x="436" y="72" width="12" height="28" fill="#c9d1d9"/>
 </g>
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.478964;0.485077;1.000000"
-      dur="8.34s"
+      keyTimes="0.000000;0.478386;0.484390;1.000000"
+      dur="8.33s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -1348,21 +1348,21 @@
   </g>
 
   <g id="frame-61" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="1200" height="700" fill="#1e1e1e" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="632" height="172" fill="#1e1e1e" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f13" x="16" y="16">❯</text>
-<text class="text fg" x="28" y="16"> # This uses a 20px font                                                                        </text>
+<text class="text fg" x="28" y="16"> # This uses a 20px font                                       </text>
 <text class="text f13" x="16" y="72">❯</text>
-<text class="text fg" x="28" y="72"> echo &apos;Great for presentations and                                                              </text>
+<text class="text fg" x="28" y="72"> echo &apos;Great for presentations and                             </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor-active" x="448" y="72" width="12" height="28" fill="#c9d1d9"/>
+<rect class="cursor" x="448" y="72" width="12" height="28" fill="#c9d1d9"/>
 </g>
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.485077;0.490950;1.000000"
-      dur="8.34s"
+      keyTimes="0.000000;0.484390;0.490994;1.000000"
+      dur="8.33s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -1370,21 +1370,21 @@
   </g>
 
   <g id="frame-62" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="1200" height="700" fill="#1e1e1e" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="632" height="172" fill="#1e1e1e" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f13" x="16" y="16">❯</text>
-<text class="text fg" x="28" y="16"> # This uses a 20px font                                                                        </text>
+<text class="text fg" x="28" y="16"> # This uses a 20px font                                       </text>
 <text class="text f13" x="16" y="72">❯</text>
-<text class="text fg" x="28" y="72"> echo &apos;Great for presentations and r                                                            </text>
+<text class="text fg" x="28" y="72"> echo &apos;Great for presentations and r                           </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor-active" x="460" y="72" width="12" height="28" fill="#c9d1d9"/>
+<rect class="cursor" x="460" y="72" width="12" height="28" fill="#c9d1d9"/>
 </g>
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.490950;0.497303;1.000000"
-      dur="8.34s"
+      keyTimes="0.000000;0.490994;0.496758;1.000000"
+      dur="8.33s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -1392,21 +1392,21 @@
   </g>
 
   <g id="frame-63" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="1200" height="700" fill="#1e1e1e" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="632" height="172" fill="#1e1e1e" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f13" x="16" y="16">❯</text>
-<text class="text fg" x="28" y="16"> # This uses a 20px font                                                                        </text>
+<text class="text fg" x="28" y="16"> # This uses a 20px font                                       </text>
 <text class="text f13" x="16" y="72">❯</text>
-<text class="text fg" x="28" y="72"> echo &apos;Great for presentations and re                                                           </text>
+<text class="text fg" x="28" y="72"> echo &apos;Great for presentations and re                          </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor-active" x="472" y="72" width="12" height="28" fill="#c9d1d9"/>
+<rect class="cursor" x="472" y="72" width="12" height="28" fill="#c9d1d9"/>
 </g>
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.497303;0.503416;1.000000"
-      dur="8.34s"
+      keyTimes="0.000000;0.496758;0.502762;1.000000"
+      dur="8.33s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -1414,21 +1414,21 @@
   </g>
 
   <g id="frame-64" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="1200" height="700" fill="#1e1e1e" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="632" height="172" fill="#1e1e1e" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f13" x="16" y="16">❯</text>
-<text class="text fg" x="28" y="16"> # This uses a 20px font                                                                        </text>
+<text class="text fg" x="28" y="16"> # This uses a 20px font                                       </text>
 <text class="text f13" x="16" y="72">❯</text>
-<text class="text fg" x="28" y="72"> echo &apos;Great for presentations and rea                                                          </text>
+<text class="text fg" x="28" y="72"> echo &apos;Great for presentations and rea                         </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor-active" x="484" y="72" width="12" height="28" fill="#c9d1d9"/>
+<rect class="cursor" x="484" y="72" width="12" height="28" fill="#c9d1d9"/>
 </g>
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.503416;0.509889;1.000000"
-      dur="8.34s"
+      keyTimes="0.000000;0.502762;0.509006;1.000000"
+      dur="8.33s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -1436,21 +1436,21 @@
   </g>
 
   <g id="frame-65" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="1200" height="700" fill="#1e1e1e" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="632" height="172" fill="#1e1e1e" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f13" x="16" y="16">❯</text>
-<text class="text fg" x="28" y="16"> # This uses a 20px font                                                                        </text>
+<text class="text fg" x="28" y="16"> # This uses a 20px font                                       </text>
 <text class="text f13" x="16" y="72">❯</text>
-<text class="text fg" x="28" y="72"> echo &apos;Great for presentations and read                                                         </text>
+<text class="text fg" x="28" y="72"> echo &apos;Great for presentations and read                        </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor-active" x="496" y="72" width="12" height="28" fill="#c9d1d9"/>
+<rect class="cursor" x="496" y="72" width="12" height="28" fill="#c9d1d9"/>
 </g>
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.509889;0.516121;1.000000"
-      dur="8.34s"
+      keyTimes="0.000000;0.509006;0.514890;1.000000"
+      dur="8.33s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -1458,21 +1458,21 @@
   </g>
 
   <g id="frame-66" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="1200" height="700" fill="#1e1e1e" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="632" height="172" fill="#1e1e1e" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f13" x="16" y="16">❯</text>
-<text class="text fg" x="28" y="16"> # This uses a 20px font                                                                        </text>
+<text class="text fg" x="28" y="16"> # This uses a 20px font                                       </text>
 <text class="text f13" x="16" y="72">❯</text>
-<text class="text fg" x="28" y="72"> echo &apos;Great for presentations and reada                                                        </text>
+<text class="text fg" x="28" y="72"> echo &apos;Great for presentations and reada                       </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor-active" x="508" y="72" width="12" height="28" fill="#c9d1d9"/>
+<rect class="cursor" x="508" y="72" width="12" height="28" fill="#c9d1d9"/>
 </g>
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.516121;0.522114;1.000000"
-      dur="8.34s"
+      keyTimes="0.000000;0.514890;0.521013;1.000000"
+      dur="8.33s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -1480,21 +1480,21 @@
   </g>
 
   <g id="frame-67" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="1200" height="700" fill="#1e1e1e" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="632" height="172" fill="#1e1e1e" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f13" x="16" y="16">❯</text>
-<text class="text fg" x="28" y="16"> # This uses a 20px font                                                                        </text>
+<text class="text fg" x="28" y="16"> # This uses a 20px font                                       </text>
 <text class="text f13" x="16" y="72">❯</text>
-<text class="text fg" x="28" y="72"> echo &apos;Great for presentations and readab                                                       </text>
+<text class="text fg" x="28" y="72"> echo &apos;Great for presentations and readab                      </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor-active" x="520" y="72" width="12" height="28" fill="#c9d1d9"/>
+<rect class="cursor" x="520" y="72" width="12" height="28" fill="#c9d1d9"/>
 </g>
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.522114;0.527748;1.000000"
-      dur="8.34s"
+      keyTimes="0.000000;0.521013;0.527137;1.000000"
+      dur="8.33s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -1502,21 +1502,21 @@
   </g>
 
   <g id="frame-68" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="1200" height="700" fill="#1e1e1e" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="632" height="172" fill="#1e1e1e" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f13" x="16" y="16">❯</text>
-<text class="text fg" x="28" y="16"> # This uses a 20px font                                                                        </text>
+<text class="text fg" x="28" y="16"> # This uses a 20px font                                       </text>
 <text class="text f13" x="16" y="72">❯</text>
-<text class="text fg" x="28" y="72"> echo &apos;Great for presentations and readabi                                                      </text>
+<text class="text fg" x="28" y="72"> echo &apos;Great for presentations and readabi                     </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor-active" x="532" y="72" width="12" height="28" fill="#c9d1d9"/>
+<rect class="cursor" x="532" y="72" width="12" height="28" fill="#c9d1d9"/>
 </g>
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.527748;0.533861;1.000000"
-      dur="8.34s"
+      keyTimes="0.000000;0.527137;0.533381;1.000000"
+      dur="8.33s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -1524,21 +1524,21 @@
   </g>
 
   <g id="frame-69" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="1200" height="700" fill="#1e1e1e" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="632" height="172" fill="#1e1e1e" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f13" x="16" y="16">❯</text>
-<text class="text fg" x="28" y="16"> # This uses a 20px font                                                                        </text>
+<text class="text fg" x="28" y="16"> # This uses a 20px font                                       </text>
 <text class="text f13" x="16" y="72">❯</text>
-<text class="text fg" x="28" y="72"> echo &apos;Great for presentations and readabil                                                     </text>
+<text class="text fg" x="28" y="72"> echo &apos;Great for presentations and readabil                    </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor-active" x="544" y="72" width="12" height="28" fill="#c9d1d9"/>
+<rect class="cursor" x="544" y="72" width="12" height="28" fill="#c9d1d9"/>
 </g>
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.533861;0.539974;1.000000"
-      dur="8.34s"
+      keyTimes="0.000000;0.533381;0.539505;1.000000"
+      dur="8.33s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -1546,21 +1546,21 @@
   </g>
 
   <g id="frame-70" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="1200" height="700" fill="#1e1e1e" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="632" height="172" fill="#1e1e1e" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f13" x="16" y="16">❯</text>
-<text class="text fg" x="28" y="16"> # This uses a 20px font                                                                        </text>
+<text class="text fg" x="28" y="16"> # This uses a 20px font                                       </text>
 <text class="text f13" x="16" y="72">❯</text>
-<text class="text fg" x="28" y="72"> echo &apos;Great for presentations and readabili                                                    </text>
+<text class="text fg" x="28" y="72"> echo &apos;Great for presentations and readabili                   </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor-active" x="556" y="72" width="12" height="28" fill="#c9d1d9"/>
+<rect class="cursor" x="556" y="72" width="12" height="28" fill="#c9d1d9"/>
 </g>
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.539974;0.545967;1.000000"
-      dur="8.34s"
+      keyTimes="0.000000;0.539505;0.545869;1.000000"
+      dur="8.33s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -1568,21 +1568,21 @@
   </g>
 
   <g id="frame-71" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="1200" height="700" fill="#1e1e1e" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="632" height="172" fill="#1e1e1e" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f13" x="16" y="16">❯</text>
-<text class="text fg" x="28" y="16"> # This uses a 20px font                                                                        </text>
+<text class="text fg" x="28" y="16"> # This uses a 20px font                                       </text>
 <text class="text f13" x="16" y="72">❯</text>
-<text class="text fg" x="28" y="72"> echo &apos;Great for presentations and readabilit                                                   </text>
+<text class="text fg" x="28" y="72"> echo &apos;Great for presentations and readabilit                  </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor-active" x="568" y="72" width="12" height="28" fill="#c9d1d9"/>
+<rect class="cursor" x="568" y="72" width="12" height="28" fill="#c9d1d9"/>
 </g>
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.545967;0.552319;1.000000"
-      dur="8.34s"
+      keyTimes="0.000000;0.545869;0.551873;1.000000"
+      dur="8.33s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -1590,21 +1590,21 @@
   </g>
 
   <g id="frame-72" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="1200" height="700" fill="#1e1e1e" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="632" height="172" fill="#1e1e1e" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f13" x="16" y="16">❯</text>
-<text class="text fg" x="28" y="16"> # This uses a 20px font                                                                        </text>
+<text class="text fg" x="28" y="16"> # This uses a 20px font                                       </text>
 <text class="text f13" x="16" y="72">❯</text>
-<text class="text fg" x="28" y="72"> echo &apos;Great for presentations and readability                                                  </text>
+<text class="text fg" x="28" y="72"> echo &apos;Great for presentations and readability                 </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor-active" x="580" y="72" width="12" height="28" fill="#c9d1d9"/>
+<rect class="cursor" x="580" y="72" width="12" height="28" fill="#c9d1d9"/>
 </g>
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.552319;0.558432;1.000000"
-      dur="8.34s"
+      keyTimes="0.000000;0.551873;0.557877;1.000000"
+      dur="8.33s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -1612,21 +1612,21 @@
   </g>
 
   <g id="frame-73" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="1200" height="700" fill="#1e1e1e" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="632" height="172" fill="#1e1e1e" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f13" x="16" y="16">❯</text>
-<text class="text fg" x="28" y="16"> # This uses a 20px font                                                                        </text>
+<text class="text fg" x="28" y="16"> # This uses a 20px font                                       </text>
 <text class="text f13" x="16" y="72">❯</text>
-<text class="text fg" x="28" y="72"> echo &apos;Great for presentations and readability!                                                 </text>
+<text class="text fg" x="28" y="72"> echo &apos;Great for presentations and readability!                </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor-active" x="592" y="72" width="12" height="28" fill="#c9d1d9"/>
+<rect class="cursor" x="592" y="72" width="12" height="28" fill="#c9d1d9"/>
 </g>
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.558432;0.564905;1.000000"
-      dur="8.34s"
+      keyTimes="0.000000;0.557877;0.564241;1.000000"
+      dur="8.33s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -1634,34 +1634,12 @@
   </g>
 
   <g id="frame-74" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="1200" height="700" fill="#1e1e1e" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="632" height="172" fill="#1e1e1e" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f13" x="16" y="16">❯</text>
-<text class="text fg" x="28" y="16"> # This uses a 20px font                                                                        </text>
+<text class="text fg" x="28" y="16"> # This uses a 20px font                                       </text>
 <text class="text f13" x="16" y="72">❯</text>
-<text class="text fg" x="28" y="72"> echo &apos;Great for presentations and readability!&apos;                                                </text>
-</g>
-<g class="cursor-layer">
-<rect class="cursor-active" x="604" y="72" width="12" height="28" fill="#c9d1d9"/>
-</g>
-    <animate
-      attributeName="visibility"
-      values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.564905;0.612969;1.000000"
-      dur="8.34s"
-      repeatCount="indefinite"
-      calcMode="discrete"
-      fill="freeze"
-    />
-  </g>
-
-  <g id="frame-75" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="1200" height="700" fill="#1e1e1e" rx="8" ry="8"/>
-<g class="text-layer">
-<text class="text f13" x="16" y="16">❯</text>
-<text class="text fg" x="28" y="16"> # This uses a 20px font                                                                        </text>
-<text class="text f13" x="16" y="72">❯</text>
-<text class="text fg" x="28" y="72"> echo &apos;Great for presentations and readability!&apos;                                                </text>
+<text class="text fg" x="28" y="72"> echo &apos;Great for presentations and readability!&apos;               </text>
 </g>
 <g class="cursor-layer">
 <rect class="cursor" x="604" y="72" width="12" height="28" fill="#c9d1d9"/>
@@ -1669,8 +1647,30 @@
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.612969;0.626034;1.000000"
-      dur="8.34s"
+      keyTimes="0.000000;0.564241;0.612512;1.000000"
+      dur="8.33s"
+      repeatCount="indefinite"
+      calcMode="discrete"
+      fill="freeze"
+    />
+  </g>
+
+  <g id="frame-75" visibility="hidden">
+    <rect class="window-bg" x="0" y="0" width="632" height="172" fill="#1e1e1e" rx="8" ry="8"/>
+<g class="text-layer">
+<text class="text f13" x="16" y="16">❯</text>
+<text class="text fg" x="28" y="16"> # This uses a 20px font                                       </text>
+<text class="text f13" x="16" y="72">❯</text>
+<text class="text fg" x="28" y="72"> echo &apos;Great for presentations and readability!&apos;               </text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor" x="604" y="72" width="12" height="28" fill="#c9d1d9"/>
+</g>
+    <animate
+      attributeName="visibility"
+      values="hidden;visible;hidden;hidden"
+      keyTimes="0.000000;0.612512;0.625120;1.000000"
+      dur="8.33s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -1678,18 +1678,18 @@
   </g>
 
   <g id="frame-76" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="1200" height="700" fill="#1e1e1e" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="632" height="172" fill="#1e1e1e" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f13" x="16" y="16">❯</text>
-<text class="text fg" x="28" y="16"> # This uses a 20px font                                                                        </text>
+<text class="text fg" x="28" y="16"> # This uses a 20px font                                       </text>
 <text class="text f13" x="16" y="72">❯</text>
-<text class="text fg" x="28" y="72"> echo &apos;Great for presentations and readability!&apos;                                                </text>
+<text class="text fg" x="28" y="72"> echo &apos;Great for presentations and readability!&apos;               </text>
 </g>
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.626034;0.639338;1.000000"
-      dur="8.34s"
+      keyTimes="0.000000;0.625120;0.638449;1.000000"
+      dur="8.33s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -1697,13 +1697,13 @@
   </g>
 
   <g id="frame-77" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="1200" height="700" fill="#1e1e1e" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="632" height="172" fill="#1e1e1e" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f13" x="16" y="16">❯</text>
-<text class="text fg" x="28" y="16"> # This uses a 20px font                                                                        </text>
+<text class="text fg" x="28" y="16"> # This uses a 20px font                                       </text>
 <text class="text f13" x="16" y="72">❯</text>
-<text class="text fg" x="28" y="72"> echo &apos;Great for presentations and readability!&apos;                                                </text>
-<text class="text fg" x="16" y="100">Great for presentations and readability!                                                         </text>
+<text class="text fg" x="28" y="72"> echo &apos;Great for presentations and readability!&apos;               </text>
+<text class="text fg" x="16" y="100">Great for presentations and readability!                        </text>
 <text class="text f13" x="16" y="128">❯</text>
 </g>
 <g class="cursor-layer">
@@ -1712,8 +1712,8 @@
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.639338;0.879660;1.000000"
-      dur="8.34s"
+      keyTimes="0.000000;0.638449;0.879443;1.000000"
+      dur="8.33s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -1721,13 +1721,13 @@
   </g>
 
   <g id="frame-78" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="1200" height="700" fill="#1e1e1e" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="632" height="172" fill="#1e1e1e" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f13" x="16" y="16">❯</text>
-<text class="text fg" x="28" y="16"> # This uses a 20px font                                                                        </text>
+<text class="text fg" x="28" y="16"> # This uses a 20px font                                       </text>
 <text class="text f13" x="16" y="72">❯</text>
-<text class="text fg" x="28" y="72"> echo &apos;Great for presentations and readability!&apos;                                                </text>
-<text class="text fg" x="16" y="100">Great for presentations and readability!                                                         </text>
+<text class="text fg" x="28" y="72"> echo &apos;Great for presentations and readability!&apos;               </text>
+<text class="text fg" x="16" y="100">Great for presentations and readability!                        </text>
 <text class="text f13" x="16" y="128">❯</text>
 </g>
 <g class="cursor-layer">
@@ -1736,8 +1736,8 @@
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.879660;0.880139;1.000000"
-      dur="8.34s"
+      keyTimes="0.000000;0.879443;0.879923;1.000000"
+      dur="8.33s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -1745,13 +1745,13 @@
   </g>
 
   <g id="frame-79" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="1200" height="700" fill="#1e1e1e" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="632" height="172" fill="#1e1e1e" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f13" x="16" y="16">❯</text>
-<text class="text fg" x="28" y="16"> # This uses a 20px font                                                                        </text>
+<text class="text fg" x="28" y="16"> # This uses a 20px font                                       </text>
 <text class="text f13" x="16" y="72">❯</text>
-<text class="text fg" x="28" y="72"> echo &apos;Great for presentations and readability!&apos;                                                </text>
-<text class="text fg" x="16" y="100">Great for presentations and readability!                                                         </text>
+<text class="text fg" x="28" y="72"> echo &apos;Great for presentations and readability!&apos;               </text>
+<text class="text fg" x="16" y="100">Great for presentations and readability!                        </text>
 <text class="text f13" x="16" y="128">❯</text>
 </g>
 <g class="cursor-layer">
@@ -1760,8 +1760,8 @@
     <animate
       attributeName="visibility"
       values="hidden;visible;visible"
-      keyTimes="0.000000;0.880139;1.000000"
-      dur="8.34s"
+      keyTimes="0.000000;0.879923;1.000000"
+      dur="8.33s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"

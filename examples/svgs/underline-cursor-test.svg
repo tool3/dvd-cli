@@ -1,5 +1,5 @@
-<svg width="500" height="200" xmlns="http://www.w3.org/2000/svg">
-  <defs><clipPath id="rounded-corners"><rect x="0" y="0" width="500" height="200" rx="8" ry="8"/></clipPath></defs>
+<svg width="397" height="100" xmlns="http://www.w3.org/2000/svg">
+  <defs><clipPath id="rounded-corners"><rect x="0" y="0" width="397" height="100" rx="8" ry="8"/></clipPath></defs>
   <style>
     
 .text {
@@ -14,40 +14,40 @@
 .uline { text-decoration: underline; }
 .strike { text-decoration: line-through; }
 .dim { opacity: 0.5; }
-.fg { fill: #d8dee9; }
-.f0 { fill: #3b4252; }
-.f1 { fill: #bf616a; }
-.f2 { fill: #a3be8c; }
-.f3 { fill: #ebcb8b; }
-.f4 { fill: #81a1c1; }
-.f5 { fill: #b48ead; }
-.f6 { fill: #88c0d0; }
-.f7 { fill: #e5e9f0; }
-.f8 { fill: #4c566a; }
-.f9 { fill: #bf616a; }
-.f10 { fill: #a3be8c; }
-.f11 { fill: #ebcb8b; }
-.f12 { fill: #81a1c1; }
-.f13 { fill: #b48ead; }
-.f14 { fill: #8fbcbb; }
-.f15 { fill: #eceff4; }
-.bg { fill: #2e3440; }
-.b0 { fill: #3b4252; }
-.b1 { fill: #bf616a; }
-.b2 { fill: #a3be8c; }
-.b3 { fill: #ebcb8b; }
-.b4 { fill: #81a1c1; }
-.b5 { fill: #b48ead; }
-.b6 { fill: #88c0d0; }
-.b7 { fill: #e5e9f0; }
-.b8 { fill: #4c566a; }
-.b9 { fill: #bf616a; }
-.b10 { fill: #a3be8c; }
-.b11 { fill: #ebcb8b; }
-.b12 { fill: #81a1c1; }
-.b13 { fill: #b48ead; }
-.b14 { fill: #8fbcbb; }
-.b15 { fill: #eceff4; }
+.fg { fill: #abb2bf; }
+.f0 { fill: #282c34; }
+.f1 { fill: #e06c75; }
+.f2 { fill: #98c379; }
+.f3 { fill: #e5c07b; }
+.f4 { fill: #61afef; }
+.f5 { fill: #c678dd; }
+.f6 { fill: #56b6c2; }
+.f7 { fill: #abb2bf; }
+.f8 { fill: #5c6370; }
+.f9 { fill: #e06c75; }
+.f10 { fill: #98c379; }
+.f11 { fill: #e5c07b; }
+.f12 { fill: #61afef; }
+.f13 { fill: #c678dd; }
+.f14 { fill: #56b6c2; }
+.f15 { fill: #ffffff; }
+.bg { fill: #282c34; }
+.b0 { fill: #282c34; }
+.b1 { fill: #e06c75; }
+.b2 { fill: #98c379; }
+.b3 { fill: #e5c07b; }
+.b4 { fill: #61afef; }
+.b5 { fill: #c678dd; }
+.b6 { fill: #56b6c2; }
+.b7 { fill: #abb2bf; }
+.b8 { fill: #5c6370; }
+.b9 { fill: #e06c75; }
+.b10 { fill: #98c379; }
+.b11 { fill: #e5c07b; }
+.b12 { fill: #61afef; }
+.b13 { fill: #c678dd; }
+.b14 { fill: #56b6c2; }
+.b15 { fill: #ffffff; }
 .cursor { animation: blink 1s step-end infinite; }
 @keyframes blink {
   0%, 50% { opacity: 1; }
@@ -59,12 +59,12 @@
 
   <g clip-path="url(#rounded-corners)">
   <!-- Persistent background - never animated -->
-  <rect width="100%" height="100%" fill="#2e3440" rx="8" ry="8" />
+  <rect width="100%" height="100%" fill="#282c34" rx="8" ry="8" />
 
   <!-- Animated frames with discrete visibility transitions -->
   
   <g id="frame-0" visibility="visible">
-    <rect class="window-bg" x="0" y="0" width="500" height="200" fill="#2e3440" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="397" height="100" fill="#282c34" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f13" x="16" y="16">❯</text>
 </g>
@@ -74,8 +74,8 @@
     <animate
       attributeName="visibility"
       values="visible;hidden;hidden"
-      keyTimes="0.000000;0.010775;1.000000"
-      dur="4.92s"
+      keyTimes="0.000000;0.011569;1.000000"
+      dur="4.93s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -83,19 +83,19 @@
   </g>
 
   <g id="frame-1" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="500" height="200" fill="#2e3440" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="397" height="100" fill="#282c34" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f13" x="16" y="16">❯</text>
-<text class="text fg" x="25.6" y="16"> U                                             </text>
+<text class="text fg" x="25.6" y="16"> U                                                                             </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor-active" x="44.8" y="36.4" width="9.6" height="2" fill="#bf616a"/>
+<rect class="cursor" x="44.8" y="36.4" width="9.6" height="2" fill="#bf616a"/>
 </g>
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.010775;0.021143;1.000000"
-      dur="4.92s"
+      keyTimes="0.000000;0.011569;0.021920;1.000000"
+      dur="4.93s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -103,19 +103,19 @@
   </g>
 
   <g id="frame-2" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="500" height="200" fill="#2e3440" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="397" height="100" fill="#282c34" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f13" x="16" y="16">❯</text>
-<text class="text fg" x="25.6" y="16"> Un                                            </text>
+<text class="text fg" x="25.6" y="16"> Un                                                                            </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor-active" x="54.4" y="36.4" width="9.6" height="2" fill="#bf616a"/>
+<rect class="cursor" x="54.4" y="36.4" width="9.6" height="2" fill="#bf616a"/>
 </g>
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.021143;0.031510;1.000000"
-      dur="4.92s"
+      keyTimes="0.000000;0.021920;0.032068;1.000000"
+      dur="4.93s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -123,19 +123,19 @@
   </g>
 
   <g id="frame-3" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="500" height="200" fill="#2e3440" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="397" height="100" fill="#282c34" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f13" x="16" y="16">❯</text>
-<text class="text fg" x="25.6" y="16"> Und                                           </text>
+<text class="text fg" x="25.6" y="16"> Und                                                                           </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor-active" x="64" y="36.4" width="9.6" height="2" fill="#bf616a"/>
+<rect class="cursor" x="64" y="36.4" width="9.6" height="2" fill="#bf616a"/>
 </g>
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.031510;0.041675;1.000000"
-      dur="4.92s"
+      keyTimes="0.000000;0.032068;0.042622;1.000000"
+      dur="4.93s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -143,19 +143,19 @@
   </g>
 
   <g id="frame-4" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="500" height="200" fill="#2e3440" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="397" height="100" fill="#282c34" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f13" x="16" y="16">❯</text>
-<text class="text fg" x="25.6" y="16"> Unde                                          </text>
+<text class="text fg" x="25.6" y="16"> Unde                                                                          </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor-active" x="73.6" y="36.4" width="9.6" height="2" fill="#bf616a"/>
+<rect class="cursor" x="73.6" y="36.4" width="9.6" height="2" fill="#bf616a"/>
 </g>
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.041675;0.052043;1.000000"
-      dur="4.92s"
+      keyTimes="0.000000;0.042622;0.053176;1.000000"
+      dur="4.93s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -163,19 +163,19 @@
   </g>
 
   <g id="frame-5" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="500" height="200" fill="#2e3440" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="397" height="100" fill="#282c34" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f13" x="16" y="16">❯</text>
-<text class="text fg" x="25.6" y="16"> Under                                         </text>
+<text class="text fg" x="25.6" y="16"> Under                                                                         </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor-active" x="83.2" y="36.4" width="9.6" height="2" fill="#bf616a"/>
+<rect class="cursor" x="83.2" y="36.4" width="9.6" height="2" fill="#bf616a"/>
 </g>
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.052043;0.062208;1.000000"
-      dur="4.92s"
+      keyTimes="0.000000;0.053176;0.063730;1.000000"
+      dur="4.93s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -183,19 +183,19 @@
   </g>
 
   <g id="frame-6" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="500" height="200" fill="#2e3440" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="397" height="100" fill="#282c34" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f13" x="16" y="16">❯</text>
-<text class="text fg" x="25.6" y="16"> Underl                                        </text>
+<text class="text fg" x="25.6" y="16"> Underl                                                                        </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor-active" x="92.8" y="36.4" width="9.6" height="2" fill="#bf616a"/>
+<rect class="cursor" x="92.8" y="36.4" width="9.6" height="2" fill="#bf616a"/>
 </g>
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.062208;0.072779;1.000000"
-      dur="4.92s"
+      keyTimes="0.000000;0.063730;0.073879;1.000000"
+      dur="4.93s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -203,19 +203,19 @@
   </g>
 
   <g id="frame-7" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="500" height="200" fill="#2e3440" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="397" height="100" fill="#282c34" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f13" x="16" y="16">❯</text>
-<text class="text fg" x="25.6" y="16"> Underli                                       </text>
+<text class="text fg" x="25.6" y="16"> Underli                                                                       </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor-active" x="102.39999999999999" y="36.4" width="9.6" height="2" fill="#bf616a"/>
+<rect class="cursor" x="102.39999999999999" y="36.4" width="9.6" height="2" fill="#bf616a"/>
 </g>
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.072779;0.084163;1.000000"
-      dur="4.92s"
+      keyTimes="0.000000;0.073879;0.084433;1.000000"
+      dur="4.93s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -223,19 +223,19 @@
   </g>
 
   <g id="frame-8" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="500" height="200" fill="#2e3440" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="397" height="100" fill="#282c34" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f13" x="16" y="16">❯</text>
-<text class="text fg" x="25.6" y="16"> Underlin                                      </text>
+<text class="text fg" x="25.6" y="16"> Underlin                                                                      </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor-active" x="112" y="36.4" width="9.6" height="2" fill="#bf616a"/>
+<rect class="cursor" x="112" y="36.4" width="9.6" height="2" fill="#bf616a"/>
 </g>
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.084163;0.093718;1.000000"
-      dur="4.92s"
+      keyTimes="0.000000;0.084433;0.094784;1.000000"
+      dur="4.93s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -243,19 +243,19 @@
   </g>
 
   <g id="frame-9" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="500" height="200" fill="#2e3440" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="397" height="100" fill="#282c34" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f13" x="16" y="16">❯</text>
-<text class="text fg" x="25.6" y="16"> Underline                                     </text>
+<text class="text fg" x="25.6" y="16"> Underline                                                                     </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor-active" x="121.6" y="36.4" width="9.6" height="2" fill="#bf616a"/>
+<rect class="cursor" x="121.6" y="36.4" width="9.6" height="2" fill="#bf616a"/>
 </g>
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.093718;0.104086;1.000000"
-      dur="4.92s"
+      keyTimes="0.000000;0.094784;0.105338;1.000000"
+      dur="4.93s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -263,19 +263,19 @@
   </g>
 
   <g id="frame-10" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="500" height="200" fill="#2e3440" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="397" height="100" fill="#282c34" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f13" x="16" y="16">❯</text>
-<text class="text fg" x="25.6" y="16"> Underline                                     </text>
+<text class="text fg" x="25.6" y="16"> Underline                                                                     </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor-active" x="131.2" y="36.4" width="9.6" height="2" fill="#bf616a"/>
+<rect class="cursor" x="131.2" y="36.4" width="9.6" height="2" fill="#bf616a"/>
 </g>
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.104086;0.114251;1.000000"
-      dur="4.92s"
+      keyTimes="0.000000;0.105338;0.115689;1.000000"
+      dur="4.93s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -283,19 +283,19 @@
   </g>
 
   <g id="frame-11" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="500" height="200" fill="#2e3440" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="397" height="100" fill="#282c34" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f13" x="16" y="16">❯</text>
-<text class="text fg" x="25.6" y="16"> Underline c                                   </text>
+<text class="text fg" x="25.6" y="16"> Underline c                                                                   </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor-active" x="140.8" y="36.4" width="9.6" height="2" fill="#bf616a"/>
+<rect class="cursor" x="140.8" y="36.4" width="9.6" height="2" fill="#bf616a"/>
 </g>
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.114251;0.124822;1.000000"
-      dur="4.92s"
+      keyTimes="0.000000;0.115689;0.126040;1.000000"
+      dur="4.93s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -303,19 +303,19 @@
   </g>
 
   <g id="frame-12" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="500" height="200" fill="#2e3440" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="397" height="100" fill="#282c34" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f13" x="16" y="16">❯</text>
-<text class="text fg" x="25.6" y="16"> Underline cu                                  </text>
+<text class="text fg" x="25.6" y="16"> Underline cu                                                                  </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor-active" x="150.4" y="36.4" width="9.6" height="2" fill="#bf616a"/>
+<rect class="cursor" x="150.4" y="36.4" width="9.6" height="2" fill="#bf616a"/>
 </g>
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.124822;0.134987;1.000000"
-      dur="4.92s"
+      keyTimes="0.000000;0.126040;0.136391;1.000000"
+      dur="4.93s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -323,19 +323,19 @@
   </g>
 
   <g id="frame-13" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="500" height="200" fill="#2e3440" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="397" height="100" fill="#282c34" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f13" x="16" y="16">❯</text>
-<text class="text fg" x="25.6" y="16"> Underline cur                                 </text>
+<text class="text fg" x="25.6" y="16"> Underline cur                                                                 </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor-active" x="160" y="36.4" width="9.6" height="2" fill="#bf616a"/>
+<rect class="cursor" x="160" y="36.4" width="9.6" height="2" fill="#bf616a"/>
 </g>
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.134987;0.145558;1.000000"
-      dur="4.92s"
+      keyTimes="0.000000;0.136391;0.146539;1.000000"
+      dur="4.93s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -343,19 +343,19 @@
   </g>
 
   <g id="frame-14" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="500" height="200" fill="#2e3440" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="397" height="100" fill="#282c34" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f13" x="16" y="16">❯</text>
-<text class="text fg" x="25.6" y="16"> Underline curs                                </text>
+<text class="text fg" x="25.6" y="16"> Underline curs                                                                </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor-active" x="169.6" y="36.4" width="9.6" height="2" fill="#bf616a"/>
+<rect class="cursor" x="169.6" y="36.4" width="9.6" height="2" fill="#bf616a"/>
 </g>
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.145558;0.155723;1.000000"
-      dur="4.92s"
+      keyTimes="0.000000;0.146539;0.156891;1.000000"
+      dur="4.93s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -363,19 +363,19 @@
   </g>
 
   <g id="frame-15" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="500" height="200" fill="#2e3440" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="397" height="100" fill="#282c34" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f13" x="16" y="16">❯</text>
-<text class="text fg" x="25.6" y="16"> Underline curso                               </text>
+<text class="text fg" x="25.6" y="16"> Underline curso                                                               </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor-active" x="179.2" y="36.4" width="9.6" height="2" fill="#bf616a"/>
+<rect class="cursor" x="179.2" y="36.4" width="9.6" height="2" fill="#bf616a"/>
 </g>
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.155723;0.165887;1.000000"
-      dur="4.92s"
+      keyTimes="0.000000;0.156891;0.167242;1.000000"
+      dur="4.93s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -383,19 +383,19 @@
   </g>
 
   <g id="frame-16" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="500" height="200" fill="#2e3440" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="397" height="100" fill="#282c34" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f13" x="16" y="16">❯</text>
-<text class="text fg" x="25.6" y="16"> Underline cursor                              </text>
+<text class="text fg" x="25.6" y="16"> Underline cursor                                                              </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor-active" x="188.79999999999998" y="36.4" width="9.6" height="2" fill="#bf616a"/>
+<rect class="cursor" x="188.79999999999998" y="36.4" width="9.6" height="2" fill="#bf616a"/>
 </g>
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.165887;0.176052;1.000000"
-      dur="4.92s"
+      keyTimes="0.000000;0.167242;0.177796;1.000000"
+      dur="4.93s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -403,19 +403,19 @@
   </g>
 
   <g id="frame-17" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="500" height="200" fill="#2e3440" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="397" height="100" fill="#282c34" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f13" x="16" y="16">❯</text>
-<text class="text fg" x="25.6" y="16"> Underline cursor                              </text>
+<text class="text fg" x="25.6" y="16"> Underline cursor                                                              </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor-active" x="198.4" y="36.4" width="9.6" height="2" fill="#bf616a"/>
+<rect class="cursor" x="198.4" y="36.4" width="9.6" height="2" fill="#bf616a"/>
 </g>
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.176052;0.186623;1.000000"
-      dur="4.92s"
+      keyTimes="0.000000;0.177796;0.187741;1.000000"
+      dur="4.93s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -423,19 +423,19 @@
   </g>
 
   <g id="frame-18" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="500" height="200" fill="#2e3440" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="397" height="100" fill="#282c34" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f13" x="16" y="16">❯</text>
-<text class="text fg" x="25.6" y="16"> Underline cursor s                            </text>
+<text class="text fg" x="25.6" y="16"> Underline cursor s                                                            </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor-active" x="208" y="36.4" width="9.6" height="2" fill="#bf616a"/>
+<rect class="cursor" x="208" y="36.4" width="9.6" height="2" fill="#bf616a"/>
 </g>
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.186623;0.196585;1.000000"
-      dur="4.92s"
+      keyTimes="0.000000;0.187741;0.198092;1.000000"
+      dur="4.93s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -443,19 +443,19 @@
   </g>
 
   <g id="frame-19" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="500" height="200" fill="#2e3440" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="397" height="100" fill="#282c34" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f13" x="16" y="16">❯</text>
-<text class="text fg" x="25.6" y="16"> Underline cursor st                           </text>
+<text class="text fg" x="25.6" y="16"> Underline cursor st                                                           </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor-active" x="217.6" y="36.4" width="9.6" height="2" fill="#bf616a"/>
+<rect class="cursor" x="217.6" y="36.4" width="9.6" height="2" fill="#bf616a"/>
 </g>
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.196585;0.207156;1.000000"
-      dur="4.92s"
+      keyTimes="0.000000;0.198092;0.208240;1.000000"
+      dur="4.93s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -463,19 +463,19 @@
   </g>
 
   <g id="frame-20" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="500" height="200" fill="#2e3440" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="397" height="100" fill="#282c34" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f13" x="16" y="16">❯</text>
-<text class="text fg" x="25.6" y="16"> Underline cursor sty                          </text>
+<text class="text fg" x="25.6" y="16"> Underline cursor sty                                                          </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor-active" x="227.2" y="36.4" width="9.6" height="2" fill="#bf616a"/>
+<rect class="cursor" x="227.2" y="36.4" width="9.6" height="2" fill="#bf616a"/>
 </g>
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.207156;0.217524;1.000000"
-      dur="4.92s"
+      keyTimes="0.000000;0.208240;0.218794;1.000000"
+      dur="4.93s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -483,19 +483,19 @@
   </g>
 
   <g id="frame-21" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="500" height="200" fill="#2e3440" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="397" height="100" fill="#282c34" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f13" x="16" y="16">❯</text>
-<text class="text fg" x="25.6" y="16"> Underline cursor styl                         </text>
+<text class="text fg" x="25.6" y="16"> Underline cursor styl                                                         </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor-active" x="236.79999999999998" y="36.4" width="9.6" height="2" fill="#bf616a"/>
+<rect class="cursor" x="236.79999999999998" y="36.4" width="9.6" height="2" fill="#bf616a"/>
 </g>
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.217524;0.227892;1.000000"
-      dur="4.92s"
+      keyTimes="0.000000;0.218794;0.229146;1.000000"
+      dur="4.93s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -503,30 +503,10 @@
   </g>
 
   <g id="frame-22" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="500" height="200" fill="#2e3440" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="397" height="100" fill="#282c34" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f13" x="16" y="16">❯</text>
-<text class="text fg" x="25.6" y="16"> Underline cursor style                        </text>
-</g>
-<g class="cursor-layer">
-<rect class="cursor-active" x="246.39999999999998" y="36.4" width="9.6" height="2" fill="#bf616a"/>
-</g>
-    <animate
-      attributeName="visibility"
-      values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.227892;0.329945;1.000000"
-      dur="4.92s"
-      repeatCount="indefinite"
-      calcMode="discrete"
-      fill="freeze"
-    />
-  </g>
-
-  <g id="frame-23" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="500" height="200" fill="#2e3440" rx="8" ry="8"/>
-<g class="text-layer">
-<text class="text f13" x="16" y="16">❯</text>
-<text class="text fg" x="25.6" y="16"> Underline cursor style                        </text>
+<text class="text fg" x="25.6" y="16"> Underline cursor style                                                        </text>
 </g>
 <g class="cursor-layer">
 <rect class="cursor" x="246.39999999999998" y="36.4" width="9.6" height="2" fill="#bf616a"/>
@@ -534,8 +514,28 @@
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.329945;0.350884;1.000000"
-      dur="4.92s"
+      keyTimes="0.000000;0.229146;0.331033;1.000000"
+      dur="4.93s"
+      repeatCount="indefinite"
+      calcMode="discrete"
+      fill="freeze"
+    />
+  </g>
+
+  <g id="frame-23" visibility="hidden">
+    <rect class="window-bg" x="0" y="0" width="397" height="100" fill="#282c34" rx="8" ry="8"/>
+<g class="text-layer">
+<text class="text f13" x="16" y="16">❯</text>
+<text class="text fg" x="25.6" y="16"> Underline cursor style                                                        </text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor" x="246.39999999999998" y="36.4" width="9.6" height="2" fill="#bf616a"/>
+</g>
+    <animate
+      attributeName="visibility"
+      values="hidden;visible;hidden;hidden"
+      keyTimes="0.000000;0.331033;0.352141;1.000000"
+      dur="4.93s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -543,16 +543,16 @@
   </g>
 
   <g id="frame-24" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="500" height="200" fill="#2e3440" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="397" height="100" fill="#282c34" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f13" x="16" y="16">❯</text>
-<text class="text fg" x="25.6" y="16"> Underline cursor style                        </text>
+<text class="text fg" x="25.6" y="16"> Underline cursor style                                                        </text>
 </g>
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.350884;0.374263;1.000000"
-      dur="4.92s"
+      keyTimes="0.000000;0.352141;0.374873;1.000000"
+      dur="4.93s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -560,11 +560,11 @@
   </g>
 
   <g id="frame-25" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="500" height="200" fill="#2e3440" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="397" height="100" fill="#282c34" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f13" x="16" y="16">❯</text>
-<text class="text fg" x="25.6" y="16"> Underline cursor style                        </text>
-<text class="text fg" x="16" y="38.4">/bin/sh: Underline: command not found           </text>
+<text class="text fg" x="25.6" y="16"> Underline cursor style                                                        </text>
+<text class="text fg" x="16" y="38.4">/bin/sh: Underline: command not found                                           </text>
 <text class="text f13" x="16" y="60.8">❯</text>
 </g>
 <g class="cursor-layer">
@@ -573,8 +573,8 @@
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.374263;0.385038;1.000000"
-      dur="4.92s"
+      keyTimes="0.000000;0.374873;0.386036;1.000000"
+      dur="4.93s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -582,22 +582,22 @@
   </g>
 
   <g id="frame-26" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="500" height="200" fill="#2e3440" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="397" height="100" fill="#282c34" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f13" x="16" y="16">❯</text>
-<text class="text fg" x="25.6" y="16"> Underline cursor style                        </text>
-<text class="text fg" x="16" y="38.4">/bin/sh: Underline: command not found           </text>
+<text class="text fg" x="25.6" y="16"> Underline cursor style                                                        </text>
+<text class="text fg" x="16" y="38.4">/bin/sh: Underline: command not found                                           </text>
 <text class="text f13" x="16" y="60.8">❯</text>
-<text class="text fg" x="25.6" y="60.8"> w                                             </text>
+<text class="text fg" x="25.6" y="60.8"> w                                                                             </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor-active" x="44.8" y="81.19999999999999" width="9.6" height="2" fill="#bf616a"/>
+<rect class="cursor" x="44.8" y="81.19999999999999" width="9.6" height="2" fill="#bf616a"/>
 </g>
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.385038;0.395609;1.000000"
-      dur="4.92s"
+      keyTimes="0.000000;0.386036;0.396184;1.000000"
+      dur="4.93s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -605,22 +605,22 @@
   </g>
 
   <g id="frame-27" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="500" height="200" fill="#2e3440" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="397" height="100" fill="#282c34" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f13" x="16" y="16">❯</text>
-<text class="text fg" x="25.6" y="16"> Underline cursor style                        </text>
-<text class="text fg" x="16" y="38.4">/bin/sh: Underline: command not found           </text>
+<text class="text fg" x="25.6" y="16"> Underline cursor style                                                        </text>
+<text class="text fg" x="16" y="38.4">/bin/sh: Underline: command not found                                           </text>
 <text class="text f13" x="16" y="60.8">❯</text>
-<text class="text fg" x="25.6" y="60.8"> wi                                            </text>
+<text class="text fg" x="25.6" y="60.8"> wi                                                                            </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor-active" x="54.4" y="81.19999999999999" width="9.6" height="2" fill="#bf616a"/>
+<rect class="cursor" x="54.4" y="81.19999999999999" width="9.6" height="2" fill="#bf616a"/>
 </g>
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.395609;0.406383;1.000000"
-      dur="4.92s"
+      keyTimes="0.000000;0.396184;0.406738;1.000000"
+      dur="4.93s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -628,22 +628,22 @@
   </g>
 
   <g id="frame-28" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="500" height="200" fill="#2e3440" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="397" height="100" fill="#282c34" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f13" x="16" y="16">❯</text>
-<text class="text fg" x="25.6" y="16"> Underline cursor style                        </text>
-<text class="text fg" x="16" y="38.4">/bin/sh: Underline: command not found           </text>
+<text class="text fg" x="25.6" y="16"> Underline cursor style                                                        </text>
+<text class="text fg" x="16" y="38.4">/bin/sh: Underline: command not found                                           </text>
 <text class="text f13" x="16" y="60.8">❯</text>
-<text class="text fg" x="25.6" y="60.8"> wit                                           </text>
+<text class="text fg" x="25.6" y="60.8"> wit                                                                           </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor-active" x="64" y="81.19999999999999" width="9.6" height="2" fill="#bf616a"/>
+<rect class="cursor" x="64" y="81.19999999999999" width="9.6" height="2" fill="#bf616a"/>
 </g>
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.406383;0.416751;1.000000"
-      dur="4.92s"
+      keyTimes="0.000000;0.406738;0.417090;1.000000"
+      dur="4.93s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -651,22 +651,22 @@
   </g>
 
   <g id="frame-29" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="500" height="200" fill="#2e3440" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="397" height="100" fill="#282c34" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f13" x="16" y="16">❯</text>
-<text class="text fg" x="25.6" y="16"> Underline cursor style                        </text>
-<text class="text fg" x="16" y="38.4">/bin/sh: Underline: command not found           </text>
+<text class="text fg" x="25.6" y="16"> Underline cursor style                                                        </text>
+<text class="text fg" x="16" y="38.4">/bin/sh: Underline: command not found                                           </text>
 <text class="text f13" x="16" y="60.8">❯</text>
-<text class="text fg" x="25.6" y="60.8"> with                                          </text>
+<text class="text fg" x="25.6" y="60.8"> with                                                                          </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor-active" x="73.6" y="81.19999999999999" width="9.6" height="2" fill="#bf616a"/>
+<rect class="cursor" x="73.6" y="81.19999999999999" width="9.6" height="2" fill="#bf616a"/>
 </g>
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.416751;0.427323;1.000000"
-      dur="4.92s"
+      keyTimes="0.000000;0.417090;0.427644;1.000000"
+      dur="4.93s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -674,22 +674,22 @@
   </g>
 
   <g id="frame-30" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="500" height="200" fill="#2e3440" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="397" height="100" fill="#282c34" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f13" x="16" y="16">❯</text>
-<text class="text fg" x="25.6" y="16"> Underline cursor style                        </text>
-<text class="text fg" x="16" y="38.4">/bin/sh: Underline: command not found           </text>
+<text class="text fg" x="25.6" y="16"> Underline cursor style                                                        </text>
+<text class="text fg" x="16" y="38.4">/bin/sh: Underline: command not found                                           </text>
 <text class="text f13" x="16" y="60.8">❯</text>
-<text class="text fg" x="25.6" y="60.8"> with                                          </text>
+<text class="text fg" x="25.6" y="60.8"> with                                                                          </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor-active" x="83.2" y="81.19999999999999" width="9.6" height="2" fill="#bf616a"/>
+<rect class="cursor" x="83.2" y="81.19999999999999" width="9.6" height="2" fill="#bf616a"/>
 </g>
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.427323;0.437691;1.000000"
-      dur="4.92s"
+      keyTimes="0.000000;0.427644;0.437995;1.000000"
+      dur="4.93s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -697,22 +697,22 @@
   </g>
 
   <g id="frame-31" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="500" height="200" fill="#2e3440" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="397" height="100" fill="#282c34" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f13" x="16" y="16">❯</text>
-<text class="text fg" x="25.6" y="16"> Underline cursor style                        </text>
-<text class="text fg" x="16" y="38.4">/bin/sh: Underline: command not found           </text>
+<text class="text fg" x="25.6" y="16"> Underline cursor style                                                        </text>
+<text class="text fg" x="16" y="38.4">/bin/sh: Underline: command not found                                           </text>
 <text class="text f13" x="16" y="60.8">❯</text>
-<text class="text fg" x="25.6" y="60.8"> with c                                        </text>
+<text class="text fg" x="25.6" y="60.8"> with c                                                                        </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor-active" x="92.8" y="81.19999999999999" width="9.6" height="2" fill="#bf616a"/>
+<rect class="cursor" x="92.8" y="81.19999999999999" width="9.6" height="2" fill="#bf616a"/>
 </g>
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.437691;0.448059;1.000000"
-      dur="4.92s"
+      keyTimes="0.000000;0.437995;0.448955;1.000000"
+      dur="4.93s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -720,22 +720,22 @@
   </g>
 
   <g id="frame-32" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="500" height="200" fill="#2e3440" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="397" height="100" fill="#282c34" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f13" x="16" y="16">❯</text>
-<text class="text fg" x="25.6" y="16"> Underline cursor style                        </text>
-<text class="text fg" x="16" y="38.4">/bin/sh: Underline: command not found           </text>
+<text class="text fg" x="25.6" y="16"> Underline cursor style                                                        </text>
+<text class="text fg" x="16" y="38.4">/bin/sh: Underline: command not found                                           </text>
 <text class="text f13" x="16" y="60.8">❯</text>
-<text class="text fg" x="25.6" y="60.8"> with cu                                       </text>
+<text class="text fg" x="25.6" y="60.8"> with cu                                                                       </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor-active" x="102.39999999999999" y="81.19999999999999" width="9.6" height="2" fill="#bf616a"/>
+<rect class="cursor" x="102.39999999999999" y="81.19999999999999" width="9.6" height="2" fill="#bf616a"/>
 </g>
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.448059;0.458223;1.000000"
-      dur="4.92s"
+      keyTimes="0.000000;0.448955;0.459103;1.000000"
+      dur="4.93s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -743,22 +743,22 @@
   </g>
 
   <g id="frame-33" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="500" height="200" fill="#2e3440" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="397" height="100" fill="#282c34" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f13" x="16" y="16">❯</text>
-<text class="text fg" x="25.6" y="16"> Underline cursor style                        </text>
-<text class="text fg" x="16" y="38.4">/bin/sh: Underline: command not found           </text>
+<text class="text fg" x="25.6" y="16"> Underline cursor style                                                        </text>
+<text class="text fg" x="16" y="38.4">/bin/sh: Underline: command not found                                           </text>
 <text class="text f13" x="16" y="60.8">❯</text>
-<text class="text fg" x="25.6" y="60.8"> with cus                                      </text>
+<text class="text fg" x="25.6" y="60.8"> with cus                                                                      </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor-active" x="112" y="81.19999999999999" width="9.6" height="2" fill="#bf616a"/>
+<rect class="cursor" x="112" y="81.19999999999999" width="9.6" height="2" fill="#bf616a"/>
 </g>
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.458223;0.468591;1.000000"
-      dur="4.92s"
+      keyTimes="0.000000;0.459103;0.469048;1.000000"
+      dur="4.93s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -766,22 +766,22 @@
   </g>
 
   <g id="frame-34" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="500" height="200" fill="#2e3440" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="397" height="100" fill="#282c34" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f13" x="16" y="16">❯</text>
-<text class="text fg" x="25.6" y="16"> Underline cursor style                        </text>
-<text class="text fg" x="16" y="38.4">/bin/sh: Underline: command not found           </text>
+<text class="text fg" x="25.6" y="16"> Underline cursor style                                                        </text>
+<text class="text fg" x="16" y="38.4">/bin/sh: Underline: command not found                                           </text>
 <text class="text f13" x="16" y="60.8">❯</text>
-<text class="text fg" x="25.6" y="60.8"> with cust                                     </text>
+<text class="text fg" x="25.6" y="60.8"> with cust                                                                     </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor-active" x="121.6" y="81.19999999999999" width="9.6" height="2" fill="#bf616a"/>
+<rect class="cursor" x="121.6" y="81.19999999999999" width="9.6" height="2" fill="#bf616a"/>
 </g>
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.468591;0.478756;1.000000"
-      dur="4.92s"
+      keyTimes="0.000000;0.469048;0.479602;1.000000"
+      dur="4.93s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -789,22 +789,22 @@
   </g>
 
   <g id="frame-35" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="500" height="200" fill="#2e3440" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="397" height="100" fill="#282c34" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f13" x="16" y="16">❯</text>
-<text class="text fg" x="25.6" y="16"> Underline cursor style                        </text>
-<text class="text fg" x="16" y="38.4">/bin/sh: Underline: command not found           </text>
+<text class="text fg" x="25.6" y="16"> Underline cursor style                                                        </text>
+<text class="text fg" x="16" y="38.4">/bin/sh: Underline: command not found                                           </text>
 <text class="text f13" x="16" y="60.8">❯</text>
-<text class="text fg" x="25.6" y="60.8"> with custo                                    </text>
+<text class="text fg" x="25.6" y="60.8"> with custo                                                                    </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor-active" x="131.2" y="81.19999999999999" width="9.6" height="2" fill="#bf616a"/>
+<rect class="cursor" x="131.2" y="81.19999999999999" width="9.6" height="2" fill="#bf616a"/>
 </g>
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.478756;0.488717;1.000000"
-      dur="4.92s"
+      keyTimes="0.000000;0.479602;0.489953;1.000000"
+      dur="4.93s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -812,22 +812,22 @@
   </g>
 
   <g id="frame-36" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="500" height="200" fill="#2e3440" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="397" height="100" fill="#282c34" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f13" x="16" y="16">❯</text>
-<text class="text fg" x="25.6" y="16"> Underline cursor style                        </text>
-<text class="text fg" x="16" y="38.4">/bin/sh: Underline: command not found           </text>
+<text class="text fg" x="25.6" y="16"> Underline cursor style                                                        </text>
+<text class="text fg" x="16" y="38.4">/bin/sh: Underline: command not found                                           </text>
 <text class="text f13" x="16" y="60.8">❯</text>
-<text class="text fg" x="25.6" y="60.8"> with custom                                   </text>
+<text class="text fg" x="25.6" y="60.8"> with custom                                                                   </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor-active" x="140.8" y="81.19999999999999" width="9.6" height="2" fill="#bf616a"/>
+<rect class="cursor" x="140.8" y="81.19999999999999" width="9.6" height="2" fill="#bf616a"/>
 </g>
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.488717;0.499288;1.000000"
-      dur="4.92s"
+      keyTimes="0.000000;0.489953;0.500304;1.000000"
+      dur="4.93s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -835,22 +835,22 @@
   </g>
 
   <g id="frame-37" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="500" height="200" fill="#2e3440" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="397" height="100" fill="#282c34" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f13" x="16" y="16">❯</text>
-<text class="text fg" x="25.6" y="16"> Underline cursor style                        </text>
-<text class="text fg" x="16" y="38.4">/bin/sh: Underline: command not found           </text>
+<text class="text fg" x="25.6" y="16"> Underline cursor style                                                        </text>
+<text class="text fg" x="16" y="38.4">/bin/sh: Underline: command not found                                           </text>
 <text class="text f13" x="16" y="60.8">❯</text>
-<text class="text fg" x="25.6" y="60.8"> with custom                                   </text>
+<text class="text fg" x="25.6" y="60.8"> with custom                                                                   </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor-active" x="150.4" y="81.19999999999999" width="9.6" height="2" fill="#bf616a"/>
+<rect class="cursor" x="150.4" y="81.19999999999999" width="9.6" height="2" fill="#bf616a"/>
 </g>
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.499288;0.509656;1.000000"
-      dur="4.92s"
+      keyTimes="0.000000;0.500304;0.510859;1.000000"
+      dur="4.93s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -858,22 +858,22 @@
   </g>
 
   <g id="frame-38" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="500" height="200" fill="#2e3440" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="397" height="100" fill="#282c34" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f13" x="16" y="16">❯</text>
-<text class="text fg" x="25.6" y="16"> Underline cursor style                        </text>
-<text class="text fg" x="16" y="38.4">/bin/sh: Underline: command not found           </text>
+<text class="text fg" x="25.6" y="16"> Underline cursor style                                                        </text>
+<text class="text fg" x="16" y="38.4">/bin/sh: Underline: command not found                                           </text>
 <text class="text f13" x="16" y="60.8">❯</text>
-<text class="text fg" x="25.6" y="60.8"> with custom r                                 </text>
+<text class="text fg" x="25.6" y="60.8"> with custom r                                                                 </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor-active" x="160" y="81.19999999999999" width="9.6" height="2" fill="#bf616a"/>
+<rect class="cursor" x="160" y="81.19999999999999" width="9.6" height="2" fill="#bf616a"/>
 </g>
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.509656;0.520024;1.000000"
-      dur="4.92s"
+      keyTimes="0.000000;0.510859;0.521413;1.000000"
+      dur="4.93s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -881,22 +881,22 @@
   </g>
 
   <g id="frame-39" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="500" height="200" fill="#2e3440" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="397" height="100" fill="#282c34" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f13" x="16" y="16">❯</text>
-<text class="text fg" x="25.6" y="16"> Underline cursor style                        </text>
-<text class="text fg" x="16" y="38.4">/bin/sh: Underline: command not found           </text>
+<text class="text fg" x="25.6" y="16"> Underline cursor style                                                        </text>
+<text class="text fg" x="16" y="38.4">/bin/sh: Underline: command not found                                           </text>
 <text class="text f13" x="16" y="60.8">❯</text>
-<text class="text fg" x="25.6" y="60.8"> with custom re                                </text>
+<text class="text fg" x="25.6" y="60.8"> with custom re                                                                </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor-active" x="169.6" y="81.19999999999999" width="9.6" height="2" fill="#bf616a"/>
+<rect class="cursor" x="169.6" y="81.19999999999999" width="9.6" height="2" fill="#bf616a"/>
 </g>
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.520024;0.530189;1.000000"
-      dur="4.92s"
+      keyTimes="0.000000;0.521413;0.530952;1.000000"
+      dur="4.93s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -904,22 +904,22 @@
   </g>
 
   <g id="frame-40" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="500" height="200" fill="#2e3440" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="397" height="100" fill="#282c34" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f13" x="16" y="16">❯</text>
-<text class="text fg" x="25.6" y="16"> Underline cursor style                        </text>
-<text class="text fg" x="16" y="38.4">/bin/sh: Underline: command not found           </text>
+<text class="text fg" x="25.6" y="16"> Underline cursor style                                                        </text>
+<text class="text fg" x="16" y="38.4">/bin/sh: Underline: command not found                                           </text>
 <text class="text f13" x="16" y="60.8">❯</text>
-<text class="text fg" x="25.6" y="60.8"> with custom red                               </text>
+<text class="text fg" x="25.6" y="60.8"> with custom red                                                               </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor-active" x="179.2" y="81.19999999999999" width="9.6" height="2" fill="#bf616a"/>
+<rect class="cursor" x="179.2" y="81.19999999999999" width="9.6" height="2" fill="#bf616a"/>
 </g>
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.530189;0.540760;1.000000"
-      dur="4.92s"
+      keyTimes="0.000000;0.530952;0.541303;1.000000"
+      dur="4.93s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -927,22 +927,22 @@
   </g>
 
   <g id="frame-41" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="500" height="200" fill="#2e3440" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="397" height="100" fill="#282c34" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f13" x="16" y="16">❯</text>
-<text class="text fg" x="25.6" y="16"> Underline cursor style                        </text>
-<text class="text fg" x="16" y="38.4">/bin/sh: Underline: command not found           </text>
+<text class="text fg" x="25.6" y="16"> Underline cursor style                                                        </text>
+<text class="text fg" x="16" y="38.4">/bin/sh: Underline: command not found                                           </text>
 <text class="text f13" x="16" y="60.8">❯</text>
-<text class="text fg" x="25.6" y="60.8"> with custom red                               </text>
+<text class="text fg" x="25.6" y="60.8"> with custom red                                                               </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor-active" x="188.79999999999998" y="81.19999999999999" width="9.6" height="2" fill="#bf616a"/>
+<rect class="cursor" x="188.79999999999998" y="81.19999999999999" width="9.6" height="2" fill="#bf616a"/>
 </g>
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.540760;0.551128;1.000000"
-      dur="4.92s"
+      keyTimes="0.000000;0.541303;0.551451;1.000000"
+      dur="4.93s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -950,22 +950,22 @@
   </g>
 
   <g id="frame-42" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="500" height="200" fill="#2e3440" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="397" height="100" fill="#282c34" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f13" x="16" y="16">❯</text>
-<text class="text fg" x="25.6" y="16"> Underline cursor style                        </text>
-<text class="text fg" x="16" y="38.4">/bin/sh: Underline: command not found           </text>
+<text class="text fg" x="25.6" y="16"> Underline cursor style                                                        </text>
+<text class="text fg" x="16" y="38.4">/bin/sh: Underline: command not found                                           </text>
 <text class="text f13" x="16" y="60.8">❯</text>
-<text class="text fg" x="25.6" y="60.8"> with custom red c                             </text>
+<text class="text fg" x="25.6" y="60.8"> with custom red c                                                             </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor-active" x="198.4" y="81.19999999999999" width="9.6" height="2" fill="#bf616a"/>
+<rect class="cursor" x="198.4" y="81.19999999999999" width="9.6" height="2" fill="#bf616a"/>
 </g>
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.551128;0.561700;1.000000"
-      dur="4.92s"
+      keyTimes="0.000000;0.551451;0.561802;1.000000"
+      dur="4.93s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -973,22 +973,22 @@
   </g>
 
   <g id="frame-43" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="500" height="200" fill="#2e3440" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="397" height="100" fill="#282c34" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f13" x="16" y="16">❯</text>
-<text class="text fg" x="25.6" y="16"> Underline cursor style                        </text>
-<text class="text fg" x="16" y="38.4">/bin/sh: Underline: command not found           </text>
+<text class="text fg" x="25.6" y="16"> Underline cursor style                                                        </text>
+<text class="text fg" x="16" y="38.4">/bin/sh: Underline: command not found                                           </text>
 <text class="text f13" x="16" y="60.8">❯</text>
-<text class="text fg" x="25.6" y="60.8"> with custom red co                            </text>
+<text class="text fg" x="25.6" y="60.8"> with custom red co                                                            </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor-active" x="208" y="81.19999999999999" width="9.6" height="2" fill="#bf616a"/>
+<rect class="cursor" x="208" y="81.19999999999999" width="9.6" height="2" fill="#bf616a"/>
 </g>
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.561700;0.572474;1.000000"
-      dur="4.92s"
+      keyTimes="0.000000;0.561802;0.572356;1.000000"
+      dur="4.93s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -996,22 +996,22 @@
   </g>
 
   <g id="frame-44" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="500" height="200" fill="#2e3440" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="397" height="100" fill="#282c34" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f13" x="16" y="16">❯</text>
-<text class="text fg" x="25.6" y="16"> Underline cursor style                        </text>
-<text class="text fg" x="16" y="38.4">/bin/sh: Underline: command not found           </text>
+<text class="text fg" x="25.6" y="16"> Underline cursor style                                                        </text>
+<text class="text fg" x="16" y="38.4">/bin/sh: Underline: command not found                                           </text>
 <text class="text f13" x="16" y="60.8">❯</text>
-<text class="text fg" x="25.6" y="60.8"> with custom red col                           </text>
+<text class="text fg" x="25.6" y="60.8"> with custom red col                                                           </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor-active" x="217.6" y="81.19999999999999" width="9.6" height="2" fill="#bf616a"/>
+<rect class="cursor" x="217.6" y="81.19999999999999" width="9.6" height="2" fill="#bf616a"/>
 </g>
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.572474;0.582842;1.000000"
-      dur="4.92s"
+      keyTimes="0.000000;0.572356;0.582708;1.000000"
+      dur="4.93s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -1019,22 +1019,22 @@
   </g>
 
   <g id="frame-45" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="500" height="200" fill="#2e3440" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="397" height="100" fill="#282c34" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f13" x="16" y="16">❯</text>
-<text class="text fg" x="25.6" y="16"> Underline cursor style                        </text>
-<text class="text fg" x="16" y="38.4">/bin/sh: Underline: command not found           </text>
+<text class="text fg" x="25.6" y="16"> Underline cursor style                                                        </text>
+<text class="text fg" x="16" y="38.4">/bin/sh: Underline: command not found                                           </text>
 <text class="text f13" x="16" y="60.8">❯</text>
-<text class="text fg" x="25.6" y="60.8"> with custom red colo                          </text>
+<text class="text fg" x="25.6" y="60.8"> with custom red colo                                                          </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor-active" x="227.2" y="81.19999999999999" width="9.6" height="2" fill="#bf616a"/>
+<rect class="cursor" x="227.2" y="81.19999999999999" width="9.6" height="2" fill="#bf616a"/>
 </g>
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.582842;0.593413;1.000000"
-      dur="4.92s"
+      keyTimes="0.000000;0.582708;0.592856;1.000000"
+      dur="4.93s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -1042,22 +1042,22 @@
   </g>
 
   <g id="frame-46" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="500" height="200" fill="#2e3440" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="397" height="100" fill="#282c34" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f13" x="16" y="16">❯</text>
-<text class="text fg" x="25.6" y="16"> Underline cursor style                        </text>
-<text class="text fg" x="16" y="38.4">/bin/sh: Underline: command not found           </text>
+<text class="text fg" x="25.6" y="16"> Underline cursor style                                                        </text>
+<text class="text fg" x="16" y="38.4">/bin/sh: Underline: command not found                                           </text>
 <text class="text f13" x="16" y="60.8">❯</text>
-<text class="text fg" x="25.6" y="60.8"> with custom red color                         </text>
+<text class="text fg" x="25.6" y="60.8"> with custom red color                                                         </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor-active" x="236.79999999999998" y="81.19999999999999" width="9.6" height="2" fill="#bf616a"/>
+<rect class="cursor" x="236.79999999999998" y="81.19999999999999" width="9.6" height="2" fill="#bf616a"/>
 </g>
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.593413;0.796707;1.000000"
-      dur="4.92s"
+      keyTimes="0.000000;0.592856;0.796225;1.000000"
+      dur="4.93s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -1065,22 +1065,22 @@
   </g>
 
   <g id="frame-47" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="500" height="200" fill="#2e3440" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="397" height="100" fill="#282c34" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f13" x="16" y="16">❯</text>
-<text class="text fg" x="25.6" y="16"> Underline cursor style                        </text>
-<text class="text fg" x="16" y="38.4">/bin/sh: Underline: command not found           </text>
+<text class="text fg" x="25.6" y="16"> Underline cursor style                                                        </text>
+<text class="text fg" x="16" y="38.4">/bin/sh: Underline: command not found                                           </text>
 <text class="text f13" x="16" y="60.8">❯</text>
-<text class="text fg" x="25.6" y="60.8"> with custom red color                         </text>
+<text class="text fg" x="25.6" y="60.8"> with custom red color                                                         </text>
 </g>
 <g class="cursor-layer">
 <rect class="cursor" x="236.79999999999998" y="81.19999999999999" width="9.6" height="2" fill="#bf616a"/>
 </g>
     <animate
       attributeName="visibility"
-      values="hidden;visible;hidden"
-      keyTimes="0.000000;0.796707;1.000000"
-      dur="4.92s"
+      values="hidden;visible;hidden;hidden"
+      keyTimes="0.000000;0.796225;0.797037;1.000000"
+      dur="4.93s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -1088,13 +1088,13 @@
   </g>
 
   <g id="frame-48" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="500" height="200" fill="#2e3440" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="397" height="100" fill="#282c34" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f13" x="16" y="16">❯</text>
-<text class="text fg" x="25.6" y="16"> Underline cursor style                        </text>
-<text class="text fg" x="16" y="38.4">/bin/sh: Underline: command not found           </text>
+<text class="text fg" x="25.6" y="16"> Underline cursor style                                                        </text>
+<text class="text fg" x="16" y="38.4">/bin/sh: Underline: command not found                                           </text>
 <text class="text f13" x="16" y="60.8">❯</text>
-<text class="text fg" x="25.6" y="60.8"> with custom red color                         </text>
+<text class="text fg" x="25.6" y="60.8"> with custom red color                                                         </text>
 </g>
 <g class="cursor-layer">
 <rect class="cursor" x="236.79999999999998" y="81.19999999999999" width="9.6" height="2" fill="#bf616a"/>
@@ -1102,8 +1102,8 @@
     <animate
       attributeName="visibility"
       values="hidden;visible;visible"
-      keyTimes="0.000000;0.796707;1.000000"
-      dur="4.92s"
+      keyTimes="0.000000;0.797037;1.000000"
+      dur="4.93s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"

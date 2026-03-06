@@ -2,8 +2,6 @@
 # Tests Cmd+Backspace to delete words
 Output examples/svgs/word-deletion-test.svg
 
-Set Width 800
-Set Height 400
 Set FontSize 16
 Set Theme monokai
 Set Title "Word Deletion Test"
@@ -23,6 +21,11 @@ Sleep 500ms
 # Delete "world "
 Cmd+Backspace
 Sleep 500ms
+
+Cmd+Left
+Type "echo '"
+Cmd+Right
+Type "'"
 
 Enter
 Sleep 1s

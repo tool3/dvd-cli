@@ -2,8 +2,6 @@
 # Showcases all navigation features: selection, word movement, line navigation, word deletion
 Output examples/svgs/keyboard-navigation-demo.svg
 
-Set Width 1000
-Set Height 600
 Set FontSize 16
 Set Title "Keyboard Navigation Demo"
 Set PromptPrefix "\x1b[95m❯\x1b[0m "
@@ -12,15 +10,16 @@ Set TypingSpeed 40
 # Demo 1: Character Selection
 Type "# Character Selection (Shift+Left/Right)"
 Enter
-Type "The quick brown fox jumps"
+Type "echo 'The quick brown fox jumps'"
 Sleep 300ms
 Shift+Left
 Shift+Left
 Shift+Left
 Shift+Left
 Shift+Left
+Shift+Left
 Sleep 500ms
-Type "runs"
+Type "runs'"
 Sleep 500ms
 Enter
 Sleep 800ms
@@ -48,7 +47,7 @@ Alt+Shift+Left
 Sleep 300ms
 Alt+Shift+Left
 Sleep 500ms
-Type "text"
+Type "text'"
 Sleep 500ms
 Enter
 Sleep 800ms
@@ -75,6 +74,7 @@ Sleep 300ms
 Cmd+Backspace
 Sleep 300ms
 Cmd+Backspace
+Type "'"
 Sleep 500ms
 Enter
 Sleep 1s

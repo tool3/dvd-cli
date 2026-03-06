@@ -14,9 +14,8 @@ Set Template macos
 # Embed JetBrains Mono - a popular coding font with ligatures
 Set EmbedFont examples/fonts/JetBrainsMono-Regular.woff2
 
-Type "node -e 'console.log(greeting);'"
+Type "node -e \"console.log('greetings!')\""
 Sleep 500ms
-Enter
 Enter
 Type "// Font is embedded - works everywhere!"
 Sleep 1s

@@ -1,17 +1,15 @@
 # Test back space typing
 Output examples/svgs/backspace.svg
 
-Set Width 800
-Set Height 400
 Set FontSize 16
 Set PromptPrefix "\x1b[32m$\x1b[0m "
 Set Template macos
 Set Theme github-dark
 Set Watermark "\x1b[0;2mby talhayut\x1b[0m"
 
-Type "echo 'I am an idiot savant developer"
+Type "echo 'I am an idiot savant developer'"
 Left 10
-Backspace 6
+Backspace 7
 
 Sleep 100ms
 

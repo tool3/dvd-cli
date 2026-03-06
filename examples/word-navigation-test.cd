@@ -2,8 +2,6 @@
 # Tests Alt+Left/Right word movement and Cmd+Left/Right line navigation
 Output examples/svgs/word-navigation-test.svg
 
-Set Width 800
-Set Height 400
 Set FontSize 16
 Set Theme nord
 Set Title "Word Navigation Test"
@@ -21,6 +19,10 @@ Sleep 300ms
 # Move to beginning
 Cmd+Left
 Sleep 300ms
+
+Type "echo '"
+Cmd+Right
+Type "'"
 
 # Move to end
 Cmd+Right

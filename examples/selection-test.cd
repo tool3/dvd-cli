@@ -2,17 +2,16 @@
 # Tests Shift+Left/Right character selection and replacement
 Output examples/svgs/selection-test.svg
 
-Set Width 800
-Set Height 400
 Set FontSize 16
 Set Theme github-dark
 Set Title "Text Selection Test"
 Set PromptPrefix "\x1b[95m❯\x1b[0m "
 
-Type "echo 'The quick brown fox'"
+Type "'The quick brown fox'"
 Sleep 500ms
 
 # Select "fox" by moving left 3 times with Shift
+Shift+Left
 Shift+Left
 Shift+Left
 Shift+Left
@@ -21,7 +20,7 @@ Cmd+Left
 Sleep 500ms
 
 # Replace selection with "cat"
-Type "cat"
+Type "echo "
 Sleep 500ms
 Enter
 Sleep 1s
