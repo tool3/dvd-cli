@@ -305,17 +305,19 @@ export class CDExecutor {
     let grid = createGridState(gridWidth, gridHeight);
     grid = processInput(grid, content);
 
-    // Use VTerminal's cursor position - it correctly handles cursor positioning
-    // sequences (like those in neofetch) and places the cursor at the end of
-    // the actual rendered content
-    // Don't clamp when:
-    // - autoHeight is true (dimensions will be recalculated later)
-    // - scroll is false (all content is shown without viewport clipping)
+    // Determine cursor position
+    // When executing a command, use VTerminal's cursor position - it correctly handles
+    // cursor positioning sequences (like those in neofetch) and places the cursor
+    // at the end of the actual rendered content.
+    // When in input mode (not executing), use the tracked cursorX position plus
+    // the prompt prefix length for correct cursor placement during editing.
     const shouldClampCursor = !this.context.autoHeight && this.context.scroll;
     const finalCursorY = shouldClampCursor
       ? Math.max(0, Math.min(grid.cursor.row, maxVisibleRows - 1))
       : grid.cursor.row;
-    const finalCursorX = grid.cursor.col;
+    const finalCursorX = this.context.isExecutingCommand
+      ? grid.cursor.col
+      : this.context.cursorX + this.stripAnsi(this.context.promptPrefix).length;
 
     // Track max visual row for auto-height (accounts for cursor positioning in commands like neofetch)
     if (this.context.autoHeight) {
@@ -416,6 +418,8 @@ export class CDExecutor {
       cursor: showCursor ? { row: finalCursorY, col: finalCursorX } : null,
       cursorVisible: showCursor,
       timestamp,
+      selection,
+      activeCursor,
     });
 
     this.options.onFrame?.(frame);
@@ -1200,6 +1204,8 @@ export class CDExecutor {
         lineHeight: this.context.fontSize * this.context.lineHeight,
         cursorStyle: this.context.cursorStyle,
         cursorColor: this.context.cursorColor,
+        selection: frameData.selection,
+        activeCursor: frameData.activeCursor,
       });
 
       this.context.frames[i].svg = svg;

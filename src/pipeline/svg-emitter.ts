@@ -597,6 +597,8 @@ export interface FrameData {
   cursor: CursorPosition | null;
   cursorVisible: boolean;
   timestamp: number;
+  selection?: { start: number; end: number; row: number } | null;
+  activeCursor?: boolean;
 }
 
 /**
@@ -753,7 +755,7 @@ interface FrameRenderConfig {
 }
 
 function generateFrameContent(frame: FrameData, config: EmitterOptions & FrameRenderConfig): string {
-  const { rows, cursor, cursorVisible } = frame;
+  const { rows, cursor, cursorVisible, selection, activeCursor } = frame;
   const { charWidth, lineHeight, padding, contentStartY, theme } = config;
 
   const parts: string[] = [];
@@ -774,6 +776,24 @@ function generateFrameContent(frame: FrameData, config: EmitterOptions & FrameRe
     for (const rect of mergedBgRects) {
       parts.push(`<rect x="${rect.x}" y="${rect.y}" width="${rect.width}" height="${rect.height}" fill="${rect.color}"/>`);
     }
+    parts.push('</g>');
+  }
+
+  // Selection layer (render before text so text appears on top)
+  if (selection) {
+    const { start, end, row } = selection;
+    const selStart = Math.min(start, end);
+    const selEnd = Math.max(start, end);
+    const selectionX = padding + selStart * charWidth;
+    const selectionY = contentStartY + row * lineHeight;
+    const selectionWidth = (selEnd - selStart) * charWidth;
+    const selectionColor = theme.selection ?? '#44475a';
+
+    parts.push('<g class="selection-layer">');
+    parts.push(
+      `<rect x="${selectionX}" y="${selectionY}" ` +
+        `width="${selectionWidth}" height="${lineHeight}" fill="${selectionColor}" opacity="0.5"/>`
+    );
     parts.push('</g>');
   }
 
@@ -813,23 +833,25 @@ function generateFrameContent(frame: FrameData, config: EmitterOptions & FrameRe
     const cursorY = contentStartY + cursor.row * lineHeight;
     const cursorColor = config.cursorColor ?? theme.cursor ?? theme.foreground;
     const cursorStyle = config.cursorStyle ?? 'block';
+    // Use cursor-active class when actively typing (no blink)
+    const cursorClass = activeCursor ? 'cursor-active' : 'cursor';
 
     if (cursorStyle === 'block') {
       parts.push(
-        `<rect class="cursor" x="${cursorX}" y="${cursorY}" ` +
+        `<rect class="${cursorClass}" x="${cursorX}" y="${cursorY}" ` +
           `width="${charWidth}" height="${lineHeight}" fill="${cursorColor}"/>`
       );
     } else if (cursorStyle === 'bar') {
       // Vertical bar cursor (2px wide)
       parts.push(
-        `<rect class="cursor" x="${cursorX}" y="${cursorY}" ` +
+        `<rect class="${cursorClass}" x="${cursorX}" y="${cursorY}" ` +
           `width="2" height="${lineHeight}" fill="${cursorColor}"/>`
       );
     } else if (cursorStyle === 'underline') {
       // Underline cursor (2px tall at bottom of cell)
       const underlineY = cursorY + lineHeight - 2;
       parts.push(
-        `<rect class="cursor" x="${cursorX}" y="${underlineY}" ` +
+        `<rect class="${cursorClass}" x="${cursorX}" y="${underlineY}" ` +
           `width="${charWidth}" height="2" fill="${cursorColor}"/>`
       );
     }
