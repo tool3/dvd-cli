@@ -80,7 +80,9 @@ const buildExecutorOptions = (
 /**
  * Get ANSI color code for a command type
  */
-const getCommandColor = (cmdType: string): string => {
+const getCommandColor = (description: string): string => {
+  // Extract command name (first word before space or ANSI code)
+  const cmdType = description.split(/[\s\x1b]/)[0];
   const colors: Record<string, string> = {
     Type: '\x1b[36m',      // Cyan
     Enter: '\x1b[33m',     // Yellow
@@ -93,12 +95,15 @@ const getCommandColor = (cmdType: string): string => {
     Tab: '\x1b[32m',       // Green
     Space: '\x1b[32m',     // Green
     Screenshot: '\x1b[93m', // Bright Yellow
+    Copy: '\x1b[96m',      // Bright Cyan
+    Paste: '\x1b[96m',     // Bright Cyan
   };
   return colors[cmdType] || '\x1b[37m'; // Default: White
 };
 
 export async function renderCommand(args: RenderArgs): Promise<void> {
-  const spinner = createSpinner('Executing commands');
+  const fileName = args.file.split('/').pop() || args.file;
+  const spinner = createSpinner(`Executing ${fileName}`);
 
   if (!args.verbose) {
     spinner.start();
@@ -108,8 +113,13 @@ export async function renderCommand(args: RenderArgs): Promise<void> {
     // Load and parse the CD file
     const script = loadCDFile(args.file);
 
+    // Count action commands (excluding comments, settings, etc.)
+    const actionCommandCount = script.commands.filter(
+      (cmd) => !['Output', 'Require', 'Set', 'Env', 'Comment'].includes(cmd.type)
+    ).length;
+
     if (args.verbose) {
-      console.log(`Loaded ${script.commands.length} commands from ${args.file}`);
+      console.log(`Loaded ${actionCommandCount} commands from ${args.file}`);
     }
 
     // Determine output path
@@ -135,7 +145,7 @@ export async function renderCommand(args: RenderArgs): Promise<void> {
         if (args.verbose) {
           console.log(`\x1b[2mExecuting command ${current}/${total}\x1b[0m${descText}`);
         } else {
-          spinner.update(`\x1b[2mExecuting commands (${current}/${total})\x1b[0m${descText}`);
+          spinner.update(`\x1b[2mExecuting ${fileName} (${current}/${total})\x1b[0m${descText}`);
         }
       },
     });

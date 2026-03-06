@@ -946,17 +946,31 @@ export class CDExecutor {
     // Capture initial frame
     this.captureFrame(true);
 
-    // Execute commands
+    // Execute commands (filter out non-action commands including comments)
     const actionCommands = script.commands.filter(
-      (cmd: CDCommand) => !['Output', 'Require', 'Set', 'Env'].includes(cmd.type)
+      (cmd: CDCommand) => !['Output', 'Require', 'Set', 'Env', 'Comment'].includes(cmd.type)
     );
 
     for (let i = 0; i < actionCommands.length; i++) {
       const cmd = actionCommands[i];
 
+      // Build detailed command description
       let cmdDescription: string = cmd.type;
-      if (cmd.type === 'Key') {
-        cmdDescription = cmd.key;
+      if (cmd.type === 'Type') {
+        const preview = cmd.text.length > 20 ? cmd.text.slice(0, 20) + '...' : cmd.text;
+        cmdDescription = `Type \x1b[2m"${preview}"\x1b[0m`;
+      } else if (cmd.type === 'Key') {
+        cmdDescription = cmd.key + (cmd.count && cmd.count > 1 ? ` \x1b[2m×${cmd.count}\x1b[0m` : '');
+      } else if (cmd.type === 'Sleep') {
+        cmdDescription = `Sleep \x1b[2m${cmd.duration}ms\x1b[0m`;
+      } else if (cmd.type === 'Screenshot') {
+        cmdDescription = `Screenshot \x1b[2m${cmd.path || 'auto'}\x1b[0m`;
+      } else if (cmd.type === 'Shortcut') {
+        const mods = [cmd.ctrl && 'Ctrl', cmd.alt && 'Alt', cmd.shift && 'Shift', cmd.cmd && 'Cmd'].filter(Boolean);
+        cmdDescription = `${mods.join('+')}+${cmd.key}`;
+      } else if (cmd.type === 'Copy') {
+        const preview = cmd.text.length > 20 ? cmd.text.slice(0, 20) + '...' : cmd.text;
+        cmdDescription = `Copy \x1b[2m"${preview}"\x1b[0m`;
       }
 
       this.options.onProgress?.(i + 1, actionCommands.length, cmdDescription);
