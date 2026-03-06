@@ -1,0 +1,18 @@
+# LS Colors Test
+# Tests file listing with colors for different file types
+Output examples/svgs/ls-colors.svg
+
+Set Theme github-dark
+Set Template macos
+Set Title "Colored File Listing"
+Set FontSize 14
+
+Type "ls -la --color=always"
+Sleep 500ms
+Enter
+Sleep 1.5s
+
+Type "ls -la --color=always src/"
+Sleep 500ms
+Enter
+Sleep 2s

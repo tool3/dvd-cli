@@ -1,0 +1,13 @@
+# ANSI Colors Table Test
+# Tests full 256 color palette rendering
+Output examples/svgs/colors-table.svg
+
+Set Theme github-dark
+Set Template macos
+Set Title "ANSI Color Table"
+Set FontSize 12
+
+Type "for i in {0..255}; do printf '\\e[48;5;%sm %3s \\e[0m' $i $i; [ $((($i + 1) % 16)) -eq 0 ] && echo; done"
+Sleep 500ms
+Enter
+Sleep 2s

@@ -73,12 +73,18 @@ export const parseQuotedString = (str: string): string => {
   }
 
   const content = str.slice(1, -1);
+
+  // Process escapes in correct order:
+  // First, replace \\\\ with a placeholder to protect literal backslashes
+  // Then process escape sequences, then restore literal backslashes
+  const BACKSLASH_PLACEHOLDER = '\x00BACKSLASH\x00';
   return content
+    .replace(/\\\\/g, BACKSLASH_PLACEHOLDER)
     .replace(/\\n/g, '\n')
     .replace(/\\t/g, '\t')
     .replace(/\\r/g, '\r')
     .replace(/\\"/g, '"')
-    .replace(/\\\\/g, '\\');
+    .replace(new RegExp(BACKSLASH_PLACEHOLDER, 'g'), '\\');
 };
 
 /**

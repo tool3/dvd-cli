@@ -405,7 +405,7 @@ Neofetch with automatic height calculation.
 Neofetch with JetBrains Mono font embedded.   
 ![neofetch-embedded-font](./examples/svgs/neofetch-embedded-font.svg)
 
-### Neofetch Fixed Dimensions
+### Neofetch Fixed Dimensions and LineHeight
 Neofetch with explicit width and height.   
 ![neofetch-fixed-dimensions](./examples/svgs/neofetch-fixed-dimensions.svg)
 

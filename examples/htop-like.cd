@@ -1,0 +1,18 @@
+# System Stats Test
+# Tests formatted system info with colors
+Output examples/svgs/htop-like.svg
+
+Set Theme github-dark
+Set Template macos
+Set Title "System Stats"
+Set FontSize 12
+
+Type "top -l 1 | head -12"
+Sleep 500ms
+Enter
+Sleep 2s
+
+Type "df -h | head -8"
+Sleep 500ms
+Enter
+Sleep 2s

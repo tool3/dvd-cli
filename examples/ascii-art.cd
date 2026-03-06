@@ -1,0 +1,13 @@
+# ASCII Art Test
+# Tests multi-line ASCII art rendering with echo -e
+Output examples/svgs/ascii-art.svg
+
+Set Theme github-dark
+Set Template macos
+Set Title "ASCII Art Demo"
+Set FontSize 14
+
+Type "echo -e '____  __     __ ____  \\n   |  _ \\\\ \\\\ \\\\   / /|  _ \\\\ \\n | | | | \\\\ \\\\ / / | | | |\\n       | |_| |  \\\\ V /  | |_| |\\n   |____/    \\\\_/   |____/ '"
+Sleep 500ms
+Enter
+Sleep 2s
