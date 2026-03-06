@@ -9,7 +9,7 @@ Set Theme github-dark
 Set Title "Text Selection Test"
 Set PromptPrefix "\x1b[95m❯\x1b[0m "
 
-Type "The quick brown fox"
+Type "echo 'The quick brown fox'"
 Sleep 500ms
 
 # Select "fox" by moving left 3 times with Shift

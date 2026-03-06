@@ -11,8 +11,8 @@ Set Title "Embedded Font"
 # Embed the font file (woff2 format recommended)
 Set EmbedFont examples/fonts/JetBrainsMono-Regular.woff2
 
-Type "JetBrains Mono embedded in SVG"
+Type "echo 'JetBrains Mono embedded in SVG'"
 Sleep 500ms
 Enter
-Type "Works offline, no font install needed"
+Type "echo 'Works offline, no font install needed'"
 Sleep 1s

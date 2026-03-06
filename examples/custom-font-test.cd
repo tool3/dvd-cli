@@ -11,8 +11,8 @@ Set Title "Custom Font"
 # Use JetBrains Mono (if installed) or fallback to monospace
 Set FontFamily "JetBrains Mono"
 
-Type "Using JetBrains Mono font"
+Type "echo 'Using JetBrains Mono font'"
 Sleep 500ms
 Enter
-Type "Or fallback to monospace"
+Type "echo 'Or fallback to monospace'"
 Sleep 1s

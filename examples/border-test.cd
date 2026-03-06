@@ -12,11 +12,11 @@ Set BorderWidth 3
 Set BorderColor #ff5555
 Set Padding 32
 
-Type "Testing border options"
+Type "echo 'Testing border options'"
 Sleep 500ms
 Enter
-Type "BorderRadius: 20, BorderWidth: 3"
+Type "# BorderRadius: 20, BorderWidth: 3"
 Sleep 500ms
 Enter
-Type "BorderColor: #ff5555, Padding: 32"
+Type "# BorderColor: #ff5555, Padding: 32"
 Sleep 1s

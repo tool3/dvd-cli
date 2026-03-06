@@ -22,11 +22,11 @@ Set FooterBorder true
 Set FooterBorderColor #6272a4
 Set FooterBorderWidth 1
 
-Type "Testing header and footer config"
+Type "echo 'Testing header and footer config'"
 Sleep 500ms
 Enter
-Type "Header has custom background and border"
+Type "echo 'Header has custom background and border'"
 Sleep 500ms
 Enter
-Type "Footer has custom background and border"
+Type "echo 'Footer has custom background and border'"
 Sleep 1s
