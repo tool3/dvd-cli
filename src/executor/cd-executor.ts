@@ -309,18 +309,16 @@ export class CDExecutor {
     grid = processInput(grid, content);
 
     // Determine cursor position
-    // When executing a command, use VTerminal's cursor position - it correctly handles
-    // cursor positioning sequences (like those in neofetch) and places the cursor
-    // at the end of the actual rendered content.
-    // When in input mode (not executing), use the tracked cursorX position plus
-    // the prompt prefix length for correct cursor placement during editing.
+    // Use VTerminal's cursor position - it correctly handles both:
+    // 1. Cursor positioning sequences (like those in neofetch)
+    // 2. Text wrapping when content exceeds terminal width
+    // The VTerminal processes the display content and tracks cursor position
+    // accounting for line wrapping, so grid.cursor gives us the visual position.
     const shouldClampCursor = !this.context.autoHeight && this.context.scroll;
     const finalCursorY = shouldClampCursor
       ? Math.max(0, Math.min(grid.cursor.row, maxVisibleRows - 1))
       : grid.cursor.row;
-    const finalCursorX = this.context.isExecutingCommand
-      ? grid.cursor.col
-      : this.context.cursorX + this.stripAnsi(this.context.promptPrefix).length;
+    const finalCursorX = grid.cursor.col;
 
     // Track max visual row for auto-height (accounts for cursor positioning in commands like neofetch)
     if (this.context.autoHeight) {
