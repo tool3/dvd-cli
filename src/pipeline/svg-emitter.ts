@@ -467,7 +467,10 @@ export function emit(
   // Cursor layer
   if (cursor && cursorVisible) {
     const cursorX = padding + cursor.col * charWidth;
-    const cursorY = contentStartY + cursor.row * lineHeight;
+    // Slight vertical offset to align cursor center with visual center of text
+    // (fonts have ascender space that shifts visible glyphs down from em-box top)
+    const cursorYOffset = fontSize * 0.15;
+    const cursorY = contentStartY + cursor.row * lineHeight + cursorYOffset;
     const cursorColor = options.cursorColor ?? theme.cursor ?? theme.foreground;
     // Use cursor-active class when actively typing (no blink)
     const cursorClass = options.activeCursor ? 'cursor-active' : 'cursor';
@@ -756,7 +759,7 @@ interface FrameRenderConfig {
 
 function generateFrameContent(frame: FrameData, config: EmitterOptions & FrameRenderConfig): string {
   const { rows, cursor, cursorVisible, selection, activeCursor } = frame;
-  const { charWidth, lineHeight, padding, contentStartY, theme } = config;
+  const { charWidth, lineHeight, padding, contentStartY, theme, fontSize } = config;
 
   const parts: string[] = [];
 
@@ -830,7 +833,9 @@ function generateFrameContent(frame: FrameData, config: EmitterOptions & FrameRe
   // Cursor
   if (cursor && cursorVisible) {
     const cursorX = padding + cursor.col * charWidth;
-    const cursorY = contentStartY + cursor.row * lineHeight;
+    // Slight vertical offset to align cursor center with visual center of text
+    const cursorYOffset = fontSize * 0.1;
+    const cursorY = contentStartY + cursor.row * lineHeight + cursorYOffset;
     const cursorColor = config.cursorColor ?? theme.cursor ?? theme.foreground;
     const cursorStyle = config.cursorStyle ?? 'block';
     // Use cursor-active class when actively typing (no blink)

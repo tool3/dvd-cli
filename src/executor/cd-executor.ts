@@ -1177,7 +1177,9 @@ export class CDExecutor {
       // Use maxVisualRow (actual rendered rows after VTerminal processing) instead of maxLines
       // This correctly handles cursor positioning commands in programs like neofetch
       const rows = this.context.maxVisualRow > 0 ? this.context.maxVisualRow : this.context.maxLines;
-      this.context.height = Math.ceil(headerHeight + padding + rows * lineHeight + watermarkHeight + padding);
+      // Add buffer to ensure cursor isn't visually cropped at the bottom edge
+      const cursorBuffer = 8;
+      this.context.height = Math.ceil(headerHeight + padding + rows * lineHeight + watermarkHeight + padding + cursorBuffer);
       if (this.context.height < 100) this.context.height = 100;
     }
 

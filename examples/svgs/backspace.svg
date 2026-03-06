@@ -1,5 +1,5 @@
-<svg width="416" height="162" xmlns="http://www.w3.org/2000/svg">
-  <defs><clipPath id="rounded-corners"><rect x="0" y="0" width="416" height="162" rx="8" ry="8"/></clipPath></defs>
+<svg width="416" height="170" xmlns="http://www.w3.org/2000/svg">
+  <defs><clipPath id="rounded-corners"><rect x="0" y="0" width="416" height="170" rx="8" ry="8"/></clipPath></defs>
   <style>
     
 .text {
@@ -64,7 +64,7 @@
   <!-- Animated frames with discrete visibility transitions -->
   
   <g id="frame-0" visibility="visible">
-    <rect class="window-bg" x="0" y="0" width="416" height="162" fill="#0d1117" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="416" height="170" fill="#0d1117" rx="8" ry="8"/>
 <g class="chrome"><rect class="header-bg" x="0" y="0" width="416" height="40" fill="#0d1117" rx="8" ry="8"/>
 <rect x="0" y="32" width="416" height="8" fill="#0d1117"/>
 <circle cx="22" cy="20" r="6" fill="#ff5f56"/>
@@ -74,13 +74,13 @@
 <text class="text f2" x="16" y="56">$</text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor" x="35.2" y="56" width="9.6" height="22.4" fill="#c9d1d9"/>
+<rect class="cursor" x="35.2" y="58.4" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
-<text class="text dim" x="400" y="134.8" text-anchor="end" fill="#c9d1d9">by talhayut</text>
+<text class="text dim" x="400" y="142.8" text-anchor="end" fill="#c9d1d9">by talhayut</text>
     <animate
       attributeName="visibility"
       values="visible;hidden;hidden"
-      keyTimes="0.000000;0.012135;1.000000"
+      keyTimes="0.000000;0.012132;1.000000"
       dur="4.45s"
       repeatCount="indefinite"
       calcMode="discrete"
@@ -89,7 +89,7 @@
   </g>
 
   <g id="frame-1" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="416" height="162" fill="#0d1117" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="416" height="170" fill="#0d1117" rx="8" ry="8"/>
 <g class="chrome"><rect class="header-bg" x="0" y="0" width="416" height="40" fill="#0d1117" rx="8" ry="8"/>
 <rect x="0" y="32" width="416" height="8" fill="#0d1117"/>
 <circle cx="22" cy="20" r="6" fill="#ff5f56"/>
@@ -100,13 +100,13 @@
 <text class="text fg" x="25.6" y="56"> e                                                                             </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor" x="44.8" y="56" width="9.6" height="22.4" fill="#c9d1d9"/>
+<rect class="cursor-active" x="44.8" y="58.4" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
-<text class="text dim" x="400" y="134.8" text-anchor="end" fill="#c9d1d9">by talhayut</text>
+<text class="text dim" x="400" y="142.8" text-anchor="end" fill="#c9d1d9">by talhayut</text>
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.012135;0.023596;1.000000"
+      keyTimes="0.000000;0.012132;0.023366;1.000000"
       dur="4.45s"
       repeatCount="indefinite"
       calcMode="discrete"
@@ -115,7 +115,7 @@
   </g>
 
   <g id="frame-2" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="416" height="162" fill="#0d1117" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="416" height="170" fill="#0d1117" rx="8" ry="8"/>
 <g class="chrome"><rect class="header-bg" x="0" y="0" width="416" height="40" fill="#0d1117" rx="8" ry="8"/>
 <rect x="0" y="32" width="416" height="8" fill="#0d1117"/>
 <circle cx="22" cy="20" r="6" fill="#ff5f56"/>
@@ -126,13 +126,13 @@
 <text class="text fg" x="25.6" y="56"> ec                                                                            </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor" x="54.4" y="56" width="9.6" height="22.4" fill="#c9d1d9"/>
+<rect class="cursor-active" x="54.4" y="58.4" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
-<text class="text dim" x="400" y="134.8" text-anchor="end" fill="#c9d1d9">by talhayut</text>
+<text class="text dim" x="400" y="142.8" text-anchor="end" fill="#c9d1d9">by talhayut</text>
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.023596;0.034831;1.000000"
+      keyTimes="0.000000;0.023366;0.035048;1.000000"
       dur="4.45s"
       repeatCount="indefinite"
       calcMode="discrete"
@@ -141,7 +141,7 @@
   </g>
 
   <g id="frame-3" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="416" height="162" fill="#0d1117" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="416" height="170" fill="#0d1117" rx="8" ry="8"/>
 <g class="chrome"><rect class="header-bg" x="0" y="0" width="416" height="40" fill="#0d1117" rx="8" ry="8"/>
 <rect x="0" y="32" width="416" height="8" fill="#0d1117"/>
 <circle cx="22" cy="20" r="6" fill="#ff5f56"/>
@@ -152,13 +152,13 @@
 <text class="text fg" x="25.6" y="56"> ech                                                                           </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor" x="64" y="56" width="9.6" height="22.4" fill="#c9d1d9"/>
+<rect class="cursor-active" x="64" y="58.4" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
-<text class="text dim" x="400" y="134.8" text-anchor="end" fill="#c9d1d9">by talhayut</text>
+<text class="text dim" x="400" y="142.8" text-anchor="end" fill="#c9d1d9">by talhayut</text>
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.034831;0.046742;1.000000"
+      keyTimes="0.000000;0.035048;0.046731;1.000000"
       dur="4.45s"
       repeatCount="indefinite"
       calcMode="discrete"
@@ -167,7 +167,7 @@
   </g>
 
   <g id="frame-4" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="416" height="162" fill="#0d1117" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="416" height="170" fill="#0d1117" rx="8" ry="8"/>
 <g class="chrome"><rect class="header-bg" x="0" y="0" width="416" height="40" fill="#0d1117" rx="8" ry="8"/>
 <rect x="0" y="32" width="416" height="8" fill="#0d1117"/>
 <circle cx="22" cy="20" r="6" fill="#ff5f56"/>
@@ -178,13 +178,13 @@
 <text class="text fg" x="25.6" y="56"> echo                                                                          </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor" x="73.6" y="56" width="9.6" height="22.4" fill="#c9d1d9"/>
+<rect class="cursor-active" x="73.6" y="58.4" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
-<text class="text dim" x="400" y="134.8" text-anchor="end" fill="#c9d1d9">by talhayut</text>
+<text class="text dim" x="400" y="142.8" text-anchor="end" fill="#c9d1d9">by talhayut</text>
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.046742;0.058427;1.000000"
+      keyTimes="0.000000;0.046731;0.058414;1.000000"
       dur="4.45s"
       repeatCount="indefinite"
       calcMode="discrete"
@@ -193,7 +193,7 @@
   </g>
 
   <g id="frame-5" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="416" height="162" fill="#0d1117" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="416" height="170" fill="#0d1117" rx="8" ry="8"/>
 <g class="chrome"><rect class="header-bg" x="0" y="0" width="416" height="40" fill="#0d1117" rx="8" ry="8"/>
 <rect x="0" y="32" width="416" height="8" fill="#0d1117"/>
 <circle cx="22" cy="20" r="6" fill="#ff5f56"/>
@@ -204,13 +204,13 @@
 <text class="text fg" x="25.6" y="56"> echo                                                                          </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor" x="83.2" y="56" width="9.6" height="22.4" fill="#c9d1d9"/>
+<rect class="cursor-active" x="83.2" y="58.4" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
-<text class="text dim" x="400" y="134.8" text-anchor="end" fill="#c9d1d9">by talhayut</text>
+<text class="text dim" x="400" y="142.8" text-anchor="end" fill="#c9d1d9">by talhayut</text>
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.058427;0.069888;1.000000"
+      keyTimes="0.000000;0.058414;0.069872;1.000000"
       dur="4.45s"
       repeatCount="indefinite"
       calcMode="discrete"
@@ -219,7 +219,7 @@
   </g>
 
   <g id="frame-6" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="416" height="162" fill="#0d1117" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="416" height="170" fill="#0d1117" rx="8" ry="8"/>
 <g class="chrome"><rect class="header-bg" x="0" y="0" width="416" height="40" fill="#0d1117" rx="8" ry="8"/>
 <rect x="0" y="32" width="416" height="8" fill="#0d1117"/>
 <circle cx="22" cy="20" r="6" fill="#ff5f56"/>
@@ -230,13 +230,13 @@
 <text class="text fg" x="25.6" y="56"> echo &apos;                                                                        </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor" x="92.8" y="56" width="9.6" height="22.4" fill="#c9d1d9"/>
+<rect class="cursor-active" x="92.8" y="58.4" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
-<text class="text dim" x="400" y="134.8" text-anchor="end" fill="#c9d1d9">by talhayut</text>
+<text class="text dim" x="400" y="142.8" text-anchor="end" fill="#c9d1d9">by talhayut</text>
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.069888;0.081573;1.000000"
+      keyTimes="0.000000;0.069872;0.081105;1.000000"
       dur="4.45s"
       repeatCount="indefinite"
       calcMode="discrete"
@@ -245,7 +245,7 @@
   </g>
 
   <g id="frame-7" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="416" height="162" fill="#0d1117" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="416" height="170" fill="#0d1117" rx="8" ry="8"/>
 <g class="chrome"><rect class="header-bg" x="0" y="0" width="416" height="40" fill="#0d1117" rx="8" ry="8"/>
 <rect x="0" y="32" width="416" height="8" fill="#0d1117"/>
 <circle cx="22" cy="20" r="6" fill="#ff5f56"/>
@@ -256,13 +256,13 @@
 <text class="text fg" x="25.6" y="56"> echo &apos;I                                                                       </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor" x="102.39999999999999" y="56" width="9.6" height="22.4" fill="#c9d1d9"/>
+<rect class="cursor-active" x="102.39999999999999" y="58.4" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
-<text class="text dim" x="400" y="134.8" text-anchor="end" fill="#c9d1d9">by talhayut</text>
+<text class="text dim" x="400" y="142.8" text-anchor="end" fill="#c9d1d9">by talhayut</text>
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.081573;0.093483;1.000000"
+      keyTimes="0.000000;0.081105;0.092563;1.000000"
       dur="4.45s"
       repeatCount="indefinite"
       calcMode="discrete"
@@ -271,7 +271,7 @@
   </g>
 
   <g id="frame-8" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="416" height="162" fill="#0d1117" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="416" height="170" fill="#0d1117" rx="8" ry="8"/>
 <g class="chrome"><rect class="header-bg" x="0" y="0" width="416" height="40" fill="#0d1117" rx="8" ry="8"/>
 <rect x="0" y="32" width="416" height="8" fill="#0d1117"/>
 <circle cx="22" cy="20" r="6" fill="#ff5f56"/>
@@ -282,13 +282,13 @@
 <text class="text fg" x="25.6" y="56"> echo &apos;I                                                                       </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor" x="112" y="56" width="9.6" height="22.4" fill="#c9d1d9"/>
+<rect class="cursor-active" x="112" y="58.4" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
-<text class="text dim" x="400" y="134.8" text-anchor="end" fill="#c9d1d9">by talhayut</text>
+<text class="text dim" x="400" y="142.8" text-anchor="end" fill="#c9d1d9">by talhayut</text>
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.093483;0.104944;1.000000"
+      keyTimes="0.000000;0.092563;0.104022;1.000000"
       dur="4.45s"
       repeatCount="indefinite"
       calcMode="discrete"
@@ -297,7 +297,7 @@
   </g>
 
   <g id="frame-9" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="416" height="162" fill="#0d1117" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="416" height="170" fill="#0d1117" rx="8" ry="8"/>
 <g class="chrome"><rect class="header-bg" x="0" y="0" width="416" height="40" fill="#0d1117" rx="8" ry="8"/>
 <rect x="0" y="32" width="416" height="8" fill="#0d1117"/>
 <circle cx="22" cy="20" r="6" fill="#ff5f56"/>
@@ -308,13 +308,13 @@
 <text class="text fg" x="25.6" y="56"> echo &apos;I a                                                                     </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor" x="121.6" y="56" width="9.6" height="22.4" fill="#c9d1d9"/>
+<rect class="cursor-active" x="121.6" y="58.4" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
-<text class="text dim" x="400" y="134.8" text-anchor="end" fill="#c9d1d9">by talhayut</text>
+<text class="text dim" x="400" y="142.8" text-anchor="end" fill="#c9d1d9">by talhayut</text>
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.104944;0.116404;1.000000"
+      keyTimes="0.000000;0.104022;0.115480;1.000000"
       dur="4.45s"
       repeatCount="indefinite"
       calcMode="discrete"
@@ -323,7 +323,7 @@
   </g>
 
   <g id="frame-10" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="416" height="162" fill="#0d1117" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="416" height="170" fill="#0d1117" rx="8" ry="8"/>
 <g class="chrome"><rect class="header-bg" x="0" y="0" width="416" height="40" fill="#0d1117" rx="8" ry="8"/>
 <rect x="0" y="32" width="416" height="8" fill="#0d1117"/>
 <circle cx="22" cy="20" r="6" fill="#ff5f56"/>
@@ -334,13 +334,13 @@
 <text class="text fg" x="25.6" y="56"> echo &apos;I am                                                                    </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor" x="131.2" y="56" width="9.6" height="22.4" fill="#c9d1d9"/>
+<rect class="cursor-active" x="131.2" y="58.4" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
-<text class="text dim" x="400" y="134.8" text-anchor="end" fill="#c9d1d9">by talhayut</text>
+<text class="text dim" x="400" y="142.8" text-anchor="end" fill="#c9d1d9">by talhayut</text>
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.116404;0.127865;1.000000"
+      keyTimes="0.000000;0.115480;0.127162;1.000000"
       dur="4.45s"
       repeatCount="indefinite"
       calcMode="discrete"
@@ -349,7 +349,7 @@
   </g>
 
   <g id="frame-11" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="416" height="162" fill="#0d1117" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="416" height="170" fill="#0d1117" rx="8" ry="8"/>
 <g class="chrome"><rect class="header-bg" x="0" y="0" width="416" height="40" fill="#0d1117" rx="8" ry="8"/>
 <rect x="0" y="32" width="416" height="8" fill="#0d1117"/>
 <circle cx="22" cy="20" r="6" fill="#ff5f56"/>
@@ -360,13 +360,13 @@
 <text class="text fg" x="25.6" y="56"> echo &apos;I am                                                                    </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor" x="140.8" y="56" width="9.6" height="22.4" fill="#c9d1d9"/>
+<rect class="cursor-active" x="140.8" y="58.4" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
-<text class="text dim" x="400" y="134.8" text-anchor="end" fill="#c9d1d9">by talhayut</text>
+<text class="text dim" x="400" y="142.8" text-anchor="end" fill="#c9d1d9">by talhayut</text>
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.127865;0.139551;1.000000"
+      keyTimes="0.000000;0.127162;0.138845;1.000000"
       dur="4.45s"
       repeatCount="indefinite"
       calcMode="discrete"
@@ -375,7 +375,7 @@
   </g>
 
   <g id="frame-12" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="416" height="162" fill="#0d1117" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="416" height="170" fill="#0d1117" rx="8" ry="8"/>
 <g class="chrome"><rect class="header-bg" x="0" y="0" width="416" height="40" fill="#0d1117" rx="8" ry="8"/>
 <rect x="0" y="32" width="416" height="8" fill="#0d1117"/>
 <circle cx="22" cy="20" r="6" fill="#ff5f56"/>
@@ -386,13 +386,13 @@
 <text class="text fg" x="25.6" y="56"> echo &apos;I am a                                                                  </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor" x="150.4" y="56" width="9.6" height="22.4" fill="#c9d1d9"/>
+<rect class="cursor-active" x="150.4" y="58.4" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
-<text class="text dim" x="400" y="134.8" text-anchor="end" fill="#c9d1d9">by talhayut</text>
+<text class="text dim" x="400" y="142.8" text-anchor="end" fill="#c9d1d9">by talhayut</text>
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.139551;0.151011;1.000000"
+      keyTimes="0.000000;0.138845;0.150303;1.000000"
       dur="4.45s"
       repeatCount="indefinite"
       calcMode="discrete"
@@ -401,7 +401,7 @@
   </g>
 
   <g id="frame-13" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="416" height="162" fill="#0d1117" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="416" height="170" fill="#0d1117" rx="8" ry="8"/>
 <g class="chrome"><rect class="header-bg" x="0" y="0" width="416" height="40" fill="#0d1117" rx="8" ry="8"/>
 <rect x="0" y="32" width="416" height="8" fill="#0d1117"/>
 <circle cx="22" cy="20" r="6" fill="#ff5f56"/>
@@ -412,13 +412,13 @@
 <text class="text fg" x="25.6" y="56"> echo &apos;I am an                                                                 </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor" x="160" y="56" width="9.6" height="22.4" fill="#c9d1d9"/>
+<rect class="cursor-active" x="160" y="58.4" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
-<text class="text dim" x="400" y="134.8" text-anchor="end" fill="#c9d1d9">by talhayut</text>
+<text class="text dim" x="400" y="142.8" text-anchor="end" fill="#c9d1d9">by talhayut</text>
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.151011;0.162472;1.000000"
+      keyTimes="0.000000;0.150303;0.161537;1.000000"
       dur="4.45s"
       repeatCount="indefinite"
       calcMode="discrete"
@@ -427,7 +427,7 @@
   </g>
 
   <g id="frame-14" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="416" height="162" fill="#0d1117" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="416" height="170" fill="#0d1117" rx="8" ry="8"/>
 <g class="chrome"><rect class="header-bg" x="0" y="0" width="416" height="40" fill="#0d1117" rx="8" ry="8"/>
 <rect x="0" y="32" width="416" height="8" fill="#0d1117"/>
 <circle cx="22" cy="20" r="6" fill="#ff5f56"/>
@@ -438,13 +438,13 @@
 <text class="text fg" x="25.6" y="56"> echo &apos;I am an                                                                 </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor" x="169.6" y="56" width="9.6" height="22.4" fill="#c9d1d9"/>
+<rect class="cursor-active" x="169.6" y="58.4" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
-<text class="text dim" x="400" y="134.8" text-anchor="end" fill="#c9d1d9">by talhayut</text>
+<text class="text dim" x="400" y="142.8" text-anchor="end" fill="#c9d1d9">by talhayut</text>
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.162472;0.173933;1.000000"
+      keyTimes="0.000000;0.161537;0.172995;1.000000"
       dur="4.45s"
       repeatCount="indefinite"
       calcMode="discrete"
@@ -453,7 +453,7 @@
   </g>
 
   <g id="frame-15" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="416" height="162" fill="#0d1117" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="416" height="170" fill="#0d1117" rx="8" ry="8"/>
 <g class="chrome"><rect class="header-bg" x="0" y="0" width="416" height="40" fill="#0d1117" rx="8" ry="8"/>
 <rect x="0" y="32" width="416" height="8" fill="#0d1117"/>
 <circle cx="22" cy="20" r="6" fill="#ff5f56"/>
@@ -464,13 +464,13 @@
 <text class="text fg" x="25.6" y="56"> echo &apos;I am an i                                                               </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor" x="179.2" y="56" width="9.6" height="22.4" fill="#c9d1d9"/>
+<rect class="cursor-active" x="179.2" y="58.4" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
-<text class="text dim" x="400" y="134.8" text-anchor="end" fill="#c9d1d9">by talhayut</text>
+<text class="text dim" x="400" y="142.8" text-anchor="end" fill="#c9d1d9">by talhayut</text>
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.173933;0.185393;1.000000"
+      keyTimes="0.000000;0.172995;0.184678;1.000000"
       dur="4.45s"
       repeatCount="indefinite"
       calcMode="discrete"
@@ -479,7 +479,7 @@
   </g>
 
   <g id="frame-16" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="416" height="162" fill="#0d1117" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="416" height="170" fill="#0d1117" rx="8" ry="8"/>
 <g class="chrome"><rect class="header-bg" x="0" y="0" width="416" height="40" fill="#0d1117" rx="8" ry="8"/>
 <rect x="0" y="32" width="416" height="8" fill="#0d1117"/>
 <circle cx="22" cy="20" r="6" fill="#ff5f56"/>
@@ -490,13 +490,13 @@
 <text class="text fg" x="25.6" y="56"> echo &apos;I am an id                                                              </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor" x="188.79999999999998" y="56" width="9.6" height="22.4" fill="#c9d1d9"/>
+<rect class="cursor-active" x="188.79999999999998" y="58.4" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
-<text class="text dim" x="400" y="134.8" text-anchor="end" fill="#c9d1d9">by talhayut</text>
+<text class="text dim" x="400" y="142.8" text-anchor="end" fill="#c9d1d9">by talhayut</text>
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.185393;0.196629;1.000000"
+      keyTimes="0.000000;0.184678;0.196136;1.000000"
       dur="4.45s"
       repeatCount="indefinite"
       calcMode="discrete"
@@ -505,7 +505,7 @@
   </g>
 
   <g id="frame-17" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="416" height="162" fill="#0d1117" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="416" height="170" fill="#0d1117" rx="8" ry="8"/>
 <g class="chrome"><rect class="header-bg" x="0" y="0" width="416" height="40" fill="#0d1117" rx="8" ry="8"/>
 <rect x="0" y="32" width="416" height="8" fill="#0d1117"/>
 <circle cx="22" cy="20" r="6" fill="#ff5f56"/>
@@ -516,13 +516,13 @@
 <text class="text fg" x="25.6" y="56"> echo &apos;I am an idi                                                             </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor" x="198.4" y="56" width="9.6" height="22.4" fill="#c9d1d9"/>
+<rect class="cursor-active" x="198.4" y="58.4" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
-<text class="text dim" x="400" y="134.8" text-anchor="end" fill="#c9d1d9">by talhayut</text>
+<text class="text dim" x="400" y="142.8" text-anchor="end" fill="#c9d1d9">by talhayut</text>
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.196629;0.208539;1.000000"
+      keyTimes="0.000000;0.196136;0.207369;1.000000"
       dur="4.45s"
       repeatCount="indefinite"
       calcMode="discrete"
@@ -531,7 +531,7 @@
   </g>
 
   <g id="frame-18" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="416" height="162" fill="#0d1117" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="416" height="170" fill="#0d1117" rx="8" ry="8"/>
 <g class="chrome"><rect class="header-bg" x="0" y="0" width="416" height="40" fill="#0d1117" rx="8" ry="8"/>
 <rect x="0" y="32" width="416" height="8" fill="#0d1117"/>
 <circle cx="22" cy="20" r="6" fill="#ff5f56"/>
@@ -542,13 +542,13 @@
 <text class="text fg" x="25.6" y="56"> echo &apos;I am an idio                                                            </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor" x="208" y="56" width="9.6" height="22.4" fill="#c9d1d9"/>
+<rect class="cursor-active" x="208" y="58.4" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
-<text class="text dim" x="400" y="134.8" text-anchor="end" fill="#c9d1d9">by talhayut</text>
+<text class="text dim" x="400" y="142.8" text-anchor="end" fill="#c9d1d9">by talhayut</text>
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.208539;0.219551;1.000000"
+      keyTimes="0.000000;0.207369;0.218827;1.000000"
       dur="4.45s"
       repeatCount="indefinite"
       calcMode="discrete"
@@ -557,7 +557,7 @@
   </g>
 
   <g id="frame-19" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="416" height="162" fill="#0d1117" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="416" height="170" fill="#0d1117" rx="8" ry="8"/>
 <g class="chrome"><rect class="header-bg" x="0" y="0" width="416" height="40" fill="#0d1117" rx="8" ry="8"/>
 <rect x="0" y="32" width="416" height="8" fill="#0d1117"/>
 <circle cx="22" cy="20" r="6" fill="#ff5f56"/>
@@ -568,13 +568,13 @@
 <text class="text fg" x="25.6" y="56"> echo &apos;I am an idiot                                                           </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor" x="217.6" y="56" width="9.6" height="22.4" fill="#c9d1d9"/>
+<rect class="cursor-active" x="217.6" y="58.4" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
-<text class="text dim" x="400" y="134.8" text-anchor="end" fill="#c9d1d9">by talhayut</text>
+<text class="text dim" x="400" y="142.8" text-anchor="end" fill="#c9d1d9">by talhayut</text>
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.219551;0.231011;1.000000"
+      keyTimes="0.000000;0.218827;0.230285;1.000000"
       dur="4.45s"
       repeatCount="indefinite"
       calcMode="discrete"
@@ -583,7 +583,7 @@
   </g>
 
   <g id="frame-20" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="416" height="162" fill="#0d1117" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="416" height="170" fill="#0d1117" rx="8" ry="8"/>
 <g class="chrome"><rect class="header-bg" x="0" y="0" width="416" height="40" fill="#0d1117" rx="8" ry="8"/>
 <rect x="0" y="32" width="416" height="8" fill="#0d1117"/>
 <circle cx="22" cy="20" r="6" fill="#ff5f56"/>
@@ -594,13 +594,13 @@
 <text class="text fg" x="25.6" y="56"> echo &apos;I am an idiot                                                           </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor" x="227.2" y="56" width="9.6" height="22.4" fill="#c9d1d9"/>
+<rect class="cursor-active" x="227.2" y="58.4" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
-<text class="text dim" x="400" y="134.8" text-anchor="end" fill="#c9d1d9">by talhayut</text>
+<text class="text dim" x="400" y="142.8" text-anchor="end" fill="#c9d1d9">by talhayut</text>
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.231011;0.242921;1.000000"
+      keyTimes="0.000000;0.230285;0.241968;1.000000"
       dur="4.45s"
       repeatCount="indefinite"
       calcMode="discrete"
@@ -609,7 +609,7 @@
   </g>
 
   <g id="frame-21" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="416" height="162" fill="#0d1117" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="416" height="170" fill="#0d1117" rx="8" ry="8"/>
 <g class="chrome"><rect class="header-bg" x="0" y="0" width="416" height="40" fill="#0d1117" rx="8" ry="8"/>
 <rect x="0" y="32" width="416" height="8" fill="#0d1117"/>
 <circle cx="22" cy="20" r="6" fill="#ff5f56"/>
@@ -620,13 +620,13 @@
 <text class="text fg" x="25.6" y="56"> echo &apos;I am an idiot s                                                         </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor" x="236.79999999999998" y="56" width="9.6" height="22.4" fill="#c9d1d9"/>
+<rect class="cursor-active" x="236.79999999999998" y="58.4" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
-<text class="text dim" x="400" y="134.8" text-anchor="end" fill="#c9d1d9">by talhayut</text>
+<text class="text dim" x="400" y="142.8" text-anchor="end" fill="#c9d1d9">by talhayut</text>
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.242921;0.254157;1.000000"
+      keyTimes="0.000000;0.241968;0.253426;1.000000"
       dur="4.45s"
       repeatCount="indefinite"
       calcMode="discrete"
@@ -635,7 +635,7 @@
   </g>
 
   <g id="frame-22" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="416" height="162" fill="#0d1117" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="416" height="170" fill="#0d1117" rx="8" ry="8"/>
 <g class="chrome"><rect class="header-bg" x="0" y="0" width="416" height="40" fill="#0d1117" rx="8" ry="8"/>
 <rect x="0" y="32" width="416" height="8" fill="#0d1117"/>
 <circle cx="22" cy="20" r="6" fill="#ff5f56"/>
@@ -646,13 +646,13 @@
 <text class="text fg" x="25.6" y="56"> echo &apos;I am an idiot sa                                                        </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor" x="246.39999999999998" y="56" width="9.6" height="22.4" fill="#c9d1d9"/>
+<rect class="cursor-active" x="246.39999999999998" y="58.4" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
-<text class="text dim" x="400" y="134.8" text-anchor="end" fill="#c9d1d9">by talhayut</text>
+<text class="text dim" x="400" y="142.8" text-anchor="end" fill="#c9d1d9">by talhayut</text>
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.254157;0.265843;1.000000"
+      keyTimes="0.000000;0.253426;0.264435;1.000000"
       dur="4.45s"
       repeatCount="indefinite"
       calcMode="discrete"
@@ -661,7 +661,7 @@
   </g>
 
   <g id="frame-23" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="416" height="162" fill="#0d1117" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="416" height="170" fill="#0d1117" rx="8" ry="8"/>
 <g class="chrome"><rect class="header-bg" x="0" y="0" width="416" height="40" fill="#0d1117" rx="8" ry="8"/>
 <rect x="0" y="32" width="416" height="8" fill="#0d1117"/>
 <circle cx="22" cy="20" r="6" fill="#ff5f56"/>
@@ -672,13 +672,13 @@
 <text class="text fg" x="25.6" y="56"> echo &apos;I am an idiot sav                                                       </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor" x="256" y="56" width="9.6" height="22.4" fill="#c9d1d9"/>
+<rect class="cursor-active" x="256" y="58.4" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
-<text class="text dim" x="400" y="134.8" text-anchor="end" fill="#c9d1d9">by talhayut</text>
+<text class="text dim" x="400" y="142.8" text-anchor="end" fill="#c9d1d9">by talhayut</text>
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.265843;0.276854;1.000000"
+      keyTimes="0.000000;0.264435;0.275893;1.000000"
       dur="4.45s"
       repeatCount="indefinite"
       calcMode="discrete"
@@ -687,7 +687,7 @@
   </g>
 
   <g id="frame-24" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="416" height="162" fill="#0d1117" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="416" height="170" fill="#0d1117" rx="8" ry="8"/>
 <g class="chrome"><rect class="header-bg" x="0" y="0" width="416" height="40" fill="#0d1117" rx="8" ry="8"/>
 <rect x="0" y="32" width="416" height="8" fill="#0d1117"/>
 <circle cx="22" cy="20" r="6" fill="#ff5f56"/>
@@ -698,13 +698,13 @@
 <text class="text fg" x="25.6" y="56"> echo &apos;I am an idiot sava                                                      </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor" x="265.6" y="56" width="9.6" height="22.4" fill="#c9d1d9"/>
+<rect class="cursor-active" x="265.6" y="58.4" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
-<text class="text dim" x="400" y="134.8" text-anchor="end" fill="#c9d1d9">by talhayut</text>
+<text class="text dim" x="400" y="142.8" text-anchor="end" fill="#c9d1d9">by talhayut</text>
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.276854;0.288539;1.000000"
+      keyTimes="0.000000;0.275893;0.287576;1.000000"
       dur="4.45s"
       repeatCount="indefinite"
       calcMode="discrete"
@@ -713,7 +713,7 @@
   </g>
 
   <g id="frame-25" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="416" height="162" fill="#0d1117" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="416" height="170" fill="#0d1117" rx="8" ry="8"/>
 <g class="chrome"><rect class="header-bg" x="0" y="0" width="416" height="40" fill="#0d1117" rx="8" ry="8"/>
 <rect x="0" y="32" width="416" height="8" fill="#0d1117"/>
 <circle cx="22" cy="20" r="6" fill="#ff5f56"/>
@@ -724,13 +724,13 @@
 <text class="text fg" x="25.6" y="56"> echo &apos;I am an idiot savan                                                     </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor" x="275.2" y="56" width="9.6" height="22.4" fill="#c9d1d9"/>
+<rect class="cursor-active" x="275.2" y="58.4" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
-<text class="text dim" x="400" y="134.8" text-anchor="end" fill="#c9d1d9">by talhayut</text>
+<text class="text dim" x="400" y="142.8" text-anchor="end" fill="#c9d1d9">by talhayut</text>
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.288539;0.300225;1.000000"
+      keyTimes="0.000000;0.287576;0.299034;1.000000"
       dur="4.45s"
       repeatCount="indefinite"
       calcMode="discrete"
@@ -739,7 +739,7 @@
   </g>
 
   <g id="frame-26" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="416" height="162" fill="#0d1117" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="416" height="170" fill="#0d1117" rx="8" ry="8"/>
 <g class="chrome"><rect class="header-bg" x="0" y="0" width="416" height="40" fill="#0d1117" rx="8" ry="8"/>
 <rect x="0" y="32" width="416" height="8" fill="#0d1117"/>
 <circle cx="22" cy="20" r="6" fill="#ff5f56"/>
@@ -750,13 +750,13 @@
 <text class="text fg" x="25.6" y="56"> echo &apos;I am an idiot savant                                                    </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor" x="284.8" y="56" width="9.6" height="22.4" fill="#c9d1d9"/>
+<rect class="cursor-active" x="284.8" y="58.4" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
-<text class="text dim" x="400" y="134.8" text-anchor="end" fill="#c9d1d9">by talhayut</text>
+<text class="text dim" x="400" y="142.8" text-anchor="end" fill="#c9d1d9">by talhayut</text>
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.300225;0.311685;1.000000"
+      keyTimes="0.000000;0.299034;0.310492;1.000000"
       dur="4.45s"
       repeatCount="indefinite"
       calcMode="discrete"
@@ -765,7 +765,7 @@
   </g>
 
   <g id="frame-27" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="416" height="162" fill="#0d1117" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="416" height="170" fill="#0d1117" rx="8" ry="8"/>
 <g class="chrome"><rect class="header-bg" x="0" y="0" width="416" height="40" fill="#0d1117" rx="8" ry="8"/>
 <rect x="0" y="32" width="416" height="8" fill="#0d1117"/>
 <circle cx="22" cy="20" r="6" fill="#ff5f56"/>
@@ -776,13 +776,13 @@
 <text class="text fg" x="25.6" y="56"> echo &apos;I am an idiot savant                                                    </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor" x="294.4" y="56" width="9.6" height="22.4" fill="#c9d1d9"/>
+<rect class="cursor-active" x="294.4" y="58.4" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
-<text class="text dim" x="400" y="134.8" text-anchor="end" fill="#c9d1d9">by talhayut</text>
+<text class="text dim" x="400" y="142.8" text-anchor="end" fill="#c9d1d9">by talhayut</text>
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.311685;0.323146;1.000000"
+      keyTimes="0.000000;0.310492;0.321725;1.000000"
       dur="4.45s"
       repeatCount="indefinite"
       calcMode="discrete"
@@ -791,7 +791,7 @@
   </g>
 
   <g id="frame-28" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="416" height="162" fill="#0d1117" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="416" height="170" fill="#0d1117" rx="8" ry="8"/>
 <g class="chrome"><rect class="header-bg" x="0" y="0" width="416" height="40" fill="#0d1117" rx="8" ry="8"/>
 <rect x="0" y="32" width="416" height="8" fill="#0d1117"/>
 <circle cx="22" cy="20" r="6" fill="#ff5f56"/>
@@ -802,13 +802,13 @@
 <text class="text fg" x="25.6" y="56"> echo &apos;I am an idiot savant d                                                  </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor" x="304" y="56" width="9.6" height="22.4" fill="#c9d1d9"/>
+<rect class="cursor-active" x="304" y="58.4" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
-<text class="text dim" x="400" y="134.8" text-anchor="end" fill="#c9d1d9">by talhayut</text>
+<text class="text dim" x="400" y="142.8" text-anchor="end" fill="#c9d1d9">by talhayut</text>
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.323146;0.334831;1.000000"
+      keyTimes="0.000000;0.321725;0.333184;1.000000"
       dur="4.45s"
       repeatCount="indefinite"
       calcMode="discrete"
@@ -817,7 +817,7 @@
   </g>
 
   <g id="frame-29" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="416" height="162" fill="#0d1117" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="416" height="170" fill="#0d1117" rx="8" ry="8"/>
 <g class="chrome"><rect class="header-bg" x="0" y="0" width="416" height="40" fill="#0d1117" rx="8" ry="8"/>
 <rect x="0" y="32" width="416" height="8" fill="#0d1117"/>
 <circle cx="22" cy="20" r="6" fill="#ff5f56"/>
@@ -828,13 +828,13 @@
 <text class="text fg" x="25.6" y="56"> echo &apos;I am an idiot savant de                                                 </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor" x="313.59999999999997" y="56" width="9.6" height="22.4" fill="#c9d1d9"/>
+<rect class="cursor-active" x="313.59999999999997" y="58.4" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
-<text class="text dim" x="400" y="134.8" text-anchor="end" fill="#c9d1d9">by talhayut</text>
+<text class="text dim" x="400" y="142.8" text-anchor="end" fill="#c9d1d9">by talhayut</text>
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.334831;0.346292;1.000000"
+      keyTimes="0.000000;0.333184;0.344642;1.000000"
       dur="4.45s"
       repeatCount="indefinite"
       calcMode="discrete"
@@ -843,7 +843,7 @@
   </g>
 
   <g id="frame-30" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="416" height="162" fill="#0d1117" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="416" height="170" fill="#0d1117" rx="8" ry="8"/>
 <g class="chrome"><rect class="header-bg" x="0" y="0" width="416" height="40" fill="#0d1117" rx="8" ry="8"/>
 <rect x="0" y="32" width="416" height="8" fill="#0d1117"/>
 <circle cx="22" cy="20" r="6" fill="#ff5f56"/>
@@ -854,13 +854,13 @@
 <text class="text fg" x="25.6" y="56"> echo &apos;I am an idiot savant dev                                                </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor" x="323.2" y="56" width="9.6" height="22.4" fill="#c9d1d9"/>
+<rect class="cursor-active" x="323.2" y="58.4" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
-<text class="text dim" x="400" y="134.8" text-anchor="end" fill="#c9d1d9">by talhayut</text>
+<text class="text dim" x="400" y="142.8" text-anchor="end" fill="#c9d1d9">by talhayut</text>
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.346292;0.357528;1.000000"
+      keyTimes="0.000000;0.344642;0.355875;1.000000"
       dur="4.45s"
       repeatCount="indefinite"
       calcMode="discrete"
@@ -869,7 +869,7 @@
   </g>
 
   <g id="frame-31" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="416" height="162" fill="#0d1117" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="416" height="170" fill="#0d1117" rx="8" ry="8"/>
 <g class="chrome"><rect class="header-bg" x="0" y="0" width="416" height="40" fill="#0d1117" rx="8" ry="8"/>
 <rect x="0" y="32" width="416" height="8" fill="#0d1117"/>
 <circle cx="22" cy="20" r="6" fill="#ff5f56"/>
@@ -880,13 +880,13 @@
 <text class="text fg" x="25.6" y="56"> echo &apos;I am an idiot savant deve                                               </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor" x="332.8" y="56" width="9.6" height="22.4" fill="#c9d1d9"/>
+<rect class="cursor-active" x="332.8" y="58.4" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
-<text class="text dim" x="400" y="134.8" text-anchor="end" fill="#c9d1d9">by talhayut</text>
+<text class="text dim" x="400" y="142.8" text-anchor="end" fill="#c9d1d9">by talhayut</text>
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.357528;0.368539;1.000000"
+      keyTimes="0.000000;0.355875;0.367109;1.000000"
       dur="4.45s"
       repeatCount="indefinite"
       calcMode="discrete"
@@ -895,7 +895,7 @@
   </g>
 
   <g id="frame-32" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="416" height="162" fill="#0d1117" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="416" height="170" fill="#0d1117" rx="8" ry="8"/>
 <g class="chrome"><rect class="header-bg" x="0" y="0" width="416" height="40" fill="#0d1117" rx="8" ry="8"/>
 <rect x="0" y="32" width="416" height="8" fill="#0d1117"/>
 <circle cx="22" cy="20" r="6" fill="#ff5f56"/>
@@ -906,13 +906,13 @@
 <text class="text fg" x="25.6" y="56"> echo &apos;I am an idiot savant devel                                              </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor" x="342.4" y="56" width="9.6" height="22.4" fill="#c9d1d9"/>
+<rect class="cursor-active" x="342.4" y="58.4" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
-<text class="text dim" x="400" y="134.8" text-anchor="end" fill="#c9d1d9">by talhayut</text>
+<text class="text dim" x="400" y="142.8" text-anchor="end" fill="#c9d1d9">by talhayut</text>
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.368539;0.380899;1.000000"
+      keyTimes="0.000000;0.367109;0.378791;1.000000"
       dur="4.45s"
       repeatCount="indefinite"
       calcMode="discrete"
@@ -921,7 +921,7 @@
   </g>
 
   <g id="frame-33" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="416" height="162" fill="#0d1117" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="416" height="170" fill="#0d1117" rx="8" ry="8"/>
 <g class="chrome"><rect class="header-bg" x="0" y="0" width="416" height="40" fill="#0d1117" rx="8" ry="8"/>
 <rect x="0" y="32" width="416" height="8" fill="#0d1117"/>
 <circle cx="22" cy="20" r="6" fill="#ff5f56"/>
@@ -932,13 +932,13 @@
 <text class="text fg" x="25.6" y="56"> echo &apos;I am an idiot savant develo                                             </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor" x="352" y="56" width="9.6" height="22.4" fill="#c9d1d9"/>
+<rect class="cursor-active" x="352" y="58.4" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
-<text class="text dim" x="400" y="134.8" text-anchor="end" fill="#c9d1d9">by talhayut</text>
+<text class="text dim" x="400" y="142.8" text-anchor="end" fill="#c9d1d9">by talhayut</text>
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.380899;0.391910;1.000000"
+      keyTimes="0.000000;0.378791;0.390474;1.000000"
       dur="4.45s"
       repeatCount="indefinite"
       calcMode="discrete"
@@ -947,7 +947,7 @@
   </g>
 
   <g id="frame-34" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="416" height="162" fill="#0d1117" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="416" height="170" fill="#0d1117" rx="8" ry="8"/>
 <g class="chrome"><rect class="header-bg" x="0" y="0" width="416" height="40" fill="#0d1117" rx="8" ry="8"/>
 <rect x="0" y="32" width="416" height="8" fill="#0d1117"/>
 <circle cx="22" cy="20" r="6" fill="#ff5f56"/>
@@ -958,13 +958,13 @@
 <text class="text fg" x="25.6" y="56"> echo &apos;I am an idiot savant develop                                            </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor" x="361.59999999999997" y="56" width="9.6" height="22.4" fill="#c9d1d9"/>
+<rect class="cursor-active" x="361.59999999999997" y="58.4" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
-<text class="text dim" x="400" y="134.8" text-anchor="end" fill="#c9d1d9">by talhayut</text>
+<text class="text dim" x="400" y="142.8" text-anchor="end" fill="#c9d1d9">by talhayut</text>
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.391910;0.404045;1.000000"
+      keyTimes="0.000000;0.390474;0.401483;1.000000"
       dur="4.45s"
       repeatCount="indefinite"
       calcMode="discrete"
@@ -973,7 +973,7 @@
   </g>
 
   <g id="frame-35" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="416" height="162" fill="#0d1117" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="416" height="170" fill="#0d1117" rx="8" ry="8"/>
 <g class="chrome"><rect class="header-bg" x="0" y="0" width="416" height="40" fill="#0d1117" rx="8" ry="8"/>
 <rect x="0" y="32" width="416" height="8" fill="#0d1117"/>
 <circle cx="22" cy="20" r="6" fill="#ff5f56"/>
@@ -984,13 +984,13 @@
 <text class="text fg" x="25.6" y="56"> echo &apos;I am an idiot savant develope                                           </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor" x="371.2" y="56" width="9.6" height="22.4" fill="#c9d1d9"/>
+<rect class="cursor-active" x="371.2" y="58.4" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
-<text class="text dim" x="400" y="134.8" text-anchor="end" fill="#c9d1d9">by talhayut</text>
+<text class="text dim" x="400" y="142.8" text-anchor="end" fill="#c9d1d9">by talhayut</text>
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.404045;0.414607;1.000000"
+      keyTimes="0.000000;0.401483;0.413166;1.000000"
       dur="4.45s"
       repeatCount="indefinite"
       calcMode="discrete"
@@ -999,7 +999,7 @@
   </g>
 
   <g id="frame-36" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="416" height="162" fill="#0d1117" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="416" height="170" fill="#0d1117" rx="8" ry="8"/>
 <g class="chrome"><rect class="header-bg" x="0" y="0" width="416" height="40" fill="#0d1117" rx="8" ry="8"/>
 <rect x="0" y="32" width="416" height="8" fill="#0d1117"/>
 <circle cx="22" cy="20" r="6" fill="#ff5f56"/>
@@ -1010,13 +1010,13 @@
 <text class="text fg" x="25.6" y="56"> echo &apos;I am an idiot savant developer                                          </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor" x="380.8" y="56" width="9.6" height="22.4" fill="#c9d1d9"/>
+<rect class="cursor-active" x="380.8" y="58.4" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
-<text class="text dim" x="400" y="134.8" text-anchor="end" fill="#c9d1d9">by talhayut</text>
+<text class="text dim" x="400" y="142.8" text-anchor="end" fill="#c9d1d9">by talhayut</text>
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.414607;0.426067;1.000000"
+      keyTimes="0.000000;0.413166;0.424848;1.000000"
       dur="4.45s"
       repeatCount="indefinite"
       calcMode="discrete"
@@ -1025,7 +1025,7 @@
   </g>
 
   <g id="frame-37" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="416" height="162" fill="#0d1117" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="416" height="170" fill="#0d1117" rx="8" ry="8"/>
 <g class="chrome"><rect class="header-bg" x="0" y="0" width="416" height="40" fill="#0d1117" rx="8" ry="8"/>
 <rect x="0" y="32" width="416" height="8" fill="#0d1117"/>
 <circle cx="22" cy="20" r="6" fill="#ff5f56"/>
@@ -1036,13 +1036,13 @@
 <text class="text fg" x="25.6" y="56"> echo &apos;I am an idiot savant developer&apos;                                         </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor" x="390.4" y="56" width="9.6" height="22.4" fill="#c9d1d9"/>
+<rect class="cursor-active" x="390.4" y="58.4" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
-<text class="text dim" x="400" y="134.8" text-anchor="end" fill="#c9d1d9">by talhayut</text>
+<text class="text dim" x="400" y="142.8" text-anchor="end" fill="#c9d1d9">by talhayut</text>
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.426067;0.437079;1.000000"
+      keyTimes="0.000000;0.424848;0.436531;1.000000"
       dur="4.45s"
       repeatCount="indefinite"
       calcMode="discrete"
@@ -1051,7 +1051,7 @@
   </g>
 
   <g id="frame-38" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="416" height="162" fill="#0d1117" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="416" height="170" fill="#0d1117" rx="8" ry="8"/>
 <g class="chrome"><rect class="header-bg" x="0" y="0" width="416" height="40" fill="#0d1117" rx="8" ry="8"/>
 <rect x="0" y="32" width="416" height="8" fill="#0d1117"/>
 <circle cx="22" cy="20" r="6" fill="#ff5f56"/>
@@ -1062,13 +1062,13 @@
 <text class="text fg" x="25.6" y="56"> echo &apos;I am an idiot savant developer&apos;                                         </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor" x="390.4" y="56" width="9.6" height="22.4" fill="#c9d1d9"/>
+<rect class="cursor-active" x="380.8" y="58.4" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
-<text class="text dim" x="400" y="134.8" text-anchor="end" fill="#c9d1d9">by talhayut</text>
+<text class="text dim" x="400" y="142.8" text-anchor="end" fill="#c9d1d9">by talhayut</text>
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.437079;0.448989;1.000000"
+      keyTimes="0.000000;0.436531;0.448439;1.000000"
       dur="4.45s"
       repeatCount="indefinite"
       calcMode="discrete"
@@ -1077,7 +1077,7 @@
   </g>
 
   <g id="frame-39" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="416" height="162" fill="#0d1117" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="416" height="170" fill="#0d1117" rx="8" ry="8"/>
 <g class="chrome"><rect class="header-bg" x="0" y="0" width="416" height="40" fill="#0d1117" rx="8" ry="8"/>
 <rect x="0" y="32" width="416" height="8" fill="#0d1117"/>
 <circle cx="22" cy="20" r="6" fill="#ff5f56"/>
@@ -1088,13 +1088,13 @@
 <text class="text fg" x="25.6" y="56"> echo &apos;I am an idiot savant developer&apos;                                         </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor" x="390.4" y="56" width="9.6" height="22.4" fill="#c9d1d9"/>
+<rect class="cursor-active" x="371.2" y="58.4" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
-<text class="text dim" x="400" y="134.8" text-anchor="end" fill="#c9d1d9">by talhayut</text>
+<text class="text dim" x="400" y="142.8" text-anchor="end" fill="#c9d1d9">by talhayut</text>
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.448989;0.460899;1.000000"
+      keyTimes="0.000000;0.448439;0.460571;1.000000"
       dur="4.45s"
       repeatCount="indefinite"
       calcMode="discrete"
@@ -1103,7 +1103,7 @@
   </g>
 
   <g id="frame-40" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="416" height="162" fill="#0d1117" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="416" height="170" fill="#0d1117" rx="8" ry="8"/>
 <g class="chrome"><rect class="header-bg" x="0" y="0" width="416" height="40" fill="#0d1117" rx="8" ry="8"/>
 <rect x="0" y="32" width="416" height="8" fill="#0d1117"/>
 <circle cx="22" cy="20" r="6" fill="#ff5f56"/>
@@ -1114,13 +1114,13 @@
 <text class="text fg" x="25.6" y="56"> echo &apos;I am an idiot savant developer&apos;                                         </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor" x="390.4" y="56" width="9.6" height="22.4" fill="#c9d1d9"/>
+<rect class="cursor-active" x="361.59999999999997" y="58.4" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
-<text class="text dim" x="400" y="134.8" text-anchor="end" fill="#c9d1d9">by talhayut</text>
+<text class="text dim" x="400" y="142.8" text-anchor="end" fill="#c9d1d9">by talhayut</text>
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.460899;0.473034;1.000000"
+      keyTimes="0.000000;0.460571;0.472478;1.000000"
       dur="4.45s"
       repeatCount="indefinite"
       calcMode="discrete"
@@ -1129,7 +1129,7 @@
   </g>
 
   <g id="frame-41" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="416" height="162" fill="#0d1117" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="416" height="170" fill="#0d1117" rx="8" ry="8"/>
 <g class="chrome"><rect class="header-bg" x="0" y="0" width="416" height="40" fill="#0d1117" rx="8" ry="8"/>
 <rect x="0" y="32" width="416" height="8" fill="#0d1117"/>
 <circle cx="22" cy="20" r="6" fill="#ff5f56"/>
@@ -1140,13 +1140,13 @@
 <text class="text fg" x="25.6" y="56"> echo &apos;I am an idiot savant developer&apos;                                         </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor" x="390.4" y="56" width="9.6" height="22.4" fill="#c9d1d9"/>
+<rect class="cursor-active" x="352" y="58.4" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
-<text class="text dim" x="400" y="134.8" text-anchor="end" fill="#c9d1d9">by talhayut</text>
+<text class="text dim" x="400" y="142.8" text-anchor="end" fill="#c9d1d9">by talhayut</text>
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.473034;0.485169;1.000000"
+      keyTimes="0.000000;0.472478;0.484835;1.000000"
       dur="4.45s"
       repeatCount="indefinite"
       calcMode="discrete"
@@ -1155,7 +1155,7 @@
   </g>
 
   <g id="frame-42" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="416" height="162" fill="#0d1117" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="416" height="170" fill="#0d1117" rx="8" ry="8"/>
 <g class="chrome"><rect class="header-bg" x="0" y="0" width="416" height="40" fill="#0d1117" rx="8" ry="8"/>
 <rect x="0" y="32" width="416" height="8" fill="#0d1117"/>
 <circle cx="22" cy="20" r="6" fill="#ff5f56"/>
@@ -1166,13 +1166,13 @@
 <text class="text fg" x="25.6" y="56"> echo &apos;I am an idiot savant developer&apos;                                         </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor" x="390.4" y="56" width="9.6" height="22.4" fill="#c9d1d9"/>
+<rect class="cursor-active" x="342.4" y="58.4" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
-<text class="text dim" x="400" y="134.8" text-anchor="end" fill="#c9d1d9">by talhayut</text>
+<text class="text dim" x="400" y="142.8" text-anchor="end" fill="#c9d1d9">by talhayut</text>
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.485169;0.497528;1.000000"
+      keyTimes="0.000000;0.484835;0.496967;1.000000"
       dur="4.45s"
       repeatCount="indefinite"
       calcMode="discrete"
@@ -1181,7 +1181,7 @@
   </g>
 
   <g id="frame-43" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="416" height="162" fill="#0d1117" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="416" height="170" fill="#0d1117" rx="8" ry="8"/>
 <g class="chrome"><rect class="header-bg" x="0" y="0" width="416" height="40" fill="#0d1117" rx="8" ry="8"/>
 <rect x="0" y="32" width="416" height="8" fill="#0d1117"/>
 <circle cx="22" cy="20" r="6" fill="#ff5f56"/>
@@ -1192,13 +1192,13 @@
 <text class="text fg" x="25.6" y="56"> echo &apos;I am an idiot savant developer&apos;                                         </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor" x="390.4" y="56" width="9.6" height="22.4" fill="#c9d1d9"/>
+<rect class="cursor-active" x="332.8" y="58.4" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
-<text class="text dim" x="400" y="134.8" text-anchor="end" fill="#c9d1d9">by talhayut</text>
+<text class="text dim" x="400" y="142.8" text-anchor="end" fill="#c9d1d9">by talhayut</text>
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.497528;0.509888;1.000000"
+      keyTimes="0.000000;0.496967;0.509548;1.000000"
       dur="4.45s"
       repeatCount="indefinite"
       calcMode="discrete"
@@ -1207,7 +1207,7 @@
   </g>
 
   <g id="frame-44" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="416" height="162" fill="#0d1117" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="416" height="170" fill="#0d1117" rx="8" ry="8"/>
 <g class="chrome"><rect class="header-bg" x="0" y="0" width="416" height="40" fill="#0d1117" rx="8" ry="8"/>
 <rect x="0" y="32" width="416" height="8" fill="#0d1117"/>
 <circle cx="22" cy="20" r="6" fill="#ff5f56"/>
@@ -1218,13 +1218,13 @@
 <text class="text fg" x="25.6" y="56"> echo &apos;I am an idiot savant developer&apos;                                         </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor" x="390.4" y="56" width="9.6" height="22.4" fill="#c9d1d9"/>
+<rect class="cursor-active" x="323.2" y="58.4" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
-<text class="text dim" x="400" y="134.8" text-anchor="end" fill="#c9d1d9">by talhayut</text>
+<text class="text dim" x="400" y="142.8" text-anchor="end" fill="#c9d1d9">by talhayut</text>
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.509888;0.522247;1.000000"
+      keyTimes="0.000000;0.509548;0.521681;1.000000"
       dur="4.45s"
       repeatCount="indefinite"
       calcMode="discrete"
@@ -1233,7 +1233,7 @@
   </g>
 
   <g id="frame-45" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="416" height="162" fill="#0d1117" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="416" height="170" fill="#0d1117" rx="8" ry="8"/>
 <g class="chrome"><rect class="header-bg" x="0" y="0" width="416" height="40" fill="#0d1117" rx="8" ry="8"/>
 <rect x="0" y="32" width="416" height="8" fill="#0d1117"/>
 <circle cx="22" cy="20" r="6" fill="#ff5f56"/>
@@ -1244,13 +1244,13 @@
 <text class="text fg" x="25.6" y="56"> echo &apos;I am an idiot savant developer&apos;                                         </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor" x="390.4" y="56" width="9.6" height="22.4" fill="#c9d1d9"/>
+<rect class="cursor-active" x="313.59999999999997" y="58.4" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
-<text class="text dim" x="400" y="134.8" text-anchor="end" fill="#c9d1d9">by talhayut</text>
+<text class="text dim" x="400" y="142.8" text-anchor="end" fill="#c9d1d9">by talhayut</text>
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.522247;0.534607;1.000000"
+      keyTimes="0.000000;0.521681;0.534037;1.000000"
       dur="4.45s"
       repeatCount="indefinite"
       calcMode="discrete"
@@ -1259,7 +1259,7 @@
   </g>
 
   <g id="frame-46" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="416" height="162" fill="#0d1117" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="416" height="170" fill="#0d1117" rx="8" ry="8"/>
 <g class="chrome"><rect class="header-bg" x="0" y="0" width="416" height="40" fill="#0d1117" rx="8" ry="8"/>
 <rect x="0" y="32" width="416" height="8" fill="#0d1117"/>
 <circle cx="22" cy="20" r="6" fill="#ff5f56"/>
@@ -1270,13 +1270,13 @@
 <text class="text fg" x="25.6" y="56"> echo &apos;I am an idiot savant developer&apos;                                         </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor" x="390.4" y="56" width="9.6" height="22.4" fill="#c9d1d9"/>
+<rect class="cursor-active" x="304" y="58.4" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
-<text class="text dim" x="400" y="134.8" text-anchor="end" fill="#c9d1d9">by talhayut</text>
+<text class="text dim" x="400" y="142.8" text-anchor="end" fill="#c9d1d9">by talhayut</text>
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.534607;0.546742;1.000000"
+      keyTimes="0.000000;0.534037;0.546394;1.000000"
       dur="4.45s"
       repeatCount="indefinite"
       calcMode="discrete"
@@ -1285,7 +1285,7 @@
   </g>
 
   <g id="frame-47" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="416" height="162" fill="#0d1117" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="416" height="170" fill="#0d1117" rx="8" ry="8"/>
 <g class="chrome"><rect class="header-bg" x="0" y="0" width="416" height="40" fill="#0d1117" rx="8" ry="8"/>
 <rect x="0" y="32" width="416" height="8" fill="#0d1117"/>
 <circle cx="22" cy="20" r="6" fill="#ff5f56"/>
@@ -1296,13 +1296,13 @@
 <text class="text fg" x="25.6" y="56"> echo &apos;I am an idiot savant developer&apos;                                         </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor" x="390.4" y="56" width="9.6" height="22.4" fill="#c9d1d9"/>
+<rect class="cursor-active" x="294.4" y="58.4" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
-<text class="text dim" x="400" y="134.8" text-anchor="end" fill="#c9d1d9">by talhayut</text>
+<text class="text dim" x="400" y="142.8" text-anchor="end" fill="#c9d1d9">by talhayut</text>
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.546742;0.559101;1.000000"
+      keyTimes="0.000000;0.546394;0.558526;1.000000"
       dur="4.45s"
       repeatCount="indefinite"
       calcMode="discrete"
@@ -1311,7 +1311,7 @@
   </g>
 
   <g id="frame-48" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="416" height="162" fill="#0d1117" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="416" height="170" fill="#0d1117" rx="8" ry="8"/>
 <g class="chrome"><rect class="header-bg" x="0" y="0" width="416" height="40" fill="#0d1117" rx="8" ry="8"/>
 <rect x="0" y="32" width="416" height="8" fill="#0d1117"/>
 <circle cx="22" cy="20" r="6" fill="#ff5f56"/>
@@ -1322,13 +1322,13 @@
 <text class="text fg" x="25.6" y="56"> echo &apos;I am an idiot savantdeveloper&apos;                                          </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor" x="380.8" y="56" width="9.6" height="22.4" fill="#c9d1d9"/>
+<rect class="cursor-active" x="284.8" y="58.4" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
-<text class="text dim" x="400" y="134.8" text-anchor="end" fill="#c9d1d9">by talhayut</text>
+<text class="text dim" x="400" y="142.8" text-anchor="end" fill="#c9d1d9">by talhayut</text>
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.559101;0.571011;1.000000"
+      keyTimes="0.000000;0.558526;0.571108;1.000000"
       dur="4.45s"
       repeatCount="indefinite"
       calcMode="discrete"
@@ -1337,7 +1337,7 @@
   </g>
 
   <g id="frame-49" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="416" height="162" fill="#0d1117" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="416" height="170" fill="#0d1117" rx="8" ry="8"/>
 <g class="chrome"><rect class="header-bg" x="0" y="0" width="416" height="40" fill="#0d1117" rx="8" ry="8"/>
 <rect x="0" y="32" width="416" height="8" fill="#0d1117"/>
 <circle cx="22" cy="20" r="6" fill="#ff5f56"/>
@@ -1348,13 +1348,13 @@
 <text class="text fg" x="25.6" y="56"> echo &apos;I am an idiot savandeveloper&apos;                                           </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor" x="371.2" y="56" width="9.6" height="22.4" fill="#c9d1d9"/>
+<rect class="cursor-active" x="275.2" y="58.4" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
-<text class="text dim" x="400" y="134.8" text-anchor="end" fill="#c9d1d9">by talhayut</text>
+<text class="text dim" x="400" y="142.8" text-anchor="end" fill="#c9d1d9">by talhayut</text>
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.571011;0.583371;1.000000"
+      keyTimes="0.000000;0.571108;0.583464;1.000000"
       dur="4.45s"
       repeatCount="indefinite"
       calcMode="discrete"
@@ -1363,7 +1363,7 @@
   </g>
 
   <g id="frame-50" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="416" height="162" fill="#0d1117" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="416" height="170" fill="#0d1117" rx="8" ry="8"/>
 <g class="chrome"><rect class="header-bg" x="0" y="0" width="416" height="40" fill="#0d1117" rx="8" ry="8"/>
 <rect x="0" y="32" width="416" height="8" fill="#0d1117"/>
 <circle cx="22" cy="20" r="6" fill="#ff5f56"/>
@@ -1374,13 +1374,13 @@
 <text class="text fg" x="25.6" y="56"> echo &apos;I am an idiot savadeveloper&apos;                                            </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor" x="361.59999999999997" y="56" width="9.6" height="22.4" fill="#c9d1d9"/>
+<rect class="cursor-active" x="265.6" y="58.4" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
-<text class="text dim" x="400" y="134.8" text-anchor="end" fill="#c9d1d9">by talhayut</text>
+<text class="text dim" x="400" y="142.8" text-anchor="end" fill="#c9d1d9">by talhayut</text>
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.583371;0.595955;1.000000"
+      keyTimes="0.000000;0.583464;0.595372;1.000000"
       dur="4.45s"
       repeatCount="indefinite"
       calcMode="discrete"
@@ -1389,7 +1389,7 @@
   </g>
 
   <g id="frame-51" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="416" height="162" fill="#0d1117" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="416" height="170" fill="#0d1117" rx="8" ry="8"/>
 <g class="chrome"><rect class="header-bg" x="0" y="0" width="416" height="40" fill="#0d1117" rx="8" ry="8"/>
 <rect x="0" y="32" width="416" height="8" fill="#0d1117"/>
 <circle cx="22" cy="20" r="6" fill="#ff5f56"/>
@@ -1400,13 +1400,13 @@
 <text class="text fg" x="25.6" y="56"> echo &apos;I am an idiot savdeveloper&apos;                                             </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor" x="352" y="56" width="9.6" height="22.4" fill="#c9d1d9"/>
+<rect class="cursor-active" x="256" y="58.4" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
-<text class="text dim" x="400" y="134.8" text-anchor="end" fill="#c9d1d9">by talhayut</text>
+<text class="text dim" x="400" y="142.8" text-anchor="end" fill="#c9d1d9">by talhayut</text>
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.595955;0.608315;1.000000"
+      keyTimes="0.000000;0.595372;0.607279;1.000000"
       dur="4.45s"
       repeatCount="indefinite"
       calcMode="discrete"
@@ -1415,7 +1415,7 @@
   </g>
 
   <g id="frame-52" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="416" height="162" fill="#0d1117" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="416" height="170" fill="#0d1117" rx="8" ry="8"/>
 <g class="chrome"><rect class="header-bg" x="0" y="0" width="416" height="40" fill="#0d1117" rx="8" ry="8"/>
 <rect x="0" y="32" width="416" height="8" fill="#0d1117"/>
 <circle cx="22" cy="20" r="6" fill="#ff5f56"/>
@@ -1426,13 +1426,13 @@
 <text class="text fg" x="25.6" y="56"> echo &apos;I am an idiot sadeveloper&apos;                                              </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor" x="342.4" y="56" width="9.6" height="22.4" fill="#c9d1d9"/>
+<rect class="cursor-active" x="246.39999999999998" y="58.4" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
-<text class="text dim" x="400" y="134.8" text-anchor="end" fill="#c9d1d9">by talhayut</text>
+<text class="text dim" x="400" y="142.8" text-anchor="end" fill="#c9d1d9">by talhayut</text>
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.608315;0.620225;1.000000"
+      keyTimes="0.000000;0.607279;0.619411;1.000000"
       dur="4.45s"
       repeatCount="indefinite"
       calcMode="discrete"
@@ -1441,7 +1441,7 @@
   </g>
 
   <g id="frame-53" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="416" height="162" fill="#0d1117" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="416" height="170" fill="#0d1117" rx="8" ry="8"/>
 <g class="chrome"><rect class="header-bg" x="0" y="0" width="416" height="40" fill="#0d1117" rx="8" ry="8"/>
 <rect x="0" y="32" width="416" height="8" fill="#0d1117"/>
 <circle cx="22" cy="20" r="6" fill="#ff5f56"/>
@@ -1452,13 +1452,13 @@
 <text class="text fg" x="25.6" y="56"> echo &apos;I am an idiot sdeveloper&apos;                                               </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor" x="332.8" y="56" width="9.6" height="22.4" fill="#c9d1d9"/>
+<rect class="cursor-active" x="236.79999999999998" y="58.4" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
-<text class="text dim" x="400" y="134.8" text-anchor="end" fill="#c9d1d9">by talhayut</text>
+<text class="text dim" x="400" y="142.8" text-anchor="end" fill="#c9d1d9">by talhayut</text>
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.620225;0.632584;1.000000"
+      keyTimes="0.000000;0.619411;0.631319;1.000000"
       dur="4.45s"
       repeatCount="indefinite"
       calcMode="discrete"
@@ -1467,7 +1467,7 @@
   </g>
 
   <g id="frame-54" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="416" height="162" fill="#0d1117" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="416" height="170" fill="#0d1117" rx="8" ry="8"/>
 <g class="chrome"><rect class="header-bg" x="0" y="0" width="416" height="40" fill="#0d1117" rx="8" ry="8"/>
 <rect x="0" y="32" width="416" height="8" fill="#0d1117"/>
 <circle cx="22" cy="20" r="6" fill="#ff5f56"/>
@@ -1478,13 +1478,13 @@
 <text class="text fg" x="25.6" y="56"> echo &apos;I am an idiot developer&apos;                                                </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor" x="323.2" y="56" width="9.6" height="22.4" fill="#c9d1d9"/>
+<rect class="cursor-active" x="227.2" y="58.4" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
-<text class="text dim" x="400" y="134.8" text-anchor="end" fill="#c9d1d9">by talhayut</text>
+<text class="text dim" x="400" y="142.8" text-anchor="end" fill="#c9d1d9">by talhayut</text>
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.632584;0.655955;1.000000"
+      keyTimes="0.000000;0.631319;0.654460;1.000000"
       dur="4.45s"
       repeatCount="indefinite"
       calcMode="discrete"
@@ -1493,7 +1493,7 @@
   </g>
 
   <g id="frame-55" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="416" height="162" fill="#0d1117" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="416" height="170" fill="#0d1117" rx="8" ry="8"/>
 <g class="chrome"><rect class="header-bg" x="0" y="0" width="416" height="40" fill="#0d1117" rx="8" ry="8"/>
 <rect x="0" y="32" width="416" height="8" fill="#0d1117"/>
 <circle cx="22" cy="20" r="6" fill="#ff5f56"/>
@@ -1504,13 +1504,13 @@
 <text class="text fg" x="25.6" y="56"> echo &apos;I am an idiot developer&apos;                                                </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor" x="323.2" y="56" width="9.6" height="22.4" fill="#c9d1d9"/>
+<rect class="cursor" x="227.2" y="58.4" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
-<text class="text dim" x="400" y="134.8" text-anchor="end" fill="#c9d1d9">by talhayut</text>
+<text class="text dim" x="400" y="142.8" text-anchor="end" fill="#c9d1d9">by talhayut</text>
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.655955;0.680674;1.000000"
+      keyTimes="0.000000;0.654460;0.678724;1.000000"
       dur="4.45s"
       repeatCount="indefinite"
       calcMode="discrete"
@@ -1519,7 +1519,7 @@
   </g>
 
   <g id="frame-56" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="416" height="162" fill="#0d1117" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="416" height="170" fill="#0d1117" rx="8" ry="8"/>
 <g class="chrome"><rect class="header-bg" x="0" y="0" width="416" height="40" fill="#0d1117" rx="8" ry="8"/>
 <rect x="0" y="32" width="416" height="8" fill="#0d1117"/>
 <circle cx="22" cy="20" r="6" fill="#ff5f56"/>
@@ -1529,11 +1529,11 @@
 <text class="text f2" x="16" y="56">$</text>
 <text class="text fg" x="25.6" y="56"> echo &apos;I am an idiot developer&apos;                                                </text>
 </g>
-<text class="text dim" x="400" y="134.8" text-anchor="end" fill="#c9d1d9">by talhayut</text>
+<text class="text dim" x="400" y="142.8" text-anchor="end" fill="#c9d1d9">by talhayut</text>
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.680674;0.705618;1.000000"
+      keyTimes="0.000000;0.678724;0.705010;1.000000"
       dur="4.45s"
       repeatCount="indefinite"
       calcMode="discrete"
@@ -1542,7 +1542,7 @@
   </g>
 
   <g id="frame-57" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="416" height="162" fill="#0d1117" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="416" height="170" fill="#0d1117" rx="8" ry="8"/>
 <g class="chrome"><rect class="header-bg" x="0" y="0" width="416" height="40" fill="#0d1117" rx="8" ry="8"/>
 <rect x="0" y="32" width="416" height="8" fill="#0d1117"/>
 <circle cx="22" cy="20" r="6" fill="#ff5f56"/>
@@ -1555,13 +1555,13 @@
 <text class="text f2" x="16" y="100.8">$</text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor" x="35.2" y="100.8" width="9.6" height="22.4" fill="#c9d1d9"/>
+<rect class="cursor" x="35.2" y="103.2" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
-<text class="text dim" x="400" y="134.8" text-anchor="end" fill="#c9d1d9">by talhayut</text>
+<text class="text dim" x="400" y="142.8" text-anchor="end" fill="#c9d1d9">by talhayut</text>
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.705618;0.774607;1.000000"
+      keyTimes="0.000000;0.705010;0.774208;1.000000"
       dur="4.45s"
       repeatCount="indefinite"
       calcMode="discrete"
@@ -1570,7 +1570,7 @@
   </g>
 
   <g id="frame-58" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="416" height="162" fill="#0d1117" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="416" height="170" fill="#0d1117" rx="8" ry="8"/>
 <g class="chrome"><rect class="header-bg" x="0" y="0" width="416" height="40" fill="#0d1117" rx="8" ry="8"/>
 <rect x="0" y="32" width="416" height="8" fill="#0d1117"/>
 <circle cx="22" cy="20" r="6" fill="#ff5f56"/>
@@ -1583,13 +1583,13 @@
 <text class="text f2" x="16" y="100.8">$</text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor" x="35.2" y="100.8" width="9.6" height="22.4" fill="#c9d1d9"/>
+<rect class="cursor" x="35.2" y="103.2" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
-<text class="text dim" x="400" y="134.8" text-anchor="end" fill="#c9d1d9">by talhayut</text>
+<text class="text dim" x="400" y="142.8" text-anchor="end" fill="#c9d1d9">by talhayut</text>
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.774607;0.775281;1.000000"
+      keyTimes="0.000000;0.774208;0.775331;1.000000"
       dur="4.45s"
       repeatCount="indefinite"
       calcMode="discrete"
@@ -1598,7 +1598,7 @@
   </g>
 
   <g id="frame-59" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="416" height="162" fill="#0d1117" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="416" height="170" fill="#0d1117" rx="8" ry="8"/>
 <g class="chrome"><rect class="header-bg" x="0" y="0" width="416" height="40" fill="#0d1117" rx="8" ry="8"/>
 <rect x="0" y="32" width="416" height="8" fill="#0d1117"/>
 <circle cx="22" cy="20" r="6" fill="#ff5f56"/>
@@ -1611,13 +1611,13 @@
 <text class="text f2" x="16" y="100.8">$</text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor" x="35.2" y="100.8" width="9.6" height="22.4" fill="#c9d1d9"/>
+<rect class="cursor" x="35.2" y="103.2" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
-<text class="text dim" x="400" y="134.8" text-anchor="end" fill="#c9d1d9">by talhayut</text>
+<text class="text dim" x="400" y="142.8" text-anchor="end" fill="#c9d1d9">by talhayut</text>
     <animate
       attributeName="visibility"
       values="hidden;visible;visible"
-      keyTimes="0.000000;0.775281;1.000000"
+      keyTimes="0.000000;0.775331;1.000000"
       dur="4.45s"
       repeatCount="indefinite"
       calcMode="discrete"
