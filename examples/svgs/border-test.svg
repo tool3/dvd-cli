@@ -14,7 +14,40 @@
 .uline { text-decoration: underline; }
 .strike { text-decoration: line-through; }
 .dim { opacity: 0.5; }
+.fg { fill: #c9d1d9; }
+.f0 { fill: #000000; }
+.f1 { fill: #ff7b72; }
+.f2 { fill: #3fb950; }
+.f3 { fill: #d29922; }
+.f4 { fill: #58a6ff; }
+.f5 { fill: #bc8cff; }
+.f6 { fill: #39c5cf; }
+.f7 { fill: #b1bac4; }
+.f8 { fill: #6e7681; }
+.f9 { fill: #ffa198; }
+.f10 { fill: #56d364; }
+.f11 { fill: #e3b341; }
+.f12 { fill: #79c0ff; }
 .f13 { fill: #d2a8ff; }
+.f14 { fill: #56d4dd; }
+.f15 { fill: #f0f6fc; }
+.bg { fill: #1e1e1e; }
+.b0 { fill: #000000; }
+.b1 { fill: #ff7b72; }
+.b2 { fill: #3fb950; }
+.b3 { fill: #d29922; }
+.b4 { fill: #58a6ff; }
+.b5 { fill: #bc8cff; }
+.b6 { fill: #39c5cf; }
+.b7 { fill: #b1bac4; }
+.b8 { fill: #6e7681; }
+.b9 { fill: #ffa198; }
+.b10 { fill: #56d364; }
+.b11 { fill: #e3b341; }
+.b12 { fill: #79c0ff; }
+.b13 { fill: #d2a8ff; }
+.b14 { fill: #56d4dd; }
+.b15 { fill: #f0f6fc; }
 .cursor { animation: blink 1s step-end infinite; }
 @keyframes blink {
   0%, 50% { opacity: 1; }
@@ -39,7 +72,7 @@
 <g class="cursor-layer">
 <rect class="cursor" x="51.2" y="32" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
-    <animate attributeName="visibility" values="visible;hidden;hidden" keyTimes="0;0.006268;1" dur="8.46s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+    <animate attributeName="visibility" values="visible;hidden;hidden" keyTimes="0;0.006286;1" dur="8.43s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-1" visibility="hidden">
@@ -52,7 +85,7 @@
 <g class="cursor-layer">
 <rect class="cursor-active" x="60.8" y="32" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
-    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.006268;0.012419;1" dur="8.46s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.006286;0.012334;1" dur="8.43s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-2" visibility="hidden">
@@ -65,7 +98,7 @@
 <g class="cursor-layer">
 <rect class="cursor-active" x="70.4" y="32" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
-    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.012419;0.018332;1" dur="8.46s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.012334;0.018382;1" dur="8.43s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-3" visibility="hidden">
@@ -78,7 +111,7 @@
 <g class="cursor-layer">
 <rect class="cursor-active" x="80" y="32" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
-    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.018332;0.024483;1" dur="8.46s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.018382;0.024431;1" dur="8.43s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-4" visibility="hidden">
@@ -91,7 +124,7 @@
 <g class="cursor-layer">
 <rect class="cursor-active" x="89.6" y="32" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
-    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.024483;0.030514;1" dur="8.46s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.024431;0.030479;1" dur="8.43s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-5" visibility="hidden">
@@ -104,7 +137,7 @@
 <g class="cursor-layer">
 <rect class="cursor-active" x="99.2" y="32" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
-    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.030514;0.036546;1" dur="8.46s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.030479;0.036528;1" dur="8.43s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-6" visibility="hidden">
@@ -117,7 +150,7 @@
 <g class="cursor-layer">
 <rect class="cursor-active" x="108.8" y="32" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
-    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.036546;0.042578;1" dur="8.46s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.036528;0.042576;1" dur="8.43s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-7" visibility="hidden">
@@ -130,7 +163,7 @@
 <g class="cursor-layer">
 <rect class="cursor-active" x="118.4" y="32" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
-    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.042578;0.04861;1" dur="8.46s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.042576;0.048624;1" dur="8.43s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-8" visibility="hidden">
@@ -143,7 +176,7 @@
 <g class="cursor-layer">
 <rect class="cursor-active" x="128" y="32" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
-    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.04861;0.054642;1" dur="8.46s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.048624;0.054673;1" dur="8.43s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-9" visibility="hidden">
@@ -156,7 +189,7 @@
 <g class="cursor-layer">
 <rect class="cursor-active" x="137.6" y="32" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
-    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.054642;0.060674;1" dur="8.46s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.054673;0.060602;1" dur="8.43s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-10" visibility="hidden">
@@ -169,7 +202,7 @@
 <g class="cursor-layer">
 <rect class="cursor-active" x="147.2" y="32" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
-    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.060674;0.066588;1" dur="8.46s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.060602;0.066651;1" dur="8.43s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-11" visibility="hidden">
@@ -182,7 +215,7 @@
 <g class="cursor-layer">
 <rect class="cursor-active" x="156.8" y="32" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
-    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.066588;0.07262;1" dur="8.46s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.066651;0.072581;1" dur="8.43s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-12" visibility="hidden">
@@ -195,7 +228,7 @@
 <g class="cursor-layer">
 <rect class="cursor-active" x="166.4" y="32" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
-    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.07262;0.078652;1" dur="8.46s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.072581;0.078629;1" dur="8.43s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-13" visibility="hidden">
@@ -208,7 +241,7 @@
 <g class="cursor-layer">
 <rect class="cursor-active" x="176" y="32" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
-    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.078652;0.084684;1" dur="8.46s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.078629;0.084796;1" dur="8.43s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-14" visibility="hidden">
@@ -221,7 +254,7 @@
 <g class="cursor-layer">
 <rect class="cursor-active" x="185.6" y="32" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
-    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.084684;0.090597;1" dur="8.46s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.084796;0.090726;1" dur="8.43s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-15" visibility="hidden">
@@ -234,7 +267,7 @@
 <g class="cursor-layer">
 <rect class="cursor-active" x="195.2" y="32" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
-    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.090597;0.096866;1" dur="8.46s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.090726;0.096656;1" dur="8.43s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-16" visibility="hidden">
@@ -247,7 +280,7 @@
 <g class="cursor-layer">
 <rect class="cursor-active" x="204.8" y="32" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
-    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.096866;0.102898;1" dur="8.46s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.096656;0.102704;1" dur="8.43s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-17" visibility="hidden">
@@ -260,7 +293,7 @@
 <g class="cursor-layer">
 <rect class="cursor-active" x="214.4" y="32" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
-    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.102898;0.109048;1" dur="8.46s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.102704;0.108752;1" dur="8.43s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-18" visibility="hidden">
@@ -273,7 +306,7 @@
 <g class="cursor-layer">
 <rect class="cursor-active" x="224" y="32" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
-    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.109048;0.11508;1" dur="8.46s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.108752;0.114682;1" dur="8.43s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-19" visibility="hidden">
@@ -286,7 +319,7 @@
 <g class="cursor-layer">
 <rect class="cursor-active" x="233.6" y="32" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
-    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.11508;0.120993;1" dur="8.46s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.114682;0.120849;1" dur="8.43s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-20" visibility="hidden">
@@ -299,7 +332,7 @@
 <g class="cursor-layer">
 <rect class="cursor-active" x="243.2" y="32" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
-    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.120993;0.126907;1" dur="8.46s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.120849;0.126898;1" dur="8.43s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-21" visibility="hidden">
@@ -312,7 +345,7 @@
 <g class="cursor-layer">
 <rect class="cursor-active" x="252.8" y="32" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
-    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.126907;0.132939;1" dur="8.46s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.126898;0.132946;1" dur="8.43s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-22" visibility="hidden">
@@ -325,7 +358,7 @@
 <g class="cursor-layer">
 <rect class="cursor-active" x="262.4" y="32" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
-    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.132939;0.139089;1" dur="8.46s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.132946;0.138994;1" dur="8.43s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-23" visibility="hidden">
@@ -338,7 +371,7 @@
 <g class="cursor-layer">
 <rect class="cursor-active" x="272" y="32" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
-    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.139089;0.145121;1" dur="8.46s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.138994;0.145043;1" dur="8.43s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-24" visibility="hidden">
@@ -351,7 +384,7 @@
 <g class="cursor-layer">
 <rect class="cursor-active" x="281.6" y="32" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
-    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.145121;0.151035;1" dur="8.46s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.145043;0.151091;1" dur="8.43s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-25" visibility="hidden">
@@ -364,7 +397,7 @@
 <g class="cursor-layer">
 <rect class="cursor-active" x="291.2" y="32" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
-    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.151035;0.156949;1" dur="8.46s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.151091;0.157258;1" dur="8.43s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-26" visibility="hidden">
@@ -377,7 +410,7 @@
 <g class="cursor-layer">
 <rect class="cursor-active" x="300.8" y="32" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
-    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.156949;0.163099;1" dur="8.46s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.157258;0.163188;1" dur="8.43s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-27" visibility="hidden">
@@ -390,7 +423,7 @@
 <g class="cursor-layer">
 <rect class="cursor-active" x="310.4" y="32" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
-    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.163099;0.169012;1" dur="8.46s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.163188;0.169118;1" dur="8.43s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-28" visibility="hidden">
@@ -403,7 +436,7 @@
 <g class="cursor-layer">
 <rect class="cursor-active" x="320" y="32" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
-    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.169012;0.175163;1" dur="8.46s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.169118;0.175166;1" dur="8.43s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-29" visibility="hidden">
@@ -416,7 +449,7 @@
 <g class="cursor-layer">
 <rect class="cursor-active" x="329.6" y="32" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
-    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.175163;0.174926;1" dur="8.46s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.175166;0.175047;1" dur="8.43s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-30" visibility="hidden">
@@ -429,7 +462,7 @@
 <g class="cursor-layer">
 <rect class="cursor" x="329.6" y="32" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
-    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.174926;0.234536;1" dur="8.46s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.175047;0.234583;1" dur="8.43s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-31" visibility="hidden">
@@ -442,7 +475,7 @@
 <g class="cursor-layer">
 <rect class="cursor" x="329.6" y="32" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
-    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.234536;0.2466;1" dur="8.46s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.234583;0.246679;1" dur="8.43s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-32" visibility="hidden">
@@ -452,10 +485,21 @@
 <text class="text f13" x="32" y="32">❯</text>
 <text class="text fg" x="41.6" y="32"> echo &apos;Testing border options&apos;</text>
 </g>
-    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.2466;0.260083;1" dur="8.46s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.246679;0.247509;1" dur="8.43s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-33" visibility="hidden">
+    <rect class="window-bg" x="0" y="0" width="600" height="300" fill="#1e1e1e" rx="20" ry="20"/>
+<rect x="1.5" y="1.5" width="597" height="297" fill="none" stroke="#ff5555" stroke-width="3" rx="20" ry="20"/>
+<g class="text-layer">
+<text class="text f13" x="32" y="32">❯</text>
+<text class="text fg" x="41.6" y="32"> echo &apos;Testing border options&apos;</text>
+<text class="text fg" x="32" y="54.4">Testing border options</text>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.247509;0.259725;1" dur="8.43s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-34" visibility="hidden">
     <rect class="window-bg" x="0" y="0" width="600" height="300" fill="#1e1e1e" rx="20" ry="20"/>
 <rect x="1.5" y="1.5" width="597" height="297" fill="none" stroke="#ff5555" stroke-width="3" rx="20" ry="20"/>
 <g class="text-layer">
@@ -467,23 +511,7 @@
 <g class="cursor-layer">
 <rect class="cursor" x="51.2" y="76.8" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
-    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.260083;0.266588;1" dur="8.46s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
-  </g>
-
-  <g id="frame-34" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="600" height="300" fill="#1e1e1e" rx="20" ry="20"/>
-<rect x="1.5" y="1.5" width="597" height="297" fill="none" stroke="#ff5555" stroke-width="3" rx="20" ry="20"/>
-<g class="text-layer">
-<text class="text f13" x="32" y="32">❯</text>
-<text class="text fg" x="41.6" y="32"> echo &apos;Testing border options&apos;</text>
-<text class="text fg" x="32" y="54.4">Testing border options</text>
-<text class="text f13" x="32" y="76.8">❯</text>
-<text class="text fg" x="41.6" y="76.8"> #</text>
-</g>
-<g class="cursor-layer">
-<rect class="cursor-active" x="60.8" y="76.8" width="9.6" height="22.4" fill="#c9d1d9"/>
-</g>
-    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.266588;0.272383;1" dur="8.46s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.259725;0.265773;1" dur="8.43s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-35" visibility="hidden">
@@ -497,12 +525,28 @@
 <text class="text fg" x="41.6" y="76.8"> #</text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor-active" x="70.4" y="76.8" width="9.6" height="22.4" fill="#c9d1d9"/>
+<rect class="cursor-active" x="60.8" y="76.8" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
-    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.272383;0.278415;1" dur="8.46s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.265773;0.271822;1" dur="8.43s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-36" visibility="hidden">
+    <rect class="window-bg" x="0" y="0" width="600" height="300" fill="#1e1e1e" rx="20" ry="20"/>
+<rect x="1.5" y="1.5" width="597" height="297" fill="none" stroke="#ff5555" stroke-width="3" rx="20" ry="20"/>
+<g class="text-layer">
+<text class="text f13" x="32" y="32">❯</text>
+<text class="text fg" x="41.6" y="32"> echo &apos;Testing border options&apos;</text>
+<text class="text fg" x="32" y="54.4">Testing border options</text>
+<text class="text f13" x="32" y="76.8">❯</text>
+<text class="text fg" x="41.6" y="76.8"> #</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="70.4" y="76.8" width="9.6" height="22.4" fill="#c9d1d9"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.271822;0.278226;1" dur="8.43s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-37" visibility="hidden">
     <rect class="window-bg" x="0" y="0" width="600" height="300" fill="#1e1e1e" rx="20" ry="20"/>
 <rect x="1.5" y="1.5" width="597" height="297" fill="none" stroke="#ff5555" stroke-width="3" rx="20" ry="20"/>
 <g class="text-layer">
@@ -515,10 +559,10 @@
 <g class="cursor-layer">
 <rect class="cursor-active" x="80" y="76.8" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
-    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.278415;0.284565;1" dur="8.46s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.278226;0.2838;1" dur="8.43s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
-  <g id="frame-37" visibility="hidden">
+  <g id="frame-38" visibility="hidden">
     <rect class="window-bg" x="0" y="0" width="600" height="300" fill="#1e1e1e" rx="20" ry="20"/>
 <rect x="1.5" y="1.5" width="597" height="297" fill="none" stroke="#ff5555" stroke-width="3" rx="20" ry="20"/>
 <g class="text-layer">
@@ -531,10 +575,10 @@
 <g class="cursor-layer">
 <rect class="cursor-active" x="89.6" y="76.8" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
-    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.284565;0.290834;1" dur="8.46s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.2838;0.289967;1" dur="8.43s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
-  <g id="frame-38" visibility="hidden">
+  <g id="frame-39" visibility="hidden">
     <rect class="window-bg" x="0" y="0" width="600" height="300" fill="#1e1e1e" rx="20" ry="20"/>
 <rect x="1.5" y="1.5" width="597" height="297" fill="none" stroke="#ff5555" stroke-width="3" rx="20" ry="20"/>
 <g class="text-layer">
@@ -547,10 +591,10 @@
 <g class="cursor-layer">
 <rect class="cursor-active" x="99.2" y="76.8" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
-    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.290834;0.296866;1" dur="8.46s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.289967;0.296015;1" dur="8.43s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
-  <g id="frame-39" visibility="hidden">
+  <g id="frame-40" visibility="hidden">
     <rect class="window-bg" x="0" y="0" width="600" height="300" fill="#1e1e1e" rx="20" ry="20"/>
 <rect x="1.5" y="1.5" width="597" height="297" fill="none" stroke="#ff5555" stroke-width="3" rx="20" ry="20"/>
 <g class="text-layer">
@@ -563,10 +607,10 @@
 <g class="cursor-layer">
 <rect class="cursor-active" x="108.8" y="76.8" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
-    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.296866;0.302898;1" dur="8.46s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.296015;0.301945;1" dur="8.43s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
-  <g id="frame-40" visibility="hidden">
+  <g id="frame-41" visibility="hidden">
     <rect class="window-bg" x="0" y="0" width="600" height="300" fill="#1e1e1e" rx="20" ry="20"/>
 <rect x="1.5" y="1.5" width="597" height="297" fill="none" stroke="#ff5555" stroke-width="3" rx="20" ry="20"/>
 <g class="text-layer">
@@ -579,10 +623,10 @@
 <g class="cursor-layer">
 <rect class="cursor-active" x="118.4" y="76.8" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
-    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.302898;0.30893;1" dur="8.46s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.301945;0.307993;1" dur="8.43s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
-  <g id="frame-41" visibility="hidden">
+  <g id="frame-42" visibility="hidden">
     <rect class="window-bg" x="0" y="0" width="600" height="300" fill="#1e1e1e" rx="20" ry="20"/>
 <rect x="1.5" y="1.5" width="597" height="297" fill="none" stroke="#ff5555" stroke-width="3" rx="20" ry="20"/>
 <g class="text-layer">
@@ -595,10 +639,10 @@
 <g class="cursor-layer">
 <rect class="cursor-active" x="128" y="76.8" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
-    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.30893;0.31508;1" dur="8.46s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.307993;0.31416;1" dur="8.43s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
-  <g id="frame-42" visibility="hidden">
+  <g id="frame-43" visibility="hidden">
     <rect class="window-bg" x="0" y="0" width="600" height="300" fill="#1e1e1e" rx="20" ry="20"/>
 <rect x="1.5" y="1.5" width="597" height="297" fill="none" stroke="#ff5555" stroke-width="3" rx="20" ry="20"/>
 <g class="text-layer">
@@ -611,10 +655,10 @@
 <g class="cursor-layer">
 <rect class="cursor-active" x="137.6" y="76.8" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
-    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.31508;0.320875;1" dur="8.46s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.31416;0.320327;1" dur="8.43s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
-  <g id="frame-43" visibility="hidden">
+  <g id="frame-44" visibility="hidden">
     <rect class="window-bg" x="0" y="0" width="600" height="300" fill="#1e1e1e" rx="20" ry="20"/>
 <rect x="1.5" y="1.5" width="597" height="297" fill="none" stroke="#ff5555" stroke-width="3" rx="20" ry="20"/>
 <g class="text-layer">
@@ -627,10 +671,10 @@
 <g class="cursor-layer">
 <rect class="cursor-active" x="147.2" y="76.8" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
-    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.320875;0.327144;1" dur="8.46s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.320327;0.326376;1" dur="8.43s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
-  <g id="frame-44" visibility="hidden">
+  <g id="frame-45" visibility="hidden">
     <rect class="window-bg" x="0" y="0" width="600" height="300" fill="#1e1e1e" rx="20" ry="20"/>
 <rect x="1.5" y="1.5" width="597" height="297" fill="none" stroke="#ff5555" stroke-width="3" rx="20" ry="20"/>
 <g class="text-layer">
@@ -643,10 +687,10 @@
 <g class="cursor-layer">
 <rect class="cursor-active" x="156.8" y="76.8" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
-    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.327144;0.333057;1" dur="8.46s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.326376;0.332306;1" dur="8.43s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
-  <g id="frame-45" visibility="hidden">
+  <g id="frame-46" visibility="hidden">
     <rect class="window-bg" x="0" y="0" width="600" height="300" fill="#1e1e1e" rx="20" ry="20"/>
 <rect x="1.5" y="1.5" width="597" height="297" fill="none" stroke="#ff5555" stroke-width="3" rx="20" ry="20"/>
 <g class="text-layer">
@@ -659,10 +703,10 @@
 <g class="cursor-layer">
 <rect class="cursor-active" x="166.4" y="76.8" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
-    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.333057;0.339089;1" dur="8.46s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.332306;0.338472;1" dur="8.43s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
-  <g id="frame-46" visibility="hidden">
+  <g id="frame-47" visibility="hidden">
     <rect class="window-bg" x="0" y="0" width="600" height="300" fill="#1e1e1e" rx="20" ry="20"/>
 <rect x="1.5" y="1.5" width="597" height="297" fill="none" stroke="#ff5555" stroke-width="3" rx="20" ry="20"/>
 <g class="text-layer">
@@ -675,10 +719,10 @@
 <g class="cursor-layer">
 <rect class="cursor-active" x="176" y="76.8" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
-    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.339089;0.345121;1" dur="8.46s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.338472;0.344639;1" dur="8.43s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
-  <g id="frame-47" visibility="hidden">
+  <g id="frame-48" visibility="hidden">
     <rect class="window-bg" x="0" y="0" width="600" height="300" fill="#1e1e1e" rx="20" ry="20"/>
 <rect x="1.5" y="1.5" width="597" height="297" fill="none" stroke="#ff5555" stroke-width="3" rx="20" ry="20"/>
 <g class="text-layer">
@@ -691,23 +735,7 @@
 <g class="cursor-layer">
 <rect class="cursor-active" x="185.6" y="76.8" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
-    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.345121;0.351035;1" dur="8.46s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
-  </g>
-
-  <g id="frame-48" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="600" height="300" fill="#1e1e1e" rx="20" ry="20"/>
-<rect x="1.5" y="1.5" width="597" height="297" fill="none" stroke="#ff5555" stroke-width="3" rx="20" ry="20"/>
-<g class="text-layer">
-<text class="text f13" x="32" y="32">❯</text>
-<text class="text fg" x="41.6" y="32"> echo &apos;Testing border options&apos;</text>
-<text class="text fg" x="32" y="54.4">Testing border options</text>
-<text class="text f13" x="32" y="76.8">❯</text>
-<text class="text fg" x="41.6" y="76.8"> # BorderRadius:</text>
-</g>
-<g class="cursor-layer">
-<rect class="cursor-active" x="195.2" y="76.8" width="9.6" height="22.4" fill="#c9d1d9"/>
-</g>
-    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.351035;0.357067;1" dur="8.46s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.344639;0.350688;1" dur="8.43s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-49" visibility="hidden">
@@ -721,12 +749,28 @@
 <text class="text fg" x="41.6" y="76.8"> # BorderRadius:</text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor-active" x="204.8" y="76.8" width="9.6" height="22.4" fill="#c9d1d9"/>
+<rect class="cursor-active" x="195.2" y="76.8" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
-    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.357067;0.363217;1" dur="8.46s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.350688;0.356855;1" dur="8.43s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-50" visibility="hidden">
+    <rect class="window-bg" x="0" y="0" width="600" height="300" fill="#1e1e1e" rx="20" ry="20"/>
+<rect x="1.5" y="1.5" width="597" height="297" fill="none" stroke="#ff5555" stroke-width="3" rx="20" ry="20"/>
+<g class="text-layer">
+<text class="text f13" x="32" y="32">❯</text>
+<text class="text fg" x="41.6" y="32"> echo &apos;Testing border options&apos;</text>
+<text class="text fg" x="32" y="54.4">Testing border options</text>
+<text class="text f13" x="32" y="76.8">❯</text>
+<text class="text fg" x="41.6" y="76.8"> # BorderRadius:</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="204.8" y="76.8" width="9.6" height="22.4" fill="#c9d1d9"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.356855;0.362903;1" dur="8.43s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-51" visibility="hidden">
     <rect class="window-bg" x="0" y="0" width="600" height="300" fill="#1e1e1e" rx="20" ry="20"/>
 <rect x="1.5" y="1.5" width="597" height="297" fill="none" stroke="#ff5555" stroke-width="3" rx="20" ry="20"/>
 <g class="text-layer">
@@ -739,10 +783,10 @@
 <g class="cursor-layer">
 <rect class="cursor-active" x="214.4" y="76.8" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
-    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.363217;0.369131;1" dur="8.46s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.362903;0.36907;1" dur="8.43s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
-  <g id="frame-51" visibility="hidden">
+  <g id="frame-52" visibility="hidden">
     <rect class="window-bg" x="0" y="0" width="600" height="300" fill="#1e1e1e" rx="20" ry="20"/>
 <rect x="1.5" y="1.5" width="597" height="297" fill="none" stroke="#ff5555" stroke-width="3" rx="20" ry="20"/>
 <g class="text-layer">
@@ -755,23 +799,7 @@
 <g class="cursor-layer">
 <rect class="cursor-active" x="224" y="76.8" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
-    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.369131;0.375044;1" dur="8.46s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
-  </g>
-
-  <g id="frame-52" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="600" height="300" fill="#1e1e1e" rx="20" ry="20"/>
-<rect x="1.5" y="1.5" width="597" height="297" fill="none" stroke="#ff5555" stroke-width="3" rx="20" ry="20"/>
-<g class="text-layer">
-<text class="text f13" x="32" y="32">❯</text>
-<text class="text fg" x="41.6" y="32"> echo &apos;Testing border options&apos;</text>
-<text class="text fg" x="32" y="54.4">Testing border options</text>
-<text class="text f13" x="32" y="76.8">❯</text>
-<text class="text fg" x="41.6" y="76.8"> # BorderRadius: 20,</text>
-</g>
-<g class="cursor-layer">
-<rect class="cursor-active" x="233.6" y="76.8" width="9.6" height="22.4" fill="#c9d1d9"/>
-</g>
-    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.375044;0.381195;1" dur="8.46s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.36907;0.375;1" dur="8.43s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-53" visibility="hidden">
@@ -785,12 +813,28 @@
 <text class="text fg" x="41.6" y="76.8"> # BorderRadius: 20,</text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor-active" x="243.2" y="76.8" width="9.6" height="22.4" fill="#c9d1d9"/>
+<rect class="cursor-active" x="233.6" y="76.8" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
-    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.381195;0.38699;1" dur="8.46s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.375;0.38093;1" dur="8.43s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-54" visibility="hidden">
+    <rect class="window-bg" x="0" y="0" width="600" height="300" fill="#1e1e1e" rx="20" ry="20"/>
+<rect x="1.5" y="1.5" width="597" height="297" fill="none" stroke="#ff5555" stroke-width="3" rx="20" ry="20"/>
+<g class="text-layer">
+<text class="text f13" x="32" y="32">❯</text>
+<text class="text fg" x="41.6" y="32"> echo &apos;Testing border options&apos;</text>
+<text class="text fg" x="32" y="54.4">Testing border options</text>
+<text class="text f13" x="32" y="76.8">❯</text>
+<text class="text fg" x="41.6" y="76.8"> # BorderRadius: 20,</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="243.2" y="76.8" width="9.6" height="22.4" fill="#c9d1d9"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.38093;0.386978;1" dur="8.43s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-55" visibility="hidden">
     <rect class="window-bg" x="0" y="0" width="600" height="300" fill="#1e1e1e" rx="20" ry="20"/>
 <rect x="1.5" y="1.5" width="597" height="297" fill="none" stroke="#ff5555" stroke-width="3" rx="20" ry="20"/>
 <g class="text-layer">
@@ -803,10 +847,10 @@
 <g class="cursor-layer">
 <rect class="cursor-active" x="252.8" y="76.8" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
-    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.38699;0.392904;1" dur="8.46s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.386978;0.393145;1" dur="8.43s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
-  <g id="frame-55" visibility="hidden">
+  <g id="frame-56" visibility="hidden">
     <rect class="window-bg" x="0" y="0" width="600" height="300" fill="#1e1e1e" rx="20" ry="20"/>
 <rect x="1.5" y="1.5" width="597" height="297" fill="none" stroke="#ff5555" stroke-width="3" rx="20" ry="20"/>
 <g class="text-layer">
@@ -819,10 +863,10 @@
 <g class="cursor-layer">
 <rect class="cursor-active" x="262.4" y="76.8" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
-    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.392904;0.398936;1" dur="8.46s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.393145;0.399431;1" dur="8.43s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
-  <g id="frame-56" visibility="hidden">
+  <g id="frame-57" visibility="hidden">
     <rect class="window-bg" x="0" y="0" width="600" height="300" fill="#1e1e1e" rx="20" ry="20"/>
 <rect x="1.5" y="1.5" width="597" height="297" fill="none" stroke="#ff5555" stroke-width="3" rx="20" ry="20"/>
 <g class="text-layer">
@@ -835,10 +879,10 @@
 <g class="cursor-layer">
 <rect class="cursor-active" x="272" y="76.8" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
-    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.398936;0.405204;1" dur="8.46s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.399431;0.405479;1" dur="8.43s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
-  <g id="frame-57" visibility="hidden">
+  <g id="frame-58" visibility="hidden">
     <rect class="window-bg" x="0" y="0" width="600" height="300" fill="#1e1e1e" rx="20" ry="20"/>
 <rect x="1.5" y="1.5" width="597" height="297" fill="none" stroke="#ff5555" stroke-width="3" rx="20" ry="20"/>
 <g class="text-layer">
@@ -851,10 +895,10 @@
 <g class="cursor-layer">
 <rect class="cursor-active" x="281.6" y="76.8" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
-    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.405204;0.410999;1" dur="8.46s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.405479;0.411409;1" dur="8.43s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
-  <g id="frame-58" visibility="hidden">
+  <g id="frame-59" visibility="hidden">
     <rect class="window-bg" x="0" y="0" width="600" height="300" fill="#1e1e1e" rx="20" ry="20"/>
 <rect x="1.5" y="1.5" width="597" height="297" fill="none" stroke="#ff5555" stroke-width="3" rx="20" ry="20"/>
 <g class="text-layer">
@@ -867,10 +911,10 @@
 <g class="cursor-layer">
 <rect class="cursor-active" x="291.2" y="76.8" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
-    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.410999;0.417031;1" dur="8.46s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.411409;0.417339;1" dur="8.43s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
-  <g id="frame-59" visibility="hidden">
+  <g id="frame-60" visibility="hidden">
     <rect class="window-bg" x="0" y="0" width="600" height="300" fill="#1e1e1e" rx="20" ry="20"/>
 <rect x="1.5" y="1.5" width="597" height="297" fill="none" stroke="#ff5555" stroke-width="3" rx="20" ry="20"/>
 <g class="text-layer">
@@ -883,10 +927,10 @@
 <g class="cursor-layer">
 <rect class="cursor-active" x="300.8" y="76.8" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
-    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.417031;0.423182;1" dur="8.46s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.417339;0.423387;1" dur="8.43s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
-  <g id="frame-60" visibility="hidden">
+  <g id="frame-61" visibility="hidden">
     <rect class="window-bg" x="0" y="0" width="600" height="300" fill="#1e1e1e" rx="20" ry="20"/>
 <rect x="1.5" y="1.5" width="597" height="297" fill="none" stroke="#ff5555" stroke-width="3" rx="20" ry="20"/>
 <g class="text-layer">
@@ -899,10 +943,10 @@
 <g class="cursor-layer">
 <rect class="cursor-active" x="310.4" y="76.8" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
-    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.423182;0.429332;1" dur="8.46s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.423387;0.429435;1" dur="8.43s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
-  <g id="frame-61" visibility="hidden">
+  <g id="frame-62" visibility="hidden">
     <rect class="window-bg" x="0" y="0" width="600" height="300" fill="#1e1e1e" rx="20" ry="20"/>
 <rect x="1.5" y="1.5" width="597" height="297" fill="none" stroke="#ff5555" stroke-width="3" rx="20" ry="20"/>
 <g class="text-layer">
@@ -915,10 +959,10 @@
 <g class="cursor-layer">
 <rect class="cursor-active" x="320" y="76.8" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
-    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.429332;0.4356;1" dur="8.46s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.429435;0.435365;1" dur="8.43s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
-  <g id="frame-62" visibility="hidden">
+  <g id="frame-63" visibility="hidden">
     <rect class="window-bg" x="0" y="0" width="600" height="300" fill="#1e1e1e" rx="20" ry="20"/>
 <rect x="1.5" y="1.5" width="597" height="297" fill="none" stroke="#ff5555" stroke-width="3" rx="20" ry="20"/>
 <g class="text-layer">
@@ -931,10 +975,10 @@
 <g class="cursor-layer">
 <rect class="cursor-active" x="329.6" y="76.8" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
-    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.4356;0.44175;1" dur="8.46s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.435365;0.441532;1" dur="8.43s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
-  <g id="frame-63" visibility="hidden">
+  <g id="frame-64" visibility="hidden">
     <rect class="window-bg" x="0" y="0" width="600" height="300" fill="#1e1e1e" rx="20" ry="20"/>
 <rect x="1.5" y="1.5" width="597" height="297" fill="none" stroke="#ff5555" stroke-width="3" rx="20" ry="20"/>
 <g class="text-layer">
@@ -947,10 +991,10 @@
 <g class="cursor-layer">
 <rect class="cursor-active" x="339.2" y="76.8" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
-    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.44175;0.447782;1" dur="8.46s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.441532;0.447699;1" dur="8.43s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
-  <g id="frame-64" visibility="hidden">
+  <g id="frame-65" visibility="hidden">
     <rect class="window-bg" x="0" y="0" width="600" height="300" fill="#1e1e1e" rx="20" ry="20"/>
 <rect x="1.5" y="1.5" width="597" height="297" fill="none" stroke="#ff5555" stroke-width="3" rx="20" ry="20"/>
 <g class="text-layer">
@@ -963,23 +1007,7 @@
 <g class="cursor-layer">
 <rect class="cursor-active" x="348.8" y="76.8" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
-    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.447782;0.453933;1" dur="8.46s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
-  </g>
-
-  <g id="frame-65" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="600" height="300" fill="#1e1e1e" rx="20" ry="20"/>
-<rect x="1.5" y="1.5" width="597" height="297" fill="none" stroke="#ff5555" stroke-width="3" rx="20" ry="20"/>
-<g class="text-layer">
-<text class="text f13" x="32" y="32">❯</text>
-<text class="text fg" x="41.6" y="32"> echo &apos;Testing border options&apos;</text>
-<text class="text fg" x="32" y="54.4">Testing border options</text>
-<text class="text f13" x="32" y="76.8">❯</text>
-<text class="text fg" x="41.6" y="76.8"> # BorderRadius: 20, BorderWidth:</text>
-</g>
-<g class="cursor-layer">
-<rect class="cursor-active" x="358.4" y="76.8" width="9.6" height="22.4" fill="#c9d1d9"/>
-</g>
-    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.453933;0.460201;1" dur="8.46s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.447699;0.453629;1" dur="8.43s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-66" visibility="hidden">
@@ -993,9 +1021,9 @@
 <text class="text fg" x="41.6" y="76.8"> # BorderRadius: 20, BorderWidth:</text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor-active" x="368" y="76.8" width="9.6" height="22.4" fill="#c9d1d9"/>
+<rect class="cursor-active" x="358.4" y="76.8" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
-    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.460201;0.46647;1" dur="8.46s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.453629;0.459677;1" dur="8.43s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-67" visibility="hidden">
@@ -1006,12 +1034,12 @@
 <text class="text fg" x="41.6" y="32"> echo &apos;Testing border options&apos;</text>
 <text class="text fg" x="32" y="54.4">Testing border options</text>
 <text class="text f13" x="32" y="76.8">❯</text>
-<text class="text fg" x="41.6" y="76.8"> # BorderRadius: 20, BorderWidth: 3</text>
+<text class="text fg" x="41.6" y="76.8"> # BorderRadius: 20, BorderWidth:</text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor-active" x="377.6" y="76.8" width="9.6" height="22.4" fill="#c9d1d9"/>
+<rect class="cursor-active" x="368" y="76.8" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
-    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.46647;0.466115;1" dur="8.46s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.459677;0.465726;1" dur="8.43s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-68" visibility="hidden">
@@ -1025,9 +1053,9 @@
 <text class="text fg" x="41.6" y="76.8"> # BorderRadius: 20, BorderWidth: 3</text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor" x="377.6" y="76.8" width="9.6" height="22.4" fill="#c9d1d9"/>
+<rect class="cursor-active" x="377.6" y="76.8" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
-    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.466115;0.525488;1" dur="8.46s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+    <animate attributeName="visibility" values="hidden;visible;hidden" keyTimes="0;0.465726;1" dur="8.43s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-69" visibility="hidden">
@@ -1043,7 +1071,7 @@
 <g class="cursor-layer">
 <rect class="cursor" x="377.6" y="76.8" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
-    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.525488;0.537788;1" dur="8.46s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.465726;0.525261;1" dur="8.43s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-70" visibility="hidden">
@@ -1056,10 +1084,26 @@
 <text class="text f13" x="32" y="76.8">❯</text>
 <text class="text fg" x="41.6" y="76.8"> # BorderRadius: 20, BorderWidth: 3</text>
 </g>
-    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.537788;0.551153;1" dur="8.46s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+<g class="cursor-layer">
+<rect class="cursor" x="377.6" y="76.8" width="9.6" height="22.4" fill="#c9d1d9"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.525261;0.537358;1" dur="8.43s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-71" visibility="hidden">
+    <rect class="window-bg" x="0" y="0" width="600" height="300" fill="#1e1e1e" rx="20" ry="20"/>
+<rect x="1.5" y="1.5" width="597" height="297" fill="none" stroke="#ff5555" stroke-width="3" rx="20" ry="20"/>
+<g class="text-layer">
+<text class="text f13" x="32" y="32">❯</text>
+<text class="text fg" x="41.6" y="32"> echo &apos;Testing border options&apos;</text>
+<text class="text fg" x="32" y="54.4">Testing border options</text>
+<text class="text f13" x="32" y="76.8">❯</text>
+<text class="text fg" x="41.6" y="76.8"> # BorderRadius: 20, BorderWidth: 3</text>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.537358;0.550047;1" dur="8.43s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-72" visibility="hidden">
     <rect class="window-bg" x="0" y="0" width="600" height="300" fill="#1e1e1e" rx="20" ry="20"/>
 <rect x="1.5" y="1.5" width="597" height="297" fill="none" stroke="#ff5555" stroke-width="3" rx="20" ry="20"/>
 <g class="text-layer">
@@ -1073,25 +1117,7 @@
 <g class="cursor-layer">
 <rect class="cursor" x="51.2" y="121.6" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
-    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.551153;0.557658;1" dur="8.46s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
-  </g>
-
-  <g id="frame-72" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="600" height="300" fill="#1e1e1e" rx="20" ry="20"/>
-<rect x="1.5" y="1.5" width="597" height="297" fill="none" stroke="#ff5555" stroke-width="3" rx="20" ry="20"/>
-<g class="text-layer">
-<text class="text f13" x="32" y="32">❯</text>
-<text class="text fg" x="41.6" y="32"> echo &apos;Testing border options&apos;</text>
-<text class="text fg" x="32" y="54.4">Testing border options</text>
-<text class="text f13" x="32" y="76.8">❯</text>
-<text class="text fg" x="41.6" y="76.8"> # BorderRadius: 20, BorderWidth: 3</text>
-<text class="text f13" x="32" y="121.6">❯</text>
-<text class="text fg" x="41.6" y="121.6"> #</text>
-</g>
-<g class="cursor-layer">
-<rect class="cursor-active" x="60.8" y="121.6" width="9.6" height="22.4" fill="#c9d1d9"/>
-</g>
-    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.557658;0.56369;1" dur="8.46s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.550047;0.556333;1" dur="8.43s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-73" visibility="hidden">
@@ -1107,12 +1133,30 @@
 <text class="text fg" x="41.6" y="121.6"> #</text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor-active" x="70.4" y="121.6" width="9.6" height="22.4" fill="#c9d1d9"/>
+<rect class="cursor-active" x="60.8" y="121.6" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
-    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.56369;0.569604;1" dur="8.46s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.556333;0.5625;1" dur="8.43s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-74" visibility="hidden">
+    <rect class="window-bg" x="0" y="0" width="600" height="300" fill="#1e1e1e" rx="20" ry="20"/>
+<rect x="1.5" y="1.5" width="597" height="297" fill="none" stroke="#ff5555" stroke-width="3" rx="20" ry="20"/>
+<g class="text-layer">
+<text class="text f13" x="32" y="32">❯</text>
+<text class="text fg" x="41.6" y="32"> echo &apos;Testing border options&apos;</text>
+<text class="text fg" x="32" y="54.4">Testing border options</text>
+<text class="text f13" x="32" y="76.8">❯</text>
+<text class="text fg" x="41.6" y="76.8"> # BorderRadius: 20, BorderWidth: 3</text>
+<text class="text f13" x="32" y="121.6">❯</text>
+<text class="text fg" x="41.6" y="121.6"> #</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="70.4" y="121.6" width="9.6" height="22.4" fill="#c9d1d9"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.5625;0.56843;1" dur="8.43s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-75" visibility="hidden">
     <rect class="window-bg" x="0" y="0" width="600" height="300" fill="#1e1e1e" rx="20" ry="20"/>
 <rect x="1.5" y="1.5" width="597" height="297" fill="none" stroke="#ff5555" stroke-width="3" rx="20" ry="20"/>
 <g class="text-layer">
@@ -1127,10 +1171,10 @@
 <g class="cursor-layer">
 <rect class="cursor-active" x="80" y="121.6" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
-    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.569604;0.575636;1" dur="8.46s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.56843;0.574834;1" dur="8.43s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
-  <g id="frame-75" visibility="hidden">
+  <g id="frame-76" visibility="hidden">
     <rect class="window-bg" x="0" y="0" width="600" height="300" fill="#1e1e1e" rx="20" ry="20"/>
 <rect x="1.5" y="1.5" width="597" height="297" fill="none" stroke="#ff5555" stroke-width="3" rx="20" ry="20"/>
 <g class="text-layer">
@@ -1145,10 +1189,10 @@
 <g class="cursor-layer">
 <rect class="cursor-active" x="89.6" y="121.6" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
-    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.575636;0.581904;1" dur="8.46s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.574834;0.580645;1" dur="8.43s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
-  <g id="frame-76" visibility="hidden">
+  <g id="frame-77" visibility="hidden">
     <rect class="window-bg" x="0" y="0" width="600" height="300" fill="#1e1e1e" rx="20" ry="20"/>
 <rect x="1.5" y="1.5" width="597" height="297" fill="none" stroke="#ff5555" stroke-width="3" rx="20" ry="20"/>
 <g class="text-layer">
@@ -1163,10 +1207,10 @@
 <g class="cursor-layer">
 <rect class="cursor-active" x="99.2" y="121.6" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
-    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.581904;0.587818;1" dur="8.46s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.580645;0.587049;1" dur="8.43s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
-  <g id="frame-77" visibility="hidden">
+  <g id="frame-78" visibility="hidden">
     <rect class="window-bg" x="0" y="0" width="600" height="300" fill="#1e1e1e" rx="20" ry="20"/>
 <rect x="1.5" y="1.5" width="597" height="297" fill="none" stroke="#ff5555" stroke-width="3" rx="20" ry="20"/>
 <g class="text-layer">
@@ -1181,10 +1225,10 @@
 <g class="cursor-layer">
 <rect class="cursor-active" x="108.8" y="121.6" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
-    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.587818;0.593968;1" dur="8.46s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.587049;0.592979;1" dur="8.43s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
-  <g id="frame-78" visibility="hidden">
+  <g id="frame-79" visibility="hidden">
     <rect class="window-bg" x="0" y="0" width="600" height="300" fill="#1e1e1e" rx="20" ry="20"/>
 <rect x="1.5" y="1.5" width="597" height="297" fill="none" stroke="#ff5555" stroke-width="3" rx="20" ry="20"/>
 <g class="text-layer">
@@ -1199,10 +1243,10 @@
 <g class="cursor-layer">
 <rect class="cursor-active" x="118.4" y="121.6" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
-    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.593968;0.599763;1" dur="8.46s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.592979;0.59879;1" dur="8.43s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
-  <g id="frame-79" visibility="hidden">
+  <g id="frame-80" visibility="hidden">
     <rect class="window-bg" x="0" y="0" width="600" height="300" fill="#1e1e1e" rx="20" ry="20"/>
 <rect x="1.5" y="1.5" width="597" height="297" fill="none" stroke="#ff5555" stroke-width="3" rx="20" ry="20"/>
 <g class="text-layer">
@@ -1217,10 +1261,10 @@
 <g class="cursor-layer">
 <rect class="cursor-active" x="128" y="121.6" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
-    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.599763;0.605795;1" dur="8.46s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.59879;0.605194;1" dur="8.43s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
-  <g id="frame-80" visibility="hidden">
+  <g id="frame-81" visibility="hidden">
     <rect class="window-bg" x="0" y="0" width="600" height="300" fill="#1e1e1e" rx="20" ry="20"/>
 <rect x="1.5" y="1.5" width="597" height="297" fill="none" stroke="#ff5555" stroke-width="3" rx="20" ry="20"/>
 <g class="text-layer">
@@ -1235,10 +1279,10 @@
 <g class="cursor-layer">
 <rect class="cursor-active" x="137.6" y="121.6" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
-    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.605795;0.611827;1" dur="8.46s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.605194;0.611006;1" dur="8.43s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
-  <g id="frame-81" visibility="hidden">
+  <g id="frame-82" visibility="hidden">
     <rect class="window-bg" x="0" y="0" width="600" height="300" fill="#1e1e1e" rx="20" ry="20"/>
 <rect x="1.5" y="1.5" width="597" height="297" fill="none" stroke="#ff5555" stroke-width="3" rx="20" ry="20"/>
 <g class="text-layer">
@@ -1253,10 +1297,10 @@
 <g class="cursor-layer">
 <rect class="cursor-active" x="147.2" y="121.6" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
-    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.611827;0.617859;1" dur="8.46s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.611006;0.617054;1" dur="8.43s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
-  <g id="frame-82" visibility="hidden">
+  <g id="frame-83" visibility="hidden">
     <rect class="window-bg" x="0" y="0" width="600" height="300" fill="#1e1e1e" rx="20" ry="20"/>
 <rect x="1.5" y="1.5" width="597" height="297" fill="none" stroke="#ff5555" stroke-width="3" rx="20" ry="20"/>
 <g class="text-layer">
@@ -1271,10 +1315,10 @@
 <g class="cursor-layer">
 <rect class="cursor-active" x="156.8" y="121.6" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
-    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.617859;0.623891;1" dur="8.46s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.617054;0.623102;1" dur="8.43s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
-  <g id="frame-83" visibility="hidden">
+  <g id="frame-84" visibility="hidden">
     <rect class="window-bg" x="0" y="0" width="600" height="300" fill="#1e1e1e" rx="20" ry="20"/>
 <rect x="1.5" y="1.5" width="597" height="297" fill="none" stroke="#ff5555" stroke-width="3" rx="20" ry="20"/>
 <g class="text-layer">
@@ -1289,10 +1333,10 @@
 <g class="cursor-layer">
 <rect class="cursor-active" x="166.4" y="121.6" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
-    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.623891;0.630041;1" dur="8.46s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.623102;0.629032;1" dur="8.43s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
-  <g id="frame-84" visibility="hidden">
+  <g id="frame-85" visibility="hidden">
     <rect class="window-bg" x="0" y="0" width="600" height="300" fill="#1e1e1e" rx="20" ry="20"/>
 <rect x="1.5" y="1.5" width="597" height="297" fill="none" stroke="#ff5555" stroke-width="3" rx="20" ry="20"/>
 <g class="text-layer">
@@ -1307,25 +1351,7 @@
 <g class="cursor-layer">
 <rect class="cursor-active" x="176" y="121.6" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
-    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.630041;0.635955;1" dur="8.46s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
-  </g>
-
-  <g id="frame-85" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="600" height="300" fill="#1e1e1e" rx="20" ry="20"/>
-<rect x="1.5" y="1.5" width="597" height="297" fill="none" stroke="#ff5555" stroke-width="3" rx="20" ry="20"/>
-<g class="text-layer">
-<text class="text f13" x="32" y="32">❯</text>
-<text class="text fg" x="41.6" y="32"> echo &apos;Testing border options&apos;</text>
-<text class="text fg" x="32" y="54.4">Testing border options</text>
-<text class="text f13" x="32" y="76.8">❯</text>
-<text class="text fg" x="41.6" y="76.8"> # BorderRadius: 20, BorderWidth: 3</text>
-<text class="text f13" x="32" y="121.6">❯</text>
-<text class="text fg" x="41.6" y="121.6"> # BorderColor:</text>
-</g>
-<g class="cursor-layer">
-<rect class="cursor-active" x="185.6" y="121.6" width="9.6" height="22.4" fill="#c9d1d9"/>
-</g>
-    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.635955;0.642105;1" dur="8.46s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.629032;0.635081;1" dur="8.43s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-86" visibility="hidden">
@@ -1341,12 +1367,30 @@
 <text class="text fg" x="41.6" y="121.6"> # BorderColor:</text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor-active" x="195.2" y="121.6" width="9.6" height="22.4" fill="#c9d1d9"/>
+<rect class="cursor-active" x="185.6" y="121.6" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
-    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.642105;0.647901;1" dur="8.46s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.635081;0.641248;1" dur="8.43s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-87" visibility="hidden">
+    <rect class="window-bg" x="0" y="0" width="600" height="300" fill="#1e1e1e" rx="20" ry="20"/>
+<rect x="1.5" y="1.5" width="597" height="297" fill="none" stroke="#ff5555" stroke-width="3" rx="20" ry="20"/>
+<g class="text-layer">
+<text class="text f13" x="32" y="32">❯</text>
+<text class="text fg" x="41.6" y="32"> echo &apos;Testing border options&apos;</text>
+<text class="text fg" x="32" y="54.4">Testing border options</text>
+<text class="text f13" x="32" y="76.8">❯</text>
+<text class="text fg" x="41.6" y="76.8"> # BorderRadius: 20, BorderWidth: 3</text>
+<text class="text f13" x="32" y="121.6">❯</text>
+<text class="text fg" x="41.6" y="121.6"> # BorderColor:</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="195.2" y="121.6" width="9.6" height="22.4" fill="#c9d1d9"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.641248;0.647177;1" dur="8.43s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-88" visibility="hidden">
     <rect class="window-bg" x="0" y="0" width="600" height="300" fill="#1e1e1e" rx="20" ry="20"/>
 <rect x="1.5" y="1.5" width="597" height="297" fill="none" stroke="#ff5555" stroke-width="3" rx="20" ry="20"/>
 <g class="text-layer">
@@ -1361,10 +1405,10 @@
 <g class="cursor-layer">
 <rect class="cursor-active" x="204.8" y="121.6" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
-    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.647901;0.653933;1" dur="8.46s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.647177;0.653344;1" dur="8.43s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
-  <g id="frame-88" visibility="hidden">
+  <g id="frame-89" visibility="hidden">
     <rect class="window-bg" x="0" y="0" width="600" height="300" fill="#1e1e1e" rx="20" ry="20"/>
 <rect x="1.5" y="1.5" width="597" height="297" fill="none" stroke="#ff5555" stroke-width="3" rx="20" ry="20"/>
 <g class="text-layer">
@@ -1379,10 +1423,10 @@
 <g class="cursor-layer">
 <rect class="cursor-active" x="214.4" y="121.6" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
-    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.653933;0.660319;1" dur="8.46s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.653344;0.659037;1" dur="8.43s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
-  <g id="frame-89" visibility="hidden">
+  <g id="frame-90" visibility="hidden">
     <rect class="window-bg" x="0" y="0" width="600" height="300" fill="#1e1e1e" rx="20" ry="20"/>
 <rect x="1.5" y="1.5" width="597" height="297" fill="none" stroke="#ff5555" stroke-width="3" rx="20" ry="20"/>
 <g class="text-layer">
@@ -1397,10 +1441,10 @@
 <g class="cursor-layer">
 <rect class="cursor-active" x="224" y="121.6" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
-    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.660319;0.66647;1" dur="8.46s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.659037;0.665204;1" dur="8.43s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
-  <g id="frame-90" visibility="hidden">
+  <g id="frame-91" visibility="hidden">
     <rect class="window-bg" x="0" y="0" width="600" height="300" fill="#1e1e1e" rx="20" ry="20"/>
 <rect x="1.5" y="1.5" width="597" height="297" fill="none" stroke="#ff5555" stroke-width="3" rx="20" ry="20"/>
 <g class="text-layer">
@@ -1415,10 +1459,10 @@
 <g class="cursor-layer">
 <rect class="cursor-active" x="233.6" y="121.6" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
-    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.66647;0.672383;1" dur="8.46s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.665204;0.671371;1" dur="8.43s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
-  <g id="frame-91" visibility="hidden">
+  <g id="frame-92" visibility="hidden">
     <rect class="window-bg" x="0" y="0" width="600" height="300" fill="#1e1e1e" rx="20" ry="20"/>
 <rect x="1.5" y="1.5" width="597" height="297" fill="none" stroke="#ff5555" stroke-width="3" rx="20" ry="20"/>
 <g class="text-layer">
@@ -1433,10 +1477,10 @@
 <g class="cursor-layer">
 <rect class="cursor-active" x="243.2" y="121.6" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
-    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.672383;0.678415;1" dur="8.46s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.671371;0.677301;1" dur="8.43s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
-  <g id="frame-92" visibility="hidden">
+  <g id="frame-93" visibility="hidden">
     <rect class="window-bg" x="0" y="0" width="600" height="300" fill="#1e1e1e" rx="20" ry="20"/>
 <rect x="1.5" y="1.5" width="597" height="297" fill="none" stroke="#ff5555" stroke-width="3" rx="20" ry="20"/>
 <g class="text-layer">
@@ -1451,10 +1495,10 @@
 <g class="cursor-layer">
 <rect class="cursor-active" x="252.8" y="121.6" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
-    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.678415;0.684447;1" dur="8.46s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.677301;0.683112;1" dur="8.43s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
-  <g id="frame-93" visibility="hidden">
+  <g id="frame-94" visibility="hidden">
     <rect class="window-bg" x="0" y="0" width="600" height="300" fill="#1e1e1e" rx="20" ry="20"/>
 <rect x="1.5" y="1.5" width="597" height="297" fill="none" stroke="#ff5555" stroke-width="3" rx="20" ry="20"/>
 <g class="text-layer">
@@ -1469,25 +1513,7 @@
 <g class="cursor-layer">
 <rect class="cursor-active" x="262.4" y="121.6" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
-    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.684447;0.690361;1" dur="8.46s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
-  </g>
-
-  <g id="frame-94" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="600" height="300" fill="#1e1e1e" rx="20" ry="20"/>
-<rect x="1.5" y="1.5" width="597" height="297" fill="none" stroke="#ff5555" stroke-width="3" rx="20" ry="20"/>
-<g class="text-layer">
-<text class="text f13" x="32" y="32">❯</text>
-<text class="text fg" x="41.6" y="32"> echo &apos;Testing border options&apos;</text>
-<text class="text fg" x="32" y="54.4">Testing border options</text>
-<text class="text f13" x="32" y="76.8">❯</text>
-<text class="text fg" x="41.6" y="76.8"> # BorderRadius: 20, BorderWidth: 3</text>
-<text class="text f13" x="32" y="121.6">❯</text>
-<text class="text fg" x="41.6" y="121.6"> # BorderColor: #ff5555,</text>
-</g>
-<g class="cursor-layer">
-<rect class="cursor-active" x="272" y="121.6" width="9.6" height="22.4" fill="#c9d1d9"/>
-</g>
-    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.690361;0.696393;1" dur="8.46s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.683112;0.689279;1" dur="8.43s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-95" visibility="hidden">
@@ -1503,12 +1529,30 @@
 <text class="text fg" x="41.6" y="121.6"> # BorderColor: #ff5555,</text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor-active" x="281.6" y="121.6" width="9.6" height="22.4" fill="#c9d1d9"/>
+<rect class="cursor-active" x="272" y="121.6" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
-    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.696393;0.702425;1" dur="8.46s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.689279;0.695327;1" dur="8.43s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-96" visibility="hidden">
+    <rect class="window-bg" x="0" y="0" width="600" height="300" fill="#1e1e1e" rx="20" ry="20"/>
+<rect x="1.5" y="1.5" width="597" height="297" fill="none" stroke="#ff5555" stroke-width="3" rx="20" ry="20"/>
+<g class="text-layer">
+<text class="text f13" x="32" y="32">❯</text>
+<text class="text fg" x="41.6" y="32"> echo &apos;Testing border options&apos;</text>
+<text class="text fg" x="32" y="54.4">Testing border options</text>
+<text class="text f13" x="32" y="76.8">❯</text>
+<text class="text fg" x="41.6" y="76.8"> # BorderRadius: 20, BorderWidth: 3</text>
+<text class="text f13" x="32" y="121.6">❯</text>
+<text class="text fg" x="41.6" y="121.6"> # BorderColor: #ff5555,</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="281.6" y="121.6" width="9.6" height="22.4" fill="#c9d1d9"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.695327;0.701494;1" dur="8.43s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-97" visibility="hidden">
     <rect class="window-bg" x="0" y="0" width="600" height="300" fill="#1e1e1e" rx="20" ry="20"/>
 <rect x="1.5" y="1.5" width="597" height="297" fill="none" stroke="#ff5555" stroke-width="3" rx="20" ry="20"/>
 <g class="text-layer">
@@ -1523,10 +1567,10 @@
 <g class="cursor-layer">
 <rect class="cursor-active" x="291.2" y="121.6" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
-    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.702425;0.708338;1" dur="8.46s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.701494;0.707424;1" dur="8.43s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
-  <g id="frame-97" visibility="hidden">
+  <g id="frame-98" visibility="hidden">
     <rect class="window-bg" x="0" y="0" width="600" height="300" fill="#1e1e1e" rx="20" ry="20"/>
 <rect x="1.5" y="1.5" width="597" height="297" fill="none" stroke="#ff5555" stroke-width="3" rx="20" ry="20"/>
 <g class="text-layer">
@@ -1541,10 +1585,10 @@
 <g class="cursor-layer">
 <rect class="cursor-active" x="300.8" y="121.6" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
-    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.708338;0.714607;1" dur="8.46s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.707424;0.713472;1" dur="8.43s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
-  <g id="frame-98" visibility="hidden">
+  <g id="frame-99" visibility="hidden">
     <rect class="window-bg" x="0" y="0" width="600" height="300" fill="#1e1e1e" rx="20" ry="20"/>
 <rect x="1.5" y="1.5" width="597" height="297" fill="none" stroke="#ff5555" stroke-width="3" rx="20" ry="20"/>
 <g class="text-layer">
@@ -1559,10 +1603,10 @@
 <g class="cursor-layer">
 <rect class="cursor-active" x="310.4" y="121.6" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
-    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.714607;0.720639;1" dur="8.46s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.713472;0.719639;1" dur="8.43s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
-  <g id="frame-99" visibility="hidden">
+  <g id="frame-100" visibility="hidden">
     <rect class="window-bg" x="0" y="0" width="600" height="300" fill="#1e1e1e" rx="20" ry="20"/>
 <rect x="1.5" y="1.5" width="597" height="297" fill="none" stroke="#ff5555" stroke-width="3" rx="20" ry="20"/>
 <g class="text-layer">
@@ -1577,10 +1621,10 @@
 <g class="cursor-layer">
 <rect class="cursor-active" x="320" y="121.6" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
-    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.720639;0.726907;1" dur="8.46s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.719639;0.725806;1" dur="8.43s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
-  <g id="frame-100" visibility="hidden">
+  <g id="frame-101" visibility="hidden">
     <rect class="window-bg" x="0" y="0" width="600" height="300" fill="#1e1e1e" rx="20" ry="20"/>
 <rect x="1.5" y="1.5" width="597" height="297" fill="none" stroke="#ff5555" stroke-width="3" rx="20" ry="20"/>
 <g class="text-layer">
@@ -1595,10 +1639,10 @@
 <g class="cursor-layer">
 <rect class="cursor-active" x="329.6" y="121.6" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
-    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.726907;0.732703;1" dur="8.46s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.725806;0.731855;1" dur="8.43s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
-  <g id="frame-101" visibility="hidden">
+  <g id="frame-102" visibility="hidden">
     <rect class="window-bg" x="0" y="0" width="600" height="300" fill="#1e1e1e" rx="20" ry="20"/>
 <rect x="1.5" y="1.5" width="597" height="297" fill="none" stroke="#ff5555" stroke-width="3" rx="20" ry="20"/>
 <g class="text-layer">
@@ -1613,10 +1657,10 @@
 <g class="cursor-layer">
 <rect class="cursor-active" x="339.2" y="121.6" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
-    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.732703;0.738734;1" dur="8.46s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.731855;0.738259;1" dur="8.43s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
-  <g id="frame-102" visibility="hidden">
+  <g id="frame-103" visibility="hidden">
     <rect class="window-bg" x="0" y="0" width="600" height="300" fill="#1e1e1e" rx="20" ry="20"/>
 <rect x="1.5" y="1.5" width="597" height="297" fill="none" stroke="#ff5555" stroke-width="3" rx="20" ry="20"/>
 <g class="text-layer">
@@ -1631,25 +1675,7 @@
 <g class="cursor-layer">
 <rect class="cursor-active" x="348.8" y="121.6" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
-    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.738734;0.744766;1" dur="8.46s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
-  </g>
-
-  <g id="frame-103" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="600" height="300" fill="#1e1e1e" rx="20" ry="20"/>
-<rect x="1.5" y="1.5" width="597" height="297" fill="none" stroke="#ff5555" stroke-width="3" rx="20" ry="20"/>
-<g class="text-layer">
-<text class="text f13" x="32" y="32">❯</text>
-<text class="text fg" x="41.6" y="32"> echo &apos;Testing border options&apos;</text>
-<text class="text fg" x="32" y="54.4">Testing border options</text>
-<text class="text f13" x="32" y="76.8">❯</text>
-<text class="text fg" x="41.6" y="76.8"> # BorderRadius: 20, BorderWidth: 3</text>
-<text class="text f13" x="32" y="121.6">❯</text>
-<text class="text fg" x="41.6" y="121.6"> # BorderColor: #ff5555, Padding:</text>
-</g>
-<g class="cursor-layer">
-<rect class="cursor-active" x="358.4" y="121.6" width="9.6" height="22.4" fill="#c9d1d9"/>
-</g>
-    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.744766;0.750798;1" dur="8.46s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.738259;0.744189;1" dur="8.43s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-104" visibility="hidden">
@@ -1665,12 +1691,30 @@
 <text class="text fg" x="41.6" y="121.6"> # BorderColor: #ff5555, Padding:</text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor-active" x="368" y="121.6" width="9.6" height="22.4" fill="#c9d1d9"/>
+<rect class="cursor-active" x="358.4" y="121.6" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
-    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.750798;0.756712;1" dur="8.46s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.744189;0.749881;1" dur="8.43s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-105" visibility="hidden">
+    <rect class="window-bg" x="0" y="0" width="600" height="300" fill="#1e1e1e" rx="20" ry="20"/>
+<rect x="1.5" y="1.5" width="597" height="297" fill="none" stroke="#ff5555" stroke-width="3" rx="20" ry="20"/>
+<g class="text-layer">
+<text class="text f13" x="32" y="32">❯</text>
+<text class="text fg" x="41.6" y="32"> echo &apos;Testing border options&apos;</text>
+<text class="text fg" x="32" y="54.4">Testing border options</text>
+<text class="text f13" x="32" y="76.8">❯</text>
+<text class="text fg" x="41.6" y="76.8"> # BorderRadius: 20, BorderWidth: 3</text>
+<text class="text f13" x="32" y="121.6">❯</text>
+<text class="text fg" x="41.6" y="121.6"> # BorderColor: #ff5555, Padding:</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="368" y="121.6" width="9.6" height="22.4" fill="#c9d1d9"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.749881;0.756048;1" dur="8.43s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-106" visibility="hidden">
     <rect class="window-bg" x="0" y="0" width="600" height="300" fill="#1e1e1e" rx="20" ry="20"/>
 <rect x="1.5" y="1.5" width="597" height="297" fill="none" stroke="#ff5555" stroke-width="3" rx="20" ry="20"/>
 <g class="text-layer">
@@ -1685,25 +1729,7 @@
 <g class="cursor-layer">
 <rect class="cursor-active" x="377.6" y="121.6" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
-    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.756712;0.762862;1" dur="8.46s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
-  </g>
-
-  <g id="frame-106" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="600" height="300" fill="#1e1e1e" rx="20" ry="20"/>
-<rect x="1.5" y="1.5" width="597" height="297" fill="none" stroke="#ff5555" stroke-width="3" rx="20" ry="20"/>
-<g class="text-layer">
-<text class="text f13" x="32" y="32">❯</text>
-<text class="text fg" x="41.6" y="32"> echo &apos;Testing border options&apos;</text>
-<text class="text fg" x="32" y="54.4">Testing border options</text>
-<text class="text f13" x="32" y="76.8">❯</text>
-<text class="text fg" x="41.6" y="76.8"> # BorderRadius: 20, BorderWidth: 3</text>
-<text class="text f13" x="32" y="121.6">❯</text>
-<text class="text fg" x="41.6" y="121.6"> # BorderColor: #ff5555, Padding: 32</text>
-</g>
-<g class="cursor-layer">
-<rect class="cursor-active" x="387.2" y="121.6" width="9.6" height="22.4" fill="#c9d1d9"/>
-</g>
-    <animate attributeName="visibility" values="hidden;visible;hidden" keyTimes="0;0.762862;1" dur="8.46s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.756048;0.762215;1" dur="8.43s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-107" visibility="hidden">
@@ -1719,9 +1745,9 @@
 <text class="text fg" x="41.6" y="121.6"> # BorderColor: #ff5555, Padding: 32</text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor" x="387.2" y="121.6" width="9.6" height="22.4" fill="#c9d1d9"/>
+<rect class="cursor-active" x="387.2" y="121.6" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
-    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.762862;0.88149;1" dur="8.46s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+    <animate attributeName="visibility" values="hidden;visible;hidden" keyTimes="0;0.762215;1" dur="8.43s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-108" visibility="hidden">
@@ -1739,7 +1765,7 @@
 <g class="cursor-layer">
 <rect class="cursor" x="387.2" y="121.6" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
-    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.88149;0.881727;1" dur="8.46s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.762215;0.881167;1" dur="8.43s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-109" visibility="hidden">
@@ -1757,7 +1783,25 @@
 <g class="cursor-layer">
 <rect class="cursor" x="387.2" y="121.6" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
-    <animate attributeName="visibility" values="hidden;visible;visible" keyTimes="0;0.881727;1" dur="8.46s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.881167;0.881404;1" dur="8.43s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-110" visibility="hidden">
+    <rect class="window-bg" x="0" y="0" width="600" height="300" fill="#1e1e1e" rx="20" ry="20"/>
+<rect x="1.5" y="1.5" width="597" height="297" fill="none" stroke="#ff5555" stroke-width="3" rx="20" ry="20"/>
+<g class="text-layer">
+<text class="text f13" x="32" y="32">❯</text>
+<text class="text fg" x="41.6" y="32"> echo &apos;Testing border options&apos;</text>
+<text class="text fg" x="32" y="54.4">Testing border options</text>
+<text class="text f13" x="32" y="76.8">❯</text>
+<text class="text fg" x="41.6" y="76.8"> # BorderRadius: 20, BorderWidth: 3</text>
+<text class="text f13" x="32" y="121.6">❯</text>
+<text class="text fg" x="41.6" y="121.6"> # BorderColor: #ff5555, Padding: 32</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor" x="387.2" y="121.6" width="9.6" height="22.4" fill="#c9d1d9"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;visible" keyTimes="0;0.881404;1" dur="8.43s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
   </g>
 </svg>

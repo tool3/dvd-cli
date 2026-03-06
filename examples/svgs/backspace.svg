@@ -14,7 +14,40 @@
 .uline { text-decoration: underline; }
 .strike { text-decoration: line-through; }
 .dim { opacity: 0.5; }
+.fg { fill: #c9d1d9; }
+.f0 { fill: #484f58; }
+.f1 { fill: #ff7b72; }
 .f2 { fill: #3fb950; }
+.f3 { fill: #d29922; }
+.f4 { fill: #58a6ff; }
+.f5 { fill: #bc8cff; }
+.f6 { fill: #39c5cf; }
+.f7 { fill: #b1bac4; }
+.f8 { fill: #6e7681; }
+.f9 { fill: #ffa198; }
+.f10 { fill: #56d364; }
+.f11 { fill: #e3b341; }
+.f12 { fill: #79c0ff; }
+.f13 { fill: #d2a8ff; }
+.f14 { fill: #56d4dd; }
+.f15 { fill: #f0f6fc; }
+.bg { fill: #0d1117; }
+.b0 { fill: #484f58; }
+.b1 { fill: #ff7b72; }
+.b2 { fill: #3fb950; }
+.b3 { fill: #d29922; }
+.b4 { fill: #58a6ff; }
+.b5 { fill: #bc8cff; }
+.b6 { fill: #39c5cf; }
+.b7 { fill: #b1bac4; }
+.b8 { fill: #6e7681; }
+.b9 { fill: #ffa198; }
+.b10 { fill: #56d364; }
+.b11 { fill: #e3b341; }
+.b12 { fill: #79c0ff; }
+.b13 { fill: #d2a8ff; }
+.b14 { fill: #56d4dd; }
+.b15 { fill: #f0f6fc; }
 .cursor { animation: blink 1s step-end infinite; }
 @keyframes blink {
   0%, 50% { opacity: 1; }
@@ -44,7 +77,7 @@
 <rect class="cursor" x="35.2" y="56" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
 <text class="text dim" x="400" y="142.8" text-anchor="end" fill="#c9d1d9">by talhayut</text>
-    <animate attributeName="visibility" values="visible;hidden;hidden" keyTimes="0;0.012043;1" dur="4.48s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+    <animate attributeName="visibility" values="visible;hidden;hidden" keyTimes="0;0.012209;1" dur="4.42s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-1" visibility="hidden">
@@ -62,7 +95,7 @@
 <rect class="cursor-active" x="44.8" y="56" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
 <text class="text dim" x="400" y="142.8" text-anchor="end" fill="#c9d1d9">by talhayut</text>
-    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.012043;0.023417;1" dur="4.48s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.012209;0.02374;1" dur="4.42s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-2" visibility="hidden">
@@ -80,7 +113,7 @@
 <rect class="cursor-active" x="54.4" y="56" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
 <text class="text dim" x="400" y="142.8" text-anchor="end" fill="#c9d1d9">by talhayut</text>
-    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.023417;0.035013;1" dur="4.48s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.02374;0.03527;1" dur="4.42s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-3" visibility="hidden">
@@ -98,7 +131,7 @@
 <rect class="cursor-active" x="64" y="56" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
 <text class="text dim" x="400" y="142.8" text-anchor="end" fill="#c9d1d9">by talhayut</text>
-    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.035013;0.046833;1" dur="4.48s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.03527;0.046801;1" dur="4.42s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-4" visibility="hidden">
@@ -116,7 +149,7 @@
 <rect class="cursor-active" x="73.6" y="56" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
 <text class="text dim" x="400" y="142.8" text-anchor="end" fill="#c9d1d9">by talhayut</text>
-    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.046833;0.05843;1" dur="4.48s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.046801;0.058558;1" dur="4.42s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-5" visibility="hidden">
@@ -134,7 +167,7 @@
 <rect class="cursor-active" x="83.2" y="56" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
 <text class="text dim" x="400" y="142.8" text-anchor="end" fill="#c9d1d9">by talhayut</text>
-    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.05843;0.070027;1" dur="4.48s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.058558;0.07054;1" dur="4.42s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-6" visibility="hidden">
@@ -152,7 +185,7 @@
 <rect class="cursor-active" x="92.8" y="56" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
 <text class="text dim" x="400" y="142.8" text-anchor="end" fill="#c9d1d9">by talhayut</text>
-    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.070027;0.081401;1" dur="4.48s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.07054;0.081619;1" dur="4.42s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-7" visibility="hidden">
@@ -170,7 +203,7 @@
 <rect class="cursor-active" x="102.4" y="56" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
 <text class="text dim" x="400" y="142.8" text-anchor="end" fill="#c9d1d9">by talhayut</text>
-    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.081401;0.092997;1" dur="4.48s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.081619;0.093602;1" dur="4.42s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-8" visibility="hidden">
@@ -188,7 +221,7 @@
 <rect class="cursor-active" x="112" y="56" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
 <text class="text dim" x="400" y="142.8" text-anchor="end" fill="#c9d1d9">by talhayut</text>
-    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.092997;0.103925;1" dur="4.48s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.093602;0.104906;1" dur="4.42s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-9" visibility="hidden">
@@ -206,7 +239,7 @@
 <rect class="cursor-active" x="121.6" y="56" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
 <text class="text dim" x="400" y="142.8" text-anchor="end" fill="#c9d1d9">by talhayut</text>
-    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.103925;0.115076;1" dur="4.48s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.104906;0.116437;1" dur="4.42s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-10" visibility="hidden">
@@ -224,7 +257,7 @@
 <rect class="cursor-active" x="131.2" y="56" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
 <text class="text dim" x="400" y="142.8" text-anchor="end" fill="#c9d1d9">by talhayut</text>
-    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.115076;0.12645;1" dur="4.48s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.116437;0.127741;1" dur="4.42s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-11" visibility="hidden">
@@ -242,7 +275,7 @@
 <rect class="cursor-active" x="140.8" y="56" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
 <text class="text dim" x="400" y="142.8" text-anchor="end" fill="#c9d1d9">by talhayut</text>
-    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.12645;0.1376;1" dur="4.48s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.127741;0.139498;1" dur="4.42s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-12" visibility="hidden">
@@ -260,7 +293,7 @@
 <rect class="cursor-active" x="150.4" y="56" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
 <text class="text dim" x="400" y="142.8" text-anchor="end" fill="#c9d1d9">by talhayut</text>
-    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.1376;0.149197;1" dur="4.48s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.139498;0.151255;1" dur="4.42s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-13" visibility="hidden">
@@ -278,7 +311,7 @@
 <rect class="cursor-active" x="160" y="56" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
 <text class="text dim" x="400" y="142.8" text-anchor="end" fill="#c9d1d9">by talhayut</text>
-    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.149197;0.160348;1" dur="4.48s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.151255;0.162785;1" dur="4.42s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-14" visibility="hidden">
@@ -296,7 +329,7 @@
 <rect class="cursor-active" x="169.6" y="56" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
 <text class="text dim" x="400" y="142.8" text-anchor="end" fill="#c9d1d9">by talhayut</text>
-    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.160348;0.172391;1" dur="4.48s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.162785;0.174994;1" dur="4.42s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-15" visibility="hidden">
@@ -314,7 +347,7 @@
 <rect class="cursor-active" x="179.2" y="56" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
 <text class="text dim" x="400" y="142.8" text-anchor="end" fill="#c9d1d9">by talhayut</text>
-    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.172391;0.183764;1" dur="4.48s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.174994;0.186299;1" dur="4.42s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-16" visibility="hidden">
@@ -332,7 +365,7 @@
 <rect class="cursor-active" x="188.8" y="56" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
 <text class="text dim" x="400" y="142.8" text-anchor="end" fill="#c9d1d9">by talhayut</text>
-    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.183764;0.195361;1" dur="4.48s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.186299;0.198056;1" dur="4.42s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-17" visibility="hidden">
@@ -350,7 +383,7 @@
 <rect class="cursor-active" x="198.4" y="56" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
 <text class="text dim" x="400" y="142.8" text-anchor="end" fill="#c9d1d9">by talhayut</text>
-    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.195361;0.206512;1" dur="4.48s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.198056;0.209586;1" dur="4.42s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-18" visibility="hidden">
@@ -368,7 +401,7 @@
 <rect class="cursor-active" x="208" y="56" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
 <text class="text dim" x="400" y="142.8" text-anchor="end" fill="#c9d1d9">by talhayut</text>
-    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.206512;0.218109;1" dur="4.48s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.209586;0.220665;1" dur="4.42s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-19" visibility="hidden">
@@ -386,7 +419,7 @@
 <rect class="cursor-active" x="217.6" y="56" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
 <text class="text dim" x="400" y="142.8" text-anchor="end" fill="#c9d1d9">by talhayut</text>
-    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.218109;0.22926;1" dur="4.48s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.220665;0.232195;1" dur="4.42s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-20" visibility="hidden">
@@ -404,7 +437,7 @@
 <rect class="cursor-active" x="227.2" y="56" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
 <text class="text dim" x="400" y="142.8" text-anchor="end" fill="#c9d1d9">by talhayut</text>
-    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.22926;0.240633;1" dur="4.48s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.232195;0.2435;1" dur="4.42s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-21" visibility="hidden">
@@ -422,7 +455,7 @@
 <rect class="cursor-active" x="236.8" y="56" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
 <text class="text dim" x="400" y="142.8" text-anchor="end" fill="#c9d1d9">by talhayut</text>
-    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.240633;0.252007;1" dur="4.48s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.2435;0.255257;1" dur="4.42s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-22" visibility="hidden">
@@ -440,7 +473,7 @@
 <rect class="cursor-active" x="246.4" y="56" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
 <text class="text dim" x="400" y="142.8" text-anchor="end" fill="#c9d1d9">by talhayut</text>
-    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.252007;0.263381;1" dur="4.48s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.255257;0.266787;1" dur="4.42s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-23" visibility="hidden">
@@ -458,7 +491,7 @@
 <rect class="cursor-active" x="256" y="56" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
 <text class="text dim" x="400" y="142.8" text-anchor="end" fill="#c9d1d9">by talhayut</text>
-    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.263381;0.274755;1" dur="4.48s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.266787;0.278318;1" dur="4.42s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-24" visibility="hidden">
@@ -476,7 +509,7 @@
 <rect class="cursor-active" x="265.6" y="56" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
 <text class="text dim" x="400" y="142.8" text-anchor="end" fill="#c9d1d9">by talhayut</text>
-    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.274755;0.285682;1" dur="4.48s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.278318;0.289849;1" dur="4.42s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-25" visibility="hidden">
@@ -494,7 +527,7 @@
 <rect class="cursor-active" x="275.2" y="56" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
 <text class="text dim" x="400" y="142.8" text-anchor="end" fill="#c9d1d9">by talhayut</text>
-    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.285682;0.297056;1" dur="4.48s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.289849;0.301605;1" dur="4.42s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-26" visibility="hidden">
@@ -512,7 +545,7 @@
 <rect class="cursor-active" x="284.8" y="56" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
 <text class="text dim" x="400" y="142.8" text-anchor="end" fill="#c9d1d9">by talhayut</text>
-    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.297056;0.30843;1" dur="4.48s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.301605;0.313136;1" dur="4.42s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-27" visibility="hidden">
@@ -530,7 +563,7 @@
 <rect class="cursor-active" x="294.4" y="56" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
 <text class="text dim" x="400" y="142.8" text-anchor="end" fill="#c9d1d9">by talhayut</text>
-    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.30843;0.319581;1" dur="4.48s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.313136;0.323762;1" dur="4.42s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-28" visibility="hidden">
@@ -548,7 +581,7 @@
 <rect class="cursor-active" x="304" y="56" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
 <text class="text dim" x="400" y="142.8" text-anchor="end" fill="#c9d1d9">by talhayut</text>
-    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.319581;0.330508;1" dur="4.48s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.323762;0.335293;1" dur="4.42s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-29" visibility="hidden">
@@ -566,7 +599,7 @@
 <rect class="cursor-active" x="313.6" y="56" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
 <text class="text dim" x="400" y="142.8" text-anchor="end" fill="#c9d1d9">by talhayut</text>
-    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.330508;0.342328;1" dur="4.48s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.335293;0.346597;1" dur="4.42s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-30" visibility="hidden">
@@ -584,7 +617,7 @@
 <rect class="cursor-active" x="323.2" y="56" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
 <text class="text dim" x="400" y="142.8" text-anchor="end" fill="#c9d1d9">by talhayut</text>
-    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.342328;0.353256;1" dur="4.48s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.346597;0.358128;1" dur="4.42s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-31" visibility="hidden">
@@ -602,7 +635,7 @@
 <rect class="cursor-active" x="332.8" y="56" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
 <text class="text dim" x="400" y="142.8" text-anchor="end" fill="#c9d1d9">by talhayut</text>
-    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.353256;0.36463;1" dur="4.48s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.358128;0.369885;1" dur="4.42s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-32" visibility="hidden">
@@ -620,7 +653,7 @@
 <rect class="cursor-active" x="342.4" y="56" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
 <text class="text dim" x="400" y="142.8" text-anchor="end" fill="#c9d1d9">by talhayut</text>
-    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.36463;0.376004;1" dur="4.48s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.369885;0.381415;1" dur="4.42s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-33" visibility="hidden">
@@ -638,7 +671,7 @@
 <rect class="cursor-active" x="352" y="56" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
 <text class="text dim" x="400" y="142.8" text-anchor="end" fill="#c9d1d9">by talhayut</text>
-    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.376004;0.387377;1" dur="4.48s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.381415;0.392494;1" dur="4.42s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-34" visibility="hidden">
@@ -656,7 +689,7 @@
 <rect class="cursor-active" x="361.6" y="56" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
 <text class="text dim" x="400" y="142.8" text-anchor="end" fill="#c9d1d9">by talhayut</text>
-    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.387377;0.399197;1" dur="4.48s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.392494;0.404477;1" dur="4.42s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-35" visibility="hidden">
@@ -674,7 +707,7 @@
 <rect class="cursor-active" x="371.2" y="56" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
 <text class="text dim" x="400" y="142.8" text-anchor="end" fill="#c9d1d9">by talhayut</text>
-    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.399197;0.410794;1" dur="4.48s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.404477;0.416007;1" dur="4.42s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-36" visibility="hidden">
@@ -692,7 +725,7 @@
 <rect class="cursor-active" x="380.8" y="56" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
 <text class="text dim" x="400" y="142.8" text-anchor="end" fill="#c9d1d9">by talhayut</text>
-    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.410794;0.422837;1" dur="4.48s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.416007;0.427086;1" dur="4.42s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-37" visibility="hidden">
@@ -710,7 +743,7 @@
 <rect class="cursor-active" x="390.4" y="56" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
 <text class="text dim" x="400" y="142.8" text-anchor="end" fill="#c9d1d9">by talhayut</text>
-    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.422837;0.422168;1" dur="4.48s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.427086;0.427312;1" dur="4.42s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-38" visibility="hidden">
@@ -728,7 +761,7 @@
 <rect class="cursor" x="390.4" y="56" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
 <text class="text dim" x="400" y="142.8" text-anchor="end" fill="#c9d1d9">by talhayut</text>
-    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.422168;0.434434;1" dur="4.48s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.427312;0.439295;1" dur="4.42s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-39" visibility="hidden">
@@ -746,7 +779,7 @@
 <rect class="cursor-active" x="380.8" y="56" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
 <text class="text dim" x="400" y="142.8" text-anchor="end" fill="#c9d1d9">by talhayut</text>
-    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.434434;0.446922;1" dur="4.48s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.439295;0.451277;1" dur="4.42s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-40" visibility="hidden">
@@ -764,7 +797,7 @@
 <rect class="cursor-active" x="371.2" y="56" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
 <text class="text dim" x="400" y="142.8" text-anchor="end" fill="#c9d1d9">by talhayut</text>
-    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.446922;0.459411;1" dur="4.48s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.451277;0.46326;1" dur="4.42s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-41" visibility="hidden">
@@ -782,7 +815,7 @@
 <rect class="cursor-active" x="361.6" y="56" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
 <text class="text dim" x="400" y="142.8" text-anchor="end" fill="#c9d1d9">by talhayut</text>
-    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.459411;0.472346;1" dur="4.48s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.46326;0.475243;1" dur="4.42s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-42" visibility="hidden">
@@ -800,7 +833,7 @@
 <rect class="cursor-active" x="352" y="56" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
 <text class="text dim" x="400" y="142.8" text-anchor="end" fill="#c9d1d9">by talhayut</text>
-    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.472346;0.484612;1" dur="4.48s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.475243;0.487452;1" dur="4.42s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-43" visibility="hidden">
@@ -818,7 +851,7 @@
 <rect class="cursor-active" x="342.4" y="56" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
 <text class="text dim" x="400" y="142.8" text-anchor="end" fill="#c9d1d9">by talhayut</text>
-    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.484612;0.497547;1" dur="4.48s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.487452;0.499435;1" dur="4.42s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-44" visibility="hidden">
@@ -836,7 +869,7 @@
 <rect class="cursor-active" x="332.8" y="56" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
 <text class="text dim" x="400" y="142.8" text-anchor="end" fill="#c9d1d9">by talhayut</text>
-    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.497547;0.510036;1" dur="4.48s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.499435;0.511418;1" dur="4.42s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-45" visibility="hidden">
@@ -854,7 +887,7 @@
 <rect class="cursor-active" x="323.2" y="56" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
 <text class="text dim" x="400" y="142.8" text-anchor="end" fill="#c9d1d9">by talhayut</text>
-    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.510036;0.522079;1" dur="4.48s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.511418;0.5234;1" dur="4.42s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-46" visibility="hidden">
@@ -872,7 +905,7 @@
 <rect class="cursor-active" x="313.6" y="56" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
 <text class="text dim" x="400" y="142.8" text-anchor="end" fill="#c9d1d9">by talhayut</text>
-    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.522079;0.534344;1" dur="4.48s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.5234;0.536061;1" dur="4.42s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-47" visibility="hidden">
@@ -890,7 +923,7 @@
 <rect class="cursor-active" x="304" y="56" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
 <text class="text dim" x="400" y="142.8" text-anchor="end" fill="#c9d1d9">by talhayut</text>
-    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.534344;0.546833;1" dur="4.48s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.536061;0.548496;1" dur="4.42s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-48" visibility="hidden">
@@ -908,7 +941,7 @@
 <rect class="cursor-active" x="294.4" y="56" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
 <text class="text dim" x="400" y="142.8" text-anchor="end" fill="#c9d1d9">by talhayut</text>
-    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.546833;0.559768;1" dur="4.48s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.548496;0.560931;1" dur="4.42s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-49" visibility="hidden">
@@ -926,7 +959,7 @@
 <rect class="cursor-active" x="284.8" y="56" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
 <text class="text dim" x="400" y="142.8" text-anchor="end" fill="#c9d1d9">by talhayut</text>
-    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.559768;0.572257;1" dur="4.48s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.560931;0.572914;1" dur="4.42s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-50" visibility="hidden">
@@ -944,7 +977,7 @@
 <rect class="cursor-active" x="275.2" y="56" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
 <text class="text dim" x="400" y="142.8" text-anchor="end" fill="#c9d1d9">by talhayut</text>
-    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.572257;0.584746;1" dur="4.48s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.572914;0.584671;1" dur="4.42s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-51" visibility="hidden">
@@ -962,7 +995,7 @@
 <rect class="cursor-active" x="265.6" y="56" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
 <text class="text dim" x="400" y="142.8" text-anchor="end" fill="#c9d1d9">by talhayut</text>
-    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.584746;0.597458;1" dur="4.48s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.584671;0.596654;1" dur="4.42s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-52" visibility="hidden">
@@ -980,7 +1013,7 @@
 <rect class="cursor-active" x="256" y="56" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
 <text class="text dim" x="400" y="142.8" text-anchor="end" fill="#c9d1d9">by talhayut</text>
-    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.597458;0.6095;1" dur="4.48s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.596654;0.608411;1" dur="4.42s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-53" visibility="hidden">
@@ -998,7 +1031,7 @@
 <rect class="cursor-active" x="246.4" y="56" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
 <text class="text dim" x="400" y="142.8" text-anchor="end" fill="#c9d1d9">by talhayut</text>
-    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.6095;0.621989;1" dur="4.48s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.608411;0.619941;1" dur="4.42s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-54" visibility="hidden">
@@ -1016,7 +1049,7 @@
 <rect class="cursor-active" x="236.8" y="56" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
 <text class="text dim" x="400" y="142.8" text-anchor="end" fill="#c9d1d9">by talhayut</text>
-    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.621989;0.634701;1" dur="4.48s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.619941;0.63215;1" dur="4.42s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-55" visibility="hidden">
@@ -1034,7 +1067,7 @@
 <rect class="cursor-active" x="227.2" y="56" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
 <text class="text dim" x="400" y="142.8" text-anchor="end" fill="#c9d1d9">by talhayut</text>
-    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.634701;0.658341;1" dur="4.48s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.63215;0.655211;1" dur="4.42s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-56" visibility="hidden">
@@ -1052,7 +1085,7 @@
 <rect class="cursor" x="227.2" y="56" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
 <text class="text dim" x="400" y="142.8" text-anchor="end" fill="#c9d1d9">by talhayut</text>
-    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.658341;0.682649;1" dur="4.48s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.655211;0.678951;1" dur="4.42s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-57" visibility="hidden">
@@ -1067,7 +1100,7 @@
 <text class="text fg" x="25.6" y="56"> echo &apos;I am an idiot developer&apos;</text>
 </g>
 <text class="text dim" x="400" y="142.8" text-anchor="end" fill="#c9d1d9">by talhayut</text>
-    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.682649;0.709188;1" dur="4.48s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.678951;0.680307;1" dur="4.42s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-58" visibility="hidden">
@@ -1081,13 +1114,9 @@
 <text class="text f2" x="16" y="56">$</text>
 <text class="text fg" x="25.6" y="56"> echo &apos;I am an idiot developer&apos;</text>
 <text class="text fg" x="16" y="78.4">I am an idiot developer</text>
-<text class="text f2" x="16" y="100.8">$</text>
-</g>
-<g class="cursor-layer">
-<rect class="cursor" x="35.2" y="100.8" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
 <text class="text dim" x="400" y="142.8" text-anchor="end" fill="#c9d1d9">by talhayut</text>
-    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.709188;0.776762;1" dur="4.48s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.680307;0.704047;1" dur="4.42s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-59" visibility="hidden">
@@ -1107,7 +1136,7 @@
 <rect class="cursor" x="35.2" y="100.8" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
 <text class="text dim" x="400" y="142.8" text-anchor="end" fill="#c9d1d9">by talhayut</text>
-    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.776762;0.776985;1" dur="4.48s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.704047;0.773005;1" dur="4.42s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-60" visibility="hidden">
@@ -1127,7 +1156,27 @@
 <rect class="cursor" x="35.2" y="100.8" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
 <text class="text dim" x="400" y="142.8" text-anchor="end" fill="#c9d1d9">by talhayut</text>
-    <animate attributeName="visibility" values="hidden;visible;visible" keyTimes="0;0.776985;1" dur="4.48s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.773005;0.773909;1" dur="4.42s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-61" visibility="hidden">
+    <rect class="window-bg" x="0" y="0" width="416" height="170" fill="#0d1117" rx="8" ry="8"/>
+<g class="chrome"><rect class="header-bg" x="0" y="0" width="416" height="40" fill="#0d1117" rx="8" ry="8"/>
+<rect x="0" y="32" width="416" height="8" fill="#0d1117"/>
+<circle cx="22" cy="20" r="6" fill="#ff5f56"/>
+<circle cx="42" cy="20" r="6" fill="#ffbd2e"/>
+<circle cx="62" cy="20" r="6" fill="#27c93f"/></g>
+<g class="text-layer">
+<text class="text f2" x="16" y="56">$</text>
+<text class="text fg" x="25.6" y="56"> echo &apos;I am an idiot developer&apos;</text>
+<text class="text fg" x="16" y="78.4">I am an idiot developer</text>
+<text class="text f2" x="16" y="100.8">$</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor" x="35.2" y="100.8" width="9.6" height="22.4" fill="#c9d1d9"/>
+</g>
+<text class="text dim" x="400" y="142.8" text-anchor="end" fill="#c9d1d9">by talhayut</text>
+    <animate attributeName="visibility" values="hidden;visible;visible" keyTimes="0;0.773909;1" dur="4.42s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
   </g>
 </svg>
