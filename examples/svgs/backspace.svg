@@ -14,40 +14,7 @@
 .uline { text-decoration: underline; }
 .strike { text-decoration: line-through; }
 .dim { opacity: 0.5; }
-.fg { fill: #c9d1d9; }
-.f0 { fill: #484f58; }
-.f1 { fill: #ff7b72; }
 .f2 { fill: #3fb950; }
-.f3 { fill: #d29922; }
-.f4 { fill: #58a6ff; }
-.f5 { fill: #bc8cff; }
-.f6 { fill: #39c5cf; }
-.f7 { fill: #b1bac4; }
-.f8 { fill: #6e7681; }
-.f9 { fill: #ffa198; }
-.f10 { fill: #56d364; }
-.f11 { fill: #e3b341; }
-.f12 { fill: #79c0ff; }
-.f13 { fill: #d2a8ff; }
-.f14 { fill: #56d4dd; }
-.f15 { fill: #f0f6fc; }
-.bg { fill: #0d1117; }
-.b0 { fill: #484f58; }
-.b1 { fill: #ff7b72; }
-.b2 { fill: #3fb950; }
-.b3 { fill: #d29922; }
-.b4 { fill: #58a6ff; }
-.b5 { fill: #bc8cff; }
-.b6 { fill: #39c5cf; }
-.b7 { fill: #b1bac4; }
-.b8 { fill: #6e7681; }
-.b9 { fill: #ffa198; }
-.b10 { fill: #56d364; }
-.b11 { fill: #e3b341; }
-.b12 { fill: #79c0ff; }
-.b13 { fill: #d2a8ff; }
-.b14 { fill: #56d4dd; }
-.b15 { fill: #f0f6fc; }
 .cursor { animation: blink 1s step-end infinite; }
 @keyframes blink {
   0%, 50% { opacity: 1; }
@@ -74,18 +41,10 @@
 <text class="text f2" x="16" y="56">$</text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor" x="35.2" y="58.4" width="9.6" height="22.4" fill="#c9d1d9"/>
+<rect class="cursor" x="35.2" y="56" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
 <text class="text dim" x="400" y="142.8" text-anchor="end" fill="#c9d1d9">by talhayut</text>
-    <animate
-      attributeName="visibility"
-      values="visible;hidden;hidden"
-      keyTimes="0.000000;0.012132;1.000000"
-      dur="4.45s"
-      repeatCount="indefinite"
-      calcMode="discrete"
-      fill="freeze"
-    />
+    <animate attributeName="visibility" values="visible;hidden;hidden" keyTimes="0;0.012043;1" dur="4.48s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-1" visibility="hidden">
@@ -97,21 +56,13 @@
 <circle cx="62" cy="20" r="6" fill="#27c93f"/></g>
 <g class="text-layer">
 <text class="text f2" x="16" y="56">$</text>
-<text class="text fg" x="25.6" y="56"> e                                                                             </text>
+<text class="text fg" x="25.6" y="56"> e</text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor-active" x="44.8" y="58.4" width="9.6" height="22.4" fill="#c9d1d9"/>
+<rect class="cursor-active" x="44.8" y="56" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
 <text class="text dim" x="400" y="142.8" text-anchor="end" fill="#c9d1d9">by talhayut</text>
-    <animate
-      attributeName="visibility"
-      values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.012132;0.023366;1.000000"
-      dur="4.45s"
-      repeatCount="indefinite"
-      calcMode="discrete"
-      fill="freeze"
-    />
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.012043;0.023417;1" dur="4.48s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-2" visibility="hidden">
@@ -123,21 +74,13 @@
 <circle cx="62" cy="20" r="6" fill="#27c93f"/></g>
 <g class="text-layer">
 <text class="text f2" x="16" y="56">$</text>
-<text class="text fg" x="25.6" y="56"> ec                                                                            </text>
+<text class="text fg" x="25.6" y="56"> ec</text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor-active" x="54.4" y="58.4" width="9.6" height="22.4" fill="#c9d1d9"/>
+<rect class="cursor-active" x="54.4" y="56" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
 <text class="text dim" x="400" y="142.8" text-anchor="end" fill="#c9d1d9">by talhayut</text>
-    <animate
-      attributeName="visibility"
-      values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.023366;0.035048;1.000000"
-      dur="4.45s"
-      repeatCount="indefinite"
-      calcMode="discrete"
-      fill="freeze"
-    />
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.023417;0.035013;1" dur="4.48s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-3" visibility="hidden">
@@ -149,21 +92,13 @@
 <circle cx="62" cy="20" r="6" fill="#27c93f"/></g>
 <g class="text-layer">
 <text class="text f2" x="16" y="56">$</text>
-<text class="text fg" x="25.6" y="56"> ech                                                                           </text>
+<text class="text fg" x="25.6" y="56"> ech</text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor-active" x="64" y="58.4" width="9.6" height="22.4" fill="#c9d1d9"/>
+<rect class="cursor-active" x="64" y="56" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
 <text class="text dim" x="400" y="142.8" text-anchor="end" fill="#c9d1d9">by talhayut</text>
-    <animate
-      attributeName="visibility"
-      values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.035048;0.046731;1.000000"
-      dur="4.45s"
-      repeatCount="indefinite"
-      calcMode="discrete"
-      fill="freeze"
-    />
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.035013;0.046833;1" dur="4.48s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-4" visibility="hidden">
@@ -175,21 +110,13 @@
 <circle cx="62" cy="20" r="6" fill="#27c93f"/></g>
 <g class="text-layer">
 <text class="text f2" x="16" y="56">$</text>
-<text class="text fg" x="25.6" y="56"> echo                                                                          </text>
+<text class="text fg" x="25.6" y="56"> echo</text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor-active" x="73.6" y="58.4" width="9.6" height="22.4" fill="#c9d1d9"/>
+<rect class="cursor-active" x="73.6" y="56" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
 <text class="text dim" x="400" y="142.8" text-anchor="end" fill="#c9d1d9">by talhayut</text>
-    <animate
-      attributeName="visibility"
-      values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.046731;0.058414;1.000000"
-      dur="4.45s"
-      repeatCount="indefinite"
-      calcMode="discrete"
-      fill="freeze"
-    />
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.046833;0.05843;1" dur="4.48s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-5" visibility="hidden">
@@ -201,21 +128,13 @@
 <circle cx="62" cy="20" r="6" fill="#27c93f"/></g>
 <g class="text-layer">
 <text class="text f2" x="16" y="56">$</text>
-<text class="text fg" x="25.6" y="56"> echo                                                                          </text>
+<text class="text fg" x="25.6" y="56"> echo</text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor-active" x="83.2" y="58.4" width="9.6" height="22.4" fill="#c9d1d9"/>
+<rect class="cursor-active" x="83.2" y="56" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
 <text class="text dim" x="400" y="142.8" text-anchor="end" fill="#c9d1d9">by talhayut</text>
-    <animate
-      attributeName="visibility"
-      values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.058414;0.069872;1.000000"
-      dur="4.45s"
-      repeatCount="indefinite"
-      calcMode="discrete"
-      fill="freeze"
-    />
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.05843;0.070027;1" dur="4.48s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-6" visibility="hidden">
@@ -227,21 +146,13 @@
 <circle cx="62" cy="20" r="6" fill="#27c93f"/></g>
 <g class="text-layer">
 <text class="text f2" x="16" y="56">$</text>
-<text class="text fg" x="25.6" y="56"> echo &apos;                                                                        </text>
+<text class="text fg" x="25.6" y="56"> echo &apos;</text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor-active" x="92.8" y="58.4" width="9.6" height="22.4" fill="#c9d1d9"/>
+<rect class="cursor-active" x="92.8" y="56" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
 <text class="text dim" x="400" y="142.8" text-anchor="end" fill="#c9d1d9">by talhayut</text>
-    <animate
-      attributeName="visibility"
-      values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.069872;0.081105;1.000000"
-      dur="4.45s"
-      repeatCount="indefinite"
-      calcMode="discrete"
-      fill="freeze"
-    />
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.070027;0.081401;1" dur="4.48s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-7" visibility="hidden">
@@ -253,21 +164,13 @@
 <circle cx="62" cy="20" r="6" fill="#27c93f"/></g>
 <g class="text-layer">
 <text class="text f2" x="16" y="56">$</text>
-<text class="text fg" x="25.6" y="56"> echo &apos;I                                                                       </text>
+<text class="text fg" x="25.6" y="56"> echo &apos;I</text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor-active" x="102.39999999999999" y="58.4" width="9.6" height="22.4" fill="#c9d1d9"/>
+<rect class="cursor-active" x="102.4" y="56" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
 <text class="text dim" x="400" y="142.8" text-anchor="end" fill="#c9d1d9">by talhayut</text>
-    <animate
-      attributeName="visibility"
-      values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.081105;0.092563;1.000000"
-      dur="4.45s"
-      repeatCount="indefinite"
-      calcMode="discrete"
-      fill="freeze"
-    />
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.081401;0.092997;1" dur="4.48s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-8" visibility="hidden">
@@ -279,21 +182,13 @@
 <circle cx="62" cy="20" r="6" fill="#27c93f"/></g>
 <g class="text-layer">
 <text class="text f2" x="16" y="56">$</text>
-<text class="text fg" x="25.6" y="56"> echo &apos;I                                                                       </text>
+<text class="text fg" x="25.6" y="56"> echo &apos;I</text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor-active" x="112" y="58.4" width="9.6" height="22.4" fill="#c9d1d9"/>
+<rect class="cursor-active" x="112" y="56" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
 <text class="text dim" x="400" y="142.8" text-anchor="end" fill="#c9d1d9">by talhayut</text>
-    <animate
-      attributeName="visibility"
-      values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.092563;0.104022;1.000000"
-      dur="4.45s"
-      repeatCount="indefinite"
-      calcMode="discrete"
-      fill="freeze"
-    />
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.092997;0.103925;1" dur="4.48s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-9" visibility="hidden">
@@ -305,21 +200,13 @@
 <circle cx="62" cy="20" r="6" fill="#27c93f"/></g>
 <g class="text-layer">
 <text class="text f2" x="16" y="56">$</text>
-<text class="text fg" x="25.6" y="56"> echo &apos;I a                                                                     </text>
+<text class="text fg" x="25.6" y="56"> echo &apos;I a</text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor-active" x="121.6" y="58.4" width="9.6" height="22.4" fill="#c9d1d9"/>
+<rect class="cursor-active" x="121.6" y="56" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
 <text class="text dim" x="400" y="142.8" text-anchor="end" fill="#c9d1d9">by talhayut</text>
-    <animate
-      attributeName="visibility"
-      values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.104022;0.115480;1.000000"
-      dur="4.45s"
-      repeatCount="indefinite"
-      calcMode="discrete"
-      fill="freeze"
-    />
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.103925;0.115076;1" dur="4.48s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-10" visibility="hidden">
@@ -331,21 +218,13 @@
 <circle cx="62" cy="20" r="6" fill="#27c93f"/></g>
 <g class="text-layer">
 <text class="text f2" x="16" y="56">$</text>
-<text class="text fg" x="25.6" y="56"> echo &apos;I am                                                                    </text>
+<text class="text fg" x="25.6" y="56"> echo &apos;I am</text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor-active" x="131.2" y="58.4" width="9.6" height="22.4" fill="#c9d1d9"/>
+<rect class="cursor-active" x="131.2" y="56" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
 <text class="text dim" x="400" y="142.8" text-anchor="end" fill="#c9d1d9">by talhayut</text>
-    <animate
-      attributeName="visibility"
-      values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.115480;0.127162;1.000000"
-      dur="4.45s"
-      repeatCount="indefinite"
-      calcMode="discrete"
-      fill="freeze"
-    />
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.115076;0.12645;1" dur="4.48s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-11" visibility="hidden">
@@ -357,21 +236,13 @@
 <circle cx="62" cy="20" r="6" fill="#27c93f"/></g>
 <g class="text-layer">
 <text class="text f2" x="16" y="56">$</text>
-<text class="text fg" x="25.6" y="56"> echo &apos;I am                                                                    </text>
+<text class="text fg" x="25.6" y="56"> echo &apos;I am</text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor-active" x="140.8" y="58.4" width="9.6" height="22.4" fill="#c9d1d9"/>
+<rect class="cursor-active" x="140.8" y="56" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
 <text class="text dim" x="400" y="142.8" text-anchor="end" fill="#c9d1d9">by talhayut</text>
-    <animate
-      attributeName="visibility"
-      values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.127162;0.138845;1.000000"
-      dur="4.45s"
-      repeatCount="indefinite"
-      calcMode="discrete"
-      fill="freeze"
-    />
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.12645;0.1376;1" dur="4.48s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-12" visibility="hidden">
@@ -383,21 +254,13 @@
 <circle cx="62" cy="20" r="6" fill="#27c93f"/></g>
 <g class="text-layer">
 <text class="text f2" x="16" y="56">$</text>
-<text class="text fg" x="25.6" y="56"> echo &apos;I am a                                                                  </text>
+<text class="text fg" x="25.6" y="56"> echo &apos;I am a</text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor-active" x="150.4" y="58.4" width="9.6" height="22.4" fill="#c9d1d9"/>
+<rect class="cursor-active" x="150.4" y="56" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
 <text class="text dim" x="400" y="142.8" text-anchor="end" fill="#c9d1d9">by talhayut</text>
-    <animate
-      attributeName="visibility"
-      values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.138845;0.150303;1.000000"
-      dur="4.45s"
-      repeatCount="indefinite"
-      calcMode="discrete"
-      fill="freeze"
-    />
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.1376;0.149197;1" dur="4.48s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-13" visibility="hidden">
@@ -409,21 +272,13 @@
 <circle cx="62" cy="20" r="6" fill="#27c93f"/></g>
 <g class="text-layer">
 <text class="text f2" x="16" y="56">$</text>
-<text class="text fg" x="25.6" y="56"> echo &apos;I am an                                                                 </text>
+<text class="text fg" x="25.6" y="56"> echo &apos;I am an</text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor-active" x="160" y="58.4" width="9.6" height="22.4" fill="#c9d1d9"/>
+<rect class="cursor-active" x="160" y="56" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
 <text class="text dim" x="400" y="142.8" text-anchor="end" fill="#c9d1d9">by talhayut</text>
-    <animate
-      attributeName="visibility"
-      values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.150303;0.161537;1.000000"
-      dur="4.45s"
-      repeatCount="indefinite"
-      calcMode="discrete"
-      fill="freeze"
-    />
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.149197;0.160348;1" dur="4.48s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-14" visibility="hidden">
@@ -435,21 +290,13 @@
 <circle cx="62" cy="20" r="6" fill="#27c93f"/></g>
 <g class="text-layer">
 <text class="text f2" x="16" y="56">$</text>
-<text class="text fg" x="25.6" y="56"> echo &apos;I am an                                                                 </text>
+<text class="text fg" x="25.6" y="56"> echo &apos;I am an</text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor-active" x="169.6" y="58.4" width="9.6" height="22.4" fill="#c9d1d9"/>
+<rect class="cursor-active" x="169.6" y="56" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
 <text class="text dim" x="400" y="142.8" text-anchor="end" fill="#c9d1d9">by talhayut</text>
-    <animate
-      attributeName="visibility"
-      values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.161537;0.172995;1.000000"
-      dur="4.45s"
-      repeatCount="indefinite"
-      calcMode="discrete"
-      fill="freeze"
-    />
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.160348;0.172391;1" dur="4.48s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-15" visibility="hidden">
@@ -461,21 +308,13 @@
 <circle cx="62" cy="20" r="6" fill="#27c93f"/></g>
 <g class="text-layer">
 <text class="text f2" x="16" y="56">$</text>
-<text class="text fg" x="25.6" y="56"> echo &apos;I am an i                                                               </text>
+<text class="text fg" x="25.6" y="56"> echo &apos;I am an i</text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor-active" x="179.2" y="58.4" width="9.6" height="22.4" fill="#c9d1d9"/>
+<rect class="cursor-active" x="179.2" y="56" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
 <text class="text dim" x="400" y="142.8" text-anchor="end" fill="#c9d1d9">by talhayut</text>
-    <animate
-      attributeName="visibility"
-      values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.172995;0.184678;1.000000"
-      dur="4.45s"
-      repeatCount="indefinite"
-      calcMode="discrete"
-      fill="freeze"
-    />
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.172391;0.183764;1" dur="4.48s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-16" visibility="hidden">
@@ -487,21 +326,13 @@
 <circle cx="62" cy="20" r="6" fill="#27c93f"/></g>
 <g class="text-layer">
 <text class="text f2" x="16" y="56">$</text>
-<text class="text fg" x="25.6" y="56"> echo &apos;I am an id                                                              </text>
+<text class="text fg" x="25.6" y="56"> echo &apos;I am an id</text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor-active" x="188.79999999999998" y="58.4" width="9.6" height="22.4" fill="#c9d1d9"/>
+<rect class="cursor-active" x="188.8" y="56" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
 <text class="text dim" x="400" y="142.8" text-anchor="end" fill="#c9d1d9">by talhayut</text>
-    <animate
-      attributeName="visibility"
-      values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.184678;0.196136;1.000000"
-      dur="4.45s"
-      repeatCount="indefinite"
-      calcMode="discrete"
-      fill="freeze"
-    />
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.183764;0.195361;1" dur="4.48s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-17" visibility="hidden">
@@ -513,21 +344,13 @@
 <circle cx="62" cy="20" r="6" fill="#27c93f"/></g>
 <g class="text-layer">
 <text class="text f2" x="16" y="56">$</text>
-<text class="text fg" x="25.6" y="56"> echo &apos;I am an idi                                                             </text>
+<text class="text fg" x="25.6" y="56"> echo &apos;I am an idi</text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor-active" x="198.4" y="58.4" width="9.6" height="22.4" fill="#c9d1d9"/>
+<rect class="cursor-active" x="198.4" y="56" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
 <text class="text dim" x="400" y="142.8" text-anchor="end" fill="#c9d1d9">by talhayut</text>
-    <animate
-      attributeName="visibility"
-      values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.196136;0.207369;1.000000"
-      dur="4.45s"
-      repeatCount="indefinite"
-      calcMode="discrete"
-      fill="freeze"
-    />
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.195361;0.206512;1" dur="4.48s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-18" visibility="hidden">
@@ -539,21 +362,13 @@
 <circle cx="62" cy="20" r="6" fill="#27c93f"/></g>
 <g class="text-layer">
 <text class="text f2" x="16" y="56">$</text>
-<text class="text fg" x="25.6" y="56"> echo &apos;I am an idio                                                            </text>
+<text class="text fg" x="25.6" y="56"> echo &apos;I am an idio</text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor-active" x="208" y="58.4" width="9.6" height="22.4" fill="#c9d1d9"/>
+<rect class="cursor-active" x="208" y="56" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
 <text class="text dim" x="400" y="142.8" text-anchor="end" fill="#c9d1d9">by talhayut</text>
-    <animate
-      attributeName="visibility"
-      values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.207369;0.218827;1.000000"
-      dur="4.45s"
-      repeatCount="indefinite"
-      calcMode="discrete"
-      fill="freeze"
-    />
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.206512;0.218109;1" dur="4.48s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-19" visibility="hidden">
@@ -565,21 +380,13 @@
 <circle cx="62" cy="20" r="6" fill="#27c93f"/></g>
 <g class="text-layer">
 <text class="text f2" x="16" y="56">$</text>
-<text class="text fg" x="25.6" y="56"> echo &apos;I am an idiot                                                           </text>
+<text class="text fg" x="25.6" y="56"> echo &apos;I am an idiot</text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor-active" x="217.6" y="58.4" width="9.6" height="22.4" fill="#c9d1d9"/>
+<rect class="cursor-active" x="217.6" y="56" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
 <text class="text dim" x="400" y="142.8" text-anchor="end" fill="#c9d1d9">by talhayut</text>
-    <animate
-      attributeName="visibility"
-      values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.218827;0.230285;1.000000"
-      dur="4.45s"
-      repeatCount="indefinite"
-      calcMode="discrete"
-      fill="freeze"
-    />
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.218109;0.22926;1" dur="4.48s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-20" visibility="hidden">
@@ -591,21 +398,13 @@
 <circle cx="62" cy="20" r="6" fill="#27c93f"/></g>
 <g class="text-layer">
 <text class="text f2" x="16" y="56">$</text>
-<text class="text fg" x="25.6" y="56"> echo &apos;I am an idiot                                                           </text>
+<text class="text fg" x="25.6" y="56"> echo &apos;I am an idiot</text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor-active" x="227.2" y="58.4" width="9.6" height="22.4" fill="#c9d1d9"/>
+<rect class="cursor-active" x="227.2" y="56" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
 <text class="text dim" x="400" y="142.8" text-anchor="end" fill="#c9d1d9">by talhayut</text>
-    <animate
-      attributeName="visibility"
-      values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.230285;0.241968;1.000000"
-      dur="4.45s"
-      repeatCount="indefinite"
-      calcMode="discrete"
-      fill="freeze"
-    />
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.22926;0.240633;1" dur="4.48s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-21" visibility="hidden">
@@ -617,21 +416,13 @@
 <circle cx="62" cy="20" r="6" fill="#27c93f"/></g>
 <g class="text-layer">
 <text class="text f2" x="16" y="56">$</text>
-<text class="text fg" x="25.6" y="56"> echo &apos;I am an idiot s                                                         </text>
+<text class="text fg" x="25.6" y="56"> echo &apos;I am an idiot s</text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor-active" x="236.79999999999998" y="58.4" width="9.6" height="22.4" fill="#c9d1d9"/>
+<rect class="cursor-active" x="236.8" y="56" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
 <text class="text dim" x="400" y="142.8" text-anchor="end" fill="#c9d1d9">by talhayut</text>
-    <animate
-      attributeName="visibility"
-      values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.241968;0.253426;1.000000"
-      dur="4.45s"
-      repeatCount="indefinite"
-      calcMode="discrete"
-      fill="freeze"
-    />
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.240633;0.252007;1" dur="4.48s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-22" visibility="hidden">
@@ -643,21 +434,13 @@
 <circle cx="62" cy="20" r="6" fill="#27c93f"/></g>
 <g class="text-layer">
 <text class="text f2" x="16" y="56">$</text>
-<text class="text fg" x="25.6" y="56"> echo &apos;I am an idiot sa                                                        </text>
+<text class="text fg" x="25.6" y="56"> echo &apos;I am an idiot sa</text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor-active" x="246.39999999999998" y="58.4" width="9.6" height="22.4" fill="#c9d1d9"/>
+<rect class="cursor-active" x="246.4" y="56" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
 <text class="text dim" x="400" y="142.8" text-anchor="end" fill="#c9d1d9">by talhayut</text>
-    <animate
-      attributeName="visibility"
-      values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.253426;0.264435;1.000000"
-      dur="4.45s"
-      repeatCount="indefinite"
-      calcMode="discrete"
-      fill="freeze"
-    />
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.252007;0.263381;1" dur="4.48s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-23" visibility="hidden">
@@ -669,21 +452,13 @@
 <circle cx="62" cy="20" r="6" fill="#27c93f"/></g>
 <g class="text-layer">
 <text class="text f2" x="16" y="56">$</text>
-<text class="text fg" x="25.6" y="56"> echo &apos;I am an idiot sav                                                       </text>
+<text class="text fg" x="25.6" y="56"> echo &apos;I am an idiot sav</text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor-active" x="256" y="58.4" width="9.6" height="22.4" fill="#c9d1d9"/>
+<rect class="cursor-active" x="256" y="56" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
 <text class="text dim" x="400" y="142.8" text-anchor="end" fill="#c9d1d9">by talhayut</text>
-    <animate
-      attributeName="visibility"
-      values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.264435;0.275893;1.000000"
-      dur="4.45s"
-      repeatCount="indefinite"
-      calcMode="discrete"
-      fill="freeze"
-    />
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.263381;0.274755;1" dur="4.48s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-24" visibility="hidden">
@@ -695,21 +470,13 @@
 <circle cx="62" cy="20" r="6" fill="#27c93f"/></g>
 <g class="text-layer">
 <text class="text f2" x="16" y="56">$</text>
-<text class="text fg" x="25.6" y="56"> echo &apos;I am an idiot sava                                                      </text>
+<text class="text fg" x="25.6" y="56"> echo &apos;I am an idiot sava</text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor-active" x="265.6" y="58.4" width="9.6" height="22.4" fill="#c9d1d9"/>
+<rect class="cursor-active" x="265.6" y="56" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
 <text class="text dim" x="400" y="142.8" text-anchor="end" fill="#c9d1d9">by talhayut</text>
-    <animate
-      attributeName="visibility"
-      values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.275893;0.287576;1.000000"
-      dur="4.45s"
-      repeatCount="indefinite"
-      calcMode="discrete"
-      fill="freeze"
-    />
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.274755;0.285682;1" dur="4.48s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-25" visibility="hidden">
@@ -721,21 +488,13 @@
 <circle cx="62" cy="20" r="6" fill="#27c93f"/></g>
 <g class="text-layer">
 <text class="text f2" x="16" y="56">$</text>
-<text class="text fg" x="25.6" y="56"> echo &apos;I am an idiot savan                                                     </text>
+<text class="text fg" x="25.6" y="56"> echo &apos;I am an idiot savan</text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor-active" x="275.2" y="58.4" width="9.6" height="22.4" fill="#c9d1d9"/>
+<rect class="cursor-active" x="275.2" y="56" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
 <text class="text dim" x="400" y="142.8" text-anchor="end" fill="#c9d1d9">by talhayut</text>
-    <animate
-      attributeName="visibility"
-      values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.287576;0.299034;1.000000"
-      dur="4.45s"
-      repeatCount="indefinite"
-      calcMode="discrete"
-      fill="freeze"
-    />
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.285682;0.297056;1" dur="4.48s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-26" visibility="hidden">
@@ -747,21 +506,13 @@
 <circle cx="62" cy="20" r="6" fill="#27c93f"/></g>
 <g class="text-layer">
 <text class="text f2" x="16" y="56">$</text>
-<text class="text fg" x="25.6" y="56"> echo &apos;I am an idiot savant                                                    </text>
+<text class="text fg" x="25.6" y="56"> echo &apos;I am an idiot savant</text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor-active" x="284.8" y="58.4" width="9.6" height="22.4" fill="#c9d1d9"/>
+<rect class="cursor-active" x="284.8" y="56" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
 <text class="text dim" x="400" y="142.8" text-anchor="end" fill="#c9d1d9">by talhayut</text>
-    <animate
-      attributeName="visibility"
-      values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.299034;0.310492;1.000000"
-      dur="4.45s"
-      repeatCount="indefinite"
-      calcMode="discrete"
-      fill="freeze"
-    />
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.297056;0.30843;1" dur="4.48s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-27" visibility="hidden">
@@ -773,21 +524,13 @@
 <circle cx="62" cy="20" r="6" fill="#27c93f"/></g>
 <g class="text-layer">
 <text class="text f2" x="16" y="56">$</text>
-<text class="text fg" x="25.6" y="56"> echo &apos;I am an idiot savant                                                    </text>
+<text class="text fg" x="25.6" y="56"> echo &apos;I am an idiot savant</text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor-active" x="294.4" y="58.4" width="9.6" height="22.4" fill="#c9d1d9"/>
+<rect class="cursor-active" x="294.4" y="56" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
 <text class="text dim" x="400" y="142.8" text-anchor="end" fill="#c9d1d9">by talhayut</text>
-    <animate
-      attributeName="visibility"
-      values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.310492;0.321725;1.000000"
-      dur="4.45s"
-      repeatCount="indefinite"
-      calcMode="discrete"
-      fill="freeze"
-    />
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.30843;0.319581;1" dur="4.48s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-28" visibility="hidden">
@@ -799,21 +542,13 @@
 <circle cx="62" cy="20" r="6" fill="#27c93f"/></g>
 <g class="text-layer">
 <text class="text f2" x="16" y="56">$</text>
-<text class="text fg" x="25.6" y="56"> echo &apos;I am an idiot savant d                                                  </text>
+<text class="text fg" x="25.6" y="56"> echo &apos;I am an idiot savant d</text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor-active" x="304" y="58.4" width="9.6" height="22.4" fill="#c9d1d9"/>
+<rect class="cursor-active" x="304" y="56" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
 <text class="text dim" x="400" y="142.8" text-anchor="end" fill="#c9d1d9">by talhayut</text>
-    <animate
-      attributeName="visibility"
-      values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.321725;0.333184;1.000000"
-      dur="4.45s"
-      repeatCount="indefinite"
-      calcMode="discrete"
-      fill="freeze"
-    />
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.319581;0.330508;1" dur="4.48s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-29" visibility="hidden">
@@ -825,21 +560,13 @@
 <circle cx="62" cy="20" r="6" fill="#27c93f"/></g>
 <g class="text-layer">
 <text class="text f2" x="16" y="56">$</text>
-<text class="text fg" x="25.6" y="56"> echo &apos;I am an idiot savant de                                                 </text>
+<text class="text fg" x="25.6" y="56"> echo &apos;I am an idiot savant de</text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor-active" x="313.59999999999997" y="58.4" width="9.6" height="22.4" fill="#c9d1d9"/>
+<rect class="cursor-active" x="313.6" y="56" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
 <text class="text dim" x="400" y="142.8" text-anchor="end" fill="#c9d1d9">by talhayut</text>
-    <animate
-      attributeName="visibility"
-      values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.333184;0.344642;1.000000"
-      dur="4.45s"
-      repeatCount="indefinite"
-      calcMode="discrete"
-      fill="freeze"
-    />
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.330508;0.342328;1" dur="4.48s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-30" visibility="hidden">
@@ -851,21 +578,13 @@
 <circle cx="62" cy="20" r="6" fill="#27c93f"/></g>
 <g class="text-layer">
 <text class="text f2" x="16" y="56">$</text>
-<text class="text fg" x="25.6" y="56"> echo &apos;I am an idiot savant dev                                                </text>
+<text class="text fg" x="25.6" y="56"> echo &apos;I am an idiot savant dev</text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor-active" x="323.2" y="58.4" width="9.6" height="22.4" fill="#c9d1d9"/>
+<rect class="cursor-active" x="323.2" y="56" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
 <text class="text dim" x="400" y="142.8" text-anchor="end" fill="#c9d1d9">by talhayut</text>
-    <animate
-      attributeName="visibility"
-      values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.344642;0.355875;1.000000"
-      dur="4.45s"
-      repeatCount="indefinite"
-      calcMode="discrete"
-      fill="freeze"
-    />
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.342328;0.353256;1" dur="4.48s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-31" visibility="hidden">
@@ -877,21 +596,13 @@
 <circle cx="62" cy="20" r="6" fill="#27c93f"/></g>
 <g class="text-layer">
 <text class="text f2" x="16" y="56">$</text>
-<text class="text fg" x="25.6" y="56"> echo &apos;I am an idiot savant deve                                               </text>
+<text class="text fg" x="25.6" y="56"> echo &apos;I am an idiot savant deve</text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor-active" x="332.8" y="58.4" width="9.6" height="22.4" fill="#c9d1d9"/>
+<rect class="cursor-active" x="332.8" y="56" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
 <text class="text dim" x="400" y="142.8" text-anchor="end" fill="#c9d1d9">by talhayut</text>
-    <animate
-      attributeName="visibility"
-      values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.355875;0.367109;1.000000"
-      dur="4.45s"
-      repeatCount="indefinite"
-      calcMode="discrete"
-      fill="freeze"
-    />
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.353256;0.36463;1" dur="4.48s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-32" visibility="hidden">
@@ -903,21 +614,13 @@
 <circle cx="62" cy="20" r="6" fill="#27c93f"/></g>
 <g class="text-layer">
 <text class="text f2" x="16" y="56">$</text>
-<text class="text fg" x="25.6" y="56"> echo &apos;I am an idiot savant devel                                              </text>
+<text class="text fg" x="25.6" y="56"> echo &apos;I am an idiot savant devel</text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor-active" x="342.4" y="58.4" width="9.6" height="22.4" fill="#c9d1d9"/>
+<rect class="cursor-active" x="342.4" y="56" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
 <text class="text dim" x="400" y="142.8" text-anchor="end" fill="#c9d1d9">by talhayut</text>
-    <animate
-      attributeName="visibility"
-      values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.367109;0.378791;1.000000"
-      dur="4.45s"
-      repeatCount="indefinite"
-      calcMode="discrete"
-      fill="freeze"
-    />
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.36463;0.376004;1" dur="4.48s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-33" visibility="hidden">
@@ -929,21 +632,13 @@
 <circle cx="62" cy="20" r="6" fill="#27c93f"/></g>
 <g class="text-layer">
 <text class="text f2" x="16" y="56">$</text>
-<text class="text fg" x="25.6" y="56"> echo &apos;I am an idiot savant develo                                             </text>
+<text class="text fg" x="25.6" y="56"> echo &apos;I am an idiot savant develo</text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor-active" x="352" y="58.4" width="9.6" height="22.4" fill="#c9d1d9"/>
+<rect class="cursor-active" x="352" y="56" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
 <text class="text dim" x="400" y="142.8" text-anchor="end" fill="#c9d1d9">by talhayut</text>
-    <animate
-      attributeName="visibility"
-      values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.378791;0.390474;1.000000"
-      dur="4.45s"
-      repeatCount="indefinite"
-      calcMode="discrete"
-      fill="freeze"
-    />
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.376004;0.387377;1" dur="4.48s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-34" visibility="hidden">
@@ -955,21 +650,13 @@
 <circle cx="62" cy="20" r="6" fill="#27c93f"/></g>
 <g class="text-layer">
 <text class="text f2" x="16" y="56">$</text>
-<text class="text fg" x="25.6" y="56"> echo &apos;I am an idiot savant develop                                            </text>
+<text class="text fg" x="25.6" y="56"> echo &apos;I am an idiot savant develop</text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor-active" x="361.59999999999997" y="58.4" width="9.6" height="22.4" fill="#c9d1d9"/>
+<rect class="cursor-active" x="361.6" y="56" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
 <text class="text dim" x="400" y="142.8" text-anchor="end" fill="#c9d1d9">by talhayut</text>
-    <animate
-      attributeName="visibility"
-      values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.390474;0.401483;1.000000"
-      dur="4.45s"
-      repeatCount="indefinite"
-      calcMode="discrete"
-      fill="freeze"
-    />
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.387377;0.399197;1" dur="4.48s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-35" visibility="hidden">
@@ -981,21 +668,13 @@
 <circle cx="62" cy="20" r="6" fill="#27c93f"/></g>
 <g class="text-layer">
 <text class="text f2" x="16" y="56">$</text>
-<text class="text fg" x="25.6" y="56"> echo &apos;I am an idiot savant develope                                           </text>
+<text class="text fg" x="25.6" y="56"> echo &apos;I am an idiot savant develope</text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor-active" x="371.2" y="58.4" width="9.6" height="22.4" fill="#c9d1d9"/>
+<rect class="cursor-active" x="371.2" y="56" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
 <text class="text dim" x="400" y="142.8" text-anchor="end" fill="#c9d1d9">by talhayut</text>
-    <animate
-      attributeName="visibility"
-      values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.401483;0.413166;1.000000"
-      dur="4.45s"
-      repeatCount="indefinite"
-      calcMode="discrete"
-      fill="freeze"
-    />
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.399197;0.410794;1" dur="4.48s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-36" visibility="hidden">
@@ -1007,21 +686,13 @@
 <circle cx="62" cy="20" r="6" fill="#27c93f"/></g>
 <g class="text-layer">
 <text class="text f2" x="16" y="56">$</text>
-<text class="text fg" x="25.6" y="56"> echo &apos;I am an idiot savant developer                                          </text>
+<text class="text fg" x="25.6" y="56"> echo &apos;I am an idiot savant developer</text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor-active" x="380.8" y="58.4" width="9.6" height="22.4" fill="#c9d1d9"/>
+<rect class="cursor-active" x="380.8" y="56" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
 <text class="text dim" x="400" y="142.8" text-anchor="end" fill="#c9d1d9">by talhayut</text>
-    <animate
-      attributeName="visibility"
-      values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.413166;0.424848;1.000000"
-      dur="4.45s"
-      repeatCount="indefinite"
-      calcMode="discrete"
-      fill="freeze"
-    />
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.410794;0.422837;1" dur="4.48s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-37" visibility="hidden">
@@ -1033,21 +704,13 @@
 <circle cx="62" cy="20" r="6" fill="#27c93f"/></g>
 <g class="text-layer">
 <text class="text f2" x="16" y="56">$</text>
-<text class="text fg" x="25.6" y="56"> echo &apos;I am an idiot savant developer&apos;                                         </text>
+<text class="text fg" x="25.6" y="56"> echo &apos;I am an idiot savant developer&apos;</text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor-active" x="390.4" y="58.4" width="9.6" height="22.4" fill="#c9d1d9"/>
+<rect class="cursor-active" x="390.4" y="56" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
 <text class="text dim" x="400" y="142.8" text-anchor="end" fill="#c9d1d9">by talhayut</text>
-    <animate
-      attributeName="visibility"
-      values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.424848;0.436531;1.000000"
-      dur="4.45s"
-      repeatCount="indefinite"
-      calcMode="discrete"
-      fill="freeze"
-    />
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.422837;0.422168;1" dur="4.48s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-38" visibility="hidden">
@@ -1059,21 +722,13 @@
 <circle cx="62" cy="20" r="6" fill="#27c93f"/></g>
 <g class="text-layer">
 <text class="text f2" x="16" y="56">$</text>
-<text class="text fg" x="25.6" y="56"> echo &apos;I am an idiot savant developer&apos;                                         </text>
+<text class="text fg" x="25.6" y="56"> echo &apos;I am an idiot savant developer&apos;</text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor-active" x="380.8" y="58.4" width="9.6" height="22.4" fill="#c9d1d9"/>
+<rect class="cursor" x="390.4" y="56" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
 <text class="text dim" x="400" y="142.8" text-anchor="end" fill="#c9d1d9">by talhayut</text>
-    <animate
-      attributeName="visibility"
-      values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.436531;0.448439;1.000000"
-      dur="4.45s"
-      repeatCount="indefinite"
-      calcMode="discrete"
-      fill="freeze"
-    />
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.422168;0.434434;1" dur="4.48s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-39" visibility="hidden">
@@ -1085,21 +740,13 @@
 <circle cx="62" cy="20" r="6" fill="#27c93f"/></g>
 <g class="text-layer">
 <text class="text f2" x="16" y="56">$</text>
-<text class="text fg" x="25.6" y="56"> echo &apos;I am an idiot savant developer&apos;                                         </text>
+<text class="text fg" x="25.6" y="56"> echo &apos;I am an idiot savant developer&apos;</text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor-active" x="371.2" y="58.4" width="9.6" height="22.4" fill="#c9d1d9"/>
+<rect class="cursor-active" x="380.8" y="56" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
 <text class="text dim" x="400" y="142.8" text-anchor="end" fill="#c9d1d9">by talhayut</text>
-    <animate
-      attributeName="visibility"
-      values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.448439;0.460571;1.000000"
-      dur="4.45s"
-      repeatCount="indefinite"
-      calcMode="discrete"
-      fill="freeze"
-    />
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.434434;0.446922;1" dur="4.48s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-40" visibility="hidden">
@@ -1111,21 +758,13 @@
 <circle cx="62" cy="20" r="6" fill="#27c93f"/></g>
 <g class="text-layer">
 <text class="text f2" x="16" y="56">$</text>
-<text class="text fg" x="25.6" y="56"> echo &apos;I am an idiot savant developer&apos;                                         </text>
+<text class="text fg" x="25.6" y="56"> echo &apos;I am an idiot savant developer&apos;</text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor-active" x="361.59999999999997" y="58.4" width="9.6" height="22.4" fill="#c9d1d9"/>
+<rect class="cursor-active" x="371.2" y="56" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
 <text class="text dim" x="400" y="142.8" text-anchor="end" fill="#c9d1d9">by talhayut</text>
-    <animate
-      attributeName="visibility"
-      values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.460571;0.472478;1.000000"
-      dur="4.45s"
-      repeatCount="indefinite"
-      calcMode="discrete"
-      fill="freeze"
-    />
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.446922;0.459411;1" dur="4.48s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-41" visibility="hidden">
@@ -1137,21 +776,13 @@
 <circle cx="62" cy="20" r="6" fill="#27c93f"/></g>
 <g class="text-layer">
 <text class="text f2" x="16" y="56">$</text>
-<text class="text fg" x="25.6" y="56"> echo &apos;I am an idiot savant developer&apos;                                         </text>
+<text class="text fg" x="25.6" y="56"> echo &apos;I am an idiot savant developer&apos;</text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor-active" x="352" y="58.4" width="9.6" height="22.4" fill="#c9d1d9"/>
+<rect class="cursor-active" x="361.6" y="56" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
 <text class="text dim" x="400" y="142.8" text-anchor="end" fill="#c9d1d9">by talhayut</text>
-    <animate
-      attributeName="visibility"
-      values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.472478;0.484835;1.000000"
-      dur="4.45s"
-      repeatCount="indefinite"
-      calcMode="discrete"
-      fill="freeze"
-    />
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.459411;0.472346;1" dur="4.48s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-42" visibility="hidden">
@@ -1163,21 +794,13 @@
 <circle cx="62" cy="20" r="6" fill="#27c93f"/></g>
 <g class="text-layer">
 <text class="text f2" x="16" y="56">$</text>
-<text class="text fg" x="25.6" y="56"> echo &apos;I am an idiot savant developer&apos;                                         </text>
+<text class="text fg" x="25.6" y="56"> echo &apos;I am an idiot savant developer&apos;</text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor-active" x="342.4" y="58.4" width="9.6" height="22.4" fill="#c9d1d9"/>
+<rect class="cursor-active" x="352" y="56" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
 <text class="text dim" x="400" y="142.8" text-anchor="end" fill="#c9d1d9">by talhayut</text>
-    <animate
-      attributeName="visibility"
-      values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.484835;0.496967;1.000000"
-      dur="4.45s"
-      repeatCount="indefinite"
-      calcMode="discrete"
-      fill="freeze"
-    />
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.472346;0.484612;1" dur="4.48s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-43" visibility="hidden">
@@ -1189,21 +812,13 @@
 <circle cx="62" cy="20" r="6" fill="#27c93f"/></g>
 <g class="text-layer">
 <text class="text f2" x="16" y="56">$</text>
-<text class="text fg" x="25.6" y="56"> echo &apos;I am an idiot savant developer&apos;                                         </text>
+<text class="text fg" x="25.6" y="56"> echo &apos;I am an idiot savant developer&apos;</text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor-active" x="332.8" y="58.4" width="9.6" height="22.4" fill="#c9d1d9"/>
+<rect class="cursor-active" x="342.4" y="56" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
 <text class="text dim" x="400" y="142.8" text-anchor="end" fill="#c9d1d9">by talhayut</text>
-    <animate
-      attributeName="visibility"
-      values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.496967;0.509548;1.000000"
-      dur="4.45s"
-      repeatCount="indefinite"
-      calcMode="discrete"
-      fill="freeze"
-    />
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.484612;0.497547;1" dur="4.48s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-44" visibility="hidden">
@@ -1215,21 +830,13 @@
 <circle cx="62" cy="20" r="6" fill="#27c93f"/></g>
 <g class="text-layer">
 <text class="text f2" x="16" y="56">$</text>
-<text class="text fg" x="25.6" y="56"> echo &apos;I am an idiot savant developer&apos;                                         </text>
+<text class="text fg" x="25.6" y="56"> echo &apos;I am an idiot savant developer&apos;</text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor-active" x="323.2" y="58.4" width="9.6" height="22.4" fill="#c9d1d9"/>
+<rect class="cursor-active" x="332.8" y="56" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
 <text class="text dim" x="400" y="142.8" text-anchor="end" fill="#c9d1d9">by talhayut</text>
-    <animate
-      attributeName="visibility"
-      values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.509548;0.521681;1.000000"
-      dur="4.45s"
-      repeatCount="indefinite"
-      calcMode="discrete"
-      fill="freeze"
-    />
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.497547;0.510036;1" dur="4.48s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-45" visibility="hidden">
@@ -1241,21 +848,13 @@
 <circle cx="62" cy="20" r="6" fill="#27c93f"/></g>
 <g class="text-layer">
 <text class="text f2" x="16" y="56">$</text>
-<text class="text fg" x="25.6" y="56"> echo &apos;I am an idiot savant developer&apos;                                         </text>
+<text class="text fg" x="25.6" y="56"> echo &apos;I am an idiot savant developer&apos;</text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor-active" x="313.59999999999997" y="58.4" width="9.6" height="22.4" fill="#c9d1d9"/>
+<rect class="cursor-active" x="323.2" y="56" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
 <text class="text dim" x="400" y="142.8" text-anchor="end" fill="#c9d1d9">by talhayut</text>
-    <animate
-      attributeName="visibility"
-      values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.521681;0.534037;1.000000"
-      dur="4.45s"
-      repeatCount="indefinite"
-      calcMode="discrete"
-      fill="freeze"
-    />
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.510036;0.522079;1" dur="4.48s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-46" visibility="hidden">
@@ -1267,21 +866,13 @@
 <circle cx="62" cy="20" r="6" fill="#27c93f"/></g>
 <g class="text-layer">
 <text class="text f2" x="16" y="56">$</text>
-<text class="text fg" x="25.6" y="56"> echo &apos;I am an idiot savant developer&apos;                                         </text>
+<text class="text fg" x="25.6" y="56"> echo &apos;I am an idiot savant developer&apos;</text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor-active" x="304" y="58.4" width="9.6" height="22.4" fill="#c9d1d9"/>
+<rect class="cursor-active" x="313.6" y="56" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
 <text class="text dim" x="400" y="142.8" text-anchor="end" fill="#c9d1d9">by talhayut</text>
-    <animate
-      attributeName="visibility"
-      values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.534037;0.546394;1.000000"
-      dur="4.45s"
-      repeatCount="indefinite"
-      calcMode="discrete"
-      fill="freeze"
-    />
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.522079;0.534344;1" dur="4.48s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-47" visibility="hidden">
@@ -1293,21 +884,13 @@
 <circle cx="62" cy="20" r="6" fill="#27c93f"/></g>
 <g class="text-layer">
 <text class="text f2" x="16" y="56">$</text>
-<text class="text fg" x="25.6" y="56"> echo &apos;I am an idiot savant developer&apos;                                         </text>
+<text class="text fg" x="25.6" y="56"> echo &apos;I am an idiot savant developer&apos;</text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor-active" x="294.4" y="58.4" width="9.6" height="22.4" fill="#c9d1d9"/>
+<rect class="cursor-active" x="304" y="56" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
 <text class="text dim" x="400" y="142.8" text-anchor="end" fill="#c9d1d9">by talhayut</text>
-    <animate
-      attributeName="visibility"
-      values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.546394;0.558526;1.000000"
-      dur="4.45s"
-      repeatCount="indefinite"
-      calcMode="discrete"
-      fill="freeze"
-    />
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.534344;0.546833;1" dur="4.48s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-48" visibility="hidden">
@@ -1319,21 +902,13 @@
 <circle cx="62" cy="20" r="6" fill="#27c93f"/></g>
 <g class="text-layer">
 <text class="text f2" x="16" y="56">$</text>
-<text class="text fg" x="25.6" y="56"> echo &apos;I am an idiot savantdeveloper&apos;                                          </text>
+<text class="text fg" x="25.6" y="56"> echo &apos;I am an idiot savant developer&apos;</text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor-active" x="284.8" y="58.4" width="9.6" height="22.4" fill="#c9d1d9"/>
+<rect class="cursor-active" x="294.4" y="56" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
 <text class="text dim" x="400" y="142.8" text-anchor="end" fill="#c9d1d9">by talhayut</text>
-    <animate
-      attributeName="visibility"
-      values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.558526;0.571108;1.000000"
-      dur="4.45s"
-      repeatCount="indefinite"
-      calcMode="discrete"
-      fill="freeze"
-    />
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.546833;0.559768;1" dur="4.48s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-49" visibility="hidden">
@@ -1345,21 +920,13 @@
 <circle cx="62" cy="20" r="6" fill="#27c93f"/></g>
 <g class="text-layer">
 <text class="text f2" x="16" y="56">$</text>
-<text class="text fg" x="25.6" y="56"> echo &apos;I am an idiot savandeveloper&apos;                                           </text>
+<text class="text fg" x="25.6" y="56"> echo &apos;I am an idiot savantdeveloper&apos;</text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor-active" x="275.2" y="58.4" width="9.6" height="22.4" fill="#c9d1d9"/>
+<rect class="cursor-active" x="284.8" y="56" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
 <text class="text dim" x="400" y="142.8" text-anchor="end" fill="#c9d1d9">by talhayut</text>
-    <animate
-      attributeName="visibility"
-      values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.571108;0.583464;1.000000"
-      dur="4.45s"
-      repeatCount="indefinite"
-      calcMode="discrete"
-      fill="freeze"
-    />
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.559768;0.572257;1" dur="4.48s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-50" visibility="hidden">
@@ -1371,21 +938,13 @@
 <circle cx="62" cy="20" r="6" fill="#27c93f"/></g>
 <g class="text-layer">
 <text class="text f2" x="16" y="56">$</text>
-<text class="text fg" x="25.6" y="56"> echo &apos;I am an idiot savadeveloper&apos;                                            </text>
+<text class="text fg" x="25.6" y="56"> echo &apos;I am an idiot savandeveloper&apos;</text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor-active" x="265.6" y="58.4" width="9.6" height="22.4" fill="#c9d1d9"/>
+<rect class="cursor-active" x="275.2" y="56" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
 <text class="text dim" x="400" y="142.8" text-anchor="end" fill="#c9d1d9">by talhayut</text>
-    <animate
-      attributeName="visibility"
-      values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.583464;0.595372;1.000000"
-      dur="4.45s"
-      repeatCount="indefinite"
-      calcMode="discrete"
-      fill="freeze"
-    />
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.572257;0.584746;1" dur="4.48s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-51" visibility="hidden">
@@ -1397,21 +956,13 @@
 <circle cx="62" cy="20" r="6" fill="#27c93f"/></g>
 <g class="text-layer">
 <text class="text f2" x="16" y="56">$</text>
-<text class="text fg" x="25.6" y="56"> echo &apos;I am an idiot savdeveloper&apos;                                             </text>
+<text class="text fg" x="25.6" y="56"> echo &apos;I am an idiot savadeveloper&apos;</text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor-active" x="256" y="58.4" width="9.6" height="22.4" fill="#c9d1d9"/>
+<rect class="cursor-active" x="265.6" y="56" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
 <text class="text dim" x="400" y="142.8" text-anchor="end" fill="#c9d1d9">by talhayut</text>
-    <animate
-      attributeName="visibility"
-      values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.595372;0.607279;1.000000"
-      dur="4.45s"
-      repeatCount="indefinite"
-      calcMode="discrete"
-      fill="freeze"
-    />
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.584746;0.597458;1" dur="4.48s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-52" visibility="hidden">
@@ -1423,21 +974,13 @@
 <circle cx="62" cy="20" r="6" fill="#27c93f"/></g>
 <g class="text-layer">
 <text class="text f2" x="16" y="56">$</text>
-<text class="text fg" x="25.6" y="56"> echo &apos;I am an idiot sadeveloper&apos;                                              </text>
+<text class="text fg" x="25.6" y="56"> echo &apos;I am an idiot savdeveloper&apos;</text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor-active" x="246.39999999999998" y="58.4" width="9.6" height="22.4" fill="#c9d1d9"/>
+<rect class="cursor-active" x="256" y="56" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
 <text class="text dim" x="400" y="142.8" text-anchor="end" fill="#c9d1d9">by talhayut</text>
-    <animate
-      attributeName="visibility"
-      values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.607279;0.619411;1.000000"
-      dur="4.45s"
-      repeatCount="indefinite"
-      calcMode="discrete"
-      fill="freeze"
-    />
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.597458;0.6095;1" dur="4.48s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-53" visibility="hidden">
@@ -1449,21 +992,13 @@
 <circle cx="62" cy="20" r="6" fill="#27c93f"/></g>
 <g class="text-layer">
 <text class="text f2" x="16" y="56">$</text>
-<text class="text fg" x="25.6" y="56"> echo &apos;I am an idiot sdeveloper&apos;                                               </text>
+<text class="text fg" x="25.6" y="56"> echo &apos;I am an idiot sadeveloper&apos;</text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor-active" x="236.79999999999998" y="58.4" width="9.6" height="22.4" fill="#c9d1d9"/>
+<rect class="cursor-active" x="246.4" y="56" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
 <text class="text dim" x="400" y="142.8" text-anchor="end" fill="#c9d1d9">by talhayut</text>
-    <animate
-      attributeName="visibility"
-      values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.619411;0.631319;1.000000"
-      dur="4.45s"
-      repeatCount="indefinite"
-      calcMode="discrete"
-      fill="freeze"
-    />
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.6095;0.621989;1" dur="4.48s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-54" visibility="hidden">
@@ -1475,21 +1010,13 @@
 <circle cx="62" cy="20" r="6" fill="#27c93f"/></g>
 <g class="text-layer">
 <text class="text f2" x="16" y="56">$</text>
-<text class="text fg" x="25.6" y="56"> echo &apos;I am an idiot developer&apos;                                                </text>
+<text class="text fg" x="25.6" y="56"> echo &apos;I am an idiot sdeveloper&apos;</text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor-active" x="227.2" y="58.4" width="9.6" height="22.4" fill="#c9d1d9"/>
+<rect class="cursor-active" x="236.8" y="56" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
 <text class="text dim" x="400" y="142.8" text-anchor="end" fill="#c9d1d9">by talhayut</text>
-    <animate
-      attributeName="visibility"
-      values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.631319;0.654460;1.000000"
-      dur="4.45s"
-      repeatCount="indefinite"
-      calcMode="discrete"
-      fill="freeze"
-    />
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.621989;0.634701;1" dur="4.48s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-55" visibility="hidden">
@@ -1501,21 +1028,13 @@
 <circle cx="62" cy="20" r="6" fill="#27c93f"/></g>
 <g class="text-layer">
 <text class="text f2" x="16" y="56">$</text>
-<text class="text fg" x="25.6" y="56"> echo &apos;I am an idiot developer&apos;                                                </text>
+<text class="text fg" x="25.6" y="56"> echo &apos;I am an idiot developer&apos;</text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor" x="227.2" y="58.4" width="9.6" height="22.4" fill="#c9d1d9"/>
+<rect class="cursor-active" x="227.2" y="56" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
 <text class="text dim" x="400" y="142.8" text-anchor="end" fill="#c9d1d9">by talhayut</text>
-    <animate
-      attributeName="visibility"
-      values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.654460;0.678724;1.000000"
-      dur="4.45s"
-      repeatCount="indefinite"
-      calcMode="discrete"
-      fill="freeze"
-    />
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.634701;0.658341;1" dur="4.48s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-56" visibility="hidden">
@@ -1527,18 +1046,13 @@
 <circle cx="62" cy="20" r="6" fill="#27c93f"/></g>
 <g class="text-layer">
 <text class="text f2" x="16" y="56">$</text>
-<text class="text fg" x="25.6" y="56"> echo &apos;I am an idiot developer&apos;                                                </text>
+<text class="text fg" x="25.6" y="56"> echo &apos;I am an idiot developer&apos;</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor" x="227.2" y="56" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
 <text class="text dim" x="400" y="142.8" text-anchor="end" fill="#c9d1d9">by talhayut</text>
-    <animate
-      attributeName="visibility"
-      values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.678724;0.705010;1.000000"
-      dur="4.45s"
-      repeatCount="indefinite"
-      calcMode="discrete"
-      fill="freeze"
-    />
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.658341;0.682649;1" dur="4.48s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-57" visibility="hidden">
@@ -1550,23 +1064,10 @@
 <circle cx="62" cy="20" r="6" fill="#27c93f"/></g>
 <g class="text-layer">
 <text class="text f2" x="16" y="56">$</text>
-<text class="text fg" x="25.6" y="56"> echo &apos;I am an idiot developer&apos;                                                </text>
-<text class="text fg" x="16" y="78.4">I am an idiot developer                                                         </text>
-<text class="text f2" x="16" y="100.8">$</text>
-</g>
-<g class="cursor-layer">
-<rect class="cursor" x="35.2" y="103.2" width="9.6" height="22.4" fill="#c9d1d9"/>
+<text class="text fg" x="25.6" y="56"> echo &apos;I am an idiot developer&apos;</text>
 </g>
 <text class="text dim" x="400" y="142.8" text-anchor="end" fill="#c9d1d9">by talhayut</text>
-    <animate
-      attributeName="visibility"
-      values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.705010;0.774208;1.000000"
-      dur="4.45s"
-      repeatCount="indefinite"
-      calcMode="discrete"
-      fill="freeze"
-    />
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.682649;0.709188;1" dur="4.48s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-58" visibility="hidden">
@@ -1578,23 +1079,15 @@
 <circle cx="62" cy="20" r="6" fill="#27c93f"/></g>
 <g class="text-layer">
 <text class="text f2" x="16" y="56">$</text>
-<text class="text fg" x="25.6" y="56"> echo &apos;I am an idiot developer&apos;                                                </text>
-<text class="text fg" x="16" y="78.4">I am an idiot developer                                                         </text>
+<text class="text fg" x="25.6" y="56"> echo &apos;I am an idiot developer&apos;</text>
+<text class="text fg" x="16" y="78.4">I am an idiot developer</text>
 <text class="text f2" x="16" y="100.8">$</text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor" x="35.2" y="103.2" width="9.6" height="22.4" fill="#c9d1d9"/>
+<rect class="cursor" x="35.2" y="100.8" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
 <text class="text dim" x="400" y="142.8" text-anchor="end" fill="#c9d1d9">by talhayut</text>
-    <animate
-      attributeName="visibility"
-      values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.774208;0.775331;1.000000"
-      dur="4.45s"
-      repeatCount="indefinite"
-      calcMode="discrete"
-      fill="freeze"
-    />
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.709188;0.776762;1" dur="4.48s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-59" visibility="hidden">
@@ -1606,23 +1099,35 @@
 <circle cx="62" cy="20" r="6" fill="#27c93f"/></g>
 <g class="text-layer">
 <text class="text f2" x="16" y="56">$</text>
-<text class="text fg" x="25.6" y="56"> echo &apos;I am an idiot developer&apos;                                                </text>
-<text class="text fg" x="16" y="78.4">I am an idiot developer                                                         </text>
+<text class="text fg" x="25.6" y="56"> echo &apos;I am an idiot developer&apos;</text>
+<text class="text fg" x="16" y="78.4">I am an idiot developer</text>
 <text class="text f2" x="16" y="100.8">$</text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor" x="35.2" y="103.2" width="9.6" height="22.4" fill="#c9d1d9"/>
+<rect class="cursor" x="35.2" y="100.8" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
 <text class="text dim" x="400" y="142.8" text-anchor="end" fill="#c9d1d9">by talhayut</text>
-    <animate
-      attributeName="visibility"
-      values="hidden;visible;visible"
-      keyTimes="0.000000;0.775331;1.000000"
-      dur="4.45s"
-      repeatCount="indefinite"
-      calcMode="discrete"
-      fill="freeze"
-    />
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.776762;0.776985;1" dur="4.48s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-60" visibility="hidden">
+    <rect class="window-bg" x="0" y="0" width="416" height="170" fill="#0d1117" rx="8" ry="8"/>
+<g class="chrome"><rect class="header-bg" x="0" y="0" width="416" height="40" fill="#0d1117" rx="8" ry="8"/>
+<rect x="0" y="32" width="416" height="8" fill="#0d1117"/>
+<circle cx="22" cy="20" r="6" fill="#ff5f56"/>
+<circle cx="42" cy="20" r="6" fill="#ffbd2e"/>
+<circle cx="62" cy="20" r="6" fill="#27c93f"/></g>
+<g class="text-layer">
+<text class="text f2" x="16" y="56">$</text>
+<text class="text fg" x="25.6" y="56"> echo &apos;I am an idiot developer&apos;</text>
+<text class="text fg" x="16" y="78.4">I am an idiot developer</text>
+<text class="text f2" x="16" y="100.8">$</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor" x="35.2" y="100.8" width="9.6" height="22.4" fill="#c9d1d9"/>
+</g>
+<text class="text dim" x="400" y="142.8" text-anchor="end" fill="#c9d1d9">by talhayut</text>
+    <animate attributeName="visibility" values="hidden;visible;visible" keyTimes="0;0.776985;1" dur="4.48s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
   </g>
 </svg>

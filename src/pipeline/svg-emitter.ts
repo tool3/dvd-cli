@@ -12,6 +12,27 @@ import type { SpanRow, Span, CellStyle, Theme, EmitterOptions, CursorPosition } 
 import { coalesceBackgrounds, mergeVerticalBackgrounds, type BgRect, type RenderConfig } from './coalescer';
 
 // ============================================================================
+// SVG Optimization Utilities
+// ============================================================================
+
+/**
+ * Round coordinate to 1 decimal place for smaller SVG output
+ * Converts numbers like 37.599999999999994 to 37.6
+ */
+function r(n: number): number {
+  return Math.round(n * 10) / 10;
+}
+
+/**
+ * Format a number for SVG output - removes unnecessary decimal places
+ * 37.0 -> "37", 37.6 -> "37.6", 37.65 -> "37.7"
+ */
+function fmt(n: number): string {
+  const rounded = r(n);
+  return rounded === Math.floor(rounded) ? String(Math.floor(rounded)) : String(rounded);
+}
+
+// ============================================================================
 // CSS Class Generation
 // ============================================================================
 
@@ -39,8 +60,10 @@ function isTruecolor(color: string | null): boolean {
 
 /**
  * Generate the CSS stylesheet for the SVG
+ * @param usedColors Optional set of color class names actually used (e.g., 'fg', 'f0', 'b5')
+ *                   If provided, only generates CSS for those colors
  */
-export function generateStylesheet(theme: Theme, options: EmitterOptions): string {
+export function generateStylesheet(theme: Theme, options: EmitterOptions, usedColors?: Set<string>): string {
   const fontSize = options.fontSize;
   const lineHeight = options.lineHeight ?? fontSize * 1.4;
 
@@ -103,15 +126,26 @@ export function generateStylesheet(theme: Theme, options: EmitterOptions): strin
     theme.brightWhite,
   ];
 
-  lines.push(`.fg { fill: ${theme.foreground}; }`);
+  // Only generate color classes that are actually used (or all if usedColors not provided)
+  const shouldInclude = (cls: string) => !usedColors || usedColors.has(cls);
+
+  if (shouldInclude('fg')) {
+    lines.push(`.fg { fill: ${theme.foreground}; }`);
+  }
   fgColors.forEach((color, i) => {
-    lines.push(`.f${i} { fill: ${color}; }`);
+    if (shouldInclude(`f${i}`)) {
+      lines.push(`.f${i} { fill: ${color}; }`);
+    }
   });
 
   // Background colors (ANSI 16)
-  lines.push(`.bg { fill: ${theme.background}; }`);
+  if (shouldInclude('bg')) {
+    lines.push(`.bg { fill: ${theme.background}; }`);
+  }
   fgColors.forEach((color, i) => {
-    lines.push(`.b${i} { fill: ${color}; }`);
+    if (shouldInclude(`b${i}`)) {
+      lines.push(`.b${i} { fill: ${color}; }`);
+    }
   });
 
   // Cursor styles
@@ -406,7 +440,7 @@ export function emit(
   if (mergedBgRects.length > 0) {
     parts.push('<g class="bg-layer">');
     for (const rect of mergedBgRects) {
-      parts.push(`<rect x="${rect.x}" y="${rect.y}" width="${rect.width}" height="${rect.height}" fill="${rect.color}"/>`);
+      parts.push(`<rect x="${fmt(rect.x)}" y="${fmt(rect.y)}" width="${fmt(rect.width)}" height="${fmt(rect.height)}" fill="${rect.color}"/>`);
     }
     parts.push('</g>');
   }
@@ -415,8 +449,8 @@ export function emit(
   parts.push('<g class="text-layer">');
   for (const row of rows) {
     for (const span of row) {
-      const x = padding + span.col * charWidth;
-      const y = contentStartY + span.row * lineHeight;
+      const x = r(padding + span.col * charWidth);
+      const y = r(contentStartY + span.row * lineHeight);
 
       const classes = ['text', ...styleToClasses(span.style)];
 
@@ -439,9 +473,12 @@ export function emit(
       }
 
       const classAttr = classes.join(' ');
-      const text = escapeXml(span.text);
+      // Trim trailing whitespace unless there's a background color that needs to extend
+      const rawText = span.style.bg ? span.text : span.text.trimEnd();
+      if (!rawText) continue; // Skip empty text spans
+      const text = escapeXml(rawText);
 
-      parts.push(`<text class="${classAttr}" x="${x}" y="${y}"${fillAttr}>${text}</text>`);
+      parts.push(`<text class="${classAttr}" x="${fmt(x)}" y="${fmt(y)}"${fillAttr}>${text}</text>`);
     }
   }
   parts.push('</g>');
@@ -451,33 +488,33 @@ export function emit(
     const { start, end, row } = options.selection;
     const selStart = Math.min(start, end);
     const selEnd = Math.max(start, end);
-    const selectionX = padding + selStart * charWidth;
-    const selectionY = contentStartY + row * lineHeight;
-    const selectionWidth = (selEnd - selStart) * charWidth;
+    const selectionX = r(padding + selStart * charWidth);
+    const selectionY = r(contentStartY + row * lineHeight);
+    const selectionWidth = r((selEnd - selStart) * charWidth);
     const selectionColor = theme.selection ?? '#44475a';
 
     parts.push('<g class="selection-layer">');
     parts.push(
-      `<rect x="${selectionX}" y="${selectionY}" ` +
-      `width="${selectionWidth}" height="${lineHeight}" fill="${selectionColor}" opacity="0.5"/>`
+      `<rect x="${fmt(selectionX)}" y="${fmt(selectionY)}" ` +
+      `width="${fmt(selectionWidth)}" height="${fmt(lineHeight)}" fill="${selectionColor}" opacity="0.5"/>`
     );
     parts.push('</g>');
   }
 
   // Cursor layer
   if (cursor && cursorVisible) {
-    const cursorX = padding + cursor.col * charWidth;
-    const rowY = contentStartY + cursor.row * lineHeight;
+    const cursorX = r(padding + cursor.col * charWidth);
+    const rowY = r(contentStartY + cursor.row * lineHeight);
 
     // When custom lineHeight is provided, adjust cursor to align with text center
     // Cursor height = fontSize, positioned so cursor's middle aligns with text's middle
     const hasCustomLineHeight = options.hasCustomLineHeight ?? false;
-    const cursorHeight = hasCustomLineHeight ? fontSize : lineHeight;
+    const cursorHeight = r(hasCustomLineHeight ? fontSize : lineHeight);
     // With text-before-edge baseline, the visible text center is approximately at 60% of fontSize
     // cursorCenter = cursorY + cursorHeight/2, textCenter = rowY + fontSize * 0.6
     // So cursorY = textCenter - cursorHeight/2 = rowY + fontSize*0.6 - cursorHeight/2
     const cursorYOffset = hasCustomLineHeight ? (fontSize * 0.65) - (cursorHeight / 2) : 0;
-    const cursorY = rowY + cursorYOffset;
+    const cursorY = r(rowY + cursorYOffset);
 
     const cursorColor = options.cursorColor ?? theme.cursor ?? theme.foreground;
     // Use cursor-active class when actively typing (no blink)
@@ -487,21 +524,21 @@ export function emit(
     parts.push('<g class="cursor-layer">');
     if (cursorStyle === 'block') {
       parts.push(
-        `<rect class="${cursorClass}" x="${cursorX}" y="${cursorY}" ` +
-        `width="${charWidth}" height="${cursorHeight}" fill="${cursorColor}"/>`
+        `<rect class="${cursorClass}" x="${fmt(cursorX)}" y="${fmt(cursorY)}" ` +
+        `width="${fmt(charWidth)}" height="${fmt(cursorHeight)}" fill="${cursorColor}"/>`
       );
     } else if (cursorStyle === 'bar') {
       // Vertical bar cursor (2px wide)
       parts.push(
-        `<rect class="${cursorClass}" x="${cursorX}" y="${cursorY}" ` +
-        `width="2" height="${cursorHeight}" fill="${cursorColor}"/>`
+        `<rect class="${cursorClass}" x="${fmt(cursorX)}" y="${fmt(cursorY)}" ` +
+        `width="2" height="${fmt(cursorHeight)}" fill="${cursorColor}"/>`
       );
     } else if (cursorStyle === 'underline') {
       // Underline cursor (2px tall at bottom of cell)
-      const underlineY = cursorY + cursorHeight - 2;
+      const underlineY = r(cursorY + cursorHeight - 2);
       parts.push(
-        `<rect class="${cursorClass}" x="${cursorX}" y="${underlineY}" ` +
-        `width="${charWidth}" height="2" fill="${cursorColor}"/>`
+        `<rect class="${cursorClass}" x="${fmt(cursorX)}" y="${fmt(underlineY)}" ` +
+        `width="${fmt(charWidth)}" height="2" fill="${cursorColor}"/>`
       );
     }
     parts.push('</g>');
@@ -546,27 +583,36 @@ export function emit(
 
 /**
  * Get color class name if the color matches a theme color
+ * @param isBackground If true, returns background class (b0-b15), otherwise foreground (f0-f15)
  */
-function getColorClass(color: string, theme: Theme): string | null {
+function getColorClass(color: string, theme: Theme, isBackground = false): string | null {
+  const prefix = isBackground ? 'b' : 'f';
   const colorMap: Record<string, string> = {
-    [theme.black]: 'f0',
-    [theme.red]: 'f1',
-    [theme.green]: 'f2',
-    [theme.yellow]: 'f3',
-    [theme.blue]: 'f4',
-    [theme.magenta]: 'f5',
-    [theme.cyan]: 'f6',
-    [theme.white]: 'f7',
-    [theme.brightBlack]: 'f8',
-    [theme.brightRed]: 'f9',
-    [theme.brightGreen]: 'f10',
-    [theme.brightYellow]: 'f11',
-    [theme.brightBlue]: 'f12',
-    [theme.brightMagenta]: 'f13',
-    [theme.brightCyan]: 'f14',
-    [theme.brightWhite]: 'f15',
-    [theme.foreground]: 'fg',
+    [theme.black]: `${prefix}0`,
+    [theme.red]: `${prefix}1`,
+    [theme.green]: `${prefix}2`,
+    [theme.yellow]: `${prefix}3`,
+    [theme.blue]: `${prefix}4`,
+    [theme.magenta]: `${prefix}5`,
+    [theme.cyan]: `${prefix}6`,
+    [theme.white]: `${prefix}7`,
+    [theme.brightBlack]: `${prefix}8`,
+    [theme.brightRed]: `${prefix}9`,
+    [theme.brightGreen]: `${prefix}10`,
+    [theme.brightYellow]: `${prefix}11`,
+    [theme.brightBlue]: `${prefix}12`,
+    [theme.brightMagenta]: `${prefix}13`,
+    [theme.brightCyan]: `${prefix}14`,
+    [theme.brightWhite]: `${prefix}15`,
   };
+
+  // Add foreground/background special case
+  if (!isBackground && color === theme.foreground) {
+    return 'fg';
+  }
+  if (isBackground && color === theme.background) {
+    return 'bg';
+  }
 
   return colorMap[color] ?? null;
 }
@@ -791,7 +837,7 @@ function generateFrameContent(frame: FrameData, config: EmitterOptions & FrameRe
   if (mergedBgRects.length > 0) {
     parts.push('<g class="bg-layer">');
     for (const rect of mergedBgRects) {
-      parts.push(`<rect x="${rect.x}" y="${rect.y}" width="${rect.width}" height="${rect.height}" fill="${rect.color}"/>`);
+      parts.push(`<rect x="${fmt(rect.x)}" y="${fmt(rect.y)}" width="${fmt(rect.width)}" height="${fmt(rect.height)}" fill="${rect.color}"/>`);
     }
     parts.push('</g>');
   }
@@ -801,15 +847,15 @@ function generateFrameContent(frame: FrameData, config: EmitterOptions & FrameRe
     const { start, end, row } = selection;
     const selStart = Math.min(start, end);
     const selEnd = Math.max(start, end);
-    const selectionX = padding + selStart * charWidth;
-    const selectionY = contentStartY + row * lineHeight;
-    const selectionWidth = (selEnd - selStart) * charWidth;
+    const selectionX = r(padding + selStart * charWidth);
+    const selectionY = r(contentStartY + row * lineHeight);
+    const selectionWidth = r((selEnd - selStart) * charWidth);
     const selectionColor = theme.selection ?? '#44475a';
 
     parts.push('<g class="selection-layer">');
     parts.push(
-      `<rect x="${selectionX}" y="${selectionY}" ` +
-      `width="${selectionWidth}" height="${lineHeight}" fill="${selectionColor}" opacity="0.5"/>`
+      `<rect x="${fmt(selectionX)}" y="${fmt(selectionY)}" ` +
+      `width="${fmt(selectionWidth)}" height="${fmt(lineHeight)}" fill="${selectionColor}" opacity="0.5"/>`
     );
     parts.push('</g>');
   }
@@ -818,8 +864,8 @@ function generateFrameContent(frame: FrameData, config: EmitterOptions & FrameRe
   parts.push('<g class="text-layer">');
   for (const row of rows) {
     for (const span of row) {
-      const x = padding + span.col * charWidth;
-      const y = contentStartY + span.row * lineHeight;
+      const x = r(padding + span.col * charWidth);
+      const y = r(contentStartY + span.row * lineHeight);
 
       const classes = ['text', ...styleToClasses(span.style)];
       let fillAttr = '';
@@ -839,25 +885,29 @@ function generateFrameContent(frame: FrameData, config: EmitterOptions & FrameRe
         classes.push('fg');
       }
 
-      parts.push(`<text class="${classes.join(' ')}" x="${x}" y="${y}"${fillAttr}>${escapeXml(span.text)}</text>`);
+      // Trim trailing whitespace unless there's a background color that needs to extend
+      const rawText = span.style.bg ? span.text : span.text.trimEnd();
+      if (!rawText) continue; // Skip empty text spans
+
+      parts.push(`<text class="${classes.join(' ')}" x="${fmt(x)}" y="${fmt(y)}"${fillAttr}>${escapeXml(rawText)}</text>`);
     }
   }
   parts.push('</g>');
 
   // Cursor
   if (cursor && cursorVisible) {
-    const cursorX = padding + cursor.col * charWidth;
-    const rowY = contentStartY + cursor.row * lineHeight;
+    const cursorX = r(padding + cursor.col * charWidth);
+    const rowY = r(contentStartY + cursor.row * lineHeight);
 
     // When custom lineHeight is provided, adjust cursor to align with text center
     // Cursor height = fontSize, positioned so cursor's middle aligns with text's middle
     const hasCustomLineHeight = config.hasCustomLineHeight ?? false;
-    const cursorHeight = hasCustomLineHeight ? fontSize : lineHeight;
+    const cursorHeight = r(hasCustomLineHeight ? fontSize : lineHeight);
     // With text-before-edge baseline, the visible text center is approximately at 60% of fontSize
     // cursorCenter = cursorY + cursorHeight/2, textCenter = rowY + fontSize * 0.6
     // So cursorY = textCenter - cursorHeight/2 = rowY + fontSize*0.6 - cursorHeight/2
     const cursorYOffset = hasCustomLineHeight ? (fontSize * 0.85) - (cursorHeight / 2) : 0;
-    const cursorY = rowY + cursorYOffset;
+    const cursorY = r(rowY + cursorYOffset);
 
     const cursorColor = config.cursorColor ?? theme.cursor ?? theme.foreground;
     const cursorStyle = config.cursorStyle ?? 'block';
@@ -866,21 +916,21 @@ function generateFrameContent(frame: FrameData, config: EmitterOptions & FrameRe
 
     if (cursorStyle === 'block') {
       parts.push(
-        `<rect class="${cursorClass}" x="${cursorX}" y="${cursorY}" ` +
-        `width="${charWidth}" height="${cursorHeight}" fill="${cursorColor}"/>`
+        `<rect class="${cursorClass}" x="${fmt(cursorX)}" y="${fmt(cursorY)}" ` +
+        `width="${fmt(charWidth)}" height="${fmt(cursorHeight)}" fill="${cursorColor}"/>`
       );
     } else if (cursorStyle === 'bar') {
       // Vertical bar cursor (2px wide)
       parts.push(
-        `<rect class="${cursorClass}" x="${cursorX}" y="${cursorY}" ` +
-        `width="2" height="${cursorHeight}" fill="${cursorColor}"/>`
+        `<rect class="${cursorClass}" x="${fmt(cursorX)}" y="${fmt(cursorY)}" ` +
+        `width="2" height="${fmt(cursorHeight)}" fill="${cursorColor}"/>`
       );
     } else if (cursorStyle === 'underline') {
       // Underline cursor (2px tall at bottom of cell)
-      const underlineY = cursorY + cursorHeight - 2;
+      const underlineY = r(cursorY + cursorHeight - 2);
       parts.push(
-        `<rect class="${cursorClass}" x="${cursorX}" y="${underlineY}" ` +
-        `width="${charWidth}" height="2" fill="${cursorColor}"/>`
+        `<rect class="${cursorClass}" x="${fmt(cursorX)}" y="${fmt(underlineY)}" ` +
+        `width="${fmt(charWidth)}" height="2" fill="${cursorColor}"/>`
       );
     }
   }

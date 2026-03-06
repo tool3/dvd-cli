@@ -14,40 +14,7 @@
 .uline { text-decoration: underline; }
 .strike { text-decoration: line-through; }
 .dim { opacity: 0.5; }
-.fg { fill: #c9d1d9; }
-.f0 { fill: #000000; }
-.f1 { fill: #ff7b72; }
-.f2 { fill: #3fb950; }
-.f3 { fill: #d29922; }
-.f4 { fill: #58a6ff; }
-.f5 { fill: #bc8cff; }
-.f6 { fill: #39c5cf; }
-.f7 { fill: #b1bac4; }
-.f8 { fill: #6e7681; }
-.f9 { fill: #ffa198; }
-.f10 { fill: #56d364; }
-.f11 { fill: #e3b341; }
-.f12 { fill: #79c0ff; }
 .f13 { fill: #d2a8ff; }
-.f14 { fill: #56d4dd; }
-.f15 { fill: #f0f6fc; }
-.bg { fill: #1e1e1e; }
-.b0 { fill: #000000; }
-.b1 { fill: #ff7b72; }
-.b2 { fill: #3fb950; }
-.b3 { fill: #d29922; }
-.b4 { fill: #58a6ff; }
-.b5 { fill: #bc8cff; }
-.b6 { fill: #39c5cf; }
-.b7 { fill: #b1bac4; }
-.b8 { fill: #6e7681; }
-.b9 { fill: #ffa198; }
-.b10 { fill: #56d364; }
-.b11 { fill: #e3b341; }
-.b12 { fill: #79c0ff; }
-.b13 { fill: #d2a8ff; }
-.b14 { fill: #56d4dd; }
-.b15 { fill: #f0f6fc; }
 .cursor { animation: blink 1s step-end infinite; }
 @keyframes blink {
   0%, 50% { opacity: 1; }
@@ -70,17 +37,9 @@
 <text class="text f13" x="32" y="32">❯</text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor" x="51.2" y="34.4" width="9.6" height="22.4" fill="#c9d1d9"/>
+<rect class="cursor" x="51.2" y="32" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
-    <animate
-      attributeName="visibility"
-      values="visible;hidden;hidden"
-      keyTimes="0.000000;0.006288;1.000000"
-      dur="8.43s"
-      repeatCount="indefinite"
-      calcMode="discrete"
-      fill="freeze"
-    />
+    <animate attributeName="visibility" values="visible;hidden;hidden" keyTimes="0;0.006268;1" dur="8.46s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-1" visibility="hidden">
@@ -88,20 +47,12 @@
 <rect x="1.5" y="1.5" width="597" height="297" fill="none" stroke="#ff5555" stroke-width="3" rx="20" ry="20"/>
 <g class="text-layer">
 <text class="text f13" x="32" y="32">❯</text>
-<text class="text fg" x="41.6" y="32"> e                                                    </text>
+<text class="text fg" x="41.6" y="32"> e</text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor-active" x="60.8" y="34.4" width="9.6" height="22.4" fill="#c9d1d9"/>
+<rect class="cursor-active" x="60.8" y="32" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
-    <animate
-      attributeName="visibility"
-      values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.006288;0.012338;1.000000"
-      dur="8.43s"
-      repeatCount="indefinite"
-      calcMode="discrete"
-      fill="freeze"
-    />
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.006268;0.012419;1" dur="8.46s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-2" visibility="hidden">
@@ -109,20 +60,12 @@
 <rect x="1.5" y="1.5" width="597" height="297" fill="none" stroke="#ff5555" stroke-width="3" rx="20" ry="20"/>
 <g class="text-layer">
 <text class="text f13" x="32" y="32">❯</text>
-<text class="text fg" x="41.6" y="32"> ec                                                   </text>
+<text class="text fg" x="41.6" y="32"> ec</text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor-active" x="70.4" y="34.4" width="9.6" height="22.4" fill="#c9d1d9"/>
+<rect class="cursor-active" x="70.4" y="32" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
-    <animate
-      attributeName="visibility"
-      values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.012338;0.018389;1.000000"
-      dur="8.43s"
-      repeatCount="indefinite"
-      calcMode="discrete"
-      fill="freeze"
-    />
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.012419;0.018332;1" dur="8.46s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-3" visibility="hidden">
@@ -130,20 +73,12 @@
 <rect x="1.5" y="1.5" width="597" height="297" fill="none" stroke="#ff5555" stroke-width="3" rx="20" ry="20"/>
 <g class="text-layer">
 <text class="text f13" x="32" y="32">❯</text>
-<text class="text fg" x="41.6" y="32"> ech                                                  </text>
+<text class="text fg" x="41.6" y="32"> ech</text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor-active" x="80" y="34.4" width="9.6" height="22.4" fill="#c9d1d9"/>
+<rect class="cursor-active" x="80" y="32" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
-    <animate
-      attributeName="visibility"
-      values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.018389;0.024202;1.000000"
-      dur="8.43s"
-      repeatCount="indefinite"
-      calcMode="discrete"
-      fill="freeze"
-    />
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.018332;0.024483;1" dur="8.46s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-4" visibility="hidden">
@@ -151,20 +86,12 @@
 <rect x="1.5" y="1.5" width="597" height="297" fill="none" stroke="#ff5555" stroke-width="3" rx="20" ry="20"/>
 <g class="text-layer">
 <text class="text f13" x="32" y="32">❯</text>
-<text class="text fg" x="41.6" y="32"> echo                                                 </text>
+<text class="text fg" x="41.6" y="32"> echo</text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor-active" x="89.6" y="34.4" width="9.6" height="22.4" fill="#c9d1d9"/>
+<rect class="cursor-active" x="89.6" y="32" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
-    <animate
-      attributeName="visibility"
-      values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.024202;0.030253;1.000000"
-      dur="8.43s"
-      repeatCount="indefinite"
-      calcMode="discrete"
-      fill="freeze"
-    />
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.024483;0.030514;1" dur="8.46s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-5" visibility="hidden">
@@ -172,20 +99,12 @@
 <rect x="1.5" y="1.5" width="597" height="297" fill="none" stroke="#ff5555" stroke-width="3" rx="20" ry="20"/>
 <g class="text-layer">
 <text class="text f13" x="32" y="32">❯</text>
-<text class="text fg" x="41.6" y="32"> echo                                                 </text>
+<text class="text fg" x="41.6" y="32"> echo</text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor-active" x="99.2" y="34.4" width="9.6" height="22.4" fill="#c9d1d9"/>
+<rect class="cursor-active" x="99.2" y="32" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
-    <animate
-      attributeName="visibility"
-      values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.030253;0.036422;1.000000"
-      dur="8.43s"
-      repeatCount="indefinite"
-      calcMode="discrete"
-      fill="freeze"
-    />
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.030514;0.036546;1" dur="8.46s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-6" visibility="hidden">
@@ -193,20 +112,12 @@
 <rect x="1.5" y="1.5" width="597" height="297" fill="none" stroke="#ff5555" stroke-width="3" rx="20" ry="20"/>
 <g class="text-layer">
 <text class="text f13" x="32" y="32">❯</text>
-<text class="text fg" x="41.6" y="32"> echo &apos;                                               </text>
+<text class="text fg" x="41.6" y="32"> echo &apos;</text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor-active" x="108.8" y="34.4" width="9.6" height="22.4" fill="#c9d1d9"/>
+<rect class="cursor-active" x="108.8" y="32" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
-    <animate
-      attributeName="visibility"
-      values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.036422;0.042591;1.000000"
-      dur="8.43s"
-      repeatCount="indefinite"
-      calcMode="discrete"
-      fill="freeze"
-    />
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.036546;0.042578;1" dur="8.46s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-7" visibility="hidden">
@@ -214,20 +125,12 @@
 <rect x="1.5" y="1.5" width="597" height="297" fill="none" stroke="#ff5555" stroke-width="3" rx="20" ry="20"/>
 <g class="text-layer">
 <text class="text f13" x="32" y="32">❯</text>
-<text class="text fg" x="41.6" y="32"> echo &apos;T                                              </text>
+<text class="text fg" x="41.6" y="32"> echo &apos;T</text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor-active" x="118.39999999999999" y="34.4" width="9.6" height="22.4" fill="#c9d1d9"/>
+<rect class="cursor-active" x="118.4" y="32" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
-    <animate
-      attributeName="visibility"
-      values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.042591;0.048523;1.000000"
-      dur="8.43s"
-      repeatCount="indefinite"
-      calcMode="discrete"
-      fill="freeze"
-    />
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.042578;0.04861;1" dur="8.46s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-8" visibility="hidden">
@@ -235,20 +138,12 @@
 <rect x="1.5" y="1.5" width="597" height="297" fill="none" stroke="#ff5555" stroke-width="3" rx="20" ry="20"/>
 <g class="text-layer">
 <text class="text f13" x="32" y="32">❯</text>
-<text class="text fg" x="41.6" y="32"> echo &apos;Te                                             </text>
+<text class="text fg" x="41.6" y="32"> echo &apos;Te</text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor-active" x="128" y="34.4" width="9.6" height="22.4" fill="#c9d1d9"/>
+<rect class="cursor-active" x="128" y="32" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
-    <animate
-      attributeName="visibility"
-      values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.048523;0.054573;1.000000"
-      dur="8.43s"
-      repeatCount="indefinite"
-      calcMode="discrete"
-      fill="freeze"
-    />
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.04861;0.054642;1" dur="8.46s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-9" visibility="hidden">
@@ -256,20 +151,12 @@
 <rect x="1.5" y="1.5" width="597" height="297" fill="none" stroke="#ff5555" stroke-width="3" rx="20" ry="20"/>
 <g class="text-layer">
 <text class="text f13" x="32" y="32">❯</text>
-<text class="text fg" x="41.6" y="32"> echo &apos;Tes                                            </text>
+<text class="text fg" x="41.6" y="32"> echo &apos;Tes</text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor-active" x="137.6" y="34.4" width="9.6" height="22.4" fill="#c9d1d9"/>
+<rect class="cursor-active" x="137.6" y="32" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
-    <animate
-      attributeName="visibility"
-      values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.054573;0.060505;1.000000"
-      dur="8.43s"
-      repeatCount="indefinite"
-      calcMode="discrete"
-      fill="freeze"
-    />
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.054642;0.060674;1" dur="8.46s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-10" visibility="hidden">
@@ -277,20 +164,12 @@
 <rect x="1.5" y="1.5" width="597" height="297" fill="none" stroke="#ff5555" stroke-width="3" rx="20" ry="20"/>
 <g class="text-layer">
 <text class="text f13" x="32" y="32">❯</text>
-<text class="text fg" x="41.6" y="32"> echo &apos;Test                                           </text>
+<text class="text fg" x="41.6" y="32"> echo &apos;Test</text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor-active" x="147.2" y="34.4" width="9.6" height="22.4" fill="#c9d1d9"/>
+<rect class="cursor-active" x="147.2" y="32" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
-    <animate
-      attributeName="visibility"
-      values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.060505;0.066437;1.000000"
-      dur="8.43s"
-      repeatCount="indefinite"
-      calcMode="discrete"
-      fill="freeze"
-    />
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.060674;0.066588;1" dur="8.46s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-11" visibility="hidden">
@@ -298,20 +177,12 @@
 <rect x="1.5" y="1.5" width="597" height="297" fill="none" stroke="#ff5555" stroke-width="3" rx="20" ry="20"/>
 <g class="text-layer">
 <text class="text f13" x="32" y="32">❯</text>
-<text class="text fg" x="41.6" y="32"> echo &apos;Testi                                          </text>
+<text class="text fg" x="41.6" y="32"> echo &apos;Testi</text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor-active" x="156.8" y="34.4" width="9.6" height="22.4" fill="#c9d1d9"/>
+<rect class="cursor-active" x="156.8" y="32" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
-    <animate
-      attributeName="visibility"
-      values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.066437;0.072606;1.000000"
-      dur="8.43s"
-      repeatCount="indefinite"
-      calcMode="discrete"
-      fill="freeze"
-    />
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.066588;0.07262;1" dur="8.46s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-12" visibility="hidden">
@@ -319,20 +190,12 @@
 <rect x="1.5" y="1.5" width="597" height="297" fill="none" stroke="#ff5555" stroke-width="3" rx="20" ry="20"/>
 <g class="text-layer">
 <text class="text f13" x="32" y="32">❯</text>
-<text class="text fg" x="41.6" y="32"> echo &apos;Testin                                         </text>
+<text class="text fg" x="41.6" y="32"> echo &apos;Testin</text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor-active" x="166.4" y="34.4" width="9.6" height="22.4" fill="#c9d1d9"/>
+<rect class="cursor-active" x="166.4" y="32" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
-    <animate
-      attributeName="visibility"
-      values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.072606;0.078657;1.000000"
-      dur="8.43s"
-      repeatCount="indefinite"
-      calcMode="discrete"
-      fill="freeze"
-    />
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.07262;0.078652;1" dur="8.46s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-13" visibility="hidden">
@@ -340,20 +203,12 @@
 <rect x="1.5" y="1.5" width="597" height="297" fill="none" stroke="#ff5555" stroke-width="3" rx="20" ry="20"/>
 <g class="text-layer">
 <text class="text f13" x="32" y="32">❯</text>
-<text class="text fg" x="41.6" y="32"> echo &apos;Testing                                        </text>
+<text class="text fg" x="41.6" y="32"> echo &apos;Testing</text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor-active" x="176" y="34.4" width="9.6" height="22.4" fill="#c9d1d9"/>
+<rect class="cursor-active" x="176" y="32" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
-    <animate
-      attributeName="visibility"
-      values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.078657;0.084589;1.000000"
-      dur="8.43s"
-      repeatCount="indefinite"
-      calcMode="discrete"
-      fill="freeze"
-    />
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.078652;0.084684;1" dur="8.46s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-14" visibility="hidden">
@@ -361,20 +216,12 @@
 <rect x="1.5" y="1.5" width="597" height="297" fill="none" stroke="#ff5555" stroke-width="3" rx="20" ry="20"/>
 <g class="text-layer">
 <text class="text f13" x="32" y="32">❯</text>
-<text class="text fg" x="41.6" y="32"> echo &apos;Testing                                        </text>
+<text class="text fg" x="41.6" y="32"> echo &apos;Testing</text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor-active" x="185.6" y="34.4" width="9.6" height="22.4" fill="#c9d1d9"/>
+<rect class="cursor-active" x="185.6" y="32" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
-    <animate
-      attributeName="visibility"
-      values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.084589;0.090758;1.000000"
-      dur="8.43s"
-      repeatCount="indefinite"
-      calcMode="discrete"
-      fill="freeze"
-    />
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.084684;0.090597;1" dur="8.46s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-15" visibility="hidden">
@@ -382,20 +229,12 @@
 <rect x="1.5" y="1.5" width="597" height="297" fill="none" stroke="#ff5555" stroke-width="3" rx="20" ry="20"/>
 <g class="text-layer">
 <text class="text f13" x="32" y="32">❯</text>
-<text class="text fg" x="41.6" y="32"> echo &apos;Testing b                                      </text>
+<text class="text fg" x="41.6" y="32"> echo &apos;Testing b</text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor-active" x="195.2" y="34.4" width="9.6" height="22.4" fill="#c9d1d9"/>
+<rect class="cursor-active" x="195.2" y="32" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
-    <animate
-      attributeName="visibility"
-      values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.090758;0.096690;1.000000"
-      dur="8.43s"
-      repeatCount="indefinite"
-      calcMode="discrete"
-      fill="freeze"
-    />
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.090597;0.096866;1" dur="8.46s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-16" visibility="hidden">
@@ -403,20 +242,12 @@
 <rect x="1.5" y="1.5" width="597" height="297" fill="none" stroke="#ff5555" stroke-width="3" rx="20" ry="20"/>
 <g class="text-layer">
 <text class="text f13" x="32" y="32">❯</text>
-<text class="text fg" x="41.6" y="32"> echo &apos;Testing bo                                     </text>
+<text class="text fg" x="41.6" y="32"> echo &apos;Testing bo</text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor-active" x="204.79999999999998" y="34.4" width="9.6" height="22.4" fill="#c9d1d9"/>
+<rect class="cursor-active" x="204.8" y="32" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
-    <animate
-      attributeName="visibility"
-      values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.096690;0.102741;1.000000"
-      dur="8.43s"
-      repeatCount="indefinite"
-      calcMode="discrete"
-      fill="freeze"
-    />
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.096866;0.102898;1" dur="8.46s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-17" visibility="hidden">
@@ -424,20 +255,12 @@
 <rect x="1.5" y="1.5" width="597" height="297" fill="none" stroke="#ff5555" stroke-width="3" rx="20" ry="20"/>
 <g class="text-layer">
 <text class="text f13" x="32" y="32">❯</text>
-<text class="text fg" x="41.6" y="32"> echo &apos;Testing bor                                    </text>
+<text class="text fg" x="41.6" y="32"> echo &apos;Testing bor</text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor-active" x="214.4" y="34.4" width="9.6" height="22.4" fill="#c9d1d9"/>
+<rect class="cursor-active" x="214.4" y="32" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
-    <animate
-      attributeName="visibility"
-      values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.102741;0.108910;1.000000"
-      dur="8.43s"
-      repeatCount="indefinite"
-      calcMode="discrete"
-      fill="freeze"
-    />
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.102898;0.109048;1" dur="8.46s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-18" visibility="hidden">
@@ -445,20 +268,12 @@
 <rect x="1.5" y="1.5" width="597" height="297" fill="none" stroke="#ff5555" stroke-width="3" rx="20" ry="20"/>
 <g class="text-layer">
 <text class="text f13" x="32" y="32">❯</text>
-<text class="text fg" x="41.6" y="32"> echo &apos;Testing bord                                   </text>
+<text class="text fg" x="41.6" y="32"> echo &apos;Testing bord</text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor-active" x="224" y="34.4" width="9.6" height="22.4" fill="#c9d1d9"/>
+<rect class="cursor-active" x="224" y="32" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
-    <animate
-      attributeName="visibility"
-      values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.108910;0.114960;1.000000"
-      dur="8.43s"
-      repeatCount="indefinite"
-      calcMode="discrete"
-      fill="freeze"
-    />
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.109048;0.11508;1" dur="8.46s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-19" visibility="hidden">
@@ -466,20 +281,12 @@
 <rect x="1.5" y="1.5" width="597" height="297" fill="none" stroke="#ff5555" stroke-width="3" rx="20" ry="20"/>
 <g class="text-layer">
 <text class="text f13" x="32" y="32">❯</text>
-<text class="text fg" x="41.6" y="32"> echo &apos;Testing borde                                  </text>
+<text class="text fg" x="41.6" y="32"> echo &apos;Testing borde</text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor-active" x="233.6" y="34.4" width="9.6" height="22.4" fill="#c9d1d9"/>
+<rect class="cursor-active" x="233.6" y="32" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
-    <animate
-      attributeName="visibility"
-      values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.114960;0.121129;1.000000"
-      dur="8.43s"
-      repeatCount="indefinite"
-      calcMode="discrete"
-      fill="freeze"
-    />
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.11508;0.120993;1" dur="8.46s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-20" visibility="hidden">
@@ -487,20 +294,12 @@
 <rect x="1.5" y="1.5" width="597" height="297" fill="none" stroke="#ff5555" stroke-width="3" rx="20" ry="20"/>
 <g class="text-layer">
 <text class="text f13" x="32" y="32">❯</text>
-<text class="text fg" x="41.6" y="32"> echo &apos;Testing border                                 </text>
+<text class="text fg" x="41.6" y="32"> echo &apos;Testing border</text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor-active" x="243.2" y="34.4" width="9.6" height="22.4" fill="#c9d1d9"/>
+<rect class="cursor-active" x="243.2" y="32" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
-    <animate
-      attributeName="visibility"
-      values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.121129;0.127061;1.000000"
-      dur="8.43s"
-      repeatCount="indefinite"
-      calcMode="discrete"
-      fill="freeze"
-    />
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.120993;0.126907;1" dur="8.46s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-21" visibility="hidden">
@@ -508,20 +307,12 @@
 <rect x="1.5" y="1.5" width="597" height="297" fill="none" stroke="#ff5555" stroke-width="3" rx="20" ry="20"/>
 <g class="text-layer">
 <text class="text f13" x="32" y="32">❯</text>
-<text class="text fg" x="41.6" y="32"> echo &apos;Testing border                                 </text>
+<text class="text fg" x="41.6" y="32"> echo &apos;Testing border</text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor-active" x="252.79999999999998" y="34.4" width="9.6" height="22.4" fill="#c9d1d9"/>
+<rect class="cursor-active" x="252.8" y="32" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
-    <animate
-      attributeName="visibility"
-      values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.127061;0.132993;1.000000"
-      dur="8.43s"
-      repeatCount="indefinite"
-      calcMode="discrete"
-      fill="freeze"
-    />
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.126907;0.132939;1" dur="8.46s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-22" visibility="hidden">
@@ -529,20 +320,12 @@
 <rect x="1.5" y="1.5" width="597" height="297" fill="none" stroke="#ff5555" stroke-width="3" rx="20" ry="20"/>
 <g class="text-layer">
 <text class="text f13" x="32" y="32">❯</text>
-<text class="text fg" x="41.6" y="32"> echo &apos;Testing border o                               </text>
+<text class="text fg" x="41.6" y="32"> echo &apos;Testing border o</text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor-active" x="262.4" y="34.4" width="9.6" height="22.4" fill="#c9d1d9"/>
+<rect class="cursor-active" x="262.4" y="32" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
-    <animate
-      attributeName="visibility"
-      values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.132993;0.139162;1.000000"
-      dur="8.43s"
-      repeatCount="indefinite"
-      calcMode="discrete"
-      fill="freeze"
-    />
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.132939;0.139089;1" dur="8.46s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-23" visibility="hidden">
@@ -550,20 +333,12 @@
 <rect x="1.5" y="1.5" width="597" height="297" fill="none" stroke="#ff5555" stroke-width="3" rx="20" ry="20"/>
 <g class="text-layer">
 <text class="text f13" x="32" y="32">❯</text>
-<text class="text fg" x="41.6" y="32"> echo &apos;Testing border op                              </text>
+<text class="text fg" x="41.6" y="32"> echo &apos;Testing border op</text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor-active" x="272" y="34.4" width="9.6" height="22.4" fill="#c9d1d9"/>
+<rect class="cursor-active" x="272" y="32" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
-    <animate
-      attributeName="visibility"
-      values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.139162;0.145094;1.000000"
-      dur="8.43s"
-      repeatCount="indefinite"
-      calcMode="discrete"
-      fill="freeze"
-    />
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.139089;0.145121;1" dur="8.46s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-24" visibility="hidden">
@@ -571,20 +346,12 @@
 <rect x="1.5" y="1.5" width="597" height="297" fill="none" stroke="#ff5555" stroke-width="3" rx="20" ry="20"/>
 <g class="text-layer">
 <text class="text f13" x="32" y="32">❯</text>
-<text class="text fg" x="41.6" y="32"> echo &apos;Testing border opt                             </text>
+<text class="text fg" x="41.6" y="32"> echo &apos;Testing border opt</text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor-active" x="281.6" y="34.4" width="9.6" height="22.4" fill="#c9d1d9"/>
+<rect class="cursor-active" x="281.6" y="32" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
-    <animate
-      attributeName="visibility"
-      values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.145094;0.151263;1.000000"
-      dur="8.43s"
-      repeatCount="indefinite"
-      calcMode="discrete"
-      fill="freeze"
-    />
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.145121;0.151035;1" dur="8.46s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-25" visibility="hidden">
@@ -592,20 +359,12 @@
 <rect x="1.5" y="1.5" width="597" height="297" fill="none" stroke="#ff5555" stroke-width="3" rx="20" ry="20"/>
 <g class="text-layer">
 <text class="text f13" x="32" y="32">❯</text>
-<text class="text fg" x="41.6" y="32"> echo &apos;Testing border opti                            </text>
+<text class="text fg" x="41.6" y="32"> echo &apos;Testing border opti</text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor-active" x="291.2" y="34.4" width="9.6" height="22.4" fill="#c9d1d9"/>
+<rect class="cursor-active" x="291.2" y="32" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
-    <animate
-      attributeName="visibility"
-      values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.151263;0.157195;1.000000"
-      dur="8.43s"
-      repeatCount="indefinite"
-      calcMode="discrete"
-      fill="freeze"
-    />
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.151035;0.156949;1" dur="8.46s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-26" visibility="hidden">
@@ -613,20 +372,12 @@
 <rect x="1.5" y="1.5" width="597" height="297" fill="none" stroke="#ff5555" stroke-width="3" rx="20" ry="20"/>
 <g class="text-layer">
 <text class="text f13" x="32" y="32">❯</text>
-<text class="text fg" x="41.6" y="32"> echo &apos;Testing border optio                           </text>
+<text class="text fg" x="41.6" y="32"> echo &apos;Testing border optio</text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor-active" x="300.8" y="34.4" width="9.6" height="22.4" fill="#c9d1d9"/>
+<rect class="cursor-active" x="300.8" y="32" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
-    <animate
-      attributeName="visibility"
-      values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.157195;0.163365;1.000000"
-      dur="8.43s"
-      repeatCount="indefinite"
-      calcMode="discrete"
-      fill="freeze"
-    />
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.156949;0.163099;1" dur="8.46s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-27" visibility="hidden">
@@ -634,20 +385,12 @@
 <rect x="1.5" y="1.5" width="597" height="297" fill="none" stroke="#ff5555" stroke-width="3" rx="20" ry="20"/>
 <g class="text-layer">
 <text class="text f13" x="32" y="32">❯</text>
-<text class="text fg" x="41.6" y="32"> echo &apos;Testing border option                          </text>
+<text class="text fg" x="41.6" y="32"> echo &apos;Testing border option</text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor-active" x="310.4" y="34.4" width="9.6" height="22.4" fill="#c9d1d9"/>
+<rect class="cursor-active" x="310.4" y="32" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
-    <animate
-      attributeName="visibility"
-      values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.163365;0.169296;1.000000"
-      dur="8.43s"
-      repeatCount="indefinite"
-      calcMode="discrete"
-      fill="freeze"
-    />
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.163099;0.169012;1" dur="8.46s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-28" visibility="hidden">
@@ -655,20 +398,12 @@
 <rect x="1.5" y="1.5" width="597" height="297" fill="none" stroke="#ff5555" stroke-width="3" rx="20" ry="20"/>
 <g class="text-layer">
 <text class="text f13" x="32" y="32">❯</text>
-<text class="text fg" x="41.6" y="32"> echo &apos;Testing border options                         </text>
+<text class="text fg" x="41.6" y="32"> echo &apos;Testing border options</text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor-active" x="320" y="34.4" width="9.6" height="22.4" fill="#c9d1d9"/>
+<rect class="cursor-active" x="320" y="32" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
-    <animate
-      attributeName="visibility"
-      values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.169296;0.175347;1.000000"
-      dur="8.43s"
-      repeatCount="indefinite"
-      calcMode="discrete"
-      fill="freeze"
-    />
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.169012;0.175163;1" dur="8.46s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-29" visibility="hidden">
@@ -676,20 +411,12 @@
 <rect x="1.5" y="1.5" width="597" height="297" fill="none" stroke="#ff5555" stroke-width="3" rx="20" ry="20"/>
 <g class="text-layer">
 <text class="text f13" x="32" y="32">❯</text>
-<text class="text fg" x="41.6" y="32"> echo &apos;Testing border options&apos;                        </text>
+<text class="text fg" x="41.6" y="32"> echo &apos;Testing border options&apos;</text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor-active" x="329.59999999999997" y="34.4" width="9.6" height="22.4" fill="#c9d1d9"/>
+<rect class="cursor-active" x="329.6" y="32" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
-    <animate
-      attributeName="visibility"
-      values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.175347;0.234785;1.000000"
-      dur="8.43s"
-      repeatCount="indefinite"
-      calcMode="discrete"
-      fill="freeze"
-    />
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.175163;0.174926;1" dur="8.46s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-30" visibility="hidden">
@@ -697,20 +424,12 @@
 <rect x="1.5" y="1.5" width="597" height="297" fill="none" stroke="#ff5555" stroke-width="3" rx="20" ry="20"/>
 <g class="text-layer">
 <text class="text f13" x="32" y="32">❯</text>
-<text class="text fg" x="41.6" y="32"> echo &apos;Testing border options&apos;                        </text>
+<text class="text fg" x="41.6" y="32"> echo &apos;Testing border options&apos;</text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor" x="329.59999999999997" y="34.4" width="9.6" height="22.4" fill="#c9d1d9"/>
+<rect class="cursor" x="329.6" y="32" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
-    <animate
-      attributeName="visibility"
-      values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.234785;0.246886;1.000000"
-      dur="8.43s"
-      repeatCount="indefinite"
-      calcMode="discrete"
-      fill="freeze"
-    />
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.174926;0.234536;1" dur="8.46s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-31" visibility="hidden">
@@ -718,17 +437,12 @@
 <rect x="1.5" y="1.5" width="597" height="297" fill="none" stroke="#ff5555" stroke-width="3" rx="20" ry="20"/>
 <g class="text-layer">
 <text class="text f13" x="32" y="32">❯</text>
-<text class="text fg" x="41.6" y="32"> echo &apos;Testing border options&apos;                        </text>
+<text class="text fg" x="41.6" y="32"> echo &apos;Testing border options&apos;</text>
 </g>
-    <animate
-      attributeName="visibility"
-      values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.246886;0.259580;1.000000"
-      dur="8.43s"
-      repeatCount="indefinite"
-      calcMode="discrete"
-      fill="freeze"
-    />
+<g class="cursor-layer">
+<rect class="cursor" x="329.6" y="32" width="9.6" height="22.4" fill="#c9d1d9"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.234536;0.2466;1" dur="8.46s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-32" visibility="hidden">
@@ -736,22 +450,9 @@
 <rect x="1.5" y="1.5" width="597" height="297" fill="none" stroke="#ff5555" stroke-width="3" rx="20" ry="20"/>
 <g class="text-layer">
 <text class="text f13" x="32" y="32">❯</text>
-<text class="text fg" x="41.6" y="32"> echo &apos;Testing border options&apos;                        </text>
-<text class="text fg" x="32" y="54.4">Testing border options                                 </text>
-<text class="text f13" x="32" y="76.8">❯</text>
+<text class="text fg" x="41.6" y="32"> echo &apos;Testing border options&apos;</text>
 </g>
-<g class="cursor-layer">
-<rect class="cursor" x="51.2" y="79.2" width="9.6" height="22.4" fill="#c9d1d9"/>
-</g>
-    <animate
-      attributeName="visibility"
-      values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.259580;0.265868;1.000000"
-      dur="8.43s"
-      repeatCount="indefinite"
-      calcMode="discrete"
-      fill="freeze"
-    />
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.2466;0.260083;1" dur="8.46s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-33" visibility="hidden">
@@ -759,23 +460,14 @@
 <rect x="1.5" y="1.5" width="597" height="297" fill="none" stroke="#ff5555" stroke-width="3" rx="20" ry="20"/>
 <g class="text-layer">
 <text class="text f13" x="32" y="32">❯</text>
-<text class="text fg" x="41.6" y="32"> echo &apos;Testing border options&apos;                        </text>
-<text class="text fg" x="32" y="54.4">Testing border options                                 </text>
+<text class="text fg" x="41.6" y="32"> echo &apos;Testing border options&apos;</text>
+<text class="text fg" x="32" y="54.4">Testing border options</text>
 <text class="text f13" x="32" y="76.8">❯</text>
-<text class="text fg" x="41.6" y="76.8"> #                                                    </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor-active" x="60.8" y="79.2" width="9.6" height="22.4" fill="#c9d1d9"/>
+<rect class="cursor" x="51.2" y="76.8" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
-    <animate
-      attributeName="visibility"
-      values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.265868;0.271800;1.000000"
-      dur="8.43s"
-      repeatCount="indefinite"
-      calcMode="discrete"
-      fill="freeze"
-    />
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.260083;0.266588;1" dur="8.46s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-34" visibility="hidden">
@@ -783,23 +475,15 @@
 <rect x="1.5" y="1.5" width="597" height="297" fill="none" stroke="#ff5555" stroke-width="3" rx="20" ry="20"/>
 <g class="text-layer">
 <text class="text f13" x="32" y="32">❯</text>
-<text class="text fg" x="41.6" y="32"> echo &apos;Testing border options&apos;                        </text>
-<text class="text fg" x="32" y="54.4">Testing border options                                 </text>
+<text class="text fg" x="41.6" y="32"> echo &apos;Testing border options&apos;</text>
+<text class="text fg" x="32" y="54.4">Testing border options</text>
 <text class="text f13" x="32" y="76.8">❯</text>
-<text class="text fg" x="41.6" y="76.8"> #                                                    </text>
+<text class="text fg" x="41.6" y="76.8"> #</text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor-active" x="70.4" y="79.2" width="9.6" height="22.4" fill="#c9d1d9"/>
+<rect class="cursor-active" x="60.8" y="76.8" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
-    <animate
-      attributeName="visibility"
-      values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.271800;0.277850;1.000000"
-      dur="8.43s"
-      repeatCount="indefinite"
-      calcMode="discrete"
-      fill="freeze"
-    />
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.266588;0.272383;1" dur="8.46s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-35" visibility="hidden">
@@ -807,23 +491,15 @@
 <rect x="1.5" y="1.5" width="597" height="297" fill="none" stroke="#ff5555" stroke-width="3" rx="20" ry="20"/>
 <g class="text-layer">
 <text class="text f13" x="32" y="32">❯</text>
-<text class="text fg" x="41.6" y="32"> echo &apos;Testing border options&apos;                        </text>
-<text class="text fg" x="32" y="54.4">Testing border options                                 </text>
+<text class="text fg" x="41.6" y="32"> echo &apos;Testing border options&apos;</text>
+<text class="text fg" x="32" y="54.4">Testing border options</text>
 <text class="text f13" x="32" y="76.8">❯</text>
-<text class="text fg" x="41.6" y="76.8"> # B                                                  </text>
+<text class="text fg" x="41.6" y="76.8"> #</text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor-active" x="80" y="79.2" width="9.6" height="22.4" fill="#c9d1d9"/>
+<rect class="cursor-active" x="70.4" y="76.8" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
-    <animate
-      attributeName="visibility"
-      values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.277850;0.284019;1.000000"
-      dur="8.43s"
-      repeatCount="indefinite"
-      calcMode="discrete"
-      fill="freeze"
-    />
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.272383;0.278415;1" dur="8.46s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-36" visibility="hidden">
@@ -831,23 +507,15 @@
 <rect x="1.5" y="1.5" width="597" height="297" fill="none" stroke="#ff5555" stroke-width="3" rx="20" ry="20"/>
 <g class="text-layer">
 <text class="text f13" x="32" y="32">❯</text>
-<text class="text fg" x="41.6" y="32"> echo &apos;Testing border options&apos;                        </text>
-<text class="text fg" x="32" y="54.4">Testing border options                                 </text>
+<text class="text fg" x="41.6" y="32"> echo &apos;Testing border options&apos;</text>
+<text class="text fg" x="32" y="54.4">Testing border options</text>
 <text class="text f13" x="32" y="76.8">❯</text>
-<text class="text fg" x="41.6" y="76.8"> # Bo                                                 </text>
+<text class="text fg" x="41.6" y="76.8"> # B</text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor-active" x="89.6" y="79.2" width="9.6" height="22.4" fill="#c9d1d9"/>
+<rect class="cursor-active" x="80" y="76.8" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
-    <animate
-      attributeName="visibility"
-      values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.284019;0.290307;1.000000"
-      dur="8.43s"
-      repeatCount="indefinite"
-      calcMode="discrete"
-      fill="freeze"
-    />
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.278415;0.284565;1" dur="8.46s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-37" visibility="hidden">
@@ -855,23 +523,15 @@
 <rect x="1.5" y="1.5" width="597" height="297" fill="none" stroke="#ff5555" stroke-width="3" rx="20" ry="20"/>
 <g class="text-layer">
 <text class="text f13" x="32" y="32">❯</text>
-<text class="text fg" x="41.6" y="32"> echo &apos;Testing border options&apos;                        </text>
-<text class="text fg" x="32" y="54.4">Testing border options                                 </text>
+<text class="text fg" x="41.6" y="32"> echo &apos;Testing border options&apos;</text>
+<text class="text fg" x="32" y="54.4">Testing border options</text>
 <text class="text f13" x="32" y="76.8">❯</text>
-<text class="text fg" x="41.6" y="76.8"> # Bor                                                </text>
+<text class="text fg" x="41.6" y="76.8"> # Bo</text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor-active" x="99.2" y="79.2" width="9.6" height="22.4" fill="#c9d1d9"/>
+<rect class="cursor-active" x="89.6" y="76.8" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
-    <animate
-      attributeName="visibility"
-      values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.290307;0.296239;1.000000"
-      dur="8.43s"
-      repeatCount="indefinite"
-      calcMode="discrete"
-      fill="freeze"
-    />
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.284565;0.290834;1" dur="8.46s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-38" visibility="hidden">
@@ -879,23 +539,15 @@
 <rect x="1.5" y="1.5" width="597" height="297" fill="none" stroke="#ff5555" stroke-width="3" rx="20" ry="20"/>
 <g class="text-layer">
 <text class="text f13" x="32" y="32">❯</text>
-<text class="text fg" x="41.6" y="32"> echo &apos;Testing border options&apos;                        </text>
-<text class="text fg" x="32" y="54.4">Testing border options                                 </text>
+<text class="text fg" x="41.6" y="32"> echo &apos;Testing border options&apos;</text>
+<text class="text fg" x="32" y="54.4">Testing border options</text>
 <text class="text f13" x="32" y="76.8">❯</text>
-<text class="text fg" x="41.6" y="76.8"> # Bord                                               </text>
+<text class="text fg" x="41.6" y="76.8"> # Bor</text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor-active" x="108.8" y="79.2" width="9.6" height="22.4" fill="#c9d1d9"/>
+<rect class="cursor-active" x="99.2" y="76.8" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
-    <animate
-      attributeName="visibility"
-      values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.296239;0.302171;1.000000"
-      dur="8.43s"
-      repeatCount="indefinite"
-      calcMode="discrete"
-      fill="freeze"
-    />
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.290834;0.296866;1" dur="8.46s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-39" visibility="hidden">
@@ -903,23 +555,15 @@
 <rect x="1.5" y="1.5" width="597" height="297" fill="none" stroke="#ff5555" stroke-width="3" rx="20" ry="20"/>
 <g class="text-layer">
 <text class="text f13" x="32" y="32">❯</text>
-<text class="text fg" x="41.6" y="32"> echo &apos;Testing border options&apos;                        </text>
-<text class="text fg" x="32" y="54.4">Testing border options                                 </text>
+<text class="text fg" x="41.6" y="32"> echo &apos;Testing border options&apos;</text>
+<text class="text fg" x="32" y="54.4">Testing border options</text>
 <text class="text f13" x="32" y="76.8">❯</text>
-<text class="text fg" x="41.6" y="76.8"> # Borde                                              </text>
+<text class="text fg" x="41.6" y="76.8"> # Bord</text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor-active" x="118.39999999999999" y="79.2" width="9.6" height="22.4" fill="#c9d1d9"/>
+<rect class="cursor-active" x="108.8" y="76.8" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
-    <animate
-      attributeName="visibility"
-      values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.302171;0.308222;1.000000"
-      dur="8.43s"
-      repeatCount="indefinite"
-      calcMode="discrete"
-      fill="freeze"
-    />
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.296866;0.302898;1" dur="8.46s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-40" visibility="hidden">
@@ -927,23 +571,15 @@
 <rect x="1.5" y="1.5" width="597" height="297" fill="none" stroke="#ff5555" stroke-width="3" rx="20" ry="20"/>
 <g class="text-layer">
 <text class="text f13" x="32" y="32">❯</text>
-<text class="text fg" x="41.6" y="32"> echo &apos;Testing border options&apos;                        </text>
-<text class="text fg" x="32" y="54.4">Testing border options                                 </text>
+<text class="text fg" x="41.6" y="32"> echo &apos;Testing border options&apos;</text>
+<text class="text fg" x="32" y="54.4">Testing border options</text>
 <text class="text f13" x="32" y="76.8">❯</text>
-<text class="text fg" x="41.6" y="76.8"> # Border                                             </text>
+<text class="text fg" x="41.6" y="76.8"> # Borde</text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor-active" x="128" y="79.2" width="9.6" height="22.4" fill="#c9d1d9"/>
+<rect class="cursor-active" x="118.4" y="76.8" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
-    <animate
-      attributeName="visibility"
-      values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.308222;0.314391;1.000000"
-      dur="8.43s"
-      repeatCount="indefinite"
-      calcMode="discrete"
-      fill="freeze"
-    />
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.302898;0.30893;1" dur="8.46s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-41" visibility="hidden">
@@ -951,23 +587,15 @@
 <rect x="1.5" y="1.5" width="597" height="297" fill="none" stroke="#ff5555" stroke-width="3" rx="20" ry="20"/>
 <g class="text-layer">
 <text class="text f13" x="32" y="32">❯</text>
-<text class="text fg" x="41.6" y="32"> echo &apos;Testing border options&apos;                        </text>
-<text class="text fg" x="32" y="54.4">Testing border options                                 </text>
+<text class="text fg" x="41.6" y="32"> echo &apos;Testing border options&apos;</text>
+<text class="text fg" x="32" y="54.4">Testing border options</text>
 <text class="text f13" x="32" y="76.8">❯</text>
-<text class="text fg" x="41.6" y="76.8"> # BorderR                                            </text>
+<text class="text fg" x="41.6" y="76.8"> # Border</text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor-active" x="137.6" y="79.2" width="9.6" height="22.4" fill="#c9d1d9"/>
+<rect class="cursor-active" x="128" y="76.8" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
-    <animate
-      attributeName="visibility"
-      values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.314391;0.320204;1.000000"
-      dur="8.43s"
-      repeatCount="indefinite"
-      calcMode="discrete"
-      fill="freeze"
-    />
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.30893;0.31508;1" dur="8.46s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-42" visibility="hidden">
@@ -975,23 +603,15 @@
 <rect x="1.5" y="1.5" width="597" height="297" fill="none" stroke="#ff5555" stroke-width="3" rx="20" ry="20"/>
 <g class="text-layer">
 <text class="text f13" x="32" y="32">❯</text>
-<text class="text fg" x="41.6" y="32"> echo &apos;Testing border options&apos;                        </text>
-<text class="text fg" x="32" y="54.4">Testing border options                                 </text>
+<text class="text fg" x="41.6" y="32"> echo &apos;Testing border options&apos;</text>
+<text class="text fg" x="32" y="54.4">Testing border options</text>
 <text class="text f13" x="32" y="76.8">❯</text>
-<text class="text fg" x="41.6" y="76.8"> # BorderRa                                           </text>
+<text class="text fg" x="41.6" y="76.8"> # BorderR</text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor-active" x="147.2" y="79.2" width="9.6" height="22.4" fill="#c9d1d9"/>
+<rect class="cursor-active" x="137.6" y="76.8" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
-    <animate
-      attributeName="visibility"
-      values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.320204;0.326255;1.000000"
-      dur="8.43s"
-      repeatCount="indefinite"
-      calcMode="discrete"
-      fill="freeze"
-    />
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.31508;0.320875;1" dur="8.46s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-43" visibility="hidden">
@@ -999,23 +619,15 @@
 <rect x="1.5" y="1.5" width="597" height="297" fill="none" stroke="#ff5555" stroke-width="3" rx="20" ry="20"/>
 <g class="text-layer">
 <text class="text f13" x="32" y="32">❯</text>
-<text class="text fg" x="41.6" y="32"> echo &apos;Testing border options&apos;                        </text>
-<text class="text fg" x="32" y="54.4">Testing border options                                 </text>
+<text class="text fg" x="41.6" y="32"> echo &apos;Testing border options&apos;</text>
+<text class="text fg" x="32" y="54.4">Testing border options</text>
 <text class="text f13" x="32" y="76.8">❯</text>
-<text class="text fg" x="41.6" y="76.8"> # BorderRad                                          </text>
+<text class="text fg" x="41.6" y="76.8"> # BorderRa</text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor-active" x="156.8" y="79.2" width="9.6" height="22.4" fill="#c9d1d9"/>
+<rect class="cursor-active" x="147.2" y="76.8" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
-    <animate
-      attributeName="visibility"
-      values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.326255;0.332305;1.000000"
-      dur="8.43s"
-      repeatCount="indefinite"
-      calcMode="discrete"
-      fill="freeze"
-    />
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.320875;0.327144;1" dur="8.46s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-44" visibility="hidden">
@@ -1023,23 +635,15 @@
 <rect x="1.5" y="1.5" width="597" height="297" fill="none" stroke="#ff5555" stroke-width="3" rx="20" ry="20"/>
 <g class="text-layer">
 <text class="text f13" x="32" y="32">❯</text>
-<text class="text fg" x="41.6" y="32"> echo &apos;Testing border options&apos;                        </text>
-<text class="text fg" x="32" y="54.4">Testing border options                                 </text>
+<text class="text fg" x="41.6" y="32"> echo &apos;Testing border options&apos;</text>
+<text class="text fg" x="32" y="54.4">Testing border options</text>
 <text class="text f13" x="32" y="76.8">❯</text>
-<text class="text fg" x="41.6" y="76.8"> # BorderRadi                                         </text>
+<text class="text fg" x="41.6" y="76.8"> # BorderRad</text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor-active" x="166.4" y="79.2" width="9.6" height="22.4" fill="#c9d1d9"/>
+<rect class="cursor-active" x="156.8" y="76.8" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
-    <animate
-      attributeName="visibility"
-      values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.332305;0.338474;1.000000"
-      dur="8.43s"
-      repeatCount="indefinite"
-      calcMode="discrete"
-      fill="freeze"
-    />
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.327144;0.333057;1" dur="8.46s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-45" visibility="hidden">
@@ -1047,23 +651,15 @@
 <rect x="1.5" y="1.5" width="597" height="297" fill="none" stroke="#ff5555" stroke-width="3" rx="20" ry="20"/>
 <g class="text-layer">
 <text class="text f13" x="32" y="32">❯</text>
-<text class="text fg" x="41.6" y="32"> echo &apos;Testing border options&apos;                        </text>
-<text class="text fg" x="32" y="54.4">Testing border options                                 </text>
+<text class="text fg" x="41.6" y="32"> echo &apos;Testing border options&apos;</text>
+<text class="text fg" x="32" y="54.4">Testing border options</text>
 <text class="text f13" x="32" y="76.8">❯</text>
-<text class="text fg" x="41.6" y="76.8"> # BorderRadiu                                        </text>
+<text class="text fg" x="41.6" y="76.8"> # BorderRadi</text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor-active" x="176" y="79.2" width="9.6" height="22.4" fill="#c9d1d9"/>
+<rect class="cursor-active" x="166.4" y="76.8" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
-    <animate
-      attributeName="visibility"
-      values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.338474;0.344406;1.000000"
-      dur="8.43s"
-      repeatCount="indefinite"
-      calcMode="discrete"
-      fill="freeze"
-    />
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.333057;0.339089;1" dur="8.46s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-46" visibility="hidden">
@@ -1071,23 +667,15 @@
 <rect x="1.5" y="1.5" width="597" height="297" fill="none" stroke="#ff5555" stroke-width="3" rx="20" ry="20"/>
 <g class="text-layer">
 <text class="text f13" x="32" y="32">❯</text>
-<text class="text fg" x="41.6" y="32"> echo &apos;Testing border options&apos;                        </text>
-<text class="text fg" x="32" y="54.4">Testing border options                                 </text>
+<text class="text fg" x="41.6" y="32"> echo &apos;Testing border options&apos;</text>
+<text class="text fg" x="32" y="54.4">Testing border options</text>
 <text class="text f13" x="32" y="76.8">❯</text>
-<text class="text fg" x="41.6" y="76.8"> # BorderRadius                                       </text>
+<text class="text fg" x="41.6" y="76.8"> # BorderRadiu</text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor-active" x="185.6" y="79.2" width="9.6" height="22.4" fill="#c9d1d9"/>
+<rect class="cursor-active" x="176" y="76.8" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
-    <animate
-      attributeName="visibility"
-      values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.344406;0.350457;1.000000"
-      dur="8.43s"
-      repeatCount="indefinite"
-      calcMode="discrete"
-      fill="freeze"
-    />
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.339089;0.345121;1" dur="8.46s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-47" visibility="hidden">
@@ -1095,23 +683,15 @@
 <rect x="1.5" y="1.5" width="597" height="297" fill="none" stroke="#ff5555" stroke-width="3" rx="20" ry="20"/>
 <g class="text-layer">
 <text class="text f13" x="32" y="32">❯</text>
-<text class="text fg" x="41.6" y="32"> echo &apos;Testing border options&apos;                        </text>
-<text class="text fg" x="32" y="54.4">Testing border options                                 </text>
+<text class="text fg" x="41.6" y="32"> echo &apos;Testing border options&apos;</text>
+<text class="text fg" x="32" y="54.4">Testing border options</text>
 <text class="text f13" x="32" y="76.8">❯</text>
-<text class="text fg" x="41.6" y="76.8"> # BorderRadius:                                      </text>
+<text class="text fg" x="41.6" y="76.8"> # BorderRadius</text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor-active" x="195.2" y="79.2" width="9.6" height="22.4" fill="#c9d1d9"/>
+<rect class="cursor-active" x="185.6" y="76.8" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
-    <animate
-      attributeName="visibility"
-      values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.350457;0.356626;1.000000"
-      dur="8.43s"
-      repeatCount="indefinite"
-      calcMode="discrete"
-      fill="freeze"
-    />
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.345121;0.351035;1" dur="8.46s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-48" visibility="hidden">
@@ -1119,23 +699,15 @@
 <rect x="1.5" y="1.5" width="597" height="297" fill="none" stroke="#ff5555" stroke-width="3" rx="20" ry="20"/>
 <g class="text-layer">
 <text class="text f13" x="32" y="32">❯</text>
-<text class="text fg" x="41.6" y="32"> echo &apos;Testing border options&apos;                        </text>
-<text class="text fg" x="32" y="54.4">Testing border options                                 </text>
+<text class="text fg" x="41.6" y="32"> echo &apos;Testing border options&apos;</text>
+<text class="text fg" x="32" y="54.4">Testing border options</text>
 <text class="text f13" x="32" y="76.8">❯</text>
-<text class="text fg" x="41.6" y="76.8"> # BorderRadius:                                      </text>
+<text class="text fg" x="41.6" y="76.8"> # BorderRadius:</text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor-active" x="204.79999999999998" y="79.2" width="9.6" height="22.4" fill="#c9d1d9"/>
+<rect class="cursor-active" x="195.2" y="76.8" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
-    <animate
-      attributeName="visibility"
-      values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.356626;0.362795;1.000000"
-      dur="8.43s"
-      repeatCount="indefinite"
-      calcMode="discrete"
-      fill="freeze"
-    />
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.351035;0.357067;1" dur="8.46s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-49" visibility="hidden">
@@ -1143,23 +715,15 @@
 <rect x="1.5" y="1.5" width="597" height="297" fill="none" stroke="#ff5555" stroke-width="3" rx="20" ry="20"/>
 <g class="text-layer">
 <text class="text f13" x="32" y="32">❯</text>
-<text class="text fg" x="41.6" y="32"> echo &apos;Testing border options&apos;                        </text>
-<text class="text fg" x="32" y="54.4">Testing border options                                 </text>
+<text class="text fg" x="41.6" y="32"> echo &apos;Testing border options&apos;</text>
+<text class="text fg" x="32" y="54.4">Testing border options</text>
 <text class="text f13" x="32" y="76.8">❯</text>
-<text class="text fg" x="41.6" y="76.8"> # BorderRadius: 2                                    </text>
+<text class="text fg" x="41.6" y="76.8"> # BorderRadius:</text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor-active" x="214.4" y="79.2" width="9.6" height="22.4" fill="#c9d1d9"/>
+<rect class="cursor-active" x="204.8" y="76.8" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
-    <animate
-      attributeName="visibility"
-      values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.362795;0.368846;1.000000"
-      dur="8.43s"
-      repeatCount="indefinite"
-      calcMode="discrete"
-      fill="freeze"
-    />
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.357067;0.363217;1" dur="8.46s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-50" visibility="hidden">
@@ -1167,23 +731,15 @@
 <rect x="1.5" y="1.5" width="597" height="297" fill="none" stroke="#ff5555" stroke-width="3" rx="20" ry="20"/>
 <g class="text-layer">
 <text class="text f13" x="32" y="32">❯</text>
-<text class="text fg" x="41.6" y="32"> echo &apos;Testing border options&apos;                        </text>
-<text class="text fg" x="32" y="54.4">Testing border options                                 </text>
+<text class="text fg" x="41.6" y="32"> echo &apos;Testing border options&apos;</text>
+<text class="text fg" x="32" y="54.4">Testing border options</text>
 <text class="text f13" x="32" y="76.8">❯</text>
-<text class="text fg" x="41.6" y="76.8"> # BorderRadius: 20                                   </text>
+<text class="text fg" x="41.6" y="76.8"> # BorderRadius: 2</text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor-active" x="224" y="79.2" width="9.6" height="22.4" fill="#c9d1d9"/>
+<rect class="cursor-active" x="214.4" y="76.8" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
-    <animate
-      attributeName="visibility"
-      values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.368846;0.375015;1.000000"
-      dur="8.43s"
-      repeatCount="indefinite"
-      calcMode="discrete"
-      fill="freeze"
-    />
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.363217;0.369131;1" dur="8.46s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-51" visibility="hidden">
@@ -1191,23 +747,15 @@
 <rect x="1.5" y="1.5" width="597" height="297" fill="none" stroke="#ff5555" stroke-width="3" rx="20" ry="20"/>
 <g class="text-layer">
 <text class="text f13" x="32" y="32">❯</text>
-<text class="text fg" x="41.6" y="32"> echo &apos;Testing border options&apos;                        </text>
-<text class="text fg" x="32" y="54.4">Testing border options                                 </text>
+<text class="text fg" x="41.6" y="32"> echo &apos;Testing border options&apos;</text>
+<text class="text fg" x="32" y="54.4">Testing border options</text>
 <text class="text f13" x="32" y="76.8">❯</text>
-<text class="text fg" x="41.6" y="76.8"> # BorderRadius: 20,                                  </text>
+<text class="text fg" x="41.6" y="76.8"> # BorderRadius: 20</text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor-active" x="233.6" y="79.2" width="9.6" height="22.4" fill="#c9d1d9"/>
+<rect class="cursor-active" x="224" y="76.8" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
-    <animate
-      attributeName="visibility"
-      values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.375015;0.381184;1.000000"
-      dur="8.43s"
-      repeatCount="indefinite"
-      calcMode="discrete"
-      fill="freeze"
-    />
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.369131;0.375044;1" dur="8.46s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-52" visibility="hidden">
@@ -1215,23 +763,15 @@
 <rect x="1.5" y="1.5" width="597" height="297" fill="none" stroke="#ff5555" stroke-width="3" rx="20" ry="20"/>
 <g class="text-layer">
 <text class="text f13" x="32" y="32">❯</text>
-<text class="text fg" x="41.6" y="32"> echo &apos;Testing border options&apos;                        </text>
-<text class="text fg" x="32" y="54.4">Testing border options                                 </text>
+<text class="text fg" x="41.6" y="32"> echo &apos;Testing border options&apos;</text>
+<text class="text fg" x="32" y="54.4">Testing border options</text>
 <text class="text f13" x="32" y="76.8">❯</text>
-<text class="text fg" x="41.6" y="76.8"> # BorderRadius: 20,                                  </text>
+<text class="text fg" x="41.6" y="76.8"> # BorderRadius: 20,</text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor-active" x="243.2" y="79.2" width="9.6" height="22.4" fill="#c9d1d9"/>
+<rect class="cursor-active" x="233.6" y="76.8" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
-    <animate
-      attributeName="visibility"
-      values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.381184;0.386997;1.000000"
-      dur="8.43s"
-      repeatCount="indefinite"
-      calcMode="discrete"
-      fill="freeze"
-    />
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.375044;0.381195;1" dur="8.46s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-53" visibility="hidden">
@@ -1239,23 +779,15 @@
 <rect x="1.5" y="1.5" width="597" height="297" fill="none" stroke="#ff5555" stroke-width="3" rx="20" ry="20"/>
 <g class="text-layer">
 <text class="text f13" x="32" y="32">❯</text>
-<text class="text fg" x="41.6" y="32"> echo &apos;Testing border options&apos;                        </text>
-<text class="text fg" x="32" y="54.4">Testing border options                                 </text>
+<text class="text fg" x="41.6" y="32"> echo &apos;Testing border options&apos;</text>
+<text class="text fg" x="32" y="54.4">Testing border options</text>
 <text class="text f13" x="32" y="76.8">❯</text>
-<text class="text fg" x="41.6" y="76.8"> # BorderRadius: 20, B                                </text>
+<text class="text fg" x="41.6" y="76.8"> # BorderRadius: 20,</text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor-active" x="252.79999999999998" y="79.2" width="9.6" height="22.4" fill="#c9d1d9"/>
+<rect class="cursor-active" x="243.2" y="76.8" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
-    <animate
-      attributeName="visibility"
-      values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.386997;0.393048;1.000000"
-      dur="8.43s"
-      repeatCount="indefinite"
-      calcMode="discrete"
-      fill="freeze"
-    />
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.381195;0.38699;1" dur="8.46s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-54" visibility="hidden">
@@ -1263,23 +795,15 @@
 <rect x="1.5" y="1.5" width="597" height="297" fill="none" stroke="#ff5555" stroke-width="3" rx="20" ry="20"/>
 <g class="text-layer">
 <text class="text f13" x="32" y="32">❯</text>
-<text class="text fg" x="41.6" y="32"> echo &apos;Testing border options&apos;                        </text>
-<text class="text fg" x="32" y="54.4">Testing border options                                 </text>
+<text class="text fg" x="41.6" y="32"> echo &apos;Testing border options&apos;</text>
+<text class="text fg" x="32" y="54.4">Testing border options</text>
 <text class="text f13" x="32" y="76.8">❯</text>
-<text class="text fg" x="41.6" y="76.8"> # BorderRadius: 20, Bo                               </text>
+<text class="text fg" x="41.6" y="76.8"> # BorderRadius: 20, B</text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor-active" x="262.4" y="79.2" width="9.6" height="22.4" fill="#c9d1d9"/>
+<rect class="cursor-active" x="252.8" y="76.8" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
-    <animate
-      attributeName="visibility"
-      values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.393048;0.399336;1.000000"
-      dur="8.43s"
-      repeatCount="indefinite"
-      calcMode="discrete"
-      fill="freeze"
-    />
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.38699;0.392904;1" dur="8.46s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-55" visibility="hidden">
@@ -1287,23 +811,15 @@
 <rect x="1.5" y="1.5" width="597" height="297" fill="none" stroke="#ff5555" stroke-width="3" rx="20" ry="20"/>
 <g class="text-layer">
 <text class="text f13" x="32" y="32">❯</text>
-<text class="text fg" x="41.6" y="32"> echo &apos;Testing border options&apos;                        </text>
-<text class="text fg" x="32" y="54.4">Testing border options                                 </text>
+<text class="text fg" x="41.6" y="32"> echo &apos;Testing border options&apos;</text>
+<text class="text fg" x="32" y="54.4">Testing border options</text>
 <text class="text f13" x="32" y="76.8">❯</text>
-<text class="text fg" x="41.6" y="76.8"> # BorderRadius: 20, Bor                              </text>
+<text class="text fg" x="41.6" y="76.8"> # BorderRadius: 20, Bo</text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor-active" x="272" y="79.2" width="9.6" height="22.4" fill="#c9d1d9"/>
+<rect class="cursor-active" x="262.4" y="76.8" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
-    <animate
-      attributeName="visibility"
-      values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.399336;0.405268;1.000000"
-      dur="8.43s"
-      repeatCount="indefinite"
-      calcMode="discrete"
-      fill="freeze"
-    />
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.392904;0.398936;1" dur="8.46s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-56" visibility="hidden">
@@ -1311,23 +827,15 @@
 <rect x="1.5" y="1.5" width="597" height="297" fill="none" stroke="#ff5555" stroke-width="3" rx="20" ry="20"/>
 <g class="text-layer">
 <text class="text f13" x="32" y="32">❯</text>
-<text class="text fg" x="41.6" y="32"> echo &apos;Testing border options&apos;                        </text>
-<text class="text fg" x="32" y="54.4">Testing border options                                 </text>
+<text class="text fg" x="41.6" y="32"> echo &apos;Testing border options&apos;</text>
+<text class="text fg" x="32" y="54.4">Testing border options</text>
 <text class="text f13" x="32" y="76.8">❯</text>
-<text class="text fg" x="41.6" y="76.8"> # BorderRadius: 20, Bord                             </text>
+<text class="text fg" x="41.6" y="76.8"> # BorderRadius: 20, Bor</text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor-active" x="281.6" y="79.2" width="9.6" height="22.4" fill="#c9d1d9"/>
+<rect class="cursor-active" x="272" y="76.8" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
-    <animate
-      attributeName="visibility"
-      values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.405268;0.411081;1.000000"
-      dur="8.43s"
-      repeatCount="indefinite"
-      calcMode="discrete"
-      fill="freeze"
-    />
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.398936;0.405204;1" dur="8.46s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-57" visibility="hidden">
@@ -1335,23 +843,15 @@
 <rect x="1.5" y="1.5" width="597" height="297" fill="none" stroke="#ff5555" stroke-width="3" rx="20" ry="20"/>
 <g class="text-layer">
 <text class="text f13" x="32" y="32">❯</text>
-<text class="text fg" x="41.6" y="32"> echo &apos;Testing border options&apos;                        </text>
-<text class="text fg" x="32" y="54.4">Testing border options                                 </text>
+<text class="text fg" x="41.6" y="32"> echo &apos;Testing border options&apos;</text>
+<text class="text fg" x="32" y="54.4">Testing border options</text>
 <text class="text f13" x="32" y="76.8">❯</text>
-<text class="text fg" x="41.6" y="76.8"> # BorderRadius: 20, Borde                            </text>
+<text class="text fg" x="41.6" y="76.8"> # BorderRadius: 20, Bord</text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor-active" x="291.2" y="79.2" width="9.6" height="22.4" fill="#c9d1d9"/>
+<rect class="cursor-active" x="281.6" y="76.8" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
-    <animate
-      attributeName="visibility"
-      values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.411081;0.417369;1.000000"
-      dur="8.43s"
-      repeatCount="indefinite"
-      calcMode="discrete"
-      fill="freeze"
-    />
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.405204;0.410999;1" dur="8.46s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-58" visibility="hidden">
@@ -1359,23 +859,15 @@
 <rect x="1.5" y="1.5" width="597" height="297" fill="none" stroke="#ff5555" stroke-width="3" rx="20" ry="20"/>
 <g class="text-layer">
 <text class="text f13" x="32" y="32">❯</text>
-<text class="text fg" x="41.6" y="32"> echo &apos;Testing border options&apos;                        </text>
-<text class="text fg" x="32" y="54.4">Testing border options                                 </text>
+<text class="text fg" x="41.6" y="32"> echo &apos;Testing border options&apos;</text>
+<text class="text fg" x="32" y="54.4">Testing border options</text>
 <text class="text f13" x="32" y="76.8">❯</text>
-<text class="text fg" x="41.6" y="76.8"> # BorderRadius: 20, Border                           </text>
+<text class="text fg" x="41.6" y="76.8"> # BorderRadius: 20, Borde</text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor-active" x="300.8" y="79.2" width="9.6" height="22.4" fill="#c9d1d9"/>
+<rect class="cursor-active" x="291.2" y="76.8" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
-    <animate
-      attributeName="visibility"
-      values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.417369;0.422945;1.000000"
-      dur="8.43s"
-      repeatCount="indefinite"
-      calcMode="discrete"
-      fill="freeze"
-    />
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.410999;0.417031;1" dur="8.46s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-59" visibility="hidden">
@@ -1383,23 +875,15 @@
 <rect x="1.5" y="1.5" width="597" height="297" fill="none" stroke="#ff5555" stroke-width="3" rx="20" ry="20"/>
 <g class="text-layer">
 <text class="text f13" x="32" y="32">❯</text>
-<text class="text fg" x="41.6" y="32"> echo &apos;Testing border options&apos;                        </text>
-<text class="text fg" x="32" y="54.4">Testing border options                                 </text>
+<text class="text fg" x="41.6" y="32"> echo &apos;Testing border options&apos;</text>
+<text class="text fg" x="32" y="54.4">Testing border options</text>
 <text class="text f13" x="32" y="76.8">❯</text>
-<text class="text fg" x="41.6" y="76.8"> # BorderRadius: 20, BorderW                          </text>
+<text class="text fg" x="41.6" y="76.8"> # BorderRadius: 20, Border</text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor-active" x="310.4" y="79.2" width="9.6" height="22.4" fill="#c9d1d9"/>
+<rect class="cursor-active" x="300.8" y="76.8" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
-    <animate
-      attributeName="visibility"
-      values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.422945;0.429114;1.000000"
-      dur="8.43s"
-      repeatCount="indefinite"
-      calcMode="discrete"
-      fill="freeze"
-    />
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.417031;0.423182;1" dur="8.46s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-60" visibility="hidden">
@@ -1407,23 +891,15 @@
 <rect x="1.5" y="1.5" width="597" height="297" fill="none" stroke="#ff5555" stroke-width="3" rx="20" ry="20"/>
 <g class="text-layer">
 <text class="text f13" x="32" y="32">❯</text>
-<text class="text fg" x="41.6" y="32"> echo &apos;Testing border options&apos;                        </text>
-<text class="text fg" x="32" y="54.4">Testing border options                                 </text>
+<text class="text fg" x="41.6" y="32"> echo &apos;Testing border options&apos;</text>
+<text class="text fg" x="32" y="54.4">Testing border options</text>
 <text class="text f13" x="32" y="76.8">❯</text>
-<text class="text fg" x="41.6" y="76.8"> # BorderRadius: 20, BorderWi                         </text>
+<text class="text fg" x="41.6" y="76.8"> # BorderRadius: 20, BorderW</text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor-active" x="320" y="79.2" width="9.6" height="22.4" fill="#c9d1d9"/>
+<rect class="cursor-active" x="310.4" y="76.8" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
-    <animate
-      attributeName="visibility"
-      values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.429114;0.435283;1.000000"
-      dur="8.43s"
-      repeatCount="indefinite"
-      calcMode="discrete"
-      fill="freeze"
-    />
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.423182;0.429332;1" dur="8.46s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-61" visibility="hidden">
@@ -1431,23 +907,15 @@
 <rect x="1.5" y="1.5" width="597" height="297" fill="none" stroke="#ff5555" stroke-width="3" rx="20" ry="20"/>
 <g class="text-layer">
 <text class="text f13" x="32" y="32">❯</text>
-<text class="text fg" x="41.6" y="32"> echo &apos;Testing border options&apos;                        </text>
-<text class="text fg" x="32" y="54.4">Testing border options                                 </text>
+<text class="text fg" x="41.6" y="32"> echo &apos;Testing border options&apos;</text>
+<text class="text fg" x="32" y="54.4">Testing border options</text>
 <text class="text f13" x="32" y="76.8">❯</text>
-<text class="text fg" x="41.6" y="76.8"> # BorderRadius: 20, BorderWid                        </text>
+<text class="text fg" x="41.6" y="76.8"> # BorderRadius: 20, BorderWi</text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor-active" x="329.59999999999997" y="79.2" width="9.6" height="22.4" fill="#c9d1d9"/>
+<rect class="cursor-active" x="320" y="76.8" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
-    <animate
-      attributeName="visibility"
-      values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.435283;0.441215;1.000000"
-      dur="8.43s"
-      repeatCount="indefinite"
-      calcMode="discrete"
-      fill="freeze"
-    />
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.429332;0.4356;1" dur="8.46s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-62" visibility="hidden">
@@ -1455,23 +923,15 @@
 <rect x="1.5" y="1.5" width="597" height="297" fill="none" stroke="#ff5555" stroke-width="3" rx="20" ry="20"/>
 <g class="text-layer">
 <text class="text f13" x="32" y="32">❯</text>
-<text class="text fg" x="41.6" y="32"> echo &apos;Testing border options&apos;                        </text>
-<text class="text fg" x="32" y="54.4">Testing border options                                 </text>
+<text class="text fg" x="41.6" y="32"> echo &apos;Testing border options&apos;</text>
+<text class="text fg" x="32" y="54.4">Testing border options</text>
 <text class="text f13" x="32" y="76.8">❯</text>
-<text class="text fg" x="41.6" y="76.8"> # BorderRadius: 20, BorderWidt                       </text>
+<text class="text fg" x="41.6" y="76.8"> # BorderRadius: 20, BorderWid</text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor-active" x="339.2" y="79.2" width="9.6" height="22.4" fill="#c9d1d9"/>
+<rect class="cursor-active" x="329.6" y="76.8" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
-    <animate
-      attributeName="visibility"
-      values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.441215;0.447384;1.000000"
-      dur="8.43s"
-      repeatCount="indefinite"
-      calcMode="discrete"
-      fill="freeze"
-    />
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.4356;0.44175;1" dur="8.46s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-63" visibility="hidden">
@@ -1479,23 +939,15 @@
 <rect x="1.5" y="1.5" width="597" height="297" fill="none" stroke="#ff5555" stroke-width="3" rx="20" ry="20"/>
 <g class="text-layer">
 <text class="text f13" x="32" y="32">❯</text>
-<text class="text fg" x="41.6" y="32"> echo &apos;Testing border options&apos;                        </text>
-<text class="text fg" x="32" y="54.4">Testing border options                                 </text>
+<text class="text fg" x="41.6" y="32"> echo &apos;Testing border options&apos;</text>
+<text class="text fg" x="32" y="54.4">Testing border options</text>
 <text class="text f13" x="32" y="76.8">❯</text>
-<text class="text fg" x="41.6" y="76.8"> # BorderRadius: 20, BorderWidth                      </text>
+<text class="text fg" x="41.6" y="76.8"> # BorderRadius: 20, BorderWidt</text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor-active" x="348.8" y="79.2" width="9.6" height="22.4" fill="#c9d1d9"/>
+<rect class="cursor-active" x="339.2" y="76.8" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
-    <animate
-      attributeName="visibility"
-      values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.447384;0.453079;1.000000"
-      dur="8.43s"
-      repeatCount="indefinite"
-      calcMode="discrete"
-      fill="freeze"
-    />
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.44175;0.447782;1" dur="8.46s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-64" visibility="hidden">
@@ -1503,23 +955,15 @@
 <rect x="1.5" y="1.5" width="597" height="297" fill="none" stroke="#ff5555" stroke-width="3" rx="20" ry="20"/>
 <g class="text-layer">
 <text class="text f13" x="32" y="32">❯</text>
-<text class="text fg" x="41.6" y="32"> echo &apos;Testing border options&apos;                        </text>
-<text class="text fg" x="32" y="54.4">Testing border options                                 </text>
+<text class="text fg" x="41.6" y="32"> echo &apos;Testing border options&apos;</text>
+<text class="text fg" x="32" y="54.4">Testing border options</text>
 <text class="text f13" x="32" y="76.8">❯</text>
-<text class="text fg" x="41.6" y="76.8"> # BorderRadius: 20, BorderWidth:                     </text>
+<text class="text fg" x="41.6" y="76.8"> # BorderRadius: 20, BorderWidth</text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor-active" x="358.4" y="79.2" width="9.6" height="22.4" fill="#c9d1d9"/>
+<rect class="cursor-active" x="348.8" y="76.8" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
-    <animate
-      attributeName="visibility"
-      values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.453079;0.459129;1.000000"
-      dur="8.43s"
-      repeatCount="indefinite"
-      calcMode="discrete"
-      fill="freeze"
-    />
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.447782;0.453933;1" dur="8.46s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-65" visibility="hidden">
@@ -1527,23 +971,15 @@
 <rect x="1.5" y="1.5" width="597" height="297" fill="none" stroke="#ff5555" stroke-width="3" rx="20" ry="20"/>
 <g class="text-layer">
 <text class="text f13" x="32" y="32">❯</text>
-<text class="text fg" x="41.6" y="32"> echo &apos;Testing border options&apos;                        </text>
-<text class="text fg" x="32" y="54.4">Testing border options                                 </text>
+<text class="text fg" x="41.6" y="32"> echo &apos;Testing border options&apos;</text>
+<text class="text fg" x="32" y="54.4">Testing border options</text>
 <text class="text f13" x="32" y="76.8">❯</text>
-<text class="text fg" x="41.6" y="76.8"> # BorderRadius: 20, BorderWidth:                     </text>
+<text class="text fg" x="41.6" y="76.8"> # BorderRadius: 20, BorderWidth:</text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor-active" x="368" y="79.2" width="9.6" height="22.4" fill="#c9d1d9"/>
+<rect class="cursor-active" x="358.4" y="76.8" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
-    <animate
-      attributeName="visibility"
-      values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.459129;0.465180;1.000000"
-      dur="8.43s"
-      repeatCount="indefinite"
-      calcMode="discrete"
-      fill="freeze"
-    />
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.453933;0.460201;1" dur="8.46s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-66" visibility="hidden">
@@ -1551,23 +987,15 @@
 <rect x="1.5" y="1.5" width="597" height="297" fill="none" stroke="#ff5555" stroke-width="3" rx="20" ry="20"/>
 <g class="text-layer">
 <text class="text f13" x="32" y="32">❯</text>
-<text class="text fg" x="41.6" y="32"> echo &apos;Testing border options&apos;                        </text>
-<text class="text fg" x="32" y="54.4">Testing border options                                 </text>
+<text class="text fg" x="41.6" y="32"> echo &apos;Testing border options&apos;</text>
+<text class="text fg" x="32" y="54.4">Testing border options</text>
 <text class="text f13" x="32" y="76.8">❯</text>
-<text class="text fg" x="41.6" y="76.8"> # BorderRadius: 20, BorderWidth: 3                   </text>
+<text class="text fg" x="41.6" y="76.8"> # BorderRadius: 20, BorderWidth:</text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor-active" x="377.59999999999997" y="79.2" width="9.6" height="22.4" fill="#c9d1d9"/>
+<rect class="cursor-active" x="368" y="76.8" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
-    <animate
-      attributeName="visibility"
-      values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.465180;0.524736;1.000000"
-      dur="8.43s"
-      repeatCount="indefinite"
-      calcMode="discrete"
-      fill="freeze"
-    />
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.460201;0.46647;1" dur="8.46s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-67" visibility="hidden">
@@ -1575,23 +1003,15 @@
 <rect x="1.5" y="1.5" width="597" height="297" fill="none" stroke="#ff5555" stroke-width="3" rx="20" ry="20"/>
 <g class="text-layer">
 <text class="text f13" x="32" y="32">❯</text>
-<text class="text fg" x="41.6" y="32"> echo &apos;Testing border options&apos;                        </text>
-<text class="text fg" x="32" y="54.4">Testing border options                                 </text>
+<text class="text fg" x="41.6" y="32"> echo &apos;Testing border options&apos;</text>
+<text class="text fg" x="32" y="54.4">Testing border options</text>
 <text class="text f13" x="32" y="76.8">❯</text>
-<text class="text fg" x="41.6" y="76.8"> # BorderRadius: 20, BorderWidth: 3                   </text>
+<text class="text fg" x="41.6" y="76.8"> # BorderRadius: 20, BorderWidth: 3</text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor" x="377.59999999999997" y="79.2" width="9.6" height="22.4" fill="#c9d1d9"/>
+<rect class="cursor-active" x="377.6" y="76.8" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
-    <animate
-      attributeName="visibility"
-      values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.524736;0.537193;1.000000"
-      dur="8.43s"
-      repeatCount="indefinite"
-      calcMode="discrete"
-      fill="freeze"
-    />
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.46647;0.466115;1" dur="8.46s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-68" visibility="hidden">
@@ -1599,20 +1019,15 @@
 <rect x="1.5" y="1.5" width="597" height="297" fill="none" stroke="#ff5555" stroke-width="3" rx="20" ry="20"/>
 <g class="text-layer">
 <text class="text f13" x="32" y="32">❯</text>
-<text class="text fg" x="41.6" y="32"> echo &apos;Testing border options&apos;                        </text>
-<text class="text fg" x="32" y="54.4">Testing border options                                 </text>
+<text class="text fg" x="41.6" y="32"> echo &apos;Testing border options&apos;</text>
+<text class="text fg" x="32" y="54.4">Testing border options</text>
 <text class="text f13" x="32" y="76.8">❯</text>
-<text class="text fg" x="41.6" y="76.8"> # BorderRadius: 20, BorderWidth: 3                   </text>
+<text class="text fg" x="41.6" y="76.8"> # BorderRadius: 20, BorderWidth: 3</text>
 </g>
-    <animate
-      attributeName="visibility"
-      values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.537193;0.550599;1.000000"
-      dur="8.43s"
-      repeatCount="indefinite"
-      calcMode="discrete"
-      fill="freeze"
-    />
+<g class="cursor-layer">
+<rect class="cursor" x="377.6" y="76.8" width="9.6" height="22.4" fill="#c9d1d9"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.466115;0.525488;1" dur="8.46s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-69" visibility="hidden">
@@ -1620,24 +1035,15 @@
 <rect x="1.5" y="1.5" width="597" height="297" fill="none" stroke="#ff5555" stroke-width="3" rx="20" ry="20"/>
 <g class="text-layer">
 <text class="text f13" x="32" y="32">❯</text>
-<text class="text fg" x="41.6" y="32"> echo &apos;Testing border options&apos;                        </text>
-<text class="text fg" x="32" y="54.4">Testing border options                                 </text>
+<text class="text fg" x="41.6" y="32"> echo &apos;Testing border options&apos;</text>
+<text class="text fg" x="32" y="54.4">Testing border options</text>
 <text class="text f13" x="32" y="76.8">❯</text>
-<text class="text fg" x="41.6" y="76.8"> # BorderRadius: 20, BorderWidth: 3                   </text>
-<text class="text f13" x="32" y="121.6">❯</text>
+<text class="text fg" x="41.6" y="76.8"> # BorderRadius: 20, BorderWidth: 3</text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor" x="51.2" y="124" width="9.6" height="22.4" fill="#c9d1d9"/>
+<rect class="cursor" x="377.6" y="76.8" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
-    <animate
-      attributeName="visibility"
-      values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.550599;0.556887;1.000000"
-      dur="8.43s"
-      repeatCount="indefinite"
-      calcMode="discrete"
-      fill="freeze"
-    />
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.525488;0.537788;1" dur="8.46s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-70" visibility="hidden">
@@ -1645,25 +1051,12 @@
 <rect x="1.5" y="1.5" width="597" height="297" fill="none" stroke="#ff5555" stroke-width="3" rx="20" ry="20"/>
 <g class="text-layer">
 <text class="text f13" x="32" y="32">❯</text>
-<text class="text fg" x="41.6" y="32"> echo &apos;Testing border options&apos;                        </text>
-<text class="text fg" x="32" y="54.4">Testing border options                                 </text>
+<text class="text fg" x="41.6" y="32"> echo &apos;Testing border options&apos;</text>
+<text class="text fg" x="32" y="54.4">Testing border options</text>
 <text class="text f13" x="32" y="76.8">❯</text>
-<text class="text fg" x="41.6" y="76.8"> # BorderRadius: 20, BorderWidth: 3                   </text>
-<text class="text f13" x="32" y="121.6">❯</text>
-<text class="text fg" x="41.6" y="121.6"> #                                                    </text>
+<text class="text fg" x="41.6" y="76.8"> # BorderRadius: 20, BorderWidth: 3</text>
 </g>
-<g class="cursor-layer">
-<rect class="cursor-active" x="60.8" y="124" width="9.6" height="22.4" fill="#c9d1d9"/>
-</g>
-    <animate
-      attributeName="visibility"
-      values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.556887;0.562937;1.000000"
-      dur="8.43s"
-      repeatCount="indefinite"
-      calcMode="discrete"
-      fill="freeze"
-    />
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.537788;0.551153;1" dur="8.46s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-71" visibility="hidden">
@@ -1671,25 +1064,16 @@
 <rect x="1.5" y="1.5" width="597" height="297" fill="none" stroke="#ff5555" stroke-width="3" rx="20" ry="20"/>
 <g class="text-layer">
 <text class="text f13" x="32" y="32">❯</text>
-<text class="text fg" x="41.6" y="32"> echo &apos;Testing border options&apos;                        </text>
-<text class="text fg" x="32" y="54.4">Testing border options                                 </text>
+<text class="text fg" x="41.6" y="32"> echo &apos;Testing border options&apos;</text>
+<text class="text fg" x="32" y="54.4">Testing border options</text>
 <text class="text f13" x="32" y="76.8">❯</text>
-<text class="text fg" x="41.6" y="76.8"> # BorderRadius: 20, BorderWidth: 3                   </text>
+<text class="text fg" x="41.6" y="76.8"> # BorderRadius: 20, BorderWidth: 3</text>
 <text class="text f13" x="32" y="121.6">❯</text>
-<text class="text fg" x="41.6" y="121.6"> #                                                    </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor-active" x="70.4" y="124" width="9.6" height="22.4" fill="#c9d1d9"/>
+<rect class="cursor" x="51.2" y="121.6" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
-    <animate
-      attributeName="visibility"
-      values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.562937;0.569225;1.000000"
-      dur="8.43s"
-      repeatCount="indefinite"
-      calcMode="discrete"
-      fill="freeze"
-    />
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.551153;0.557658;1" dur="8.46s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-72" visibility="hidden">
@@ -1697,25 +1081,17 @@
 <rect x="1.5" y="1.5" width="597" height="297" fill="none" stroke="#ff5555" stroke-width="3" rx="20" ry="20"/>
 <g class="text-layer">
 <text class="text f13" x="32" y="32">❯</text>
-<text class="text fg" x="41.6" y="32"> echo &apos;Testing border options&apos;                        </text>
-<text class="text fg" x="32" y="54.4">Testing border options                                 </text>
+<text class="text fg" x="41.6" y="32"> echo &apos;Testing border options&apos;</text>
+<text class="text fg" x="32" y="54.4">Testing border options</text>
 <text class="text f13" x="32" y="76.8">❯</text>
-<text class="text fg" x="41.6" y="76.8"> # BorderRadius: 20, BorderWidth: 3                   </text>
+<text class="text fg" x="41.6" y="76.8"> # BorderRadius: 20, BorderWidth: 3</text>
 <text class="text f13" x="32" y="121.6">❯</text>
-<text class="text fg" x="41.6" y="121.6"> # B                                                  </text>
+<text class="text fg" x="41.6" y="121.6"> #</text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor-active" x="80" y="124" width="9.6" height="22.4" fill="#c9d1d9"/>
+<rect class="cursor-active" x="60.8" y="121.6" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
-    <animate
-      attributeName="visibility"
-      values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.569225;0.575157;1.000000"
-      dur="8.43s"
-      repeatCount="indefinite"
-      calcMode="discrete"
-      fill="freeze"
-    />
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.557658;0.56369;1" dur="8.46s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-73" visibility="hidden">
@@ -1723,25 +1099,17 @@
 <rect x="1.5" y="1.5" width="597" height="297" fill="none" stroke="#ff5555" stroke-width="3" rx="20" ry="20"/>
 <g class="text-layer">
 <text class="text f13" x="32" y="32">❯</text>
-<text class="text fg" x="41.6" y="32"> echo &apos;Testing border options&apos;                        </text>
-<text class="text fg" x="32" y="54.4">Testing border options                                 </text>
+<text class="text fg" x="41.6" y="32"> echo &apos;Testing border options&apos;</text>
+<text class="text fg" x="32" y="54.4">Testing border options</text>
 <text class="text f13" x="32" y="76.8">❯</text>
-<text class="text fg" x="41.6" y="76.8"> # BorderRadius: 20, BorderWidth: 3                   </text>
+<text class="text fg" x="41.6" y="76.8"> # BorderRadius: 20, BorderWidth: 3</text>
 <text class="text f13" x="32" y="121.6">❯</text>
-<text class="text fg" x="41.6" y="121.6"> # Bo                                                 </text>
+<text class="text fg" x="41.6" y="121.6"> #</text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor-active" x="89.6" y="124" width="9.6" height="22.4" fill="#c9d1d9"/>
+<rect class="cursor-active" x="70.4" y="121.6" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
-    <animate
-      attributeName="visibility"
-      values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.575157;0.581208;1.000000"
-      dur="8.43s"
-      repeatCount="indefinite"
-      calcMode="discrete"
-      fill="freeze"
-    />
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.56369;0.569604;1" dur="8.46s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-74" visibility="hidden">
@@ -1749,25 +1117,17 @@
 <rect x="1.5" y="1.5" width="597" height="297" fill="none" stroke="#ff5555" stroke-width="3" rx="20" ry="20"/>
 <g class="text-layer">
 <text class="text f13" x="32" y="32">❯</text>
-<text class="text fg" x="41.6" y="32"> echo &apos;Testing border options&apos;                        </text>
-<text class="text fg" x="32" y="54.4">Testing border options                                 </text>
+<text class="text fg" x="41.6" y="32"> echo &apos;Testing border options&apos;</text>
+<text class="text fg" x="32" y="54.4">Testing border options</text>
 <text class="text f13" x="32" y="76.8">❯</text>
-<text class="text fg" x="41.6" y="76.8"> # BorderRadius: 20, BorderWidth: 3                   </text>
+<text class="text fg" x="41.6" y="76.8"> # BorderRadius: 20, BorderWidth: 3</text>
 <text class="text f13" x="32" y="121.6">❯</text>
-<text class="text fg" x="41.6" y="121.6"> # Bor                                                </text>
+<text class="text fg" x="41.6" y="121.6"> # B</text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor-active" x="99.2" y="124" width="9.6" height="22.4" fill="#c9d1d9"/>
+<rect class="cursor-active" x="80" y="121.6" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
-    <animate
-      attributeName="visibility"
-      values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.581208;0.587021;1.000000"
-      dur="8.43s"
-      repeatCount="indefinite"
-      calcMode="discrete"
-      fill="freeze"
-    />
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.569604;0.575636;1" dur="8.46s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-75" visibility="hidden">
@@ -1775,25 +1135,17 @@
 <rect x="1.5" y="1.5" width="597" height="297" fill="none" stroke="#ff5555" stroke-width="3" rx="20" ry="20"/>
 <g class="text-layer">
 <text class="text f13" x="32" y="32">❯</text>
-<text class="text fg" x="41.6" y="32"> echo &apos;Testing border options&apos;                        </text>
-<text class="text fg" x="32" y="54.4">Testing border options                                 </text>
+<text class="text fg" x="41.6" y="32"> echo &apos;Testing border options&apos;</text>
+<text class="text fg" x="32" y="54.4">Testing border options</text>
 <text class="text f13" x="32" y="76.8">❯</text>
-<text class="text fg" x="41.6" y="76.8"> # BorderRadius: 20, BorderWidth: 3                   </text>
+<text class="text fg" x="41.6" y="76.8"> # BorderRadius: 20, BorderWidth: 3</text>
 <text class="text f13" x="32" y="121.6">❯</text>
-<text class="text fg" x="41.6" y="121.6"> # Bord                                               </text>
+<text class="text fg" x="41.6" y="121.6"> # Bo</text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor-active" x="108.8" y="124" width="9.6" height="22.4" fill="#c9d1d9"/>
+<rect class="cursor-active" x="89.6" y="121.6" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
-    <animate
-      attributeName="visibility"
-      values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.587021;0.592834;1.000000"
-      dur="8.43s"
-      repeatCount="indefinite"
-      calcMode="discrete"
-      fill="freeze"
-    />
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.575636;0.581904;1" dur="8.46s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-76" visibility="hidden">
@@ -1801,25 +1153,17 @@
 <rect x="1.5" y="1.5" width="597" height="297" fill="none" stroke="#ff5555" stroke-width="3" rx="20" ry="20"/>
 <g class="text-layer">
 <text class="text f13" x="32" y="32">❯</text>
-<text class="text fg" x="41.6" y="32"> echo &apos;Testing border options&apos;                        </text>
-<text class="text fg" x="32" y="54.4">Testing border options                                 </text>
+<text class="text fg" x="41.6" y="32"> echo &apos;Testing border options&apos;</text>
+<text class="text fg" x="32" y="54.4">Testing border options</text>
 <text class="text f13" x="32" y="76.8">❯</text>
-<text class="text fg" x="41.6" y="76.8"> # BorderRadius: 20, BorderWidth: 3                   </text>
+<text class="text fg" x="41.6" y="76.8"> # BorderRadius: 20, BorderWidth: 3</text>
 <text class="text f13" x="32" y="121.6">❯</text>
-<text class="text fg" x="41.6" y="121.6"> # Borde                                              </text>
+<text class="text fg" x="41.6" y="121.6"> # Bor</text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor-active" x="118.39999999999999" y="124" width="9.6" height="22.4" fill="#c9d1d9"/>
+<rect class="cursor-active" x="99.2" y="121.6" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
-    <animate
-      attributeName="visibility"
-      values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.592834;0.599122;1.000000"
-      dur="8.43s"
-      repeatCount="indefinite"
-      calcMode="discrete"
-      fill="freeze"
-    />
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.581904;0.587818;1" dur="8.46s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-77" visibility="hidden">
@@ -1827,25 +1171,17 @@
 <rect x="1.5" y="1.5" width="597" height="297" fill="none" stroke="#ff5555" stroke-width="3" rx="20" ry="20"/>
 <g class="text-layer">
 <text class="text f13" x="32" y="32">❯</text>
-<text class="text fg" x="41.6" y="32"> echo &apos;Testing border options&apos;                        </text>
-<text class="text fg" x="32" y="54.4">Testing border options                                 </text>
+<text class="text fg" x="41.6" y="32"> echo &apos;Testing border options&apos;</text>
+<text class="text fg" x="32" y="54.4">Testing border options</text>
 <text class="text f13" x="32" y="76.8">❯</text>
-<text class="text fg" x="41.6" y="76.8"> # BorderRadius: 20, BorderWidth: 3                   </text>
+<text class="text fg" x="41.6" y="76.8"> # BorderRadius: 20, BorderWidth: 3</text>
 <text class="text f13" x="32" y="121.6">❯</text>
-<text class="text fg" x="41.6" y="121.6"> # Border                                             </text>
+<text class="text fg" x="41.6" y="121.6"> # Bord</text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor-active" x="128" y="124" width="9.6" height="22.4" fill="#c9d1d9"/>
+<rect class="cursor-active" x="108.8" y="121.6" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
-    <animate
-      attributeName="visibility"
-      values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.599122;0.604935;1.000000"
-      dur="8.43s"
-      repeatCount="indefinite"
-      calcMode="discrete"
-      fill="freeze"
-    />
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.587818;0.593968;1" dur="8.46s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-78" visibility="hidden">
@@ -1853,25 +1189,17 @@
 <rect x="1.5" y="1.5" width="597" height="297" fill="none" stroke="#ff5555" stroke-width="3" rx="20" ry="20"/>
 <g class="text-layer">
 <text class="text f13" x="32" y="32">❯</text>
-<text class="text fg" x="41.6" y="32"> echo &apos;Testing border options&apos;                        </text>
-<text class="text fg" x="32" y="54.4">Testing border options                                 </text>
+<text class="text fg" x="41.6" y="32"> echo &apos;Testing border options&apos;</text>
+<text class="text fg" x="32" y="54.4">Testing border options</text>
 <text class="text f13" x="32" y="76.8">❯</text>
-<text class="text fg" x="41.6" y="76.8"> # BorderRadius: 20, BorderWidth: 3                   </text>
+<text class="text fg" x="41.6" y="76.8"> # BorderRadius: 20, BorderWidth: 3</text>
 <text class="text f13" x="32" y="121.6">❯</text>
-<text class="text fg" x="41.6" y="121.6"> # BorderC                                            </text>
+<text class="text fg" x="41.6" y="121.6"> # Borde</text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor-active" x="137.6" y="124" width="9.6" height="22.4" fill="#c9d1d9"/>
+<rect class="cursor-active" x="118.4" y="121.6" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
-    <animate
-      attributeName="visibility"
-      values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.604935;0.610986;1.000000"
-      dur="8.43s"
-      repeatCount="indefinite"
-      calcMode="discrete"
-      fill="freeze"
-    />
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.593968;0.599763;1" dur="8.46s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-79" visibility="hidden">
@@ -1879,25 +1207,17 @@
 <rect x="1.5" y="1.5" width="597" height="297" fill="none" stroke="#ff5555" stroke-width="3" rx="20" ry="20"/>
 <g class="text-layer">
 <text class="text f13" x="32" y="32">❯</text>
-<text class="text fg" x="41.6" y="32"> echo &apos;Testing border options&apos;                        </text>
-<text class="text fg" x="32" y="54.4">Testing border options                                 </text>
+<text class="text fg" x="41.6" y="32"> echo &apos;Testing border options&apos;</text>
+<text class="text fg" x="32" y="54.4">Testing border options</text>
 <text class="text f13" x="32" y="76.8">❯</text>
-<text class="text fg" x="41.6" y="76.8"> # BorderRadius: 20, BorderWidth: 3                   </text>
+<text class="text fg" x="41.6" y="76.8"> # BorderRadius: 20, BorderWidth: 3</text>
 <text class="text f13" x="32" y="121.6">❯</text>
-<text class="text fg" x="41.6" y="121.6"> # BorderCo                                           </text>
+<text class="text fg" x="41.6" y="121.6"> # Border</text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor-active" x="147.2" y="124" width="9.6" height="22.4" fill="#c9d1d9"/>
+<rect class="cursor-active" x="128" y="121.6" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
-    <animate
-      attributeName="visibility"
-      values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.610986;0.617036;1.000000"
-      dur="8.43s"
-      repeatCount="indefinite"
-      calcMode="discrete"
-      fill="freeze"
-    />
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.599763;0.605795;1" dur="8.46s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-80" visibility="hidden">
@@ -1905,25 +1225,17 @@
 <rect x="1.5" y="1.5" width="597" height="297" fill="none" stroke="#ff5555" stroke-width="3" rx="20" ry="20"/>
 <g class="text-layer">
 <text class="text f13" x="32" y="32">❯</text>
-<text class="text fg" x="41.6" y="32"> echo &apos;Testing border options&apos;                        </text>
-<text class="text fg" x="32" y="54.4">Testing border options                                 </text>
+<text class="text fg" x="41.6" y="32"> echo &apos;Testing border options&apos;</text>
+<text class="text fg" x="32" y="54.4">Testing border options</text>
 <text class="text f13" x="32" y="76.8">❯</text>
-<text class="text fg" x="41.6" y="76.8"> # BorderRadius: 20, BorderWidth: 3                   </text>
+<text class="text fg" x="41.6" y="76.8"> # BorderRadius: 20, BorderWidth: 3</text>
 <text class="text f13" x="32" y="121.6">❯</text>
-<text class="text fg" x="41.6" y="121.6"> # BorderCol                                          </text>
+<text class="text fg" x="41.6" y="121.6"> # BorderC</text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor-active" x="156.8" y="124" width="9.6" height="22.4" fill="#c9d1d9"/>
+<rect class="cursor-active" x="137.6" y="121.6" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
-    <animate
-      attributeName="visibility"
-      values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.617036;0.623206;1.000000"
-      dur="8.43s"
-      repeatCount="indefinite"
-      calcMode="discrete"
-      fill="freeze"
-    />
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.605795;0.611827;1" dur="8.46s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-81" visibility="hidden">
@@ -1931,25 +1243,17 @@
 <rect x="1.5" y="1.5" width="597" height="297" fill="none" stroke="#ff5555" stroke-width="3" rx="20" ry="20"/>
 <g class="text-layer">
 <text class="text f13" x="32" y="32">❯</text>
-<text class="text fg" x="41.6" y="32"> echo &apos;Testing border options&apos;                        </text>
-<text class="text fg" x="32" y="54.4">Testing border options                                 </text>
+<text class="text fg" x="41.6" y="32"> echo &apos;Testing border options&apos;</text>
+<text class="text fg" x="32" y="54.4">Testing border options</text>
 <text class="text f13" x="32" y="76.8">❯</text>
-<text class="text fg" x="41.6" y="76.8"> # BorderRadius: 20, BorderWidth: 3                   </text>
+<text class="text fg" x="41.6" y="76.8"> # BorderRadius: 20, BorderWidth: 3</text>
 <text class="text f13" x="32" y="121.6">❯</text>
-<text class="text fg" x="41.6" y="121.6"> # BorderColo                                         </text>
+<text class="text fg" x="41.6" y="121.6"> # BorderCo</text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor-active" x="166.4" y="124" width="9.6" height="22.4" fill="#c9d1d9"/>
+<rect class="cursor-active" x="147.2" y="121.6" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
-    <animate
-      attributeName="visibility"
-      values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.623206;0.629256;1.000000"
-      dur="8.43s"
-      repeatCount="indefinite"
-      calcMode="discrete"
-      fill="freeze"
-    />
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.611827;0.617859;1" dur="8.46s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-82" visibility="hidden">
@@ -1957,25 +1261,17 @@
 <rect x="1.5" y="1.5" width="597" height="297" fill="none" stroke="#ff5555" stroke-width="3" rx="20" ry="20"/>
 <g class="text-layer">
 <text class="text f13" x="32" y="32">❯</text>
-<text class="text fg" x="41.6" y="32"> echo &apos;Testing border options&apos;                        </text>
-<text class="text fg" x="32" y="54.4">Testing border options                                 </text>
+<text class="text fg" x="41.6" y="32"> echo &apos;Testing border options&apos;</text>
+<text class="text fg" x="32" y="54.4">Testing border options</text>
 <text class="text f13" x="32" y="76.8">❯</text>
-<text class="text fg" x="41.6" y="76.8"> # BorderRadius: 20, BorderWidth: 3                   </text>
+<text class="text fg" x="41.6" y="76.8"> # BorderRadius: 20, BorderWidth: 3</text>
 <text class="text f13" x="32" y="121.6">❯</text>
-<text class="text fg" x="41.6" y="121.6"> # BorderColor                                        </text>
+<text class="text fg" x="41.6" y="121.6"> # BorderCol</text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor-active" x="176" y="124" width="9.6" height="22.4" fill="#c9d1d9"/>
+<rect class="cursor-active" x="156.8" y="121.6" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
-    <animate
-      attributeName="visibility"
-      values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.629256;0.635307;1.000000"
-      dur="8.43s"
-      repeatCount="indefinite"
-      calcMode="discrete"
-      fill="freeze"
-    />
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.617859;0.623891;1" dur="8.46s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-83" visibility="hidden">
@@ -1983,25 +1279,17 @@
 <rect x="1.5" y="1.5" width="597" height="297" fill="none" stroke="#ff5555" stroke-width="3" rx="20" ry="20"/>
 <g class="text-layer">
 <text class="text f13" x="32" y="32">❯</text>
-<text class="text fg" x="41.6" y="32"> echo &apos;Testing border options&apos;                        </text>
-<text class="text fg" x="32" y="54.4">Testing border options                                 </text>
+<text class="text fg" x="41.6" y="32"> echo &apos;Testing border options&apos;</text>
+<text class="text fg" x="32" y="54.4">Testing border options</text>
 <text class="text f13" x="32" y="76.8">❯</text>
-<text class="text fg" x="41.6" y="76.8"> # BorderRadius: 20, BorderWidth: 3                   </text>
+<text class="text fg" x="41.6" y="76.8"> # BorderRadius: 20, BorderWidth: 3</text>
 <text class="text f13" x="32" y="121.6">❯</text>
-<text class="text fg" x="41.6" y="121.6"> # BorderColor:                                       </text>
+<text class="text fg" x="41.6" y="121.6"> # BorderColo</text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor-active" x="185.6" y="124" width="9.6" height="22.4" fill="#c9d1d9"/>
+<rect class="cursor-active" x="166.4" y="121.6" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
-    <animate
-      attributeName="visibility"
-      values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.635307;0.641357;1.000000"
-      dur="8.43s"
-      repeatCount="indefinite"
-      calcMode="discrete"
-      fill="freeze"
-    />
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.623891;0.630041;1" dur="8.46s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-84" visibility="hidden">
@@ -2009,25 +1297,17 @@
 <rect x="1.5" y="1.5" width="597" height="297" fill="none" stroke="#ff5555" stroke-width="3" rx="20" ry="20"/>
 <g class="text-layer">
 <text class="text f13" x="32" y="32">❯</text>
-<text class="text fg" x="41.6" y="32"> echo &apos;Testing border options&apos;                        </text>
-<text class="text fg" x="32" y="54.4">Testing border options                                 </text>
+<text class="text fg" x="41.6" y="32"> echo &apos;Testing border options&apos;</text>
+<text class="text fg" x="32" y="54.4">Testing border options</text>
 <text class="text f13" x="32" y="76.8">❯</text>
-<text class="text fg" x="41.6" y="76.8"> # BorderRadius: 20, BorderWidth: 3                   </text>
+<text class="text fg" x="41.6" y="76.8"> # BorderRadius: 20, BorderWidth: 3</text>
 <text class="text f13" x="32" y="121.6">❯</text>
-<text class="text fg" x="41.6" y="121.6"> # BorderColor:                                       </text>
+<text class="text fg" x="41.6" y="121.6"> # BorderColor</text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor-active" x="195.2" y="124" width="9.6" height="22.4" fill="#c9d1d9"/>
+<rect class="cursor-active" x="176" y="121.6" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
-    <animate
-      attributeName="visibility"
-      values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.641357;0.647408;1.000000"
-      dur="8.43s"
-      repeatCount="indefinite"
-      calcMode="discrete"
-      fill="freeze"
-    />
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.630041;0.635955;1" dur="8.46s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-85" visibility="hidden">
@@ -2035,25 +1315,17 @@
 <rect x="1.5" y="1.5" width="597" height="297" fill="none" stroke="#ff5555" stroke-width="3" rx="20" ry="20"/>
 <g class="text-layer">
 <text class="text f13" x="32" y="32">❯</text>
-<text class="text fg" x="41.6" y="32"> echo &apos;Testing border options&apos;                        </text>
-<text class="text fg" x="32" y="54.4">Testing border options                                 </text>
+<text class="text fg" x="41.6" y="32"> echo &apos;Testing border options&apos;</text>
+<text class="text fg" x="32" y="54.4">Testing border options</text>
 <text class="text f13" x="32" y="76.8">❯</text>
-<text class="text fg" x="41.6" y="76.8"> # BorderRadius: 20, BorderWidth: 3                   </text>
+<text class="text fg" x="41.6" y="76.8"> # BorderRadius: 20, BorderWidth: 3</text>
 <text class="text f13" x="32" y="121.6">❯</text>
-<text class="text fg" x="41.6" y="121.6"> # BorderColor: #                                     </text>
+<text class="text fg" x="41.6" y="121.6"> # BorderColor:</text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor-active" x="204.79999999999998" y="124" width="9.6" height="22.4" fill="#c9d1d9"/>
+<rect class="cursor-active" x="185.6" y="121.6" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
-    <animate
-      attributeName="visibility"
-      values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.647408;0.653221;1.000000"
-      dur="8.43s"
-      repeatCount="indefinite"
-      calcMode="discrete"
-      fill="freeze"
-    />
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.635955;0.642105;1" dur="8.46s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-86" visibility="hidden">
@@ -2061,25 +1333,17 @@
 <rect x="1.5" y="1.5" width="597" height="297" fill="none" stroke="#ff5555" stroke-width="3" rx="20" ry="20"/>
 <g class="text-layer">
 <text class="text f13" x="32" y="32">❯</text>
-<text class="text fg" x="41.6" y="32"> echo &apos;Testing border options&apos;                        </text>
-<text class="text fg" x="32" y="54.4">Testing border options                                 </text>
+<text class="text fg" x="41.6" y="32"> echo &apos;Testing border options&apos;</text>
+<text class="text fg" x="32" y="54.4">Testing border options</text>
 <text class="text f13" x="32" y="76.8">❯</text>
-<text class="text fg" x="41.6" y="76.8"> # BorderRadius: 20, BorderWidth: 3                   </text>
+<text class="text fg" x="41.6" y="76.8"> # BorderRadius: 20, BorderWidth: 3</text>
 <text class="text f13" x="32" y="121.6">❯</text>
-<text class="text fg" x="41.6" y="121.6"> # BorderColor: #f                                    </text>
+<text class="text fg" x="41.6" y="121.6"> # BorderColor:</text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor-active" x="214.4" y="124" width="9.6" height="22.4" fill="#c9d1d9"/>
+<rect class="cursor-active" x="195.2" y="121.6" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
-    <animate
-      attributeName="visibility"
-      values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.653221;0.659272;1.000000"
-      dur="8.43s"
-      repeatCount="indefinite"
-      calcMode="discrete"
-      fill="freeze"
-    />
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.642105;0.647901;1" dur="8.46s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-87" visibility="hidden">
@@ -2087,25 +1351,17 @@
 <rect x="1.5" y="1.5" width="597" height="297" fill="none" stroke="#ff5555" stroke-width="3" rx="20" ry="20"/>
 <g class="text-layer">
 <text class="text f13" x="32" y="32">❯</text>
-<text class="text fg" x="41.6" y="32"> echo &apos;Testing border options&apos;                        </text>
-<text class="text fg" x="32" y="54.4">Testing border options                                 </text>
+<text class="text fg" x="41.6" y="32"> echo &apos;Testing border options&apos;</text>
+<text class="text fg" x="32" y="54.4">Testing border options</text>
 <text class="text f13" x="32" y="76.8">❯</text>
-<text class="text fg" x="41.6" y="76.8"> # BorderRadius: 20, BorderWidth: 3                   </text>
+<text class="text fg" x="41.6" y="76.8"> # BorderRadius: 20, BorderWidth: 3</text>
 <text class="text f13" x="32" y="121.6">❯</text>
-<text class="text fg" x="41.6" y="121.6"> # BorderColor: #ff                                   </text>
+<text class="text fg" x="41.6" y="121.6"> # BorderColor: #</text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor-active" x="224" y="124" width="9.6" height="22.4" fill="#c9d1d9"/>
+<rect class="cursor-active" x="204.8" y="121.6" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
-    <animate
-      attributeName="visibility"
-      values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.659272;0.665322;1.000000"
-      dur="8.43s"
-      repeatCount="indefinite"
-      calcMode="discrete"
-      fill="freeze"
-    />
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.647901;0.653933;1" dur="8.46s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-88" visibility="hidden">
@@ -2113,25 +1369,17 @@
 <rect x="1.5" y="1.5" width="597" height="297" fill="none" stroke="#ff5555" stroke-width="3" rx="20" ry="20"/>
 <g class="text-layer">
 <text class="text f13" x="32" y="32">❯</text>
-<text class="text fg" x="41.6" y="32"> echo &apos;Testing border options&apos;                        </text>
-<text class="text fg" x="32" y="54.4">Testing border options                                 </text>
+<text class="text fg" x="41.6" y="32"> echo &apos;Testing border options&apos;</text>
+<text class="text fg" x="32" y="54.4">Testing border options</text>
 <text class="text f13" x="32" y="76.8">❯</text>
-<text class="text fg" x="41.6" y="76.8"> # BorderRadius: 20, BorderWidth: 3                   </text>
+<text class="text fg" x="41.6" y="76.8"> # BorderRadius: 20, BorderWidth: 3</text>
 <text class="text f13" x="32" y="121.6">❯</text>
-<text class="text fg" x="41.6" y="121.6"> # BorderColor: #ff5                                  </text>
+<text class="text fg" x="41.6" y="121.6"> # BorderColor: #f</text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor-active" x="233.6" y="124" width="9.6" height="22.4" fill="#c9d1d9"/>
+<rect class="cursor-active" x="214.4" y="121.6" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
-    <animate
-      attributeName="visibility"
-      values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.665322;0.671373;1.000000"
-      dur="8.43s"
-      repeatCount="indefinite"
-      calcMode="discrete"
-      fill="freeze"
-    />
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.653933;0.660319;1" dur="8.46s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-89" visibility="hidden">
@@ -2139,25 +1387,17 @@
 <rect x="1.5" y="1.5" width="597" height="297" fill="none" stroke="#ff5555" stroke-width="3" rx="20" ry="20"/>
 <g class="text-layer">
 <text class="text f13" x="32" y="32">❯</text>
-<text class="text fg" x="41.6" y="32"> echo &apos;Testing border options&apos;                        </text>
-<text class="text fg" x="32" y="54.4">Testing border options                                 </text>
+<text class="text fg" x="41.6" y="32"> echo &apos;Testing border options&apos;</text>
+<text class="text fg" x="32" y="54.4">Testing border options</text>
 <text class="text f13" x="32" y="76.8">❯</text>
-<text class="text fg" x="41.6" y="76.8"> # BorderRadius: 20, BorderWidth: 3                   </text>
+<text class="text fg" x="41.6" y="76.8"> # BorderRadius: 20, BorderWidth: 3</text>
 <text class="text f13" x="32" y="121.6">❯</text>
-<text class="text fg" x="41.6" y="121.6"> # BorderColor: #ff55                                 </text>
+<text class="text fg" x="41.6" y="121.6"> # BorderColor: #ff</text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor-active" x="243.2" y="124" width="9.6" height="22.4" fill="#c9d1d9"/>
+<rect class="cursor-active" x="224" y="121.6" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
-    <animate
-      attributeName="visibility"
-      values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.671373;0.677423;1.000000"
-      dur="8.43s"
-      repeatCount="indefinite"
-      calcMode="discrete"
-      fill="freeze"
-    />
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.660319;0.66647;1" dur="8.46s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-90" visibility="hidden">
@@ -2165,25 +1405,17 @@
 <rect x="1.5" y="1.5" width="597" height="297" fill="none" stroke="#ff5555" stroke-width="3" rx="20" ry="20"/>
 <g class="text-layer">
 <text class="text f13" x="32" y="32">❯</text>
-<text class="text fg" x="41.6" y="32"> echo &apos;Testing border options&apos;                        </text>
-<text class="text fg" x="32" y="54.4">Testing border options                                 </text>
+<text class="text fg" x="41.6" y="32"> echo &apos;Testing border options&apos;</text>
+<text class="text fg" x="32" y="54.4">Testing border options</text>
 <text class="text f13" x="32" y="76.8">❯</text>
-<text class="text fg" x="41.6" y="76.8"> # BorderRadius: 20, BorderWidth: 3                   </text>
+<text class="text fg" x="41.6" y="76.8"> # BorderRadius: 20, BorderWidth: 3</text>
 <text class="text f13" x="32" y="121.6">❯</text>
-<text class="text fg" x="41.6" y="121.6"> # BorderColor: #ff555                                </text>
+<text class="text fg" x="41.6" y="121.6"> # BorderColor: #ff5</text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor-active" x="252.79999999999998" y="124" width="9.6" height="22.4" fill="#c9d1d9"/>
+<rect class="cursor-active" x="233.6" y="121.6" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
-    <animate
-      attributeName="visibility"
-      values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.677423;0.683474;1.000000"
-      dur="8.43s"
-      repeatCount="indefinite"
-      calcMode="discrete"
-      fill="freeze"
-    />
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.66647;0.672383;1" dur="8.46s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-91" visibility="hidden">
@@ -2191,25 +1423,17 @@
 <rect x="1.5" y="1.5" width="597" height="297" fill="none" stroke="#ff5555" stroke-width="3" rx="20" ry="20"/>
 <g class="text-layer">
 <text class="text f13" x="32" y="32">❯</text>
-<text class="text fg" x="41.6" y="32"> echo &apos;Testing border options&apos;                        </text>
-<text class="text fg" x="32" y="54.4">Testing border options                                 </text>
+<text class="text fg" x="41.6" y="32"> echo &apos;Testing border options&apos;</text>
+<text class="text fg" x="32" y="54.4">Testing border options</text>
 <text class="text f13" x="32" y="76.8">❯</text>
-<text class="text fg" x="41.6" y="76.8"> # BorderRadius: 20, BorderWidth: 3                   </text>
+<text class="text fg" x="41.6" y="76.8"> # BorderRadius: 20, BorderWidth: 3</text>
 <text class="text f13" x="32" y="121.6">❯</text>
-<text class="text fg" x="41.6" y="121.6"> # BorderColor: #ff5555                               </text>
+<text class="text fg" x="41.6" y="121.6"> # BorderColor: #ff55</text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor-active" x="262.4" y="124" width="9.6" height="22.4" fill="#c9d1d9"/>
+<rect class="cursor-active" x="243.2" y="121.6" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
-    <animate
-      attributeName="visibility"
-      values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.683474;0.689524;1.000000"
-      dur="8.43s"
-      repeatCount="indefinite"
-      calcMode="discrete"
-      fill="freeze"
-    />
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.672383;0.678415;1" dur="8.46s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-92" visibility="hidden">
@@ -2217,25 +1441,17 @@
 <rect x="1.5" y="1.5" width="597" height="297" fill="none" stroke="#ff5555" stroke-width="3" rx="20" ry="20"/>
 <g class="text-layer">
 <text class="text f13" x="32" y="32">❯</text>
-<text class="text fg" x="41.6" y="32"> echo &apos;Testing border options&apos;                        </text>
-<text class="text fg" x="32" y="54.4">Testing border options                                 </text>
+<text class="text fg" x="41.6" y="32"> echo &apos;Testing border options&apos;</text>
+<text class="text fg" x="32" y="54.4">Testing border options</text>
 <text class="text f13" x="32" y="76.8">❯</text>
-<text class="text fg" x="41.6" y="76.8"> # BorderRadius: 20, BorderWidth: 3                   </text>
+<text class="text fg" x="41.6" y="76.8"> # BorderRadius: 20, BorderWidth: 3</text>
 <text class="text f13" x="32" y="121.6">❯</text>
-<text class="text fg" x="41.6" y="121.6"> # BorderColor: #ff5555,                              </text>
+<text class="text fg" x="41.6" y="121.6"> # BorderColor: #ff555</text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor-active" x="272" y="124" width="9.6" height="22.4" fill="#c9d1d9"/>
+<rect class="cursor-active" x="252.8" y="121.6" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
-    <animate
-      attributeName="visibility"
-      values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.689524;0.695693;1.000000"
-      dur="8.43s"
-      repeatCount="indefinite"
-      calcMode="discrete"
-      fill="freeze"
-    />
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.678415;0.684447;1" dur="8.46s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-93" visibility="hidden">
@@ -2243,25 +1459,17 @@
 <rect x="1.5" y="1.5" width="597" height="297" fill="none" stroke="#ff5555" stroke-width="3" rx="20" ry="20"/>
 <g class="text-layer">
 <text class="text f13" x="32" y="32">❯</text>
-<text class="text fg" x="41.6" y="32"> echo &apos;Testing border options&apos;                        </text>
-<text class="text fg" x="32" y="54.4">Testing border options                                 </text>
+<text class="text fg" x="41.6" y="32"> echo &apos;Testing border options&apos;</text>
+<text class="text fg" x="32" y="54.4">Testing border options</text>
 <text class="text f13" x="32" y="76.8">❯</text>
-<text class="text fg" x="41.6" y="76.8"> # BorderRadius: 20, BorderWidth: 3                   </text>
+<text class="text fg" x="41.6" y="76.8"> # BorderRadius: 20, BorderWidth: 3</text>
 <text class="text f13" x="32" y="121.6">❯</text>
-<text class="text fg" x="41.6" y="121.6"> # BorderColor: #ff5555,                              </text>
+<text class="text fg" x="41.6" y="121.6"> # BorderColor: #ff5555</text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor-active" x="281.6" y="124" width="9.6" height="22.4" fill="#c9d1d9"/>
+<rect class="cursor-active" x="262.4" y="121.6" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
-    <animate
-      attributeName="visibility"
-      values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.695693;0.701744;1.000000"
-      dur="8.43s"
-      repeatCount="indefinite"
-      calcMode="discrete"
-      fill="freeze"
-    />
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.684447;0.690361;1" dur="8.46s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-94" visibility="hidden">
@@ -2269,25 +1477,17 @@
 <rect x="1.5" y="1.5" width="597" height="297" fill="none" stroke="#ff5555" stroke-width="3" rx="20" ry="20"/>
 <g class="text-layer">
 <text class="text f13" x="32" y="32">❯</text>
-<text class="text fg" x="41.6" y="32"> echo &apos;Testing border options&apos;                        </text>
-<text class="text fg" x="32" y="54.4">Testing border options                                 </text>
+<text class="text fg" x="41.6" y="32"> echo &apos;Testing border options&apos;</text>
+<text class="text fg" x="32" y="54.4">Testing border options</text>
 <text class="text f13" x="32" y="76.8">❯</text>
-<text class="text fg" x="41.6" y="76.8"> # BorderRadius: 20, BorderWidth: 3                   </text>
+<text class="text fg" x="41.6" y="76.8"> # BorderRadius: 20, BorderWidth: 3</text>
 <text class="text f13" x="32" y="121.6">❯</text>
-<text class="text fg" x="41.6" y="121.6"> # BorderColor: #ff5555, P                            </text>
+<text class="text fg" x="41.6" y="121.6"> # BorderColor: #ff5555,</text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor-active" x="291.2" y="124" width="9.6" height="22.4" fill="#c9d1d9"/>
+<rect class="cursor-active" x="272" y="121.6" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
-    <animate
-      attributeName="visibility"
-      values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.701744;0.707795;1.000000"
-      dur="8.43s"
-      repeatCount="indefinite"
-      calcMode="discrete"
-      fill="freeze"
-    />
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.690361;0.696393;1" dur="8.46s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-95" visibility="hidden">
@@ -2295,25 +1495,17 @@
 <rect x="1.5" y="1.5" width="597" height="297" fill="none" stroke="#ff5555" stroke-width="3" rx="20" ry="20"/>
 <g class="text-layer">
 <text class="text f13" x="32" y="32">❯</text>
-<text class="text fg" x="41.6" y="32"> echo &apos;Testing border options&apos;                        </text>
-<text class="text fg" x="32" y="54.4">Testing border options                                 </text>
+<text class="text fg" x="41.6" y="32"> echo &apos;Testing border options&apos;</text>
+<text class="text fg" x="32" y="54.4">Testing border options</text>
 <text class="text f13" x="32" y="76.8">❯</text>
-<text class="text fg" x="41.6" y="76.8"> # BorderRadius: 20, BorderWidth: 3                   </text>
+<text class="text fg" x="41.6" y="76.8"> # BorderRadius: 20, BorderWidth: 3</text>
 <text class="text f13" x="32" y="121.6">❯</text>
-<text class="text fg" x="41.6" y="121.6"> # BorderColor: #ff5555, Pa                           </text>
+<text class="text fg" x="41.6" y="121.6"> # BorderColor: #ff5555,</text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor-active" x="300.8" y="124" width="9.6" height="22.4" fill="#c9d1d9"/>
+<rect class="cursor-active" x="281.6" y="121.6" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
-    <animate
-      attributeName="visibility"
-      values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.707795;0.713726;1.000000"
-      dur="8.43s"
-      repeatCount="indefinite"
-      calcMode="discrete"
-      fill="freeze"
-    />
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.696393;0.702425;1" dur="8.46s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-96" visibility="hidden">
@@ -2321,25 +1513,17 @@
 <rect x="1.5" y="1.5" width="597" height="297" fill="none" stroke="#ff5555" stroke-width="3" rx="20" ry="20"/>
 <g class="text-layer">
 <text class="text f13" x="32" y="32">❯</text>
-<text class="text fg" x="41.6" y="32"> echo &apos;Testing border options&apos;                        </text>
-<text class="text fg" x="32" y="54.4">Testing border options                                 </text>
+<text class="text fg" x="41.6" y="32"> echo &apos;Testing border options&apos;</text>
+<text class="text fg" x="32" y="54.4">Testing border options</text>
 <text class="text f13" x="32" y="76.8">❯</text>
-<text class="text fg" x="41.6" y="76.8"> # BorderRadius: 20, BorderWidth: 3                   </text>
+<text class="text fg" x="41.6" y="76.8"> # BorderRadius: 20, BorderWidth: 3</text>
 <text class="text f13" x="32" y="121.6">❯</text>
-<text class="text fg" x="41.6" y="121.6"> # BorderColor: #ff5555, Pad                          </text>
+<text class="text fg" x="41.6" y="121.6"> # BorderColor: #ff5555, P</text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor-active" x="310.4" y="124" width="9.6" height="22.4" fill="#c9d1d9"/>
+<rect class="cursor-active" x="291.2" y="121.6" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
-    <animate
-      attributeName="visibility"
-      values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.713726;0.719658;1.000000"
-      dur="8.43s"
-      repeatCount="indefinite"
-      calcMode="discrete"
-      fill="freeze"
-    />
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.702425;0.708338;1" dur="8.46s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-97" visibility="hidden">
@@ -2347,25 +1531,17 @@
 <rect x="1.5" y="1.5" width="597" height="297" fill="none" stroke="#ff5555" stroke-width="3" rx="20" ry="20"/>
 <g class="text-layer">
 <text class="text f13" x="32" y="32">❯</text>
-<text class="text fg" x="41.6" y="32"> echo &apos;Testing border options&apos;                        </text>
-<text class="text fg" x="32" y="54.4">Testing border options                                 </text>
+<text class="text fg" x="41.6" y="32"> echo &apos;Testing border options&apos;</text>
+<text class="text fg" x="32" y="54.4">Testing border options</text>
 <text class="text f13" x="32" y="76.8">❯</text>
-<text class="text fg" x="41.6" y="76.8"> # BorderRadius: 20, BorderWidth: 3                   </text>
+<text class="text fg" x="41.6" y="76.8"> # BorderRadius: 20, BorderWidth: 3</text>
 <text class="text f13" x="32" y="121.6">❯</text>
-<text class="text fg" x="41.6" y="121.6"> # BorderColor: #ff5555, Padd                         </text>
+<text class="text fg" x="41.6" y="121.6"> # BorderColor: #ff5555, Pa</text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor-active" x="320" y="124" width="9.6" height="22.4" fill="#c9d1d9"/>
+<rect class="cursor-active" x="300.8" y="121.6" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
-    <animate
-      attributeName="visibility"
-      values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.719658;0.725828;1.000000"
-      dur="8.43s"
-      repeatCount="indefinite"
-      calcMode="discrete"
-      fill="freeze"
-    />
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.708338;0.714607;1" dur="8.46s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-98" visibility="hidden">
@@ -2373,25 +1549,17 @@
 <rect x="1.5" y="1.5" width="597" height="297" fill="none" stroke="#ff5555" stroke-width="3" rx="20" ry="20"/>
 <g class="text-layer">
 <text class="text f13" x="32" y="32">❯</text>
-<text class="text fg" x="41.6" y="32"> echo &apos;Testing border options&apos;                        </text>
-<text class="text fg" x="32" y="54.4">Testing border options                                 </text>
+<text class="text fg" x="41.6" y="32"> echo &apos;Testing border options&apos;</text>
+<text class="text fg" x="32" y="54.4">Testing border options</text>
 <text class="text f13" x="32" y="76.8">❯</text>
-<text class="text fg" x="41.6" y="76.8"> # BorderRadius: 20, BorderWidth: 3                   </text>
+<text class="text fg" x="41.6" y="76.8"> # BorderRadius: 20, BorderWidth: 3</text>
 <text class="text f13" x="32" y="121.6">❯</text>
-<text class="text fg" x="41.6" y="121.6"> # BorderColor: #ff5555, Paddi                        </text>
+<text class="text fg" x="41.6" y="121.6"> # BorderColor: #ff5555, Pad</text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor-active" x="329.59999999999997" y="124" width="9.6" height="22.4" fill="#c9d1d9"/>
+<rect class="cursor-active" x="310.4" y="121.6" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
-    <animate
-      attributeName="visibility"
-      values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.725828;0.731997;1.000000"
-      dur="8.43s"
-      repeatCount="indefinite"
-      calcMode="discrete"
-      fill="freeze"
-    />
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.714607;0.720639;1" dur="8.46s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-99" visibility="hidden">
@@ -2399,25 +1567,17 @@
 <rect x="1.5" y="1.5" width="597" height="297" fill="none" stroke="#ff5555" stroke-width="3" rx="20" ry="20"/>
 <g class="text-layer">
 <text class="text f13" x="32" y="32">❯</text>
-<text class="text fg" x="41.6" y="32"> echo &apos;Testing border options&apos;                        </text>
-<text class="text fg" x="32" y="54.4">Testing border options                                 </text>
+<text class="text fg" x="41.6" y="32"> echo &apos;Testing border options&apos;</text>
+<text class="text fg" x="32" y="54.4">Testing border options</text>
 <text class="text f13" x="32" y="76.8">❯</text>
-<text class="text fg" x="41.6" y="76.8"> # BorderRadius: 20, BorderWidth: 3                   </text>
+<text class="text fg" x="41.6" y="76.8"> # BorderRadius: 20, BorderWidth: 3</text>
 <text class="text f13" x="32" y="121.6">❯</text>
-<text class="text fg" x="41.6" y="121.6"> # BorderColor: #ff5555, Paddin                       </text>
+<text class="text fg" x="41.6" y="121.6"> # BorderColor: #ff5555, Padd</text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor-active" x="339.2" y="124" width="9.6" height="22.4" fill="#c9d1d9"/>
+<rect class="cursor-active" x="320" y="121.6" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
-    <animate
-      attributeName="visibility"
-      values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.731997;0.737929;1.000000"
-      dur="8.43s"
-      repeatCount="indefinite"
-      calcMode="discrete"
-      fill="freeze"
-    />
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.720639;0.726907;1" dur="8.46s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-100" visibility="hidden">
@@ -2425,25 +1585,17 @@
 <rect x="1.5" y="1.5" width="597" height="297" fill="none" stroke="#ff5555" stroke-width="3" rx="20" ry="20"/>
 <g class="text-layer">
 <text class="text f13" x="32" y="32">❯</text>
-<text class="text fg" x="41.6" y="32"> echo &apos;Testing border options&apos;                        </text>
-<text class="text fg" x="32" y="54.4">Testing border options                                 </text>
+<text class="text fg" x="41.6" y="32"> echo &apos;Testing border options&apos;</text>
+<text class="text fg" x="32" y="54.4">Testing border options</text>
 <text class="text f13" x="32" y="76.8">❯</text>
-<text class="text fg" x="41.6" y="76.8"> # BorderRadius: 20, BorderWidth: 3                   </text>
+<text class="text fg" x="41.6" y="76.8"> # BorderRadius: 20, BorderWidth: 3</text>
 <text class="text f13" x="32" y="121.6">❯</text>
-<text class="text fg" x="41.6" y="121.6"> # BorderColor: #ff5555, Padding                      </text>
+<text class="text fg" x="41.6" y="121.6"> # BorderColor: #ff5555, Paddi</text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor-active" x="348.8" y="124" width="9.6" height="22.4" fill="#c9d1d9"/>
+<rect class="cursor-active" x="329.6" y="121.6" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
-    <animate
-      attributeName="visibility"
-      values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.737929;0.744098;1.000000"
-      dur="8.43s"
-      repeatCount="indefinite"
-      calcMode="discrete"
-      fill="freeze"
-    />
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.726907;0.732703;1" dur="8.46s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-101" visibility="hidden">
@@ -2451,25 +1603,17 @@
 <rect x="1.5" y="1.5" width="597" height="297" fill="none" stroke="#ff5555" stroke-width="3" rx="20" ry="20"/>
 <g class="text-layer">
 <text class="text f13" x="32" y="32">❯</text>
-<text class="text fg" x="41.6" y="32"> echo &apos;Testing border options&apos;                        </text>
-<text class="text fg" x="32" y="54.4">Testing border options                                 </text>
+<text class="text fg" x="41.6" y="32"> echo &apos;Testing border options&apos;</text>
+<text class="text fg" x="32" y="54.4">Testing border options</text>
 <text class="text f13" x="32" y="76.8">❯</text>
-<text class="text fg" x="41.6" y="76.8"> # BorderRadius: 20, BorderWidth: 3                   </text>
+<text class="text fg" x="41.6" y="76.8"> # BorderRadius: 20, BorderWidth: 3</text>
 <text class="text f13" x="32" y="121.6">❯</text>
-<text class="text fg" x="41.6" y="121.6"> # BorderColor: #ff5555, Padding:                     </text>
+<text class="text fg" x="41.6" y="121.6"> # BorderColor: #ff5555, Paddin</text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor-active" x="358.4" y="124" width="9.6" height="22.4" fill="#c9d1d9"/>
+<rect class="cursor-active" x="339.2" y="121.6" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
-    <animate
-      attributeName="visibility"
-      values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.744098;0.749911;1.000000"
-      dur="8.43s"
-      repeatCount="indefinite"
-      calcMode="discrete"
-      fill="freeze"
-    />
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.732703;0.738734;1" dur="8.46s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-102" visibility="hidden">
@@ -2477,25 +1621,17 @@
 <rect x="1.5" y="1.5" width="597" height="297" fill="none" stroke="#ff5555" stroke-width="3" rx="20" ry="20"/>
 <g class="text-layer">
 <text class="text f13" x="32" y="32">❯</text>
-<text class="text fg" x="41.6" y="32"> echo &apos;Testing border options&apos;                        </text>
-<text class="text fg" x="32" y="54.4">Testing border options                                 </text>
+<text class="text fg" x="41.6" y="32"> echo &apos;Testing border options&apos;</text>
+<text class="text fg" x="32" y="54.4">Testing border options</text>
 <text class="text f13" x="32" y="76.8">❯</text>
-<text class="text fg" x="41.6" y="76.8"> # BorderRadius: 20, BorderWidth: 3                   </text>
+<text class="text fg" x="41.6" y="76.8"> # BorderRadius: 20, BorderWidth: 3</text>
 <text class="text f13" x="32" y="121.6">❯</text>
-<text class="text fg" x="41.6" y="121.6"> # BorderColor: #ff5555, Padding:                     </text>
+<text class="text fg" x="41.6" y="121.6"> # BorderColor: #ff5555, Padding</text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor-active" x="368" y="124" width="9.6" height="22.4" fill="#c9d1d9"/>
+<rect class="cursor-active" x="348.8" y="121.6" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
-    <animate
-      attributeName="visibility"
-      values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.749911;0.756317;1.000000"
-      dur="8.43s"
-      repeatCount="indefinite"
-      calcMode="discrete"
-      fill="freeze"
-    />
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.738734;0.744766;1" dur="8.46s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-103" visibility="hidden">
@@ -2503,25 +1639,17 @@
 <rect x="1.5" y="1.5" width="597" height="297" fill="none" stroke="#ff5555" stroke-width="3" rx="20" ry="20"/>
 <g class="text-layer">
 <text class="text f13" x="32" y="32">❯</text>
-<text class="text fg" x="41.6" y="32"> echo &apos;Testing border options&apos;                        </text>
-<text class="text fg" x="32" y="54.4">Testing border options                                 </text>
+<text class="text fg" x="41.6" y="32"> echo &apos;Testing border options&apos;</text>
+<text class="text fg" x="32" y="54.4">Testing border options</text>
 <text class="text f13" x="32" y="76.8">❯</text>
-<text class="text fg" x="41.6" y="76.8"> # BorderRadius: 20, BorderWidth: 3                   </text>
+<text class="text fg" x="41.6" y="76.8"> # BorderRadius: 20, BorderWidth: 3</text>
 <text class="text f13" x="32" y="121.6">❯</text>
-<text class="text fg" x="41.6" y="121.6"> # BorderColor: #ff5555, Padding: 3                   </text>
+<text class="text fg" x="41.6" y="121.6"> # BorderColor: #ff5555, Padding:</text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor-active" x="377.59999999999997" y="124" width="9.6" height="22.4" fill="#c9d1d9"/>
+<rect class="cursor-active" x="358.4" y="121.6" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
-    <animate
-      attributeName="visibility"
-      values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.756317;0.762249;1.000000"
-      dur="8.43s"
-      repeatCount="indefinite"
-      calcMode="discrete"
-      fill="freeze"
-    />
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.744766;0.750798;1" dur="8.46s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-104" visibility="hidden">
@@ -2529,25 +1657,17 @@
 <rect x="1.5" y="1.5" width="597" height="297" fill="none" stroke="#ff5555" stroke-width="3" rx="20" ry="20"/>
 <g class="text-layer">
 <text class="text f13" x="32" y="32">❯</text>
-<text class="text fg" x="41.6" y="32"> echo &apos;Testing border options&apos;                        </text>
-<text class="text fg" x="32" y="54.4">Testing border options                                 </text>
+<text class="text fg" x="41.6" y="32"> echo &apos;Testing border options&apos;</text>
+<text class="text fg" x="32" y="54.4">Testing border options</text>
 <text class="text f13" x="32" y="76.8">❯</text>
-<text class="text fg" x="41.6" y="76.8"> # BorderRadius: 20, BorderWidth: 3                   </text>
+<text class="text fg" x="41.6" y="76.8"> # BorderRadius: 20, BorderWidth: 3</text>
 <text class="text f13" x="32" y="121.6">❯</text>
-<text class="text fg" x="41.6" y="121.6"> # BorderColor: #ff5555, Padding: 32                  </text>
+<text class="text fg" x="41.6" y="121.6"> # BorderColor: #ff5555, Padding:</text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor-active" x="387.2" y="124" width="9.6" height="22.4" fill="#c9d1d9"/>
+<rect class="cursor-active" x="368" y="121.6" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
-    <animate
-      attributeName="visibility"
-      values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.762249;0.881006;1.000000"
-      dur="8.43s"
-      repeatCount="indefinite"
-      calcMode="discrete"
-      fill="freeze"
-    />
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.750798;0.756712;1" dur="8.46s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-105" visibility="hidden">
@@ -2555,25 +1675,17 @@
 <rect x="1.5" y="1.5" width="597" height="297" fill="none" stroke="#ff5555" stroke-width="3" rx="20" ry="20"/>
 <g class="text-layer">
 <text class="text f13" x="32" y="32">❯</text>
-<text class="text fg" x="41.6" y="32"> echo &apos;Testing border options&apos;                        </text>
-<text class="text fg" x="32" y="54.4">Testing border options                                 </text>
+<text class="text fg" x="41.6" y="32"> echo &apos;Testing border options&apos;</text>
+<text class="text fg" x="32" y="54.4">Testing border options</text>
 <text class="text f13" x="32" y="76.8">❯</text>
-<text class="text fg" x="41.6" y="76.8"> # BorderRadius: 20, BorderWidth: 3                   </text>
+<text class="text fg" x="41.6" y="76.8"> # BorderRadius: 20, BorderWidth: 3</text>
 <text class="text f13" x="32" y="121.6">❯</text>
-<text class="text fg" x="41.6" y="121.6"> # BorderColor: #ff5555, Padding: 32                  </text>
+<text class="text fg" x="41.6" y="121.6"> # BorderColor: #ff5555, Padding: 3</text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor" x="387.2" y="124" width="9.6" height="22.4" fill="#c9d1d9"/>
+<rect class="cursor-active" x="377.6" y="121.6" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
-    <animate
-      attributeName="visibility"
-      values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.881006;0.881362;1.000000"
-      dur="8.43s"
-      repeatCount="indefinite"
-      calcMode="discrete"
-      fill="freeze"
-    />
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.756712;0.762862;1" dur="8.46s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
 
   <g id="frame-106" visibility="hidden">
@@ -2581,25 +1693,71 @@
 <rect x="1.5" y="1.5" width="597" height="297" fill="none" stroke="#ff5555" stroke-width="3" rx="20" ry="20"/>
 <g class="text-layer">
 <text class="text f13" x="32" y="32">❯</text>
-<text class="text fg" x="41.6" y="32"> echo &apos;Testing border options&apos;                        </text>
-<text class="text fg" x="32" y="54.4">Testing border options                                 </text>
+<text class="text fg" x="41.6" y="32"> echo &apos;Testing border options&apos;</text>
+<text class="text fg" x="32" y="54.4">Testing border options</text>
 <text class="text f13" x="32" y="76.8">❯</text>
-<text class="text fg" x="41.6" y="76.8"> # BorderRadius: 20, BorderWidth: 3                   </text>
+<text class="text fg" x="41.6" y="76.8"> # BorderRadius: 20, BorderWidth: 3</text>
 <text class="text f13" x="32" y="121.6">❯</text>
-<text class="text fg" x="41.6" y="121.6"> # BorderColor: #ff5555, Padding: 32                  </text>
+<text class="text fg" x="41.6" y="121.6"> # BorderColor: #ff5555, Padding: 32</text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor" x="387.2" y="124" width="9.6" height="22.4" fill="#c9d1d9"/>
+<rect class="cursor-active" x="387.2" y="121.6" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
-    <animate
-      attributeName="visibility"
-      values="hidden;visible;visible"
-      keyTimes="0.000000;0.881362;1.000000"
-      dur="8.43s"
-      repeatCount="indefinite"
-      calcMode="discrete"
-      fill="freeze"
-    />
+    <animate attributeName="visibility" values="hidden;visible;hidden" keyTimes="0;0.762862;1" dur="8.46s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-107" visibility="hidden">
+    <rect class="window-bg" x="0" y="0" width="600" height="300" fill="#1e1e1e" rx="20" ry="20"/>
+<rect x="1.5" y="1.5" width="597" height="297" fill="none" stroke="#ff5555" stroke-width="3" rx="20" ry="20"/>
+<g class="text-layer">
+<text class="text f13" x="32" y="32">❯</text>
+<text class="text fg" x="41.6" y="32"> echo &apos;Testing border options&apos;</text>
+<text class="text fg" x="32" y="54.4">Testing border options</text>
+<text class="text f13" x="32" y="76.8">❯</text>
+<text class="text fg" x="41.6" y="76.8"> # BorderRadius: 20, BorderWidth: 3</text>
+<text class="text f13" x="32" y="121.6">❯</text>
+<text class="text fg" x="41.6" y="121.6"> # BorderColor: #ff5555, Padding: 32</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor" x="387.2" y="121.6" width="9.6" height="22.4" fill="#c9d1d9"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.762862;0.88149;1" dur="8.46s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-108" visibility="hidden">
+    <rect class="window-bg" x="0" y="0" width="600" height="300" fill="#1e1e1e" rx="20" ry="20"/>
+<rect x="1.5" y="1.5" width="597" height="297" fill="none" stroke="#ff5555" stroke-width="3" rx="20" ry="20"/>
+<g class="text-layer">
+<text class="text f13" x="32" y="32">❯</text>
+<text class="text fg" x="41.6" y="32"> echo &apos;Testing border options&apos;</text>
+<text class="text fg" x="32" y="54.4">Testing border options</text>
+<text class="text f13" x="32" y="76.8">❯</text>
+<text class="text fg" x="41.6" y="76.8"> # BorderRadius: 20, BorderWidth: 3</text>
+<text class="text f13" x="32" y="121.6">❯</text>
+<text class="text fg" x="41.6" y="121.6"> # BorderColor: #ff5555, Padding: 32</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor" x="387.2" y="121.6" width="9.6" height="22.4" fill="#c9d1d9"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.88149;0.881727;1" dur="8.46s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-109" visibility="hidden">
+    <rect class="window-bg" x="0" y="0" width="600" height="300" fill="#1e1e1e" rx="20" ry="20"/>
+<rect x="1.5" y="1.5" width="597" height="297" fill="none" stroke="#ff5555" stroke-width="3" rx="20" ry="20"/>
+<g class="text-layer">
+<text class="text f13" x="32" y="32">❯</text>
+<text class="text fg" x="41.6" y="32"> echo &apos;Testing border options&apos;</text>
+<text class="text fg" x="32" y="54.4">Testing border options</text>
+<text class="text f13" x="32" y="76.8">❯</text>
+<text class="text fg" x="41.6" y="76.8"> # BorderRadius: 20, BorderWidth: 3</text>
+<text class="text f13" x="32" y="121.6">❯</text>
+<text class="text fg" x="41.6" y="121.6"> # BorderColor: #ff5555, Padding: 32</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor" x="387.2" y="121.6" width="9.6" height="22.4" fill="#c9d1d9"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;visible" keyTimes="0;0.881727;1" dur="8.46s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
   </g>
   </g>
 </svg>

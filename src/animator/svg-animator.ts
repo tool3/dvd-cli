@@ -11,6 +11,17 @@
 
 import type { TerminalFrame } from '../executor/cd-executor';
 
+/**
+ * Format keyTime value for minimal SVG size
+ * Removes unnecessary trailing zeros while maintaining required precision
+ */
+function fmtKeyTime(t: number): string {
+  if (t === 0) return '0';
+  if (t === 1) return '1';
+  // Use 6 decimal places for precision, then strip trailing zeros
+  return t.toFixed(6).replace(/\.?0+$/, '');
+}
+
 export interface AnimationOptions {
   fps?: number;
   loop?: boolean;
@@ -171,24 +182,17 @@ export async function createAnimatedSVG(
       }
     }
 
-    const keyTimesStr = dedupedTimes.map(t => t.toFixed(6)).join(';');
+    const keyTimesStr = dedupedTimes.map(fmtKeyTime).join(';');
     const valuesStr = dedupedValues.join(';');
 
     // Initial visibility: first frame visible, rest hidden
     const initialVisibility = i === 0 ? 'visible' : 'hidden';
 
+    // Minified animate element for smaller file size
     frameAnimations.push(`
   <g id="frame-${i}" visibility="${initialVisibility}">
     ${frameContent}
-    <animate
-      attributeName="visibility"
-      values="${valuesStr}"
-      keyTimes="${keyTimesStr}"
-      dur="${animationDurationS}s"
-      repeatCount="${repeatCount}"
-      calcMode="discrete"
-      fill="freeze"
-    />
+    <animate attributeName="visibility" values="${valuesStr}" keyTimes="${keyTimesStr}" dur="${animationDurationS}s" repeatCount="${repeatCount}" calcMode="discrete" fill="freeze"/>
   </g>`);
   }
 
