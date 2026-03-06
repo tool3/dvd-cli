@@ -1,5 +1,5 @@
-<svg width="397" height="100" xmlns="http://www.w3.org/2000/svg">
-  <defs><clipPath id="rounded-corners"><rect x="0" y="0" width="397" height="100" rx="8" ry="8"/></clipPath></defs>
+<svg width="397" height="108" xmlns="http://www.w3.org/2000/svg">
+  <defs><clipPath id="rounded-corners"><rect x="0" y="0" width="397" height="108" rx="8" ry="8"/></clipPath></defs>
   <style>
     
 .text {
@@ -64,18 +64,18 @@
   <!-- Animated frames with discrete visibility transitions -->
   
   <g id="frame-0" visibility="visible">
-    <rect class="window-bg" x="0" y="0" width="397" height="100" fill="#282c34" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="397" height="108" fill="#282c34" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f13" x="16" y="16">❯</text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor" x="35.2" y="36.4" width="9.6" height="2" fill="#bf616a"/>
+<rect class="cursor" x="35.2" y="38.8" width="9.6" height="2" fill="#bf616a"/>
 </g>
     <animate
       attributeName="visibility"
       values="visible;hidden;hidden"
-      keyTimes="0.000000;0.011569;1.000000"
-      dur="4.93s"
+      keyTimes="0.000000;0.010896;1.000000"
+      dur="4.96s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -83,19 +83,19 @@
   </g>
 
   <g id="frame-1" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="397" height="100" fill="#282c34" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="397" height="108" fill="#282c34" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f13" x="16" y="16">❯</text>
 <text class="text fg" x="25.6" y="16"> U                                                                             </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor" x="44.8" y="36.4" width="9.6" height="2" fill="#bf616a"/>
+<rect class="cursor-active" x="44.8" y="38.8" width="9.6" height="2" fill="#bf616a"/>
 </g>
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.011569;0.021920;1.000000"
-      dur="4.93s"
+      keyTimes="0.000000;0.010896;0.020985;1.000000"
+      dur="4.96s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -103,19 +103,19 @@
   </g>
 
   <g id="frame-2" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="397" height="100" fill="#282c34" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="397" height="108" fill="#282c34" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f13" x="16" y="16">❯</text>
 <text class="text fg" x="25.6" y="16"> Un                                                                            </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor" x="54.4" y="36.4" width="9.6" height="2" fill="#bf616a"/>
+<rect class="cursor-active" x="54.4" y="38.8" width="9.6" height="2" fill="#bf616a"/>
 </g>
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.021920;0.032068;1.000000"
-      dur="4.93s"
+      keyTimes="0.000000;0.020985;0.031679;1.000000"
+      dur="4.96s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -123,19 +123,19 @@
   </g>
 
   <g id="frame-3" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="397" height="100" fill="#282c34" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="397" height="108" fill="#282c34" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f13" x="16" y="16">❯</text>
 <text class="text fg" x="25.6" y="16"> Und                                                                           </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor" x="64" y="36.4" width="9.6" height="2" fill="#bf616a"/>
+<rect class="cursor-active" x="64" y="38.8" width="9.6" height="2" fill="#bf616a"/>
 </g>
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.032068;0.042622;1.000000"
-      dur="4.93s"
+      keyTimes="0.000000;0.031679;0.041969;1.000000"
+      dur="4.96s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -143,19 +143,19 @@
   </g>
 
   <g id="frame-4" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="397" height="100" fill="#282c34" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="397" height="108" fill="#282c34" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f13" x="16" y="16">❯</text>
 <text class="text fg" x="25.6" y="16"> Unde                                                                          </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor" x="73.6" y="36.4" width="9.6" height="2" fill="#bf616a"/>
+<rect class="cursor-active" x="73.6" y="38.8" width="9.6" height="2" fill="#bf616a"/>
 </g>
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.042622;0.053176;1.000000"
-      dur="4.93s"
+      keyTimes="0.000000;0.041969;0.052260;1.000000"
+      dur="4.96s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -163,19 +163,19 @@
   </g>
 
   <g id="frame-5" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="397" height="100" fill="#282c34" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="397" height="108" fill="#282c34" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f13" x="16" y="16">❯</text>
 <text class="text fg" x="25.6" y="16"> Under                                                                         </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor" x="83.2" y="36.4" width="9.6" height="2" fill="#bf616a"/>
+<rect class="cursor-active" x="83.2" y="38.8" width="9.6" height="2" fill="#bf616a"/>
 </g>
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.053176;0.063730;1.000000"
-      dur="4.93s"
+      keyTimes="0.000000;0.052260;0.062752;1.000000"
+      dur="4.96s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -183,19 +183,19 @@
   </g>
 
   <g id="frame-6" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="397" height="100" fill="#282c34" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="397" height="108" fill="#282c34" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f13" x="16" y="16">❯</text>
 <text class="text fg" x="25.6" y="16"> Underl                                                                        </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor" x="92.8" y="36.4" width="9.6" height="2" fill="#bf616a"/>
+<rect class="cursor-active" x="92.8" y="38.8" width="9.6" height="2" fill="#bf616a"/>
 </g>
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.063730;0.073879;1.000000"
-      dur="4.93s"
+      keyTimes="0.000000;0.062752;0.073043;1.000000"
+      dur="4.96s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -203,19 +203,19 @@
   </g>
 
   <g id="frame-7" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="397" height="100" fill="#282c34" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="397" height="108" fill="#282c34" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f13" x="16" y="16">❯</text>
 <text class="text fg" x="25.6" y="16"> Underli                                                                       </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor" x="102.39999999999999" y="36.4" width="9.6" height="2" fill="#bf616a"/>
+<rect class="cursor-active" x="102.39999999999999" y="38.8" width="9.6" height="2" fill="#bf616a"/>
 </g>
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.073879;0.084433;1.000000"
-      dur="4.93s"
+      keyTimes="0.000000;0.073043;0.083333;1.000000"
+      dur="4.96s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -223,19 +223,19 @@
   </g>
 
   <g id="frame-8" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="397" height="100" fill="#282c34" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="397" height="108" fill="#282c34" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f13" x="16" y="16">❯</text>
 <text class="text fg" x="25.6" y="16"> Underlin                                                                      </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor" x="112" y="36.4" width="9.6" height="2" fill="#bf616a"/>
+<rect class="cursor-active" x="112" y="38.8" width="9.6" height="2" fill="#bf616a"/>
 </g>
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.084433;0.094784;1.000000"
-      dur="4.93s"
+      keyTimes="0.000000;0.083333;0.093624;1.000000"
+      dur="4.96s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -243,19 +243,19 @@
   </g>
 
   <g id="frame-9" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="397" height="100" fill="#282c34" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="397" height="108" fill="#282c34" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f13" x="16" y="16">❯</text>
 <text class="text fg" x="25.6" y="16"> Underline                                                                     </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor" x="121.6" y="36.4" width="9.6" height="2" fill="#bf616a"/>
+<rect class="cursor-active" x="121.6" y="38.8" width="9.6" height="2" fill="#bf616a"/>
 </g>
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.094784;0.105338;1.000000"
-      dur="4.93s"
+      keyTimes="0.000000;0.093624;0.104116;1.000000"
+      dur="4.96s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -263,19 +263,19 @@
   </g>
 
   <g id="frame-10" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="397" height="100" fill="#282c34" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="397" height="108" fill="#282c34" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f13" x="16" y="16">❯</text>
 <text class="text fg" x="25.6" y="16"> Underline                                                                     </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor" x="131.2" y="36.4" width="9.6" height="2" fill="#bf616a"/>
+<rect class="cursor-active" x="131.2" y="38.8" width="9.6" height="2" fill="#bf616a"/>
 </g>
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.105338;0.115689;1.000000"
-      dur="4.93s"
+      keyTimes="0.000000;0.104116;0.114810;1.000000"
+      dur="4.96s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -283,19 +283,19 @@
   </g>
 
   <g id="frame-11" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="397" height="100" fill="#282c34" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="397" height="108" fill="#282c34" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f13" x="16" y="16">❯</text>
 <text class="text fg" x="25.6" y="16"> Underline c                                                                   </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor" x="140.8" y="36.4" width="9.6" height="2" fill="#bf616a"/>
+<rect class="cursor-active" x="140.8" y="38.8" width="9.6" height="2" fill="#bf616a"/>
 </g>
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.115689;0.126040;1.000000"
-      dur="4.93s"
+      keyTimes="0.000000;0.114810;0.125504;1.000000"
+      dur="4.96s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -303,19 +303,19 @@
   </g>
 
   <g id="frame-12" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="397" height="100" fill="#282c34" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="397" height="108" fill="#282c34" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f13" x="16" y="16">❯</text>
 <text class="text fg" x="25.6" y="16"> Underline cu                                                                  </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor" x="150.4" y="36.4" width="9.6" height="2" fill="#bf616a"/>
+<rect class="cursor-active" x="150.4" y="38.8" width="9.6" height="2" fill="#bf616a"/>
 </g>
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.126040;0.136391;1.000000"
-      dur="4.93s"
+      keyTimes="0.000000;0.125504;0.135795;1.000000"
+      dur="4.96s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -323,19 +323,19 @@
   </g>
 
   <g id="frame-13" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="397" height="100" fill="#282c34" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="397" height="108" fill="#282c34" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f13" x="16" y="16">❯</text>
 <text class="text fg" x="25.6" y="16"> Underline cur                                                                 </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor" x="160" y="36.4" width="9.6" height="2" fill="#bf616a"/>
+<rect class="cursor-active" x="160" y="38.8" width="9.6" height="2" fill="#bf616a"/>
 </g>
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.136391;0.146539;1.000000"
-      dur="4.93s"
+      keyTimes="0.000000;0.135795;0.145682;1.000000"
+      dur="4.96s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -343,19 +343,19 @@
   </g>
 
   <g id="frame-14" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="397" height="100" fill="#282c34" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="397" height="108" fill="#282c34" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f13" x="16" y="16">❯</text>
 <text class="text fg" x="25.6" y="16"> Underline curs                                                                </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor" x="169.6" y="36.4" width="9.6" height="2" fill="#bf616a"/>
+<rect class="cursor-active" x="169.6" y="38.8" width="9.6" height="2" fill="#bf616a"/>
 </g>
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.146539;0.156891;1.000000"
-      dur="4.93s"
+      keyTimes="0.000000;0.145682;0.156174;1.000000"
+      dur="4.96s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -363,19 +363,19 @@
   </g>
 
   <g id="frame-15" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="397" height="100" fill="#282c34" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="397" height="108" fill="#282c34" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f13" x="16" y="16">❯</text>
 <text class="text fg" x="25.6" y="16"> Underline curso                                                               </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor" x="179.2" y="36.4" width="9.6" height="2" fill="#bf616a"/>
+<rect class="cursor-active" x="179.2" y="38.8" width="9.6" height="2" fill="#bf616a"/>
 </g>
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.156891;0.167242;1.000000"
-      dur="4.93s"
+      keyTimes="0.000000;0.156174;0.166465;1.000000"
+      dur="4.96s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -383,19 +383,19 @@
   </g>
 
   <g id="frame-16" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="397" height="100" fill="#282c34" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="397" height="108" fill="#282c34" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f13" x="16" y="16">❯</text>
 <text class="text fg" x="25.6" y="16"> Underline cursor                                                              </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor" x="188.79999999999998" y="36.4" width="9.6" height="2" fill="#bf616a"/>
+<rect class="cursor-active" x="188.79999999999998" y="38.8" width="9.6" height="2" fill="#bf616a"/>
 </g>
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.167242;0.177796;1.000000"
-      dur="4.93s"
+      keyTimes="0.000000;0.166465;0.176755;1.000000"
+      dur="4.96s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -403,19 +403,19 @@
   </g>
 
   <g id="frame-17" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="397" height="100" fill="#282c34" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="397" height="108" fill="#282c34" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f13" x="16" y="16">❯</text>
 <text class="text fg" x="25.6" y="16"> Underline cursor                                                              </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor" x="198.4" y="36.4" width="9.6" height="2" fill="#bf616a"/>
+<rect class="cursor-active" x="198.4" y="38.8" width="9.6" height="2" fill="#bf616a"/>
 </g>
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.177796;0.187741;1.000000"
-      dur="4.93s"
+      keyTimes="0.000000;0.176755;0.187651;1.000000"
+      dur="4.96s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -423,19 +423,19 @@
   </g>
 
   <g id="frame-18" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="397" height="100" fill="#282c34" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="397" height="108" fill="#282c34" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f13" x="16" y="16">❯</text>
 <text class="text fg" x="25.6" y="16"> Underline cursor s                                                            </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor" x="208" y="36.4" width="9.6" height="2" fill="#bf616a"/>
+<rect class="cursor-active" x="208" y="38.8" width="9.6" height="2" fill="#bf616a"/>
 </g>
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.187741;0.198092;1.000000"
-      dur="4.93s"
+      keyTimes="0.000000;0.187651;0.198144;1.000000"
+      dur="4.96s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -443,19 +443,19 @@
   </g>
 
   <g id="frame-19" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="397" height="100" fill="#282c34" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="397" height="108" fill="#282c34" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f13" x="16" y="16">❯</text>
 <text class="text fg" x="25.6" y="16"> Underline cursor st                                                           </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor" x="217.6" y="36.4" width="9.6" height="2" fill="#bf616a"/>
+<rect class="cursor-active" x="217.6" y="38.8" width="9.6" height="2" fill="#bf616a"/>
 </g>
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.198092;0.208240;1.000000"
-      dur="4.93s"
+      keyTimes="0.000000;0.198144;0.208636;1.000000"
+      dur="4.96s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -463,19 +463,19 @@
   </g>
 
   <g id="frame-20" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="397" height="100" fill="#282c34" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="397" height="108" fill="#282c34" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f13" x="16" y="16">❯</text>
 <text class="text fg" x="25.6" y="16"> Underline cursor sty                                                          </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor" x="227.2" y="36.4" width="9.6" height="2" fill="#bf616a"/>
+<rect class="cursor-active" x="227.2" y="38.8" width="9.6" height="2" fill="#bf616a"/>
 </g>
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.208240;0.218794;1.000000"
-      dur="4.93s"
+      keyTimes="0.000000;0.208636;0.218927;1.000000"
+      dur="4.96s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -483,19 +483,19 @@
   </g>
 
   <g id="frame-21" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="397" height="100" fill="#282c34" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="397" height="108" fill="#282c34" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f13" x="16" y="16">❯</text>
 <text class="text fg" x="25.6" y="16"> Underline cursor styl                                                         </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor" x="236.79999999999998" y="36.4" width="9.6" height="2" fill="#bf616a"/>
+<rect class="cursor-active" x="236.79999999999998" y="38.8" width="9.6" height="2" fill="#bf616a"/>
 </g>
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.218794;0.229146;1.000000"
-      dur="4.93s"
+      keyTimes="0.000000;0.218927;0.229217;1.000000"
+      dur="4.96s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -503,19 +503,19 @@
   </g>
 
   <g id="frame-22" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="397" height="100" fill="#282c34" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="397" height="108" fill="#282c34" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f13" x="16" y="16">❯</text>
 <text class="text fg" x="25.6" y="16"> Underline cursor style                                                        </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor" x="246.39999999999998" y="36.4" width="9.6" height="2" fill="#bf616a"/>
+<rect class="cursor-active" x="246.39999999999998" y="38.8" width="9.6" height="2" fill="#bf616a"/>
 </g>
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.229146;0.331033;1.000000"
-      dur="4.93s"
+      keyTimes="0.000000;0.229217;0.330710;1.000000"
+      dur="4.96s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -523,19 +523,19 @@
   </g>
 
   <g id="frame-23" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="397" height="100" fill="#282c34" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="397" height="108" fill="#282c34" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f13" x="16" y="16">❯</text>
 <text class="text fg" x="25.6" y="16"> Underline cursor style                                                        </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor" x="246.39999999999998" y="36.4" width="9.6" height="2" fill="#bf616a"/>
+<rect class="cursor" x="246.39999999999998" y="38.8" width="9.6" height="2" fill="#bf616a"/>
 </g>
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.331033;0.352141;1.000000"
-      dur="4.93s"
+      keyTimes="0.000000;0.330710;0.351695;1.000000"
+      dur="4.96s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -543,7 +543,7 @@
   </g>
 
   <g id="frame-24" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="397" height="100" fill="#282c34" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="397" height="108" fill="#282c34" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f13" x="16" y="16">❯</text>
 <text class="text fg" x="25.6" y="16"> Underline cursor style                                                        </text>
@@ -551,8 +551,8 @@
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.352141;0.374873;1.000000"
-      dur="4.93s"
+      keyTimes="0.000000;0.351695;0.376110;1.000000"
+      dur="4.96s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -560,7 +560,7 @@
   </g>
 
   <g id="frame-25" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="397" height="100" fill="#282c34" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="397" height="108" fill="#282c34" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f13" x="16" y="16">❯</text>
 <text class="text fg" x="25.6" y="16"> Underline cursor style                                                        </text>
@@ -568,13 +568,13 @@
 <text class="text f13" x="16" y="60.8">❯</text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor" x="35.2" y="81.19999999999999" width="9.6" height="2" fill="#bf616a"/>
+<rect class="cursor" x="35.2" y="83.6" width="9.6" height="2" fill="#bf616a"/>
 </g>
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.374873;0.386036;1.000000"
-      dur="4.93s"
+      keyTimes="0.000000;0.376110;0.387409;1.000000"
+      dur="4.96s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -582,7 +582,7 @@
   </g>
 
   <g id="frame-26" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="397" height="100" fill="#282c34" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="397" height="108" fill="#282c34" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f13" x="16" y="16">❯</text>
 <text class="text fg" x="25.6" y="16"> Underline cursor style                                                        </text>
@@ -591,13 +591,13 @@
 <text class="text fg" x="25.6" y="60.8"> w                                                                             </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor" x="44.8" y="81.19999999999999" width="9.6" height="2" fill="#bf616a"/>
+<rect class="cursor-active" x="44.8" y="83.6" width="9.6" height="2" fill="#bf616a"/>
 </g>
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.386036;0.396184;1.000000"
-      dur="4.93s"
+      keyTimes="0.000000;0.387409;0.397902;1.000000"
+      dur="4.96s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -605,7 +605,7 @@
   </g>
 
   <g id="frame-27" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="397" height="100" fill="#282c34" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="397" height="108" fill="#282c34" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f13" x="16" y="16">❯</text>
 <text class="text fg" x="25.6" y="16"> Underline cursor style                                                        </text>
@@ -614,13 +614,13 @@
 <text class="text fg" x="25.6" y="60.8"> wi                                                                            </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor" x="54.4" y="81.19999999999999" width="9.6" height="2" fill="#bf616a"/>
+<rect class="cursor-active" x="54.4" y="83.6" width="9.6" height="2" fill="#bf616a"/>
 </g>
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.396184;0.406738;1.000000"
-      dur="4.93s"
+      keyTimes="0.000000;0.397902;0.408192;1.000000"
+      dur="4.96s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -628,7 +628,7 @@
   </g>
 
   <g id="frame-28" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="397" height="100" fill="#282c34" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="397" height="108" fill="#282c34" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f13" x="16" y="16">❯</text>
 <text class="text fg" x="25.6" y="16"> Underline cursor style                                                        </text>
@@ -637,13 +637,13 @@
 <text class="text fg" x="25.6" y="60.8"> wit                                                                           </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor" x="64" y="81.19999999999999" width="9.6" height="2" fill="#bf616a"/>
+<rect class="cursor-active" x="64" y="83.6" width="9.6" height="2" fill="#bf616a"/>
 </g>
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.406738;0.417090;1.000000"
-      dur="4.93s"
+      keyTimes="0.000000;0.408192;0.418483;1.000000"
+      dur="4.96s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -651,7 +651,7 @@
   </g>
 
   <g id="frame-29" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="397" height="100" fill="#282c34" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="397" height="108" fill="#282c34" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f13" x="16" y="16">❯</text>
 <text class="text fg" x="25.6" y="16"> Underline cursor style                                                        </text>
@@ -660,13 +660,13 @@
 <text class="text fg" x="25.6" y="60.8"> with                                                                          </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor" x="73.6" y="81.19999999999999" width="9.6" height="2" fill="#bf616a"/>
+<rect class="cursor-active" x="73.6" y="83.6" width="9.6" height="2" fill="#bf616a"/>
 </g>
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.417090;0.427644;1.000000"
-      dur="4.93s"
+      keyTimes="0.000000;0.418483;0.428773;1.000000"
+      dur="4.96s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -674,7 +674,7 @@
   </g>
 
   <g id="frame-30" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="397" height="100" fill="#282c34" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="397" height="108" fill="#282c34" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f13" x="16" y="16">❯</text>
 <text class="text fg" x="25.6" y="16"> Underline cursor style                                                        </text>
@@ -683,13 +683,13 @@
 <text class="text fg" x="25.6" y="60.8"> with                                                                          </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor" x="83.2" y="81.19999999999999" width="9.6" height="2" fill="#bf616a"/>
+<rect class="cursor-active" x="83.2" y="83.6" width="9.6" height="2" fill="#bf616a"/>
 </g>
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.427644;0.437995;1.000000"
-      dur="4.93s"
+      keyTimes="0.000000;0.428773;0.439467;1.000000"
+      dur="4.96s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -697,7 +697,7 @@
   </g>
 
   <g id="frame-31" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="397" height="100" fill="#282c34" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="397" height="108" fill="#282c34" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f13" x="16" y="16">❯</text>
 <text class="text fg" x="25.6" y="16"> Underline cursor style                                                        </text>
@@ -706,13 +706,13 @@
 <text class="text fg" x="25.6" y="60.8"> with c                                                                        </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor" x="92.8" y="81.19999999999999" width="9.6" height="2" fill="#bf616a"/>
+<rect class="cursor-active" x="92.8" y="83.6" width="9.6" height="2" fill="#bf616a"/>
 </g>
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.437995;0.448955;1.000000"
-      dur="4.93s"
+      keyTimes="0.000000;0.439467;0.449960;1.000000"
+      dur="4.96s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -720,7 +720,7 @@
   </g>
 
   <g id="frame-32" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="397" height="100" fill="#282c34" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="397" height="108" fill="#282c34" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f13" x="16" y="16">❯</text>
 <text class="text fg" x="25.6" y="16"> Underline cursor style                                                        </text>
@@ -729,13 +729,13 @@
 <text class="text fg" x="25.6" y="60.8"> with cu                                                                       </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor" x="102.39999999999999" y="81.19999999999999" width="9.6" height="2" fill="#bf616a"/>
+<rect class="cursor-active" x="102.39999999999999" y="83.6" width="9.6" height="2" fill="#bf616a"/>
 </g>
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.448955;0.459103;1.000000"
-      dur="4.93s"
+      keyTimes="0.000000;0.449960;0.459847;1.000000"
+      dur="4.96s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -743,7 +743,7 @@
   </g>
 
   <g id="frame-33" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="397" height="100" fill="#282c34" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="397" height="108" fill="#282c34" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f13" x="16" y="16">❯</text>
 <text class="text fg" x="25.6" y="16"> Underline cursor style                                                        </text>
@@ -752,13 +752,13 @@
 <text class="text fg" x="25.6" y="60.8"> with cus                                                                      </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor" x="112" y="81.19999999999999" width="9.6" height="2" fill="#bf616a"/>
+<rect class="cursor-active" x="112" y="83.6" width="9.6" height="2" fill="#bf616a"/>
 </g>
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.459103;0.469048;1.000000"
-      dur="4.93s"
+      keyTimes="0.000000;0.459847;0.470743;1.000000"
+      dur="4.96s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -766,7 +766,7 @@
   </g>
 
   <g id="frame-34" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="397" height="100" fill="#282c34" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="397" height="108" fill="#282c34" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f13" x="16" y="16">❯</text>
 <text class="text fg" x="25.6" y="16"> Underline cursor style                                                        </text>
@@ -775,13 +775,13 @@
 <text class="text fg" x="25.6" y="60.8"> with cust                                                                     </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor" x="121.6" y="81.19999999999999" width="9.6" height="2" fill="#bf616a"/>
+<rect class="cursor-active" x="121.6" y="83.6" width="9.6" height="2" fill="#bf616a"/>
 </g>
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.469048;0.479602;1.000000"
-      dur="4.93s"
+      keyTimes="0.000000;0.470743;0.481033;1.000000"
+      dur="4.96s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -789,7 +789,7 @@
   </g>
 
   <g id="frame-35" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="397" height="100" fill="#282c34" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="397" height="108" fill="#282c34" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f13" x="16" y="16">❯</text>
 <text class="text fg" x="25.6" y="16"> Underline cursor style                                                        </text>
@@ -798,13 +798,13 @@
 <text class="text fg" x="25.6" y="60.8"> with custo                                                                    </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor" x="131.2" y="81.19999999999999" width="9.6" height="2" fill="#bf616a"/>
+<rect class="cursor-active" x="131.2" y="83.6" width="9.6" height="2" fill="#bf616a"/>
 </g>
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.479602;0.489953;1.000000"
-      dur="4.93s"
+      keyTimes="0.000000;0.481033;0.491324;1.000000"
+      dur="4.96s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -812,7 +812,7 @@
   </g>
 
   <g id="frame-36" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="397" height="100" fill="#282c34" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="397" height="108" fill="#282c34" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f13" x="16" y="16">❯</text>
 <text class="text fg" x="25.6" y="16"> Underline cursor style                                                        </text>
@@ -821,13 +821,13 @@
 <text class="text fg" x="25.6" y="60.8"> with custom                                                                   </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor" x="140.8" y="81.19999999999999" width="9.6" height="2" fill="#bf616a"/>
+<rect class="cursor-active" x="140.8" y="83.6" width="9.6" height="2" fill="#bf616a"/>
 </g>
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.489953;0.500304;1.000000"
-      dur="4.93s"
+      keyTimes="0.000000;0.491324;0.501816;1.000000"
+      dur="4.96s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -835,7 +835,7 @@
   </g>
 
   <g id="frame-37" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="397" height="100" fill="#282c34" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="397" height="108" fill="#282c34" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f13" x="16" y="16">❯</text>
 <text class="text fg" x="25.6" y="16"> Underline cursor style                                                        </text>
@@ -844,13 +844,13 @@
 <text class="text fg" x="25.6" y="60.8"> with custom                                                                   </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor" x="150.4" y="81.19999999999999" width="9.6" height="2" fill="#bf616a"/>
+<rect class="cursor-active" x="150.4" y="83.6" width="9.6" height="2" fill="#bf616a"/>
 </g>
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.500304;0.510859;1.000000"
-      dur="4.93s"
+      keyTimes="0.000000;0.501816;0.512510;1.000000"
+      dur="4.96s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -858,7 +858,7 @@
   </g>
 
   <g id="frame-38" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="397" height="100" fill="#282c34" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="397" height="108" fill="#282c34" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f13" x="16" y="16">❯</text>
 <text class="text fg" x="25.6" y="16"> Underline cursor style                                                        </text>
@@ -867,13 +867,13 @@
 <text class="text fg" x="25.6" y="60.8"> with custom r                                                                 </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor" x="160" y="81.19999999999999" width="9.6" height="2" fill="#bf616a"/>
+<rect class="cursor-active" x="160" y="83.6" width="9.6" height="2" fill="#bf616a"/>
 </g>
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.510859;0.521413;1.000000"
-      dur="4.93s"
+      keyTimes="0.000000;0.512510;0.522801;1.000000"
+      dur="4.96s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -881,7 +881,7 @@
   </g>
 
   <g id="frame-39" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="397" height="100" fill="#282c34" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="397" height="108" fill="#282c34" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f13" x="16" y="16">❯</text>
 <text class="text fg" x="25.6" y="16"> Underline cursor style                                                        </text>
@@ -890,13 +890,13 @@
 <text class="text fg" x="25.6" y="60.8"> with custom re                                                                </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor" x="169.6" y="81.19999999999999" width="9.6" height="2" fill="#bf616a"/>
+<rect class="cursor-active" x="169.6" y="83.6" width="9.6" height="2" fill="#bf616a"/>
 </g>
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.521413;0.530952;1.000000"
-      dur="4.93s"
+      keyTimes="0.000000;0.522801;0.533091;1.000000"
+      dur="4.96s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -904,7 +904,7 @@
   </g>
 
   <g id="frame-40" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="397" height="100" fill="#282c34" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="397" height="108" fill="#282c34" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f13" x="16" y="16">❯</text>
 <text class="text fg" x="25.6" y="16"> Underline cursor style                                                        </text>
@@ -913,13 +913,13 @@
 <text class="text fg" x="25.6" y="60.8"> with custom red                                                               </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor" x="179.2" y="81.19999999999999" width="9.6" height="2" fill="#bf616a"/>
+<rect class="cursor-active" x="179.2" y="83.6" width="9.6" height="2" fill="#bf616a"/>
 </g>
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.530952;0.541303;1.000000"
-      dur="4.93s"
+      keyTimes="0.000000;0.533091;0.542373;1.000000"
+      dur="4.96s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -927,7 +927,7 @@
   </g>
 
   <g id="frame-41" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="397" height="100" fill="#282c34" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="397" height="108" fill="#282c34" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f13" x="16" y="16">❯</text>
 <text class="text fg" x="25.6" y="16"> Underline cursor style                                                        </text>
@@ -936,13 +936,13 @@
 <text class="text fg" x="25.6" y="60.8"> with custom red                                                               </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor" x="188.79999999999998" y="81.19999999999999" width="9.6" height="2" fill="#bf616a"/>
+<rect class="cursor-active" x="188.79999999999998" y="83.6" width="9.6" height="2" fill="#bf616a"/>
 </g>
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.541303;0.551451;1.000000"
-      dur="4.93s"
+      keyTimes="0.000000;0.542373;0.552462;1.000000"
+      dur="4.96s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -950,7 +950,7 @@
   </g>
 
   <g id="frame-42" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="397" height="100" fill="#282c34" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="397" height="108" fill="#282c34" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f13" x="16" y="16">❯</text>
 <text class="text fg" x="25.6" y="16"> Underline cursor style                                                        </text>
@@ -959,13 +959,13 @@
 <text class="text fg" x="25.6" y="60.8"> with custom red c                                                             </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor" x="198.4" y="81.19999999999999" width="9.6" height="2" fill="#bf616a"/>
+<rect class="cursor-active" x="198.4" y="83.6" width="9.6" height="2" fill="#bf616a"/>
 </g>
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.551451;0.561802;1.000000"
-      dur="4.93s"
+      keyTimes="0.000000;0.552462;0.562752;1.000000"
+      dur="4.96s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -973,7 +973,7 @@
   </g>
 
   <g id="frame-43" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="397" height="100" fill="#282c34" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="397" height="108" fill="#282c34" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f13" x="16" y="16">❯</text>
 <text class="text fg" x="25.6" y="16"> Underline cursor style                                                        </text>
@@ -982,13 +982,13 @@
 <text class="text fg" x="25.6" y="60.8"> with custom red co                                                            </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor" x="208" y="81.19999999999999" width="9.6" height="2" fill="#bf616a"/>
+<rect class="cursor-active" x="208" y="83.6" width="9.6" height="2" fill="#bf616a"/>
 </g>
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.561802;0.572356;1.000000"
-      dur="4.93s"
+      keyTimes="0.000000;0.562752;0.573245;1.000000"
+      dur="4.96s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -996,7 +996,7 @@
   </g>
 
   <g id="frame-44" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="397" height="100" fill="#282c34" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="397" height="108" fill="#282c34" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f13" x="16" y="16">❯</text>
 <text class="text fg" x="25.6" y="16"> Underline cursor style                                                        </text>
@@ -1005,13 +1005,13 @@
 <text class="text fg" x="25.6" y="60.8"> with custom red col                                                           </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor" x="217.6" y="81.19999999999999" width="9.6" height="2" fill="#bf616a"/>
+<rect class="cursor-active" x="217.6" y="83.6" width="9.6" height="2" fill="#bf616a"/>
 </g>
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.572356;0.582708;1.000000"
-      dur="4.93s"
+      keyTimes="0.000000;0.573245;0.583737;1.000000"
+      dur="4.96s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -1019,7 +1019,7 @@
   </g>
 
   <g id="frame-45" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="397" height="100" fill="#282c34" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="397" height="108" fill="#282c34" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f13" x="16" y="16">❯</text>
 <text class="text fg" x="25.6" y="16"> Underline cursor style                                                        </text>
@@ -1028,13 +1028,13 @@
 <text class="text fg" x="25.6" y="60.8"> with custom red colo                                                          </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor" x="227.2" y="81.19999999999999" width="9.6" height="2" fill="#bf616a"/>
+<rect class="cursor-active" x="227.2" y="83.6" width="9.6" height="2" fill="#bf616a"/>
 </g>
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.582708;0.592856;1.000000"
-      dur="4.93s"
+      keyTimes="0.000000;0.583737;0.594027;1.000000"
+      dur="4.96s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -1042,7 +1042,7 @@
   </g>
 
   <g id="frame-46" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="397" height="100" fill="#282c34" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="397" height="108" fill="#282c34" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f13" x="16" y="16">❯</text>
 <text class="text fg" x="25.6" y="16"> Underline cursor style                                                        </text>
@@ -1051,13 +1051,13 @@
 <text class="text fg" x="25.6" y="60.8"> with custom red color                                                         </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor" x="236.79999999999998" y="81.19999999999999" width="9.6" height="2" fill="#bf616a"/>
+<rect class="cursor-active" x="236.79999999999998" y="83.6" width="9.6" height="2" fill="#bf616a"/>
 </g>
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.592856;0.796225;1.000000"
-      dur="4.93s"
+      keyTimes="0.000000;0.594027;0.796812;1.000000"
+      dur="4.96s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -1065,7 +1065,7 @@
   </g>
 
   <g id="frame-47" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="397" height="100" fill="#282c34" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="397" height="108" fill="#282c34" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f13" x="16" y="16">❯</text>
 <text class="text fg" x="25.6" y="16"> Underline cursor style                                                        </text>
@@ -1074,13 +1074,13 @@
 <text class="text fg" x="25.6" y="60.8"> with custom red color                                                         </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor" x="236.79999999999998" y="81.19999999999999" width="9.6" height="2" fill="#bf616a"/>
+<rect class="cursor" x="236.79999999999998" y="83.6" width="9.6" height="2" fill="#bf616a"/>
 </g>
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.796225;0.797037;1.000000"
-      dur="4.93s"
+      keyTimes="0.000000;0.796812;0.798224;1.000000"
+      dur="4.96s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -1088,7 +1088,7 @@
   </g>
 
   <g id="frame-48" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="397" height="100" fill="#282c34" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="397" height="108" fill="#282c34" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f13" x="16" y="16">❯</text>
 <text class="text fg" x="25.6" y="16"> Underline cursor style                                                        </text>
@@ -1097,13 +1097,13 @@
 <text class="text fg" x="25.6" y="60.8"> with custom red color                                                         </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor" x="236.79999999999998" y="81.19999999999999" width="9.6" height="2" fill="#bf616a"/>
+<rect class="cursor" x="236.79999999999998" y="83.6" width="9.6" height="2" fill="#bf616a"/>
 </g>
     <animate
       attributeName="visibility"
       values="hidden;visible;visible"
-      keyTimes="0.000000;0.797037;1.000000"
-      dur="4.93s"
+      keyTimes="0.000000;0.798224;1.000000"
+      dur="4.96s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"

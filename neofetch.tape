@@ -1,8 +1,6 @@
 Output neofetch.gif
 
 Set FontSize 22
-Set Width 1300
-Set Height 800
 Set LineHeight 1
 
 Type "neofetch"

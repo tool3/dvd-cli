@@ -132,6 +132,8 @@ interface ExecutorContext {
 
   // Line height multiplier (default 1.4)
   lineHeight: number;
+  // Track if user explicitly set lineHeight (for cursor alignment)
+  hasCustomLineHeight: boolean;
 }
 
 // ============================================================================
@@ -198,6 +200,7 @@ export class CDExecutor {
 
       // Line height multiplier (default 1.4)
       lineHeight: 1.4,
+      hasCustomLineHeight: false,
     };
   }
 
@@ -384,6 +387,7 @@ export class CDExecutor {
         fontData: this.context.fontData,
         // Line height
         lineHeight: this.context.fontSize * this.context.lineHeight,
+        hasCustomLineHeight: this.context.hasCustomLineHeight,
       }
     );
 
@@ -468,6 +472,9 @@ export class CDExecutor {
       // Track capture overhead to subtract from future timestamps
       this.context.captureOverhead += Date.now() - captureStart;
     }
+
+    // Capture a frame with blinking cursor immediately after typing ends
+    this.captureFrame(true, false);
   }
 
   private async executeEnter(): Promise<void> {
@@ -982,6 +989,7 @@ export class CDExecutor {
         break;
       case 'LineHeight':
         this.context.lineHeight = parseFloat(value);
+        this.context.hasCustomLineHeight = true;
         break;
       case 'TypingSpeed':
         this.context.typingSpeed = parseInt(value, 10);
@@ -1204,6 +1212,7 @@ export class CDExecutor {
         padding: this.context.padding,
         cursorBlink: this.context.cursorBlink,
         lineHeight: this.context.fontSize * this.context.lineHeight,
+        hasCustomLineHeight: this.context.hasCustomLineHeight,
         cursorStyle: this.context.cursorStyle,
         cursorColor: this.context.cursorColor,
         selection: frameData.selection,

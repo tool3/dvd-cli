@@ -170,7 +170,7 @@ function generateChrome(config: ChromeConfig): string {
   // Header background
   parts.push(
     `<rect class="header-bg" x="0" y="0" width="${width}" height="${headerHeight}" ` +
-      `fill="${headerBg}" rx="${borderRadius}" ry="${borderRadius}"/>`
+    `fill="${headerBg}" rx="${borderRadius}" ry="${borderRadius}"/>`
   );
 
   // Bottom corners of header should be square (covered by content area)
@@ -232,7 +232,7 @@ function generateChrome(config: ChromeConfig): string {
     const hBorderWidth = config.headerBorderWidth ?? 1;
     parts.push(
       `<line x1="0" y1="${headerHeight}" x2="${width}" y2="${headerHeight}" ` +
-        `stroke="${hBorderColor}" stroke-width="${hBorderWidth}"/>`
+      `stroke="${hBorderColor}" stroke-width="${hBorderWidth}"/>`
     );
   }
 
@@ -265,7 +265,7 @@ function generateFooter(config: FooterConfig): string {
   // Footer background with rounded bottom corners
   parts.push(
     `<rect class="footer-bg" x="0" y="${footerY}" width="${width}" height="${footerHeight}" ` +
-      `fill="${footerBg}" rx="${borderRadius}" ry="${borderRadius}"/>`
+    `fill="${footerBg}" rx="${borderRadius}" ry="${borderRadius}"/>`
   );
 
   // Top corners of footer should be square
@@ -277,7 +277,7 @@ function generateFooter(config: FooterConfig): string {
     const fBorderWidth = config.footerBorderWidth ?? 1;
     parts.push(
       `<line x1="0" y1="${footerY}" x2="${width}" y2="${footerY}" ` +
-        `stroke="${fBorderColor}" stroke-width="${fBorderWidth}"/>`
+      `stroke="${fBorderColor}" stroke-width="${fBorderWidth}"/>`
     );
   }
 
@@ -332,8 +332,8 @@ export function emit(
     parts.push('<defs>');
     parts.push(
       `<clipPath id="rounded-corners">` +
-        `<rect x="0" y="0" width="${width}" height="${height}" rx="${borderRadius}" ry="${borderRadius}"/>` +
-        `</clipPath>`
+      `<rect x="0" y="0" width="${width}" height="${height}" rx="${borderRadius}" ry="${borderRadius}"/>` +
+      `</clipPath>`
     );
     parts.push('</defs>');
     parts.push(`<g clip-path="url(#rounded-corners)">`);
@@ -342,16 +342,16 @@ export function emit(
   // Background
   parts.push(
     `<rect class="window-bg" x="0" y="0" width="${width}" height="${height}" ` +
-      `fill="${theme.background}" rx="${borderRadius}" ry="${borderRadius}"/>`
+    `fill="${theme.background}" rx="${borderRadius}" ry="${borderRadius}"/>`
   );
 
   // Border (if specified)
   if (borderWidth > 0) {
     parts.push(
       `<rect x="${borderWidth / 2}" y="${borderWidth / 2}" ` +
-        `width="${width - borderWidth}" height="${height - borderWidth}" ` +
-        `fill="none" stroke="${borderColor}" stroke-width="${borderWidth}" ` +
-        `rx="${borderRadius}" ry="${borderRadius}"/>`
+      `width="${width - borderWidth}" height="${height - borderWidth}" ` +
+      `fill="none" stroke="${borderColor}" stroke-width="${borderWidth}" ` +
+      `rx="${borderRadius}" ry="${borderRadius}"/>`
     );
   }
 
@@ -459,7 +459,7 @@ export function emit(
     parts.push('<g class="selection-layer">');
     parts.push(
       `<rect x="${selectionX}" y="${selectionY}" ` +
-        `width="${selectionWidth}" height="${lineHeight}" fill="${selectionColor}" opacity="0.5"/>`
+      `width="${selectionWidth}" height="${lineHeight}" fill="${selectionColor}" opacity="0.5"/>`
     );
     parts.push('</g>');
   }
@@ -467,10 +467,18 @@ export function emit(
   // Cursor layer
   if (cursor && cursorVisible) {
     const cursorX = padding + cursor.col * charWidth;
-    // Slight vertical offset to align cursor center with visual center of text
-    // (fonts have ascender space that shifts visible glyphs down from em-box top)
-    const cursorYOffset = fontSize * 0.15;
-    const cursorY = contentStartY + cursor.row * lineHeight + cursorYOffset;
+    const rowY = contentStartY + cursor.row * lineHeight;
+
+    // When custom lineHeight is provided, adjust cursor to align with text center
+    // Cursor height = fontSize, positioned so cursor's middle aligns with text's middle
+    const hasCustomLineHeight = options.hasCustomLineHeight ?? false;
+    const cursorHeight = hasCustomLineHeight ? fontSize : lineHeight;
+    // With text-before-edge baseline, the visible text center is approximately at 60% of fontSize
+    // cursorCenter = cursorY + cursorHeight/2, textCenter = rowY + fontSize * 0.6
+    // So cursorY = textCenter - cursorHeight/2 = rowY + fontSize*0.6 - cursorHeight/2
+    const cursorYOffset = hasCustomLineHeight ? (fontSize * 0.65) - (cursorHeight / 2) : 0;
+    const cursorY = rowY + cursorYOffset;
+
     const cursorColor = options.cursorColor ?? theme.cursor ?? theme.foreground;
     // Use cursor-active class when actively typing (no blink)
     const cursorClass = options.activeCursor ? 'cursor-active' : 'cursor';
@@ -480,20 +488,20 @@ export function emit(
     if (cursorStyle === 'block') {
       parts.push(
         `<rect class="${cursorClass}" x="${cursorX}" y="${cursorY}" ` +
-          `width="${charWidth}" height="${lineHeight}" fill="${cursorColor}"/>`
+        `width="${charWidth}" height="${cursorHeight}" fill="${cursorColor}"/>`
       );
     } else if (cursorStyle === 'bar') {
       // Vertical bar cursor (2px wide)
       parts.push(
         `<rect class="${cursorClass}" x="${cursorX}" y="${cursorY}" ` +
-          `width="2" height="${lineHeight}" fill="${cursorColor}"/>`
+        `width="2" height="${cursorHeight}" fill="${cursorColor}"/>`
       );
     } else if (cursorStyle === 'underline') {
       // Underline cursor (2px tall at bottom of cell)
-      const underlineY = cursorY + lineHeight - 2;
+      const underlineY = cursorY + cursorHeight - 2;
       parts.push(
         `<rect class="${cursorClass}" x="${cursorX}" y="${underlineY}" ` +
-          `width="${charWidth}" height="2" fill="${cursorColor}"/>`
+        `width="${charWidth}" height="2" fill="${cursorColor}"/>`
       );
     }
     parts.push('</g>');
@@ -507,13 +515,13 @@ export function emit(
     if (options.footerBackground) {
       parts.push(
         `<rect x="0" y="${height - watermarkHeight - padding}" width="${width}" ` +
-          `height="${watermarkHeight + padding}" fill="${options.footerBackground}"/>`
+        `height="${watermarkHeight + padding}" fill="${options.footerBackground}"/>`
       );
     }
 
     parts.push(
       `<text class="text dim" x="${watermarkX}" y="${watermarkY}" ` +
-        `text-anchor="end" fill="${theme.foreground}">${escapeXml(watermark)}</text>`
+      `text-anchor="end" fill="${theme.foreground}">${escapeXml(watermark)}</text>`
     );
   }
 
@@ -644,10 +652,13 @@ export function emitAnimated(frames: FrameData[], options: AnimatedSVGOptions): 
   if (borderRadius > 0) {
     parts.push(
       `<clipPath id="rounded-corners">` +
-        `<rect x="0" y="0" width="${width}" height="${height}" rx="${borderRadius}" ry="${borderRadius}"/>` +
-        `</clipPath>`
+      `<rect x="0" y="0" width="${width}" height="${height}" rx="${borderRadius}" ry="${borderRadius}"/>` +
+      `</clipPath>`
     );
   }
+
+  // Track if custom lineHeight was provided for cursor alignment
+  const hasCustomLineHeight = options.lineHeight !== undefined;
 
   // Generate each frame as a group in defs
   for (let i = 0; i < frames.length; i++) {
@@ -658,6 +669,7 @@ export function emitAnimated(frames: FrameData[], options: AnimatedSVGOptions): 
       lineHeight,
       padding,
       contentStartY,
+      hasCustomLineHeight,
     });
     parts.push(`<g id="f${i}">${frameContent}</g>`);
   }
@@ -678,7 +690,7 @@ export function emitAnimated(frames: FrameData[], options: AnimatedSVGOptions): 
   // Static background
   parts.push(
     `<rect class="window-bg" x="0" y="0" width="${width}" height="${height}" ` +
-      `fill="${theme.background}" rx="${borderRadius}" ry="${borderRadius}"/>`
+    `fill="${theme.background}" rx="${borderRadius}" ry="${borderRadius}"/>`
   );
 
   // Chrome (static)
@@ -731,7 +743,7 @@ export function emitAnimated(frames: FrameData[], options: AnimatedSVGOptions): 
 
     parts.push(
       `<text class="text dim" x="${watermarkX}" y="${watermarkY}" ` +
-        `text-anchor="end" fill="${theme.foreground}">${escapeXml(options.watermark)}</text>`
+      `text-anchor="end" fill="${theme.foreground}">${escapeXml(options.watermark)}</text>`
     );
   }
 
@@ -755,11 +767,13 @@ interface FrameRenderConfig {
   padding: number;
   contentStartY: number;
   theme: Theme;
+  hasCustomLineHeight?: boolean;
 }
 
 function generateFrameContent(frame: FrameData, config: EmitterOptions & FrameRenderConfig): string {
   const { rows, cursor, cursorVisible, selection, activeCursor } = frame;
-  const { charWidth, lineHeight, padding, contentStartY, theme, fontSize } = config;
+  const { charWidth, lineHeight, padding, contentStartY, theme } = config;
+  const fontSize = config.fontSize ?? 16;
 
   const parts: string[] = [];
 
@@ -795,7 +809,7 @@ function generateFrameContent(frame: FrameData, config: EmitterOptions & FrameRe
     parts.push('<g class="selection-layer">');
     parts.push(
       `<rect x="${selectionX}" y="${selectionY}" ` +
-        `width="${selectionWidth}" height="${lineHeight}" fill="${selectionColor}" opacity="0.5"/>`
+      `width="${selectionWidth}" height="${lineHeight}" fill="${selectionColor}" opacity="0.5"/>`
     );
     parts.push('</g>');
   }
@@ -833,9 +847,18 @@ function generateFrameContent(frame: FrameData, config: EmitterOptions & FrameRe
   // Cursor
   if (cursor && cursorVisible) {
     const cursorX = padding + cursor.col * charWidth;
-    // Slight vertical offset to align cursor center with visual center of text
-    const cursorYOffset = fontSize * 0.1;
-    const cursorY = contentStartY + cursor.row * lineHeight + cursorYOffset;
+    const rowY = contentStartY + cursor.row * lineHeight;
+
+    // When custom lineHeight is provided, adjust cursor to align with text center
+    // Cursor height = fontSize, positioned so cursor's middle aligns with text's middle
+    const hasCustomLineHeight = config.hasCustomLineHeight ?? false;
+    const cursorHeight = hasCustomLineHeight ? fontSize : lineHeight;
+    // With text-before-edge baseline, the visible text center is approximately at 60% of fontSize
+    // cursorCenter = cursorY + cursorHeight/2, textCenter = rowY + fontSize * 0.6
+    // So cursorY = textCenter - cursorHeight/2 = rowY + fontSize*0.6 - cursorHeight/2
+    const cursorYOffset = hasCustomLineHeight ? (fontSize * 0.85) - (cursorHeight / 2) : 0;
+    const cursorY = rowY + cursorYOffset;
+
     const cursorColor = config.cursorColor ?? theme.cursor ?? theme.foreground;
     const cursorStyle = config.cursorStyle ?? 'block';
     // Use cursor-active class when actively typing (no blink)
@@ -844,20 +867,20 @@ function generateFrameContent(frame: FrameData, config: EmitterOptions & FrameRe
     if (cursorStyle === 'block') {
       parts.push(
         `<rect class="${cursorClass}" x="${cursorX}" y="${cursorY}" ` +
-          `width="${charWidth}" height="${lineHeight}" fill="${cursorColor}"/>`
+        `width="${charWidth}" height="${cursorHeight}" fill="${cursorColor}"/>`
       );
     } else if (cursorStyle === 'bar') {
       // Vertical bar cursor (2px wide)
       parts.push(
         `<rect class="${cursorClass}" x="${cursorX}" y="${cursorY}" ` +
-          `width="2" height="${lineHeight}" fill="${cursorColor}"/>`
+        `width="2" height="${cursorHeight}" fill="${cursorColor}"/>`
       );
     } else if (cursorStyle === 'underline') {
       // Underline cursor (2px tall at bottom of cell)
-      const underlineY = cursorY + lineHeight - 2;
+      const underlineY = cursorY + cursorHeight - 2;
       parts.push(
         `<rect class="${cursorClass}" x="${cursorX}" y="${underlineY}" ` +
-          `width="${charWidth}" height="2" fill="${cursorColor}"/>`
+        `width="${charWidth}" height="2" fill="${cursorColor}"/>`
       );
     }
   }

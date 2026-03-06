@@ -258,6 +258,8 @@ export interface EmitterOptions {
   // Cursor config
   cursorStyle?: 'block' | 'bar' | 'underline';
   cursorColor?: string;
+  // Track if user explicitly set lineHeight (for cursor alignment)
+  hasCustomLineHeight?: boolean;
 }
 
 // ============================================================================

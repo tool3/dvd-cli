@@ -1,5 +1,5 @@
-<svg width="1000" height="610" xmlns="http://www.w3.org/2000/svg">
-  <defs><clipPath id="rounded-corners"><rect x="0" y="0" width="1000" height="610" rx="8" ry="8"/></clipPath></defs>
+<svg width="1000" height="618" xmlns="http://www.w3.org/2000/svg">
+  <defs><clipPath id="rounded-corners"><rect x="0" y="0" width="1000" height="618" rx="8" ry="8"/></clipPath></defs>
   <style>
     
 .text {
@@ -64,7 +64,7 @@
   <!-- Animated frames with discrete visibility transitions -->
   
   <g id="frame-0" visibility="visible">
-    <rect class="window-bg" x="0" y="0" width="1000" height="610" fill="#282a36" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="1000" height="618" fill="#282a36" rx="8" ry="8"/>
 <g class="chrome"><rect class="header-bg" x="0" y="0" width="1000" height="40" fill="#282a36" rx="8" ry="8"/>
 <rect x="0" y="32" width="1000" height="8" fill="#282a36"/>
 <circle cx="22" cy="20" r="6" fill="#ff5f56"/>
@@ -74,13 +74,13 @@
 <text class="text f13" x="16" y="56">❯</text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor" x="35.2" y="76.4" width="9.6" height="2" fill="#ff79c6"/>
+<rect class="cursor" x="35.2" y="78.8" width="9.6" height="2" fill="#ff79c6"/>
 </g>
     <animate
       attributeName="visibility"
       values="visible;hidden;hidden"
-      keyTimes="0.000000;0.004817;1.000000"
-      dur="7.06s"
+      keyTimes="0.000000;0.004962;1.000000"
+      dur="7.05s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -88,7 +88,7 @@
   </g>
 
   <g id="frame-1" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="1000" height="610" fill="#282a36" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="1000" height="618" fill="#282a36" rx="8" ry="8"/>
 <g class="chrome"><rect class="header-bg" x="0" y="0" width="1000" height="40" fill="#282a36" rx="8" ry="8"/>
 <rect x="0" y="32" width="1000" height="8" fill="#282a36"/>
 <circle cx="22" cy="20" r="6" fill="#ff5f56"/>
@@ -99,13 +99,13 @@
 <text class="text fg" x="25.6" y="56"> n                                                                                                 </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor" x="44.8" y="76.4" width="9.6" height="2" fill="#ff79c6"/>
+<rect class="cursor-active" x="44.8" y="78.8" width="9.6" height="2" fill="#ff79c6"/>
 </g>
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.004817;0.009208;1.000000"
-      dur="7.06s"
+      keyTimes="0.000000;0.004962;0.009074;1.000000"
+      dur="7.05s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -113,7 +113,7 @@
   </g>
 
   <g id="frame-2" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="1000" height="610" fill="#282a36" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="1000" height="618" fill="#282a36" rx="8" ry="8"/>
 <g class="chrome"><rect class="header-bg" x="0" y="0" width="1000" height="40" fill="#282a36" rx="8" ry="8"/>
 <rect x="0" y="32" width="1000" height="8" fill="#282a36"/>
 <circle cx="22" cy="20" r="6" fill="#ff5f56"/>
@@ -124,13 +124,13 @@
 <text class="text fg" x="25.6" y="56"> ne                                                                                                </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor" x="54.4" y="76.4" width="9.6" height="2" fill="#ff79c6"/>
+<rect class="cursor-active" x="54.4" y="78.8" width="9.6" height="2" fill="#ff79c6"/>
 </g>
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.009208;0.013883;1.000000"
-      dur="7.06s"
+      keyTimes="0.000000;0.009074;0.013753;1.000000"
+      dur="7.05s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -138,7 +138,7 @@
   </g>
 
   <g id="frame-3" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="1000" height="610" fill="#282a36" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="1000" height="618" fill="#282a36" rx="8" ry="8"/>
 <g class="chrome"><rect class="header-bg" x="0" y="0" width="1000" height="40" fill="#282a36" rx="8" ry="8"/>
 <rect x="0" y="32" width="1000" height="8" fill="#282a36"/>
 <circle cx="22" cy="20" r="6" fill="#ff5f56"/>
@@ -149,13 +149,13 @@
 <text class="text fg" x="25.6" y="56"> neo                                                                                               </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor" x="64" y="76.4" width="9.6" height="2" fill="#ff79c6"/>
+<rect class="cursor-active" x="64" y="78.8" width="9.6" height="2" fill="#ff79c6"/>
 </g>
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.013883;0.018275;1.000000"
-      dur="7.06s"
+      keyTimes="0.000000;0.013753;0.018148;1.000000"
+      dur="7.05s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -163,7 +163,7 @@
   </g>
 
   <g id="frame-4" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="1000" height="610" fill="#282a36" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="1000" height="618" fill="#282a36" rx="8" ry="8"/>
 <g class="chrome"><rect class="header-bg" x="0" y="0" width="1000" height="40" fill="#282a36" rx="8" ry="8"/>
 <rect x="0" y="32" width="1000" height="8" fill="#282a36"/>
 <circle cx="22" cy="20" r="6" fill="#ff5f56"/>
@@ -174,13 +174,13 @@
 <text class="text fg" x="25.6" y="56"> neof                                                                                              </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor" x="73.6" y="76.4" width="9.6" height="2" fill="#ff79c6"/>
+<rect class="cursor-active" x="73.6" y="78.8" width="9.6" height="2" fill="#ff79c6"/>
 </g>
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.018275;0.022524;1.000000"
-      dur="7.06s"
+      keyTimes="0.000000;0.018148;0.022402;1.000000"
+      dur="7.05s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -188,7 +188,7 @@
   </g>
 
   <g id="frame-5" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="1000" height="610" fill="#282a36" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="1000" height="618" fill="#282a36" rx="8" ry="8"/>
 <g class="chrome"><rect class="header-bg" x="0" y="0" width="1000" height="40" fill="#282a36" rx="8" ry="8"/>
 <rect x="0" y="32" width="1000" height="8" fill="#282a36"/>
 <circle cx="22" cy="20" r="6" fill="#ff5f56"/>
@@ -199,13 +199,13 @@
 <text class="text fg" x="25.6" y="56"> neofe                                                                                             </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor" x="83.2" y="76.4" width="9.6" height="2" fill="#ff79c6"/>
+<rect class="cursor-active" x="83.2" y="78.8" width="9.6" height="2" fill="#ff79c6"/>
 </g>
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.022524;0.026916;1.000000"
-      dur="7.06s"
+      keyTimes="0.000000;0.022402;0.026797;1.000000"
+      dur="7.05s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -213,7 +213,7 @@
   </g>
 
   <g id="frame-6" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="1000" height="610" fill="#282a36" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="1000" height="618" fill="#282a36" rx="8" ry="8"/>
 <g class="chrome"><rect class="header-bg" x="0" y="0" width="1000" height="40" fill="#282a36" rx="8" ry="8"/>
 <rect x="0" y="32" width="1000" height="8" fill="#282a36"/>
 <circle cx="22" cy="20" r="6" fill="#ff5f56"/>
@@ -224,13 +224,13 @@
 <text class="text fg" x="25.6" y="56"> neofet                                                                                            </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor" x="92.8" y="76.4" width="9.6" height="2" fill="#ff79c6"/>
+<rect class="cursor-active" x="92.8" y="78.8" width="9.6" height="2" fill="#ff79c6"/>
 </g>
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.026916;0.031449;1.000000"
-      dur="7.06s"
+      keyTimes="0.000000;0.026797;0.031192;1.000000"
+      dur="7.05s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -238,7 +238,7 @@
   </g>
 
   <g id="frame-7" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="1000" height="610" fill="#282a36" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="1000" height="618" fill="#282a36" rx="8" ry="8"/>
 <g class="chrome"><rect class="header-bg" x="0" y="0" width="1000" height="40" fill="#282a36" rx="8" ry="8"/>
 <rect x="0" y="32" width="1000" height="8" fill="#282a36"/>
 <circle cx="22" cy="20" r="6" fill="#ff5f56"/>
@@ -249,13 +249,13 @@
 <text class="text fg" x="25.6" y="56"> neofetc                                                                                           </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor" x="102.39999999999999" y="76.4" width="9.6" height="2" fill="#ff79c6"/>
+<rect class="cursor-active" x="102.39999999999999" y="78.8" width="9.6" height="2" fill="#ff79c6"/>
 </g>
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.031449;0.035841;1.000000"
-      dur="7.06s"
+      keyTimes="0.000000;0.031192;0.035729;1.000000"
+      dur="7.05s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -263,7 +263,7 @@
   </g>
 
   <g id="frame-8" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="1000" height="610" fill="#282a36" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="1000" height="618" fill="#282a36" rx="8" ry="8"/>
 <g class="chrome"><rect class="header-bg" x="0" y="0" width="1000" height="40" fill="#282a36" rx="8" ry="8"/>
 <rect x="0" y="32" width="1000" height="8" fill="#282a36"/>
 <circle cx="22" cy="20" r="6" fill="#ff5f56"/>
@@ -274,13 +274,13 @@
 <text class="text fg" x="25.6" y="56"> neofetch                                                                                          </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor" x="112" y="76.4" width="9.6" height="2" fill="#ff79c6"/>
+<rect class="cursor-active" x="112" y="78.8" width="9.6" height="2" fill="#ff79c6"/>
 </g>
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.035841;0.106956;1.000000"
-      dur="7.06s"
+      keyTimes="0.000000;0.035729;0.106905;1.000000"
+      dur="7.05s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -288,7 +288,7 @@
   </g>
 
   <g id="frame-9" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="1000" height="610" fill="#282a36" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="1000" height="618" fill="#282a36" rx="8" ry="8"/>
 <g class="chrome"><rect class="header-bg" x="0" y="0" width="1000" height="40" fill="#282a36" rx="8" ry="8"/>
 <rect x="0" y="32" width="1000" height="8" fill="#282a36"/>
 <circle cx="22" cy="20" r="6" fill="#ff5f56"/>
@@ -299,13 +299,13 @@
 <text class="text fg" x="25.6" y="56"> neofetch                                                                                          </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor" x="112" y="76.4" width="9.6" height="2" fill="#ff79c6"/>
+<rect class="cursor" x="112" y="78.8" width="9.6" height="2" fill="#ff79c6"/>
 </g>
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.106956;0.121830;1.000000"
-      dur="7.06s"
+      keyTimes="0.000000;0.106905;0.121792;1.000000"
+      dur="7.05s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -313,7 +313,7 @@
   </g>
 
   <g id="frame-10" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="1000" height="610" fill="#282a36" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="1000" height="618" fill="#282a36" rx="8" ry="8"/>
 <g class="chrome"><rect class="header-bg" x="0" y="0" width="1000" height="40" fill="#282a36" rx="8" ry="8"/>
 <rect x="0" y="32" width="1000" height="8" fill="#282a36"/>
 <circle cx="22" cy="20" r="6" fill="#ff5f56"/>
@@ -326,8 +326,8 @@
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.121830;0.153704;1.000000"
-      dur="7.06s"
+      keyTimes="0.000000;0.121792;0.153410;1.000000"
+      dur="7.05s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -335,7 +335,7 @@
   </g>
 
   <g id="frame-11" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="1000" height="610" fill="#282a36" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="1000" height="618" fill="#282a36" rx="8" ry="8"/>
 <g class="chrome"><rect class="header-bg" x="0" y="0" width="1000" height="40" fill="#282a36" rx="8" ry="8"/>
 <rect x="0" y="32" width="1000" height="8" fill="#282a36"/>
 <circle cx="22" cy="20" r="6" fill="#ff5f56"/>
@@ -373,8 +373,8 @@
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.153704;0.170279;1.000000"
-      dur="7.06s"
+      keyTimes="0.000000;0.153410;0.169715;1.000000"
+      dur="7.05s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -382,7 +382,7 @@
   </g>
 
   <g id="frame-12" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="1000" height="610" fill="#282a36" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="1000" height="618" fill="#282a36" rx="8" ry="8"/>
 <g class="chrome"><rect class="header-bg" x="0" y="0" width="1000" height="40" fill="#282a36" rx="8" ry="8"/>
 <rect x="0" y="32" width="1000" height="8" fill="#282a36"/>
 <circle cx="22" cy="20" r="6" fill="#ff5f56"/>
@@ -408,7 +408,7 @@
 <text class="text fg" x="390.4" y="168">: 25.2.0                                                     </text>
 <text class="text bold f2" x="16" y="190.39999999999998">   cKMMMMMMMMMMNWMMMMMMMMMM0:</text>
 <text class="text bold f3" x="332.8" y="190.39999999999998">Uptime</text>
-<text class="text fg" x="390.4" y="190.39999999999998">: 8 hours, 6 mins                                            </text>
+<text class="text fg" x="390.4" y="190.39999999999998">: 9 hours, 53 mins                                           </text>
 <text class="text bold f3" x="16" y="212.79999999999998"> .KMMMMMMMMMMMMMMMMMMMMMMMWd.</text>
 <text class="text bold f3" x="332.8" y="212.79999999999998">Packages</text>
 <text class="text fg" x="409.59999999999997" y="212.79999999999998">: 51 (brew)                                                </text>
@@ -440,8 +440,8 @@
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.170279;0.191954;1.000000"
-      dur="7.06s"
+      keyTimes="0.000000;0.169715;0.191975;1.000000"
+      dur="7.05s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -449,7 +449,7 @@
   </g>
 
   <g id="frame-13" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="1000" height="610" fill="#282a36" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="1000" height="618" fill="#282a36" rx="8" ry="8"/>
 <g class="chrome"><rect class="header-bg" x="0" y="0" width="1000" height="40" fill="#282a36" rx="8" ry="8"/>
 <rect x="0" y="32" width="1000" height="8" fill="#282a36"/>
 <circle cx="22" cy="20" r="6" fill="#ff5f56"/>
@@ -493,7 +493,7 @@
 <text class="text fg" x="390.4" y="168">: 25.2.0                                                     </text>
 <text class="text bold f2" x="16" y="190.39999999999998">   cKMMMMMMMMMMNWMMMMMMMMMM0:</text>
 <text class="text bold f3" x="332.8" y="190.39999999999998">Uptime</text>
-<text class="text fg" x="390.4" y="190.39999999999998">: 8 hours, 6 mins                                            </text>
+<text class="text fg" x="390.4" y="190.39999999999998">: 9 hours, 53 mins                                           </text>
 <text class="text bold f3" x="16" y="212.79999999999998"> .KMMMMMMMMMMMMMMMMMMMMMMMWd.</text>
 <text class="text bold f3" x="332.8" y="212.79999999999998">Packages</text>
 <text class="text fg" x="409.59999999999997" y="212.79999999999998">: 51 (brew)                                                </text>
@@ -523,7 +523,7 @@
 <text class="text fg" x="361.59999999999997" y="392">: Apple M4 Max                                                  </text>
 <text class="text bold f4" x="16" y="414.4">     ;KMMMMMMMWXXWMMMMMMMk.</text>
 <text class="text bold f3" x="332.8" y="414.4">Memory</text>
-<text class="text fg" x="390.4" y="414.4">: 6990MiB / 36864MiB                                         </text>
+<text class="text fg" x="390.4" y="414.4">: 6886MiB / 36864MiB                                         </text>
 <text class="text bold f4" x="16" y="436.79999999999995">       .cooc,.    .,coo:.</text>
 <text class="text f0" x="332.8" y="459.2">   </text>
 <text class="text f1" x="361.59999999999997" y="459.2">   </text>
@@ -544,13 +544,13 @@
 <text class="text f13" x="16" y="571.1999999999999">❯</text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor" x="35.2" y="591.5999999999999" width="9.6" height="2" fill="#ff79c6"/>
+<rect class="cursor" x="35.2" y="593.9999999999999" width="9.6" height="2" fill="#ff79c6"/>
 </g>
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.191954;0.486046;1.000000"
-      dur="7.06s"
+      keyTimes="0.000000;0.191975;0.484475;1.000000"
+      dur="7.05s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -558,7 +558,7 @@
   </g>
 
   <g id="frame-14" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="1000" height="610" fill="#282a36" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="1000" height="618" fill="#282a36" rx="8" ry="8"/>
 <g class="chrome"><rect class="header-bg" x="0" y="0" width="1000" height="40" fill="#282a36" rx="8" ry="8"/>
 <rect x="0" y="32" width="1000" height="8" fill="#282a36"/>
 <circle cx="22" cy="20" r="6" fill="#ff5f56"/>
@@ -602,7 +602,7 @@
 <text class="text fg" x="390.4" y="168">: 25.2.0                                                     </text>
 <text class="text bold f2" x="16" y="190.39999999999998">   cKMMMMMMMMMMNWMMMMMMMMMM0:</text>
 <text class="text bold f3" x="332.8" y="190.39999999999998">Uptime</text>
-<text class="text fg" x="390.4" y="190.39999999999998">: 8 hours, 6 mins                                            </text>
+<text class="text fg" x="390.4" y="190.39999999999998">: 9 hours, 53 mins                                           </text>
 <text class="text bold f3" x="16" y="212.79999999999998"> .KMMMMMMMMMMMMMMMMMMMMMMMWd.</text>
 <text class="text bold f3" x="332.8" y="212.79999999999998">Packages</text>
 <text class="text fg" x="409.59999999999997" y="212.79999999999998">: 51 (brew)                                                </text>
@@ -632,7 +632,7 @@
 <text class="text fg" x="361.59999999999997" y="392">: Apple M4 Max                                                  </text>
 <text class="text bold f4" x="16" y="414.4">     ;KMMMMMMMWXXWMMMMMMMk.</text>
 <text class="text bold f3" x="332.8" y="414.4">Memory</text>
-<text class="text fg" x="390.4" y="414.4">: 6990MiB / 36864MiB                                         </text>
+<text class="text fg" x="390.4" y="414.4">: 6886MiB / 36864MiB                                         </text>
 <text class="text bold f4" x="16" y="436.79999999999995">       .cooc,.    .,coo:.</text>
 <text class="text f0" x="332.8" y="459.2">   </text>
 <text class="text f1" x="361.59999999999997" y="459.2">   </text>
@@ -653,13 +653,13 @@
 <text class="text f13" x="16" y="571.1999999999999">❯</text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor" x="35.2" y="591.5999999999999" width="9.6" height="2" fill="#ff79c6"/>
+<rect class="cursor" x="35.2" y="593.9999999999999" width="9.6" height="2" fill="#ff79c6"/>
 </g>
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.486046;0.497663;1.000000"
-      dur="7.06s"
+      keyTimes="0.000000;0.484475;0.495392;1.000000"
+      dur="7.05s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -667,7 +667,7 @@
   </g>
 
   <g id="frame-15" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="1000" height="610" fill="#282a36" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="1000" height="618" fill="#282a36" rx="8" ry="8"/>
 <g class="chrome"><rect class="header-bg" x="0" y="0" width="1000" height="40" fill="#282a36" rx="8" ry="8"/>
 <rect x="0" y="32" width="1000" height="8" fill="#282a36"/>
 <circle cx="22" cy="20" r="6" fill="#ff5f56"/>
@@ -711,7 +711,7 @@
 <text class="text fg" x="390.4" y="168">: 25.2.0                                                     </text>
 <text class="text bold f2" x="16" y="190.39999999999998">   cKMMMMMMMMMMNWMMMMMMMMMM0:</text>
 <text class="text bold f3" x="332.8" y="190.39999999999998">Uptime</text>
-<text class="text fg" x="390.4" y="190.39999999999998">: 8 hours, 6 mins                                            </text>
+<text class="text fg" x="390.4" y="190.39999999999998">: 9 hours, 53 mins                                           </text>
 <text class="text bold f3" x="16" y="212.79999999999998"> .KMMMMMMMMMMMMMMMMMMMMMMMWd.</text>
 <text class="text bold f3" x="332.8" y="212.79999999999998">Packages</text>
 <text class="text fg" x="409.59999999999997" y="212.79999999999998">: 51 (brew)                                                </text>
@@ -741,7 +741,7 @@
 <text class="text fg" x="361.59999999999997" y="392">: Apple M4 Max                                                  </text>
 <text class="text bold f4" x="16" y="414.4">     ;KMMMMMMMWXXWMMMMMMMk.</text>
 <text class="text bold f3" x="332.8" y="414.4">Memory</text>
-<text class="text fg" x="390.4" y="414.4">: 6990MiB / 36864MiB                                         </text>
+<text class="text fg" x="390.4" y="414.4">: 6886MiB / 36864MiB                                         </text>
 <text class="text bold f4" x="16" y="436.79999999999995">       .cooc,.    .,coo:.</text>
 <text class="text f0" x="332.8" y="459.2">   </text>
 <text class="text f1" x="361.59999999999997" y="459.2">   </text>
@@ -763,13 +763,13 @@
 <text class="text fg" x="25.6" y="571.1999999999999"> C                                                                                                 </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor" x="44.8" y="591.5999999999999" width="9.6" height="2" fill="#ff79c6"/>
+<rect class="cursor-active" x="44.8" y="593.9999999999999" width="9.6" height="2" fill="#ff79c6"/>
 </g>
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.497663;0.501487;1.000000"
-      dur="7.06s"
+      keyTimes="0.000000;0.495392;0.499787;1.000000"
+      dur="7.05s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -777,7 +777,7 @@
   </g>
 
   <g id="frame-16" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="1000" height="610" fill="#282a36" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="1000" height="618" fill="#282a36" rx="8" ry="8"/>
 <g class="chrome"><rect class="header-bg" x="0" y="0" width="1000" height="40" fill="#282a36" rx="8" ry="8"/>
 <rect x="0" y="32" width="1000" height="8" fill="#282a36"/>
 <circle cx="22" cy="20" r="6" fill="#ff5f56"/>
@@ -821,7 +821,7 @@
 <text class="text fg" x="390.4" y="168">: 25.2.0                                                     </text>
 <text class="text bold f2" x="16" y="190.39999999999998">   cKMMMMMMMMMMNWMMMMMMMMMM0:</text>
 <text class="text bold f3" x="332.8" y="190.39999999999998">Uptime</text>
-<text class="text fg" x="390.4" y="190.39999999999998">: 8 hours, 6 mins                                            </text>
+<text class="text fg" x="390.4" y="190.39999999999998">: 9 hours, 53 mins                                           </text>
 <text class="text bold f3" x="16" y="212.79999999999998"> .KMMMMMMMMMMMMMMMMMMMMMMMWd.</text>
 <text class="text bold f3" x="332.8" y="212.79999999999998">Packages</text>
 <text class="text fg" x="409.59999999999997" y="212.79999999999998">: 51 (brew)                                                </text>
@@ -851,7 +851,7 @@
 <text class="text fg" x="361.59999999999997" y="392">: Apple M4 Max                                                  </text>
 <text class="text bold f4" x="16" y="414.4">     ;KMMMMMMMWXXWMMMMMMMk.</text>
 <text class="text bold f3" x="332.8" y="414.4">Memory</text>
-<text class="text fg" x="390.4" y="414.4">: 6990MiB / 36864MiB                                         </text>
+<text class="text fg" x="390.4" y="414.4">: 6886MiB / 36864MiB                                         </text>
 <text class="text bold f4" x="16" y="436.79999999999995">       .cooc,.    .,coo:.</text>
 <text class="text f0" x="332.8" y="459.2">   </text>
 <text class="text f1" x="361.59999999999997" y="459.2">   </text>
@@ -873,13 +873,13 @@
 <text class="text fg" x="25.6" y="571.1999999999999"> Cu                                                                                                </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor" x="54.4" y="591.5999999999999" width="9.6" height="2" fill="#ff79c6"/>
+<rect class="cursor-active" x="54.4" y="593.9999999999999" width="9.6" height="2" fill="#ff79c6"/>
 </g>
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.501487;0.505879;1.000000"
-      dur="7.06s"
+      keyTimes="0.000000;0.499787;0.504466;1.000000"
+      dur="7.05s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -887,7 +887,7 @@
   </g>
 
   <g id="frame-17" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="1000" height="610" fill="#282a36" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="1000" height="618" fill="#282a36" rx="8" ry="8"/>
 <g class="chrome"><rect class="header-bg" x="0" y="0" width="1000" height="40" fill="#282a36" rx="8" ry="8"/>
 <rect x="0" y="32" width="1000" height="8" fill="#282a36"/>
 <circle cx="22" cy="20" r="6" fill="#ff5f56"/>
@@ -931,7 +931,7 @@
 <text class="text fg" x="390.4" y="168">: 25.2.0                                                     </text>
 <text class="text bold f2" x="16" y="190.39999999999998">   cKMMMMMMMMMMNWMMMMMMMMMM0:</text>
 <text class="text bold f3" x="332.8" y="190.39999999999998">Uptime</text>
-<text class="text fg" x="390.4" y="190.39999999999998">: 8 hours, 6 mins                                            </text>
+<text class="text fg" x="390.4" y="190.39999999999998">: 9 hours, 53 mins                                           </text>
 <text class="text bold f3" x="16" y="212.79999999999998"> .KMMMMMMMMMMMMMMMMMMMMMMMWd.</text>
 <text class="text bold f3" x="332.8" y="212.79999999999998">Packages</text>
 <text class="text fg" x="409.59999999999997" y="212.79999999999998">: 51 (brew)                                                </text>
@@ -961,7 +961,7 @@
 <text class="text fg" x="361.59999999999997" y="392">: Apple M4 Max                                                  </text>
 <text class="text bold f4" x="16" y="414.4">     ;KMMMMMMMWXXWMMMMMMMk.</text>
 <text class="text bold f3" x="332.8" y="414.4">Memory</text>
-<text class="text fg" x="390.4" y="414.4">: 6990MiB / 36864MiB                                         </text>
+<text class="text fg" x="390.4" y="414.4">: 6886MiB / 36864MiB                                         </text>
 <text class="text bold f4" x="16" y="436.79999999999995">       .cooc,.    .,coo:.</text>
 <text class="text f0" x="332.8" y="459.2">   </text>
 <text class="text f1" x="361.59999999999997" y="459.2">   </text>
@@ -983,13 +983,13 @@
 <text class="text fg" x="25.6" y="571.1999999999999"> Cus                                                                                               </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor" x="64" y="591.5999999999999" width="9.6" height="2" fill="#ff79c6"/>
+<rect class="cursor-active" x="64" y="593.9999999999999" width="9.6" height="2" fill="#ff79c6"/>
 </g>
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.505879;0.510696;1.000000"
-      dur="7.06s"
+      keyTimes="0.000000;0.504466;0.508861;1.000000"
+      dur="7.05s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -997,7 +997,7 @@
   </g>
 
   <g id="frame-18" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="1000" height="610" fill="#282a36" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="1000" height="618" fill="#282a36" rx="8" ry="8"/>
 <g class="chrome"><rect class="header-bg" x="0" y="0" width="1000" height="40" fill="#282a36" rx="8" ry="8"/>
 <rect x="0" y="32" width="1000" height="8" fill="#282a36"/>
 <circle cx="22" cy="20" r="6" fill="#ff5f56"/>
@@ -1041,7 +1041,7 @@
 <text class="text fg" x="390.4" y="168">: 25.2.0                                                     </text>
 <text class="text bold f2" x="16" y="190.39999999999998">   cKMMMMMMMMMMNWMMMMMMMMMM0:</text>
 <text class="text bold f3" x="332.8" y="190.39999999999998">Uptime</text>
-<text class="text fg" x="390.4" y="190.39999999999998">: 8 hours, 6 mins                                            </text>
+<text class="text fg" x="390.4" y="190.39999999999998">: 9 hours, 53 mins                                           </text>
 <text class="text bold f3" x="16" y="212.79999999999998"> .KMMMMMMMMMMMMMMMMMMMMMMMWd.</text>
 <text class="text bold f3" x="332.8" y="212.79999999999998">Packages</text>
 <text class="text fg" x="409.59999999999997" y="212.79999999999998">: 51 (brew)                                                </text>
@@ -1071,7 +1071,7 @@
 <text class="text fg" x="361.59999999999997" y="392">: Apple M4 Max                                                  </text>
 <text class="text bold f4" x="16" y="414.4">     ;KMMMMMMMWXXWMMMMMMMk.</text>
 <text class="text bold f3" x="332.8" y="414.4">Memory</text>
-<text class="text fg" x="390.4" y="414.4">: 6990MiB / 36864MiB                                         </text>
+<text class="text fg" x="390.4" y="414.4">: 6886MiB / 36864MiB                                         </text>
 <text class="text bold f4" x="16" y="436.79999999999995">       .cooc,.    .,coo:.</text>
 <text class="text f0" x="332.8" y="459.2">   </text>
 <text class="text f1" x="361.59999999999997" y="459.2">   </text>
@@ -1093,13 +1093,13 @@
 <text class="text fg" x="25.6" y="571.1999999999999"> Cust                                                                                              </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor" x="73.6" y="591.5999999999999" width="9.6" height="2" fill="#ff79c6"/>
+<rect class="cursor-active" x="73.6" y="593.9999999999999" width="9.6" height="2" fill="#ff79c6"/>
 </g>
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.510696;0.515087;1.000000"
-      dur="7.06s"
+      keyTimes="0.000000;0.508861;0.512973;1.000000"
+      dur="7.05s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -1107,7 +1107,7 @@
   </g>
 
   <g id="frame-19" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="1000" height="610" fill="#282a36" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="1000" height="618" fill="#282a36" rx="8" ry="8"/>
 <g class="chrome"><rect class="header-bg" x="0" y="0" width="1000" height="40" fill="#282a36" rx="8" ry="8"/>
 <rect x="0" y="32" width="1000" height="8" fill="#282a36"/>
 <circle cx="22" cy="20" r="6" fill="#ff5f56"/>
@@ -1151,7 +1151,7 @@
 <text class="text fg" x="390.4" y="168">: 25.2.0                                                     </text>
 <text class="text bold f2" x="16" y="190.39999999999998">   cKMMMMMMMMMMNWMMMMMMMMMM0:</text>
 <text class="text bold f3" x="332.8" y="190.39999999999998">Uptime</text>
-<text class="text fg" x="390.4" y="190.39999999999998">: 8 hours, 6 mins                                            </text>
+<text class="text fg" x="390.4" y="190.39999999999998">: 9 hours, 53 mins                                           </text>
 <text class="text bold f3" x="16" y="212.79999999999998"> .KMMMMMMMMMMMMMMMMMMMMMMMWd.</text>
 <text class="text bold f3" x="332.8" y="212.79999999999998">Packages</text>
 <text class="text fg" x="409.59999999999997" y="212.79999999999998">: 51 (brew)                                                </text>
@@ -1181,7 +1181,7 @@
 <text class="text fg" x="361.59999999999997" y="392">: Apple M4 Max                                                  </text>
 <text class="text bold f4" x="16" y="414.4">     ;KMMMMMMMWXXWMMMMMMMk.</text>
 <text class="text bold f3" x="332.8" y="414.4">Memory</text>
-<text class="text fg" x="390.4" y="414.4">: 6990MiB / 36864MiB                                         </text>
+<text class="text fg" x="390.4" y="414.4">: 6886MiB / 36864MiB                                         </text>
 <text class="text bold f4" x="16" y="436.79999999999995">       .cooc,.    .,coo:.</text>
 <text class="text f0" x="332.8" y="459.2">   </text>
 <text class="text f1" x="361.59999999999997" y="459.2">   </text>
@@ -1203,13 +1203,13 @@
 <text class="text fg" x="25.6" y="571.1999999999999"> Custo                                                                                             </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor" x="83.2" y="591.5999999999999" width="9.6" height="2" fill="#ff79c6"/>
+<rect class="cursor-active" x="83.2" y="593.9999999999999" width="9.6" height="2" fill="#ff79c6"/>
 </g>
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.515087;0.519195;1.000000"
-      dur="7.06s"
+      keyTimes="0.000000;0.512973;0.517510;1.000000"
+      dur="7.05s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -1217,7 +1217,7 @@
   </g>
 
   <g id="frame-20" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="1000" height="610" fill="#282a36" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="1000" height="618" fill="#282a36" rx="8" ry="8"/>
 <g class="chrome"><rect class="header-bg" x="0" y="0" width="1000" height="40" fill="#282a36" rx="8" ry="8"/>
 <rect x="0" y="32" width="1000" height="8" fill="#282a36"/>
 <circle cx="22" cy="20" r="6" fill="#ff5f56"/>
@@ -1261,7 +1261,7 @@
 <text class="text fg" x="390.4" y="168">: 25.2.0                                                     </text>
 <text class="text bold f2" x="16" y="190.39999999999998">   cKMMMMMMMMMMNWMMMMMMMMMM0:</text>
 <text class="text bold f3" x="332.8" y="190.39999999999998">Uptime</text>
-<text class="text fg" x="390.4" y="190.39999999999998">: 8 hours, 6 mins                                            </text>
+<text class="text fg" x="390.4" y="190.39999999999998">: 9 hours, 53 mins                                           </text>
 <text class="text bold f3" x="16" y="212.79999999999998"> .KMMMMMMMMMMMMMMMMMMMMMMMWd.</text>
 <text class="text bold f3" x="332.8" y="212.79999999999998">Packages</text>
 <text class="text fg" x="409.59999999999997" y="212.79999999999998">: 51 (brew)                                                </text>
@@ -1291,7 +1291,7 @@
 <text class="text fg" x="361.59999999999997" y="392">: Apple M4 Max                                                  </text>
 <text class="text bold f4" x="16" y="414.4">     ;KMMMMMMMWXXWMMMMMMMk.</text>
 <text class="text bold f3" x="332.8" y="414.4">Memory</text>
-<text class="text fg" x="390.4" y="414.4">: 6990MiB / 36864MiB                                         </text>
+<text class="text fg" x="390.4" y="414.4">: 6886MiB / 36864MiB                                         </text>
 <text class="text bold f4" x="16" y="436.79999999999995">       .cooc,.    .,coo:.</text>
 <text class="text f0" x="332.8" y="459.2">   </text>
 <text class="text f1" x="361.59999999999997" y="459.2">   </text>
@@ -1313,13 +1313,13 @@
 <text class="text fg" x="25.6" y="571.1999999999999"> Custom                                                                                            </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor" x="92.8" y="591.5999999999999" width="9.6" height="2" fill="#ff79c6"/>
+<rect class="cursor-active" x="92.8" y="593.9999999999999" width="9.6" height="2" fill="#ff79c6"/>
 </g>
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.519195;0.523729;1.000000"
-      dur="7.06s"
+      keyTimes="0.000000;0.517510;0.521906;1.000000"
+      dur="7.05s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -1327,7 +1327,7 @@
   </g>
 
   <g id="frame-21" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="1000" height="610" fill="#282a36" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="1000" height="618" fill="#282a36" rx="8" ry="8"/>
 <g class="chrome"><rect class="header-bg" x="0" y="0" width="1000" height="40" fill="#282a36" rx="8" ry="8"/>
 <rect x="0" y="32" width="1000" height="8" fill="#282a36"/>
 <circle cx="22" cy="20" r="6" fill="#ff5f56"/>
@@ -1371,7 +1371,7 @@
 <text class="text fg" x="390.4" y="168">: 25.2.0                                                     </text>
 <text class="text bold f2" x="16" y="190.39999999999998">   cKMMMMMMMMMMNWMMMMMMMMMM0:</text>
 <text class="text bold f3" x="332.8" y="190.39999999999998">Uptime</text>
-<text class="text fg" x="390.4" y="190.39999999999998">: 8 hours, 6 mins                                            </text>
+<text class="text fg" x="390.4" y="190.39999999999998">: 9 hours, 53 mins                                           </text>
 <text class="text bold f3" x="16" y="212.79999999999998"> .KMMMMMMMMMMMMMMMMMMMMMMMWd.</text>
 <text class="text bold f3" x="332.8" y="212.79999999999998">Packages</text>
 <text class="text fg" x="409.59999999999997" y="212.79999999999998">: 51 (brew)                                                </text>
@@ -1401,7 +1401,7 @@
 <text class="text fg" x="361.59999999999997" y="392">: Apple M4 Max                                                  </text>
 <text class="text bold f4" x="16" y="414.4">     ;KMMMMMMMWXXWMMMMMMMk.</text>
 <text class="text bold f3" x="332.8" y="414.4">Memory</text>
-<text class="text fg" x="390.4" y="414.4">: 6990MiB / 36864MiB                                         </text>
+<text class="text fg" x="390.4" y="414.4">: 6886MiB / 36864MiB                                         </text>
 <text class="text bold f4" x="16" y="436.79999999999995">       .cooc,.    .,coo:.</text>
 <text class="text f0" x="332.8" y="459.2">   </text>
 <text class="text f1" x="361.59999999999997" y="459.2">   </text>
@@ -1423,13 +1423,13 @@
 <text class="text fg" x="25.6" y="571.1999999999999"> Custom                                                                                            </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor" x="102.39999999999999" y="591.5999999999999" width="9.6" height="2" fill="#ff79c6"/>
+<rect class="cursor-active" x="102.39999999999999" y="593.9999999999999" width="9.6" height="2" fill="#ff79c6"/>
 </g>
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.523729;0.527978;1.000000"
-      dur="7.06s"
+      keyTimes="0.000000;0.521906;0.526159;1.000000"
+      dur="7.05s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -1437,7 +1437,7 @@
   </g>
 
   <g id="frame-22" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="1000" height="610" fill="#282a36" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="1000" height="618" fill="#282a36" rx="8" ry="8"/>
 <g class="chrome"><rect class="header-bg" x="0" y="0" width="1000" height="40" fill="#282a36" rx="8" ry="8"/>
 <rect x="0" y="32" width="1000" height="8" fill="#282a36"/>
 <circle cx="22" cy="20" r="6" fill="#ff5f56"/>
@@ -1481,7 +1481,7 @@
 <text class="text fg" x="390.4" y="168">: 25.2.0                                                     </text>
 <text class="text bold f2" x="16" y="190.39999999999998">   cKMMMMMMMMMMNWMMMMMMMMMM0:</text>
 <text class="text bold f3" x="332.8" y="190.39999999999998">Uptime</text>
-<text class="text fg" x="390.4" y="190.39999999999998">: 8 hours, 6 mins                                            </text>
+<text class="text fg" x="390.4" y="190.39999999999998">: 9 hours, 53 mins                                           </text>
 <text class="text bold f3" x="16" y="212.79999999999998"> .KMMMMMMMMMMMMMMMMMMMMMMMWd.</text>
 <text class="text bold f3" x="332.8" y="212.79999999999998">Packages</text>
 <text class="text fg" x="409.59999999999997" y="212.79999999999998">: 51 (brew)                                                </text>
@@ -1511,7 +1511,7 @@
 <text class="text fg" x="361.59999999999997" y="392">: Apple M4 Max                                                  </text>
 <text class="text bold f4" x="16" y="414.4">     ;KMMMMMMMWXXWMMMMMMMk.</text>
 <text class="text bold f3" x="332.8" y="414.4">Memory</text>
-<text class="text fg" x="390.4" y="414.4">: 6990MiB / 36864MiB                                         </text>
+<text class="text fg" x="390.4" y="414.4">: 6886MiB / 36864MiB                                         </text>
 <text class="text bold f4" x="16" y="436.79999999999995">       .cooc,.    .,coo:.</text>
 <text class="text f0" x="332.8" y="459.2">   </text>
 <text class="text f1" x="361.59999999999997" y="459.2">   </text>
@@ -1533,13 +1533,13 @@
 <text class="text fg" x="25.6" y="571.1999999999999"> Custom c                                                                                          </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor" x="112" y="591.5999999999999" width="9.6" height="2" fill="#ff79c6"/>
+<rect class="cursor-active" x="112" y="593.9999999999999" width="9.6" height="2" fill="#ff79c6"/>
 </g>
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.527978;0.532370;1.000000"
-      dur="7.06s"
+      keyTimes="0.000000;0.526159;0.530413;1.000000"
+      dur="7.05s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -1547,7 +1547,7 @@
   </g>
 
   <g id="frame-23" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="1000" height="610" fill="#282a36" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="1000" height="618" fill="#282a36" rx="8" ry="8"/>
 <g class="chrome"><rect class="header-bg" x="0" y="0" width="1000" height="40" fill="#282a36" rx="8" ry="8"/>
 <rect x="0" y="32" width="1000" height="8" fill="#282a36"/>
 <circle cx="22" cy="20" r="6" fill="#ff5f56"/>
@@ -1591,7 +1591,7 @@
 <text class="text fg" x="390.4" y="168">: 25.2.0                                                     </text>
 <text class="text bold f2" x="16" y="190.39999999999998">   cKMMMMMMMMMMNWMMMMMMMMMM0:</text>
 <text class="text bold f3" x="332.8" y="190.39999999999998">Uptime</text>
-<text class="text fg" x="390.4" y="190.39999999999998">: 8 hours, 6 mins                                            </text>
+<text class="text fg" x="390.4" y="190.39999999999998">: 9 hours, 53 mins                                           </text>
 <text class="text bold f3" x="16" y="212.79999999999998"> .KMMMMMMMMMMMMMMMMMMMMMMMWd.</text>
 <text class="text bold f3" x="332.8" y="212.79999999999998">Packages</text>
 <text class="text fg" x="409.59999999999997" y="212.79999999999998">: 51 (brew)                                                </text>
@@ -1621,7 +1621,7 @@
 <text class="text fg" x="361.59999999999997" y="392">: Apple M4 Max                                                  </text>
 <text class="text bold f4" x="16" y="414.4">     ;KMMMMMMMWXXWMMMMMMMk.</text>
 <text class="text bold f3" x="332.8" y="414.4">Memory</text>
-<text class="text fg" x="390.4" y="414.4">: 6990MiB / 36864MiB                                         </text>
+<text class="text fg" x="390.4" y="414.4">: 6886MiB / 36864MiB                                         </text>
 <text class="text bold f4" x="16" y="436.79999999999995">       .cooc,.    .,coo:.</text>
 <text class="text f0" x="332.8" y="459.2">   </text>
 <text class="text f1" x="361.59999999999997" y="459.2">   </text>
@@ -1643,13 +1643,13 @@
 <text class="text fg" x="25.6" y="571.1999999999999"> Custom cu                                                                                         </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor" x="121.6" y="591.5999999999999" width="9.6" height="2" fill="#ff79c6"/>
+<rect class="cursor-active" x="121.6" y="593.9999999999999" width="9.6" height="2" fill="#ff79c6"/>
 </g>
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.532370;0.537187;1.000000"
-      dur="7.06s"
+      keyTimes="0.000000;0.530413;0.535091;1.000000"
+      dur="7.05s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -1657,7 +1657,7 @@
   </g>
 
   <g id="frame-24" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="1000" height="610" fill="#282a36" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="1000" height="618" fill="#282a36" rx="8" ry="8"/>
 <g class="chrome"><rect class="header-bg" x="0" y="0" width="1000" height="40" fill="#282a36" rx="8" ry="8"/>
 <rect x="0" y="32" width="1000" height="8" fill="#282a36"/>
 <circle cx="22" cy="20" r="6" fill="#ff5f56"/>
@@ -1701,7 +1701,7 @@
 <text class="text fg" x="390.4" y="168">: 25.2.0                                                     </text>
 <text class="text bold f2" x="16" y="190.39999999999998">   cKMMMMMMMMMMNWMMMMMMMMMM0:</text>
 <text class="text bold f3" x="332.8" y="190.39999999999998">Uptime</text>
-<text class="text fg" x="390.4" y="190.39999999999998">: 8 hours, 6 mins                                            </text>
+<text class="text fg" x="390.4" y="190.39999999999998">: 9 hours, 53 mins                                           </text>
 <text class="text bold f3" x="16" y="212.79999999999998"> .KMMMMMMMMMMMMMMMMMMMMMMMWd.</text>
 <text class="text bold f3" x="332.8" y="212.79999999999998">Packages</text>
 <text class="text fg" x="409.59999999999997" y="212.79999999999998">: 51 (brew)                                                </text>
@@ -1731,7 +1731,7 @@
 <text class="text fg" x="361.59999999999997" y="392">: Apple M4 Max                                                  </text>
 <text class="text bold f4" x="16" y="414.4">     ;KMMMMMMMWXXWMMMMMMMk.</text>
 <text class="text bold f3" x="332.8" y="414.4">Memory</text>
-<text class="text fg" x="390.4" y="414.4">: 6990MiB / 36864MiB                                         </text>
+<text class="text fg" x="390.4" y="414.4">: 6886MiB / 36864MiB                                         </text>
 <text class="text bold f4" x="16" y="436.79999999999995">       .cooc,.    .,coo:.</text>
 <text class="text f0" x="332.8" y="459.2">   </text>
 <text class="text f1" x="361.59999999999997" y="459.2">   </text>
@@ -1753,13 +1753,13 @@
 <text class="text fg" x="25.6" y="571.1999999999999"> Custom cur                                                                                        </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor" x="131.2" y="591.5999999999999" width="9.6" height="2" fill="#ff79c6"/>
+<rect class="cursor-active" x="131.2" y="593.9999999999999" width="9.6" height="2" fill="#ff79c6"/>
 </g>
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.537187;0.541295;1.000000"
-      dur="7.06s"
+      keyTimes="0.000000;0.535091;0.539345;1.000000"
+      dur="7.05s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -1767,7 +1767,7 @@
   </g>
 
   <g id="frame-25" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="1000" height="610" fill="#282a36" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="1000" height="618" fill="#282a36" rx="8" ry="8"/>
 <g class="chrome"><rect class="header-bg" x="0" y="0" width="1000" height="40" fill="#282a36" rx="8" ry="8"/>
 <rect x="0" y="32" width="1000" height="8" fill="#282a36"/>
 <circle cx="22" cy="20" r="6" fill="#ff5f56"/>
@@ -1811,7 +1811,7 @@
 <text class="text fg" x="390.4" y="168">: 25.2.0                                                     </text>
 <text class="text bold f2" x="16" y="190.39999999999998">   cKMMMMMMMMMMNWMMMMMMMMMM0:</text>
 <text class="text bold f3" x="332.8" y="190.39999999999998">Uptime</text>
-<text class="text fg" x="390.4" y="190.39999999999998">: 8 hours, 6 mins                                            </text>
+<text class="text fg" x="390.4" y="190.39999999999998">: 9 hours, 53 mins                                           </text>
 <text class="text bold f3" x="16" y="212.79999999999998"> .KMMMMMMMMMMMMMMMMMMMMMMMWd.</text>
 <text class="text bold f3" x="332.8" y="212.79999999999998">Packages</text>
 <text class="text fg" x="409.59999999999997" y="212.79999999999998">: 51 (brew)                                                </text>
@@ -1841,7 +1841,7 @@
 <text class="text fg" x="361.59999999999997" y="392">: Apple M4 Max                                                  </text>
 <text class="text bold f4" x="16" y="414.4">     ;KMMMMMMMWXXWMMMMMMMk.</text>
 <text class="text bold f3" x="332.8" y="414.4">Memory</text>
-<text class="text fg" x="390.4" y="414.4">: 6990MiB / 36864MiB                                         </text>
+<text class="text fg" x="390.4" y="414.4">: 6886MiB / 36864MiB                                         </text>
 <text class="text bold f4" x="16" y="436.79999999999995">       .cooc,.    .,coo:.</text>
 <text class="text f0" x="332.8" y="459.2">   </text>
 <text class="text f1" x="361.59999999999997" y="459.2">   </text>
@@ -1863,13 +1863,13 @@
 <text class="text fg" x="25.6" y="571.1999999999999"> Custom curs                                                                                       </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor" x="140.8" y="591.5999999999999" width="9.6" height="2" fill="#ff79c6"/>
+<rect class="cursor-active" x="140.8" y="593.9999999999999" width="9.6" height="2" fill="#ff79c6"/>
 </g>
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.541295;0.545545;1.000000"
-      dur="7.06s"
+      keyTimes="0.000000;0.539345;0.543740;1.000000"
+      dur="7.05s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -1877,7 +1877,7 @@
   </g>
 
   <g id="frame-26" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="1000" height="610" fill="#282a36" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="1000" height="618" fill="#282a36" rx="8" ry="8"/>
 <g class="chrome"><rect class="header-bg" x="0" y="0" width="1000" height="40" fill="#282a36" rx="8" ry="8"/>
 <rect x="0" y="32" width="1000" height="8" fill="#282a36"/>
 <circle cx="22" cy="20" r="6" fill="#ff5f56"/>
@@ -1921,7 +1921,7 @@
 <text class="text fg" x="390.4" y="168">: 25.2.0                                                     </text>
 <text class="text bold f2" x="16" y="190.39999999999998">   cKMMMMMMMMMMNWMMMMMMMMMM0:</text>
 <text class="text bold f3" x="332.8" y="190.39999999999998">Uptime</text>
-<text class="text fg" x="390.4" y="190.39999999999998">: 8 hours, 6 mins                                            </text>
+<text class="text fg" x="390.4" y="190.39999999999998">: 9 hours, 53 mins                                           </text>
 <text class="text bold f3" x="16" y="212.79999999999998"> .KMMMMMMMMMMMMMMMMMMMMMMMWd.</text>
 <text class="text bold f3" x="332.8" y="212.79999999999998">Packages</text>
 <text class="text fg" x="409.59999999999997" y="212.79999999999998">: 51 (brew)                                                </text>
@@ -1951,7 +1951,7 @@
 <text class="text fg" x="361.59999999999997" y="392">: Apple M4 Max                                                  </text>
 <text class="text bold f4" x="16" y="414.4">     ;KMMMMMMMWXXWMMMMMMMk.</text>
 <text class="text bold f3" x="332.8" y="414.4">Memory</text>
-<text class="text fg" x="390.4" y="414.4">: 6990MiB / 36864MiB                                         </text>
+<text class="text fg" x="390.4" y="414.4">: 6886MiB / 36864MiB                                         </text>
 <text class="text bold f4" x="16" y="436.79999999999995">       .cooc,.    .,coo:.</text>
 <text class="text f0" x="332.8" y="459.2">   </text>
 <text class="text f1" x="361.59999999999997" y="459.2">   </text>
@@ -1973,13 +1973,13 @@
 <text class="text fg" x="25.6" y="571.1999999999999"> Custom curso                                                                                      </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor" x="150.4" y="591.5999999999999" width="9.6" height="2" fill="#ff79c6"/>
+<rect class="cursor-active" x="150.4" y="593.9999999999999" width="9.6" height="2" fill="#ff79c6"/>
 </g>
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.545545;0.549795;1.000000"
-      dur="7.06s"
+      keyTimes="0.000000;0.543740;0.547994;1.000000"
+      dur="7.05s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -1987,7 +1987,7 @@
   </g>
 
   <g id="frame-27" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="1000" height="610" fill="#282a36" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="1000" height="618" fill="#282a36" rx="8" ry="8"/>
 <g class="chrome"><rect class="header-bg" x="0" y="0" width="1000" height="40" fill="#282a36" rx="8" ry="8"/>
 <rect x="0" y="32" width="1000" height="8" fill="#282a36"/>
 <circle cx="22" cy="20" r="6" fill="#ff5f56"/>
@@ -2031,7 +2031,7 @@
 <text class="text fg" x="390.4" y="168">: 25.2.0                                                     </text>
 <text class="text bold f2" x="16" y="190.39999999999998">   cKMMMMMMMMMMNWMMMMMMMMMM0:</text>
 <text class="text bold f3" x="332.8" y="190.39999999999998">Uptime</text>
-<text class="text fg" x="390.4" y="190.39999999999998">: 8 hours, 6 mins                                            </text>
+<text class="text fg" x="390.4" y="190.39999999999998">: 9 hours, 53 mins                                           </text>
 <text class="text bold f3" x="16" y="212.79999999999998"> .KMMMMMMMMMMMMMMMMMMMMMMMWd.</text>
 <text class="text bold f3" x="332.8" y="212.79999999999998">Packages</text>
 <text class="text fg" x="409.59999999999997" y="212.79999999999998">: 51 (brew)                                                </text>
@@ -2061,7 +2061,7 @@
 <text class="text fg" x="361.59999999999997" y="392">: Apple M4 Max                                                  </text>
 <text class="text bold f4" x="16" y="414.4">     ;KMMMMMMMWXXWMMMMMMMk.</text>
 <text class="text bold f3" x="332.8" y="414.4">Memory</text>
-<text class="text fg" x="390.4" y="414.4">: 6990MiB / 36864MiB                                         </text>
+<text class="text fg" x="390.4" y="414.4">: 6886MiB / 36864MiB                                         </text>
 <text class="text bold f4" x="16" y="436.79999999999995">       .cooc,.    .,coo:.</text>
 <text class="text f0" x="332.8" y="459.2">   </text>
 <text class="text f1" x="361.59999999999997" y="459.2">   </text>
@@ -2083,13 +2083,13 @@
 <text class="text fg" x="25.6" y="571.1999999999999"> Custom cursor                                                                                     </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor" x="160" y="591.5999999999999" width="9.6" height="2" fill="#ff79c6"/>
+<rect class="cursor-active" x="160" y="593.9999999999999" width="9.6" height="2" fill="#ff79c6"/>
 </g>
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.549795;0.554044;1.000000"
-      dur="7.06s"
+      keyTimes="0.000000;0.547994;0.552673;1.000000"
+      dur="7.05s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -2097,7 +2097,7 @@
   </g>
 
   <g id="frame-28" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="1000" height="610" fill="#282a36" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="1000" height="618" fill="#282a36" rx="8" ry="8"/>
 <g class="chrome"><rect class="header-bg" x="0" y="0" width="1000" height="40" fill="#282a36" rx="8" ry="8"/>
 <rect x="0" y="32" width="1000" height="8" fill="#282a36"/>
 <circle cx="22" cy="20" r="6" fill="#ff5f56"/>
@@ -2141,7 +2141,7 @@
 <text class="text fg" x="390.4" y="168">: 25.2.0                                                     </text>
 <text class="text bold f2" x="16" y="190.39999999999998">   cKMMMMMMMMMMNWMMMMMMMMMM0:</text>
 <text class="text bold f3" x="332.8" y="190.39999999999998">Uptime</text>
-<text class="text fg" x="390.4" y="190.39999999999998">: 8 hours, 6 mins                                            </text>
+<text class="text fg" x="390.4" y="190.39999999999998">: 9 hours, 53 mins                                           </text>
 <text class="text bold f3" x="16" y="212.79999999999998"> .KMMMMMMMMMMMMMMMMMMMMMMMWd.</text>
 <text class="text bold f3" x="332.8" y="212.79999999999998">Packages</text>
 <text class="text fg" x="409.59999999999997" y="212.79999999999998">: 51 (brew)                                                </text>
@@ -2171,7 +2171,7 @@
 <text class="text fg" x="361.59999999999997" y="392">: Apple M4 Max                                                  </text>
 <text class="text bold f4" x="16" y="414.4">     ;KMMMMMMMWXXWMMMMMMMk.</text>
 <text class="text bold f3" x="332.8" y="414.4">Memory</text>
-<text class="text fg" x="390.4" y="414.4">: 6990MiB / 36864MiB                                         </text>
+<text class="text fg" x="390.4" y="414.4">: 6886MiB / 36864MiB                                         </text>
 <text class="text bold f4" x="16" y="436.79999999999995">       .cooc,.    .,coo:.</text>
 <text class="text f0" x="332.8" y="459.2">   </text>
 <text class="text f1" x="361.59999999999997" y="459.2">   </text>
@@ -2193,13 +2193,13 @@
 <text class="text fg" x="25.6" y="571.1999999999999"> Custom cursor!                                                                                    </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor" x="169.6" y="591.5999999999999" width="9.6" height="2" fill="#ff79c6"/>
+<rect class="cursor-active" x="169.6" y="593.9999999999999" width="9.6" height="2" fill="#ff79c6"/>
 </g>
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.554044;0.628701;1.000000"
-      dur="7.06s"
+      keyTimes="0.000000;0.552673;0.627109;1.000000"
+      dur="7.05s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -2207,7 +2207,7 @@
   </g>
 
   <g id="frame-29" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="1000" height="610" fill="#282a36" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="1000" height="618" fill="#282a36" rx="8" ry="8"/>
 <g class="chrome"><rect class="header-bg" x="0" y="0" width="1000" height="40" fill="#282a36" rx="8" ry="8"/>
 <rect x="0" y="32" width="1000" height="8" fill="#282a36"/>
 <circle cx="22" cy="20" r="6" fill="#ff5f56"/>
@@ -2251,7 +2251,7 @@
 <text class="text fg" x="390.4" y="168">: 25.2.0                                                     </text>
 <text class="text bold f2" x="16" y="190.39999999999998">   cKMMMMMMMMMMNWMMMMMMMMMM0:</text>
 <text class="text bold f3" x="332.8" y="190.39999999999998">Uptime</text>
-<text class="text fg" x="390.4" y="190.39999999999998">: 8 hours, 6 mins                                            </text>
+<text class="text fg" x="390.4" y="190.39999999999998">: 9 hours, 53 mins                                           </text>
 <text class="text bold f3" x="16" y="212.79999999999998"> .KMMMMMMMMMMMMMMMMMMMMMMMWd.</text>
 <text class="text bold f3" x="332.8" y="212.79999999999998">Packages</text>
 <text class="text fg" x="409.59999999999997" y="212.79999999999998">: 51 (brew)                                                </text>
@@ -2281,7 +2281,7 @@
 <text class="text fg" x="361.59999999999997" y="392">: Apple M4 Max                                                  </text>
 <text class="text bold f4" x="16" y="414.4">     ;KMMMMMMMWXXWMMMMMMMk.</text>
 <text class="text bold f3" x="332.8" y="414.4">Memory</text>
-<text class="text fg" x="390.4" y="414.4">: 6990MiB / 36864MiB                                         </text>
+<text class="text fg" x="390.4" y="414.4">: 6886MiB / 36864MiB                                         </text>
 <text class="text bold f4" x="16" y="436.79999999999995">       .cooc,.    .,coo:.</text>
 <text class="text f0" x="332.8" y="459.2">   </text>
 <text class="text f1" x="361.59999999999997" y="459.2">   </text>
@@ -2303,13 +2303,13 @@
 <text class="text fg" x="25.6" y="571.1999999999999"> Custom cursor!                                                                                    </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor" x="169.6" y="591.5999999999999" width="9.6" height="2" fill="#ff79c6"/>
+<rect class="cursor" x="169.6" y="593.9999999999999" width="9.6" height="2" fill="#ff79c6"/>
 </g>
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.628701;0.643434;1.000000"
-      dur="7.06s"
+      keyTimes="0.000000;0.627109;0.641855;1.000000"
+      dur="7.05s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -2317,7 +2317,7 @@
   </g>
 
   <g id="frame-30" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="1000" height="610" fill="#282a36" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="1000" height="618" fill="#282a36" rx="8" ry="8"/>
 <g class="chrome"><rect class="header-bg" x="0" y="0" width="1000" height="40" fill="#282a36" rx="8" ry="8"/>
 <rect x="0" y="32" width="1000" height="8" fill="#282a36"/>
 <circle cx="22" cy="20" r="6" fill="#ff5f56"/>
@@ -2361,7 +2361,7 @@
 <text class="text fg" x="390.4" y="168">: 25.2.0                                                     </text>
 <text class="text bold f2" x="16" y="190.39999999999998">   cKMMMMMMMMMMNWMMMMMMMMMM0:</text>
 <text class="text bold f3" x="332.8" y="190.39999999999998">Uptime</text>
-<text class="text fg" x="390.4" y="190.39999999999998">: 8 hours, 6 mins                                            </text>
+<text class="text fg" x="390.4" y="190.39999999999998">: 9 hours, 53 mins                                           </text>
 <text class="text bold f3" x="16" y="212.79999999999998"> .KMMMMMMMMMMMMMMMMMMMMMMMWd.</text>
 <text class="text bold f3" x="332.8" y="212.79999999999998">Packages</text>
 <text class="text fg" x="409.59999999999997" y="212.79999999999998">: 51 (brew)                                                </text>
@@ -2391,7 +2391,7 @@
 <text class="text fg" x="361.59999999999997" y="392">: Apple M4 Max                                                  </text>
 <text class="text bold f4" x="16" y="414.4">     ;KMMMMMMMWXXWMMMMMMMk.</text>
 <text class="text bold f3" x="332.8" y="414.4">Memory</text>
-<text class="text fg" x="390.4" y="414.4">: 6990MiB / 36864MiB                                         </text>
+<text class="text fg" x="390.4" y="414.4">: 6886MiB / 36864MiB                                         </text>
 <text class="text bold f4" x="16" y="436.79999999999995">       .cooc,.    .,coo:.</text>
 <text class="text f0" x="332.8" y="459.2">   </text>
 <text class="text f1" x="361.59999999999997" y="459.2">   </text>
@@ -2413,13 +2413,13 @@
 <text class="text fg" x="25.6" y="571.1999999999999"> Custom cursor!                                                                                    </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor" x="169.6" y="591.5999999999999" width="9.6" height="2" fill="#ff79c6"/>
+<rect class="cursor-active" x="160" y="593.9999999999999" width="9.6" height="2" fill="#ff79c6"/>
 </g>
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.643434;0.658025;1.000000"
-      dur="7.06s"
+      keyTimes="0.000000;0.641855;0.656316;1.000000"
+      dur="7.05s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -2427,7 +2427,7 @@
   </g>
 
   <g id="frame-31" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="1000" height="610" fill="#282a36" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="1000" height="618" fill="#282a36" rx="8" ry="8"/>
 <g class="chrome"><rect class="header-bg" x="0" y="0" width="1000" height="40" fill="#282a36" rx="8" ry="8"/>
 <rect x="0" y="32" width="1000" height="8" fill="#282a36"/>
 <circle cx="22" cy="20" r="6" fill="#ff5f56"/>
@@ -2471,7 +2471,7 @@
 <text class="text fg" x="390.4" y="168">: 25.2.0                                                     </text>
 <text class="text bold f2" x="16" y="190.39999999999998">   cKMMMMMMMMMMNWMMMMMMMMMM0:</text>
 <text class="text bold f3" x="332.8" y="190.39999999999998">Uptime</text>
-<text class="text fg" x="390.4" y="190.39999999999998">: 8 hours, 6 mins                                            </text>
+<text class="text fg" x="390.4" y="190.39999999999998">: 9 hours, 53 mins                                           </text>
 <text class="text bold f3" x="16" y="212.79999999999998"> .KMMMMMMMMMMMMMMMMMMMMMMMWd.</text>
 <text class="text bold f3" x="332.8" y="212.79999999999998">Packages</text>
 <text class="text fg" x="409.59999999999997" y="212.79999999999998">: 51 (brew)                                                </text>
@@ -2501,7 +2501,7 @@
 <text class="text fg" x="361.59999999999997" y="392">: Apple M4 Max                                                  </text>
 <text class="text bold f4" x="16" y="414.4">     ;KMMMMMMMWXXWMMMMMMMk.</text>
 <text class="text bold f3" x="332.8" y="414.4">Memory</text>
-<text class="text fg" x="390.4" y="414.4">: 6990MiB / 36864MiB                                         </text>
+<text class="text fg" x="390.4" y="414.4">: 6886MiB / 36864MiB                                         </text>
 <text class="text bold f4" x="16" y="436.79999999999995">       .cooc,.    .,coo:.</text>
 <text class="text f0" x="332.8" y="459.2">   </text>
 <text class="text f1" x="361.59999999999997" y="459.2">   </text>
@@ -2523,13 +2523,13 @@
 <text class="text fg" x="25.6" y="571.1999999999999"> Custom cursor!                                                                                    </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor" x="169.6" y="591.5999999999999" width="9.6" height="2" fill="#ff79c6"/>
+<rect class="cursor-active" x="150.4" y="593.9999999999999" width="9.6" height="2" fill="#ff79c6"/>
 </g>
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.658025;0.672333;1.000000"
-      dur="7.06s"
+      keyTimes="0.000000;0.656316;0.670920;1.000000"
+      dur="7.05s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -2537,7 +2537,7 @@
   </g>
 
   <g id="frame-32" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="1000" height="610" fill="#282a36" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="1000" height="618" fill="#282a36" rx="8" ry="8"/>
 <g class="chrome"><rect class="header-bg" x="0" y="0" width="1000" height="40" fill="#282a36" rx="8" ry="8"/>
 <rect x="0" y="32" width="1000" height="8" fill="#282a36"/>
 <circle cx="22" cy="20" r="6" fill="#ff5f56"/>
@@ -2581,7 +2581,7 @@
 <text class="text fg" x="390.4" y="168">: 25.2.0                                                     </text>
 <text class="text bold f2" x="16" y="190.39999999999998">   cKMMMMMMMMMMNWMMMMMMMMMM0:</text>
 <text class="text bold f3" x="332.8" y="190.39999999999998">Uptime</text>
-<text class="text fg" x="390.4" y="190.39999999999998">: 8 hours, 6 mins                                            </text>
+<text class="text fg" x="390.4" y="190.39999999999998">: 9 hours, 53 mins                                           </text>
 <text class="text bold f3" x="16" y="212.79999999999998"> .KMMMMMMMMMMMMMMMMMMMMMMMWd.</text>
 <text class="text bold f3" x="332.8" y="212.79999999999998">Packages</text>
 <text class="text fg" x="409.59999999999997" y="212.79999999999998">: 51 (brew)                                                </text>
@@ -2611,7 +2611,7 @@
 <text class="text fg" x="361.59999999999997" y="392">: Apple M4 Max                                                  </text>
 <text class="text bold f4" x="16" y="414.4">     ;KMMMMMMMWXXWMMMMMMMk.</text>
 <text class="text bold f3" x="332.8" y="414.4">Memory</text>
-<text class="text fg" x="390.4" y="414.4">: 6990MiB / 36864MiB                                         </text>
+<text class="text fg" x="390.4" y="414.4">: 6886MiB / 36864MiB                                         </text>
 <text class="text bold f4" x="16" y="436.79999999999995">       .cooc,.    .,coo:.</text>
 <text class="text f0" x="332.8" y="459.2">   </text>
 <text class="text f1" x="361.59999999999997" y="459.2">   </text>
@@ -2633,13 +2633,13 @@
 <text class="text fg" x="25.6" y="571.1999999999999"> Custom cursor!                                                                                    </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor" x="169.6" y="591.5999999999999" width="9.6" height="2" fill="#ff79c6"/>
+<rect class="cursor-active" x="140.8" y="593.9999999999999" width="9.6" height="2" fill="#ff79c6"/>
 </g>
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.672333;0.686075;1.000000"
-      dur="7.06s"
+      keyTimes="0.000000;0.670920;0.684815;1.000000"
+      dur="7.05s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -2647,7 +2647,7 @@
   </g>
 
   <g id="frame-33" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="1000" height="610" fill="#282a36" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="1000" height="618" fill="#282a36" rx="8" ry="8"/>
 <g class="chrome"><rect class="header-bg" x="0" y="0" width="1000" height="40" fill="#282a36" rx="8" ry="8"/>
 <rect x="0" y="32" width="1000" height="8" fill="#282a36"/>
 <circle cx="22" cy="20" r="6" fill="#ff5f56"/>
@@ -2691,7 +2691,7 @@
 <text class="text fg" x="390.4" y="168">: 25.2.0                                                     </text>
 <text class="text bold f2" x="16" y="190.39999999999998">   cKMMMMMMMMMMNWMMMMMMMMMM0:</text>
 <text class="text bold f3" x="332.8" y="190.39999999999998">Uptime</text>
-<text class="text fg" x="390.4" y="190.39999999999998">: 8 hours, 6 mins                                            </text>
+<text class="text fg" x="390.4" y="190.39999999999998">: 9 hours, 53 mins                                           </text>
 <text class="text bold f3" x="16" y="212.79999999999998"> .KMMMMMMMMMMMMMMMMMMMMMMMWd.</text>
 <text class="text bold f3" x="332.8" y="212.79999999999998">Packages</text>
 <text class="text fg" x="409.59999999999997" y="212.79999999999998">: 51 (brew)                                                </text>
@@ -2721,7 +2721,7 @@
 <text class="text fg" x="361.59999999999997" y="392">: Apple M4 Max                                                  </text>
 <text class="text bold f4" x="16" y="414.4">     ;KMMMMMMMWXXWMMMMMMMk.</text>
 <text class="text bold f3" x="332.8" y="414.4">Memory</text>
-<text class="text fg" x="390.4" y="414.4">: 6990MiB / 36864MiB                                         </text>
+<text class="text fg" x="390.4" y="414.4">: 6886MiB / 36864MiB                                         </text>
 <text class="text bold f4" x="16" y="436.79999999999995">       .cooc,.    .,coo:.</text>
 <text class="text f0" x="332.8" y="459.2">   </text>
 <text class="text f1" x="361.59999999999997" y="459.2">   </text>
@@ -2743,13 +2743,13 @@
 <text class="text fg" x="25.6" y="571.1999999999999"> Custom cursor!                                                                                    </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor" x="169.6" y="591.5999999999999" width="9.6" height="2" fill="#ff79c6"/>
+<rect class="cursor-active" x="131.2" y="593.9999999999999" width="9.6" height="2" fill="#ff79c6"/>
 </g>
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.686075;0.700241;1.000000"
-      dur="7.06s"
+      keyTimes="0.000000;0.684815;0.699277;1.000000"
+      dur="7.05s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -2757,7 +2757,7 @@
   </g>
 
   <g id="frame-34" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="1000" height="610" fill="#282a36" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="1000" height="618" fill="#282a36" rx="8" ry="8"/>
 <g class="chrome"><rect class="header-bg" x="0" y="0" width="1000" height="40" fill="#282a36" rx="8" ry="8"/>
 <rect x="0" y="32" width="1000" height="8" fill="#282a36"/>
 <circle cx="22" cy="20" r="6" fill="#ff5f56"/>
@@ -2801,7 +2801,7 @@
 <text class="text fg" x="390.4" y="168">: 25.2.0                                                     </text>
 <text class="text bold f2" x="16" y="190.39999999999998">   cKMMMMMMMMMMNWMMMMMMMMMM0:</text>
 <text class="text bold f3" x="332.8" y="190.39999999999998">Uptime</text>
-<text class="text fg" x="390.4" y="190.39999999999998">: 8 hours, 6 mins                                            </text>
+<text class="text fg" x="390.4" y="190.39999999999998">: 9 hours, 53 mins                                           </text>
 <text class="text bold f3" x="16" y="212.79999999999998"> .KMMMMMMMMMMMMMMMMMMMMMMMWd.</text>
 <text class="text bold f3" x="332.8" y="212.79999999999998">Packages</text>
 <text class="text fg" x="409.59999999999997" y="212.79999999999998">: 51 (brew)                                                </text>
@@ -2831,7 +2831,7 @@
 <text class="text fg" x="361.59999999999997" y="392">: Apple M4 Max                                                  </text>
 <text class="text bold f4" x="16" y="414.4">     ;KMMMMMMMWXXWMMMMMMMk.</text>
 <text class="text bold f3" x="332.8" y="414.4">Memory</text>
-<text class="text fg" x="390.4" y="414.4">: 6990MiB / 36864MiB                                         </text>
+<text class="text fg" x="390.4" y="414.4">: 6886MiB / 36864MiB                                         </text>
 <text class="text bold f4" x="16" y="436.79999999999995">       .cooc,.    .,coo:.</text>
 <text class="text f0" x="332.8" y="459.2">   </text>
 <text class="text f1" x="361.59999999999997" y="459.2">   </text>
@@ -2853,13 +2853,13 @@
 <text class="text fg" x="25.6" y="571.1999999999999"> Custom cursor!                                                                                    </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor" x="169.6" y="591.5999999999999" width="9.6" height="2" fill="#ff79c6"/>
+<rect class="cursor-active" x="121.6" y="593.9999999999999" width="9.6" height="2" fill="#ff79c6"/>
 </g>
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.700241;0.851254;1.000000"
-      dur="7.06s"
+      keyTimes="0.000000;0.699277;0.851553;1.000000"
+      dur="7.05s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -2867,7 +2867,7 @@
   </g>
 
   <g id="frame-35" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="1000" height="610" fill="#282a36" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="1000" height="618" fill="#282a36" rx="8" ry="8"/>
 <g class="chrome"><rect class="header-bg" x="0" y="0" width="1000" height="40" fill="#282a36" rx="8" ry="8"/>
 <rect x="0" y="32" width="1000" height="8" fill="#282a36"/>
 <circle cx="22" cy="20" r="6" fill="#ff5f56"/>
@@ -2911,7 +2911,7 @@
 <text class="text fg" x="390.4" y="168">: 25.2.0                                                     </text>
 <text class="text bold f2" x="16" y="190.39999999999998">   cKMMMMMMMMMMNWMMMMMMMMMM0:</text>
 <text class="text bold f3" x="332.8" y="190.39999999999998">Uptime</text>
-<text class="text fg" x="390.4" y="190.39999999999998">: 8 hours, 6 mins                                            </text>
+<text class="text fg" x="390.4" y="190.39999999999998">: 9 hours, 53 mins                                           </text>
 <text class="text bold f3" x="16" y="212.79999999999998"> .KMMMMMMMMMMMMMMMMMMMMMMMWd.</text>
 <text class="text bold f3" x="332.8" y="212.79999999999998">Packages</text>
 <text class="text fg" x="409.59999999999997" y="212.79999999999998">: 51 (brew)                                                </text>
@@ -2941,7 +2941,7 @@
 <text class="text fg" x="361.59999999999997" y="392">: Apple M4 Max                                                  </text>
 <text class="text bold f4" x="16" y="414.4">     ;KMMMMMMMWXXWMMMMMMMk.</text>
 <text class="text bold f3" x="332.8" y="414.4">Memory</text>
-<text class="text fg" x="390.4" y="414.4">: 6990MiB / 36864MiB                                         </text>
+<text class="text fg" x="390.4" y="414.4">: 6886MiB / 36864MiB                                         </text>
 <text class="text bold f4" x="16" y="436.79999999999995">       .cooc,.    .,coo:.</text>
 <text class="text f0" x="332.8" y="459.2">   </text>
 <text class="text f1" x="361.59999999999997" y="459.2">   </text>
@@ -2963,13 +2963,13 @@
 <text class="text fg" x="25.6" y="571.1999999999999"> Custom cursor!                                                                                    </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor" x="169.6" y="591.5999999999999" width="9.6" height="2" fill="#ff79c6"/>
+<rect class="cursor" x="121.6" y="593.9999999999999" width="9.6" height="2" fill="#ff79c6"/>
 </g>
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.851254;0.858337;1.000000"
-      dur="7.06s"
+      keyTimes="0.000000;0.851553;0.858216;1.000000"
+      dur="7.05s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"
@@ -2977,7 +2977,7 @@
   </g>
 
   <g id="frame-36" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="1000" height="610" fill="#282a36" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="1000" height="618" fill="#282a36" rx="8" ry="8"/>
 <g class="chrome"><rect class="header-bg" x="0" y="0" width="1000" height="40" fill="#282a36" rx="8" ry="8"/>
 <rect x="0" y="32" width="1000" height="8" fill="#282a36"/>
 <circle cx="22" cy="20" r="6" fill="#ff5f56"/>
@@ -3021,7 +3021,7 @@
 <text class="text fg" x="390.4" y="168">: 25.2.0                                                     </text>
 <text class="text bold f2" x="16" y="190.39999999999998">   cKMMMMMMMMMMNWMMMMMMMMMM0:</text>
 <text class="text bold f3" x="332.8" y="190.39999999999998">Uptime</text>
-<text class="text fg" x="390.4" y="190.39999999999998">: 8 hours, 6 mins                                            </text>
+<text class="text fg" x="390.4" y="190.39999999999998">: 9 hours, 53 mins                                           </text>
 <text class="text bold f3" x="16" y="212.79999999999998"> .KMMMMMMMMMMMMMMMMMMMMMMMWd.</text>
 <text class="text bold f3" x="332.8" y="212.79999999999998">Packages</text>
 <text class="text fg" x="409.59999999999997" y="212.79999999999998">: 51 (brew)                                                </text>
@@ -3051,7 +3051,7 @@
 <text class="text fg" x="361.59999999999997" y="392">: Apple M4 Max                                                  </text>
 <text class="text bold f4" x="16" y="414.4">     ;KMMMMMMMWXXWMMMMMMMk.</text>
 <text class="text bold f3" x="332.8" y="414.4">Memory</text>
-<text class="text fg" x="390.4" y="414.4">: 6990MiB / 36864MiB                                         </text>
+<text class="text fg" x="390.4" y="414.4">: 6886MiB / 36864MiB                                         </text>
 <text class="text bold f4" x="16" y="436.79999999999995">       .cooc,.    .,coo:.</text>
 <text class="text f0" x="332.8" y="459.2">   </text>
 <text class="text f1" x="361.59999999999997" y="459.2">   </text>
@@ -3073,13 +3073,13 @@
 <text class="text fg" x="25.6" y="571.1999999999999"> Custom cursor!                                                                                    </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor" x="169.6" y="591.5999999999999" width="9.6" height="2" fill="#ff79c6"/>
+<rect class="cursor" x="121.6" y="593.9999999999999" width="9.6" height="2" fill="#ff79c6"/>
 </g>
     <animate
       attributeName="visibility"
       values="hidden;visible;visible"
-      keyTimes="0.000000;0.858337;1.000000"
-      dur="7.06s"
+      keyTimes="0.000000;0.858216;1.000000"
+      dur="7.05s"
       repeatCount="indefinite"
       calcMode="discrete"
       fill="freeze"

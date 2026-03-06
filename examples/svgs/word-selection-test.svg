@@ -1,5 +1,5 @@
-<svg width="330" height="100" xmlns="http://www.w3.org/2000/svg">
-  <defs><clipPath id="rounded-corners"><rect x="0" y="0" width="330" height="100" rx="8" ry="8"/></clipPath></defs>
+<svg width="330" height="108" xmlns="http://www.w3.org/2000/svg">
+  <defs><clipPath id="rounded-corners"><rect x="0" y="0" width="330" height="108" rx="8" ry="8"/></clipPath></defs>
   <style>
     
 .text {
@@ -64,17 +64,17 @@
   <!-- Animated frames with discrete visibility transitions -->
   
   <g id="frame-0" visibility="visible">
-    <rect class="window-bg" x="0" y="0" width="330" height="100" fill="#1e1e1e" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="330" height="108" fill="#1e1e1e" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f3" x="16" y="16">&gt;</text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor" x="35.2" y="16" width="9.6" height="22.4" fill="#c9d1d9"/>
+<rect class="cursor" x="35.2" y="18.4" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
     <animate
       attributeName="visibility"
       values="visible;hidden;hidden"
-      keyTimes="0.000000;0.007787;1.000000"
+      keyTimes="0.000000;0.007652;1.000000"
       dur="7.06s"
       repeatCount="indefinite"
       calcMode="discrete"
@@ -83,18 +83,18 @@
   </g>
 
   <g id="frame-1" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="330" height="100" fill="#1e1e1e" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="330" height="108" fill="#1e1e1e" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f3" x="16" y="16">&gt;</text>
 <text class="text fg" x="25.6" y="16"> s                                                                             </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor" x="44.8" y="16" width="9.6" height="22.4" fill="#c9d1d9"/>
+<rect class="cursor-active" x="44.8" y="18.4" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.007787;0.015008;1.000000"
+      keyTimes="0.000000;0.007652;0.014737;1.000000"
       dur="7.06s"
       repeatCount="indefinite"
       calcMode="discrete"
@@ -103,18 +103,18 @@
   </g>
 
   <g id="frame-2" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="330" height="100" fill="#1e1e1e" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="330" height="108" fill="#1e1e1e" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f3" x="16" y="16">&gt;</text>
 <text class="text fg" x="25.6" y="16"> se                                                                            </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor" x="54.4" y="16" width="9.6" height="22.4" fill="#c9d1d9"/>
+<rect class="cursor-active" x="54.4" y="18.4" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.015008;0.022229;1.000000"
+      keyTimes="0.000000;0.014737;0.021964;1.000000"
       dur="7.06s"
       repeatCount="indefinite"
       calcMode="discrete"
@@ -123,18 +123,18 @@
   </g>
 
   <g id="frame-3" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="330" height="100" fill="#1e1e1e" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="330" height="108" fill="#1e1e1e" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f3" x="16" y="16">&gt;</text>
 <text class="text fg" x="25.6" y="16"> sel                                                                           </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor" x="64" y="16" width="9.6" height="22.4" fill="#c9d1d9"/>
+<rect class="cursor-active" x="64" y="18.4" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.022229;0.029449;1.000000"
+      keyTimes="0.000000;0.021964;0.029333;1.000000"
       dur="7.06s"
       repeatCount="indefinite"
       calcMode="discrete"
@@ -143,18 +143,18 @@
   </g>
 
   <g id="frame-4" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="330" height="100" fill="#1e1e1e" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="330" height="108" fill="#1e1e1e" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f3" x="16" y="16">&gt;</text>
 <text class="text fg" x="25.6" y="16"> sele                                                                          </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor" x="73.6" y="16" width="9.6" height="22.4" fill="#c9d1d9"/>
+<rect class="cursor-active" x="73.6" y="18.4" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.029449;0.036528;1.000000"
+      keyTimes="0.000000;0.029333;0.036559;1.000000"
       dur="7.06s"
       repeatCount="indefinite"
       calcMode="discrete"
@@ -163,18 +163,18 @@
   </g>
 
   <g id="frame-5" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="330" height="100" fill="#1e1e1e" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="330" height="108" fill="#1e1e1e" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f3" x="16" y="16">&gt;</text>
 <text class="text fg" x="25.6" y="16"> selec                                                                         </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor" x="83.2" y="16" width="9.6" height="22.4" fill="#c9d1d9"/>
+<rect class="cursor-active" x="83.2" y="18.4" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.036528;0.043749;1.000000"
+      keyTimes="0.000000;0.036559;0.043928;1.000000"
       dur="7.06s"
       repeatCount="indefinite"
       calcMode="discrete"
@@ -183,18 +183,18 @@
   </g>
 
   <g id="frame-6" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="330" height="100" fill="#1e1e1e" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="330" height="108" fill="#1e1e1e" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f3" x="16" y="16">&gt;</text>
 <text class="text fg" x="25.6" y="16"> select                                                                        </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor" x="92.8" y="16" width="9.6" height="22.4" fill="#c9d1d9"/>
+<rect class="cursor-active" x="92.8" y="18.4" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.043749;0.050970;1.000000"
+      keyTimes="0.000000;0.043928;0.051013;1.000000"
       dur="7.06s"
       repeatCount="indefinite"
       calcMode="discrete"
@@ -203,18 +203,18 @@
   </g>
 
   <g id="frame-7" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="330" height="100" fill="#1e1e1e" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="330" height="108" fill="#1e1e1e" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f3" x="16" y="16">&gt;</text>
 <text class="text fg" x="25.6" y="16"> select                                                                        </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor" x="102.39999999999999" y="16" width="9.6" height="22.4" fill="#c9d1d9"/>
+<rect class="cursor-active" x="102.39999999999999" y="18.4" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.050970;0.058191;1.000000"
+      keyTimes="0.000000;0.051013;0.058240;1.000000"
       dur="7.06s"
       repeatCount="indefinite"
       calcMode="discrete"
@@ -223,18 +223,18 @@
   </g>
 
   <g id="frame-8" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="330" height="100" fill="#1e1e1e" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="330" height="108" fill="#1e1e1e" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f3" x="16" y="16">&gt;</text>
 <text class="text fg" x="25.6" y="16"> select t                                                                      </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor" x="112" y="16" width="9.6" height="22.4" fill="#c9d1d9"/>
+<rect class="cursor-active" x="112" y="18.4" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.058191;0.065411;1.000000"
+      keyTimes="0.000000;0.058240;0.065750;1.000000"
       dur="7.06s"
       repeatCount="indefinite"
       calcMode="discrete"
@@ -243,18 +243,18 @@
   </g>
 
   <g id="frame-9" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="330" height="100" fill="#1e1e1e" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="330" height="108" fill="#1e1e1e" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f3" x="16" y="16">&gt;</text>
 <text class="text fg" x="25.6" y="16"> select th                                                                     </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor" x="121.6" y="16" width="9.6" height="22.4" fill="#c9d1d9"/>
+<rect class="cursor-active" x="121.6" y="18.4" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.065411;0.072774;1.000000"
+      keyTimes="0.000000;0.065750;0.072835;1.000000"
       dur="7.06s"
       repeatCount="indefinite"
       calcMode="discrete"
@@ -263,18 +263,18 @@
   </g>
 
   <g id="frame-10" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="330" height="100" fill="#1e1e1e" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="330" height="108" fill="#1e1e1e" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f3" x="16" y="16">&gt;</text>
 <text class="text fg" x="25.6" y="16"> select the                                                                    </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor" x="131.2" y="16" width="9.6" height="22.4" fill="#c9d1d9"/>
+<rect class="cursor-active" x="131.2" y="18.4" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.072774;0.079853;1.000000"
+      keyTimes="0.000000;0.072835;0.080062;1.000000"
       dur="7.06s"
       repeatCount="indefinite"
       calcMode="discrete"
@@ -283,18 +283,18 @@
   </g>
 
   <g id="frame-11" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="330" height="100" fill="#1e1e1e" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="330" height="108" fill="#1e1e1e" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f3" x="16" y="16">&gt;</text>
 <text class="text fg" x="25.6" y="16"> select thes                                                                   </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor" x="140.8" y="16" width="9.6" height="22.4" fill="#c9d1d9"/>
+<rect class="cursor-active" x="140.8" y="18.4" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.079853;0.087215;1.000000"
+      keyTimes="0.000000;0.080062;0.087148;1.000000"
       dur="7.06s"
       repeatCount="indefinite"
       calcMode="discrete"
@@ -303,18 +303,18 @@
   </g>
 
   <g id="frame-12" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="330" height="100" fill="#1e1e1e" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="330" height="108" fill="#1e1e1e" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f3" x="16" y="16">&gt;</text>
 <text class="text fg" x="25.6" y="16"> select these                                                                  </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor" x="150.4" y="16" width="9.6" height="22.4" fill="#c9d1d9"/>
+<rect class="cursor-active" x="150.4" y="18.4" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.087215;0.094577;1.000000"
+      keyTimes="0.000000;0.087148;0.094233;1.000000"
       dur="7.06s"
       repeatCount="indefinite"
       calcMode="discrete"
@@ -323,18 +323,18 @@
   </g>
 
   <g id="frame-13" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="330" height="100" fill="#1e1e1e" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="330" height="108" fill="#1e1e1e" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f3" x="16" y="16">&gt;</text>
 <text class="text fg" x="25.6" y="16"> select these                                                                  </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor" x="160" y="16" width="9.6" height="22.4" fill="#c9d1d9"/>
+<rect class="cursor-active" x="160" y="18.4" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.094577;0.101657;1.000000"
+      keyTimes="0.000000;0.094233;0.101743;1.000000"
       dur="7.06s"
       repeatCount="indefinite"
       calcMode="discrete"
@@ -343,18 +343,18 @@
   </g>
 
   <g id="frame-14" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="330" height="100" fill="#1e1e1e" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="330" height="108" fill="#1e1e1e" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f3" x="16" y="16">&gt;</text>
 <text class="text fg" x="25.6" y="16"> select these w                                                                </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor" x="169.6" y="16" width="9.6" height="22.4" fill="#c9d1d9"/>
+<rect class="cursor-active" x="169.6" y="18.4" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.101657;0.108877;1.000000"
+      keyTimes="0.000000;0.101743;0.109253;1.000000"
       dur="7.06s"
       repeatCount="indefinite"
       calcMode="discrete"
@@ -363,18 +363,18 @@
   </g>
 
   <g id="frame-15" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="330" height="100" fill="#1e1e1e" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="330" height="108" fill="#1e1e1e" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f3" x="16" y="16">&gt;</text>
 <text class="text fg" x="25.6" y="16"> select these wo                                                               </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor" x="179.2" y="16" width="9.6" height="22.4" fill="#c9d1d9"/>
+<rect class="cursor-active" x="179.2" y="18.4" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.108877;0.116240;1.000000"
+      keyTimes="0.000000;0.109253;0.116055;1.000000"
       dur="7.06s"
       repeatCount="indefinite"
       calcMode="discrete"
@@ -383,18 +383,18 @@
   </g>
 
   <g id="frame-16" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="330" height="100" fill="#1e1e1e" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="330" height="108" fill="#1e1e1e" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f3" x="16" y="16">&gt;</text>
 <text class="text fg" x="25.6" y="16"> select these wor                                                              </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor" x="188.79999999999998" y="16" width="9.6" height="22.4" fill="#c9d1d9"/>
+<rect class="cursor-active" x="188.79999999999998" y="18.4" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.116240;0.123602;1.000000"
+      keyTimes="0.000000;0.116055;0.123282;1.000000"
       dur="7.06s"
       repeatCount="indefinite"
       calcMode="discrete"
@@ -403,18 +403,18 @@
   </g>
 
   <g id="frame-17" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="330" height="100" fill="#1e1e1e" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="330" height="108" fill="#1e1e1e" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f3" x="16" y="16">&gt;</text>
 <text class="text fg" x="25.6" y="16"> select these word                                                             </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor" x="198.4" y="16" width="9.6" height="22.4" fill="#c9d1d9"/>
+<rect class="cursor-active" x="198.4" y="18.4" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.123602;0.130823;1.000000"
+      keyTimes="0.000000;0.123282;0.130934;1.000000"
       dur="7.06s"
       repeatCount="indefinite"
       calcMode="discrete"
@@ -423,18 +423,18 @@
   </g>
 
   <g id="frame-18" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="330" height="100" fill="#1e1e1e" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="330" height="108" fill="#1e1e1e" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f3" x="16" y="16">&gt;</text>
 <text class="text fg" x="25.6" y="16"> select these words                                                            </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor" x="208" y="16" width="9.6" height="22.4" fill="#c9d1d9"/>
+<rect class="cursor-active" x="208" y="18.4" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.130823;0.138043;1.000000"
+      keyTimes="0.000000;0.130934;0.137877;1.000000"
       dur="7.06s"
       repeatCount="indefinite"
       calcMode="discrete"
@@ -443,18 +443,18 @@
   </g>
 
   <g id="frame-19" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="330" height="100" fill="#1e1e1e" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="330" height="108" fill="#1e1e1e" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f3" x="16" y="16">&gt;</text>
 <text class="text fg" x="25.6" y="16"> select these words                                                            </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor" x="217.6" y="16" width="9.6" height="22.4" fill="#c9d1d9"/>
+<rect class="cursor-active" x="217.6" y="18.4" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.138043;0.145264;1.000000"
+      keyTimes="0.000000;0.137877;0.145388;1.000000"
       dur="7.06s"
       repeatCount="indefinite"
       calcMode="discrete"
@@ -463,18 +463,18 @@
   </g>
 
   <g id="frame-20" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="330" height="100" fill="#1e1e1e" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="330" height="108" fill="#1e1e1e" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f3" x="16" y="16">&gt;</text>
 <text class="text fg" x="25.6" y="16"> select these words c                                                          </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor" x="227.2" y="16" width="9.6" height="22.4" fill="#c9d1d9"/>
+<rect class="cursor-active" x="227.2" y="18.4" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.145264;0.152485;1.000000"
+      keyTimes="0.000000;0.145388;0.152473;1.000000"
       dur="7.06s"
       repeatCount="indefinite"
       calcMode="discrete"
@@ -483,18 +483,18 @@
   </g>
 
   <g id="frame-21" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="330" height="100" fill="#1e1e1e" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="330" height="108" fill="#1e1e1e" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f3" x="16" y="16">&gt;</text>
 <text class="text fg" x="25.6" y="16"> select these words ca                                                         </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor" x="236.79999999999998" y="16" width="9.6" height="22.4" fill="#c9d1d9"/>
+<rect class="cursor-active" x="236.79999999999998" y="18.4" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.152485;0.159706;1.000000"
+      keyTimes="0.000000;0.152473;0.159416;1.000000"
       dur="7.06s"
       repeatCount="indefinite"
       calcMode="discrete"
@@ -503,18 +503,18 @@
   </g>
 
   <g id="frame-22" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="330" height="100" fill="#1e1e1e" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="330" height="108" fill="#1e1e1e" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f3" x="16" y="16">&gt;</text>
 <text class="text fg" x="25.6" y="16"> select these words car                                                        </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor" x="246.39999999999998" y="16" width="9.6" height="22.4" fill="#c9d1d9"/>
+<rect class="cursor-active" x="246.39999999999998" y="18.4" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.159706;0.166785;1.000000"
+      keyTimes="0.000000;0.159416;0.166643;1.000000"
       dur="7.06s"
       repeatCount="indefinite"
       calcMode="discrete"
@@ -523,18 +523,18 @@
   </g>
 
   <g id="frame-23" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="330" height="100" fill="#1e1e1e" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="330" height="108" fill="#1e1e1e" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f3" x="16" y="16">&gt;</text>
 <text class="text fg" x="25.6" y="16"> select these words care                                                       </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor" x="256" y="16" width="9.6" height="22.4" fill="#c9d1d9"/>
+<rect class="cursor-active" x="256" y="18.4" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.166785;0.173864;1.000000"
+      keyTimes="0.000000;0.166643;0.174153;1.000000"
       dur="7.06s"
       repeatCount="indefinite"
       calcMode="discrete"
@@ -543,18 +543,18 @@
   </g>
 
   <g id="frame-24" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="330" height="100" fill="#1e1e1e" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="330" height="108" fill="#1e1e1e" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f3" x="16" y="16">&gt;</text>
 <text class="text fg" x="25.6" y="16"> select these words caref                                                      </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor" x="265.6" y="16" width="9.6" height="22.4" fill="#c9d1d9"/>
+<rect class="cursor-active" x="265.6" y="18.4" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.173864;0.181085;1.000000"
+      keyTimes="0.000000;0.174153;0.181664;1.000000"
       dur="7.06s"
       repeatCount="indefinite"
       calcMode="discrete"
@@ -563,18 +563,18 @@
   </g>
 
   <g id="frame-25" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="330" height="100" fill="#1e1e1e" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="330" height="108" fill="#1e1e1e" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f3" x="16" y="16">&gt;</text>
 <text class="text fg" x="25.6" y="16"> select these words carefu                                                     </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor" x="275.2" y="16" width="9.6" height="22.4" fill="#c9d1d9"/>
+<rect class="cursor-active" x="275.2" y="18.4" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.181085;0.188447;1.000000"
+      keyTimes="0.000000;0.181664;0.188607;1.000000"
       dur="7.06s"
       repeatCount="indefinite"
       calcMode="discrete"
@@ -583,18 +583,18 @@
   </g>
 
   <g id="frame-26" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="330" height="100" fill="#1e1e1e" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="330" height="108" fill="#1e1e1e" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f3" x="16" y="16">&gt;</text>
 <text class="text fg" x="25.6" y="16"> select these words careful                                                    </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor" x="284.8" y="16" width="9.6" height="22.4" fill="#c9d1d9"/>
+<rect class="cursor-active" x="284.8" y="18.4" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.188447;0.195668;1.000000"
+      keyTimes="0.000000;0.188607;0.196259;1.000000"
       dur="7.06s"
       repeatCount="indefinite"
       calcMode="discrete"
@@ -603,18 +603,18 @@
   </g>
 
   <g id="frame-27" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="330" height="100" fill="#1e1e1e" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="330" height="108" fill="#1e1e1e" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f3" x="16" y="16">&gt;</text>
 <text class="text fg" x="25.6" y="16"> select these words carefull                                                   </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor" x="294.4" y="16" width="9.6" height="22.4" fill="#c9d1d9"/>
+<rect class="cursor-active" x="294.4" y="18.4" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.195668;0.203030;1.000000"
+      keyTimes="0.000000;0.196259;0.203061;1.000000"
       dur="7.06s"
       repeatCount="indefinite"
       calcMode="discrete"
@@ -623,18 +623,18 @@
   </g>
 
   <g id="frame-28" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="330" height="100" fill="#1e1e1e" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="330" height="108" fill="#1e1e1e" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f3" x="16" y="16">&gt;</text>
 <text class="text fg" x="25.6" y="16"> select these words carefully                                                  </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor" x="304" y="16" width="9.6" height="22.4" fill="#c9d1d9"/>
+<rect class="cursor-active" x="304" y="18.4" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.203030;0.273963;1.000000"
+      keyTimes="0.000000;0.203061;0.274054;1.000000"
       dur="7.06s"
       repeatCount="indefinite"
       calcMode="discrete"
@@ -643,18 +643,18 @@
   </g>
 
   <g id="frame-29" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="330" height="100" fill="#1e1e1e" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="330" height="108" fill="#1e1e1e" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f3" x="16" y="16">&gt;</text>
 <text class="text fg" x="25.6" y="16"> select these words carefully                                                  </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor" x="304" y="16" width="9.6" height="22.4" fill="#c9d1d9"/>
+<rect class="cursor" x="304" y="18.4" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.273963;0.281325;1.000000"
+      keyTimes="0.000000;0.274054;0.281848;1.000000"
       dur="7.06s"
       repeatCount="indefinite"
       calcMode="discrete"
@@ -663,7 +663,7 @@
   </g>
 
   <g id="frame-30" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="330" height="100" fill="#1e1e1e" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="330" height="108" fill="#1e1e1e" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f3" x="16" y="16">&gt;</text>
 <text class="text fg" x="25.6" y="16"> select these words carefully                                                  </text>
@@ -672,12 +672,12 @@
 <rect x="217.6" y="16" width="86.39999999999999" height="22.4" fill="#264f78" opacity="0.5"/>
 </g>
 <g class="cursor-layer">
-<rect class="cursor" x="217.6" y="16" width="9.6" height="22.4" fill="#c9d1d9"/>
+<rect class="cursor-active" x="217.6" y="18.4" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.281325;0.352400;1.000000"
+      keyTimes="0.000000;0.281848;0.353125;1.000000"
       dur="7.06s"
       repeatCount="indefinite"
       calcMode="discrete"
@@ -686,7 +686,7 @@
   </g>
 
   <g id="frame-31" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="330" height="100" fill="#1e1e1e" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="330" height="108" fill="#1e1e1e" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f3" x="16" y="16">&gt;</text>
 <text class="text fg" x="25.6" y="16"> select these words carefully                                                  </text>
@@ -695,12 +695,12 @@
 <rect x="217.6" y="16" width="86.39999999999999" height="22.4" fill="#264f78" opacity="0.5"/>
 </g>
 <g class="cursor-layer">
-<rect class="cursor" x="217.6" y="16" width="9.6" height="22.4" fill="#c9d1d9"/>
+<rect class="cursor" x="217.6" y="18.4" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.352400;0.360045;1.000000"
+      keyTimes="0.000000;0.353125;0.360493;1.000000"
       dur="7.06s"
       repeatCount="indefinite"
       calcMode="discrete"
@@ -709,7 +709,7 @@
   </g>
 
   <g id="frame-32" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="330" height="100" fill="#1e1e1e" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="330" height="108" fill="#1e1e1e" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f3" x="16" y="16">&gt;</text>
 <text class="text fg" x="25.6" y="16"> select these words carefully                                                  </text>
@@ -718,12 +718,12 @@
 <rect x="160" y="16" width="144" height="22.4" fill="#264f78" opacity="0.5"/>
 </g>
 <g class="cursor-layer">
-<rect class="cursor" x="160" y="16" width="9.6" height="22.4" fill="#c9d1d9"/>
+<rect class="cursor-active" x="160" y="18.4" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.360045;0.431262;1.000000"
+      keyTimes="0.000000;0.360493;0.432337;1.000000"
       dur="7.06s"
       repeatCount="indefinite"
       calcMode="discrete"
@@ -732,7 +732,7 @@
   </g>
 
   <g id="frame-33" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="330" height="100" fill="#1e1e1e" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="330" height="108" fill="#1e1e1e" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f3" x="16" y="16">&gt;</text>
 <text class="text fg" x="25.6" y="16"> select these words carefully                                                  </text>
@@ -741,12 +741,12 @@
 <rect x="160" y="16" width="144" height="22.4" fill="#264f78" opacity="0.5"/>
 </g>
 <g class="cursor-layer">
-<rect class="cursor" x="160" y="16" width="9.6" height="22.4" fill="#c9d1d9"/>
+<rect class="cursor" x="160" y="18.4" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.431262;0.431403;1.000000"
+      keyTimes="0.000000;0.432337;0.432904;1.000000"
       dur="7.06s"
       repeatCount="indefinite"
       calcMode="discrete"
@@ -755,18 +755,18 @@
   </g>
 
   <g id="frame-34" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="330" height="100" fill="#1e1e1e" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="330" height="108" fill="#1e1e1e" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f3" x="16" y="16">&gt;</text>
 <text class="text fg" x="25.6" y="16"> select these                                                                  </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor" x="160" y="16" width="9.6" height="22.4" fill="#c9d1d9"/>
+<rect class="cursor-active" x="160" y="18.4" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.431403;0.446128;1.000000"
+      keyTimes="0.000000;0.432904;0.447499;1.000000"
       dur="7.06s"
       repeatCount="indefinite"
       calcMode="discrete"
@@ -775,18 +775,18 @@
   </g>
 
   <g id="frame-35" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="330" height="100" fill="#1e1e1e" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="330" height="108" fill="#1e1e1e" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f3" x="16" y="16">&gt;</text>
 <text class="text fg" x="25.6" y="16"> select these i                                                                </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor" x="169.6" y="16" width="9.6" height="22.4" fill="#c9d1d9"/>
+<rect class="cursor-active" x="169.6" y="18.4" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.446128;0.453348;1.000000"
+      keyTimes="0.000000;0.447499;0.455009;1.000000"
       dur="7.06s"
       repeatCount="indefinite"
       calcMode="discrete"
@@ -795,18 +795,18 @@
   </g>
 
   <g id="frame-36" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="330" height="100" fill="#1e1e1e" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="330" height="108" fill="#1e1e1e" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f3" x="16" y="16">&gt;</text>
 <text class="text fg" x="25.6" y="16"> select these it                                                               </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor" x="179.2" y="16" width="9.6" height="22.4" fill="#c9d1d9"/>
+<rect class="cursor-active" x="179.2" y="18.4" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.453348;0.460994;1.000000"
+      keyTimes="0.000000;0.455009;0.462236;1.000000"
       dur="7.06s"
       repeatCount="indefinite"
       calcMode="discrete"
@@ -815,18 +815,18 @@
   </g>
 
   <g id="frame-37" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="330" height="100" fill="#1e1e1e" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="330" height="108" fill="#1e1e1e" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f3" x="16" y="16">&gt;</text>
 <text class="text fg" x="25.6" y="16"> select these ite                                                              </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor" x="188.79999999999998" y="16" width="9.6" height="22.4" fill="#c9d1d9"/>
+<rect class="cursor-active" x="188.79999999999998" y="18.4" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.460994;0.468073;1.000000"
+      keyTimes="0.000000;0.462236;0.469321;1.000000"
       dur="7.06s"
       repeatCount="indefinite"
       calcMode="discrete"
@@ -835,18 +835,18 @@
   </g>
 
   <g id="frame-38" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="330" height="100" fill="#1e1e1e" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="330" height="108" fill="#1e1e1e" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f3" x="16" y="16">&gt;</text>
 <text class="text fg" x="25.6" y="16"> select these item                                                             </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor" x="198.4" y="16" width="9.6" height="22.4" fill="#c9d1d9"/>
+<rect class="cursor-active" x="198.4" y="18.4" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.468073;0.475719;1.000000"
+      keyTimes="0.000000;0.469321;0.476548;1.000000"
       dur="7.06s"
       repeatCount="indefinite"
       calcMode="discrete"
@@ -855,18 +855,18 @@
   </g>
 
   <g id="frame-39" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="330" height="100" fill="#1e1e1e" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="330" height="108" fill="#1e1e1e" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f3" x="16" y="16">&gt;</text>
 <text class="text fg" x="25.6" y="16"> select these items                                                            </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor" x="208" y="16" width="9.6" height="22.4" fill="#c9d1d9"/>
+<rect class="cursor-active" x="208" y="18.4" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.475719;0.546227;1.000000"
+      keyTimes="0.000000;0.476548;0.547683;1.000000"
       dur="7.06s"
       repeatCount="indefinite"
       calcMode="discrete"
@@ -875,18 +875,18 @@
   </g>
 
   <g id="frame-40" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="330" height="100" fill="#1e1e1e" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="330" height="108" fill="#1e1e1e" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f3" x="16" y="16">&gt;</text>
 <text class="text fg" x="25.6" y="16"> select these items                                                            </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor" x="208" y="16" width="9.6" height="22.4" fill="#c9d1d9"/>
+<rect class="cursor" x="208" y="18.4" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.546227;0.553872;1.000000"
+      keyTimes="0.000000;0.547683;0.555193;1.000000"
       dur="7.06s"
       repeatCount="indefinite"
       calcMode="discrete"
@@ -895,18 +895,18 @@
   </g>
 
   <g id="frame-41" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="330" height="100" fill="#1e1e1e" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="330" height="108" fill="#1e1e1e" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f3" x="16" y="16">&gt;</text>
 <text class="text fg" x="25.6" y="16"> select these items                                                            </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor" x="35.2" y="16" width="9.6" height="22.4" fill="#c9d1d9"/>
+<rect class="cursor-active" x="35.2" y="18.4" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.553872;0.625230;1.000000"
+      keyTimes="0.000000;0.555193;0.626328;1.000000"
       dur="7.06s"
       repeatCount="indefinite"
       calcMode="discrete"
@@ -915,18 +915,18 @@
   </g>
 
   <g id="frame-42" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="330" height="100" fill="#1e1e1e" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="330" height="108" fill="#1e1e1e" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f3" x="16" y="16">&gt;</text>
 <text class="text fg" x="25.6" y="16"> select these items                                                            </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor" x="35.2" y="16" width="9.6" height="22.4" fill="#c9d1d9"/>
+<rect class="cursor" x="35.2" y="18.4" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.625230;0.632876;1.000000"
+      keyTimes="0.000000;0.626328;0.633980;1.000000"
       dur="7.06s"
       repeatCount="indefinite"
       calcMode="discrete"
@@ -935,18 +935,18 @@
   </g>
 
   <g id="frame-43" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="330" height="100" fill="#1e1e1e" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="330" height="108" fill="#1e1e1e" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f3" x="16" y="16">&gt;</text>
 <text class="text fg" x="25.6" y="16"> eselect these items                                                           </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor" x="44.8" y="16" width="9.6" height="22.4" fill="#c9d1d9"/>
+<rect class="cursor-active" x="44.8" y="18.4" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.632876;0.639955;1.000000"
+      keyTimes="0.000000;0.633980;0.641207;1.000000"
       dur="7.06s"
       repeatCount="indefinite"
       calcMode="discrete"
@@ -955,18 +955,18 @@
   </g>
 
   <g id="frame-44" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="330" height="100" fill="#1e1e1e" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="330" height="108" fill="#1e1e1e" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f3" x="16" y="16">&gt;</text>
 <text class="text fg" x="25.6" y="16"> ecselect these items                                                          </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor" x="54.4" y="16" width="9.6" height="22.4" fill="#c9d1d9"/>
+<rect class="cursor-active" x="54.4" y="18.4" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.639955;0.647034;1.000000"
+      keyTimes="0.000000;0.641207;0.648292;1.000000"
       dur="7.06s"
       repeatCount="indefinite"
       calcMode="discrete"
@@ -975,18 +975,18 @@
   </g>
 
   <g id="frame-45" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="330" height="100" fill="#1e1e1e" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="330" height="108" fill="#1e1e1e" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f3" x="16" y="16">&gt;</text>
 <text class="text fg" x="25.6" y="16"> echselect these items                                                         </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor" x="64" y="16" width="9.6" height="22.4" fill="#c9d1d9"/>
+<rect class="cursor-active" x="64" y="18.4" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.647034;0.654538;1.000000"
+      keyTimes="0.000000;0.648292;0.655803;1.000000"
       dur="7.06s"
       repeatCount="indefinite"
       calcMode="discrete"
@@ -995,18 +995,18 @@
   </g>
 
   <g id="frame-46" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="330" height="100" fill="#1e1e1e" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="330" height="108" fill="#1e1e1e" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f3" x="16" y="16">&gt;</text>
 <text class="text fg" x="25.6" y="16"> echoselect these items                                                        </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor" x="73.6" y="16" width="9.6" height="22.4" fill="#c9d1d9"/>
+<rect class="cursor-active" x="73.6" y="18.4" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.654538;0.661758;1.000000"
+      keyTimes="0.000000;0.655803;0.662888;1.000000"
       dur="7.06s"
       repeatCount="indefinite"
       calcMode="discrete"
@@ -1015,18 +1015,18 @@
   </g>
 
   <g id="frame-47" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="330" height="100" fill="#1e1e1e" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="330" height="108" fill="#1e1e1e" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f3" x="16" y="16">&gt;</text>
 <text class="text fg" x="25.6" y="16"> echo select these items                                                       </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor" x="83.2" y="16" width="9.6" height="22.4" fill="#c9d1d9"/>
+<rect class="cursor-active" x="83.2" y="18.4" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.661758;0.668979;1.000000"
+      keyTimes="0.000000;0.662888;0.670115;1.000000"
       dur="7.06s"
       repeatCount="indefinite"
       calcMode="discrete"
@@ -1035,18 +1035,18 @@
   </g>
 
   <g id="frame-48" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="330" height="100" fill="#1e1e1e" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="330" height="108" fill="#1e1e1e" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f3" x="16" y="16">&gt;</text>
 <text class="text fg" x="25.6" y="16"> echo &apos;select these items                                                      </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor" x="92.8" y="16" width="9.6" height="22.4" fill="#c9d1d9"/>
+<rect class="cursor-active" x="92.8" y="18.4" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.668979;0.676058;1.000000"
+      keyTimes="0.000000;0.670115;0.677483;1.000000"
       dur="7.06s"
       repeatCount="indefinite"
       calcMode="discrete"
@@ -1055,18 +1055,18 @@
   </g>
 
   <g id="frame-49" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="330" height="100" fill="#1e1e1e" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="330" height="108" fill="#1e1e1e" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f3" x="16" y="16">&gt;</text>
 <text class="text fg" x="25.6" y="16"> echo &apos;select these items                                                      </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor" x="265.6" y="16" width="9.6" height="22.4" fill="#c9d1d9"/>
+<rect class="cursor-active" x="265.6" y="18.4" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.676058;0.683704;1.000000"
+      keyTimes="0.000000;0.677483;0.684852;1.000000"
       dur="7.06s"
       repeatCount="indefinite"
       calcMode="discrete"
@@ -1075,18 +1075,18 @@
   </g>
 
   <g id="frame-50" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="330" height="100" fill="#1e1e1e" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="330" height="108" fill="#1e1e1e" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f3" x="16" y="16">&gt;</text>
 <text class="text fg" x="25.6" y="16"> echo &apos;select these items&apos;                                                     </text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor" x="275.2" y="16" width="9.6" height="22.4" fill="#c9d1d9"/>
+<rect class="cursor-active" x="275.2" y="18.4" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.683704;0.698287;1.000000"
+      keyTimes="0.000000;0.684852;0.699447;1.000000"
       dur="7.06s"
       repeatCount="indefinite"
       calcMode="discrete"
@@ -1095,7 +1095,7 @@
   </g>
 
   <g id="frame-51" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="330" height="100" fill="#1e1e1e" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="330" height="108" fill="#1e1e1e" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f3" x="16" y="16">&gt;</text>
 <text class="text fg" x="25.6" y="16"> echo &apos;select these items&apos;                                                     </text>
@@ -1103,7 +1103,7 @@
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.698287;0.714710;1.000000"
+      keyTimes="0.000000;0.699447;0.714893;1.000000"
       dur="7.06s"
       repeatCount="indefinite"
       calcMode="discrete"
@@ -1112,7 +1112,7 @@
   </g>
 
   <g id="frame-52" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="330" height="100" fill="#1e1e1e" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="330" height="108" fill="#1e1e1e" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f3" x="16" y="16">&gt;</text>
 <text class="text fg" x="25.6" y="16"> echo &apos;select these items&apos;                                                     </text>
@@ -1120,12 +1120,12 @@
 <text class="text f3" x="16" y="60.8">&gt;</text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor" x="35.2" y="60.8" width="9.6" height="22.4" fill="#c9d1d9"/>
+<rect class="cursor" x="35.2" y="63.199999999999996" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.714710;0.857709;1.000000"
+      keyTimes="0.000000;0.714893;0.857588;1.000000"
       dur="7.06s"
       repeatCount="indefinite"
       calcMode="discrete"
@@ -1134,7 +1134,7 @@
   </g>
 
   <g id="frame-53" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="330" height="100" fill="#1e1e1e" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="330" height="108" fill="#1e1e1e" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f3" x="16" y="16">&gt;</text>
 <text class="text fg" x="25.6" y="16"> echo &apos;select these items&apos;                                                     </text>
@@ -1142,12 +1142,12 @@
 <text class="text f3" x="16" y="60.8">&gt;</text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor" x="35.2" y="60.8" width="9.6" height="22.4" fill="#c9d1d9"/>
+<rect class="cursor" x="35.2" y="63.199999999999996" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
     <animate
       attributeName="visibility"
       values="hidden;visible;hidden;hidden"
-      keyTimes="0.000000;0.857709;0.858417;1.000000"
+      keyTimes="0.000000;0.857588;0.858297;1.000000"
       dur="7.06s"
       repeatCount="indefinite"
       calcMode="discrete"
@@ -1156,7 +1156,7 @@
   </g>
 
   <g id="frame-54" visibility="hidden">
-    <rect class="window-bg" x="0" y="0" width="330" height="100" fill="#1e1e1e" rx="8" ry="8"/>
+    <rect class="window-bg" x="0" y="0" width="330" height="108" fill="#1e1e1e" rx="8" ry="8"/>
 <g class="text-layer">
 <text class="text f3" x="16" y="16">&gt;</text>
 <text class="text fg" x="25.6" y="16"> echo &apos;select these items&apos;                                                     </text>
@@ -1164,12 +1164,12 @@
 <text class="text f3" x="16" y="60.8">&gt;</text>
 </g>
 <g class="cursor-layer">
-<rect class="cursor" x="35.2" y="60.8" width="9.6" height="22.4" fill="#c9d1d9"/>
+<rect class="cursor" x="35.2" y="63.199999999999996" width="9.6" height="22.4" fill="#c9d1d9"/>
 </g>
     <animate
       attributeName="visibility"
       values="hidden;visible;visible"
-      keyTimes="0.000000;0.858417;1.000000"
+      keyTimes="0.000000;0.858297;1.000000"
       dur="7.06s"
       repeatCount="indefinite"
       calcMode="discrete"
