@@ -134,6 +134,9 @@ interface ExecutorContext {
   lineHeight: number;
   // Track if user explicitly set lineHeight (for cursor alignment)
   hasCustomLineHeight: boolean;
+
+  // Shell to use for command execution (default: user's $SHELL or /bin/sh)
+  shell: string;
 }
 
 // ============================================================================
@@ -201,6 +204,9 @@ export class CDExecutor {
       // Line height multiplier (default 1.4)
       lineHeight: 1.4,
       hasCustomLineHeight: false,
+
+      // Shell: default to user's $SHELL, fallback to /bin/sh
+      shell: process.env.SHELL || '/bin/sh',
     };
   }
 
@@ -309,36 +315,49 @@ export class CDExecutor {
     grid = processInput(grid, content);
 
     // Determine cursor position
-    // VTerminal's cursor.row is always correct - it processes all ANSI sequences
-    // including cursor positioning used by commands like neofetch.
-    // For cursor.col:
-    // - During command execution: use VTerminal's cursor.col
-    // - During typing: calculate from cursorX (tracks position within current line)
+    // VTerminal processes all content and handles wrapping/ANSI sequences correctly.
+    // For command execution: use VTerminal's cursor directly
+    // For typing: we need to find the visual position of cursorX within the current line
     const shouldClampCursor = !this.context.autoHeight && this.context.scroll;
 
     let finalCursorX: number;
     let finalCursorY: number;
 
-    // Always use VTerminal's row - it handles ANSI cursor sequences correctly
-    finalCursorY = shouldClampCursor
-      ? Math.max(0, Math.min(grid.cursor.row, maxVisibleRows - 1))
-      : grid.cursor.row;
-
     if (this.context.isExecutingCommand) {
-      // During command execution: use VTerminal's cursor column
+      // During command execution: use VTerminal's cursor position
+      finalCursorY = shouldClampCursor
+        ? Math.max(0, Math.min(grid.cursor.row, maxVisibleRows - 1))
+        : grid.cursor.row;
       finalCursorX = grid.cursor.col;
     } else {
-      // During typing: calculate column from cursorX accounting for wrapping
-      const promptLen = this.stripAnsi(this.context.promptPrefix).length;
-      const totalCursorPos = this.context.cursorX + promptLen;
+      // During typing: process content up to cursor position to find visual coords
+      // Build content with only the text up to cursor position on the current line
+      const cursorBuffer = [...this.context.lines];
 
-      if (this.context.autoWidth || totalCursorPos < visibleCols) {
-        // No wrapping needed for cursor position
-        finalCursorX = totalCursorPos;
+      // Build the current line with prompt but only up to cursorX
+      const textUpToCursor = this.context.currentLine.substring(0, this.context.cursorX);
+      const displayLineUpToCursor = this.context.promptPrefix + textUpToCursor;
+      cursorBuffer[this.context.cursorY] = displayLineUpToCursor;
+
+      // Get visible portion accounting for scroll
+      let cursorVisibleBuffer: string[];
+      if (this.context.scroll) {
+        const startLine = this.context.scrollOffset;
+        const endLine = Math.min(startLine + this.getVisibleLineCount(), cursorBuffer.length);
+        cursorVisibleBuffer = cursorBuffer.slice(startLine, endLine);
       } else {
-        // Cursor wraps - calculate column within wrapped line
-        finalCursorX = totalCursorPos % visibleCols;
+        cursorVisibleBuffer = cursorBuffer;
       }
+
+      // Process through VTerminal to get correct visual cursor position
+      const cursorContent = cursorVisibleBuffer.join('\n');
+      let cursorGrid = createGridState(gridWidth, gridHeight);
+      cursorGrid = processInput(cursorGrid, cursorContent);
+
+      finalCursorY = shouldClampCursor
+        ? Math.max(0, Math.min(cursorGrid.cursor.row, maxVisibleRows - 1))
+        : cursorGrid.cursor.row;
+      finalCursorX = cursorGrid.cursor.col;
     }
 
     // Track max visual row for auto-height (accounts for cursor positioning in commands like neofetch)
@@ -521,8 +540,8 @@ export class CDExecutor {
 
   private async executeShellCommand(command: string): Promise<void> {
     return new Promise((resolve) => {
-      const child = spawn(command, [], {
-        shell: true,
+      // Use configured shell (defaults to user's $SHELL or /bin/sh)
+      const child = spawn(this.context.shell, ['-c', command], {
         env: { ...process.env, FORCE_COLOR: '1', CLICOLOR_FORCE: '1' },
       });
 
@@ -1110,6 +1129,10 @@ export class CDExecutor {
       case 'EmbedFont':
         // Read font file and base64 encode it
         this.embedFontFromPath(value);
+        break;
+      // Shell config
+      case 'Shell':
+        this.context.shell = value;
         break;
     }
   }
