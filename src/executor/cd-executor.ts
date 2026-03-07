@@ -309,53 +309,35 @@ export class CDExecutor {
     grid = processInput(grid, content);
 
     // Determine cursor position
-    // Two modes:
-    // 1. During command execution: Use VTerminal's cursor - it handles ANSI sequences
-    // 2. During typing/editing: Calculate from cursorX with wrapping support
+    // VTerminal's cursor.row is always correct - it processes all ANSI sequences
+    // including cursor positioning used by commands like neofetch.
+    // For cursor.col:
+    // - During command execution: use VTerminal's cursor.col
+    // - During typing: calculate from cursorX (tracks position within current line)
     const shouldClampCursor = !this.context.autoHeight && this.context.scroll;
 
     let finalCursorX: number;
     let finalCursorY: number;
 
+    // Always use VTerminal's row - it handles ANSI cursor sequences correctly
+    finalCursorY = shouldClampCursor
+      ? Math.max(0, Math.min(grid.cursor.row, maxVisibleRows - 1))
+      : grid.cursor.row;
+
     if (this.context.isExecutingCommand) {
-      // Use VTerminal cursor for command output
-      finalCursorY = shouldClampCursor
-        ? Math.max(0, Math.min(grid.cursor.row, maxVisibleRows - 1))
-        : grid.cursor.row;
+      // During command execution: use VTerminal's cursor column
       finalCursorX = grid.cursor.col;
     } else {
-      // During typing: calculate position from cursorX accounting for wrapping
-      // We need to consider:
-      // 1. Lines before cursorY that may have wrapped
-      // 2. The current line up to cursorX position
+      // During typing: calculate column from cursorX accounting for wrapping
       const promptLen = this.stripAnsi(this.context.promptPrefix).length;
       const totalCursorPos = this.context.cursorX + promptLen;
 
-      if (this.context.autoWidth) {
-        // No wrapping - cursor stays on logical line
-        finalCursorY = this.context.cursorY - this.context.scrollOffset;
+      if (this.context.autoWidth || totalCursorPos < visibleCols) {
+        // No wrapping needed for cursor position
         finalCursorX = totalCursorPos;
       } else {
-        // Calculate visual row by counting wrapped rows for all lines before cursor
-        // plus wrapping within the current line
-        let visualRow = 0;
-
-        // Count wrapped rows for lines before cursorY
-        for (let i = this.context.scrollOffset; i < this.context.cursorY && i < visibleBuffer.length; i++) {
-          const lineLen = this.stripAnsi(visibleBuffer[i] || '').length;
-          visualRow += Math.max(1, Math.ceil(lineLen / visibleCols));
-        }
-
-        // Add wrapping within current line up to cursor position
-        const wrapRow = Math.floor(totalCursorPos / visibleCols);
-        const wrapCol = totalCursorPos % visibleCols;
-
-        finalCursorY = visualRow + wrapRow;
-        finalCursorX = wrapCol;
-      }
-
-      if (shouldClampCursor) {
-        finalCursorY = Math.max(0, Math.min(finalCursorY, maxVisibleRows - 1));
+        // Cursor wraps - calculate column within wrapped line
+        finalCursorX = totalCursorPos % visibleCols;
       }
     }
 

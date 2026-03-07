@@ -349,7 +349,7 @@ Demonstration of all ANSI color codes and styles.
 Demonstration of all ANSI color codes and styles.   
 ![ascii-art](./examples/svgs/figlet.svg)
 
-### Backspace
+### Backspace with watermark
 Testing backspace functionality for text editing.   
 ![backspace](./examples/svgs/backspace.svg)
 
