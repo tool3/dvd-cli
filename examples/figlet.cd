@@ -2,12 +2,16 @@
 # Tests multi-line ASCII art rendering with echo -e
 Output examples/svgs/figlet.svg
 
-Set Theme gruvbox-dark
+Set Theme dark
 Set Template macos
 Set Title "FIGLET Art Demo"
-Set FontSize 14
+Set LineHeight 1
 
-Type "figlet -f isometric3 dvd"
+Type "figlet -f larry3d dvd | lolcat -f -p 1"
+Sleep 500ms
+Enter
+
+Type "figlet -f isometric3 dvd | lolcat -f"
 Sleep 500ms
 Enter
 Sleep 2s

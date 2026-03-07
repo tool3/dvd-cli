@@ -345,6 +345,10 @@ Unlike VHS which uses a browser and ffmpeg to generate video files, dvd:
 Demonstration of all ANSI color codes and styles.   
 ![ansi-colors](./examples/svgs/ansi-colors.svg)
 
+### ASCII Art
+Demonstration of all ANSI color codes and styles.   
+![ascii-art](./examples/svgs/figlet.svg)
+
 ### Backspace
 Testing backspace functionality for text editing.   
 ![backspace](./examples/svgs/backspace.svg)
