@@ -325,19 +325,32 @@ export class CDExecutor {
       finalCursorX = grid.cursor.col;
     } else {
       // During typing: calculate position from cursorX accounting for wrapping
+      // We need to consider:
+      // 1. Lines before cursorY that may have wrapped
+      // 2. The current line up to cursorX position
       const promptLen = this.stripAnsi(this.context.promptPrefix).length;
       const totalCursorPos = this.context.cursorX + promptLen;
 
-      if (this.context.autoWidth || totalCursorPos < visibleCols) {
-        // No wrapping needed - cursor stays on current line
+      if (this.context.autoWidth) {
+        // No wrapping - cursor stays on logical line
         finalCursorY = this.context.cursorY - this.context.scrollOffset;
         finalCursorX = totalCursorPos;
       } else {
-        // Handle wrapping: calculate which row and column the cursor is on
-        const baseRow = this.context.cursorY - this.context.scrollOffset;
+        // Calculate visual row by counting wrapped rows for all lines before cursor
+        // plus wrapping within the current line
+        let visualRow = 0;
+
+        // Count wrapped rows for lines before cursorY
+        for (let i = this.context.scrollOffset; i < this.context.cursorY && i < visibleBuffer.length; i++) {
+          const lineLen = this.stripAnsi(visibleBuffer[i] || '').length;
+          visualRow += Math.max(1, Math.ceil(lineLen / visibleCols));
+        }
+
+        // Add wrapping within current line up to cursor position
         const wrapRow = Math.floor(totalCursorPos / visibleCols);
         const wrapCol = totalCursorPos % visibleCols;
-        finalCursorY = baseRow + wrapRow;
+
+        finalCursorY = visualRow + wrapRow;
         finalCursorX = wrapCol;
       }
 
