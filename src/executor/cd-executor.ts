@@ -309,16 +309,42 @@ export class CDExecutor {
     grid = processInput(grid, content);
 
     // Determine cursor position
-    // Use VTerminal's cursor position - it correctly handles both:
-    // 1. Cursor positioning sequences (like those in neofetch)
-    // 2. Text wrapping when content exceeds terminal width
-    // The VTerminal processes the display content and tracks cursor position
-    // accounting for line wrapping, so grid.cursor gives us the visual position.
+    // Two modes:
+    // 1. During command execution: Use VTerminal's cursor - it handles ANSI sequences
+    // 2. During typing/editing: Calculate from cursorX with wrapping support
     const shouldClampCursor = !this.context.autoHeight && this.context.scroll;
-    const finalCursorY = shouldClampCursor
-      ? Math.max(0, Math.min(grid.cursor.row, maxVisibleRows - 1))
-      : grid.cursor.row;
-    const finalCursorX = grid.cursor.col;
+
+    let finalCursorX: number;
+    let finalCursorY: number;
+
+    if (this.context.isExecutingCommand) {
+      // Use VTerminal cursor for command output
+      finalCursorY = shouldClampCursor
+        ? Math.max(0, Math.min(grid.cursor.row, maxVisibleRows - 1))
+        : grid.cursor.row;
+      finalCursorX = grid.cursor.col;
+    } else {
+      // During typing: calculate position from cursorX accounting for wrapping
+      const promptLen = this.stripAnsi(this.context.promptPrefix).length;
+      const totalCursorPos = this.context.cursorX + promptLen;
+
+      if (this.context.autoWidth || totalCursorPos < visibleCols) {
+        // No wrapping needed - cursor stays on current line
+        finalCursorY = this.context.cursorY - this.context.scrollOffset;
+        finalCursorX = totalCursorPos;
+      } else {
+        // Handle wrapping: calculate which row and column the cursor is on
+        const baseRow = this.context.cursorY - this.context.scrollOffset;
+        const wrapRow = Math.floor(totalCursorPos / visibleCols);
+        const wrapCol = totalCursorPos % visibleCols;
+        finalCursorY = baseRow + wrapRow;
+        finalCursorX = wrapCol;
+      }
+
+      if (shouldClampCursor) {
+        finalCursorY = Math.max(0, Math.min(finalCursorY, maxVisibleRows - 1));
+      }
+    }
 
     // Track max visual row for auto-height (accounts for cursor positioning in commands like neofetch)
     if (this.context.autoHeight) {
