@@ -260,10 +260,13 @@ Pre-packaged fonts in `examples/fonts/`:
 
 ### Behavior
 
-| Command                | Description                                  | Default |
-| ---------------------- | -------------------------------------------- | ------- |
-| `Set TypingSpeed <ms>` | Milliseconds per character when typing       | 50      |
-| `Set Scroll <bool>`    | Enable scrolling when content exceeds height | auto    |
+| Command                   | Description                                         | Default |
+| ------------------------- | --------------------------------------------------- | ------- |
+| `Set TypingSpeed <ms>`    | Milliseconds per character when typing              | 50      |
+| `Set AnimationSpeed <ms>` | Milliseconds between frames for animated output     | 50      |
+| `Set Scroll <bool>`       | Enable scrolling when content exceeds height        | auto    |
+
+**Animated Output:** Commands that produce animated terminal output (like `lolcat -fa`) are automatically detected and each animation frame is captured. Use `AnimationSpeed` to control the timing between frames in the final SVG.
 
 ### Auto-sizing
 

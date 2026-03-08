@@ -646,23 +646,114 @@ export class CDExecutor {
         }
       };
 
-      // For animated output (like lolcat -fa), we need to collect all output
-      // and process animation frames after the command completes
-      let collectingForAnimation = false;
-      let collectedOutput = '';
+      // For animated output (like lolcat -fa), process frames in real-time
+      // Animation state tracking
+      let isAnimatedOutput = false;
+      let animationBuffer = ''; // Buffer for incomplete sequences
+      let finalizedLines: string[] = []; // Lines that have received a newline
+      let currentAnimatingLine = ''; // Current line being animated
+      let animationFrameCount = 0;
+      // Track synthetic time offset for animation frames
+      // This ensures frames are evenly spaced even if data arrives in bursts
+      // Record start time NOW (when command starts) so animation begins immediately after Enter
+      const animationStartTime = Date.now() - this.context.startTime - this.context.captureOverhead;
+
+      const processAnimationFrame = (frameContent: string) => {
+        // Skip empty frames or frames with only control codes
+        if (!frameContent || !frameContent.match(/[a-zA-Z0-9]/)) return;
+
+        // Check if this segment ends with a newline (line is done animating)
+        const hasNewline = frameContent.includes('\n');
+
+        if (hasNewline) {
+          // This segment contains a newline - the line before it is finalized
+          const parts = frameContent.split('\n');
+
+          // First part completes the current animating line
+          currentAnimatingLine = parts[0];
+          finalizedLines.push(currentAnimatingLine);
+
+          // Any additional parts are also finalized
+          for (let j = 1; j < parts.length - 1; j++) {
+            if (parts[j]) finalizedLines.push(parts[j]);
+          }
+
+          // The last part becomes the new animating line
+          currentAnimatingLine = parts[parts.length - 1];
+        } else {
+          // No newline - this is an animation frame of the current line
+          currentAnimatingLine = frameContent;
+        }
+
+        // Build the current frame: finalized lines + current animating line
+        for (let j = 0; j < finalizedLines.length; j++) {
+          this.context.lines[outputStartLine + j] = finalizedLines[j];
+        }
+
+        // Add current animating line (if not empty)
+        const currentLineIndex = outputStartLine + finalizedLines.length;
+        if (currentAnimatingLine) {
+          this.context.lines[currentLineIndex] = currentAnimatingLine;
+        }
+
+        // Ensure we have enough lines
+        const totalLines = finalizedLines.length + (currentAnimatingLine ? 1 : 0);
+        while (this.context.lines.length <= outputStartLine + totalLines) {
+          this.context.lines.push('');
+        }
+
+        // Position cursor after all content
+        this.context.cursorY = outputStartLine + totalLines;
+        this.context.cursorX = 0;
+
+        // Capture frame with synthetic timing
+        // Instead of using real timestamps, we space frames evenly based on animationSpeed
+        // This makes the animation smooth even though data arrives in bursts
+        const syntheticTimestamp = animationStartTime + animationFrameCount * this.context.animationSpeed;
+
+        // Temporarily override the timing for this frame
+        const originalStartTime = this.context.startTime;
+        const originalOverhead = this.context.captureOverhead;
+        this.context.startTime = Date.now() - syntheticTimestamp;
+        this.context.captureOverhead = 0;
+
+        this.captureFrame(false);
+
+        // Restore original timing
+        this.context.startTime = originalStartTime;
+        this.context.captureOverhead = originalOverhead;
+
+        animationFrameCount++;
+      };
+
+      const processAnimatedOutput = (data: string) => {
+        animationBuffer += data;
+
+        // Process complete frames (segments between \x1b8 markers)
+        // Keep any incomplete segment in the buffer
+        const segments = animationBuffer.split('\x1b8');
+
+        // Process all complete segments (all but the last one)
+        for (let i = 0; i < segments.length - 1; i++) {
+          processAnimationFrame(segments[i]);
+        }
+
+        // Keep the last segment in the buffer (may be incomplete)
+        animationBuffer = segments[segments.length - 1];
+      };
 
       const processOutput = (data: string) => {
         const dataStr = data;
 
-        // Check for animation markers:
-        // \x1b8 (ESC 8) - restore cursor position (marks new animation frame)
-        // \x1b[?25l - hide cursor (often at start of animations)
-        if (dataStr.includes('\x1b8') || dataStr.includes('\x1b[?25l')) {
-          collectingForAnimation = true;
+        // Check for animation markers on first data
+        if (!isAnimatedOutput) {
+          if (dataStr.includes('\x1b8') || dataStr.includes('\x1b[?25l')) {
+            isAnimatedOutput = true;
+          }
         }
 
-        if (collectingForAnimation) {
-          collectedOutput += dataStr;
+        if (isAnimatedOutput) {
+          processAnimatedOutput(dataStr);
         } else {
           processOutputLineByLine(dataStr);
         }
@@ -676,10 +767,21 @@ export class CDExecutor {
         processOutput(data.toString());
       });
 
-      child.on('close', async () => {
-        if (collectingForAnimation && collectedOutput) {
-          // Process animated output - split by cursor restore sequences
-          await this.processAnimatedOutput(collectedOutput, outputStartLine);
+      child.on('close', () => {
+        if (isAnimatedOutput) {
+          // Process any remaining buffer content
+          if (animationBuffer) {
+            processAnimationFrame(animationBuffer);
+          }
+
+          // Finalize cursor position
+          const totalLines = finalizedLines.length + (currentAnimatingLine ? 1 : 0);
+          this.context.cursorY = outputStartLine + totalLines;
+          this.context.cursorX = 0;
+
+          while (this.context.lines.length <= this.context.cursorY) {
+            this.context.lines.push('');
+          }
         } else {
           // Non-animated: finalize line-by-line output
           const trimmedOutput = output.endsWith('\n') ? output.slice(0, -1) : output;
@@ -721,91 +823,6 @@ export class CDExecutor {
         resolve();
       });
     });
-  }
-
-  /**
-   * Process animated terminal output (like lolcat -fa).
-   * Splits output by cursor restore sequences (\x1b8) and renders each frame.
-   *
-   * Animation works by:
-   * 1. Saving cursor position (\x1b7)
-   * 2. Writing content
-   * 3. Restoring cursor (\x1b8) and rewriting with new colors
-   *
-   * We capture each "restore + content" as a separate frame.
-   */
-  private async processAnimatedOutput(output: string, startLine: number): Promise<void> {
-    // Split by \x1b8 (restore cursor) which marks each new animation frame
-    const segments = output.split('\x1b8');
-
-    if (segments.length <= 1) {
-      // No animation detected, just render normally
-      this.renderOutputLines(output, startLine);
-      return;
-    }
-
-    // The first segment contains setup: \x1b[?25l (hide cursor), \x1b7 (save cursor)
-    // Each subsequent segment is an animation frame
-    for (let i = 1; i < segments.length; i++) {
-      const frameContent = segments[i];
-
-      // Skip empty frames or frames with only control codes
-      if (!frameContent || !frameContent.match(/[a-zA-Z0-9]/)) continue;
-
-      // Store this frame's content in context.lines
-      const contentLines = frameContent.split('\n');
-      for (let j = 0; j < contentLines.length; j++) {
-        this.context.lines[startLine + j] = contentLines[j];
-      }
-
-      // Ensure we have enough lines
-      const endLine = startLine + contentLines.length;
-      while (this.context.lines.length < endLine) {
-        this.context.lines.push('');
-      }
-
-      // Position cursor AFTER the animated content (not on it, to avoid overwrite in captureFrame)
-      this.context.cursorY = startLine + contentLines.length;
-      this.context.cursorX = 0;
-
-      // Capture this animation frame (without cursor since animation typically hides it)
-      this.captureFrame(false);
-
-      // Add delay between animation frames
-      await this.sleep(this.context.animationSpeed);
-    }
-
-    // After animation, find final content and position cursor after it
-    const lastFrame = segments[segments.length - 1] || '';
-    const lastFrameLines = lastFrame.split('\n').filter((l) => l.trim() || l === '');
-
-    // Position cursor after the last frame's content
-    this.context.cursorY = startLine + lastFrameLines.length;
-    this.context.cursorX = 0;
-
-    // Ensure we have an empty line for the next prompt
-    while (this.context.lines.length <= this.context.cursorY) {
-      this.context.lines.push('');
-    }
-  }
-
-  /**
-   * Render output lines to context (for non-animated output).
-   */
-  private renderOutputLines(output: string, startLine: number): void {
-    const trimmedOutput = output.endsWith('\n') ? output.slice(0, -1) : output;
-    const outputLines = trimmedOutput.split('\n');
-
-    for (let i = 0; i < outputLines.length; i++) {
-      this.context.lines[startLine + i] = outputLines[i];
-    }
-
-    this.context.cursorY = startLine + outputLines.length;
-    this.context.cursorX = 0;
-
-    while (this.context.lines.length <= this.context.cursorY) {
-      this.context.lines.push('');
-    }
   }
 
   private async executeArrow(direction: 'Left' | 'Right' | 'Up' | 'Down'): Promise<void> {
