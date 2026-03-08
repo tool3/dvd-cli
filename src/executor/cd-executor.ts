@@ -143,6 +143,11 @@ interface ExecutorContext {
 
   // Shell to use for command execution (default: user's $SHELL or /bin/sh)
   shell: string;
+
+  // Animation speed for terminal animations like lolcat -fa (ms between frames)
+  // Commands that use cursor restore (\x1b8) to create animations will be
+  // split into separate frames at this interval
+  animationSpeed: number;
 }
 
 // ============================================================================
@@ -217,6 +222,9 @@ export class CDExecutor {
 
       // Shell: default to user's $SHELL, fallback to /bin/sh
       shell: process.env.SHELL || '/bin/sh',
+
+      // Animation speed for terminal animations (ms between frames, default 50ms)
+      animationSpeed: 50,
     };
   }
 
@@ -614,7 +622,8 @@ export class CDExecutor {
       let prevLineCount = 0;
       const outputStartLine = this.context.cursorY;
 
-      const processOutput = (data: string) => {
+      // For non-animated output, process line-by-line for smooth animation
+      const processOutputLineByLine = (data: string) => {
         output += data;
 
         // Parse output and update lines
@@ -637,6 +646,28 @@ export class CDExecutor {
         }
       };
 
+      // For animated output (like lolcat -fa), we need to collect all output
+      // and process animation frames after the command completes
+      let collectingForAnimation = false;
+      let collectedOutput = '';
+
+      const processOutput = (data: string) => {
+        const dataStr = data;
+
+        // Check for animation markers:
+        // \x1b8 (ESC 8) - restore cursor position (marks new animation frame)
+        // \x1b[?25l - hide cursor (often at start of animations)
+        if (dataStr.includes('\x1b8') || dataStr.includes('\x1b[?25l')) {
+          collectingForAnimation = true;
+        }
+
+        if (collectingForAnimation) {
+          collectedOutput += dataStr;
+        } else {
+          processOutputLineByLine(dataStr);
+        }
+      };
+
       child.stdout?.on('data', (data: Buffer) => {
         processOutput(data.toString());
       });
@@ -645,22 +676,27 @@ export class CDExecutor {
         processOutput(data.toString());
       });
 
-      child.on('close', () => {
-        // Remove trailing newline to avoid extra blank line
-        const trimmedOutput = output.endsWith('\n') ? output.slice(0, -1) : output;
-        const outputLines = trimmedOutput.split('\n');
+      child.on('close', async () => {
+        if (collectingForAnimation && collectedOutput) {
+          // Process animated output - split by cursor restore sequences
+          await this.processAnimatedOutput(collectedOutput, outputStartLine);
+        } else {
+          // Non-animated: finalize line-by-line output
+          const trimmedOutput = output.endsWith('\n') ? output.slice(0, -1) : output;
+          const outputLines = trimmedOutput.split('\n');
 
-        // Store output lines (with ANSI codes) for rendering
-        for (let i = 0; i < outputLines.length; i++) {
-          this.context.lines[outputStartLine + i] = outputLines[i];
-        }
+          // Store output lines (with ANSI codes) for rendering
+          for (let i = 0; i < outputLines.length; i++) {
+            this.context.lines[outputStartLine + i] = outputLines[i];
+          }
 
-        // Position cursor after output
-        this.context.cursorY = outputStartLine + outputLines.length;
-        this.context.cursorX = 0;
+          // Position cursor after output
+          this.context.cursorY = outputStartLine + outputLines.length;
+          this.context.cursorX = 0;
 
-        while (this.context.lines.length <= this.context.cursorY) {
-          this.context.lines.push('');
+          while (this.context.lines.length <= this.context.cursorY) {
+            this.context.lines.push('');
+          }
         }
 
         this.context.isExecutingCommand = false;
@@ -685,6 +721,91 @@ export class CDExecutor {
         resolve();
       });
     });
+  }
+
+  /**
+   * Process animated terminal output (like lolcat -fa).
+   * Splits output by cursor restore sequences (\x1b8) and renders each frame.
+   *
+   * Animation works by:
+   * 1. Saving cursor position (\x1b7)
+   * 2. Writing content
+   * 3. Restoring cursor (\x1b8) and rewriting with new colors
+   *
+   * We capture each "restore + content" as a separate frame.
+   */
+  private async processAnimatedOutput(output: string, startLine: number): Promise<void> {
+    // Split by \x1b8 (restore cursor) which marks each new animation frame
+    const segments = output.split('\x1b8');
+
+    if (segments.length <= 1) {
+      // No animation detected, just render normally
+      this.renderOutputLines(output, startLine);
+      return;
+    }
+
+    // The first segment contains setup: \x1b[?25l (hide cursor), \x1b7 (save cursor)
+    // Each subsequent segment is an animation frame
+    for (let i = 1; i < segments.length; i++) {
+      const frameContent = segments[i];
+
+      // Skip empty frames or frames with only control codes
+      if (!frameContent || !frameContent.match(/[a-zA-Z0-9]/)) continue;
+
+      // Store this frame's content in context.lines
+      const contentLines = frameContent.split('\n');
+      for (let j = 0; j < contentLines.length; j++) {
+        this.context.lines[startLine + j] = contentLines[j];
+      }
+
+      // Ensure we have enough lines
+      const endLine = startLine + contentLines.length;
+      while (this.context.lines.length < endLine) {
+        this.context.lines.push('');
+      }
+
+      // Position cursor AFTER the animated content (not on it, to avoid overwrite in captureFrame)
+      this.context.cursorY = startLine + contentLines.length;
+      this.context.cursorX = 0;
+
+      // Capture this animation frame (without cursor since animation typically hides it)
+      this.captureFrame(false);
+
+      // Add delay between animation frames
+      await this.sleep(this.context.animationSpeed);
+    }
+
+    // After animation, find final content and position cursor after it
+    const lastFrame = segments[segments.length - 1] || '';
+    const lastFrameLines = lastFrame.split('\n').filter((l) => l.trim() || l === '');
+
+    // Position cursor after the last frame's content
+    this.context.cursorY = startLine + lastFrameLines.length;
+    this.context.cursorX = 0;
+
+    // Ensure we have an empty line for the next prompt
+    while (this.context.lines.length <= this.context.cursorY) {
+      this.context.lines.push('');
+    }
+  }
+
+  /**
+   * Render output lines to context (for non-animated output).
+   */
+  private renderOutputLines(output: string, startLine: number): void {
+    const trimmedOutput = output.endsWith('\n') ? output.slice(0, -1) : output;
+    const outputLines = trimmedOutput.split('\n');
+
+    for (let i = 0; i < outputLines.length; i++) {
+      this.context.lines[startLine + i] = outputLines[i];
+    }
+
+    this.context.cursorY = startLine + outputLines.length;
+    this.context.cursorX = 0;
+
+    while (this.context.lines.length <= this.context.cursorY) {
+      this.context.lines.push('');
+    }
   }
 
   private async executeArrow(direction: 'Left' | 'Right' | 'Up' | 'Down'): Promise<void> {
@@ -1204,6 +1325,10 @@ export class CDExecutor {
       // Character width ratio for font tuning
       case 'CharWidthRatio':
         this.context.charWidthRatio = parseFloat(value);
+        break;
+      // Animation speed for terminal animations (lolcat -fa, etc.)
+      case 'AnimationSpeed':
+        this.context.animationSpeed = parseInt(value, 10);
         break;
     }
   }

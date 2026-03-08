@@ -408,6 +408,10 @@ System stats with top and df commands.
 Text selection, word movement, and keyboard shortcuts.
 ![keyboard-navigation-demo](./examples/svgs/keyboard-navigation-demo.svg)
 
+### Lolcat Animation
+Animated rainbow text with lolcat -fa.
+![lolcat-animation](./examples/svgs/lolcat-animation.svg)
+
 ### LS Colors
 Colored file listings with ls command.
 ![ls-colors](./examples/svgs/ls-colors.svg)

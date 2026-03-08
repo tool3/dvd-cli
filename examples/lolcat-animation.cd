@@ -1,0 +1,13 @@
+# Lolcat Animation Test
+# Tests animated rainbow text with lolcat -fa
+Output examples/svgs/lolcat-animation.svg
+
+Set Theme dark
+Set Template macos
+Set Title "Lolcat Animation"
+Set AnimationSpeed 50
+
+Type "ls examples/fonts | lolcat -fa"
+Sleep 500ms
+Enter
+Sleep 2s
