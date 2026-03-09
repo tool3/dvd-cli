@@ -392,61 +392,66 @@ function renderDiagonalLine(codePoint: number, ctx: GlyphContext): GlyphResult {
 function renderBlockElement(codePoint: number, ctx: GlyphContext): GlyphResult {
   const { cellWidth, cellHeight, x, y, color } = ctx;
   const crisp = ' shape-rendering="crispEdges"';
+  // Add overlap to prevent sub-pixel gaps between adjacent blocks
+  // This is crucial for gradient mode where each cell has a slightly different color
+  // 1px overlap ensures coverage at various zoom levels and DPI settings
+  const overlap = 1;
   let svg = '';
 
   switch (codePoint) {
     case 0x2580: // Upper half block ▀
-      svg = `<rect x="${x}" y="${y}" width="${cellWidth}" height="${cellHeight / 2}" fill="${color}"${crisp}/>`;
+      svg = `<rect x="${x}" y="${y}" width="${cellWidth + overlap}" height="${cellHeight / 2}" fill="${color}"${crisp}/>`;
       break;
     case 0x2581: // Lower 1/8 ▁
-      svg = `<rect x="${x}" y="${y + cellHeight * 7 / 8}" width="${cellWidth}" height="${cellHeight / 8}" fill="${color}"${crisp}/>`;
+      svg = `<rect x="${x}" y="${y + cellHeight * 7 / 8}" width="${cellWidth + overlap}" height="${cellHeight / 8 + overlap}" fill="${color}"${crisp}/>`;
       break;
     case 0x2582: // Lower 1/4 ▂
-      svg = `<rect x="${x}" y="${y + cellHeight * 3 / 4}" width="${cellWidth}" height="${cellHeight / 4}" fill="${color}"${crisp}/>`;
+      svg = `<rect x="${x}" y="${y + cellHeight * 3 / 4}" width="${cellWidth + overlap}" height="${cellHeight / 4 + overlap}" fill="${color}"${crisp}/>`;
       break;
     case 0x2583: // Lower 3/8 ▃
-      svg = `<rect x="${x}" y="${y + cellHeight * 5 / 8}" width="${cellWidth}" height="${cellHeight * 3 / 8}" fill="${color}"${crisp}/>`;
+      svg = `<rect x="${x}" y="${y + cellHeight * 5 / 8}" width="${cellWidth + overlap}" height="${cellHeight * 3 / 8 + overlap}" fill="${color}"${crisp}/>`;
       break;
     case 0x2584: // Lower half ▄
-      svg = `<rect x="${x}" y="${y + cellHeight / 2}" width="${cellWidth}" height="${cellHeight / 2}" fill="${color}"${crisp}/>`;
+      svg = `<rect x="${x}" y="${y + cellHeight / 2}" width="${cellWidth + overlap}" height="${cellHeight / 2 + overlap}" fill="${color}"${crisp}/>`;
       break;
     case 0x2585: // Lower 5/8 ▅
-      svg = `<rect x="${x}" y="${y + cellHeight * 3 / 8}" width="${cellWidth}" height="${cellHeight * 5 / 8}" fill="${color}"${crisp}/>`;
+      svg = `<rect x="${x}" y="${y + cellHeight * 3 / 8}" width="${cellWidth + overlap}" height="${cellHeight * 5 / 8 + overlap}" fill="${color}"${crisp}/>`;
       break;
     case 0x2586: // Lower 3/4 ▆
-      svg = `<rect x="${x}" y="${y + cellHeight / 4}" width="${cellWidth}" height="${cellHeight * 3 / 4}" fill="${color}"${crisp}/>`;
+      svg = `<rect x="${x}" y="${y + cellHeight / 4}" width="${cellWidth + overlap}" height="${cellHeight * 3 / 4 + overlap}" fill="${color}"${crisp}/>`;
       break;
     case 0x2587: // Lower 7/8 ▇
-      svg = `<rect x="${x}" y="${y + cellHeight / 8}" width="${cellWidth}" height="${cellHeight * 7 / 8}" fill="${color}"${crisp}/>`;
+      svg = `<rect x="${x}" y="${y + cellHeight / 8}" width="${cellWidth + overlap}" height="${cellHeight * 7 / 8 + overlap}" fill="${color}"${crisp}/>`;
       break;
     case 0x2588: // Full block █
-      svg = `<rect x="${x}" y="${y}" width="${cellWidth}" height="${cellHeight}" fill="${color}"${crisp}/>`;
+      svg = `<rect x="${x}" y="${y}" width="${cellWidth + overlap}" height="${cellHeight + overlap}" fill="${color}"${crisp}/>`;
       break;
     case 0x2589: // Left 7/8 ▉
-      svg = `<rect x="${x}" y="${y}" width="${cellWidth * 7 / 8}" height="${cellHeight}" fill="${color}"${crisp}/>`;
+      svg = `<rect x="${x}" y="${y}" width="${cellWidth * 7 / 8}" height="${cellHeight + overlap}" fill="${color}"${crisp}/>`;
       break;
     case 0x258a: // Left 3/4 ▊
-      svg = `<rect x="${x}" y="${y}" width="${cellWidth * 3 / 4}" height="${cellHeight}" fill="${color}"${crisp}/>`;
+      svg = `<rect x="${x}" y="${y}" width="${cellWidth * 3 / 4}" height="${cellHeight + overlap}" fill="${color}"${crisp}/>`;
       break;
     case 0x258b: // Left 5/8 ▋
-      svg = `<rect x="${x}" y="${y}" width="${cellWidth * 5 / 8}" height="${cellHeight}" fill="${color}"${crisp}/>`;
+      svg = `<rect x="${x}" y="${y}" width="${cellWidth * 5 / 8}" height="${cellHeight + overlap}" fill="${color}"${crisp}/>`;
       break;
     case 0x258c: // Left half ▌
-      svg = `<rect x="${x}" y="${y}" width="${cellWidth / 2}" height="${cellHeight}" fill="${color}"${crisp}/>`;
+      svg = `<rect x="${x}" y="${y}" width="${cellWidth / 2}" height="${cellHeight + overlap}" fill="${color}"${crisp}/>`;
       break;
     case 0x258d: // Left 3/8 ▍
-      svg = `<rect x="${x}" y="${y}" width="${cellWidth * 3 / 8}" height="${cellHeight}" fill="${color}"${crisp}/>`;
+      svg = `<rect x="${x}" y="${y}" width="${cellWidth * 3 / 8}" height="${cellHeight + overlap}" fill="${color}"${crisp}/>`;
       break;
     case 0x258e: // Left 1/4 ▎
-      svg = `<rect x="${x}" y="${y}" width="${cellWidth / 4}" height="${cellHeight}" fill="${color}"${crisp}/>`;
+      svg = `<rect x="${x}" y="${y}" width="${cellWidth / 4}" height="${cellHeight + overlap}" fill="${color}"${crisp}/>`;
       break;
     case 0x258f: // Left 1/8 ▏
-      svg = `<rect x="${x}" y="${y}" width="${cellWidth / 8}" height="${cellHeight}" fill="${color}"${crisp}/>`;
+      svg = `<rect x="${x}" y="${y}" width="${cellWidth / 8}" height="${cellHeight + overlap}" fill="${color}"${crisp}/>`;
       break;
     case 0x2590: // Right half ▐
-      svg = `<rect x="${x + cellWidth / 2}" y="${y}" width="${cellWidth / 2}" height="${cellHeight}" fill="${color}"${crisp}/>`;
+      svg = `<rect x="${x + cellWidth / 2}" y="${y}" width="${cellWidth / 2 + overlap}" height="${cellHeight + overlap}" fill="${color}"${crisp}/>`;
       break;
     case 0x2591: // Light shade ░ (25%)
+      // No overlap for shaded blocks - overlapping semi-transparent areas would show darker seams
       svg = `<rect x="${x}" y="${y}" width="${cellWidth}" height="${cellHeight}" fill="${color}" fill-opacity="0.25"${crisp}/>`;
       break;
     case 0x2592: // Medium shade ▒ (50%)
@@ -456,16 +461,16 @@ function renderBlockElement(codePoint: number, ctx: GlyphContext): GlyphResult {
       svg = `<rect x="${x}" y="${y}" width="${cellWidth}" height="${cellHeight}" fill="${color}" fill-opacity="0.75"${crisp}/>`;
       break;
     case 0x2594: // Upper 1/8 ▔
-      svg = `<rect x="${x}" y="${y}" width="${cellWidth}" height="${cellHeight / 8}" fill="${color}"${crisp}/>`;
+      svg = `<rect x="${x}" y="${y}" width="${cellWidth + overlap}" height="${cellHeight / 8}" fill="${color}"${crisp}/>`;
       break;
     case 0x2595: // Right 1/8 ▕
-      svg = `<rect x="${x + cellWidth * 7 / 8}" y="${y}" width="${cellWidth / 8}" height="${cellHeight}" fill="${color}"${crisp}/>`;
+      svg = `<rect x="${x + cellWidth * 7 / 8}" y="${y}" width="${cellWidth / 8 + overlap}" height="${cellHeight + overlap}" fill="${color}"${crisp}/>`;
       break;
     case 0x2596: // Lower left ▖
-      svg = `<rect x="${x}" y="${y + cellHeight / 2}" width="${cellWidth / 2}" height="${cellHeight / 2}" fill="${color}"${crisp}/>`;
+      svg = `<rect x="${x}" y="${y + cellHeight / 2}" width="${cellWidth / 2}" height="${cellHeight / 2 + overlap}" fill="${color}"${crisp}/>`;
       break;
     case 0x2597: // Lower right ▗
-      svg = `<rect x="${x + cellWidth / 2}" y="${y + cellHeight / 2}" width="${cellWidth / 2}" height="${cellHeight / 2}" fill="${color}"${crisp}/>`;
+      svg = `<rect x="${x + cellWidth / 2}" y="${y + cellHeight / 2}" width="${cellWidth / 2 + overlap}" height="${cellHeight / 2 + overlap}" fill="${color}"${crisp}/>`;
       break;
     case 0x2598: // Upper left ▘
       svg = `<rect x="${x}" y="${y}" width="${cellWidth / 2}" height="${cellHeight / 2}" fill="${color}"${crisp}/>`;
@@ -473,40 +478,40 @@ function renderBlockElement(codePoint: number, ctx: GlyphContext): GlyphResult {
     case 0x2599: // Upper left, lower left, lower right ▙
       svg = [
         `<rect x="${x}" y="${y}" width="${cellWidth / 2}" height="${cellHeight / 2}" fill="${color}"${crisp}/>`,
-        `<rect x="${x}" y="${y + cellHeight / 2}" width="${cellWidth}" height="${cellHeight / 2}" fill="${color}"${crisp}/>`,
+        `<rect x="${x}" y="${y + cellHeight / 2}" width="${cellWidth + overlap}" height="${cellHeight / 2 + overlap}" fill="${color}"${crisp}/>`,
       ].join('');
       break;
     case 0x259a: // Upper left, lower right ▚
       svg = [
         `<rect x="${x}" y="${y}" width="${cellWidth / 2}" height="${cellHeight / 2}" fill="${color}"${crisp}/>`,
-        `<rect x="${x + cellWidth / 2}" y="${y + cellHeight / 2}" width="${cellWidth / 2}" height="${cellHeight / 2}" fill="${color}"${crisp}/>`,
+        `<rect x="${x + cellWidth / 2}" y="${y + cellHeight / 2}" width="${cellWidth / 2 + overlap}" height="${cellHeight / 2 + overlap}" fill="${color}"${crisp}/>`,
       ].join('');
       break;
     case 0x259b: // Upper left, upper right, lower left ▛
       svg = [
-        `<rect x="${x}" y="${y}" width="${cellWidth}" height="${cellHeight / 2}" fill="${color}"${crisp}/>`,
-        `<rect x="${x}" y="${y + cellHeight / 2}" width="${cellWidth / 2}" height="${cellHeight / 2}" fill="${color}"${crisp}/>`,
+        `<rect x="${x}" y="${y}" width="${cellWidth + overlap}" height="${cellHeight / 2}" fill="${color}"${crisp}/>`,
+        `<rect x="${x}" y="${y + cellHeight / 2}" width="${cellWidth / 2}" height="${cellHeight / 2 + overlap}" fill="${color}"${crisp}/>`,
       ].join('');
       break;
     case 0x259c: // Upper left, upper right, lower right ▜
       svg = [
-        `<rect x="${x}" y="${y}" width="${cellWidth}" height="${cellHeight / 2}" fill="${color}"${crisp}/>`,
-        `<rect x="${x + cellWidth / 2}" y="${y + cellHeight / 2}" width="${cellWidth / 2}" height="${cellHeight / 2}" fill="${color}"${crisp}/>`,
+        `<rect x="${x}" y="${y}" width="${cellWidth + overlap}" height="${cellHeight / 2}" fill="${color}"${crisp}/>`,
+        `<rect x="${x + cellWidth / 2}" y="${y + cellHeight / 2}" width="${cellWidth / 2 + overlap}" height="${cellHeight / 2 + overlap}" fill="${color}"${crisp}/>`,
       ].join('');
       break;
     case 0x259d: // Upper right ▝
-      svg = `<rect x="${x + cellWidth / 2}" y="${y}" width="${cellWidth / 2}" height="${cellHeight / 2}" fill="${color}"${crisp}/>`;
+      svg = `<rect x="${x + cellWidth / 2}" y="${y}" width="${cellWidth / 2 + overlap}" height="${cellHeight / 2}" fill="${color}"${crisp}/>`;
       break;
     case 0x259e: // Upper right, lower left ▞
       svg = [
-        `<rect x="${x + cellWidth / 2}" y="${y}" width="${cellWidth / 2}" height="${cellHeight / 2}" fill="${color}"${crisp}/>`,
-        `<rect x="${x}" y="${y + cellHeight / 2}" width="${cellWidth / 2}" height="${cellHeight / 2}" fill="${color}"${crisp}/>`,
+        `<rect x="${x + cellWidth / 2}" y="${y}" width="${cellWidth / 2 + overlap}" height="${cellHeight / 2}" fill="${color}"${crisp}/>`,
+        `<rect x="${x}" y="${y + cellHeight / 2}" width="${cellWidth / 2}" height="${cellHeight / 2 + overlap}" fill="${color}"${crisp}/>`,
       ].join('');
       break;
     case 0x259f: // Upper right, lower left, lower right ▟
       svg = [
-        `<rect x="${x + cellWidth / 2}" y="${y}" width="${cellWidth / 2}" height="${cellHeight / 2}" fill="${color}"${crisp}/>`,
-        `<rect x="${x}" y="${y + cellHeight / 2}" width="${cellWidth}" height="${cellHeight / 2}" fill="${color}"${crisp}/>`,
+        `<rect x="${x + cellWidth / 2}" y="${y}" width="${cellWidth / 2 + overlap}" height="${cellHeight / 2}" fill="${color}"${crisp}/>`,
+        `<rect x="${x}" y="${y + cellHeight / 2}" width="${cellWidth + overlap}" height="${cellHeight / 2 + overlap}" fill="${color}"${crisp}/>`,
       ].join('');
       break;
     default:

@@ -28,6 +28,7 @@ interface PipeArgs {
   width?: number;
   height?: number;
   fontSize?: number;
+  window?: string;
 }
 
 interface StdinResult {
@@ -129,6 +130,7 @@ function renderFrame(
     fontSize: number;
     theme: typeof themes.dark;
     title?: string;
+    template: 'macos' | 'windows' | 'minimal';
   }
 ): string {
   const charWidth = options.fontSize * 0.6;
@@ -148,7 +150,7 @@ function renderFrame(
   // Emit SVG
   const { svg } = emit(rows, null, false, {
     theme: options.theme,
-    template: 'macos',
+    template: options.template,
     width: options.width,
     height: options.height,
     fontSize: options.fontSize,
@@ -208,6 +210,7 @@ export async function pipeCommand(args: PipeArgs): Promise<void> {
     const fontSize = args.fontSize || 14;
     const theme = args.theme ? (themes as unknown as Record<string, typeof themes.dark>)[args.theme] || themes.dark : themes.dark;
     const title = args.title || 'Terminal Animation';
+    const template = (args.window || 'macos') as 'macos' | 'windows' | 'minimal';
 
     // Auto-detect dimensions from content if not specified
     let width = args.width;
@@ -261,7 +264,7 @@ export async function pipeCommand(args: PipeArgs): Promise<void> {
 
     // Render each frame to SVG
     const frames: TerminalFrame[] = frameContents.map((content, i) => {
-      const svg = renderFrame(content, { width, height, fontSize, theme, title });
+      const svg = renderFrame(content, { width, height, fontSize, theme, title, template });
       return {
         timestamp: i * frameDuration,
         svg,

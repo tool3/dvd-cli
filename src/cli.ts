@@ -66,6 +66,28 @@ const createParser = () =>
       type: 'number',
       describe: 'Output height in pixels (auto-detected if not specified)',
     })
+    .option('title', {
+      type: 'string',
+      describe: 'Window title text',
+    })
+    .option('theme', {
+      alias: 'T',
+      type: 'string',
+      choices: ['dark', 'dracula', 'nord', 'monokai', 'oneDark', 'catppuccinMocha', 'tokyoNight'],
+      describe: 'Color theme',
+      default: 'dark',
+    })
+    .option('font-size', {
+      type: 'number',
+      describe: 'Font size in pixels',
+      default: 14,
+    })
+    .option('window', {
+      type: 'string',
+      choices: ['macos', 'windows', 'minimal'],
+      describe: 'Window style',
+      default: 'macos',
+    })
     .command(
       'new [name]',
       'Create a new .cd script from template',
@@ -165,6 +187,10 @@ const run = async (): Promise<void> => {
         'pause-at-end': argv['pause-at-end'],
         width: argv.width,
         height: argv.height,
+        title: argv.title,
+        theme: argv.theme,
+        fontSize: argv['font-size'],
+        window: argv.window,
       });
     } catch (err) {
       console.error(err instanceof Error ? err.message : String(err));
