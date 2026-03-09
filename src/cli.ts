@@ -7,6 +7,7 @@
 import yargs from 'yargs';
 import { hideBin } from 'yargs/helpers';
 import { renderCommand } from './commands/render';
+import { pipeCommand } from './commands/pipe';
 import { newCommand } from './commands/new';
 import { themesCommand } from './commands/themes';
 import { validateCommand } from './commands/validate';
@@ -54,6 +55,16 @@ const createParser = () =>
       type: 'boolean',
       describe: 'Use delta encoding (experimental, NOT compatible with GitHub)',
       default: false,
+    })
+    .option('width', {
+      alias: 'W',
+      type: 'number',
+      describe: 'Output width in pixels (auto-detected if not specified)',
+    })
+    .option('height', {
+      alias: 'H',
+      type: 'number',
+      describe: 'Output height in pixels (auto-detected if not specified)',
     })
     .command(
       'new [name]',
@@ -114,6 +125,7 @@ const createParser = () =>
     )
     .example('$0 demo.cd', 'Render demo.cd to demo.svg')
     .example('$0 script.cd -o output.svg', 'Render with custom output')
+    .example('command | $0 -o output.svg', 'Read from stdin (auto-detected)')
     .example('$0 new my-demo --template showcase', 'Create new script from template')
     .example('$0 themes', 'List available themes')
     .example('$0 validate script.cd', 'Validate a script')
@@ -139,6 +151,27 @@ const run = async (): Promise<void> => {
 
   // Get the file argument (first positional argument)
   const file = argv._[0] as string | undefined;
+
+  // Auto-detect pipe mode: if stdin is not a TTY, we're receiving piped input
+  const isPiped = !process.stdin.isTTY;
+
+  // Check for pipe mode (explicit '-' or auto-detected pipe)
+  if (file === '-' || (isPiped && !file)) {
+    try {
+      await pipeCommand({
+        output: argv.output,
+        verbose: argv.verbose,
+        loop: argv.loop,
+        'pause-at-end': argv['pause-at-end'],
+        width: argv.width,
+        height: argv.height,
+      });
+    } catch (err) {
+      console.error(err instanceof Error ? err.message : String(err));
+      process.exit(1);
+    }
+    return;
+  }
 
   // Show help if no file was provided
   if (!file) {

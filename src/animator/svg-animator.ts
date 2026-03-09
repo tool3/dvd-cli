@@ -175,9 +175,21 @@ export async function createAnimatedSVG(
   const borderRadius = getBorderRadius(animationFrames[0].svg);
 
   // Calculate duration in seconds (use original frames for total duration)
-  const totalDuration = frames[frames.length - 1].timestamp;
-  const pauseAtEnd = options.pauseAtEnd || 1000;
-  const animationDurationMs = totalDuration + pauseAtEnd;
+  const lastFrameTimestamp = frames[frames.length - 1].timestamp;
+  const pauseAtEnd = options.pauseAtEnd ?? 1000;
+
+  // Calculate frame duration (time between frames)
+  // For seamless looping, each frame including the last needs equal display time
+  const frameDuration = frames.length > 1
+    ? frames[1].timestamp - frames[0].timestamp
+    : lastFrameTimestamp;
+
+  // For seamless looping (pauseAtEnd <= 0), add one frame duration so last frame
+  // gets equal time before looping back to first frame
+  const seamlessLoop = pauseAtEnd <= 0;
+  const animationDurationMs = seamlessLoop
+    ? lastFrameTimestamp + frameDuration  // Each frame gets equal time
+    : lastFrameTimestamp + pauseAtEnd;     // Last frame holds for pause duration
   const animationDurationS = (animationDurationMs / 1000).toFixed(2);
   const repeatCount = options.loop !== false ? 'indefinite' : '1';
 
