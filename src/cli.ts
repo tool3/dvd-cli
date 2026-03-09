@@ -68,6 +68,7 @@ const createParser = () =>
     })
     .option('title', {
       type: 'string',
+      alias: 't',
       describe: 'Window title text',
     })
     .option('theme', {
@@ -82,11 +83,26 @@ const createParser = () =>
       describe: 'Font size in pixels',
       default: 14,
     })
-    .option('window', {
+    .option('line-height', {
+      type: 'number',
+      describe: 'Line height multiplier',
+      default: 1.4,
+    })
+    .option('template', {
       type: 'string',
       choices: ['macos', 'windows', 'minimal'],
-      describe: 'Window style',
+      describe: 'Window template style',
       default: 'macos',
+    })
+    .option('padding', {
+      type: 'number',
+      describe: 'Content padding in pixels',
+      default: 16,
+    })
+    .option('border-radius', {
+      type: 'number',
+      describe: 'Window border radius in pixels',
+      default: 8,
     })
     .command(
       'new [name]',
@@ -190,7 +206,10 @@ const run = async (): Promise<void> => {
         title: argv.title,
         theme: argv.theme,
         fontSize: argv['font-size'],
-        window: argv.window,
+        lineHeight: argv['line-height'],
+        template: argv.template as string,
+        padding: argv.padding,
+        borderRadius: argv['border-radius'],
       });
     } catch (err) {
       console.error(err instanceof Error ? err.message : String(err));

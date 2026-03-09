@@ -28,7 +28,10 @@ interface PipeArgs {
   width?: number;
   height?: number;
   fontSize?: number;
-  window?: string;
+  lineHeight?: number;
+  template?: string;
+  padding?: number;
+  borderRadius?: number;
 }
 
 interface StdinResult {
@@ -128,17 +131,19 @@ function renderFrame(
     width: number;
     height: number;
     fontSize: number;
+    lineHeight: number;
+    padding: number;
+    borderRadius: number;
     theme: typeof themes.dark;
     title?: string;
     template: 'macos' | 'windows' | 'minimal';
   }
 ): string {
   const charWidth = options.fontSize * 0.6;
-  const lineHeight = options.fontSize * 1.4;
-  const padding = 16;
+  const lineHeightPx = options.fontSize * options.lineHeight;
   const headerHeight = 40;
-  const gridWidth = Math.floor((options.width - padding * 2) / charWidth);
-  const gridHeight = Math.floor((options.height - headerHeight - padding * 2) / lineHeight);
+  const gridWidth = Math.floor((options.width - options.padding * 2) / charWidth);
+  const gridHeight = Math.floor((options.height - headerHeight - options.padding * 2) / lineHeightPx);
 
   // Process content through VTerminal
   let grid = createGridState(gridWidth, gridHeight);
@@ -155,8 +160,10 @@ function renderFrame(
     height: options.height,
     fontSize: options.fontSize,
     title: options.title,
-    lineHeight: options.fontSize * 1.4,
-    charWidth: options.fontSize * 0.6,
+    lineHeight: lineHeightPx,
+    charWidth: charWidth,
+    padding: options.padding,
+    borderRadius: options.borderRadius,
   });
 
   return svg;
@@ -208,9 +215,12 @@ export async function pipeCommand(args: PipeArgs): Promise<void> {
 
     // Configuration
     const fontSize = args.fontSize || 14;
+    const lineHeight = args.lineHeight || 1.4;
+    const padding = args.padding || 16;
+    const borderRadius = args.borderRadius || 8;
     const theme = args.theme ? (themes as unknown as Record<string, typeof themes.dark>)[args.theme] || themes.dark : themes.dark;
     const title = args.title || 'Terminal Animation';
-    const template = (args.window || 'macos') as 'macos' | 'windows' | 'minimal';
+    const template = (args.template || 'macos') as 'macos' | 'windows' | 'minimal';
 
     // Auto-detect dimensions from content if not specified
     let width = args.width;
@@ -226,15 +236,14 @@ export async function pipeCommand(args: PipeArgs): Promise<void> {
       const lineCount = Math.max(lines.length, 10);
 
       const charWidth = fontSize * 0.6;
-      const lineHeight = fontSize * 1.4;
-      const padding = 16;
+      const lineHeightPx = fontSize * lineHeight;
       const headerHeight = 40;
 
       if (!width) {
         width = Math.ceil(maxLineLength * charWidth + padding * 2);
       }
       if (!height) {
-        height = Math.ceil(lineCount * lineHeight + headerHeight + padding * 2);
+        height = Math.ceil(lineCount * lineHeightPx + headerHeight + padding * 2);
       }
 
       if (args.verbose) {
@@ -264,7 +273,7 @@ export async function pipeCommand(args: PipeArgs): Promise<void> {
 
     // Render each frame to SVG
     const frames: TerminalFrame[] = frameContents.map((content, i) => {
-      const svg = renderFrame(content, { width, height, fontSize, theme, title, template });
+      const svg = renderFrame(content, { width, height, fontSize, lineHeight, padding, borderRadius, theme, title, template });
       return {
         timestamp: i * frameDuration,
         svg,
