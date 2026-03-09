@@ -603,7 +603,9 @@ export class CDExecutor {
     if (command) {
       this.context.isExecutingCommand = true;
       await this.sleep(100);
+      const captureStart = Date.now();
       this.captureFrame(false);
+      this.context.captureOverhead += Date.now() - captureStart;
       await this.executeShellCommand(command);
     } else {
       await this.sleep(100);
@@ -616,7 +618,11 @@ export class CDExecutor {
       // Use configured shell (defaults to user's $SHELL or /bin/sh)
       const child = spawn(this.context.shell, ['-c', command], {
         env: { ...process.env, FORCE_COLOR: '1', CLICOLOR_FORCE: '1' },
+        stdio: ['pipe', 'pipe', 'pipe'],
       });
+
+      // Close stdin immediately - we don't need to send any input
+      child.stdin?.end();
 
       let output = '';
       let prevLineCount = 0;
@@ -649,6 +655,7 @@ export class CDExecutor {
       // For animated output (like lolcat -fa), process frames in real-time
       // Animation state tracking
       let isAnimatedOutput = false;
+      let animationType: 'none' | 'cursor-restore' | 'terminal-reset' = 'none'; // Track which animation type
       let animationBuffer = ''; // Buffer for incomplete sequences
       let finalizedLines: string[] = []; // Lines that have received a newline
       let currentAnimatingLine = ''; // Current line being animated
@@ -742,18 +749,53 @@ export class CDExecutor {
         animationBuffer = segments[segments.length - 1];
       };
 
+      // Deferred frames for terminal-reset animations
+      // We buffer raw frame content during data events, then render all frames
+      // after process close to avoid blocking the event loop and losing data
+      const deferredFrames: string[] = [];
+
       const processOutput = (data: string) => {
         const dataStr = data;
 
         // Check for animation markers on first data
         if (!isAnimatedOutput) {
-          if (dataStr.includes('\x1b8') || dataStr.includes('\x1b[?25l')) {
+          // \x1bc = reset terminal (full screen animations like htop, chartscii)
+          // \x1b8 = restore cursor (lolcat style animation)
+          // \x1b[?25l = hide cursor (often paired with animations)
+          if (dataStr.includes('\x1bc')) {
             isAnimatedOutput = true;
+            animationType = 'terminal-reset';
+          } else if (dataStr.includes('\x1b8') || dataStr.includes('\x1b[?25l')) {
+            isAnimatedOutput = true;
+            animationType = 'cursor-restore';
           }
         }
 
         if (isAnimatedOutput) {
-          processAnimatedOutput(dataStr);
+          // Handle based on animation type
+          if (animationType === 'terminal-reset') {
+            // Terminal reset style (\x1bc) - buffer ALL data and split on resets
+            // IMPORTANT: Don't render frames here - just store raw content
+            // Rendering is deferred to after process close to avoid blocking event loop
+            animationBuffer += dataStr;
+
+            // Extract complete frames (content between \x1bc markers)
+            if (animationBuffer.includes('\x1bc')) {
+              const parts = animationBuffer.split('\x1bc');
+              // Keep the last part in buffer (may be incomplete)
+              animationBuffer = parts.pop() || '';
+
+              // Store complete frames for deferred rendering
+              for (const frame of parts) {
+                if (frame.trim()) {
+                  deferredFrames.push(frame);
+                }
+              }
+            }
+          } else {
+            // Cursor restore style (\x1b8) - use existing lolcat-style processing
+            processAnimatedOutput(dataStr);
+          }
         } else {
           processOutputLineByLine(dataStr);
         }
@@ -769,9 +811,65 @@ export class CDExecutor {
 
       child.on('close', () => {
         if (isAnimatedOutput) {
-          // Process any remaining buffer content
-          if (animationBuffer) {
-            processAnimationFrame(animationBuffer);
+          if (animationType === 'terminal-reset') {
+            // Add any remaining buffer content as final frame
+            if (animationBuffer && animationBuffer.trim()) {
+              deferredFrames.push(animationBuffer);
+            }
+
+            // Now render all deferred frames (process has exited, no more data coming)
+
+            for (let i = 0; i < deferredFrames.length; i++) {
+              const frame = deferredFrames[i];
+
+              // Parse frame content into lines
+              finalizedLines = [];
+              const lines = frame.split('\n');
+              for (const line of lines) {
+                if (line) finalizedLines.push(line);
+              }
+
+              // Update context with frame content
+              for (let j = 0; j < finalizedLines.length; j++) {
+                this.context.lines[outputStartLine + j] = finalizedLines[j];
+              }
+
+              // Clear any extra lines from previous frame
+              const totalLines = finalizedLines.length;
+              for (let j = totalLines; j < this.context.lines.length - outputStartLine; j++) {
+                this.context.lines[outputStartLine + j] = '';
+              }
+
+              this.context.cursorY = outputStartLine + totalLines;
+              this.context.cursorX = 0;
+
+              // Capture frame with synthetic timing
+              const syntheticTimestamp = animationStartTime + i * this.context.animationSpeed;
+              const originalStartTime = this.context.startTime;
+              const originalOverhead = this.context.captureOverhead;
+              this.context.startTime = Date.now() - syntheticTimestamp;
+              this.context.captureOverhead = 0;
+
+              this.captureFrame(false);
+
+              this.context.startTime = originalStartTime;
+              this.context.captureOverhead = originalOverhead;
+            }
+
+            // Calculate the expected timestamp for the next frame (after animation ends)
+            const lastAnimationTimestamp = animationStartTime + (deferredFrames.length - 1) * this.context.animationSpeed;
+            // Adjust overhead so the next frame has correct timestamp (animation end + 100ms for setTimeout)
+            // Formula: nextTimestamp = Date.now() - startTime - overhead
+            // We want: nextTimestamp = lastAnimationTimestamp + 100
+            // So: overhead = Date.now() - startTime - (lastAnimationTimestamp + 100)
+            this.context.captureOverhead = Date.now() - this.context.startTime - lastAnimationTimestamp - 100;
+
+            animationFrameCount = deferredFrames.length;
+          } else {
+            // cursor-restore style (\x1b8) - process remaining buffer
+            if (animationBuffer && animationBuffer.trim()) {
+              processAnimationFrame(animationBuffer);
+            }
           }
 
           // Finalize cursor position
@@ -805,7 +903,9 @@ export class CDExecutor {
         this.context.currentLine = '';
 
         setTimeout(() => {
+          const captureStart = Date.now();
           this.captureFrame(true);
+          this.context.captureOverhead += Date.now() - captureStart;
           resolve();
         }, 100);
       });

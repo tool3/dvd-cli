@@ -10,6 +10,7 @@
 
 import type { SpanRow, Span, CellStyle, Theme, EmitterOptions, CursorPosition } from '../types';
 import { coalesceBackgrounds, mergeVerticalBackgrounds, type BgRect, type RenderConfig } from './coalescer';
+import { containsCustomGlyphs, renderCustomGlyph, type GlyphContext } from './customGlyphs';
 
 // ============================================================================
 // SVG Optimization Utilities
@@ -456,38 +457,77 @@ export function emit(
   // Text layer
   // Use rx() for x-coordinates to round to half-pixels for better text alignment
   parts.push('<g class="text-layer">');
+
+  // Glyph context for custom rendering (box drawing, block elements, etc.)
+  const glyphLineWidth = Math.max(1, fontSize * 0.08);
+  const glyphHeavyLineWidth = glyphLineWidth * 2;
+
   for (const row of rows) {
     for (const span of row) {
-      const x = rx(padding + span.col * charWidth);
-      const y = r(contentStartY + span.row * lineHeight);
+      const baseX = rx(padding + span.col * charWidth);
+      const baseY = r(contentStartY + span.row * lineHeight);
 
       const classes = ['text', ...styleToClasses(span.style)];
 
       // Foreground color - use class if it's a theme color, inline if truecolor
       let fillAttr = '';
+      let color = theme.foreground; // Default color for custom glyphs
       if (span.style.fg) {
         if (isTruecolor(span.style.fg)) {
           fillAttr = ` fill="${span.style.fg}"`;
+          color = span.style.fg;
         } else {
           // Check if it matches a theme color
           const colorClass = getColorClass(span.style.fg, theme);
           if (colorClass) {
             classes.push(colorClass);
+            // Get actual color for custom glyphs
+            color = getColorFromClass(colorClass, theme) || theme.foreground;
           } else {
             fillAttr = ` fill="${span.style.fg}"`;
+            color = span.style.fg;
           }
         }
       } else {
         classes.push('fg');
       }
 
-      const classAttr = classes.join(' ');
       // Trim trailing whitespace unless there's a background color that needs to extend
       const rawText = span.style.bg ? span.text : span.text.trimEnd();
       if (!rawText) continue; // Skip empty text spans
-      const text = escapeXml(rawText);
 
-      parts.push(`<text class="${classAttr}" x="${fmt(x)}" y="${fmt(y)}"${fillAttr}>${text}</text>`);
+      // Check if this span contains custom glyphs (box drawing, block elements, etc.)
+      if (containsCustomGlyphs(rawText)) {
+        // Render character by character for custom glyphs
+        let charOffset = 0;
+        for (const char of rawText) {
+          const charX = baseX + charOffset * charWidth;
+          const glyphCtx: GlyphContext = {
+            cellWidth: charWidth,
+            cellHeight: lineHeight,
+            x: charX,
+            y: baseY,
+            color,
+            lineWidth: glyphLineWidth,
+            heavyLineWidth: glyphHeavyLineWidth,
+          };
+
+          const result = renderCustomGlyph(char, glyphCtx);
+          if (result.handled) {
+            parts.push(result.svg);
+          } else {
+            // Regular character, render as text
+            const classAttr = classes.join(' ');
+            parts.push(`<text class="${classAttr}" x="${fmt(charX)}" y="${fmt(baseY)}"${fillAttr}>${escapeXml(char)}</text>`);
+          }
+          charOffset++;
+        }
+      } else {
+        // No custom glyphs, render entire span as text (faster)
+        const classAttr = classes.join(' ');
+        const text = escapeXml(rawText);
+        parts.push(`<text class="${classAttr}" x="${fmt(baseX)}" y="${fmt(baseY)}"${fillAttr}>${text}</text>`);
+      }
     }
   }
   parts.push('</g>');
@@ -624,6 +664,34 @@ function getColorClass(color: string, theme: Theme, isBackground = false): strin
   }
 
   return colorMap[color] ?? null;
+}
+
+/**
+ * Get the actual color value from a CSS class name
+ * Reverse of getColorClass - used for custom glyph rendering
+ */
+function getColorFromClass(className: string, theme: Theme): string | null {
+  const classToColor: Record<string, string> = {
+    'fg': theme.foreground,
+    'f0': theme.black,
+    'f1': theme.red,
+    'f2': theme.green,
+    'f3': theme.yellow,
+    'f4': theme.blue,
+    'f5': theme.magenta,
+    'f6': theme.cyan,
+    'f7': theme.white,
+    'f8': theme.brightBlack,
+    'f9': theme.brightRed,
+    'f10': theme.brightGreen,
+    'f11': theme.brightYellow,
+    'f12': theme.brightBlue,
+    'f13': theme.brightMagenta,
+    'f14': theme.brightCyan,
+    'f15': theme.brightWhite,
+  };
+
+  return classToColor[className] ?? null;
 }
 
 /**
