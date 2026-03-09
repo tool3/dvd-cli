@@ -6,7 +6,13 @@
 import { readFileSync, writeFileSync } from 'node:fs';
 import { parseCD } from '../parser/cd-parser';
 import { CDExecutor } from '../executor/cd-executor';
-import { createAnimatedSVG, getAnimationMetadata } from '../animator/svg-animator';
+import {
+  createAnimatedSVG,
+  getAnimationMetadata,
+  extractStaticElements,
+} from '../animator/svg-animator';
+import { generateDeltaAnimatedSVG } from '../animator/delta-encoder';
+import { optimizeSvg } from '../animator/svg-optimizer';
 import { createSpinner } from '../utils/spinner';
 import type { AnimationOptions } from '../animator/svg-animator';
 
@@ -17,6 +23,7 @@ interface RenderArgs {
   loop?: boolean;
   'pause-at-end'?: number;
   fps?: number;
+  delta?: boolean;
 }
 
 /**
@@ -165,7 +172,37 @@ export async function renderCommand(args: RenderArgs): Promise<void> {
       pauseAtEnd: args['pause-at-end'] || 1000,
     };
 
-    const svg = await createAnimatedSVG(frames, animationOptions);
+    let svg: string;
+
+    if (args.delta) {
+      // Use delta encoding for smaller file size
+      console.log('\x1b[33m⚠ Delta encoding uses JavaScript - NOT compatible with GitHub READMEs\x1b[0m');
+      if (args.verbose) {
+        console.log('Using delta encoding (experimental)');
+      }
+      const staticElements = extractStaticElements(frames);
+      svg = generateDeltaAnimatedSVG(frames, {
+        ...staticElements,
+        loop: animationOptions.loop !== false,
+      });
+    } else {
+      svg = await createAnimatedSVG(frames, animationOptions);
+    }
+
+    // Optimize SVG (skip for delta which uses JS)
+    if (!args.delta) {
+      if (!args.verbose) {
+        spinner.update('Optimizing SVG');
+      }
+      const originalSize = Buffer.byteLength(svg, 'utf-8');
+      svg = optimizeSvg(svg);
+      const optimizedSize = Buffer.byteLength(svg, 'utf-8');
+      if (args.verbose) {
+        const savings = ((1 - optimizedSize / originalSize) * 100).toFixed(1);
+        console.log(`Optimized: ${(originalSize / 1024).toFixed(0)}KB → ${(optimizedSize / 1024).toFixed(0)}KB (${savings}% reduction)`);
+      }
+    }
+
     const metadata = getAnimationMetadata(frames);
 
     // Write output

@@ -49,6 +49,12 @@ const createParser = () =>
       type: 'number',
       describe: 'Frames per second',
     })
+    .option('delta', {
+      alias: 'd',
+      type: 'boolean',
+      describe: 'Use delta encoding (experimental, NOT compatible with GitHub)',
+      default: false,
+    })
     .command(
       'new [name]',
       'Create a new .cd script from template',
@@ -149,6 +155,7 @@ const run = async (): Promise<void> => {
       loop: argv.loop,
       'pause-at-end': argv['pause-at-end'],
       fps: argv.fps,
+      delta: argv.delta,
     });
   } catch (err) {
     console.error(err instanceof Error ? err.message : String(err));

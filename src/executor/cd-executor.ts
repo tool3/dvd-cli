@@ -660,8 +660,8 @@ export class CDExecutor {
       let finalizedLines: string[] = []; // Lines that have received a newline
       let currentAnimatingLine = ''; // Current line being animated
       let animationFrameCount = 0;
-      // Track synthetic time offset for animation frames
-      // This ensures frames are evenly spaced even if data arrives in bursts
+      // Track real timestamps when frames arrive for auto-detecting animation speed
+      const frameArrivalTimes: number[] = [];
       // Record start time NOW (when command starts) so animation begins immediately after Enter
       const animationStartTime = Date.now() - this.context.startTime - this.context.captureOverhead;
 
@@ -785,10 +785,12 @@ export class CDExecutor {
               // Keep the last part in buffer (may be incomplete)
               animationBuffer = parts.pop() || '';
 
-              // Store complete frames for deferred rendering
+              // Store complete frames for deferred rendering and track arrival time
+              const now = Date.now();
               for (const frame of parts) {
                 if (frame.trim()) {
                   deferredFrames.push(frame);
+                  frameArrivalTimes.push(now);
                 }
               }
             }
@@ -809,16 +811,32 @@ export class CDExecutor {
         processOutput(data.toString());
       });
 
-      child.on('close', () => {
+      child.on('close', async () => {
         if (isAnimatedOutput) {
           if (animationType === 'terminal-reset') {
             // Add any remaining buffer content as final frame
             if (animationBuffer && animationBuffer.trim()) {
               deferredFrames.push(animationBuffer);
+              frameArrivalTimes.push(Date.now());
             }
 
-            // Now render all deferred frames (process has exited, no more data coming)
+            // Auto-detect animation speed from frame arrival times
+            // Calculate the total duration and divide by frame count
+            let detectedSpeed = this.context.animationSpeed; // fallback to default
+            if (frameArrivalTimes.length >= 2) {
+              const firstTime = frameArrivalTimes[0];
+              const lastTime = frameArrivalTimes[frameArrivalTimes.length - 1];
+              const totalRealDuration = lastTime - firstTime;
+              const frameCount = deferredFrames.length;
 
+              if (totalRealDuration > 0 && frameCount > 1) {
+                // Calculate average ms per frame from real timing
+                detectedSpeed = Math.max(10, Math.round(totalRealDuration / (frameCount - 1)));
+              }
+            }
+
+            // Render deferred frames - process ALL frames synchronously for speed
+            // The spinner will be unresponsive but rendering will be much faster
             for (let i = 0; i < deferredFrames.length; i++) {
               const frame = deferredFrames[i];
 
@@ -843,8 +861,8 @@ export class CDExecutor {
               this.context.cursorY = outputStartLine + totalLines;
               this.context.cursorX = 0;
 
-              // Capture frame with synthetic timing
-              const syntheticTimestamp = animationStartTime + i * this.context.animationSpeed;
+              // Capture frame with synthetic timing using auto-detected speed
+              const syntheticTimestamp = animationStartTime + i * detectedSpeed;
               const originalStartTime = this.context.startTime;
               const originalOverhead = this.context.captureOverhead;
               this.context.startTime = Date.now() - syntheticTimestamp;
@@ -857,11 +875,8 @@ export class CDExecutor {
             }
 
             // Calculate the expected timestamp for the next frame (after animation ends)
-            const lastAnimationTimestamp = animationStartTime + (deferredFrames.length - 1) * this.context.animationSpeed;
+            const lastAnimationTimestamp = animationStartTime + (deferredFrames.length - 1) * detectedSpeed;
             // Adjust overhead so the next frame has correct timestamp (animation end + 100ms for setTimeout)
-            // Formula: nextTimestamp = Date.now() - startTime - overhead
-            // We want: nextTimestamp = lastAnimationTimestamp + 100
-            // So: overhead = Date.now() - startTime - (lastAnimationTimestamp + 100)
             this.context.captureOverhead = Date.now() - this.context.startTime - lastAnimationTimestamp - 100;
 
             animationFrameCount = deferredFrames.length;

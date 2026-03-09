@@ -37,11 +37,11 @@ function extractStyleBlock(svg: string): string {
 }
 
 /**
- * Extract SVG body content (everything inside <svg>)
- * Strips <style> blocks, <defs> blocks (for clip-paths), and outer clip groups
- * since these are handled at the animation level
+ * Extract only dynamic content from SVG frame (text, cursor, bg-rects)
+ * Strips static elements (window-bg, chrome, footer) to avoid duplication
+ * These are rendered once outside the animated frames
  */
-function extractSVGBody(svg: string, frameId: string): string {
+function extractDynamicContent(svg: string, frameId: string): string {
   const contentMatch = svg.match(/<svg[^>]*>([\s\S]*)<\/svg>/);
   if (!contentMatch) return '';
 
@@ -53,17 +53,53 @@ function extractSVGBody(svg: string, frameId: string): string {
   // Strip defs blocks (clip-paths handled at animation level)
   content = content.replace(/<defs>[\s\S]*?<\/defs>/g, '');
 
-  // Strip outer clip-path group (we use a global one at animation level)
-  // Match opening <g clip-path="..."> at start and closing </g> at end
+  // Strip outer clip-path group
   content = content.replace(/^\s*<g clip-path="[^"]*">\s*/g, '');
   content = content.replace(/\s*<\/g>\s*$/g, '');
+
+  // Strip static elements that don't change between frames:
+  // 1. Window background rect
+  content = content.replace(/<rect class="window-bg"[^>]*\/>/g, '');
+  // 2. Chrome group (title bar with circles and title)
+  content = content.replace(/<g class="chrome">[\s\S]*?<\/g>/g, '');
+  // 3. Footer group
+  content = content.replace(/<g class="footer">[\s\S]*?<\/g>/g, '');
+  // 4. Watermark
+  content = content.replace(/<text class="watermark"[^>]*>[\s\S]*?<\/text>/g, '');
 
   // Make IDs unique (but don't modify classes - they contain color definitions)
   content = content
     .replace(/id="([^"]*)"/g, `id="$1-${frameId}"`)
     .replace(/url\(#([^)]*)\)/g, `url(#$1-${frameId})`);
 
-  return content;
+  // Clean up any empty lines
+  content = content.replace(/^\s*[\r\n]/gm, '');
+
+  return content.trim();
+}
+
+/**
+ * Extract static chrome content from first frame
+ */
+function extractChrome(svg: string): string {
+  const chromeMatch = svg.match(/<g class="chrome">([\s\S]*?)<\/g>/);
+  return chromeMatch ? chromeMatch[1] : '';
+}
+
+/**
+ * Extract static footer content from first frame
+ */
+function extractFooter(svg: string): string {
+  const footerMatch = svg.match(/<g class="footer">([\s\S]*?)<\/g>/);
+  return footerMatch ? footerMatch[1] : '';
+}
+
+/**
+ * Extract watermark from first frame
+ */
+function extractWatermark(svg: string): string {
+  const watermarkMatch = svg.match(/<text class="watermark"[^>]*>[\s\S]*?<\/text>/);
+  return watermarkMatch ? watermarkMatch[0] : '';
 }
 
 /**
@@ -96,6 +132,30 @@ function getBorderRadius(svg: string): number {
 }
 
 /**
+ * Deduplicate consecutive identical frames
+ * Returns frames with extended timestamps for duplicates
+ */
+function deduplicateFrames(frames: TerminalFrame[]): TerminalFrame[] {
+  if (frames.length <= 1) return frames;
+
+  const result: TerminalFrame[] = [];
+  let lastContent = '';
+
+  for (let i = 0; i < frames.length; i++) {
+    const content = extractDynamicContent(frames[i].svg, 'check');
+
+    if (content !== lastContent || i === frames.length - 1) {
+      // Different content or last frame - keep it
+      result.push(frames[i]);
+      lastContent = content;
+    }
+    // If same content, skip (previous frame's visibility will extend)
+  }
+
+  return result;
+}
+
+/**
  * Create animated SVG from frames using SMIL animations
  */
 export async function createAnimatedSVG(
@@ -106,12 +166,15 @@ export async function createAnimatedSVG(
     throw new Error('No frames to animate');
   }
 
-  // Get dimensions, background, and border radius from first frame
-  const { width, height } = getSVGDimensions(frames[0].svg);
-  const bgColor = getBackgroundColor(frames[0].svg);
-  const borderRadius = getBorderRadius(frames[0].svg);
+  // Deduplicate consecutive identical frames to reduce file size
+  const animationFrames = deduplicateFrames(frames);
 
-  // Calculate duration in seconds
+  // Get dimensions, background, and border radius from first frame
+  const { width, height } = getSVGDimensions(animationFrames[0].svg);
+  const bgColor = getBackgroundColor(animationFrames[0].svg);
+  const borderRadius = getBorderRadius(animationFrames[0].svg);
+
+  // Calculate duration in seconds (use original frames for total duration)
   const totalDuration = frames[frames.length - 1].timestamp;
   const pauseAtEnd = options.pauseAtEnd || 1000;
   const animationDurationMs = totalDuration + pauseAtEnd;
@@ -119,17 +182,22 @@ export async function createAnimatedSVG(
   const repeatCount = options.loop !== false ? 'indefinite' : '1';
 
   // Extract base stylesheet from first frame (contains color definitions, font styles, etc.)
-  const baseStyles = extractStyleBlock(frames[0].svg);
+  const baseStyles = extractStyleBlock(animationFrames[0].svg);
 
-  // Calculate keyTimes for each frame (normalized 0-1)
-  const keyTimes: number[] = frames.map(f => f.timestamp / animationDurationMs);
+  // Extract static elements from first frame (rendered once, not per-frame)
+  const chrome = extractChrome(animationFrames[0].svg);
+  const footer = extractFooter(animationFrames[0].svg);
+  const watermark = extractWatermark(animationFrames[0].svg);
+
+  // Calculate keyTimes for each deduped frame (normalized 0-1)
+  const keyTimes: number[] = animationFrames.map(f => f.timestamp / animationDurationMs);
 
   // Build visibility values for each frame
   // Each frame needs: hidden until its time, visible during its window, hidden after
   const frameAnimations: string[] = [];
 
-  for (let i = 0; i < frames.length; i++) {
-    const frameContent = extractSVGBody(frames[i].svg, `f${i}`);
+  for (let i = 0; i < animationFrames.length; i++) {
+    const frameContent = extractDynamicContent(animationFrames[i].svg, `f${i}`);
 
     // Build keyTimes and values for this frame's visibility
     const times: number[] = [];
@@ -140,14 +208,14 @@ export async function createAnimatedSVG(
       times.push(0);
       values.push('visible');
 
-      if (frames.length > 1) {
+      if (animationFrames.length > 1) {
         times.push(keyTimes[1]);
         values.push('hidden');
       }
 
       times.push(1);
       values.push('hidden');
-    } else if (i === frames.length - 1) {
+    } else if (i === animationFrames.length - 1) {
       // Last frame: hidden until its time, then visible to end
       times.push(0);
       values.push('hidden');
@@ -196,7 +264,7 @@ export async function createAnimatedSVG(
   </g>`);
   }
 
-  // Build animated SVG with persistent background
+  // Build animated SVG with persistent background and static chrome
   // Use clip-path for rounded corners to make corners truly transparent
   const clipPathDef = borderRadius > 0
     ? `<defs><clipPath id="rounded-corners"><rect x="0" y="0" width="${width}" height="${height}" rx="${borderRadius}" ry="${borderRadius}"/></clipPath></defs>`
@@ -205,6 +273,10 @@ export async function createAnimatedSVG(
   const clipEnd = borderRadius > 0 ? '</g>' : '';
   const bgRx = borderRadius > 0 ? ` rx="${borderRadius}" ry="${borderRadius}"` : '';
 
+  // Build static chrome section (rendered once, not per-frame)
+  const chromeSection = chrome ? `<g class="chrome">${chrome}</g>` : '';
+  const footerSection = footer ? `<g class="footer">${footer}</g>` : '';
+
   const svg = `<svg width="${width}" height="${height}" xmlns="http://www.w3.org/2000/svg">
   ${clipPathDef}
   <style>
@@ -212,15 +284,47 @@ export async function createAnimatedSVG(
   </style>
 
   ${clipStart}
-  <!-- Persistent background - never animated -->
+  <!-- Static background (never animated) -->
   <rect width="100%" height="100%" fill="${bgColor}"${bgRx} />
 
-  <!-- Animated frames with discrete visibility transitions -->
+  <!-- Static chrome (title bar) -->
+  ${chromeSection}
+
+  <!-- Animated frames (only dynamic content) -->
   ${frameAnimations.join('\n')}
+
+  <!-- Static footer -->
+  ${footerSection}
+  ${watermark}
   ${clipEnd}
 </svg>`;
 
   return svg;
+}
+
+/**
+ * Extract static elements from first frame for delta encoding
+ */
+export function extractStaticElements(frames: TerminalFrame[]): {
+  width: number;
+  height: number;
+  bgColor: string;
+  borderRadius: number;
+  styles: string;
+  chrome: string;
+  footer: string;
+  watermark: string;
+} {
+  const firstFrame = frames[0].svg;
+  return {
+    ...getSVGDimensions(firstFrame),
+    bgColor: getBackgroundColor(firstFrame),
+    borderRadius: getBorderRadius(firstFrame),
+    styles: extractStyleBlock(firstFrame),
+    chrome: extractChrome(firstFrame),
+    footer: extractFooter(firstFrame),
+    watermark: extractWatermark(firstFrame),
+  };
 }
 
 /**
