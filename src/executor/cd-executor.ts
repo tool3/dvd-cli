@@ -1065,16 +1065,23 @@ export class CDExecutor {
     };
 
     // Build shellfie options
+    // Only pass width/height if explicitly set (not auto-detected)
     const options: shellfieOptions = {
       template: this.context.template as 'macos' | 'windows' | 'minimal',
       title: this.context.title,
       theme: shellfieTheme,
       fontSize: this.context.fontSize,
-      width: this.context.width,
-      height: this.context.height,
       watermark: this.context.watermark,
       embedFont: true,
     };
+
+    // Only pass dimensions if explicitly set - let shellfie auto-detect otherwise
+    if (!this.context.autoWidth) {
+      options.width = this.context.width;
+    }
+    if (!this.context.autoHeight) {
+      options.height = this.context.height;
+    }
 
     if (this.context.headerBackground) {
       options.header = { backgroundColor: this.context.headerBackground };
