@@ -116,9 +116,10 @@ Sleep 2s
 Delete characters.
 
 ```
-Type "Hello Wrold"
-Backspace 4
-Type "orld!"
+Type "echo 'I am an idiot savant developer'"
+Left 10
+Sleep 200ms
+Backspace 7
 ```
 
 <img src="examples/svgs/backspace.svg" width="600">
