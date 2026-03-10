@@ -97,17 +97,21 @@ export class CDExecutor {
         }
         break;
 
-      case 'Shortcut':
-        await executeShortcut(
-          this.context,
-          this.options,
-          command.ctrl,
-          command.alt,
-          command.shift,
-          command.cmd,
-          command.key
-        );
+      case 'Shortcut': {
+        const count = command.count || 1;
+        for (let i = 0; i < count; i++) {
+          await executeShortcut(
+            this.context,
+            this.options,
+            command.ctrl,
+            command.alt,
+            command.shift,
+            command.cmd,
+            command.key
+          );
+        }
         break;
+      }
     }
   }
 
@@ -301,7 +305,7 @@ const formatCommandDescription = (cmd: CDCommand): string => {
         cmd.shift && 'Shift',
         cmd.cmd && 'Cmd',
       ].filter(Boolean);
-      return `${mods.join('+')}+${cmd.key}`;
+      return `${mods.join('+')}+${cmd.key}` + (cmd.count && cmd.count > 1 ? ` \x1b[2m×${cmd.count}\x1b[0m` : '');
     }
     case 'Copy': {
       const preview = cmd.text.length > 20 ? cmd.text.slice(0, 20) + '...' : cmd.text;

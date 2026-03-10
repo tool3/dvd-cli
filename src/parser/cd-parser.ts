@@ -8,7 +8,7 @@ export type CDCommand =
   | { type: 'Set'; setting: string; value: string }
   | { type: 'Type'; text: string; speed?: number; prefix?: string }
   | { type: 'Key'; key: 'Left' | 'Right' | 'Up' | 'Down' | 'Backspace' | 'Enter' | 'Tab' | 'Space'; count?: number }
-  | { type: 'Shortcut'; ctrl: boolean; alt: boolean; shift: boolean; cmd: boolean; key: string }
+  | { type: 'Shortcut'; ctrl: boolean; alt: boolean; shift: boolean; cmd: boolean; key: string; count?: number }
   | { type: 'Sleep'; duration: number }
   | { type: 'Wait'; condition?: 'Screen' | 'Line'; pattern?: RegExp }
   | { type: 'Hide' }
@@ -195,7 +195,8 @@ export const parseCommand = (line: string, lineNumber: number): CDCommand => {
         throw new Error('Shortcut command requires a key');
       }
 
-      return { type: 'Shortcut', ctrl, alt, shift, cmd, key };
+      const count = tokens.length > 1 ? parseInt(tokens[1], 10) : undefined;
+      return { type: 'Shortcut', ctrl, alt, shift, cmd, key, count };
     }
 
     if (command === 'Sleep') {
