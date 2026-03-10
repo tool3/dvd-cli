@@ -38,16 +38,17 @@ function rectToPath(rect: string): string {
     return rect;
   }
 
-  // Extract other attributes (fill, class, etc.)
+  // Extract other attributes (fill, class, opacity, etc.)
   const fill = rect.match(/fill="([^"]+)"/)?.[0] || '';
   const fillOpacity = rect.match(/fill-opacity="([^"]+)"/)?.[0] || '';
+  const opacity = rect.match(/opacity="([^"]+)"/)?.[0] || '';
   const cls = rect.match(/class="([^"]+)"/)?.[0] || '';
   const shapeRendering = rect.match(/shape-rendering="([^"]+)"/)?.[0] || '';
 
   // Build path: M(move to x,y) h(horizontal line +w) v(vertical line +h) H(horizontal to x) z(close)
   const d = `M${fmtNum(x)} ${fmtNum(y)}h${fmtNum(w)}v${fmtNum(h)}H${fmtNum(x)}z`;
 
-  const attrs = [fill, fillOpacity, cls, shapeRendering].filter(Boolean).join(' ');
+  const attrs = [fill, fillOpacity, opacity, cls, shapeRendering].filter(Boolean).join(' ');
   return `<path d="${d}" ${attrs}/>`;
 }
 
