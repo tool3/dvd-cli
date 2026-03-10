@@ -1,13 +1,4 @@
-/**
- * Custom Glyph Rendering for Box Drawing and Block Element Characters
- *
- * Supported Unicode ranges:
- * - Box Drawing (U+2500-U+257F)
- * - Block Elements (U+2580-U+259F)
- * - Black Square (U+25A0)
- * - Braille Patterns (U+2800-U+28FF)
- * - Symbols for Legacy Computing (U+1FB00-U+1FBFF)
- */
+//#region Types
 
 export interface GlyphContext {
   cellWidth: number;
@@ -24,41 +15,42 @@ export interface GlyphResult {
   handled: boolean;
 }
 
-export function isCustomGlyph(codePoint: number): boolean {
-  return (
-    (codePoint >= 0x2500 && codePoint <= 0x257f) ||
-    (codePoint >= 0x2580 && codePoint <= 0x259f) ||
-    codePoint === 0x25a0 ||
-    (codePoint >= 0x2800 && codePoint <= 0x28ff) ||
-    (codePoint >= 0x1fb00 && codePoint <= 0x1fbff)
-  );
+interface BoxSegments {
+  up: number;
+  down: number;
+  left: number;
+  right: number;
 }
 
-export function containsCustomGlyphs(text: string): boolean {
+
+//#region Detection
+
+export const isCustomGlyph = (codePoint: number): boolean =>
+  (codePoint >= 0x2500 && codePoint <= 0x257f) ||
+  (codePoint >= 0x2580 && codePoint <= 0x259f) ||
+  codePoint === 0x25a0 ||
+  (codePoint >= 0x2800 && codePoint <= 0x28ff) ||
+  (codePoint >= 0x1fb00 && codePoint <= 0x1fbff);
+
+export const containsCustomGlyphs = (text: string): boolean => {
   for (const char of text) {
     const codePoint = char.codePointAt(0);
-    if (codePoint !== undefined && isCustomGlyph(codePoint)) {
-      return true;
-    }
+    if (codePoint !== undefined && isCustomGlyph(codePoint)) return true;
   }
   return false;
-}
+};
 
-export function renderCustomGlyph(char: string, ctx: GlyphContext): GlyphResult {
+
+//#region Main Renderer
+
+export const renderCustomGlyph = (char: string, ctx: GlyphContext): GlyphResult => {
   const codePoint = char.codePointAt(0);
-  if (codePoint === undefined) {
-    return { svg: '', handled: false };
-  }
+  if (codePoint === undefined) return { svg: '', handled: false };
 
-  if (codePoint >= 0x2500 && codePoint <= 0x257f) {
-    return renderBoxDrawing(codePoint, ctx);
-  }
+  if (codePoint >= 0x2500 && codePoint <= 0x257f) return renderBoxDrawing(codePoint, ctx);
+  if (codePoint >= 0x2580 && codePoint <= 0x259f) return renderBlockElement(codePoint, ctx);
 
-  if (codePoint >= 0x2580 && codePoint <= 0x259f) {
-    return renderBlockElement(codePoint, ctx);
-  }
-
-  // Black Square (U+25A0) - render as cell-width square, vertically centered
+  // Black Square (U+25A0) - cell-width square, vertically centered
   if (codePoint === 0x25a0) {
     const { cellWidth, cellHeight, x, y, color } = ctx;
     const size = cellWidth;
@@ -69,189 +61,71 @@ export function renderCustomGlyph(char: string, ctx: GlyphContext): GlyphResult 
     };
   }
 
-  if (codePoint >= 0x2800 && codePoint <= 0x28ff) {
-    return renderBraille(codePoint, ctx);
-  }
-
-  if (codePoint >= 0x1fb00 && codePoint <= 0x1fbff) {
-    return renderLegacyComputing(codePoint, ctx);
-  }
+  if (codePoint >= 0x2800 && codePoint <= 0x28ff) return renderBraille(codePoint, ctx);
+  if (codePoint >= 0x1fb00 && codePoint <= 0x1fbff) return renderLegacyComputing(codePoint, ctx);
 
   return { svg: '', handled: false };
-}
+};
 
-// Box Drawing segment types: 0=none, 1=light, 2=heavy, 3=double
-interface BoxSegments {
-  up: number;
-  down: number;
-  left: number;
-  right: number;
-}
 
-function getBoxSegments(codePoint: number): BoxSegments | null {
-  const boxMap: { [key: number]: [number, number, number, number] } = {
-    0x2500: [0, 0, 1, 1], // ─
-    0x2501: [0, 0, 2, 2], // ━
-    0x2502: [1, 1, 0, 0], // │
-    0x2503: [2, 2, 0, 0], // ┃
-    0x2504: [0, 0, 1, 1], // ┄
-    0x2505: [0, 0, 2, 2], // ┅
-    0x2506: [1, 1, 0, 0], // ┆
-    0x2507: [2, 2, 0, 0], // ┇
-    0x2508: [0, 0, 1, 1], // ┈
-    0x2509: [0, 0, 2, 2], // ┉
-    0x250a: [1, 1, 0, 0], // ┊
-    0x250b: [2, 2, 0, 0], // ┋
-    0x250c: [0, 1, 0, 1], // ┌
-    0x250d: [0, 1, 0, 2], // ┍
-    0x250e: [0, 2, 0, 1], // ┎
-    0x250f: [0, 2, 0, 2], // ┏
-    0x2510: [0, 1, 1, 0], // ┐
-    0x2511: [0, 1, 2, 0], // ┑
-    0x2512: [0, 2, 1, 0], // ┒
-    0x2513: [0, 2, 2, 0], // ┓
-    0x2514: [1, 0, 0, 1], // └
-    0x2515: [1, 0, 0, 2], // ┕
-    0x2516: [2, 0, 0, 1], // ┖
-    0x2517: [2, 0, 0, 2], // ┗
-    0x2518: [1, 0, 1, 0], // ┘
-    0x2519: [1, 0, 2, 0], // ┙
-    0x251a: [2, 0, 1, 0], // ┚
-    0x251b: [2, 0, 2, 0], // ┛
-    0x251c: [1, 1, 0, 1], // ├
-    0x251d: [1, 1, 0, 2], // ┝
-    0x251e: [2, 1, 0, 1], // ┞
-    0x251f: [1, 2, 0, 1], // ┟
-    0x2520: [2, 2, 0, 1], // ┠
-    0x2521: [2, 1, 0, 2], // ┡
-    0x2522: [1, 2, 0, 2], // ┢
-    0x2523: [2, 2, 0, 2], // ┣
-    0x2524: [1, 1, 1, 0], // ┤
-    0x2525: [1, 1, 2, 0], // ┥
-    0x2526: [2, 1, 1, 0], // ┦
-    0x2527: [1, 2, 1, 0], // ┧
-    0x2528: [2, 2, 1, 0], // ┨
-    0x2529: [2, 1, 2, 0], // ┩
-    0x252a: [1, 2, 2, 0], // ┪
-    0x252b: [2, 2, 2, 0], // ┫
-    0x252c: [0, 1, 1, 1], // ┬
-    0x252d: [0, 1, 2, 1], // ┭
-    0x252e: [0, 1, 1, 2], // ┮
-    0x252f: [0, 1, 2, 2], // ┯
-    0x2530: [0, 2, 1, 1], // ┰
-    0x2531: [0, 2, 2, 1], // ┱
-    0x2532: [0, 2, 1, 2], // ┲
-    0x2533: [0, 2, 2, 2], // ┳
-    0x2534: [1, 0, 1, 1], // ┴
-    0x2535: [1, 0, 2, 1], // ┵
-    0x2536: [1, 0, 1, 2], // ┶
-    0x2537: [1, 0, 2, 2], // ┷
-    0x2538: [2, 0, 1, 1], // ┸
-    0x2539: [2, 0, 2, 1], // ┹
-    0x253a: [2, 0, 1, 2], // ┺
-    0x253b: [2, 0, 2, 2], // ┻
-    0x253c: [1, 1, 1, 1], // ┼
-    0x253d: [1, 1, 2, 1], // ┽
-    0x253e: [1, 1, 1, 2], // ┾
-    0x253f: [1, 1, 2, 2], // ┿
-    0x2540: [2, 1, 1, 1], // ╀
-    0x2541: [1, 2, 1, 1], // ╁
-    0x2542: [2, 2, 1, 1], // ╂
-    0x2543: [2, 1, 2, 1], // ╃
-    0x2544: [2, 1, 1, 2], // ╄
-    0x2545: [1, 2, 2, 1], // ╅
-    0x2546: [1, 2, 1, 2], // ╆
-    0x2547: [2, 1, 2, 2], // ╇
-    0x2548: [1, 2, 2, 2], // ╈
-    0x2549: [2, 2, 2, 1], // ╉
-    0x254a: [2, 2, 1, 2], // ╊
-    0x254b: [2, 2, 2, 2], // ╋
-    0x254c: [0, 0, 1, 1], // ╌
-    0x254d: [0, 0, 2, 2], // ╍
-    0x254e: [1, 1, 0, 0], // ╎
-    0x254f: [2, 2, 0, 0], // ╏
-    0x2550: [0, 0, 3, 3], // ═
-    0x2551: [3, 3, 0, 0], // ║
-    0x2552: [0, 1, 0, 3], // ╒
-    0x2553: [0, 3, 0, 1], // ╓
-    0x2554: [0, 3, 0, 3], // ╔
-    0x2555: [0, 1, 3, 0], // ╕
-    0x2556: [0, 3, 1, 0], // ╖
-    0x2557: [0, 3, 3, 0], // ╗
-    0x2558: [1, 0, 0, 3], // ╘
-    0x2559: [3, 0, 0, 1], // ╙
-    0x255a: [3, 0, 0, 3], // ╚
-    0x255b: [1, 0, 3, 0], // ╛
-    0x255c: [3, 0, 1, 0], // ╜
-    0x255d: [3, 0, 3, 0], // ╝
-    0x255e: [1, 1, 0, 3], // ╞
-    0x255f: [3, 3, 0, 1], // ╟
-    0x2560: [3, 3, 0, 3], // ╠
-    0x2561: [1, 1, 3, 0], // ╡
-    0x2562: [3, 3, 1, 0], // ╢
-    0x2563: [3, 3, 3, 0], // ╣
-    0x2564: [0, 1, 3, 3], // ╤
-    0x2565: [0, 3, 1, 1], // ╥
-    0x2566: [0, 3, 3, 3], // ╦
-    0x2567: [1, 0, 3, 3], // ╧
-    0x2568: [3, 0, 1, 1], // ╨
-    0x2569: [3, 0, 3, 3], // ╩
-    0x256a: [1, 1, 3, 3], // ╪
-    0x256b: [3, 3, 1, 1], // ╫
-    0x256c: [3, 3, 3, 3], // ╬
-    0x256d: [0, 1, 0, 1], // ╭
-    0x256e: [0, 1, 1, 0], // ╮
-    0x256f: [1, 0, 1, 0], // ╯
-    0x2570: [1, 0, 0, 1], // ╰
-    0x2574: [0, 0, 1, 0], // ╴
-    0x2575: [1, 0, 0, 0], // ╵
-    0x2576: [0, 0, 0, 1], // ╶
-    0x2577: [0, 1, 0, 0], // ╷
-    0x2578: [0, 0, 2, 0], // ╸
-    0x2579: [2, 0, 0, 0], // ╹
-    0x257a: [0, 0, 0, 2], // ╺
-    0x257b: [0, 2, 0, 0], // ╻
-    0x257c: [0, 0, 1, 2], // ╼
-    0x257d: [1, 2, 0, 0], // ╽
-    0x257e: [0, 0, 2, 1], // ╾
-    0x257f: [2, 1, 0, 0], // ╿
-  };
+//#region Box Drawing (U+2500-U+257F)
 
-  const segments = boxMap[codePoint];
+// Segment types: 0=none, 1=light, 2=heavy, 3=double
+const BOX_MAP: { [key: number]: [number, number, number, number] } = {
+  0x2500: [0, 0, 1, 1], 0x2501: [0, 0, 2, 2], 0x2502: [1, 1, 0, 0], 0x2503: [2, 2, 0, 0],
+  0x2504: [0, 0, 1, 1], 0x2505: [0, 0, 2, 2], 0x2506: [1, 1, 0, 0], 0x2507: [2, 2, 0, 0],
+  0x2508: [0, 0, 1, 1], 0x2509: [0, 0, 2, 2], 0x250a: [1, 1, 0, 0], 0x250b: [2, 2, 0, 0],
+  0x250c: [0, 1, 0, 1], 0x250d: [0, 1, 0, 2], 0x250e: [0, 2, 0, 1], 0x250f: [0, 2, 0, 2],
+  0x2510: [0, 1, 1, 0], 0x2511: [0, 1, 2, 0], 0x2512: [0, 2, 1, 0], 0x2513: [0, 2, 2, 0],
+  0x2514: [1, 0, 0, 1], 0x2515: [1, 0, 0, 2], 0x2516: [2, 0, 0, 1], 0x2517: [2, 0, 0, 2],
+  0x2518: [1, 0, 1, 0], 0x2519: [1, 0, 2, 0], 0x251a: [2, 0, 1, 0], 0x251b: [2, 0, 2, 0],
+  0x251c: [1, 1, 0, 1], 0x251d: [1, 1, 0, 2], 0x251e: [2, 1, 0, 1], 0x251f: [1, 2, 0, 1],
+  0x2520: [2, 2, 0, 1], 0x2521: [2, 1, 0, 2], 0x2522: [1, 2, 0, 2], 0x2523: [2, 2, 0, 2],
+  0x2524: [1, 1, 1, 0], 0x2525: [1, 1, 2, 0], 0x2526: [2, 1, 1, 0], 0x2527: [1, 2, 1, 0],
+  0x2528: [2, 2, 1, 0], 0x2529: [2, 1, 2, 0], 0x252a: [1, 2, 2, 0], 0x252b: [2, 2, 2, 0],
+  0x252c: [0, 1, 1, 1], 0x252d: [0, 1, 2, 1], 0x252e: [0, 1, 1, 2], 0x252f: [0, 1, 2, 2],
+  0x2530: [0, 2, 1, 1], 0x2531: [0, 2, 2, 1], 0x2532: [0, 2, 1, 2], 0x2533: [0, 2, 2, 2],
+  0x2534: [1, 0, 1, 1], 0x2535: [1, 0, 2, 1], 0x2536: [1, 0, 1, 2], 0x2537: [1, 0, 2, 2],
+  0x2538: [2, 0, 1, 1], 0x2539: [2, 0, 2, 1], 0x253a: [2, 0, 1, 2], 0x253b: [2, 0, 2, 2],
+  0x253c: [1, 1, 1, 1], 0x253d: [1, 1, 2, 1], 0x253e: [1, 1, 1, 2], 0x253f: [1, 1, 2, 2],
+  0x2540: [2, 1, 1, 1], 0x2541: [1, 2, 1, 1], 0x2542: [2, 2, 1, 1], 0x2543: [2, 1, 2, 1],
+  0x2544: [2, 1, 1, 2], 0x2545: [1, 2, 2, 1], 0x2546: [1, 2, 1, 2], 0x2547: [2, 1, 2, 2],
+  0x2548: [1, 2, 2, 2], 0x2549: [2, 2, 2, 1], 0x254a: [2, 2, 1, 2], 0x254b: [2, 2, 2, 2],
+  0x254c: [0, 0, 1, 1], 0x254d: [0, 0, 2, 2], 0x254e: [1, 1, 0, 0], 0x254f: [2, 2, 0, 0],
+  0x2550: [0, 0, 3, 3], 0x2551: [3, 3, 0, 0], 0x2552: [0, 1, 0, 3], 0x2553: [0, 3, 0, 1],
+  0x2554: [0, 3, 0, 3], 0x2555: [0, 1, 3, 0], 0x2556: [0, 3, 1, 0], 0x2557: [0, 3, 3, 0],
+  0x2558: [1, 0, 0, 3], 0x2559: [3, 0, 0, 1], 0x255a: [3, 0, 0, 3], 0x255b: [1, 0, 3, 0],
+  0x255c: [3, 0, 1, 0], 0x255d: [3, 0, 3, 0], 0x255e: [1, 1, 0, 3], 0x255f: [3, 3, 0, 1],
+  0x2560: [3, 3, 0, 3], 0x2561: [1, 1, 3, 0], 0x2562: [3, 3, 1, 0], 0x2563: [3, 3, 3, 0],
+  0x2564: [0, 1, 3, 3], 0x2565: [0, 3, 1, 1], 0x2566: [0, 3, 3, 3], 0x2567: [1, 0, 3, 3],
+  0x2568: [3, 0, 1, 1], 0x2569: [3, 0, 3, 3], 0x256a: [1, 1, 3, 3], 0x256b: [3, 3, 1, 1],
+  0x256c: [3, 3, 3, 3], 0x256d: [0, 1, 0, 1], 0x256e: [0, 1, 1, 0], 0x256f: [1, 0, 1, 0],
+  0x2570: [1, 0, 0, 1], 0x2574: [0, 0, 1, 0], 0x2575: [1, 0, 0, 0], 0x2576: [0, 0, 0, 1],
+  0x2577: [0, 1, 0, 0], 0x2578: [0, 0, 2, 0], 0x2579: [2, 0, 0, 0], 0x257a: [0, 0, 0, 2],
+  0x257b: [0, 2, 0, 0], 0x257c: [0, 0, 1, 2], 0x257d: [1, 2, 0, 0], 0x257e: [0, 0, 2, 1],
+  0x257f: [2, 1, 0, 0],
+};
+
+const getBoxSegments = (codePoint: number): BoxSegments | null => {
+  const segments = BOX_MAP[codePoint];
   if (!segments) return null;
+  return { up: segments[0], down: segments[1], left: segments[2], right: segments[3] };
+};
 
-  return {
-    up: segments[0],
-    down: segments[1],
-    left: segments[2],
-    right: segments[3],
-  };
-}
-
-function renderBoxDrawing(codePoint: number, ctx: GlyphContext): GlyphResult {
-  // Diagonal lines
-  if (codePoint >= 0x2571 && codePoint <= 0x2573) {
-    return renderDiagonalLine(codePoint, ctx);
-  }
+const renderBoxDrawing = (codePoint: number, ctx: GlyphContext): GlyphResult => {
+  if (codePoint >= 0x2571 && codePoint <= 0x2573) return renderDiagonalLine(codePoint, ctx);
 
   const segments = getBoxSegments(codePoint);
-  if (!segments) {
-    return { svg: '', handled: false };
-  }
+  if (!segments) return { svg: '', handled: false };
 
   const { cellWidth, cellHeight, x, y, color, lineWidth, heavyLineWidth } = ctx;
   const centerX = x + cellWidth / 2;
   const centerY = y + cellHeight / 2;
 
-  const getWidth = (type: number): number => {
-    if (type === 0) return 0;
-    if (type === 1) return lineWidth;
-    if (type === 2) return heavyLineWidth;
-    return lineWidth;
-  };
+  const getWidth = (type: number): number =>
+    type === 0 ? 0 : type === 1 ? lineWidth : type === 2 ? heavyLineWidth : lineWidth;
 
   const doubleOffset = lineWidth * 1.5;
-
   const hasDoubleUp = segments.up === 3;
   const hasDoubleDown = segments.down === 3;
   const hasDoubleLeft = segments.left === 3;
@@ -312,9 +186,9 @@ function renderBoxDrawing(codePoint: number, ctx: GlyphContext): GlyphResult {
   }
 
   return { svg: paths.join(''), handled: true };
-}
+};
 
-function renderDoubleLineCorner(segments: BoxSegments, ctx: GlyphContext, doubleOffset: number): GlyphResult {
+const renderDoubleLineCorner = (segments: BoxSegments, ctx: GlyphContext, doubleOffset: number): GlyphResult => {
   const { cellWidth, cellHeight, x, y, color, lineWidth } = ctx;
   const centerX = x + cellWidth / 2;
   const centerY = y + cellHeight / 2;
@@ -330,9 +204,7 @@ function renderDoubleLineCorner(segments: BoxSegments, ctx: GlyphContext, double
   const outerTop = centerY - doubleOffset;
   const outerBottom = centerY + doubleOffset;
 
-  // Handle various corner combinations (simplified version)
   if (hasUp && hasDown && hasLeft && hasRight) {
-    // Full cross
     paths.push(
       `<line x1="${outerLeft}" y1="${y}" x2="${outerLeft}" y2="${outerTop}" stroke="${color}" stroke-width="${lineWidth}"/>`,
       `<line x1="${outerLeft}" y1="${outerBottom}" x2="${outerLeft}" y2="${y + cellHeight}" stroke="${color}" stroke-width="${lineWidth}"/>`,
@@ -344,7 +216,6 @@ function renderDoubleLineCorner(segments: BoxSegments, ctx: GlyphContext, double
       `<line x1="${outerRight}" y1="${outerBottom}" x2="${x + cellWidth}" y2="${outerBottom}" stroke="${color}" stroke-width="${lineWidth}"/>`
     );
   } else {
-    // Handle simpler cases
     if (hasUp) {
       paths.push(
         `<line x1="${outerLeft}" y1="${y}" x2="${outerLeft}" y2="${centerY}" stroke="${color}" stroke-width="${lineWidth}"/>`,
@@ -372,9 +243,9 @@ function renderDoubleLineCorner(segments: BoxSegments, ctx: GlyphContext, double
   }
 
   return { svg: paths.join(''), handled: true };
-}
+};
 
-function renderDiagonalLine(codePoint: number, ctx: GlyphContext): GlyphResult {
+const renderDiagonalLine = (codePoint: number, ctx: GlyphContext): GlyphResult => {
   const { cellWidth, cellHeight, x, y, color, lineWidth } = ctx;
   const paths: string[] = [];
 
@@ -386,166 +257,92 @@ function renderDiagonalLine(codePoint: number, ctx: GlyphContext): GlyphResult {
   }
 
   return { svg: paths.join(''), handled: true };
-}
+};
 
-// Block Elements (U+2580-U+259F)
-function renderBlockElement(codePoint: number, ctx: GlyphContext): GlyphResult {
+
+//#region Block Elements (U+2580-U+259F)
+
+const renderBlockElement = (codePoint: number, ctx: GlyphContext): GlyphResult => {
   const { cellWidth, cellHeight, x, y, color } = ctx;
   const crisp = ' shape-rendering="crispEdges"';
-  // Add overlap to prevent sub-pixel gaps between adjacent blocks
-  // This is crucial for gradient mode where each cell has a slightly different color
-  // 1px overlap ensures coverage at various zoom levels and DPI settings
+  // 1px overlap prevents sub-pixel gaps between adjacent blocks in gradient mode
   const overlap = 1;
   let svg = '';
 
   switch (codePoint) {
-    case 0x2580: // Upper half block ▀
-      svg = `<rect x="${x}" y="${y}" width="${cellWidth + overlap}" height="${cellHeight / 2}" fill="${color}"${crisp}/>`;
-      break;
-    case 0x2581: // Lower 1/8 ▁
-      svg = `<rect x="${x}" y="${y + cellHeight * 7 / 8}" width="${cellWidth + overlap}" height="${cellHeight / 8 + overlap}" fill="${color}"${crisp}/>`;
-      break;
-    case 0x2582: // Lower 1/4 ▂
-      svg = `<rect x="${x}" y="${y + cellHeight * 3 / 4}" width="${cellWidth + overlap}" height="${cellHeight / 4 + overlap}" fill="${color}"${crisp}/>`;
-      break;
-    case 0x2583: // Lower 3/8 ▃
-      svg = `<rect x="${x}" y="${y + cellHeight * 5 / 8}" width="${cellWidth + overlap}" height="${cellHeight * 3 / 8 + overlap}" fill="${color}"${crisp}/>`;
-      break;
-    case 0x2584: // Lower half ▄
-      svg = `<rect x="${x}" y="${y + cellHeight / 2}" width="${cellWidth + overlap}" height="${cellHeight / 2 + overlap}" fill="${color}"${crisp}/>`;
-      break;
-    case 0x2585: // Lower 5/8 ▅
-      svg = `<rect x="${x}" y="${y + cellHeight * 3 / 8}" width="${cellWidth + overlap}" height="${cellHeight * 5 / 8 + overlap}" fill="${color}"${crisp}/>`;
-      break;
-    case 0x2586: // Lower 3/4 ▆
-      svg = `<rect x="${x}" y="${y + cellHeight / 4}" width="${cellWidth + overlap}" height="${cellHeight * 3 / 4 + overlap}" fill="${color}"${crisp}/>`;
-      break;
-    case 0x2587: // Lower 7/8 ▇
-      svg = `<rect x="${x}" y="${y + cellHeight / 8}" width="${cellWidth + overlap}" height="${cellHeight * 7 / 8 + overlap}" fill="${color}"${crisp}/>`;
-      break;
-    case 0x2588: // Full block █
-      svg = `<rect x="${x}" y="${y}" width="${cellWidth + overlap}" height="${cellHeight + overlap}" fill="${color}"${crisp}/>`;
-      break;
-    case 0x2589: // Left 7/8 ▉
-      svg = `<rect x="${x}" y="${y}" width="${cellWidth * 7 / 8}" height="${cellHeight + overlap}" fill="${color}"${crisp}/>`;
-      break;
-    case 0x258a: // Left 3/4 ▊
-      svg = `<rect x="${x}" y="${y}" width="${cellWidth * 3 / 4}" height="${cellHeight + overlap}" fill="${color}"${crisp}/>`;
-      break;
-    case 0x258b: // Left 5/8 ▋
-      svg = `<rect x="${x}" y="${y}" width="${cellWidth * 5 / 8}" height="${cellHeight + overlap}" fill="${color}"${crisp}/>`;
-      break;
-    case 0x258c: // Left half ▌
-      svg = `<rect x="${x}" y="${y}" width="${cellWidth / 2}" height="${cellHeight + overlap}" fill="${color}"${crisp}/>`;
-      break;
-    case 0x258d: // Left 3/8 ▍
-      svg = `<rect x="${x}" y="${y}" width="${cellWidth * 3 / 8}" height="${cellHeight + overlap}" fill="${color}"${crisp}/>`;
-      break;
-    case 0x258e: // Left 1/4 ▎
-      svg = `<rect x="${x}" y="${y}" width="${cellWidth / 4}" height="${cellHeight + overlap}" fill="${color}"${crisp}/>`;
-      break;
-    case 0x258f: // Left 1/8 ▏
-      svg = `<rect x="${x}" y="${y}" width="${cellWidth / 8}" height="${cellHeight + overlap}" fill="${color}"${crisp}/>`;
-      break;
-    case 0x2590: // Right half ▐
-      svg = `<rect x="${x + cellWidth / 2}" y="${y}" width="${cellWidth / 2 + overlap}" height="${cellHeight + overlap}" fill="${color}"${crisp}/>`;
-      break;
-    case 0x2591: // Light shade ░ (25%)
-      // No overlap for shaded blocks - overlapping semi-transparent areas would show darker seams
-      svg = `<rect x="${x}" y="${y}" width="${cellWidth}" height="${cellHeight}" fill="${color}" fill-opacity="0.25"${crisp}/>`;
-      break;
-    case 0x2592: // Medium shade ▒ (50%)
-      svg = `<rect x="${x}" y="${y}" width="${cellWidth}" height="${cellHeight}" fill="${color}" fill-opacity="0.5"${crisp}/>`;
-      break;
-    case 0x2593: // Dark shade ▓ (75%)
-      svg = `<rect x="${x}" y="${y}" width="${cellWidth}" height="${cellHeight}" fill="${color}" fill-opacity="0.75"${crisp}/>`;
-      break;
-    case 0x2594: // Upper 1/8 ▔
-      svg = `<rect x="${x}" y="${y}" width="${cellWidth + overlap}" height="${cellHeight / 8}" fill="${color}"${crisp}/>`;
-      break;
-    case 0x2595: // Right 1/8 ▕
-      svg = `<rect x="${x + cellWidth * 7 / 8}" y="${y}" width="${cellWidth / 8 + overlap}" height="${cellHeight + overlap}" fill="${color}"${crisp}/>`;
-      break;
-    case 0x2596: // Lower left ▖
-      svg = `<rect x="${x}" y="${y + cellHeight / 2}" width="${cellWidth / 2}" height="${cellHeight / 2 + overlap}" fill="${color}"${crisp}/>`;
-      break;
-    case 0x2597: // Lower right ▗
-      svg = `<rect x="${x + cellWidth / 2}" y="${y + cellHeight / 2}" width="${cellWidth / 2 + overlap}" height="${cellHeight / 2 + overlap}" fill="${color}"${crisp}/>`;
-      break;
-    case 0x2598: // Upper left ▘
-      svg = `<rect x="${x}" y="${y}" width="${cellWidth / 2}" height="${cellHeight / 2}" fill="${color}"${crisp}/>`;
-      break;
-    case 0x2599: // Upper left, lower left, lower right ▙
-      svg = [
-        `<rect x="${x}" y="${y}" width="${cellWidth / 2}" height="${cellHeight / 2}" fill="${color}"${crisp}/>`,
-        `<rect x="${x}" y="${y + cellHeight / 2}" width="${cellWidth + overlap}" height="${cellHeight / 2 + overlap}" fill="${color}"${crisp}/>`,
-      ].join('');
-      break;
-    case 0x259a: // Upper left, lower right ▚
-      svg = [
-        `<rect x="${x}" y="${y}" width="${cellWidth / 2}" height="${cellHeight / 2}" fill="${color}"${crisp}/>`,
-        `<rect x="${x + cellWidth / 2}" y="${y + cellHeight / 2}" width="${cellWidth / 2 + overlap}" height="${cellHeight / 2 + overlap}" fill="${color}"${crisp}/>`,
-      ].join('');
-      break;
-    case 0x259b: // Upper left, upper right, lower left ▛
-      svg = [
-        `<rect x="${x}" y="${y}" width="${cellWidth + overlap}" height="${cellHeight / 2}" fill="${color}"${crisp}/>`,
-        `<rect x="${x}" y="${y + cellHeight / 2}" width="${cellWidth / 2}" height="${cellHeight / 2 + overlap}" fill="${color}"${crisp}/>`,
-      ].join('');
-      break;
-    case 0x259c: // Upper left, upper right, lower right ▜
-      svg = [
-        `<rect x="${x}" y="${y}" width="${cellWidth + overlap}" height="${cellHeight / 2}" fill="${color}"${crisp}/>`,
-        `<rect x="${x + cellWidth / 2}" y="${y + cellHeight / 2}" width="${cellWidth / 2 + overlap}" height="${cellHeight / 2 + overlap}" fill="${color}"${crisp}/>`,
-      ].join('');
-      break;
-    case 0x259d: // Upper right ▝
-      svg = `<rect x="${x + cellWidth / 2}" y="${y}" width="${cellWidth / 2 + overlap}" height="${cellHeight / 2}" fill="${color}"${crisp}/>`;
-      break;
-    case 0x259e: // Upper right, lower left ▞
-      svg = [
-        `<rect x="${x + cellWidth / 2}" y="${y}" width="${cellWidth / 2 + overlap}" height="${cellHeight / 2}" fill="${color}"${crisp}/>`,
-        `<rect x="${x}" y="${y + cellHeight / 2}" width="${cellWidth / 2}" height="${cellHeight / 2 + overlap}" fill="${color}"${crisp}/>`,
-      ].join('');
-      break;
-    case 0x259f: // Upper right, lower left, lower right ▟
-      svg = [
-        `<rect x="${x + cellWidth / 2}" y="${y}" width="${cellWidth / 2 + overlap}" height="${cellHeight / 2}" fill="${color}"${crisp}/>`,
-        `<rect x="${x}" y="${y + cellHeight / 2}" width="${cellWidth + overlap}" height="${cellHeight / 2 + overlap}" fill="${color}"${crisp}/>`,
-      ].join('');
-      break;
-    default:
-      return { svg: '', handled: false };
+    case 0x2580: svg = `<rect x="${x}" y="${y}" width="${cellWidth + overlap}" height="${cellHeight / 2}" fill="${color}"${crisp}/>`; break;
+    case 0x2581: svg = `<rect x="${x}" y="${y + cellHeight * 7 / 8}" width="${cellWidth + overlap}" height="${cellHeight / 8 + overlap}" fill="${color}"${crisp}/>`; break;
+    case 0x2582: svg = `<rect x="${x}" y="${y + cellHeight * 3 / 4}" width="${cellWidth + overlap}" height="${cellHeight / 4 + overlap}" fill="${color}"${crisp}/>`; break;
+    case 0x2583: svg = `<rect x="${x}" y="${y + cellHeight * 5 / 8}" width="${cellWidth + overlap}" height="${cellHeight * 3 / 8 + overlap}" fill="${color}"${crisp}/>`; break;
+    case 0x2584: svg = `<rect x="${x}" y="${y + cellHeight / 2}" width="${cellWidth + overlap}" height="${cellHeight / 2 + overlap}" fill="${color}"${crisp}/>`; break;
+    case 0x2585: svg = `<rect x="${x}" y="${y + cellHeight * 3 / 8}" width="${cellWidth + overlap}" height="${cellHeight * 5 / 8 + overlap}" fill="${color}"${crisp}/>`; break;
+    case 0x2586: svg = `<rect x="${x}" y="${y + cellHeight / 4}" width="${cellWidth + overlap}" height="${cellHeight * 3 / 4 + overlap}" fill="${color}"${crisp}/>`; break;
+    case 0x2587: svg = `<rect x="${x}" y="${y + cellHeight / 8}" width="${cellWidth + overlap}" height="${cellHeight * 7 / 8 + overlap}" fill="${color}"${crisp}/>`; break;
+    case 0x2588: svg = `<rect x="${x}" y="${y}" width="${cellWidth + overlap}" height="${cellHeight + overlap}" fill="${color}"${crisp}/>`; break;
+    case 0x2589: svg = `<rect x="${x}" y="${y}" width="${cellWidth * 7 / 8}" height="${cellHeight + overlap}" fill="${color}"${crisp}/>`; break;
+    case 0x258a: svg = `<rect x="${x}" y="${y}" width="${cellWidth * 3 / 4}" height="${cellHeight + overlap}" fill="${color}"${crisp}/>`; break;
+    case 0x258b: svg = `<rect x="${x}" y="${y}" width="${cellWidth * 5 / 8}" height="${cellHeight + overlap}" fill="${color}"${crisp}/>`; break;
+    case 0x258c: svg = `<rect x="${x}" y="${y}" width="${cellWidth / 2}" height="${cellHeight + overlap}" fill="${color}"${crisp}/>`; break;
+    case 0x258d: svg = `<rect x="${x}" y="${y}" width="${cellWidth * 3 / 8}" height="${cellHeight + overlap}" fill="${color}"${crisp}/>`; break;
+    case 0x258e: svg = `<rect x="${x}" y="${y}" width="${cellWidth / 4}" height="${cellHeight + overlap}" fill="${color}"${crisp}/>`; break;
+    case 0x258f: svg = `<rect x="${x}" y="${y}" width="${cellWidth / 8}" height="${cellHeight + overlap}" fill="${color}"${crisp}/>`; break;
+    case 0x2590: svg = `<rect x="${x + cellWidth / 2}" y="${y}" width="${cellWidth / 2 + overlap}" height="${cellHeight + overlap}" fill="${color}"${crisp}/>`; break;
+    case 0x2591: svg = `<rect x="${x}" y="${y}" width="${cellWidth}" height="${cellHeight}" fill="${color}" fill-opacity="0.25"${crisp}/>`; break;
+    case 0x2592: svg = `<rect x="${x}" y="${y}" width="${cellWidth}" height="${cellHeight}" fill="${color}" fill-opacity="0.5"${crisp}/>`; break;
+    case 0x2593: svg = `<rect x="${x}" y="${y}" width="${cellWidth}" height="${cellHeight}" fill="${color}" fill-opacity="0.75"${crisp}/>`; break;
+    case 0x2594: svg = `<rect x="${x}" y="${y}" width="${cellWidth + overlap}" height="${cellHeight / 8}" fill="${color}"${crisp}/>`; break;
+    case 0x2595: svg = `<rect x="${x + cellWidth * 7 / 8}" y="${y}" width="${cellWidth / 8 + overlap}" height="${cellHeight + overlap}" fill="${color}"${crisp}/>`; break;
+    case 0x2596: svg = `<rect x="${x}" y="${y + cellHeight / 2}" width="${cellWidth / 2}" height="${cellHeight / 2 + overlap}" fill="${color}"${crisp}/>`; break;
+    case 0x2597: svg = `<rect x="${x + cellWidth / 2}" y="${y + cellHeight / 2}" width="${cellWidth / 2 + overlap}" height="${cellHeight / 2 + overlap}" fill="${color}"${crisp}/>`; break;
+    case 0x2598: svg = `<rect x="${x}" y="${y}" width="${cellWidth / 2}" height="${cellHeight / 2}" fill="${color}"${crisp}/>`; break;
+    case 0x2599: svg = [
+      `<rect x="${x}" y="${y}" width="${cellWidth / 2}" height="${cellHeight / 2}" fill="${color}"${crisp}/>`,
+      `<rect x="${x}" y="${y + cellHeight / 2}" width="${cellWidth + overlap}" height="${cellHeight / 2 + overlap}" fill="${color}"${crisp}/>`,
+    ].join(''); break;
+    case 0x259a: svg = [
+      `<rect x="${x}" y="${y}" width="${cellWidth / 2}" height="${cellHeight / 2}" fill="${color}"${crisp}/>`,
+      `<rect x="${x + cellWidth / 2}" y="${y + cellHeight / 2}" width="${cellWidth / 2 + overlap}" height="${cellHeight / 2 + overlap}" fill="${color}"${crisp}/>`,
+    ].join(''); break;
+    case 0x259b: svg = [
+      `<rect x="${x}" y="${y}" width="${cellWidth + overlap}" height="${cellHeight / 2}" fill="${color}"${crisp}/>`,
+      `<rect x="${x}" y="${y + cellHeight / 2}" width="${cellWidth / 2}" height="${cellHeight / 2 + overlap}" fill="${color}"${crisp}/>`,
+    ].join(''); break;
+    case 0x259c: svg = [
+      `<rect x="${x}" y="${y}" width="${cellWidth + overlap}" height="${cellHeight / 2}" fill="${color}"${crisp}/>`,
+      `<rect x="${x + cellWidth / 2}" y="${y + cellHeight / 2}" width="${cellWidth / 2 + overlap}" height="${cellHeight / 2 + overlap}" fill="${color}"${crisp}/>`,
+    ].join(''); break;
+    case 0x259d: svg = `<rect x="${x + cellWidth / 2}" y="${y}" width="${cellWidth / 2 + overlap}" height="${cellHeight / 2}" fill="${color}"${crisp}/>`; break;
+    case 0x259e: svg = [
+      `<rect x="${x + cellWidth / 2}" y="${y}" width="${cellWidth / 2 + overlap}" height="${cellHeight / 2}" fill="${color}"${crisp}/>`,
+      `<rect x="${x}" y="${y + cellHeight / 2}" width="${cellWidth / 2}" height="${cellHeight / 2 + overlap}" fill="${color}"${crisp}/>`,
+    ].join(''); break;
+    case 0x259f: svg = [
+      `<rect x="${x + cellWidth / 2}" y="${y}" width="${cellWidth / 2 + overlap}" height="${cellHeight / 2}" fill="${color}"${crisp}/>`,
+      `<rect x="${x}" y="${y + cellHeight / 2}" width="${cellWidth + overlap}" height="${cellHeight / 2 + overlap}" fill="${color}"${crisp}/>`,
+    ].join(''); break;
+    default: return { svg: '', handled: false };
   }
 
   return { svg, handled: true };
-}
+};
 
-// Braille Patterns (U+2800-U+28FF)
-function renderBraille(codePoint: number, ctx: GlyphContext): GlyphResult {
+
+//#region Braille Patterns (U+2800-U+28FF)
+
+const renderBraille = (codePoint: number, ctx: GlyphContext): GlyphResult => {
   const { cellWidth, cellHeight, x, y, color } = ctx;
   const pattern = codePoint - 0x2800;
   const dotRadius = Math.min(cellWidth, cellHeight) * 0.1;
 
   const leftX = x + cellWidth * 0.3;
   const rightX = x + cellWidth * 0.7;
-  const rows = [
-    y + cellHeight * 0.15,
-    y + cellHeight * 0.35,
-    y + cellHeight * 0.55,
-    y + cellHeight * 0.85,
-  ];
+  const rows = [y + cellHeight * 0.15, y + cellHeight * 0.35, y + cellHeight * 0.55, y + cellHeight * 0.85];
 
   const dots: string[] = [];
   const dotPositions: [number, number][] = [
-    [leftX, rows[0]],
-    [leftX, rows[1]],
-    [leftX, rows[2]],
-    [rightX, rows[0]],
-    [rightX, rows[1]],
-    [rightX, rows[2]],
-    [leftX, rows[3]],
-    [rightX, rows[3]],
+    [leftX, rows[0]], [leftX, rows[1]], [leftX, rows[2]],
+    [rightX, rows[0]], [rightX, rows[1]], [rightX, rows[2]],
+    [leftX, rows[3]], [rightX, rows[3]],
   ];
 
   for (let i = 0; i < 8; i++) {
@@ -556,10 +353,12 @@ function renderBraille(codePoint: number, ctx: GlyphContext): GlyphResult {
   }
 
   return { svg: dots.join(''), handled: true };
-}
+};
 
-// Legacy Computing symbols (U+1FB00-U+1FBFF) - simplified version
-function renderLegacyComputing(codePoint: number, ctx: GlyphContext): GlyphResult {
+
+//#region Legacy Computing (U+1FB00-U+1FBFF)
+
+const renderLegacyComputing = (codePoint: number, ctx: GlyphContext): GlyphResult => {
   const { cellWidth, cellHeight, x, y, color } = ctx;
 
   // Sextant characters (2x3 grid)
@@ -568,16 +367,10 @@ function renderLegacyComputing(codePoint: number, ctx: GlyphContext): GlyphResul
     const sh = cellHeight / 3;
     const offset = codePoint - 0x1fb00;
 
-    // Build pattern from offset
-    const positions: [number, number][] = [
-      [0, 0], [1, 0],
-      [0, 1], [1, 1],
-      [0, 2], [1, 2],
-    ];
-
+    const positions: [number, number][] = [[0, 0], [1, 0], [0, 1], [1, 1], [0, 2], [1, 2]];
     const rects: string[] = [];
-    let bits = offset + 1; // patterns start at 1
-    if (bits >= 63) bits++; // skip full block
+    let bits = offset + 1;
+    if (bits >= 63) bits++;
 
     for (let i = 0; i < 6; i++) {
       if (bits & (1 << i)) {
@@ -594,4 +387,5 @@ function renderLegacyComputing(codePoint: number, ctx: GlyphContext): GlyphResul
     svg: `<rect x="${x}" y="${y}" width="${cellWidth}" height="${cellHeight}" fill="${color}" fill-opacity="0.5"/>`,
     handled: true,
   };
-}
+};
+

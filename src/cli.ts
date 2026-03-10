@@ -1,8 +1,6 @@
 #!/usr/bin/env node
-/**
- * DVD CLI - Cinema Display for Terminal Recordings
- * Create animated SVG terminal recordings from .cd scripts
- */
+
+//#region Imports
 
 import yargs from 'yargs';
 import { hideBin } from 'yargs/helpers';
@@ -11,6 +9,9 @@ import { pipeCommand } from './commands/pipe';
 import { newCommand } from './commands/new';
 import { themesCommand } from './commands/themes';
 import { validateCommand } from './commands/validate';
+
+
+//#region CLI Parser
 
 const createParser = () =>
   yargs(hideBin(process.argv))
@@ -98,7 +99,6 @@ const createParser = () =>
       describe: 'Window border radius in pixels',
       default: 8,
     })
-    // Border options
     .option('border-color', {
       type: 'string',
       describe: 'Border color (hex)',
@@ -107,7 +107,6 @@ const createParser = () =>
       type: 'number',
       describe: 'Border width in pixels',
     })
-    // Font options
     .option('font-family', {
       type: 'string',
       describe: 'Custom font family name',
@@ -116,7 +115,6 @@ const createParser = () =>
       type: 'string',
       describe: 'Watermark text',
     })
-    // Cursor options
     .option('cursor-style', {
       type: 'string',
       choices: ['block', 'bar', 'underline'],
@@ -132,7 +130,6 @@ const createParser = () =>
       describe: 'Enable cursor blinking',
       default: true,
     })
-    // Header options
     .option('header-background', {
       type: 'string',
       describe: 'Header background color (hex)',
@@ -153,7 +150,6 @@ const createParser = () =>
       type: 'number',
       describe: 'Header border width in pixels',
     })
-    // Footer options
     .option('footer-background', {
       type: 'string',
       describe: 'Footer background color (hex)',
@@ -245,11 +241,13 @@ const createParser = () =>
     .wrap(Math.min(100, process.stdout.columns || 80))
     .showHelpOnFail(true);
 
+
+//#region Main Entry
+
 const run = async (): Promise<void> => {
   const parser = createParser();
   const argv = await parser.parse();
 
-  // Check if a subcommand was run (new, themes, validate)
   const subcommands = ['new', 'themes', 'validate'];
   const ranSubcommand = subcommands.some((cmd) => argv._.includes(cmd));
 
@@ -257,13 +255,10 @@ const run = async (): Promise<void> => {
     return;
   }
 
-  // Get the file argument (first positional argument)
   const file = argv._[0] as string | undefined;
 
-  // Auto-detect pipe mode: if stdin is not a TTY, we're receiving piped input
   const isPiped = !process.stdin.isTTY;
 
-  // Check for pipe mode (explicit '-' or auto-detected pipe)
   if (file === '-' || (isPiped && !file)) {
     try {
       await pipeCommand({
@@ -280,23 +275,18 @@ const run = async (): Promise<void> => {
         template: argv.template as string,
         padding: argv.padding,
         borderRadius: argv['border-radius'],
-        // Border options
         borderColor: argv['border-color'],
         borderWidth: argv['border-width'],
-        // Font options
         fontFamily: argv['font-family'],
         watermark: argv.watermark,
-        // Cursor options
         cursorStyle: argv['cursor-style'],
         cursorColor: argv['cursor-color'],
         cursorBlink: argv['cursor-blink'],
-        // Header options
         headerBackground: argv['header-background'],
         headerHeight: argv['header-height'],
         headerBorder: argv['header-border'],
         headerBorderColor: argv['header-border-color'],
         headerBorderWidth: argv['header-border-width'],
-        // Footer options
         footerBackground: argv['footer-background'],
         footerHeight: argv['footer-height'],
         footerBorder: argv['footer-border'],
@@ -310,13 +300,11 @@ const run = async (): Promise<void> => {
     return;
   }
 
-  // Show help if no file was provided
   if (!file) {
     parser.showHelp();
     process.exit(0);
   }
 
-  // Render the file
   try {
     await renderCommand({
       file,
@@ -333,3 +321,4 @@ const run = async (): Promise<void> => {
 };
 
 run();
+

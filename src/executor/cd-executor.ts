@@ -1,158 +1,29 @@
-/**
- * CD Command Executor
- * Executes .cd scripts and generates animated SVG frames
- *
- * Uses the new pipeline: VTerminal → Coalescer → SVG Emitter
- */
+//#region Imports
 
-import { spawn } from 'node:child_process';
-import { writeFileSync } from 'node:fs';
-import { resolve } from 'node:path';
 import type { CDCommand, CDScript } from '../parser/cd-parser';
-import type { GridState, Theme } from '../types';
-import { createGridState, processInput } from '../pipeline/vterminal';
-import { coalesce } from '../pipeline/coalescer';
-import { emit, type FrameData } from '../pipeline/svg-emitter';
+import { createGridState } from '../pipeline/vterminal';
+import { emit } from '../pipeline/svg-emitter';
 import { themes as pipelineThemes } from '../pipeline';
-import { themes as shellfieThemes, shellfie, type shellfieOptions, type Theme as ShellfieTheme } from 'shellfie';
+import type { ExecutorContext, TerminalFrame, CDExecutorOptions } from './types';
+import { sleep } from './types';
+import { captureFrame } from './frame-capture';
+import {
+  executeType,
+  executeBackspace,
+  executeEnter,
+  executeArrow,
+  executeShortcut,
+  executeScreenshot,
+} from './handlers';
+import { applySetting } from './settings';
 
-// ============================================================================
-// Types
-// ============================================================================
 
-export interface TerminalFrame {
-  timestamp: number;
-  svg: string;
-  state: TerminalState;
-}
+//#region Re-exports for backward compatibility
 
-export interface TerminalState {
-  content: string;
-  cursorX: number;
-  cursorY: number;
-  width: number;
-  height: number;
-  fontSize: number;
-  showCursor: boolean;
-  activeCursor: boolean;
-  selectionStart?: number;
-  selectionEnd?: number;
-}
+export type { TerminalFrame, TerminalState, CDExecutorOptions } from './types';
 
-export interface CDExecutorOptions {
-  width?: number;
-  height?: number;
-  fontSize?: number;
-  title?: string;
-  template?: 'macos' | 'windows' | 'minimal';
-  theme?: Theme;
-  onFrame?: (frame: TerminalFrame) => void;
-  onProgress?: (current: number, total: number, description?: string) => void;
-}
 
-interface ExecutorContext {
-  // Terminal grid state (using VTerminal)
-  grid: GridState;
-
-  // Line-based state for typing simulation
-  lines: string[];
-  currentLine: string;
-  cursorX: number;
-  cursorY: number;
-
-  // Frame capture
-  frames: TerminalFrame[];
-  frameData: FrameData[];
-  startTime: number;
-  captureOverhead: number; // Accumulated time spent in frame capture (to subtract from timestamps)
-
-  // Configuration
-  width: number;
-  height: number;
-  fontSize: number;
-  typingSpeed: number;
-  title?: string;
-  template: 'macos' | 'windows' | 'minimal';
-  theme: Theme;
-  promptPrefix: string;
-  watermark?: string;
-  cursorBlink: boolean;
-
-  // Selection state
-  selectionStart?: number;
-  selectionEnd?: number;
-
-  // Clipboard
-  clipboard: string;
-
-  // Screenshot tracking
-  screenshotCounter: number;
-  outputPath?: string;
-
-  // Auto-sizing
-  autoWidth: boolean;
-  autoHeight: boolean;
-  maxLineLength: number;
-  maxLines: number;
-  maxVisualRow: number; // Track max row after VTerminal processing (accounts for cursor positioning)
-
-  // Scrolling
-  scroll: boolean;
-  scrollOffset: number;
-
-  // Execution state
-  isExecutingCommand: boolean;
-  // Track if we're on a continuation line (no prompt prefix)
-  isMultiLineContinuation: boolean;
-
-  // Style overrides
-  headerBackground?: string;
-  footerBackground?: string;
-  borderColor?: string;
-  borderWidth?: number;
-  borderRadius?: number;
-  padding?: number;
-
-  // Header/Footer border config (shellfie 2.0 style)
-  headerHeight?: number;
-  headerBorder?: boolean;
-  headerBorderColor?: string;
-  headerBorderWidth?: number;
-  footerHeight?: number;
-  footerBorder?: boolean;
-  footerBorderColor?: string;
-  footerBorderWidth?: number;
-
-  // Custom cursor config
-  cursorStyle?: 'block' | 'bar' | 'underline';
-  cursorColor?: string;
-
-  // Font config
-  fontFamily?: string;
-  embedFont?: boolean;
-  fontData?: string;
-
-  // Line height multiplier (default 1.4)
-  lineHeight: number;
-  // Track if user explicitly set lineHeight (for cursor alignment)
-  hasCustomLineHeight: boolean;
-
-  // Character width ratio (charWidth = fontSize * ratio, default 0.6)
-  // Adjust this if your font has different character proportions
-  charWidthRatio: number;
-
-  // Shell to use for command execution (default: user's $SHELL or /bin/sh)
-  shell: string;
-
-  // Animation speed for terminal animations like lolcat -fa (ms between frames)
-  // Commands that use cursor restore (\x1b8) to create animations will be
-  // split into separate frames at this interval
-  animationSpeed: number;
-}
-
-// ============================================================================
-// CDExecutor Class
-// ============================================================================
+//#region CDExecutor Class
 
 export class CDExecutor {
   private context: ExecutorContext;
@@ -160,1115 +31,60 @@ export class CDExecutor {
 
   constructor(options: CDExecutorOptions = {}) {
     this.options = options;
-
-    const width = options.width || 800;
-    const height = options.height || 600;
-    const fontSize = options.fontSize || 14;
-
-    // Calculate terminal grid dimensions
-    const charWidth = fontSize * 0.6;
-    const lineHeight = fontSize * 1.4;
-    const padding = 16;
-    const headerHeight = options.template === 'minimal' ? 0 : 40;
-    const termWidth = Math.floor((width - padding * 2) / charWidth);
-    const termHeight = Math.floor((height - headerHeight - padding * 2) / lineHeight);
-
-    this.context = {
-      // VTerminal grid
-      grid: createGridState(termWidth, termHeight),
-
-      // Line-based state
-      lines: [''],
-      currentLine: '',
-      cursorX: 0,
-      cursorY: 0,
-
-      // Frames
-      frames: [],
-      frameData: [],
-      startTime: Date.now(),
-      captureOverhead: 0,
-
-      // Configuration
-      width,
-      height,
-      fontSize,
-      typingSpeed: 50,
-      title: options.title,
-      template: options.template || 'minimal',
-      theme: options.theme || pipelineThemes.dark,
-      promptPrefix: '\x1b[95m❯\x1b[0m ',
-      cursorBlink: true,
-
-      // State
-      clipboard: '',
-      screenshotCounter: 0,
-      autoWidth: !options.width,
-      autoHeight: !options.height,
-      maxLineLength: 0,
-      maxLines: 0,
-      maxVisualRow: 0,
-      scroll: !!options.height, // Enable scroll when height is fixed (content can exceed it)
-      scrollOffset: 0,
-      isExecutingCommand: false,
-      isMultiLineContinuation: false,
-
-      // Line height multiplier (default 1.4)
-      lineHeight: 1.4,
-      hasCustomLineHeight: false,
-
-      // Character width ratio (default 0.6)
-      charWidthRatio: 0.6,
-
-      // Shell: default to user's $SHELL, fallback to /bin/sh
-      shell: process.env.SHELL || '/bin/sh',
-
-      // Animation speed for terminal animations (ms between frames, default 50ms)
-      animationSpeed: 50,
-    };
+    this.context = createContext(options);
   }
 
-  // ==========================================================================
-  // Frame Capture
-  // ==========================================================================
+  //#region Main Execution
 
-  private captureFrame(showCursor: boolean = true, activeCursor: boolean = false): void {
-    const buffer = [...this.context.lines];
-
-    // Build display line with or without prompt
-    let displayLine: string;
-
-    if (this.context.isExecutingCommand || this.context.isMultiLineContinuation) {
-      displayLine = this.context.currentLine;
-    } else {
-      displayLine = this.context.promptPrefix + this.context.currentLine;
+  async execute(script: CDScript): Promise<TerminalFrame[]> {
+    for (const [key, value] of script.settings.entries()) {
+      applySetting(this.context, key, value);
     }
 
-    buffer[this.context.cursorY] = displayLine;
+    this.context.outputPath = script.output;
+    this.updateGridDimensions();
+    captureFrame(this.context, this.options, true, false);
 
-    // Calculate layout constants
-    const charWidth = this.context.fontSize * this.context.charWidthRatio;
-    const lineHeight = this.context.fontSize * this.context.lineHeight;
-    const padding = this.context.padding ?? 16;
-    const headerHeight = this.context.template === 'minimal' ? 0 : 40;
-    const contentStartY = headerHeight + padding;
-    const maxContentHeight = this.context.height - contentStartY - padding;
-    const maxVisibleRows = Math.floor(maxContentHeight / lineHeight);
-    const visibleCols = Math.floor((this.context.width - padding * 2) / charWidth);
-
-    // Track max dimensions for auto-sizing
-    // Track width even when scrolling (width can still be auto when height is fixed)
-    if (this.context.autoWidth) {
-      for (const line of buffer) {
-        const lineLength = this.stripAnsi(line).length;
-        if (lineLength > this.context.maxLineLength) {
-          this.context.maxLineLength = lineLength;
-        }
-      }
-    }
-    // Track height only when not scrolling (scroll handles height via viewport)
-    if (!this.context.scroll && this.context.autoHeight) {
-      if (buffer.length > this.context.maxLines) {
-        this.context.maxLines = buffer.length;
-      }
-    }
-
-    // Handle scrolling
-    // When scroll is enabled (or height is fixed), auto-scroll to keep cursor visible
-    // When scroll is explicitly disabled, show all content without scrolling
-    let visibleBuffer: string[];
-
-    const visibleLines = this.getVisibleLineCount();
-
-    if (this.context.scroll) {
-      // Auto-scroll to keep cursor visible
-      if (this.context.cursorY >= this.context.scrollOffset + visibleLines) {
-        // Cursor is below visible area - scroll down
-        this.context.scrollOffset = this.context.cursorY - visibleLines + 1;
-      } else if (this.context.cursorY < this.context.scrollOffset) {
-        // Cursor is above visible area - scroll up
-        this.context.scrollOffset = this.context.cursorY;
-      }
-
-      const startLine = this.context.scrollOffset;
-      const endLine = Math.min(startLine + visibleLines, buffer.length);
-      visibleBuffer = buffer.slice(startLine, endLine);
-    } else {
-      // No scrolling - show all content
-      visibleBuffer = buffer;
-      this.context.scrollOffset = 0;
-    }
-
-    // Update VTerminal grid with current content
-    const content = visibleBuffer.join('\n');
-
-    // Calculate grid dimensions
-    let gridWidth: number;
-    let gridHeight = this.context.grid.height;
-
-    if (this.context.autoWidth) {
-      // When width is auto, expand grid to fit all content (no wrapping)
-      gridWidth = this.context.grid.width;
-      for (const line of visibleBuffer) {
-        const lineLength = this.stripAnsi(line).length;
-        gridWidth = Math.max(gridWidth, lineLength + 1);
-      }
-      gridHeight = Math.max(gridHeight, visibleBuffer.length + 1);
-    } else {
-      // When width is fixed, use visible columns so text wraps correctly
-      gridWidth = visibleCols;
-      if (!this.context.scroll) {
-        // Expand height to fit all content plus potential wrapped lines
-        let estimatedRows = 0;
-        for (const line of visibleBuffer) {
-          const lineLength = this.stripAnsi(line).length;
-          estimatedRows += Math.ceil(lineLength / visibleCols) || 1;
-        }
-        gridHeight = Math.max(gridHeight, estimatedRows + 5);
-      }
-    }
-
-    // Create grid and process content
-    let grid = createGridState(gridWidth, gridHeight);
-    grid = processInput(grid, content);
-
-    // Determine cursor position
-    // VTerminal processes all content and handles wrapping/ANSI sequences correctly.
-    // For command execution: use VTerminal's cursor directly
-    // For typing: we need to find the visual position of cursorX within the current line
-    const shouldClampCursor = !this.context.autoHeight && this.context.scroll;
-
-    let finalCursorX: number;
-    let finalCursorY: number;
-
-    if (this.context.isExecutingCommand) {
-      // During command execution: use VTerminal's cursor position
-      finalCursorY = shouldClampCursor
-        ? Math.max(0, Math.min(grid.cursor.row, maxVisibleRows - 1))
-        : grid.cursor.row;
-      finalCursorX = grid.cursor.col;
-    } else {
-      // During typing: process content up to cursor position to find visual coords
-      // Build content with only the text up to cursor position on the current line
-      const cursorBuffer = [...this.context.lines];
-
-      // Build the current line with prompt but only up to cursorX
-      const textUpToCursor = this.context.currentLine.substring(0, this.context.cursorX);
-      const displayLineUpToCursor = this.context.promptPrefix + textUpToCursor;
-      cursorBuffer[this.context.cursorY] = displayLineUpToCursor;
-
-      // Get visible portion accounting for scroll
-      let cursorVisibleBuffer: string[];
-      if (this.context.scroll) {
-        const startLine = this.context.scrollOffset;
-        const endLine = Math.min(startLine + this.getVisibleLineCount(), cursorBuffer.length);
-        cursorVisibleBuffer = cursorBuffer.slice(startLine, endLine);
-      } else {
-        cursorVisibleBuffer = cursorBuffer;
-      }
-
-      // Process through VTerminal to get correct visual cursor position
-      const cursorContent = cursorVisibleBuffer.join('\n');
-      let cursorGrid = createGridState(gridWidth, gridHeight);
-      cursorGrid = processInput(cursorGrid, cursorContent);
-
-      finalCursorY = shouldClampCursor
-        ? Math.max(0, Math.min(cursorGrid.cursor.row, maxVisibleRows - 1))
-        : cursorGrid.cursor.row;
-      finalCursorX = cursorGrid.cursor.col;
-    }
-
-    // Track max visual row for auto-height (accounts for cursor positioning in commands like neofetch)
-    if (this.context.autoHeight) {
-      // The cursor row after VTerminal processing represents the actual visual row
-      // Add 1 for zero-indexing (row 22 means 23 rows of content)
-      if (grid.cursor.row + 1 > this.context.maxVisualRow) {
-        this.context.maxVisualRow = grid.cursor.row + 1;
-      }
-    }
-
-    // Coalesce grid to spans
-    const rows = coalesce(grid, this.context.theme);
-
-    // Build selection object if there's an active selection
-    const selection =
-      this.context.selectionStart !== undefined &&
-      this.context.selectionEnd !== undefined &&
-      this.context.selectionStart !== this.context.selectionEnd
-        ? {
-            start: this.context.selectionStart + (this.context.isExecutingCommand ? 0 : this.stripAnsi(this.context.promptPrefix).length),
-            end: this.context.selectionEnd + (this.context.isExecutingCommand ? 0 : this.stripAnsi(this.context.promptPrefix).length),
-            row: finalCursorY,
-          }
-        : null;
-
-    // Generate SVG using the new emitter
-    // When showCursor is true, always render the cursor - the CSS blink animation handles visibility
-    const { svg } = emit(
-      rows,
-      showCursor ? { row: finalCursorY, col: finalCursorX } : null,
-      showCursor,
-      {
-        theme: this.context.theme,
-        template: this.context.template,
-        width: this.context.width,
-        height: this.context.height,
-        fontSize: this.context.fontSize,
-        title: this.context.title,
-        watermark: this.context.watermark,
-        headerBackground: this.context.headerBackground,
-        footerBackground: this.context.footerBackground,
-        borderColor: this.context.borderColor,
-        borderWidth: this.context.borderWidth,
-        borderRadius: this.context.borderRadius,
-        padding: this.context.padding,
-        cursorBlink: this.context.cursorBlink,
-        activeCursor,
-        selection,
-        // Header/Footer config (shellfie 2.0 style)
-        headerHeight: this.context.headerHeight,
-        headerBorder: this.context.headerBorder,
-        headerBorderColor: this.context.headerBorderColor,
-        headerBorderWidth: this.context.headerBorderWidth,
-        footerHeight: this.context.footerHeight,
-        footerBorder: this.context.footerBorder,
-        footerBorderColor: this.context.footerBorderColor,
-        footerBorderWidth: this.context.footerBorderWidth,
-        // Cursor config
-        cursorStyle: this.context.cursorStyle,
-        cursorColor: this.context.cursorColor,
-        // Font config
-        fontFamily: this.context.fontFamily,
-        embedFont: this.context.embedFont,
-        fontData: this.context.fontData,
-        // Line height
-        lineHeight: this.context.fontSize * this.context.lineHeight,
-        hasCustomLineHeight: this.context.hasCustomLineHeight,
-        // Character width
-        charWidth: this.context.fontSize * this.context.charWidthRatio,
-      }
+    const actionCommands = script.commands.filter(
+      (cmd: CDCommand) => !['Output', 'Require', 'Set', 'Env', 'Comment'].includes(cmd.type)
     );
 
-    // Create terminal state for backward compatibility
-    const state: TerminalState = {
-      content,
-      cursorX: finalCursorX,
-      cursorY: finalCursorY,
-      width: this.context.width,
-      height: this.context.height,
-      fontSize: this.context.fontSize,
-      showCursor,
-      activeCursor,
-      selectionStart: this.context.selectionStart,
-      selectionEnd: this.context.selectionEnd,
-    };
-
-    // Subtract accumulated capture overhead to get accurate animation timing
-    const timestamp = Date.now() - this.context.startTime - this.context.captureOverhead;
-
-    const frame: TerminalFrame = {
-      timestamp,
-      svg,
-      state,
-    };
-
-    this.context.frames.push(frame);
-
-    // Also store frame data for animation
-    this.context.frameData.push({
-      rows,
-      cursor: showCursor ? { row: finalCursorY, col: finalCursorX } : null,
-      cursorVisible: showCursor,
-      timestamp,
-      selection,
-      activeCursor,
-    });
-
-    this.options.onFrame?.(frame);
-  }
-
-  private getVisibleLineCount(): number {
-    const headerHeight = this.context.template === 'minimal' ? 0 : 40;
-    const padding = this.context.padding ?? 16;
-    const lineHeight = this.context.fontSize * this.context.lineHeight;
-    const watermarkHeight = this.context.watermark ? lineHeight : 0;
-    const contentHeight = this.context.height - headerHeight - padding - watermarkHeight - padding;
-    return Math.floor(contentHeight / lineHeight);
-  }
-
-  private stripAnsi(str: string): string {
-    // Remove SGR (color) sequences and cursor control sequences
-    return str
-      .replace(/\x1b\[[0-9;]*m/g, '')           // SGR (colors)
-      .replace(/\x1b\[[0-9;]*[A-HJKSTfsu]/g, '') // Cursor movement (A-H, J, K, S, T, f, s, u)
-      .replace(/\x1b\[\?[0-9;]*[hl]/g, '');      // Mode control (show/hide cursor, etc.)
-  }
-
-  // ==========================================================================
-  // Command Execution
-  // ==========================================================================
-
-  private async executeType(text: string, speed?: number): Promise<void> {
-    const delay = speed || this.context.typingSpeed;
-
-    if (this.hasSelection()) {
-      this.deleteSelection();
-      this.captureFrame(true, true);
-      await this.sleep(delay);
+    for (let i = 0; i < actionCommands.length; i++) {
+      const cmd = actionCommands[i];
+      const cmdDescription = formatCommandDescription(cmd);
+      this.options.onProgress?.(i + 1, actionCommands.length, cmdDescription);
+      await this.executeCommand(cmd);
     }
 
-    for (const char of text) {
-      // Handle newline character - move to next line
-      if (char === '\n') {
-        // Store current line (with prompt only on first line, not continuations)
-        const prefix = this.context.isMultiLineContinuation ? '' : this.context.promptPrefix;
-        this.context.lines[this.context.cursorY] = prefix + this.context.currentLine;
-        this.context.cursorY++;
-        this.context.cursorX = 0;
-        this.context.currentLine = '';
-        this.context.isMultiLineContinuation = true; // Subsequent lines are continuations
+    captureFrame(this.context, this.options, true, false);
 
-        if (!this.context.lines[this.context.cursorY]) {
-          this.context.lines[this.context.cursorY] = '';
-        }
-
-        await this.sleep(delay);
-        const captureStart = Date.now();
-        this.captureFrame(true, true);
-        this.context.captureOverhead += Date.now() - captureStart;
-        continue;
-      }
-
-      const before = this.context.currentLine.substring(0, this.context.cursorX);
-      const after = this.context.currentLine.substring(this.context.cursorX);
-      this.context.currentLine = before + char + after;
-      this.context.cursorX++;
-
-      // Sleep first, then capture frame
-      await this.sleep(delay);
-      const captureStart = Date.now();
-      this.captureFrame(true, true);
-      // Track capture overhead to subtract from future timestamps
-      this.context.captureOverhead += Date.now() - captureStart;
+    if (this.context.autoWidth || this.context.autoHeight) {
+      this.recalculateDimensionsAndRerender();
     }
 
-    // Capture a frame with blinking cursor immediately after typing ends
-    this.captureFrame(true, false);
+    return this.context.frames;
   }
 
-  private async executeEnter(): Promise<void> {
-    // Build command from all lines if we're in a multi-line continuation
-    let command: string;
-    if (this.context.isMultiLineContinuation) {
-      // Collect all continuation lines into one command
-      // Find the start of the multi-line input (line with prompt)
-      let startLine = this.context.cursorY;
-      while (startLine > 0 && !this.context.lines[startLine - 1]?.includes(this.stripAnsi(this.context.promptPrefix).trim())) {
-        startLine--;
-      }
-      // The line before startLine should have the prompt
-      if (startLine > 0) startLine--;
 
-      // Combine all lines from startLine to current
-      const allLines: string[] = [];
-      for (let i = startLine; i < this.context.cursorY; i++) {
-        let line = this.context.lines[i] || '';
-        // Strip prompt from first line
-        if (i === startLine) {
-          const promptLen = this.stripAnsi(this.context.promptPrefix).length;
-          const stripped = this.stripAnsi(line);
-          // Find where the actual content starts after the prompt
-          line = stripped.substring(promptLen);
-        }
-        allLines.push(line);
-      }
-      allLines.push(this.context.currentLine);
-      command = allLines.join('\n').trim();
-    } else {
-      command = this.context.currentLine.trim();
-    }
-
-    // Store the final line (with or without prompt)
-    const prefix = this.context.isMultiLineContinuation ? '' : this.context.promptPrefix;
-    this.context.lines[this.context.cursorY] = prefix + this.context.currentLine;
-    this.context.cursorY++;
-    this.context.cursorX = 0;
-    this.context.currentLine = '';
-    this.context.isMultiLineContinuation = false; // Reset for next command
-
-    if (!this.context.lines[this.context.cursorY]) {
-      this.context.lines[this.context.cursorY] = '';
-    }
-
-    if (command) {
-      this.context.isExecutingCommand = true;
-      await this.sleep(100);
-      const captureStart = Date.now();
-      this.captureFrame(false);
-      this.context.captureOverhead += Date.now() - captureStart;
-      await this.executeShellCommand(command);
-    } else {
-      await this.sleep(100);
-      this.captureFrame(true);
-    }
-  }
-
-  private async executeShellCommand(command: string): Promise<void> {
-    return new Promise((resolve) => {
-      // Use configured shell (defaults to user's $SHELL or /bin/sh)
-      const child = spawn(this.context.shell, ['-c', command], {
-        env: { ...process.env, FORCE_COLOR: '1', CLICOLOR_FORCE: '1' },
-        stdio: ['pipe', 'pipe', 'pipe'],
-      });
-
-      // Close stdin immediately - we don't need to send any input
-      child.stdin?.end();
-
-      let output = '';
-      let prevLineCount = 0;
-      const outputStartLine = this.context.cursorY;
-
-      // For non-animated output, process line-by-line for smooth animation
-      const processOutputLineByLine = (data: string) => {
-        output += data;
-
-        // Parse output and update lines
-        const outputLines = output.split('\n');
-        for (let i = 0; i < outputLines.length; i++) {
-          this.context.lines[outputStartLine + i] = outputLines[i];
-        }
-
-        this.context.cursorY = outputStartLine + outputLines.length - 1;
-
-        while (this.context.lines.length <= this.context.cursorY) {
-          this.context.lines.push('');
-        }
-
-        // Capture frame on each new line for smooth line-by-line animation
-        const currentLineCount = outputLines.length;
-        if (currentLineCount > prevLineCount) {
-          this.captureFrame(false);
-          prevLineCount = currentLineCount;
-        }
-      };
-
-      // For animated output (like lolcat -fa), process frames in real-time
-      // Animation state tracking
-      let isAnimatedOutput = false;
-      let animationType: 'none' | 'cursor-restore' | 'terminal-reset' = 'none'; // Track which animation type
-      let animationBuffer = ''; // Buffer for incomplete sequences
-      let finalizedLines: string[] = []; // Lines that have received a newline
-      let currentAnimatingLine = ''; // Current line being animated
-      let animationFrameCount = 0;
-      // Track real timestamps when frames arrive for auto-detecting animation speed
-      const frameArrivalTimes: number[] = [];
-      // Record start time NOW (when command starts) so animation begins immediately after Enter
-      const animationStartTime = Date.now() - this.context.startTime - this.context.captureOverhead;
-
-      const processAnimationFrame = (frameContent: string) => {
-        // Skip empty frames or frames with only control codes
-        if (!frameContent || !frameContent.match(/[a-zA-Z0-9]/)) return;
-
-        // Check if this segment ends with a newline (line is done animating)
-        const hasNewline = frameContent.includes('\n');
-
-        if (hasNewline) {
-          // This segment contains a newline - the line before it is finalized
-          const parts = frameContent.split('\n');
-
-          // First part completes the current animating line
-          currentAnimatingLine = parts[0];
-          finalizedLines.push(currentAnimatingLine);
-
-          // Any additional parts are also finalized
-          for (let j = 1; j < parts.length - 1; j++) {
-            if (parts[j]) finalizedLines.push(parts[j]);
-          }
-
-          // The last part becomes the new animating line
-          currentAnimatingLine = parts[parts.length - 1];
-        } else {
-          // No newline - this is an animation frame of the current line
-          currentAnimatingLine = frameContent;
-        }
-
-        // Build the current frame: finalized lines + current animating line
-        for (let j = 0; j < finalizedLines.length; j++) {
-          this.context.lines[outputStartLine + j] = finalizedLines[j];
-        }
-
-        // Add current animating line (if not empty)
-        const currentLineIndex = outputStartLine + finalizedLines.length;
-        if (currentAnimatingLine) {
-          this.context.lines[currentLineIndex] = currentAnimatingLine;
-        }
-
-        // Ensure we have enough lines
-        const totalLines = finalizedLines.length + (currentAnimatingLine ? 1 : 0);
-        while (this.context.lines.length <= outputStartLine + totalLines) {
-          this.context.lines.push('');
-        }
-
-        // Position cursor after all content
-        this.context.cursorY = outputStartLine + totalLines;
-        this.context.cursorX = 0;
-
-        // Capture frame with synthetic timing
-        // Instead of using real timestamps, we space frames evenly based on animationSpeed
-        // This makes the animation smooth even though data arrives in bursts
-        const syntheticTimestamp = animationStartTime + animationFrameCount * this.context.animationSpeed;
-
-        // Temporarily override the timing for this frame
-        const originalStartTime = this.context.startTime;
-        const originalOverhead = this.context.captureOverhead;
-        this.context.startTime = Date.now() - syntheticTimestamp;
-        this.context.captureOverhead = 0;
-
-        this.captureFrame(false);
-
-        // Restore original timing
-        this.context.startTime = originalStartTime;
-        this.context.captureOverhead = originalOverhead;
-
-        animationFrameCount++;
-      };
-
-      const processAnimatedOutput = (data: string) => {
-        animationBuffer += data;
-
-        // Process complete frames (segments between \x1b8 markers)
-        // Keep any incomplete segment in the buffer
-        const segments = animationBuffer.split('\x1b8');
-
-        // Process all complete segments (all but the last one)
-        for (let i = 0; i < segments.length - 1; i++) {
-          processAnimationFrame(segments[i]);
-        }
-
-        // Keep the last segment in the buffer (may be incomplete)
-        animationBuffer = segments[segments.length - 1];
-      };
-
-      // Deferred frames for terminal-reset animations
-      // We buffer raw frame content during data events, then render all frames
-      // after process close to avoid blocking the event loop and losing data
-      const deferredFrames: string[] = [];
-
-      const processOutput = (data: string) => {
-        const dataStr = data;
-
-        // Check for animation markers on first data
-        if (!isAnimatedOutput) {
-          // \x1bc = reset terminal (full screen animations like htop, chartscii)
-          // \x1b8 = restore cursor (lolcat style animation)
-          // \x1b[?25l = hide cursor (often paired with animations)
-          if (dataStr.includes('\x1bc')) {
-            isAnimatedOutput = true;
-            animationType = 'terminal-reset';
-          } else if (dataStr.includes('\x1b8') || dataStr.includes('\x1b[?25l')) {
-            isAnimatedOutput = true;
-            animationType = 'cursor-restore';
-          }
-        }
-
-        if (isAnimatedOutput) {
-          // Handle based on animation type
-          if (animationType === 'terminal-reset') {
-            // Terminal reset style (\x1bc) - buffer ALL data and split on resets
-            // IMPORTANT: Don't render frames here - just store raw content
-            // Rendering is deferred to after process close to avoid blocking event loop
-            animationBuffer += dataStr;
-
-            // Extract complete frames (content between \x1bc markers)
-            if (animationBuffer.includes('\x1bc')) {
-              const parts = animationBuffer.split('\x1bc');
-              // Keep the last part in buffer (may be incomplete)
-              animationBuffer = parts.pop() || '';
-
-              // Store complete frames for deferred rendering and track arrival time
-              const now = Date.now();
-              for (const frame of parts) {
-                if (frame.trim()) {
-                  deferredFrames.push(frame);
-                  frameArrivalTimes.push(now);
-                }
-              }
-            }
-          } else {
-            // Cursor restore style (\x1b8) - use existing lolcat-style processing
-            processAnimatedOutput(dataStr);
-          }
-        } else {
-          processOutputLineByLine(dataStr);
-        }
-      };
-
-      child.stdout?.on('data', (data: Buffer) => {
-        processOutput(data.toString());
-      });
-
-      child.stderr?.on('data', (data: Buffer) => {
-        processOutput(data.toString());
-      });
-
-      child.on('close', async () => {
-        if (isAnimatedOutput) {
-          if (animationType === 'terminal-reset') {
-            // Add any remaining buffer content as final frame
-            if (animationBuffer && animationBuffer.trim()) {
-              deferredFrames.push(animationBuffer);
-              frameArrivalTimes.push(Date.now());
-            }
-
-            // Auto-detect animation speed from frame arrival times
-            // Calculate the total duration and divide by frame count
-            let detectedSpeed = this.context.animationSpeed; // fallback to default
-            if (frameArrivalTimes.length >= 2) {
-              const firstTime = frameArrivalTimes[0];
-              const lastTime = frameArrivalTimes[frameArrivalTimes.length - 1];
-              const totalRealDuration = lastTime - firstTime;
-              const frameCount = deferredFrames.length;
-
-              if (totalRealDuration > 0 && frameCount > 1) {
-                // Calculate average ms per frame from real timing
-                detectedSpeed = Math.max(10, Math.round(totalRealDuration / (frameCount - 1)));
-              }
-            }
-
-            // Render deferred frames - process ALL frames synchronously for speed
-            // The spinner will be unresponsive but rendering will be much faster
-            for (let i = 0; i < deferredFrames.length; i++) {
-              const frame = deferredFrames[i];
-
-              // Parse frame content into lines
-              finalizedLines = [];
-              const lines = frame.split('\n');
-              for (const line of lines) {
-                if (line) finalizedLines.push(line);
-              }
-
-              // Update context with frame content
-              for (let j = 0; j < finalizedLines.length; j++) {
-                this.context.lines[outputStartLine + j] = finalizedLines[j];
-              }
-
-              // Clear any extra lines from previous frame
-              const totalLines = finalizedLines.length;
-              for (let j = totalLines; j < this.context.lines.length - outputStartLine; j++) {
-                this.context.lines[outputStartLine + j] = '';
-              }
-
-              this.context.cursorY = outputStartLine + totalLines;
-              this.context.cursorX = 0;
-
-              // Capture frame with synthetic timing using auto-detected speed
-              const syntheticTimestamp = animationStartTime + i * detectedSpeed;
-              const originalStartTime = this.context.startTime;
-              const originalOverhead = this.context.captureOverhead;
-              this.context.startTime = Date.now() - syntheticTimestamp;
-              this.context.captureOverhead = 0;
-
-              this.captureFrame(false);
-
-              this.context.startTime = originalStartTime;
-              this.context.captureOverhead = originalOverhead;
-            }
-
-            // Calculate the expected timestamp for the next frame (after animation ends)
-            const lastAnimationTimestamp = animationStartTime + (deferredFrames.length - 1) * detectedSpeed;
-            // Adjust overhead so the next frame has correct timestamp (animation end + 100ms for setTimeout)
-            this.context.captureOverhead = Date.now() - this.context.startTime - lastAnimationTimestamp - 100;
-
-            animationFrameCount = deferredFrames.length;
-          } else {
-            // cursor-restore style (\x1b8) - process remaining buffer
-            if (animationBuffer && animationBuffer.trim()) {
-              processAnimationFrame(animationBuffer);
-            }
-          }
-
-          // Finalize cursor position
-          const totalLines = finalizedLines.length + (currentAnimatingLine ? 1 : 0);
-          this.context.cursorY = outputStartLine + totalLines;
-          this.context.cursorX = 0;
-
-          while (this.context.lines.length <= this.context.cursorY) {
-            this.context.lines.push('');
-          }
-        } else {
-          // Non-animated: finalize line-by-line output
-          const trimmedOutput = output.endsWith('\n') ? output.slice(0, -1) : output;
-          const outputLines = trimmedOutput.split('\n');
-
-          // Store output lines (with ANSI codes) for rendering
-          for (let i = 0; i < outputLines.length; i++) {
-            this.context.lines[outputStartLine + i] = outputLines[i];
-          }
-
-          // Position cursor after output
-          this.context.cursorY = outputStartLine + outputLines.length;
-          this.context.cursorX = 0;
-
-          while (this.context.lines.length <= this.context.cursorY) {
-            this.context.lines.push('');
-          }
-        }
-
-        this.context.isExecutingCommand = false;
-        this.context.currentLine = '';
-
-        setTimeout(() => {
-          const captureStart = Date.now();
-          this.captureFrame(true);
-          this.context.captureOverhead += Date.now() - captureStart;
-          resolve();
-        }, 100);
-      });
-
-      child.on('error', (err) => {
-        this.context.lines[this.context.cursorY] = `Command failed: ${err.message}`;
-        this.context.cursorY++;
-        this.context.lines[this.context.cursorY] = '';
-
-        this.context.isExecutingCommand = false;
-        this.context.currentLine = '';
-        this.context.cursorX = 0;
-
-        this.captureFrame(true);
-        resolve();
-      });
-    });
-  }
-
-  private async executeArrow(direction: 'Left' | 'Right' | 'Up' | 'Down'): Promise<void> {
-    switch (direction) {
-      case 'Left':
-        if (this.context.cursorX > 0) this.context.cursorX--;
-        break;
-      case 'Right':
-        if (this.context.cursorX < this.context.currentLine.length) this.context.cursorX++;
-        break;
-      case 'Up':
-        if (this.context.cursorY > 0) {
-          this.context.cursorY--;
-          this.context.currentLine = this.context.lines[this.context.cursorY] || '';
-          this.context.cursorX = Math.min(this.context.cursorX, this.context.currentLine.length);
-        }
-        break;
-      case 'Down':
-        if (this.context.cursorY < this.context.lines.length - 1) {
-          this.context.cursorY++;
-          this.context.currentLine = this.context.lines[this.context.cursorY] || '';
-          this.context.cursorX = Math.min(this.context.cursorX, this.context.currentLine.length);
-        }
-        break;
-    }
-
-    await this.sleep(50);
-    this.captureFrame(true, true);
-  }
-
-  private async executeBackspace(count: number = 1): Promise<void> {
-    const delay = this.context.typingSpeed;
-
-    if (this.hasSelection()) {
-      this.deleteSelection();
-      await this.sleep(delay);
-      this.captureFrame(true, true);
-      return;
-    }
-
-    for (let i = 0; i < count; i++) {
-      if (this.context.currentLine.length > 0 && this.context.cursorX > 0) {
-        const before = this.context.currentLine.substring(0, this.context.cursorX - 1);
-        const after = this.context.currentLine.substring(this.context.cursorX);
-        this.context.currentLine = before + after;
-        this.context.cursorX--;
-
-        await this.sleep(delay);
-        this.captureFrame(true, true);
-      }
-    }
-  }
-
-  private async executeShortcut(
-    ctrl: boolean,
-    alt: boolean,
-    shift: boolean,
-    cmd: boolean,
-    key: string
-  ): Promise<void> {
-    const metaKey = cmd || ctrl;
-
-    if (shift && !alt && !metaKey) {
-      if (key === 'Left' || key === 'Right') {
-        await this.executeSelectionMove(key === 'Right', shift);
-      }
-    } else if (alt && shift && !metaKey) {
-      if (key === 'Left' || key === 'Right') {
-        await this.executeWordSelection(key === 'Right');
-      }
-    } else if (alt && !shift && !metaKey) {
-      if (key === 'Left' || key === 'Right') {
-        await this.executeWordMove(key === 'Right');
-      }
-    } else if (metaKey && !alt && !shift) {
-      if (key === 'Left' || key === 'Right') {
-        await this.executeLineNavigation(key === 'Right');
-      } else if (key === 'Backspace') {
-        await this.executeWordDelete();
-      }
-    }
-  }
-
-  private async executeScreenshot(path?: string): Promise<void> {
-    let screenshotPath: string;
-    if (path) {
-      screenshotPath = path;
-    } else {
-      const baseName = this.context.outputPath?.replace(/\.svg$/, '') || 'screenshot';
-      screenshotPath = `${baseName}_screenshot_${this.context.screenshotCounter}.svg`;
-      this.context.screenshotCounter++;
-    }
-
-    // Build current terminal content
-    const buffer = [...this.context.lines];
-    const displayLine = this.context.isExecutingCommand
-      ? this.context.currentLine
-      : this.context.promptPrefix + this.context.currentLine;
-    buffer[this.context.cursorY] = displayLine;
-    const content = buffer.filter((line) => line !== undefined).join('\n');
-
-    // Convert our theme to shellfie theme format
-    const shellfieTheme: ShellfieTheme = {
-      name: this.context.theme.name,
-      background: this.context.theme.background,
-      foreground: this.context.theme.foreground,
-      cursor: this.context.theme.cursor ?? this.context.theme.foreground,
-      selection: this.context.theme.selection ?? '#44475a',
-      black: this.context.theme.black,
-      red: this.context.theme.red,
-      green: this.context.theme.green,
-      yellow: this.context.theme.yellow,
-      blue: this.context.theme.blue,
-      magenta: this.context.theme.magenta,
-      cyan: this.context.theme.cyan,
-      white: this.context.theme.white,
-      brightBlack: this.context.theme.brightBlack,
-      brightRed: this.context.theme.brightRed,
-      brightGreen: this.context.theme.brightGreen,
-      brightYellow: this.context.theme.brightYellow,
-      brightBlue: this.context.theme.brightBlue,
-      brightMagenta: this.context.theme.brightMagenta,
-      brightCyan: this.context.theme.brightCyan,
-      brightWhite: this.context.theme.brightWhite,
-    };
-
-    // Build shellfie options
-    // Only pass width/height if explicitly set (not auto-detected)
-    const options: shellfieOptions = {
-      template: this.context.template as 'macos' | 'windows' | 'minimal',
-      title: this.context.title,
-      theme: shellfieTheme,
-      fontSize: this.context.fontSize,
-      watermark: this.context.watermark,
-      embedFont: true,
-    };
-
-    // Only pass dimensions if explicitly set - let shellfie auto-detect otherwise
-    if (!this.context.autoWidth) {
-      options.width = this.context.width;
-    }
-    if (!this.context.autoHeight) {
-      options.height = this.context.height;
-    }
-
-    if (this.context.headerBackground) {
-      options.header = { backgroundColor: this.context.headerBackground };
-    }
-
-    // Generate static SVG using shellfie
-    const svg = shellfie(content, options);
-    writeFileSync(resolve(screenshotPath), svg, 'utf-8');
-  }
-
-  // ==========================================================================
-  // Selection Helpers
-  // ==========================================================================
-
-  private hasSelection(): boolean {
-    return (
-      this.context.selectionStart !== undefined &&
-      this.context.selectionEnd !== undefined &&
-      this.context.selectionStart !== this.context.selectionEnd
-    );
-  }
-
-  private clearSelection(): void {
-    this.context.selectionStart = undefined;
-    this.context.selectionEnd = undefined;
-  }
-
-  private deleteSelection(): boolean {
-    if (!this.hasSelection()) return false;
-
-    const start = Math.min(this.context.selectionStart!, this.context.selectionEnd!);
-    const end = Math.max(this.context.selectionStart!, this.context.selectionEnd!);
-
-    const before = this.context.currentLine.substring(0, start);
-    const after = this.context.currentLine.substring(end);
-
-    this.context.currentLine = before + after;
-    this.context.cursorX = start;
-    this.clearSelection();
-
-    return true;
-  }
-
-  private async executeSelectionMove(right: boolean, shift: boolean): Promise<void> {
-    const strippedLine = this.stripAnsi(this.context.currentLine);
-
-    if (!shift || (this.context.selectionStart === undefined && this.context.selectionEnd === undefined)) {
-      this.context.selectionStart = this.context.cursorX;
-      this.context.selectionEnd = this.context.cursorX;
-    }
-
-    if (right) {
-      if (this.context.cursorX < strippedLine.length) this.context.cursorX++;
-    } else {
-      if (this.context.cursorX > 0) this.context.cursorX--;
-    }
-
-    if (shift) {
-      this.context.selectionEnd = this.context.cursorX;
-    } else {
-      this.clearSelection();
-    }
-
-    await this.sleep(50);
-    this.captureFrame(true, true);
-  }
-
-  private async executeWordMove(right: boolean): Promise<void> {
-    this.clearSelection();
-    const newPosition = this.findWordBoundary(right ? 'right' : 'left', this.context.cursorX, this.context.currentLine);
-    this.context.cursorX = newPosition;
-
-    await this.sleep(50);
-    this.captureFrame(true, true);
-  }
-
-  private async executeWordSelection(right: boolean): Promise<void> {
-    if (this.context.selectionStart === undefined) {
-      this.context.selectionStart = this.context.cursorX;
-      this.context.selectionEnd = this.context.cursorX;
-    }
-
-    const newPosition = this.findWordBoundary(right ? 'right' : 'left', this.context.cursorX, this.context.currentLine);
-    this.context.cursorX = newPosition;
-    this.context.selectionEnd = newPosition;
-
-    await this.sleep(50);
-    this.captureFrame(true, true);
-  }
-
-  private async executeLineNavigation(toEnd: boolean): Promise<void> {
-    this.clearSelection();
-    this.context.cursorX = toEnd ? this.context.currentLine.length : 0;
-
-    await this.sleep(50);
-    this.captureFrame(true, true);
-  }
-
-  private async executeWordDelete(): Promise<void> {
-    const wordStart = this.findWordBoundary('left', this.context.cursorX, this.context.currentLine);
-    const deleteCount = this.context.cursorX - wordStart;
-
-    if (deleteCount <= 0) return;
-
-    const before = this.context.currentLine.substring(0, wordStart);
-    const after = this.context.currentLine.substring(this.context.cursorX);
-    this.context.currentLine = before + after;
-    this.context.cursorX = wordStart;
-
-    await this.sleep(50);
-    this.captureFrame(true, true);
-  }
-
-  private findWordBoundary(direction: 'left' | 'right', position: number, text: string): number {
-    const stripped = this.stripAnsi(text);
-
-    if (direction === 'left') {
-      if (position === 0) return 0;
-      let pos = position - 1;
-
-      while (pos > 0 && /\s/.test(stripped[pos])) pos--;
-
-      if (/\w/.test(stripped[pos])) {
-        while (pos > 0 && /\w/.test(stripped[pos - 1])) pos--;
-      } else if (/\S/.test(stripped[pos])) {
-        while (pos > 0 && /[^\w\s]/.test(stripped[pos - 1])) pos--;
-      }
-
-      return pos;
-    } else {
-      if (position >= stripped.length) return stripped.length;
-      let pos = position;
-
-      while (pos < stripped.length && /\s/.test(stripped[pos])) pos++;
-
-      if (pos < stripped.length && /\w/.test(stripped[pos])) {
-        while (pos < stripped.length && /\w/.test(stripped[pos])) pos++;
-      } else if (pos < stripped.length && /\S/.test(stripped[pos])) {
-        while (pos < stripped.length && /[^\w\s]/.test(stripped[pos])) pos++;
-      }
-
-      return pos;
-    }
-  }
-
-  // ==========================================================================
-  // Utility
-  // ==========================================================================
-
-  private sleep(ms: number): Promise<void> {
-    return new Promise((resolve) => setTimeout(resolve, ms));
-  }
-
-  // ==========================================================================
-  // Command Router
-  // ==========================================================================
+  //#region Command Router
 
   private async executeCommand(command: CDCommand): Promise<void> {
     switch (command.type) {
       case 'Type':
-        await this.executeType(command.text, command.speed);
+        await executeType(this.context, this.options, command.text, command.speed);
         break;
 
       case 'Key':
-        if (['Left', 'Right', 'Up', 'Down'].includes(command.key)) {
-          const count = command.count || 1;
-          for (let i = 0; i < count; i++) {
-            await this.executeArrow(command.key as 'Left' | 'Right' | 'Up' | 'Down');
-          }
-        } else if (command.key === 'Enter') {
-          await this.executeEnter();
-        } else if (command.key === 'Backspace') {
-          await this.executeBackspace(command.count || 1);
-        } else if (command.key === 'Space') {
-          await this.executeType(' '.repeat(command.count || 1));
-        } else if (command.key === 'Tab') {
-          await this.executeType('    '.repeat(command.count || 1));
-        }
+        await this.handleKeyCommand(command);
         break;
 
       case 'Sleep':
-        await this.sleep(command.duration);
-        this.captureFrame(true);
+        await sleep(command.duration);
+        captureFrame(this.context, this.options, true, false);
         break;
 
       case 'Screenshot':
-        await this.executeScreenshot(command.path);
+        await executeScreenshot(this.context, command.path);
         break;
 
       case 'Copy':
@@ -1277,276 +93,47 @@ export class CDExecutor {
 
       case 'Paste':
         if (this.context.clipboard) {
-          await this.executeType(this.context.clipboard);
+          await executeType(this.context, this.options, this.context.clipboard);
         }
         break;
 
       case 'Shortcut':
-        await this.executeShortcut(command.ctrl, command.alt, command.shift, command.cmd, command.key);
-        break;
-
-      default:
-        // Not implemented: Hide, Show, Output, Require, Set, Source, Env, Comment, Wait
+        await executeShortcut(
+          this.context,
+          this.options,
+          command.ctrl,
+          command.alt,
+          command.shift,
+          command.cmd,
+          command.key
+        );
         break;
     }
   }
 
-  // ==========================================================================
-  // Main Execution
-  // ==========================================================================
-
-  async execute(script: CDScript): Promise<TerminalFrame[]> {
-    // Apply settings
-    for (const [key, value] of script.settings.entries()) {
-      this.applySetting(key, value);
-    }
-
-    this.context.outputPath = script.output;
-
-    // Recalculate grid dimensions after settings applied
-    this.updateGridDimensions();
-
-    // Capture initial frame
-    this.captureFrame(true);
-
-    // Execute commands (filter out non-action commands including comments)
-    const actionCommands = script.commands.filter(
-      (cmd: CDCommand) => !['Output', 'Require', 'Set', 'Env', 'Comment'].includes(cmd.type)
-    );
-
-    for (let i = 0; i < actionCommands.length; i++) {
-      const cmd = actionCommands[i];
-
-      // Build detailed command description
-      let cmdDescription: string = cmd.type;
-      if (cmd.type === 'Type') {
-        // Sanitize preview: replace newlines with ↵ symbol for display
-        const sanitized = cmd.text.replace(/\n/g, '↵');
-        const preview = sanitized.length > 30 ? sanitized.slice(0, 30) + '...' : sanitized;
-        cmdDescription = `Type \x1b[2m"${preview}"\x1b[0m`;
-      } else if (cmd.type === 'Key') {
-        cmdDescription = cmd.key + (cmd.count && cmd.count > 1 ? ` \x1b[2m×${cmd.count}\x1b[0m` : '');
-      } else if (cmd.type === 'Sleep') {
-        cmdDescription = `Sleep \x1b[2m${cmd.duration}ms\x1b[0m`;
-      } else if (cmd.type === 'Screenshot') {
-        cmdDescription = `Screenshot \x1b[2m${cmd.path || 'auto'}\x1b[0m`;
-      } else if (cmd.type === 'Shortcut') {
-        const mods = [cmd.ctrl && 'Ctrl', cmd.alt && 'Alt', cmd.shift && 'Shift', cmd.cmd && 'Cmd'].filter(Boolean);
-        cmdDescription = `${mods.join('+')}+${cmd.key}`;
-      } else if (cmd.type === 'Copy') {
-        const preview = cmd.text.length > 20 ? cmd.text.slice(0, 20) + '...' : cmd.text;
-        cmdDescription = `Copy \x1b[2m"${preview}"\x1b[0m`;
+  private async handleKeyCommand(command: CDCommand & { type: 'Key' }): Promise<void> {
+    if (['Left', 'Right', 'Up', 'Down'].includes(command.key)) {
+      const count = command.count || 1;
+      for (let i = 0; i < count; i++) {
+        await executeArrow(
+          this.context,
+          this.options,
+          command.key as 'Left' | 'Right' | 'Up' | 'Down'
+        );
       }
-
-      this.options.onProgress?.(i + 1, actionCommands.length, cmdDescription);
-      await this.executeCommand(cmd);
-    }
-
-    // Capture final frame with cursor visible (resting state)
-    this.captureFrame(true);
-
-    // Auto-calculate dimensions and re-render if needed
-    if (this.context.autoWidth || this.context.autoHeight) {
-      this.recalculateDimensionsAndRerender();
-    }
-
-    return this.context.frames;
-  }
-
-  private applySetting(key: string, value: string): void {
-    switch (key) {
-      case 'Width':
-        this.context.width = parseInt(value, 10);
-        this.context.autoWidth = false;
-        break;
-      case 'Height':
-        this.context.height = parseInt(value, 10);
-        this.context.autoHeight = false;
-        break;
-      case 'FontSize':
-        this.context.fontSize = parseInt(value, 10);
-        break;
-      case 'LineHeight':
-        this.context.lineHeight = parseFloat(value);
-        this.context.hasCustomLineHeight = true;
-        break;
-      case 'TypingSpeed':
-        this.context.typingSpeed = parseInt(value, 10);
-        break;
-      case 'Title':
-        this.context.title = value;
-        break;
-      case 'Template':
-        this.context.template = value as 'macos' | 'windows' | 'minimal';
-        break;
-      case 'Theme':
-        this.resolveTheme(value);
-        break;
-      case 'PromptPrefix':
-        this.context.promptPrefix = this.parseEscapes(value);
-        break;
-      case 'Watermark':
-        this.context.watermark = this.parseEscapes(value);
-        break;
-      case 'CursorBlink':
-        this.context.cursorBlink = value.toLowerCase() !== 'false';
-        break;
-      case 'Scroll':
-        this.context.scroll = value.toLowerCase() === 'true';
-        if (this.context.scroll) this.context.autoHeight = false;
-        break;
-      case 'HeaderBackground':
-        this.context.headerBackground = value;
-        break;
-      case 'FooterBackground':
-        this.context.footerBackground = value;
-        break;
-      case 'BorderColor':
-        this.context.borderColor = value;
-        break;
-      case 'BorderWidth':
-        this.context.borderWidth = parseInt(value, 10);
-        break;
-      case 'BorderRadius':
-        this.context.borderRadius = parseInt(value, 10);
-        break;
-      case 'Padding':
-        this.context.padding = parseInt(value, 10);
-        break;
-      // Header config (shellfie 2.0 style)
-      case 'HeaderHeight':
-        this.context.headerHeight = parseInt(value, 10);
-        break;
-      case 'HeaderBorder':
-        this.context.headerBorder = value.toLowerCase() === 'true';
-        break;
-      case 'HeaderBorderColor':
-        this.context.headerBorderColor = value;
-        break;
-      case 'HeaderBorderWidth':
-        this.context.headerBorderWidth = parseInt(value, 10);
-        break;
-      // Footer config (shellfie 2.0 style)
-      case 'FooterHeight':
-        this.context.footerHeight = parseInt(value, 10);
-        break;
-      case 'FooterBorder':
-        this.context.footerBorder = value.toLowerCase() === 'true';
-        break;
-      case 'FooterBorderColor':
-        this.context.footerBorderColor = value;
-        break;
-      case 'FooterBorderWidth':
-        this.context.footerBorderWidth = parseInt(value, 10);
-        break;
-      // Cursor config
-      case 'CursorStyle':
-        const style = value.toLowerCase();
-        if (style === 'block' || style === 'bar' || style === 'underline') {
-          this.context.cursorStyle = style;
-        }
-        break;
-      case 'CursorColor':
-        this.context.cursorColor = value;
-        break;
-      // Font config
-      case 'FontFamily':
-        this.context.fontFamily = value;
-        break;
-      case 'EmbedFont':
-        // Read font file and base64 encode it
-        this.embedFontFromPath(value);
-        break;
-      // Shell config
-      case 'Shell':
-        this.context.shell = value;
-        break;
-      // Character width ratio for font tuning
-      case 'CharWidthRatio':
-        this.context.charWidthRatio = parseFloat(value);
-        break;
-      // Animation speed for terminal animations (lolcat -fa, etc.)
-      case 'AnimationSpeed':
-        this.context.animationSpeed = parseInt(value, 10);
-        break;
+    } else if (command.key === 'Enter') {
+      await executeEnter(this.context, this.options);
+    } else if (command.key === 'Backspace') {
+      await executeBackspace(this.context, this.options, command.count || 1);
+    } else if (command.key === 'Space') {
+      await executeType(this.context, this.options, ' '.repeat(command.count || 1));
+    } else if (command.key === 'Tab') {
+      await executeType(this.context, this.options, '    '.repeat(command.count || 1));
     }
   }
 
-  private embedFontFromPath(fontPath: string): void {
-    try {
-      const fs = require('fs');
-      const path = require('path');
 
-      // Resolve path relative to current working directory
-      const resolvedPath = path.resolve(fontPath);
-
-      if (!fs.existsSync(resolvedPath)) {
-        console.warn(`Font file not found: ${resolvedPath}`);
-        return;
-      }
-
-      const fontBuffer = fs.readFileSync(resolvedPath);
-      this.context.fontData = fontBuffer.toString('base64');
-      this.context.embedFont = true;
-    } catch (err) {
-      console.warn(`Failed to embed font: ${err}`);
-    }
-  }
-
-  private resolveTheme(themeName: string): void {
-    // Try pipeline themes first
-    const pipelineTheme = pipelineThemes[themeName as keyof typeof pipelineThemes];
-    if (pipelineTheme) {
-      this.context.theme = pipelineTheme;
-      return;
-    }
-
-    // Try shellfie themes
-    let name = themeName as keyof typeof shellfieThemes;
-    if (!shellfieThemes[name]) {
-      // Convert kebab-case to camelCase
-      const camelCase = themeName.replace(/-([a-z])/g, (_, letter) => letter.toUpperCase()) as keyof typeof shellfieThemes;
-      if (shellfieThemes[camelCase]) {
-        name = camelCase;
-      }
-    }
-
-    if (shellfieThemes[name]) {
-      // Convert shellfie theme to our Theme type
-      const st = shellfieThemes[name];
-      this.context.theme = {
-        name: themeName,
-        background: st.background,
-        foreground: st.foreground,
-        cursor: st.cursor,
-        selection: st.selection,
-        black: st.black,
-        red: st.red,
-        green: st.green,
-        yellow: st.yellow,
-        blue: st.blue,
-        magenta: st.magenta,
-        cyan: st.cyan,
-        white: st.white,
-        brightBlack: st.brightBlack,
-        brightRed: st.brightRed,
-        brightGreen: st.brightGreen,
-        brightYellow: st.brightYellow,
-        brightBlue: st.brightBlue,
-        brightMagenta: st.brightMagenta,
-        brightCyan: st.brightCyan,
-        brightWhite: st.brightWhite,
-      };
-    }
-  }
-
-  private parseEscapes(value: string): string {
-    return value
-      .replace(/\\e/g, '\x1b')
-      .replace(/\\x1b/g, '\x1b')
-      .replace(/\\n/g, '\n')
-      .replace(/\\t/g, '\t');
-  }
+  //#region Dimension Management
 
   private updateGridDimensions(): void {
     const charWidth = this.context.fontSize * this.context.charWidthRatio;
@@ -1566,23 +153,23 @@ export class CDExecutor {
     const charWidth = this.context.fontSize * this.context.charWidthRatio;
 
     if (this.context.autoWidth) {
-      // Add 1 extra character for cursor at end of line
-      this.context.width = Math.ceil(padding + (this.context.maxLineLength + 1) * charWidth + padding);
+      this.context.width = Math.ceil(
+        padding + (this.context.maxLineLength + 1) * charWidth + padding
+      );
       if (this.context.width < 200) this.context.width = 200;
     }
 
     if (this.context.autoHeight) {
       const watermarkHeight = this.context.watermark ? lineHeight : 0;
-      // Use maxVisualRow (actual rendered rows after VTerminal processing) instead of maxLines
-      // This correctly handles cursor positioning commands in programs like neofetch
-      const rows = this.context.maxVisualRow > 0 ? this.context.maxVisualRow : this.context.maxLines;
-      // Add buffer to ensure cursor isn't visually cropped at the bottom edge
+      const rows =
+        this.context.maxVisualRow > 0 ? this.context.maxVisualRow : this.context.maxLines;
       const cursorBuffer = 8;
-      this.context.height = Math.ceil(headerHeight + padding + rows * lineHeight + watermarkHeight + padding + cursorBuffer);
+      this.context.height = Math.ceil(
+        headerHeight + padding + rows * lineHeight + watermarkHeight + padding + cursorBuffer
+      );
       if (this.context.height < 100) this.context.height = 100;
     }
 
-    // Re-render all frames with new dimensions
     this.updateGridDimensions();
 
     for (let i = 0; i < this.context.frameData.length; i++) {
@@ -1617,6 +204,9 @@ export class CDExecutor {
     }
   }
 
+
+  //#region Public Methods
+
   getFrames(): TerminalFrame[] {
     return this.context.frames;
   }
@@ -1624,4 +214,101 @@ export class CDExecutor {
   async cleanup(): Promise<void> {
     // Nothing to clean up
   }
+
 }
+
+
+//#region Context Factory
+
+const createContext = (options: CDExecutorOptions): ExecutorContext => {
+  const width = options.width || 800;
+  const height = options.height || 600;
+  const fontSize = options.fontSize || 14;
+
+  const charWidth = fontSize * 0.6;
+  const lineHeight = fontSize * 1.4;
+  const padding = 16;
+  const headerHeight = options.template === 'minimal' ? 0 : 40;
+  const termWidth = Math.floor((width - padding * 2) / charWidth);
+  const termHeight = Math.floor((height - headerHeight - padding * 2) / lineHeight);
+
+  return {
+    grid: createGridState(termWidth, termHeight),
+
+    lines: [''],
+    currentLine: '',
+    cursorX: 0,
+    cursorY: 0,
+
+    frames: [],
+    frameData: [],
+    startTime: Date.now(),
+    captureOverhead: 0,
+
+    width,
+    height,
+    fontSize,
+    typingSpeed: 50,
+    title: options.title,
+    template: options.template || 'minimal',
+    theme: options.theme || pipelineThemes.dark,
+    promptPrefix: '\x1b[95m❯\x1b[0m ',
+    cursorBlink: true,
+
+    clipboard: '',
+    screenshotCounter: 0,
+    autoWidth: !options.width,
+    autoHeight: !options.height,
+    maxLineLength: 0,
+    maxLines: 0,
+    maxVisualRow: 0,
+    scroll: !!options.height,
+    scrollOffset: 0,
+    isExecutingCommand: false,
+    isMultiLineContinuation: false,
+
+    lineHeight: 1.4,
+    hasCustomLineHeight: false,
+
+    charWidthRatio: 0.6,
+
+    shell: process.env.SHELL || '/bin/sh',
+
+    animationSpeed: 50,
+  };
+};
+
+
+//#region Command Description Formatter
+
+const formatCommandDescription = (cmd: CDCommand): string => {
+  switch (cmd.type) {
+    case 'Type': {
+      const sanitized = cmd.text.replace(/\n/g, '↵');
+      const preview = sanitized.length > 30 ? sanitized.slice(0, 30) + '...' : sanitized;
+      return `Type \x1b[2m"${preview}"\x1b[0m`;
+    }
+    case 'Key':
+      return cmd.key + (cmd.count && cmd.count > 1 ? ` \x1b[2m×${cmd.count}\x1b[0m` : '');
+    case 'Sleep':
+      return `Sleep \x1b[2m${cmd.duration}ms\x1b[0m`;
+    case 'Screenshot':
+      return `Screenshot \x1b[2m${cmd.path || 'auto'}\x1b[0m`;
+    case 'Shortcut': {
+      const mods = [
+        cmd.ctrl && 'Ctrl',
+        cmd.alt && 'Alt',
+        cmd.shift && 'Shift',
+        cmd.cmd && 'Cmd',
+      ].filter(Boolean);
+      return `${mods.join('+')}+${cmd.key}`;
+    }
+    case 'Copy': {
+      const preview = cmd.text.length > 20 ? cmd.text.slice(0, 20) + '...' : cmd.text;
+      return `Copy \x1b[2m"${preview}"\x1b[0m`;
+    }
+    default:
+      return cmd.type;
+  }
+};
+

@@ -1,7 +1,4 @@
-/**
- * Render Command
- * Execute a .cd script and generate animated SVG
- */
+//#region Imports
 
 import { readFileSync, writeFileSync } from 'node:fs';
 import { parseCD } from '../parser/cd-parser';
@@ -14,6 +11,9 @@ import { optimizeSvg } from '../animator/svg-optimizer';
 import { createSpinner } from '../utils/spinner';
 import type { AnimationOptions } from '../animator/svg-animator';
 
+
+//#region Types
+
 interface RenderArgs {
   file: string;
   output?: string;
@@ -23,9 +23,9 @@ interface RenderArgs {
   fps?: number;
 }
 
-/**
- * Load and parse a .cd file
- */
+
+//#region CD File Loader
+
 const loadCDFile = (filePath: string): ReturnType<typeof parseCD> => {
   try {
     const content = readFileSync(filePath, 'utf-8');
@@ -38,9 +38,9 @@ const loadCDFile = (filePath: string): ReturnType<typeof parseCD> => {
   }
 };
 
-/**
- * Build executor options from script settings
- */
+
+//#region Executor Options Builder
+
 const buildExecutorOptions = (
   settings: Map<string, string>
 ): {
@@ -58,7 +58,6 @@ const buildExecutorOptions = (
     template?: 'macos' | 'windows' | 'minimal';
   } = {};
 
-  // Map CD settings to executor options
   if (settings.has('Width')) {
     options.width = parseInt(settings.get('Width')!, 10);
   }
@@ -78,34 +77,33 @@ const buildExecutorOptions = (
   return options;
 };
 
-/**
- * Render command handler
- */
-/**
- * Get ANSI color code for a command type
- */
+
+//#region Command Coloring
+
 const getCommandColor = (description: string): string => {
-  // Extract command name (first word before space or ANSI code)
   const cmdType = description.split(/[\s\x1b]/)[0];
   const colors: Record<string, string> = {
-    Type: '\x1b[36m',      // Cyan
-    Enter: '\x1b[33m',     // Yellow
-    Sleep: '\x1b[35m',     // Magenta
-    Backspace: '\x1b[31m', // Red
-    Left: '\x1b[34m',      // Blue
-    Right: '\x1b[34m',     // Blue
-    Up: '\x1b[34m',        // Blue
-    Down: '\x1b[34m',      // Blue
-    Tab: '\x1b[32m',       // Green
-    Space: '\x1b[32m',     // Green
-    Screenshot: '\x1b[93m', // Bright Yellow
-    Copy: '\x1b[96m',      // Bright Cyan
-    Paste: '\x1b[96m',     // Bright Cyan
+    Type: '\x1b[36m',
+    Enter: '\x1b[33m',
+    Sleep: '\x1b[35m',
+    Backspace: '\x1b[31m',
+    Left: '\x1b[34m',
+    Right: '\x1b[34m',
+    Up: '\x1b[34m',
+    Down: '\x1b[34m',
+    Tab: '\x1b[32m',
+    Space: '\x1b[32m',
+    Screenshot: '\x1b[93m',
+    Copy: '\x1b[96m',
+    Paste: '\x1b[96m',
   };
-  return colors[cmdType] || '\x1b[37m'; // Default: White
+  return colors[cmdType] || '\x1b[37m';
 };
 
-export async function renderCommand(args: RenderArgs): Promise<void> {
+
+//#region Render Command
+
+export const renderCommand = async (args: RenderArgs): Promise<void> => {
   const fileName = args.file.split('/').pop() || args.file;
   const spinner = createSpinner(`Executing ${fileName}`);
 
@@ -114,10 +112,8 @@ export async function renderCommand(args: RenderArgs): Promise<void> {
   }
 
   try {
-    // Load and parse the CD file
     const script = loadCDFile(args.file);
 
-    // Count action commands (excluding comments, settings, etc.)
     const actionCommandCount = script.commands.filter(
       (cmd) => !['Output', 'Require', 'Set', 'Env', 'Comment'].includes(cmd.type)
     ).length;
@@ -126,15 +122,12 @@ export async function renderCommand(args: RenderArgs): Promise<void> {
       console.log(`Loaded ${actionCommandCount} commands from ${args.file}`);
     }
 
-    // Determine output path
     const outputPath = args.output || script.output || args.file.replace(/\.cd$/, '.svg');
 
-    // Check requirements
     if (script.requirements.length > 0 && args.verbose) {
       console.log(`Requirements specified: ${script.requirements.join(', ')}`);
     }
 
-    // Build executor options
     const executorOptions = buildExecutorOptions(script.settings);
 
     const executor = new CDExecutor({
@@ -162,7 +155,6 @@ export async function renderCommand(args: RenderArgs): Promise<void> {
       spinner.update('Generating animated SVG');
     }
 
-    // Generate animated SVG
     const animationOptions: AnimationOptions = {
       fps: args.fps,
       loop: args.loop !== false,
@@ -171,7 +163,6 @@ export async function renderCommand(args: RenderArgs): Promise<void> {
 
     let svg = await createAnimatedSVG(frames, animationOptions);
 
-    // Optimize SVG
     if (!args.verbose) {
       spinner.update('Optimizing SVG');
     }
@@ -185,7 +176,6 @@ export async function renderCommand(args: RenderArgs): Promise<void> {
 
     const metadata = getAnimationMetadata(frames);
 
-    // Write output
     writeFileSync(outputPath, svg, 'utf-8');
 
     const sizeKB = (Buffer.byteLength(svg, 'utf-8') / 1024).toFixed(2);
@@ -208,4 +198,5 @@ export async function renderCommand(args: RenderArgs): Promise<void> {
     }
     throw err;
   }
-}
+};
+

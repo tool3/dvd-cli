@@ -1,9 +1,5 @@
-/**
- * Character width detection for terminal display
- * Based on Unicode East Asian Width property
- */
+//#region Fullwidth Ranges
 
-// Fullwidth ranges derived from EastAsianWidth.txt
 const FULLWIDTH_RANGES: [number, number][] = [
   [0x1100, 0x115f], // Hangul Jamo
   [0x231a, 0x231b], // Watch, Hourglass
@@ -87,7 +83,9 @@ const FULLWIDTH_RANGES: [number, number][] = [
   [0x30000, 0x3fffd], // CJK Extension G
 ];
 
-// Zero-width character ranges
+
+//#region Zero-Width Ranges
+
 const ZERO_WIDTH_RANGES: [number, number][] = [
   [0x0300, 0x036f], // Combining Diacriticals
   [0x0483, 0x0489], // Cyrillic combining
@@ -149,10 +147,10 @@ const ZERO_WIDTH_RANGES: [number, number][] = [
   [0xe0100, 0xe01ef], // Variation Selectors Supplement
 ];
 
-/**
- * Binary search to check if a code point is in a range
- */
-function inRange(codePoint: number, ranges: [number, number][]): boolean {
+
+//#region Range Lookup
+
+const inRange = (codePoint: number, ranges: [number, number][]): boolean => {
   let low = 0;
   let high = ranges.length - 1;
 
@@ -170,39 +168,32 @@ function inRange(codePoint: number, ranges: [number, number][]): boolean {
   }
 
   return false;
-}
+};
 
-/**
- * Get display width of a character
- * Returns 0 for combining/zero-width, 2 for fullwidth, 1 otherwise
- */
-export function getCharWidth(char: string): 0 | 1 | 2 {
+
+//#region Width Functions
+
+export const getCharWidth = (char: string): 0 | 1 | 2 => {
   if (!char || char.length === 0) return 0;
 
   const codePoint = char.codePointAt(0)!;
 
-  // Control characters
   if (codePoint < 0x20 || (codePoint >= 0x7f && codePoint < 0xa0)) {
     return 0;
   }
 
-  // Zero-width characters
   if (inRange(codePoint, ZERO_WIDTH_RANGES)) {
     return 0;
   }
 
-  // Fullwidth characters
   if (inRange(codePoint, FULLWIDTH_RANGES)) {
     return 2;
   }
 
   return 1;
-}
+};
 
-/**
- * Get display width of a string
- */
-export function getStringWidth(str: string): number {
+export const getStringWidth = (str: string): number => {
   let width = 0;
 
   for (const char of str) {
@@ -210,13 +201,11 @@ export function getStringWidth(str: string): number {
   }
 
   return width;
-}
+};
 
-/**
- * Check if a character is a control character
- */
-export function isControlChar(char: string): boolean {
+export const isControlChar = (char: string): boolean => {
   if (!char || char.length === 0) return false;
   const code = char.charCodeAt(0);
   return code < 0x20 || (code >= 0x7f && code < 0xa0);
-}
+};
+

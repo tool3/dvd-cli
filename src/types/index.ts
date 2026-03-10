@@ -1,15 +1,5 @@
-/**
- * Core types for the DVD pipeline
- * These types are shared across all pipeline stages
- */
+//#region Color Types
 
-// ============================================================================
-// Color Types
-// ============================================================================
-
-/**
- * Color representation supporting multiple ANSI color modes
- */
 export type Color =
   | { mode: 'default' }
   | { mode: 'ansi16'; value: number }
@@ -19,13 +9,9 @@ export type Color =
 export const DEFAULT_FG: Color = { mode: 'default' };
 export const DEFAULT_BG: Color = { mode: 'default' };
 
-// ============================================================================
-// Cell Types
-// ============================================================================
 
-/**
- * Text attributes (style properties without character)
- */
+//#region Cell Types
+
 export interface CellAttributes {
   fg: Color;
   bg: Color;
@@ -48,9 +34,6 @@ export const DEFAULT_ATTRIBUTES: Readonly<CellAttributes> = Object.freeze({
   strikethrough: false,
 });
 
-/**
- * A single character cell in the terminal grid
- */
 export interface Cell {
   char: string;
   width: 1 | 2;
@@ -77,9 +60,8 @@ export const DEFAULT_CELL: Readonly<Cell> = Object.freeze({
   strikethrough: false,
 });
 
-// ============================================================================
-// Cursor & Grid State
-// ============================================================================
+
+//#region Cursor & Grid State
 
 export interface CursorPosition {
   row: number;
@@ -91,9 +73,6 @@ export interface SavedCursorState {
   attributes: CellAttributes;
 }
 
-/**
- * Complete terminal grid state - the core data structure for VTerminal
- */
 export interface GridState {
   cells: Cell[][];
   cursor: CursorPosition;
@@ -106,22 +85,16 @@ export interface GridState {
   wrapPending: boolean;
 }
 
-// ============================================================================
-// VTerminal Command Types
-// ============================================================================
+
+//#region VTerminal Command Types
 
 export type VTerminalCommand =
-  // Text output
   | { type: 'print'; char: string; width: 1 | 2 }
-
-  // Control characters
   | { type: 'newline' }
   | { type: 'carriageReturn' }
   | { type: 'tab' }
   | { type: 'backspace' }
   | { type: 'bell' }
-
-  // Cursor movement
   | { type: 'cursorUp'; count: number }
   | { type: 'cursorDown'; count: number }
   | { type: 'cursorForward'; count: number }
@@ -130,35 +103,19 @@ export type VTerminalCommand =
   | { type: 'cursorColumn'; col: number }
   | { type: 'cursorNextLine'; count: number }
   | { type: 'cursorPrevLine'; count: number }
-
-  // Cursor save/restore
   | { type: 'saveCursor' }
   | { type: 'restoreCursor' }
-
-  // Erase operations
   | { type: 'eraseInDisplay'; mode: 0 | 1 | 2 | 3 }
   | { type: 'eraseInLine'; mode: 0 | 1 | 2 }
-
-  // SGR (Select Graphic Rendition)
   | { type: 'sgr'; params: number[] }
-
-  // Scroll operations
   | { type: 'scrollUp'; count: number }
   | { type: 'scrollDown'; count: number }
-
-  // Mode changes
   | { type: 'setAutoWrap'; enabled: boolean }
-
-  // No-op for unrecognized sequences
   | { type: 'noop' };
 
-// ============================================================================
-// Span Types (Coalescer output)
-// ============================================================================
 
-/**
- * Resolved cell style with colors converted to strings
- */
+//#region Span Types (Coalescer output)
+
 export interface CellStyle {
   fg: string | null;
   bg: string | null;
@@ -169,9 +126,6 @@ export interface CellStyle {
   strikethrough: boolean;
 }
 
-/**
- * A span is a run of consecutive cells with identical style
- */
 export interface Span {
   text: string;
   style: CellStyle;
@@ -181,9 +135,8 @@ export interface Span {
 
 export type SpanRow = Span[];
 
-// ============================================================================
-// Frame Types
-// ============================================================================
+
+//#region Frame Types
 
 export interface Frame {
   timestamp: number;
@@ -192,9 +145,8 @@ export interface Frame {
   cursorActive: boolean;
 }
 
-// ============================================================================
-// Theme Types (compatible with shellfie)
-// ============================================================================
+
+//#region Theme Types
 
 export interface Theme {
   name: string;
@@ -220,9 +172,8 @@ export interface Theme {
   brightWhite: string;
 }
 
-// ============================================================================
-// Emitter Options
-// ============================================================================
+
+//#region Emitter Options
 
 export interface EmitterOptions {
   theme: Theme;
@@ -246,7 +197,6 @@ export interface EmitterOptions {
   cursorBlink?: boolean;
   activeCursor?: boolean;
   selection?: { start: number; end: number; row: number } | null;
-  // Header/Footer config (shellfie 2.0 style)
   headerHeight?: number;
   headerBorder?: boolean;
   headerBorderColor?: string;
@@ -255,39 +205,28 @@ export interface EmitterOptions {
   footerBorder?: boolean;
   footerBorderColor?: string;
   footerBorderWidth?: number;
-  // Cursor config
   cursorStyle?: 'block' | 'bar' | 'underline';
   cursorColor?: string;
-  // Track if user explicitly set lineHeight (for cursor alignment)
   hasCustomLineHeight?: boolean;
 }
 
-// ============================================================================
-// Helper Functions
-// ============================================================================
 
-/**
- * Create a cell with given attributes
- */
-export function createCell(char: string, width: 1 | 2, attrs: CellAttributes): Cell {
-  return {
-    char,
-    width,
-    fg: attrs.fg,
-    bg: attrs.bg,
-    bold: attrs.bold,
-    dim: attrs.dim,
-    italic: attrs.italic,
-    underline: attrs.underline,
-    inverse: attrs.inverse,
-    strikethrough: attrs.strikethrough,
-  };
-}
+//#region Helper Functions
 
-/**
- * Check if two colors are equal
- */
-export function colorsEqual(a: Color, b: Color): boolean {
+export const createCell = (char: string, width: 1 | 2, attrs: CellAttributes): Cell => ({
+  char,
+  width,
+  fg: attrs.fg,
+  bg: attrs.bg,
+  bold: attrs.bold,
+  dim: attrs.dim,
+  italic: attrs.italic,
+  underline: attrs.underline,
+  inverse: attrs.inverse,
+  strikethrough: attrs.strikethrough,
+});
+
+export const colorsEqual = (a: Color, b: Color): boolean => {
   if (a.mode !== b.mode) return false;
   if (a.mode === 'default') return true;
   if (a.mode === 'rgb' && b.mode === 'rgb') {
@@ -297,35 +236,24 @@ export function colorsEqual(a: Color, b: Color): boolean {
     return (a as { value: number }).value === (b as { value: number }).value;
   }
   return false;
-}
+};
 
-/**
- * Check if two cell styles are equal (for coalescing)
- */
-export function stylesEqual(a: CellStyle, b: CellStyle): boolean {
-  return (
-    a.fg === b.fg &&
-    a.bg === b.bg &&
-    a.bold === b.bold &&
-    a.italic === b.italic &&
-    a.underline === b.underline &&
-    a.dim === b.dim &&
-    a.strikethrough === b.strikethrough
-  );
-}
+export const stylesEqual = (a: CellStyle, b: CellStyle): boolean =>
+  a.fg === b.fg &&
+  a.bg === b.bg &&
+  a.bold === b.bold &&
+  a.italic === b.italic &&
+  a.underline === b.underline &&
+  a.dim === b.dim &&
+  a.strikethrough === b.strikethrough;
 
-/**
- * Check if two cell attributes are equal
- */
-export function attributesEqual(a: CellAttributes, b: CellAttributes): boolean {
-  return (
-    colorsEqual(a.fg, b.fg) &&
-    colorsEqual(a.bg, b.bg) &&
-    a.bold === b.bold &&
-    a.dim === b.dim &&
-    a.italic === b.italic &&
-    a.underline === b.underline &&
-    a.inverse === b.inverse &&
-    a.strikethrough === b.strikethrough
-  );
-}
+export const attributesEqual = (a: CellAttributes, b: CellAttributes): boolean =>
+  colorsEqual(a.fg, b.fg) &&
+  colorsEqual(a.bg, b.bg) &&
+  a.bold === b.bold &&
+  a.dim === b.dim &&
+  a.italic === b.italic &&
+  a.underline === b.underline &&
+  a.inverse === b.inverse &&
+  a.strikethrough === b.strikethrough;
+

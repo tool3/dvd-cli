@@ -1,16 +1,10 @@
-/**
- * Persistent Shell - Maintains a shell session across commands
- *
- * Uses sentinel-based command completion detection.
- * Pure Node.js stdlib - no node-pty dependency.
- */
+//#region Imports
 
 import { spawn, type ChildProcess } from 'node:child_process';
 import { EventEmitter } from 'node:events';
 
-// ============================================================================
-// Types
-// ============================================================================
+
+//#region Types
 
 export interface CommandResult {
   output: Buffer;
@@ -31,9 +25,8 @@ export interface OutputChunk {
   timestamp: number;
 }
 
-// ============================================================================
-// Persistent Shell
-// ============================================================================
+
+//#region Persistent Shell
 
 export class PersistentShell extends EventEmitter {
   private proc: ChildProcess | null = null;
@@ -63,9 +56,6 @@ export class PersistentShell extends EventEmitter {
     this.height = options.height ?? 24;
   }
 
-  /**
-   * Start the shell process
-   */
   async start(): Promise<void> {
     if (this.proc) {
       throw new Error('Shell already started');
@@ -81,13 +71,10 @@ export class PersistentShell extends EventEmitter {
       CLICOLOR_FORCE: '1',
     };
 
-    // Use 'script' command to allocate a PTY on macOS/Linux
-    // This gives us proper terminal behavior without node-pty
     const isLinux = process.platform === 'linux';
     const isMac = process.platform === 'darwin';
 
     if (isLinux || isMac) {
-      // script -qec on Linux, script -q on macOS
       const scriptArgs = isLinux
         ? ['-qec', this.shell, '/dev/null']
         : ['-q', '/dev/null', this.shell];
@@ -98,7 +85,6 @@ export class PersistentShell extends EventEmitter {
         stdio: ['pipe', 'pipe', 'pipe'],
       });
     } else {
-      // Fallback for other platforms - direct shell spawn
       this.proc = spawn(this.shell, ['-i'], {
         cwd: this.cwd,
         env,
@@ -123,23 +109,15 @@ export class PersistentShell extends EventEmitter {
       this.emit('error', err);
     });
 
-    // Wait for shell to be ready
     await this.waitForPrompt();
   }
 
-  /**
-   * Wait for the shell prompt to appear
-   */
   private async waitForPrompt(): Promise<void> {
     return new Promise((resolve) => {
-      // Give the shell a moment to start
       setTimeout(resolve, 100);
     });
   }
 
-  /**
-   * Handle output from the shell
-   */
   private handleOutput(data: Buffer): void {
     this.emit('data', data);
 
@@ -147,18 +125,15 @@ export class PersistentShell extends EventEmitter {
       this.outputBuffer = Buffer.concat([this.outputBuffer, data]);
       this.pendingCommand.chunks.push(data);
 
-      // Check for sentinel
       const output = this.outputBuffer.toString();
       const sentinel = `___DVD_SENTINEL_${this.pendingCommand.id}_`;
       const sentinelIndex = output.indexOf(sentinel);
 
       if (sentinelIndex !== -1) {
-        // Extract exit code from sentinel: ___DVD_SENTINEL_123_0___
         const afterSentinel = output.slice(sentinelIndex + sentinel.length);
         const match = afterSentinel.match(/^(\d+)___/);
         const exitCode = match ? parseInt(match[1], 10) : 0;
 
-        // Remove sentinel from output
         const cleanOutput = output.slice(0, sentinelIndex);
         const outputBuffer = Buffer.from(cleanOutput);
 
@@ -176,9 +151,6 @@ export class PersistentShell extends EventEmitter {
     }
   }
 
-  /**
-   * Execute a command and capture output
-   */
   async execute(command: string): Promise<CommandResult> {
     if (!this.proc) {
       throw new Error('Shell not started');
@@ -206,16 +178,11 @@ export class PersistentShell extends EventEmitter {
 
       this.outputBuffer = Buffer.alloc(0);
 
-      // Write command with sentinel
-      // The sentinel echoes the exit code of the previous command
       const fullCommand = `${command}; echo "${sentinel}$?___"\n`;
       this.proc!.stdin?.write(fullCommand);
     });
   }
 
-  /**
-   * Execute a command with streaming output
-   */
   executeStreaming(
     command: string,
     onData: (chunk: OutputChunk) => void
@@ -239,16 +206,13 @@ export class PersistentShell extends EventEmitter {
         const sentinelIndex = output.indexOf(sentinel);
 
         if (sentinelIndex === -1) {
-          // Not found yet - emit the chunk
           onData({ data, timestamp: Date.now() - startTime });
         } else {
-          // Found sentinel - extract and complete
           const cleanOutput = output.slice(0, sentinelIndex);
           const afterSentinel = output.slice(sentinelIndex + sentinel.length);
           const match = afterSentinel.match(/^(\d+)___/);
           const exitCode = match ? parseInt(match[1], 10) : 0;
 
-          // Emit final clean chunk
           if (cleanOutput.length > 0) {
             const lastChunkStart = output.lastIndexOf(data.toString());
             if (lastChunkStart < sentinelIndex) {
@@ -259,7 +223,6 @@ export class PersistentShell extends EventEmitter {
             }
           }
 
-          // Remove listener and resolve
           this.proc?.stdout?.off('data', dataHandler);
           this.proc?.stderr?.off('data', dataHandler);
 
@@ -274,15 +237,11 @@ export class PersistentShell extends EventEmitter {
       this.proc!.stdout?.on('data', dataHandler);
       this.proc!.stderr?.on('data', dataHandler);
 
-      // Write command with sentinel
       const fullCommand = `${command}; echo "${sentinel}$?___"\n`;
       this.proc!.stdin?.write(fullCommand);
     });
   }
 
-  /**
-   * Write raw input to the shell (for interactive commands)
-   */
   write(data: string | Buffer): void {
     if (!this.proc) {
       throw new Error('Shell not started');
@@ -290,25 +249,16 @@ export class PersistentShell extends EventEmitter {
     this.proc.stdin?.write(data);
   }
 
-  /**
-   * Send a signal to the shell process
-   */
   signal(sig: NodeJS.Signals): void {
     if (this.proc) {
       this.proc.kill(sig);
     }
   }
 
-  /**
-   * Send Ctrl+C to interrupt current command
-   */
   interrupt(): void {
     this.write('\x03');
   }
 
-  /**
-   * Destroy the shell
-   */
   destroy(): void {
     this.isDestroyed = true;
     if (this.proc) {
@@ -322,26 +272,18 @@ export class PersistentShell extends EventEmitter {
     }
   }
 
-  /**
-   * Check if shell is running
-   */
   isRunning(): boolean {
     return this.proc !== null && !this.isDestroyed;
   }
 }
 
-// ============================================================================
-// Simple Shell (Non-Persistent)
-// ============================================================================
 
-/**
- * Execute a single command without persistent shell
- * Simpler but doesn't preserve state between commands
- */
-export async function executeCommand(
+//#region Simple Shell
+
+export const executeCommand = async (
   command: string,
   options: ShellOptions = {}
-): Promise<CommandResult> {
+): Promise<CommandResult> => {
   const startTime = Date.now();
   const chunks: Buffer[] = [];
 
@@ -383,16 +325,13 @@ export async function executeCommand(
       reject(err);
     });
   });
-}
+};
 
-/**
- * Execute a command with streaming output
- */
-export function executeCommandStreaming(
+export const executeCommandStreaming = (
   command: string,
   onData: (chunk: OutputChunk) => void,
   options: ShellOptions = {}
-): Promise<CommandResult> {
+): Promise<CommandResult> => {
   const startTime = Date.now();
   const chunks: Buffer[] = [];
 
@@ -436,4 +375,5 @@ export function executeCommandStreaming(
       reject(err);
     });
   });
-}
+};
+

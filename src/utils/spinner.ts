@@ -1,10 +1,10 @@
-/**
- * Minimal spinner implementation with zero dependencies.
- * Shows a spinning animation while processing.
- */
+//#region Constants
 
 const SPINNER_FRAMES = ['⠋', '⠙', '⠹', '⠸', '⠼', '⠴', '⠦', '⠧', '⠇', '⠏'];
 const FRAME_INTERVAL = 80;
+
+
+//#region Types
 
 export interface Spinner {
   start(): void;
@@ -14,7 +14,10 @@ export interface Spinner {
   fail(message: string): void;
 }
 
-export function createSpinner(text: string): Spinner {
+
+//#region Spinner Factory
+
+export const createSpinner = (text: string): Spinner => {
   let frameIndex = 0;
   let intervalId: NodeJS.Timeout | null = null;
   let currentText = text;
@@ -31,18 +34,14 @@ export function createSpinner(text: string): Spinner {
     const frame = SPINNER_FRAMES[frameIndex];
     let output = `${frame} ${currentText}`;
 
-    // Truncate to terminal width to prevent line wrapping issues
     const cols = process.stdout.columns || 80;
     if (output.length > cols - 1) {
-      // Strip ANSI codes for length calculation, then truncate
       const stripped = output.replace(/\x1b\[[0-9;]*m/g, '');
       if (stripped.length > cols - 1) {
-        // Find where to cut in the original string
         let visibleLen = 0;
         let cutIndex = 0;
         for (let i = 0; i < output.length && visibleLen < cols - 4; i++) {
           if (output[i] === '\x1b') {
-            // Skip ANSI sequence
             const match = output.slice(i).match(/^\x1b\[[0-9;]*m/);
             if (match) {
               cutIndex = i + match[0].length;
@@ -64,7 +63,6 @@ export function createSpinner(text: string): Spinner {
   return {
     start(): void {
       if (!process.stdout.isTTY) {
-        // Non-TTY: just print the message once
         console.log(`... ${currentText}`);
         return;
       }
@@ -97,4 +95,5 @@ export function createSpinner(text: string): Spinner {
       console.log(`\x1b[31m✗ ${message}\x1b[0m`);
     },
   };
-}
+};
+

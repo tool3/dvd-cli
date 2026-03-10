@@ -1,26 +1,22 @@
-/**
- * Pipeline Orchestration
- *
- * Main entry point for the new DVD rendering pipeline.
- * Coordinates all 7 stages: Lexer → Parser → Executor → Optimizer → VTerminal → Coalescer → SVG Emitter
- */
+//#region Imports
 
-import type { GridState, SpanRow, Frame, Theme, EmitterOptions, CursorPosition } from '../types';
-import { createGridState, processInput, applyCommand } from './vterminal';
+import type { GridState, Theme, EmitterOptions } from '../types';
+import { createGridState, processInput } from './vterminal';
 import { coalesce, getCoalesceStats } from './coalescer';
-import { emit, emitAnimated, type FrameData, type AnimatedSVGOptions, type EmitResult } from './svg-emitter';
-import { PersistentShell, executeCommandStreaming, type CommandResult, type OutputChunk } from '../shell/persistent-shell';
+import { emit, emitAnimated, type FrameData, type EmitResult } from './svg-emitter';
+import { executeCommandStreaming, type CommandResult, type OutputChunk } from '../shell/persistent-shell';
 
-// Re-export commonly used types and functions
+
+//#region Re-exports
+
 export * from '../types';
 export * from './vterminal';
 export * from './coalescer';
 export * from './svg-emitter';
 export * from '../shell/persistent-shell';
 
-// ============================================================================
-// High-Level Pipeline API
-// ============================================================================
+
+//#region High-Level Pipeline API
 
 export interface RenderOptions {
   width: number;
@@ -32,55 +28,45 @@ export interface RenderOptions {
   watermark?: string;
   embedFont?: boolean;
   fontData?: string;
-  // Callbacks
   onFrame?: (frame: FrameData, index: number) => void;
   onProgress?: (current: number, total: number, description?: string) => void;
 }
 
-/**
- * Render a static terminal state to SVG
- */
-export function renderStatic(input: string, options: RenderOptions): EmitResult {
-  // Create terminal grid
+export const renderStatic = (input: string, options: RenderOptions): EmitResult => {
   const termWidth = Math.floor(options.width / (options.fontSize * 0.6));
   const termHeight = Math.floor(options.height / (options.fontSize * 1.4));
   let state = createGridState(termWidth, termHeight);
 
-  // Process input through VTerminal
   state = processInput(state, input);
 
-  // Coalesce cells into spans
   const rows = coalesce(state, options.theme);
 
-  // Log stats in development
   if (process.env.DEBUG) {
     const stats = getCoalesceStats(state, rows);
     console.log(`Coalesce: ${stats.cellCount} cells → ${stats.spanCount} spans (${stats.reduction}% reduction)`);
   }
 
-  // Emit SVG
   return emit(
     rows,
     state.cursor,
     true,
     createEmitterOptions(options)
   );
-}
+};
 
-/**
- * Render multiple frames to animated SVG
- */
-export function renderAnimated(frames: FrameData[], options: RenderOptions & { fps?: number; loop?: boolean }): EmitResult {
+export const renderAnimated = (
+  frames: FrameData[],
+  options: RenderOptions & { fps?: number; loop?: boolean }
+): EmitResult => {
   return emitAnimated(frames, {
     ...createEmitterOptions(options),
     fps: options.fps,
     loop: options.loop,
   });
-}
+};
 
-// ============================================================================
-// Frame Capture
-// ============================================================================
+
+//#region Frame Capture
 
 export interface CaptureOptions {
   width: number;
@@ -89,10 +75,7 @@ export interface CaptureOptions {
   theme: Theme;
 }
 
-/**
- * Create a frame capturer for building animations
- */
-export function createFrameCapturer(options: CaptureOptions) {
+export const createFrameCapturer = (options: CaptureOptions) => {
   const termWidth = Math.floor(options.width / (options.fontSize * 0.6));
   const termHeight = Math.floor(options.height / (options.fontSize * 1.4));
   let state = createGridState(termWidth, termHeight);
@@ -100,23 +83,14 @@ export function createFrameCapturer(options: CaptureOptions) {
   const startTime = Date.now();
 
   return {
-    /**
-     * Get current grid state
-     */
     getState(): GridState {
       return state;
     },
 
-    /**
-     * Process input and update state
-     */
     write(input: string): void {
       state = processInput(state, input);
     },
 
-    /**
-     * Capture current state as a frame
-     */
     capture(cursorVisible: boolean = true): void {
       const rows = coalesce(state, options.theme);
       frames.push({
@@ -127,35 +101,25 @@ export function createFrameCapturer(options: CaptureOptions) {
       });
     },
 
-    /**
-     * Get all captured frames
-     */
     getFrames(): FrameData[] {
       return frames;
     },
 
-    /**
-     * Reset state to initial
-     */
     reset(): void {
       state = createGridState(termWidth, termHeight);
       frames.length = 0;
     },
   };
-}
+};
 
-// ============================================================================
-// Typing Simulation
-// ============================================================================
+
+//#region Typing Simulation
 
 export interface TypeOptions {
-  speed?: number; // ms per character
-  variance?: number; // random variance in timing
+  speed?: number;
+  variance?: number;
 }
 
-/**
- * Simulate typing with realistic timing
- */
 export async function* simulateTyping(
   text: string,
   options: TypeOptions = {}
@@ -169,36 +133,29 @@ export async function* simulateTyping(
   }
 }
 
-// ============================================================================
-// Command Execution with Frame Capture
-// ============================================================================
+
+//#region Command Execution with Frame Capture
 
 export interface ExecuteAndCaptureOptions extends CaptureOptions {
-  frameInterval?: number; // ms between frame captures during output
-  shell?: PersistentShell;
+  frameInterval?: number;
 }
 
-/**
- * Execute a command and capture frames of the output
- */
-export async function executeAndCapture(
+export const executeAndCapture = async (
   command: string,
   capturer: ReturnType<typeof createFrameCapturer>,
   options: ExecuteAndCaptureOptions
-): Promise<CommandResult> {
+): Promise<CommandResult> => {
   const frameInterval = options.frameInterval ?? 100;
   let lastFrameTime = Date.now();
 
   const result = await executeCommandStreaming(
     command,
     (chunk: OutputChunk) => {
-      // Write chunk to terminal
       capturer.write(chunk.data.toString());
 
-      // Capture frame if enough time has passed
       const now = Date.now();
       if (now - lastFrameTime >= frameInterval) {
-        capturer.capture(false); // Hide cursor during output
+        capturer.capture(false);
         lastFrameTime = now;
       }
     },
@@ -208,33 +165,28 @@ export async function executeAndCapture(
     }
   );
 
-  // Capture final frame with output complete
   capturer.capture(true);
 
   return result;
-}
+};
 
-// ============================================================================
-// Helper Functions
-// ============================================================================
 
-function createEmitterOptions(options: RenderOptions): EmitterOptions {
-  return {
-    theme: options.theme,
-    template: options.template ?? 'minimal',
-    width: options.width,
-    height: options.height,
-    fontSize: options.fontSize,
-    title: options.title,
-    watermark: options.watermark,
-    embedFont: options.embedFont,
-    fontData: options.fontData,
-  };
-}
+//#region Helper Functions
 
-// ============================================================================
-// Default Themes
-// ============================================================================
+const createEmitterOptions = (options: RenderOptions): EmitterOptions => ({
+  theme: options.theme,
+  template: options.template ?? 'minimal',
+  width: options.width,
+  height: options.height,
+  fontSize: options.fontSize,
+  title: options.title,
+  watermark: options.watermark,
+  embedFont: options.embedFont,
+  fontData: options.fontData,
+});
+
+
+//#region Default Themes
 
 export const themes = {
   dracula: {
@@ -405,3 +357,4 @@ export const themes = {
     brightWhite: '#f0f6fc',
   },
 } as const;
+

@@ -1,11 +1,4 @@
-/**
- * Pipe Command
- * Read animated terminal output from stdin and generate animated SVG
- *
- * Usage:
- *   some-command | dvd -o output.svg
- *   dvd - -o output.svg < input.txt
- */
+//#region Imports
 
 import { writeFileSync } from 'node:fs';
 import { createAnimatedSVG, getAnimationMetadata } from '../animator/svg-animator';
@@ -17,6 +10,9 @@ import { emit } from '../pipeline/svg-emitter';
 import { themes } from '../pipeline';
 import type { TerminalFrame } from '../executor/cd-executor';
 import type { AnimationOptions } from '../animator/svg-animator';
+
+
+//#region Types
 
 interface PipeArgs {
   output?: string;
@@ -32,23 +28,18 @@ interface PipeArgs {
   template?: string;
   padding?: number;
   borderRadius?: number;
-  // Border options
   borderColor?: string;
   borderWidth?: number;
-  // Font options
   fontFamily?: string;
   watermark?: string;
-  // Cursor options
   cursorStyle?: string;
   cursorColor?: string;
   cursorBlink?: boolean;
-  // Header options
   headerBackground?: string;
   headerHeight?: number;
   headerBorder?: boolean;
   headerBorderColor?: string;
   headerBorderWidth?: number;
-  // Footer options
   footerBackground?: string;
   footerHeight?: number;
   footerBorder?: boolean;
@@ -61,10 +52,39 @@ interface StdinResult {
   totalDuration: number;
 }
 
-/**
- * Read all data from stdin with timing info
- */
-async function readStdin(): Promise<StdinResult> {
+interface RenderFrameOptions {
+  width: number;
+  height: number;
+  fontSize: number;
+  lineHeight: number;
+  padding: number;
+  borderRadius: number;
+  theme: typeof themes.dark;
+  title?: string;
+  template: 'macos' | 'windows' | 'minimal';
+  borderColor?: string;
+  borderWidth?: number;
+  fontFamily?: string;
+  watermark?: string;
+  cursorStyle?: 'block' | 'bar' | 'underline';
+  cursorColor?: string;
+  cursorBlink?: boolean;
+  headerBackground?: string;
+  headerHeight?: number;
+  headerBorder?: boolean;
+  headerBorderColor?: string;
+  headerBorderWidth?: number;
+  footerBackground?: string;
+  footerHeight?: number;
+  footerBorder?: boolean;
+  footerBorderColor?: string;
+  footerBorderWidth?: number;
+}
+
+
+//#region Stdin Reader
+
+const readStdin = async (): Promise<StdinResult> => {
   return new Promise((resolve, reject) => {
     let data = '';
     const startTime = Date.now();
@@ -75,7 +95,6 @@ async function readStdin(): Promise<StdinResult> {
       data += chunk;
     });
 
-    // Set a timeout to avoid hanging forever
     const timeoutId = setTimeout(() => {
       if (data.length === 0) {
         reject(new Error('No input received from stdin (timeout after 30s)'));
@@ -93,16 +112,15 @@ async function readStdin(): Promise<StdinResult> {
       reject(err);
     });
   });
-}
+};
 
-/**
- * Detect animation type from content
- */
-function detectAnimationType(content: string): 'terminal-reset' | 'cursor-up' | 'cursor-restore' | 'none' {
+
+//#region Animation Detection
+
+const detectAnimationType = (content: string): 'terminal-reset' | 'cursor-up' | 'cursor-restore' | 'none' => {
   if (content.includes('\x1bc')) {
     return 'terminal-reset';
   }
-  // Cursor up sequence: \x1b[NA where N is number of lines
   if (/\x1b\[\d+A/.test(content)) {
     return 'cursor-up';
   }
@@ -110,20 +128,14 @@ function detectAnimationType(content: string): 'terminal-reset' | 'cursor-up' | 
     return 'cursor-restore';
   }
   return 'none';
-}
+};
 
-/**
- * Split content into frames based on animation markers
- */
-function splitIntoFrames(content: string, animationType: 'terminal-reset' | 'cursor-up' | 'cursor-restore' | 'none'): string[] {
+const splitIntoFrames = (content: string, animationType: 'terminal-reset' | 'cursor-up' | 'cursor-restore' | 'none'): string[] => {
   if (animationType === 'terminal-reset') {
-    // Split on terminal reset (\x1bc)
     return content.split('\x1bc').filter(frame => frame.trim());
   }
 
   if (animationType === 'cursor-up') {
-    // Split on cursor up sequences (\x1b[NA where N is lines)
-    // Each cursor-up marks the start of a new frame overwriting the previous
     const frames: string[] = [];
     const parts = content.split(/\x1b\[\d+A/);
 
@@ -136,69 +148,27 @@ function splitIntoFrames(content: string, animationType: 'terminal-reset' | 'cur
   }
 
   if (animationType === 'cursor-restore') {
-    // Split on cursor restore (\x1b8)
     return content.split('\x1b8').filter(frame => frame.trim());
   }
 
-  // No animation markers - treat as single frame
   return [content];
-}
+};
 
-/**
- * Render frame options interface
- */
-interface RenderFrameOptions {
-  width: number;
-  height: number;
-  fontSize: number;
-  lineHeight: number;
-  padding: number;
-  borderRadius: number;
-  theme: typeof themes.dark;
-  title?: string;
-  template: 'macos' | 'windows' | 'minimal';
-  // Border options
-  borderColor?: string;
-  borderWidth?: number;
-  // Font options
-  fontFamily?: string;
-  watermark?: string;
-  // Cursor options
-  cursorStyle?: 'block' | 'bar' | 'underline';
-  cursorColor?: string;
-  cursorBlink?: boolean;
-  // Header options
-  headerBackground?: string;
-  headerHeight?: number;
-  headerBorder?: boolean;
-  headerBorderColor?: string;
-  headerBorderWidth?: number;
-  // Footer options
-  footerBackground?: string;
-  footerHeight?: number;
-  footerBorder?: boolean;
-  footerBorderColor?: string;
-  footerBorderWidth?: number;
-}
 
-/**
- * Render a frame to SVG
- */
-function renderFrame(content: string, options: RenderFrameOptions): string {
+//#region Frame Rendering
+
+const renderFrame = (content: string, options: RenderFrameOptions): string => {
   const charWidth = options.fontSize * 0.6;
   const lineHeightPx = options.fontSize * options.lineHeight;
   const headerHeight = options.headerHeight ?? 40;
   const gridWidth = Math.floor((options.width - options.padding * 2) / charWidth);
   const gridHeight = Math.floor((options.height - headerHeight - options.padding * 2) / lineHeightPx);
 
-  // Process content through VTerminal
   let grid = createGridState(gridWidth, gridHeight);
   grid = processInput(grid, content);
 
-  // Coalesce to spans
   const rows = coalesce(grid, options.theme);
 
-  // Emit SVG
   const { svg } = emit(rows, null, false, {
     theme: options.theme,
     template: options.template,
@@ -210,23 +180,18 @@ function renderFrame(content: string, options: RenderFrameOptions): string {
     charWidth: charWidth,
     padding: options.padding,
     borderRadius: options.borderRadius,
-    // Border options
     borderColor: options.borderColor,
     borderWidth: options.borderWidth,
-    // Font options
     fontFamily: options.fontFamily,
     watermark: options.watermark,
-    // Cursor options
     cursorStyle: options.cursorStyle,
     cursorColor: options.cursorColor,
     cursorBlink: options.cursorBlink,
-    // Header options
     headerBackground: options.headerBackground,
     headerHeight: options.headerHeight,
     headerBorder: options.headerBorder,
     headerBorderColor: options.headerBorderColor,
     headerBorderWidth: options.headerBorderWidth,
-    // Footer options
     footerBackground: options.footerBackground,
     footerHeight: options.footerHeight,
     footerBorder: options.footerBorder,
@@ -235,12 +200,12 @@ function renderFrame(content: string, options: RenderFrameOptions): string {
   });
 
   return svg;
-}
+};
 
-/**
- * Pipe command handler
- */
-export async function pipeCommand(args: PipeArgs): Promise<void> {
+
+//#region Pipe Command
+
+export const pipeCommand = async (args: PipeArgs): Promise<void> => {
   const spinner = createSpinner('Reading from stdin');
 
   if (!args.verbose) {
@@ -248,7 +213,6 @@ export async function pipeCommand(args: PipeArgs): Promise<void> {
   }
 
   try {
-    // Read all input from stdin
     if (args.verbose) {
       console.log('Reading from stdin...');
     }
@@ -263,14 +227,12 @@ export async function pipeCommand(args: PipeArgs): Promise<void> {
       console.log(`Received ${input.length} bytes in ${totalDuration}ms`);
     }
 
-    // Detect animation type
     const animationType = detectAnimationType(input);
 
     if (args.verbose) {
       console.log(`Animation type: ${animationType}`);
     }
 
-    // Split into frames
     const frameContents = splitIntoFrames(input, animationType);
 
     if (args.verbose) {
@@ -281,7 +243,6 @@ export async function pipeCommand(args: PipeArgs): Promise<void> {
       throw new Error('No frames detected in input');
     }
 
-    // Configuration
     const fontSize = args.fontSize || 14;
     const lineHeight = args.lineHeight || 1.4;
     const padding = args.padding || 16;
@@ -291,7 +252,6 @@ export async function pipeCommand(args: PipeArgs): Promise<void> {
     const template = (args.template || 'macos') as 'macos' | 'windows' | 'minimal';
     const cursorStyle = (args.cursorStyle || 'block') as 'block' | 'bar' | 'underline';
 
-    // Build render options with all customization
     const renderOptions: Omit<RenderFrameOptions, 'width' | 'height'> = {
       fontSize,
       lineHeight,
@@ -300,23 +260,18 @@ export async function pipeCommand(args: PipeArgs): Promise<void> {
       theme,
       title,
       template,
-      // Border options
       borderColor: args.borderColor,
       borderWidth: args.borderWidth,
-      // Font options
       fontFamily: args.fontFamily,
       watermark: args.watermark,
-      // Cursor options
       cursorStyle,
       cursorColor: args.cursorColor,
       cursorBlink: args.cursorBlink,
-      // Header options
       headerBackground: args.headerBackground,
       headerHeight: args.headerHeight,
       headerBorder: args.headerBorder,
       headerBorderColor: args.headerBorderColor,
       headerBorderWidth: args.headerBorderWidth,
-      // Footer options
       footerBackground: args.footerBackground,
       footerHeight: args.footerHeight,
       footerBorder: args.footerBorder,
@@ -324,14 +279,11 @@ export async function pipeCommand(args: PipeArgs): Promise<void> {
       footerBorderWidth: args.footerBorderWidth,
     };
 
-    // Auto-detect dimensions from content if not specified
     let width = args.width;
     let height = args.height;
 
     if (!width || !height) {
-      // Analyze first frame to detect content dimensions
       const sampleFrame = frameContents[0];
-      // Strip ANSI codes for accurate measurement
       const plainText = sampleFrame.replace(/\x1b\[[0-9;]*m/g, '');
       const lines = plainText.split('\n').filter(l => l.length > 0);
       const maxLineLength = Math.max(...lines.map(l => l.length), 40);
@@ -353,19 +305,14 @@ export async function pipeCommand(args: PipeArgs): Promise<void> {
       }
     }
 
-    // Calculate frame timing from actual stream duration
-    // If we received data over time, use the real duration to calculate frame timing
-    // This gives us the actual animation speed from the piped command
     let frameDuration: number;
     if (totalDuration > 100 && frameContents.length > 1) {
-      // Use real timing - data arrived over time
       frameDuration = totalDuration / (frameContents.length - 1);
       if (args.verbose) {
         const detectedFps = 1000 / frameDuration;
         console.log(`Detected ${detectedFps.toFixed(1)} fps from stream timing`);
       }
     } else {
-      // Data arrived instantly (e.g., from a file) - use default 30fps
       frameDuration = 1000 / 30;
     }
 
@@ -373,7 +320,6 @@ export async function pipeCommand(args: PipeArgs): Promise<void> {
       spinner.update(`Rendering ${frameContents.length} frames`);
     }
 
-    // Render each frame to SVG
     const frames: TerminalFrame[] = frameContents.map((content, i) => {
       const svg = renderFrame(content, { ...renderOptions, width, height });
       return {
@@ -396,7 +342,6 @@ export async function pipeCommand(args: PipeArgs): Promise<void> {
       console.log(`Rendered ${frames.length} frames`);
     }
 
-    // Generate animated SVG
     if (!args.verbose) {
       spinner.update('Generating animated SVG');
     }
@@ -408,7 +353,6 @@ export async function pipeCommand(args: PipeArgs): Promise<void> {
 
     let svg = await createAnimatedSVG(frames, animationOptions);
 
-    // Optimize
     if (!args.verbose) {
       spinner.update('Optimizing SVG');
     }
@@ -422,10 +366,8 @@ export async function pipeCommand(args: PipeArgs): Promise<void> {
       console.log(`Optimized: ${(originalSize / 1024).toFixed(0)}KB → ${(optimizedSize / 1024).toFixed(0)}KB (${savings}% reduction)`);
     }
 
-    // Determine output path
     const outputPath = args.output || 'output.svg';
 
-    // Write output
     writeFileSync(outputPath, svg, 'utf-8');
 
     const metadata = getAnimationMetadata(frames);
@@ -442,7 +384,6 @@ export async function pipeCommand(args: PipeArgs): Promise<void> {
       );
     }
 
-    // Explicitly exit after successful completion
     process.exit(0);
   } catch (err) {
     if (!args.verbose) {
@@ -450,4 +391,5 @@ export async function pipeCommand(args: PipeArgs): Promise<void> {
     }
     throw err;
   }
-}
+};
+

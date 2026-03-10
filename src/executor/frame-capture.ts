@@ -1,0 +1,235 @@
+//#region Imports
+
+import type { ExecutorContext, TerminalFrame, TerminalState, CDExecutorOptions } from './types';
+import { stripAnsi } from './types';
+import { createGridState, processInput } from '../pipeline/vterminal';
+import { coalesce } from '../pipeline/coalescer';
+import { emit } from '../pipeline/svg-emitter';
+
+
+//#region Visible Line Count
+
+export const getVisibleLineCount = (ctx: ExecutorContext): number => {
+  const headerHeight = ctx.template === 'minimal' ? 0 : 40;
+  const padding = ctx.padding ?? 16;
+  const lineHeight = ctx.fontSize * ctx.lineHeight;
+  const watermarkHeight = ctx.watermark ? lineHeight : 0;
+  const contentHeight = ctx.height - headerHeight - padding - watermarkHeight - padding;
+  return Math.floor(contentHeight / lineHeight);
+};
+
+
+//#region Frame Capture
+
+export const captureFrame = (
+  ctx: ExecutorContext,
+  options: CDExecutorOptions,
+  showCursor: boolean = true,
+  activeCursor: boolean = false
+): void => {
+  const buffer = [...ctx.lines];
+
+  const displayLine = ctx.isExecutingCommand || ctx.isMultiLineContinuation
+    ? ctx.currentLine
+    : ctx.promptPrefix + ctx.currentLine;
+
+  buffer[ctx.cursorY] = displayLine;
+
+  const charWidth = ctx.fontSize * ctx.charWidthRatio;
+  const lineHeight = ctx.fontSize * ctx.lineHeight;
+  const padding = ctx.padding ?? 16;
+  const headerHeight = ctx.template === 'minimal' ? 0 : 40;
+  const contentStartY = headerHeight + padding;
+  const maxContentHeight = ctx.height - contentStartY - padding;
+  const maxVisibleRows = Math.floor(maxContentHeight / lineHeight);
+  const visibleCols = Math.floor((ctx.width - padding * 2) / charWidth);
+
+  if (ctx.autoWidth) {
+    for (const line of buffer) {
+      const lineLength = stripAnsi(line).length;
+      if (lineLength > ctx.maxLineLength) {
+        ctx.maxLineLength = lineLength;
+      }
+    }
+  }
+
+  if (!ctx.scroll && ctx.autoHeight) {
+    if (buffer.length > ctx.maxLines) {
+      ctx.maxLines = buffer.length;
+    }
+  }
+
+  let visibleBuffer: string[];
+  const visibleLines = getVisibleLineCount(ctx);
+
+  if (ctx.scroll) {
+    if (ctx.cursorY >= ctx.scrollOffset + visibleLines) {
+      ctx.scrollOffset = ctx.cursorY - visibleLines + 1;
+    } else if (ctx.cursorY < ctx.scrollOffset) {
+      ctx.scrollOffset = ctx.cursorY;
+    }
+
+    const startLine = ctx.scrollOffset;
+    const endLine = Math.min(startLine + visibleLines, buffer.length);
+    visibleBuffer = buffer.slice(startLine, endLine);
+  } else {
+    visibleBuffer = buffer;
+    ctx.scrollOffset = 0;
+  }
+
+  const content = visibleBuffer.join('\n');
+
+  let gridWidth: number;
+  let gridHeight = ctx.grid.height;
+
+  if (ctx.autoWidth) {
+    gridWidth = ctx.grid.width;
+    for (const line of visibleBuffer) {
+      const lineLength = stripAnsi(line).length;
+      gridWidth = Math.max(gridWidth, lineLength + 1);
+    }
+    gridHeight = Math.max(gridHeight, visibleBuffer.length + 1);
+  } else {
+    gridWidth = visibleCols;
+    if (!ctx.scroll) {
+      let estimatedRows = 0;
+      for (const line of visibleBuffer) {
+        const lineLength = stripAnsi(line).length;
+        estimatedRows += Math.ceil(lineLength / visibleCols) || 1;
+      }
+      gridHeight = Math.max(gridHeight, estimatedRows + 5);
+    }
+  }
+
+  let grid = createGridState(gridWidth, gridHeight);
+  grid = processInput(grid, content);
+
+  const shouldClampCursor = !ctx.autoHeight && ctx.scroll;
+
+  let finalCursorX: number;
+  let finalCursorY: number;
+
+  if (ctx.isExecutingCommand) {
+    finalCursorY = shouldClampCursor
+      ? Math.max(0, Math.min(grid.cursor.row, maxVisibleRows - 1))
+      : grid.cursor.row;
+    finalCursorX = grid.cursor.col;
+  } else {
+    const cursorBuffer = [...ctx.lines];
+    const textUpToCursor = ctx.currentLine.substring(0, ctx.cursorX);
+    const displayLineUpToCursor = ctx.promptPrefix + textUpToCursor;
+    cursorBuffer[ctx.cursorY] = displayLineUpToCursor;
+
+    let cursorVisibleBuffer: string[];
+    if (ctx.scroll) {
+      const startLine = ctx.scrollOffset;
+      const endLine = Math.min(startLine + getVisibleLineCount(ctx), cursorBuffer.length);
+      cursorVisibleBuffer = cursorBuffer.slice(startLine, endLine);
+    } else {
+      cursorVisibleBuffer = cursorBuffer;
+    }
+
+    const cursorContent = cursorVisibleBuffer.join('\n');
+    let cursorGrid = createGridState(gridWidth, gridHeight);
+    cursorGrid = processInput(cursorGrid, cursorContent);
+
+    finalCursorY = shouldClampCursor
+      ? Math.max(0, Math.min(cursorGrid.cursor.row, maxVisibleRows - 1))
+      : cursorGrid.cursor.row;
+    finalCursorX = cursorGrid.cursor.col;
+  }
+
+  if (ctx.autoHeight) {
+    if (grid.cursor.row + 1 > ctx.maxVisualRow) {
+      ctx.maxVisualRow = grid.cursor.row + 1;
+    }
+  }
+
+  const rows = coalesce(grid, ctx.theme);
+
+  const selection =
+    ctx.selectionStart !== undefined &&
+    ctx.selectionEnd !== undefined &&
+    ctx.selectionStart !== ctx.selectionEnd
+      ? {
+          start: ctx.selectionStart + (ctx.isExecutingCommand ? 0 : stripAnsi(ctx.promptPrefix).length),
+          end: ctx.selectionEnd + (ctx.isExecutingCommand ? 0 : stripAnsi(ctx.promptPrefix).length),
+          row: finalCursorY,
+        }
+      : null;
+
+  const { svg } = emit(
+    rows,
+    showCursor ? { row: finalCursorY, col: finalCursorX } : null,
+    showCursor,
+    {
+      theme: ctx.theme,
+      template: ctx.template,
+      width: ctx.width,
+      height: ctx.height,
+      fontSize: ctx.fontSize,
+      title: ctx.title,
+      watermark: ctx.watermark,
+      headerBackground: ctx.headerBackground,
+      footerBackground: ctx.footerBackground,
+      borderColor: ctx.borderColor,
+      borderWidth: ctx.borderWidth,
+      borderRadius: ctx.borderRadius,
+      padding: ctx.padding,
+      cursorBlink: ctx.cursorBlink,
+      activeCursor,
+      selection,
+      headerHeight: ctx.headerHeight,
+      headerBorder: ctx.headerBorder,
+      headerBorderColor: ctx.headerBorderColor,
+      headerBorderWidth: ctx.headerBorderWidth,
+      footerHeight: ctx.footerHeight,
+      footerBorder: ctx.footerBorder,
+      footerBorderColor: ctx.footerBorderColor,
+      footerBorderWidth: ctx.footerBorderWidth,
+      cursorStyle: ctx.cursorStyle,
+      cursorColor: ctx.cursorColor,
+      fontFamily: ctx.fontFamily,
+      embedFont: ctx.embedFont,
+      fontData: ctx.fontData,
+      lineHeight: ctx.fontSize * ctx.lineHeight,
+      hasCustomLineHeight: ctx.hasCustomLineHeight,
+      charWidth: ctx.fontSize * ctx.charWidthRatio,
+    }
+  );
+
+  const state: TerminalState = {
+    content,
+    cursorX: finalCursorX,
+    cursorY: finalCursorY,
+    width: ctx.width,
+    height: ctx.height,
+    fontSize: ctx.fontSize,
+    showCursor,
+    activeCursor,
+    selectionStart: ctx.selectionStart,
+    selectionEnd: ctx.selectionEnd,
+  };
+
+  const timestamp = Date.now() - ctx.startTime - ctx.captureOverhead;
+
+  const frame: TerminalFrame = {
+    timestamp,
+    svg,
+    state,
+  };
+
+  ctx.frames.push(frame);
+
+  ctx.frameData.push({
+    rows,
+    cursor: showCursor ? { row: finalCursorY, col: finalCursorX } : null,
+    cursorVisible: showCursor,
+    timestamp,
+    selection,
+    activeCursor,
+  });
+
+  options.onFrame?.(frame);
+};
+

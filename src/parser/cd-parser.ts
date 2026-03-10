@@ -1,10 +1,5 @@
-/**
- * CD (Cinema Display) Format Parser
- * Zero-dependency parser for .cd scripting format
- * Inspired by VHS .tape format but for animated SVGs
- */
+//#region Types
 
-// Placeholder for newlines inside backtick strings (won't appear in normal content)
 const BACKTICK_NEWLINE = '\x00BTNL\x00';
 
 export type CDCommand =
@@ -43,53 +38,36 @@ export class CDParseError extends Error {
   }
 }
 
-/**
- * Parse a time duration string (e.g., "500ms", "2s", "1.5s")
- */
+
+//#region Parsing Utilities
+
 export const parseDuration = (duration: string): number => {
   const match = duration.match(/^(\d+(?:\.\d+)?)(ms|s)$/);
-  if (!match) {
-    throw new Error(`Invalid duration format: ${duration}`);
-  }
+  if (!match) throw new Error(`Invalid duration format: ${duration}`);
   const value = parseFloat(match[1]);
   const unit = match[2];
   return unit === 's' ? value * 1000 : value;
 };
 
-/**
- * Parse a regex pattern from string (e.g., "/pattern/", "/pattern/i")
- */
 export const parseRegex = (pattern: string): RegExp => {
   const match = pattern.match(/^\/(.+?)\/([gimsuvy]*)$/);
-  if (!match) {
-    throw new Error(`Invalid regex pattern: ${pattern}`);
-  }
+  if (!match) throw new Error(`Invalid regex pattern: ${pattern}`);
   return new RegExp(match[1], match[2]);
 };
 
-/**
- * Parse a quoted string, handling escape sequences
- * Supports both double quotes ("...") and backticks (`...`)
- * Backtick strings preserve literal content (no escape processing)
- */
 export const parseQuotedString = (str: string): string => {
-  // Handle backtick strings (literal, no escape processing)
+  // Backtick strings: literal, no escape processing
   if (str.startsWith('`') && str.endsWith('`')) {
-    // Restore newlines from placeholder
     return str.slice(1, -1).replace(new RegExp(BACKTICK_NEWLINE, 'g'), '\n');
   }
 
-  // Handle double-quoted strings with escape processing
   if (!str.startsWith('"') || !str.endsWith('"')) {
     throw new Error(`Expected quoted string, got: ${str}`);
   }
 
   const content = str.slice(1, -1);
-
-  // Process escapes in correct order:
-  // First, replace \\\\ with a placeholder to protect literal backslashes
-  // Then process escape sequences, then restore literal backslashes
   const BACKSLASH_PLACEHOLDER = '\x00BACKSLASH\x00';
+
   return content
     .replace(/\\\\/g, BACKSLASH_PLACEHOLDER)
     .replace(/\\n/g, '\n')
@@ -99,10 +77,9 @@ export const parseQuotedString = (str: string): string => {
     .replace(new RegExp(BACKSLASH_PLACEHOLDER, 'g'), '\\');
 };
 
-/**
- * Tokenize a line into command and arguments
- * Handles both double quotes and backticks
- */
+
+//#region Tokenizer
+
 export const tokenizeLine = (line: string): string[] => {
   const tokens: string[] = [];
   let current = '';
@@ -119,7 +96,6 @@ export const tokenizeLine = (line: string): string[] => {
       continue;
     }
 
-    // Only process escapes in double quotes, not backticks
     if (char === '\\' && !inBackticks) {
       current += char;
       escaped = true;
@@ -149,95 +125,64 @@ export const tokenizeLine = (line: string): string[] => {
     current += char;
   }
 
-  if (current) {
-    tokens.push(current);
-  }
-
+  if (current) tokens.push(current);
   return tokens;
 };
 
-/**
- * Parse a single command line
- */
+
+//#region Command Parser
+
 export const parseCommand = (line: string, lineNumber: number): CDCommand => {
   const trimmed = line.trim();
 
-  // Skip empty lines
-  if (!trimmed) {
-    return { type: 'Comment' };
-  }
-
-  // Skip comments
-  if (trimmed.startsWith('#')) {
-    return { type: 'Comment' };
-  }
+  if (!trimmed || trimmed.startsWith('#')) return { type: 'Comment' };
 
   const tokens = tokenizeLine(trimmed);
-  if (tokens.length === 0) {
-    return { type: 'Comment' };
-  }
+  if (tokens.length === 0) return { type: 'Comment' };
 
   const command = tokens[0];
 
   try {
-    // Output command
     if (command === 'Output') {
-      if (tokens.length < 2) {
-        throw new Error('Output command requires a path');
-      }
+      if (tokens.length < 2) throw new Error('Output command requires a path');
       return { type: 'Output', path: tokens[1] };
     }
 
-    // Require command
     if (command === 'Require') {
-      if (tokens.length < 2) {
-        throw new Error('Require command requires a program name');
-      }
+      if (tokens.length < 2) throw new Error('Require command requires a program name');
       return { type: 'Require', program: tokens[1] };
     }
 
-    // Set command
     if (command === 'Set') {
-      if (tokens.length < 3) {
-        throw new Error('Set command requires a setting name and value');
-      }
+      if (tokens.length < 3) throw new Error('Set command requires a setting name and value');
       const rawValue = tokens.slice(2).join(' ');
-      // Parse as quoted string if it starts and ends with quotes
       const value = rawValue.startsWith('"') && rawValue.endsWith('"')
         ? parseQuotedString(rawValue)
         : rawValue;
       return { type: 'Set', setting: tokens[1], value };
     }
 
-    // Type command with optional speed override
     if (command === 'Type' || command.startsWith('Type@')) {
       let speed: number | undefined;
       if (command.includes('@')) {
         const speedStr = command.split('@')[1];
         speed = parseDuration(speedStr);
       }
-
-      if (tokens.length < 2) {
-        throw new Error('Type command requires text to type');
-      }
-
+      if (tokens.length < 2) throw new Error('Type command requires text to type');
       const text = parseQuotedString(tokens.slice(1).join(' '));
       return { type: 'Type', text, speed };
     }
 
-    // Arrow keys
     if (['Left', 'Right', 'Up', 'Down'].includes(command)) {
       const count = tokens.length > 1 ? parseInt(tokens[1], 10) : undefined;
       return { type: 'Key', key: command as 'Left' | 'Right' | 'Up' | 'Down', count };
     }
 
-    // Special keys
     if (['Backspace', 'Enter', 'Tab', 'Space'].includes(command)) {
       const count = tokens.length > 1 ? parseInt(tokens[1], 10) : undefined;
       return { type: 'Key', key: command as 'Backspace' | 'Enter' | 'Tab' | 'Space', count };
     }
 
-    // Ctrl/Alt/Shift/Cmd combinations
     if (command.startsWith('Ctrl') || command.startsWith('Alt') || command.startsWith('Shift') || command.startsWith('Cmd')) {
       const parts = command.split('+');
       const ctrl = parts.includes('Ctrl');
@@ -253,71 +198,45 @@ export const parseCommand = (line: string, lineNumber: number): CDCommand => {
       return { type: 'Shortcut', ctrl, alt, shift, cmd, key };
     }
 
-    // Sleep command
     if (command === 'Sleep') {
-      if (tokens.length < 2) {
-        throw new Error('Sleep command requires a duration');
-      }
+      if (tokens.length < 2) throw new Error('Sleep command requires a duration');
       return { type: 'Sleep', duration: parseDuration(tokens[1]) };
     }
 
-    // Wait command
     if (command === 'Wait' || command === 'WaitScreen' || command === 'WaitLine') {
       let condition: 'Screen' | 'Line' | undefined;
-      let patternToken = tokens[1];
+      const patternToken = tokens[1];
 
-      if (command === 'WaitScreen') {
-        condition = 'Screen';
-      } else if (command === 'WaitLine') {
-        condition = 'Line';
-      }
+      if (command === 'WaitScreen') condition = 'Screen';
+      else if (command === 'WaitLine') condition = 'Line';
 
       const pattern = patternToken ? parseRegex(patternToken) : undefined;
       return { type: 'Wait', condition, pattern };
     }
 
-    // Hide/Show commands
-    if (command === 'Hide') {
-      return { type: 'Hide' };
-    }
+    if (command === 'Hide') return { type: 'Hide' };
+    if (command === 'Show') return { type: 'Show' };
 
-    if (command === 'Show') {
-      return { type: 'Show' };
-    }
-
-    // Screenshot command
     if (command === 'Screenshot') {
       const path = tokens[1];
       return { type: 'Screenshot', path };
     }
 
-    // Copy command
     if (command === 'Copy') {
-      if (tokens.length < 2) {
-        throw new Error('Copy command requires text to copy');
-      }
+      if (tokens.length < 2) throw new Error('Copy command requires text to copy');
       const text = parseQuotedString(tokens.slice(1).join(' '));
       return { type: 'Copy', text };
     }
 
-    // Paste command
-    if (command === 'Paste') {
-      return { type: 'Paste' };
-    }
+    if (command === 'Paste') return { type: 'Paste' };
 
-    // Source command
     if (command === 'Source') {
-      if (tokens.length < 2) {
-        throw new Error('Source command requires a file path');
-      }
+      if (tokens.length < 2) throw new Error('Source command requires a file path');
       return { type: 'Source', file: tokens[1] };
     }
 
-    // Env command
     if (command === 'Env') {
-      if (tokens.length < 3) {
-        throw new Error('Env command requires a key and value');
-      }
+      if (tokens.length < 3) throw new Error('Env command requires a key and value');
       return { type: 'Env', key: tokens[1], value: tokens.slice(2).join(' ') };
     }
 
@@ -331,11 +250,9 @@ export const parseCommand = (line: string, lineNumber: number): CDCommand => {
   }
 };
 
-/**
- * Pre-process content to join multi-line backtick strings
- * Returns content with backtick blocks collapsed to single lines
- * (newlines inside backticks are replaced with a placeholder)
- */
+
+//#region Preprocessor
+
 const preprocessMultilineBackticks = (content: string): string => {
   const result: string[] = [];
   const lines = content.split('\n');
@@ -346,24 +263,17 @@ const preprocessMultilineBackticks = (content: string): string => {
     const line = lines[i];
 
     if (!inBacktickBlock) {
-      // Check if this line starts a backtick block
       const backtickCount = (line.match(/`/g) || []).length;
-
       if (backtickCount === 1) {
-        // Opening backtick without closing - start multi-line block
         inBacktickBlock = true;
         blockLines = [line];
       } else {
-        // Either no backticks or matched pair on same line
         result.push(line);
       }
     } else {
-      // We're inside a backtick block
       blockLines.push(line);
-
       const backtickCount = (line.match(/`/g) || []).length;
       if (backtickCount >= 1) {
-        // Found closing backtick - join lines with placeholder and add to result
         result.push(blockLines.join(BACKTICK_NEWLINE));
         inBacktickBlock = false;
         blockLines = [];
@@ -371,19 +281,15 @@ const preprocessMultilineBackticks = (content: string): string => {
     }
   }
 
-  // Handle unclosed backtick block (treat as regular lines)
-  if (inBacktickBlock) {
-    result.push(...blockLines);
-  }
+  if (inBacktickBlock) result.push(...blockLines);
 
   return result.join('\n');
 };
 
-/**
- * Parse a complete .cd script
- */
+
+//#region Main Parser
+
 export const parseCD = (content: string): CDScript => {
-  // Pre-process to handle multi-line backtick strings
   const processedContent = preprocessMultilineBackticks(content);
   const lines = processedContent.split('\n');
   const commands: CDCommand[] = [];
@@ -394,25 +300,15 @@ export const parseCD = (content: string): CDScript => {
   for (let i = 0; i < lines.length; i++) {
     const command = parseCommand(lines[i], i + 1);
 
-    if (command.type === 'Comment') {
-      continue;
-    }
+    if (command.type === 'Comment') continue;
 
-    if (command.type === 'Output') {
-      output = command.path;
-    } else if (command.type === 'Require') {
-      requirements.push(command.program);
-    } else if (command.type === 'Set') {
-      settings.set(command.setting, command.value);
-    }
+    if (command.type === 'Output') output = command.path;
+    else if (command.type === 'Require') requirements.push(command.program);
+    else if (command.type === 'Set') settings.set(command.setting, command.value);
 
     commands.push(command);
   }
 
-  return {
-    commands,
-    settings,
-    output,
-    requirements,
-  };
+  return { commands, settings, output, requirements };
 };
+

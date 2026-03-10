@@ -1,10 +1,10 @@
-/**
- * New Command
- * Create a new .cd script from a template
- */
+//#region Imports
 
 import { writeFileSync } from 'node:fs';
 import { createSpinner } from '../utils/spinner';
+
+
+//#region Templates
 
 const TEMPLATES = {
   basic: `# Basic CD Script
@@ -75,12 +75,18 @@ Sleep 1s
 `,
 };
 
+
+//#region Types
+
 interface NewArgs {
   name?: string;
   template?: keyof typeof TEMPLATES;
 }
 
-export async function newCommand(args: NewArgs): Promise<void> {
+
+//#region New Command
+
+export const newCommand = async (args: NewArgs): Promise<void> => {
   const spinner = createSpinner('Creating new script');
   spinner.start();
 
@@ -105,4 +111,5 @@ export async function newCommand(args: NewArgs): Promise<void> {
     spinner.fail('Failed to create script');
     throw err;
   }
-}
+};
+

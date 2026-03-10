@@ -1,17 +1,20 @@
-/**
- * Validate Command
- * Validate a .cd script
- */
+//#region Imports
 
 import { readFileSync } from 'node:fs';
 import { parseCD, CDParseError } from '../parser/cd-parser';
 import { createSpinner } from '../utils/spinner';
 
+
+//#region Types
+
 interface ValidateArgs {
   file: string;
 }
 
-export async function validateCommand(args: ValidateArgs): Promise<void> {
+
+//#region Validate Command
+
+export const validateCommand = async (args: ValidateArgs): Promise<void> => {
   const spinner = createSpinner('Validating script');
   spinner.start();
 
@@ -21,7 +24,6 @@ export async function validateCommand(args: ValidateArgs): Promise<void> {
 
     spinner.success(`Valid! Found ${script.commands.length} commands`);
 
-    // Show summary
     console.log('\nScript summary:');
     console.log(`  Output: ${script.output || '(not specified)'}`);
     console.log(`  Commands: ${script.commands.length}`);
@@ -46,4 +48,5 @@ export async function validateCommand(args: ValidateArgs): Promise<void> {
 
     process.exit(1);
   }
-}
+};
+
