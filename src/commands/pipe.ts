@@ -32,6 +32,28 @@ interface PipeArgs {
   template?: string;
   padding?: number;
   borderRadius?: number;
+  // Border options
+  borderColor?: string;
+  borderWidth?: number;
+  // Font options
+  fontFamily?: string;
+  watermark?: string;
+  // Cursor options
+  cursorStyle?: string;
+  cursorColor?: string;
+  cursorBlink?: boolean;
+  // Header options
+  headerBackground?: string;
+  headerHeight?: number;
+  headerBorder?: boolean;
+  headerBorderColor?: string;
+  headerBorderWidth?: number;
+  // Footer options
+  footerBackground?: string;
+  footerHeight?: number;
+  footerBorder?: boolean;
+  footerBorderColor?: string;
+  footerBorderWidth?: number;
 }
 
 interface StdinResult {
@@ -123,25 +145,49 @@ function splitIntoFrames(content: string, animationType: 'terminal-reset' | 'cur
 }
 
 /**
+ * Render frame options interface
+ */
+interface RenderFrameOptions {
+  width: number;
+  height: number;
+  fontSize: number;
+  lineHeight: number;
+  padding: number;
+  borderRadius: number;
+  theme: typeof themes.dark;
+  title?: string;
+  template: 'macos' | 'windows' | 'minimal';
+  // Border options
+  borderColor?: string;
+  borderWidth?: number;
+  // Font options
+  fontFamily?: string;
+  watermark?: string;
+  // Cursor options
+  cursorStyle?: 'block' | 'bar' | 'underline';
+  cursorColor?: string;
+  cursorBlink?: boolean;
+  // Header options
+  headerBackground?: string;
+  headerHeight?: number;
+  headerBorder?: boolean;
+  headerBorderColor?: string;
+  headerBorderWidth?: number;
+  // Footer options
+  footerBackground?: string;
+  footerHeight?: number;
+  footerBorder?: boolean;
+  footerBorderColor?: string;
+  footerBorderWidth?: number;
+}
+
+/**
  * Render a frame to SVG
  */
-function renderFrame(
-  content: string,
-  options: {
-    width: number;
-    height: number;
-    fontSize: number;
-    lineHeight: number;
-    padding: number;
-    borderRadius: number;
-    theme: typeof themes.dark;
-    title?: string;
-    template: 'macos' | 'windows' | 'minimal';
-  }
-): string {
+function renderFrame(content: string, options: RenderFrameOptions): string {
   const charWidth = options.fontSize * 0.6;
   const lineHeightPx = options.fontSize * options.lineHeight;
-  const headerHeight = 40;
+  const headerHeight = options.headerHeight ?? 40;
   const gridWidth = Math.floor((options.width - options.padding * 2) / charWidth);
   const gridHeight = Math.floor((options.height - headerHeight - options.padding * 2) / lineHeightPx);
 
@@ -164,6 +210,28 @@ function renderFrame(
     charWidth: charWidth,
     padding: options.padding,
     borderRadius: options.borderRadius,
+    // Border options
+    borderColor: options.borderColor,
+    borderWidth: options.borderWidth,
+    // Font options
+    fontFamily: options.fontFamily,
+    watermark: options.watermark,
+    // Cursor options
+    cursorStyle: options.cursorStyle,
+    cursorColor: options.cursorColor,
+    cursorBlink: options.cursorBlink,
+    // Header options
+    headerBackground: options.headerBackground,
+    headerHeight: options.headerHeight,
+    headerBorder: options.headerBorder,
+    headerBorderColor: options.headerBorderColor,
+    headerBorderWidth: options.headerBorderWidth,
+    // Footer options
+    footerBackground: options.footerBackground,
+    footerHeight: options.footerHeight,
+    footerBorder: options.footerBorder,
+    footerBorderColor: options.footerBorderColor,
+    footerBorderWidth: options.footerBorderWidth,
   });
 
   return svg;
@@ -221,6 +289,40 @@ export async function pipeCommand(args: PipeArgs): Promise<void> {
     const theme = args.theme ? (themes as unknown as Record<string, typeof themes.dark>)[args.theme] || themes.dark : themes.dark;
     const title = args.title || 'Terminal Animation';
     const template = (args.template || 'macos') as 'macos' | 'windows' | 'minimal';
+    const cursorStyle = (args.cursorStyle || 'block') as 'block' | 'bar' | 'underline';
+
+    // Build render options with all customization
+    const renderOptions: Omit<RenderFrameOptions, 'width' | 'height'> = {
+      fontSize,
+      lineHeight,
+      padding,
+      borderRadius,
+      theme,
+      title,
+      template,
+      // Border options
+      borderColor: args.borderColor,
+      borderWidth: args.borderWidth,
+      // Font options
+      fontFamily: args.fontFamily,
+      watermark: args.watermark,
+      // Cursor options
+      cursorStyle,
+      cursorColor: args.cursorColor,
+      cursorBlink: args.cursorBlink,
+      // Header options
+      headerBackground: args.headerBackground,
+      headerHeight: args.headerHeight,
+      headerBorder: args.headerBorder,
+      headerBorderColor: args.headerBorderColor,
+      headerBorderWidth: args.headerBorderWidth,
+      // Footer options
+      footerBackground: args.footerBackground,
+      footerHeight: args.footerHeight,
+      footerBorder: args.footerBorder,
+      footerBorderColor: args.footerBorderColor,
+      footerBorderWidth: args.footerBorderWidth,
+    };
 
     // Auto-detect dimensions from content if not specified
     let width = args.width;
@@ -273,7 +375,7 @@ export async function pipeCommand(args: PipeArgs): Promise<void> {
 
     // Render each frame to SVG
     const frames: TerminalFrame[] = frameContents.map((content, i) => {
-      const svg = renderFrame(content, { width, height, fontSize, lineHeight, padding, borderRadius, theme, title, template });
+      const svg = renderFrame(content, { ...renderOptions, width, height });
       return {
         timestamp: i * frameDuration,
         svg,

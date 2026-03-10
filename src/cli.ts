@@ -104,6 +104,82 @@ const createParser = () =>
       describe: 'Window border radius in pixels',
       default: 8,
     })
+    // Border options
+    .option('border-color', {
+      type: 'string',
+      describe: 'Border color (hex)',
+    })
+    .option('border-width', {
+      type: 'number',
+      describe: 'Border width in pixels',
+    })
+    // Font options
+    .option('font-family', {
+      type: 'string',
+      describe: 'Custom font family name',
+    })
+    .option('watermark', {
+      type: 'string',
+      describe: 'Watermark text',
+    })
+    // Cursor options
+    .option('cursor-style', {
+      type: 'string',
+      choices: ['block', 'bar', 'underline'],
+      describe: 'Cursor style',
+      default: 'block',
+    })
+    .option('cursor-color', {
+      type: 'string',
+      describe: 'Cursor color (hex)',
+    })
+    .option('cursor-blink', {
+      type: 'boolean',
+      describe: 'Enable cursor blinking',
+      default: true,
+    })
+    // Header options
+    .option('header-background', {
+      type: 'string',
+      describe: 'Header background color (hex)',
+    })
+    .option('header-height', {
+      type: 'number',
+      describe: 'Header height in pixels',
+    })
+    .option('header-border', {
+      type: 'boolean',
+      describe: 'Show header border',
+    })
+    .option('header-border-color', {
+      type: 'string',
+      describe: 'Header border color (hex)',
+    })
+    .option('header-border-width', {
+      type: 'number',
+      describe: 'Header border width in pixels',
+    })
+    // Footer options
+    .option('footer-background', {
+      type: 'string',
+      describe: 'Footer background color (hex)',
+    })
+    .option('footer-height', {
+      type: 'number',
+      describe: 'Footer height in pixels',
+    })
+    .option('footer-border', {
+      type: 'boolean',
+      describe: 'Show footer border',
+    })
+    .option('footer-border-color', {
+      type: 'string',
+      describe: 'Footer border color (hex)',
+    })
+    .option('footer-border-width', {
+      type: 'number',
+      describe: 'Footer border width in pixels',
+    })
     .command(
       'new [name]',
       'Create a new .cd script from template',
@@ -210,6 +286,28 @@ const run = async (): Promise<void> => {
         template: argv.template as string,
         padding: argv.padding,
         borderRadius: argv['border-radius'],
+        // Border options
+        borderColor: argv['border-color'],
+        borderWidth: argv['border-width'],
+        // Font options
+        fontFamily: argv['font-family'],
+        watermark: argv.watermark,
+        // Cursor options
+        cursorStyle: argv['cursor-style'],
+        cursorColor: argv['cursor-color'],
+        cursorBlink: argv['cursor-blink'],
+        // Header options
+        headerBackground: argv['header-background'],
+        headerHeight: argv['header-height'],
+        headerBorder: argv['header-border'],
+        headerBorderColor: argv['header-border-color'],
+        headerBorderWidth: argv['header-border-width'],
+        // Footer options
+        footerBackground: argv['footer-background'],
+        footerHeight: argv['footer-height'],
+        footerBorder: argv['footer-border'],
+        footerBorderColor: argv['footer-border-color'],
+        footerBorderWidth: argv['footer-border-width'],
       });
     } catch (err) {
       console.error(err instanceof Error ? err.message : String(err));
