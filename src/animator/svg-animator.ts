@@ -253,10 +253,13 @@ export async function createAnimatedSVG(
     }
 
     // Dedupe consecutive identical times/values
+    // Only skip if BOTH time and value are the same as previous
     const dedupedTimes: number[] = [times[0]];
     const dedupedValues: string[] = [values[0]];
     for (let j = 1; j < times.length; j++) {
-      if (times[j] !== dedupedTimes[dedupedTimes.length - 1]) {
+      const sameTime = times[j] === dedupedTimes[dedupedTimes.length - 1];
+      const sameValue = values[j] === dedupedValues[dedupedValues.length - 1];
+      if (!sameTime || !sameValue) {
         dedupedTimes.push(times[j]);
         dedupedValues.push(values[j]);
       }
