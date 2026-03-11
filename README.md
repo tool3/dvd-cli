@@ -1,29 +1,38 @@
 # DVD
 
 <p align="center">
-  <img alt="Demo" src="examples/svgs/figlet.svg" width="600">
+  <img alt="Demo" src="examples/svgs/figlet.svg" width="500">
 </p>
 
 <p align="center">
-  <em>Create animated SVG terminal recordings from scripts</em>
+  <strong>Create animated SVG terminal recordings from simple scripts</strong>
+</p>
+
+<p align="center">
+  <a href="#installation">Installation</a> •
+  <a href="#quick-start">Quick Start</a> •
+  <a href="#commands">Commands</a> •
+  <a href="#settings">Settings</a> •
+  <a href="#examples">Examples</a>
 </p>
 
 ---
 
-DVD is a CLI tool for generating animated SVG terminal recordings. Write a simple script, run `dvd`, and get a beautiful SVG animation.
+DVD generates animated SVG terminal recordings from declarative scripts. Write what you want to happen, run `dvd`, and get a beautiful, scalable animation.
 
 ```
 Output demo.svg
 
 Set Theme dracula
 Set Template macos
+Set Title "My Demo"
 
-Type "echo 'Hello, DVD!'"
+Type "echo 'Hello, World!'"
 Enter
 Sleep 2s
 ```
 
-No ffmpeg. No browser. No dependencies. Just SVG.
+**No ffmpeg. No browser. No dependencies. Just SVG.**
 
 ## Installation
 
@@ -37,63 +46,33 @@ npm install -g dvd-cli
 # Create a new script
 dvd new demo
 
-# Render it
+# Edit it to your liking, then render
 dvd demo.cd
 ```
 
-## Tutorial
-
-Let's create a simple terminal recording.
-
-**1. Create a script**
-
-```bash
-dvd new hello
-```
-
-This creates `hello.cd`:
-
-```
-Output hello.svg
-
-Set Theme dracula
-Set Template macos
-Set Title "Hello World"
-
-Type "echo 'Hello, World!'"
-Enter
-Sleep 2s
-```
-
-**2. Render it**
-
-```bash
-dvd hello.cd
-```
-
-**3. View the result**
-
-Open `hello.svg` in your browser or embed it in your README:
+Your animated SVG is ready to embed anywhere:
 
 ```markdown
-![Demo](hello.svg)
+![Demo](demo.svg)
 ```
 
 ## Commands
 
 ### Type
 
-Type text into the terminal with realistic timing.
+Type text with realistic timing. Control speed with `@<ms>ms` suffix.
 
 ```
 Type "echo 'Hello World'"
+Type@100ms "Slow typing..."
+Type@10ms "Speed typing!"
 ```
 
 <img src="examples/svgs/slow-typing-test.svg" width="600">
 
 ### Enter
 
-Press enter to execute the command.
+Execute the current command.
 
 ```
 Type "neofetch"
@@ -113,52 +92,56 @@ Sleep 2s
 
 ### Backspace
 
-Delete characters.
+Delete characters. Supports a count parameter.
 
 ```
-Type "echo 'I am an idiot savant developer'"
-Left 10
-Sleep 200ms
-Backspace 7
+Type "Hello Wrold"
+Backspace 4
+Type "orld!"
 ```
 
 <img src="examples/svgs/backspace.svg" width="600">
 
 ### Arrow Keys
 
-Navigate with arrow keys.
+Navigate with arrow keys. Supports a count parameter.
 
 ```
-Left
-Right
-Up
-Down
+Left          # Move cursor left
+Right         # Move cursor right
+Left 5        # Move cursor left 5 times
+Right 10      # Move cursor right 10 times
 ```
 
 ### Keyboard Shortcuts
 
-Full keyboard navigation support.
+Full keyboard navigation with selection support. All shortcuts support a count parameter.
 
 ```
-Shift+Left       # Select character left
-Shift+Right      # Select character right
-Alt+Left         # Move word left
-Alt+Right        # Move word right
-Alt+Shift+Left   # Select word left
-Alt+Shift+Right  # Select word right
-Cmd+Left         # Move to line start
-Cmd+Right        # Move to line end
-Cmd+Backspace    # Delete word
+Shift+Left           # Select character left
+Shift+Right          # Select character right
+Shift+Left 5         # Select 5 characters left
+Alt+Left             # Move word left
+Alt+Right            # Move word right
+Alt+Shift+Left       # Select word left
+Alt+Shift+Right      # Select word right
+Cmd+Left             # Move to line start
+Cmd+Right            # Move to line end
+Cmd+Backspace        # Delete word
 ```
+
+<img src="examples/svgs/word-selection-test.svg" width="600">
 
 <img src="examples/svgs/keyboard-navigation-demo.svg" width="600">
 
 ### Screenshot
 
-Capture a static frame.
+Capture a static frame at any point.
 
 ```
-Screenshot frame.svg
+Type "npm test"
+Enter
+Screenshot test-results.svg
 ```
 
 ## Settings
@@ -179,51 +162,48 @@ Set the color theme.
 Set Theme dracula
 ```
 
-Available themes: `catppuccinMocha`, `dracula`, `githubDark`, `githubLight`, `gruvboxDark`, `gruvboxLight`, `monokai`, `nord`, `oneDark`, `solarizedDark`, `solarizedLight`, `tokyoNight`, `terminal`
+**Available themes (37):** `a11yDark`, `base16Dark`, `base16Light`, `blackboard`, `catppuccinMocha`, `cobalt`, `dark`, `dracula`, `draculaPro`, `duotoneDark`, `githubDark`, `githubLight`, `gruvboxDark`, `gruvboxLight`, `hopscotch`, `lucario`, `material`, `monokai`, `night3024`, `nord`, `oceanicNext`, `oneDark`, `oneLight`, `pandaSyntax`, `paraisoDark`, `seti`, `shadesOfPurple`, `solarizedDark`, `solarizedLight`, `synthwave84`, `terminal`, `tokyoNight`, `twilight`, `verminal`, `vscode`, `yeti`, `zenburn`
 
 <img src="examples/svgs/nord-theme.svg" width="600">
 
+<img src="examples/svgs/theme-test.svg" width="600">
+
 ### Template
 
-Set the window style.
+Set the window chrome style.
 
 ```
-Set Template macos
-Set Template windows
-Set Template minimal
+Set Template macos     # macOS traffic lights
+Set Template windows   # Windows-style buttons
+Set Template minimal   # No decorations (default)
 ```
 
-| Template | Description |
-|----------|-------------|
-| `minimal` | Clean, no decorations (default) |
-| `macos` | macOS-style with traffic light buttons |
-| `windows` | Windows-style with title bar buttons |
-
-<img src="examples/svgs/macos-style.svg" width="600">
+<table>
+<tr>
+<td><strong>macOS</strong></td>
+<td><strong>Windows</strong></td>
+</tr>
+<tr>
+<td><img src="examples/svgs/macos-style.svg" width="400"></td>
+<td><img src="examples/svgs/windows-style.svg" width="400"></td>
+</tr>
+</table>
 
 ### Dimensions
 
-Set terminal size. Omit for auto-sizing.
+Set terminal size. Omit for auto-sizing based on content.
 
 ```
 Set Width 800
 Set Height 600
 ```
 
-Auto-sizing adjusts dimensions based on content:
-
-```
-# Auto width and height
-Set FontSize 16
-Type "Content determines size"
-```
-
 ### Font
 
-Set font family or embed a custom font.
+Set font family or embed a custom font for guaranteed rendering.
 
 ```
-# System font (viewer must have it installed)
+# System font (viewer must have it)
 Set FontFamily "Fira Code"
 
 # Embedded font (always works)
@@ -245,16 +225,18 @@ Set Title "My Terminal"
 Customize cursor appearance.
 
 ```
-Set CursorStyle block    # block, bar, underline
+Set CursorStyle block      # block, bar, underline
 Set CursorColor #ffffff
 Set CursorBlink true
 ```
 
 <img src="examples/svgs/cursor-style-test.svg" width="600">
 
+<img src="examples/svgs/underline-cursor-test.svg" width="600">
+
 ### Typing Speed
 
-Control typing speed in milliseconds per character.
+Control default typing speed in milliseconds per character.
 
 ```
 Set TypingSpeed 50
@@ -262,11 +244,12 @@ Set TypingSpeed 50
 
 ### Prompt
 
-Customize the shell prompt (supports ANSI).
+Customize the shell prompt. Supports ANSI escape codes.
 
 ```
+Set PromptPrefix "$ "
 Set PromptPrefix "❯ "
-Set PromptPrefix "\x1b[95m❯\x1b[0m "
+Set PromptPrefix "\x1b[95m❯\x1b[0m "    # Colored prompt
 ```
 
 <img src="examples/svgs/custom-prompt.svg" width="600">
@@ -280,6 +263,8 @@ Set BorderRadius 8
 Set BorderWidth 2
 Set BorderColor #ff0000
 ```
+
+<img src="examples/svgs/border-test.svg" width="600">
 
 ### Header & Footer
 
@@ -299,7 +284,7 @@ Set FooterBorder true
 
 ### Watermark
 
-Add a watermark (supports ANSI).
+Add a watermark in the corner.
 
 ```
 Set Watermark "Made with DVD"
@@ -308,60 +293,109 @@ Set Watermark "Made with DVD"
 ## CLI Options
 
 ```bash
-dvd [file]                    # Render a script
-dvd [file] -o output.svg      # Custom output path
-dvd [file] --verbose          # Show progress
-dvd [file] --no-loop          # Don't loop animation
-dvd [file] --pause-at-end 2000  # Pause at end (ms)
+# Render a script
+dvd script.cd
+dvd script.cd -o output.svg
+dvd script.cd --verbose
 
-dvd new [name]                # Create new script
-dvd new [name] --template showcase
+# Animation options
+dvd script.cd --no-loop
+dvd script.cd --pause-at-end 2000
 
-dvd themes                    # List themes
-dvd validate [file]           # Validate script
+# Create new script
+dvd new myproject
+dvd new myproject --template showcase
+
+# Utilities
+dvd themes              # List available themes
+dvd validate script.cd  # Validate without rendering
 ```
 
 ## Examples
 
+### Demo
+
+A simple hello world animation.
+
+<img src="examples/svgs/demo.svg" width="600">
+
 ### ANSI Colors
+
+Full ANSI color support with 256 colors and truecolor.
 
 <img src="examples/svgs/ansi-colors.svg" width="600">
 
-### ASCII Art
+### ASCII Art with Figlet
 
 <img src="examples/svgs/figlet.svg" width="600">
 
-### Charts
+### Charts with Chartscii
 
 <img src="examples/svgs/chartscii.svg" width="600">
 
-### Animated Output
+### Rainbow Animation
 
-Commands with animated output (like `lolcat -fa`) are automatically captured frame-by-frame.
+Commands with animated output are automatically captured frame-by-frame.
 
-<img src="examples/svgs/lolcat-animation.svg" width="600">
+<img src="examples/svgs/rainbow-lolcat.svg" width="600">
 
 ### Git Log
 
 <img src="examples/svgs/git-log.svg" width="600">
 
-See the [examples/](examples/) directory for more.
+### System Info
+
+<img src="examples/svgs/neofetch-theme-cursor.svg" width="600">
+
+### Emoji Support
+
+Full emoji support including skin tones and ZWJ sequences.
+
+<img src="examples/svgs/emoji-test.svg" width="600">
+
+### Text Selection
+
+Interactive text selection and editing.
+
+<img src="examples/svgs/selection-test.svg" width="600">
+
+### Word Navigation
+
+<img src="examples/svgs/word-navigation-test.svg" width="600">
+
+### Multiple Font Sizes
+
+<img src="examples/svgs/font-sizes.svg" width="600">
+
+### Color Tables
+
+<img src="examples/svgs/colors-table.svg" width="600">
+
+### Directory Listing
+
+<img src="examples/svgs/ls-colors.svg" width="600">
+
+See the [examples/](examples/) directory for all scripts and outputs.
 
 ## Why DVD?
 
-| | DVD | VHS |
-|---|---|---|
-| **Output** | SVG | GIF/MP4 |
-| **Dependencies** | None | ffmpeg, ttyd |
-| **File size** | Small | Large |
-| **Scalable** | Yes | No |
-| **GitHub README** | Perfect | Works |
-| **Editable** | Yes (it's XML) | No |
+| | DVD | VHS | asciinema |
+|---|:---:|:---:|:---:|
+| **Output** | SVG | GIF/MP4 | asciicast |
+| **Dependencies** | None | ffmpeg, ttyd | Player embed |
+| **File size** | Small | Large | Small |
+| **Scalable** | ✓ | ✗ | ✓ |
+| **GitHub README** | Perfect | Works | Embed only |
+| **Editable** | ✓ (XML) | ✗ | ✓ (JSON) |
+| **Offline** | ✓ | ✓ | ✗ |
+| **Print quality** | ✓ | ✗ | ✗ |
 
-## Related
+## Related Projects
 
 - [VHS](https://github.com/charmbracelet/vhs) - GIF/MP4 terminal recordings
-- [shellfie](https://github.com/tool3/shellfie) - Static terminal screenshots
+- [shellfie](https://github.com/tool3/shellfie) - shellfie in code
+- [shellfie-cli](https://github.com/tool3/shellfie-cli) - shellfie in commandl line
+- [shellfied](https://github.com/tool3/shellfied) - shellfie in the web
 
 ## License
 

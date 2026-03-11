@@ -4,7 +4,7 @@ Output examples/svgs/multiline.svg
 Set Theme dark
 Set Template macos
 Set Title "Multiline"
-Set TypingSpeed 10
+Set TypingSpeed 5
 
 Type `echo '          
 
@@ -17,8 +17,10 @@ Type `echo '
 | $$$$$$$/   \  $/   | $$$$$$$/
 |_______/     \_/    |_______/  
                                      
-' | lolcat -f`
+' | lolcat -fa -F 0.15 -S 10`
 
 Sleep 500ms
 Enter
+
+Type "Welcome to DVD!!!"
 Sleep 2s
