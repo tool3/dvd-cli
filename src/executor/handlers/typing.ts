@@ -5,6 +5,41 @@ import { sleep, stripAnsi } from '../types';
 import { captureFrame } from '../frame-capture';
 
 
+//#region String Index Helpers
+
+/**
+ * Convert a grapheme position to a string index.
+ * This handles multi-byte characters like emojis correctly.
+ */
+const graphemeToIndex = (str: string, position: number): number => {
+  const graphemes = segmentGraphemes(str);
+  let index = 0;
+  for (let i = 0; i < position && i < graphemes.length; i++) {
+    index += graphemes[i].length;
+  }
+  return index;
+};
+
+/**
+ * Get the number of graphemes in a string (not UTF-16 code units).
+ */
+const graphemeLength = (str: string): number => [...segmentGraphemes(str)].length;
+
+/**
+ * Segment a string into grapheme clusters.
+ * This handles emoji sequences like ❤️ (heart + variation selector) as single units.
+ */
+const segmentGraphemes = (str: string): string[] => {
+  // Use Intl.Segmenter if available (Node 16+)
+  if (typeof Intl !== 'undefined' && Intl.Segmenter) {
+    const segmenter = new Intl.Segmenter('en', { granularity: 'grapheme' });
+    return [...segmenter.segment(str)].map((s) => s.segment);
+  }
+  // Fallback: basic code point iteration (won't handle all grapheme clusters)
+  return [...str];
+};
+
+
 //#region Selection Helpers
 
 export const hasSelection = (ctx: ExecutorContext): boolean =>
@@ -23,8 +58,11 @@ export const deleteSelection = (ctx: ExecutorContext): boolean => {
   const start = Math.min(ctx.selectionStart!, ctx.selectionEnd!);
   const end = Math.max(ctx.selectionStart!, ctx.selectionEnd!);
 
-  const before = ctx.currentLine.substring(0, start);
-  const after = ctx.currentLine.substring(end);
+  const startIndex = graphemeToIndex(ctx.currentLine, start);
+  const endIndex = graphemeToIndex(ctx.currentLine, end);
+
+  const before = ctx.currentLine.substring(0, startIndex);
+  const after = ctx.currentLine.substring(endIndex);
 
   ctx.currentLine = before + after;
   ctx.cursorX = start;
@@ -50,7 +88,7 @@ export const executeType = async (
     await sleep(delay);
   }
 
-  for (const char of text) {
+  for (const char of segmentGraphemes(text)) {
     if (char === '\n') {
       const prefix = ctx.isMultiLineContinuation ? '' : ctx.promptPrefix;
       ctx.lines[ctx.cursorY] = prefix + ctx.currentLine;
@@ -70,8 +108,9 @@ export const executeType = async (
       continue;
     }
 
-    const before = ctx.currentLine.substring(0, ctx.cursorX);
-    const after = ctx.currentLine.substring(ctx.cursorX);
+    const cursorIndex = graphemeToIndex(ctx.currentLine, ctx.cursorX);
+    const before = ctx.currentLine.substring(0, cursorIndex);
+    const after = ctx.currentLine.substring(cursorIndex);
     ctx.currentLine = before + char + after;
     ctx.cursorX++;
 
@@ -102,9 +141,11 @@ export const executeBackspace = async (
   }
 
   for (let i = 0; i < count; i++) {
-    if (ctx.currentLine.length > 0 && ctx.cursorX > 0) {
-      const before = ctx.currentLine.substring(0, ctx.cursorX - 1);
-      const after = ctx.currentLine.substring(ctx.cursorX);
+    if (graphemeLength(ctx.currentLine) > 0 && ctx.cursorX > 0) {
+      const beforeIndex = graphemeToIndex(ctx.currentLine, ctx.cursorX - 1);
+      const afterIndex = graphemeToIndex(ctx.currentLine, ctx.cursorX);
+      const before = ctx.currentLine.substring(0, beforeIndex);
+      const after = ctx.currentLine.substring(afterIndex);
       ctx.currentLine = before + after;
       ctx.cursorX--;
 

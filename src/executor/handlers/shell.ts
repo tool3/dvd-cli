@@ -1,6 +1,7 @@
 //#region Imports
 
 import { spawn } from 'node:child_process';
+import { StringDecoder } from 'node:string_decoder';
 import type { ExecutorContext, CDExecutorOptions } from '../types';
 import { sleep, stripAnsi } from '../types';
 import { captureFrame } from '../frame-capture';
@@ -91,8 +92,13 @@ export const executeShellCommand = async (
 
     const processOutput = createOutputProcessor(ctx, options, animationState);
 
-    child.stdout?.on('data', (data: Buffer) => processOutput(data.toString()));
-    child.stderr?.on('data', (data: Buffer) => processOutput(data.toString()));
+    // Use StringDecoder to handle multi-byte UTF-8 characters (like emojis)
+    // that may be split across Buffer chunks
+    const stdoutDecoder = new StringDecoder('utf8');
+    const stderrDecoder = new StringDecoder('utf8');
+
+    child.stdout?.on('data', (data: Buffer) => processOutput(stdoutDecoder.write(data)));
+    child.stderr?.on('data', (data: Buffer) => processOutput(stderrDecoder.write(data)));
 
     child.on('close', async () => {
       await finalizeOutput(ctx, options, animationState, resolve);

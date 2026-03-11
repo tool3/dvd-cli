@@ -445,10 +445,9 @@ export const parseInput = (input: string): VTerminalCommand[] => {
   let i = 0;
 
   while (i < input.length) {
-    const char = input[i];
-    const code = char.charCodeAt(0);
+    const code = input.charCodeAt(i);
 
-    if (char === '\x1b') {
+    if (input[i] === '\x1b') {
       const result = parseEscapeSequence(input, i);
       if (result) {
         commands.push(result.command);
@@ -458,15 +457,60 @@ export const parseInput = (input: string): VTerminalCommand[] => {
     }
 
     if (code < 0x20) {
-      const cmdType = CONTROL_CHARS[char];
+      const cmdType = CONTROL_CHARS[input[i]];
       if (cmdType) commands.push({ type: cmdType } as VTerminalCommand);
       i++;
       continue;
     }
 
+    // Handle surrogate pairs for characters outside BMP (emojis, etc.)
+    let char: string;
+    if (code >= 0xd800 && code <= 0xdbff && i + 1 < input.length) {
+      const lowCode = input.charCodeAt(i + 1);
+      if (lowCode >= 0xdc00 && lowCode <= 0xdfff) {
+        char = input.slice(i, i + 2);
+        i += 2;
+      } else {
+        char = input[i];
+        i++;
+      }
+    } else {
+      char = input[i];
+      i++;
+    }
+
+    // Consume any following variation selectors or zero-width joiners
+    // to keep grapheme clusters together (e.g., ❤️ = ❤ + U+FE0F)
+    while (i < input.length) {
+      const nextCode = input.charCodeAt(i);
+      // Variation Selectors (U+FE00-U+FE0F) and Zero Width Joiner (U+200D)
+      if ((nextCode >= 0xfe00 && nextCode <= 0xfe0f) || nextCode === 0x200d) {
+        char += input[i];
+        i++;
+        // After ZWJ, consume the next character (including surrogate pairs)
+        if (nextCode === 0x200d && i < input.length) {
+          const zwjNextCode = input.charCodeAt(i);
+          if (zwjNextCode >= 0xd800 && zwjNextCode <= 0xdbff && i + 1 < input.length) {
+            const lowCode = input.charCodeAt(i + 1);
+            if (lowCode >= 0xdc00 && lowCode <= 0xdfff) {
+              char += input.slice(i, i + 2);
+              i += 2;
+            } else {
+              char += input[i];
+              i++;
+            }
+          } else {
+            char += input[i];
+            i++;
+          }
+        }
+      } else {
+        break;
+      }
+    }
+
     const width = getCharWidth(char);
     if (width > 0) commands.push({ type: 'print', char, width: width as 1 | 2 });
-    i++;
   }
 
   return commands;

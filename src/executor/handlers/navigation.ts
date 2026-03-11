@@ -6,6 +6,31 @@ import { captureFrame } from '../frame-capture';
 import { hasSelection, clearSelection, deleteSelection } from './typing';
 
 
+//#region String Index Helpers
+
+/**
+ * Segment a string into grapheme clusters.
+ */
+const segmentGraphemes = (str: string): string[] => {
+  if (typeof Intl !== 'undefined' && Intl.Segmenter) {
+    const segmenter = new Intl.Segmenter('en', { granularity: 'grapheme' });
+    return [...segmenter.segment(str)].map((s) => s.segment);
+  }
+  return [...str];
+};
+
+const graphemeToIndex = (str: string, position: number): number => {
+  const graphemes = segmentGraphemes(str);
+  let index = 0;
+  for (let i = 0; i < position && i < graphemes.length; i++) {
+    index += graphemes[i].length;
+  }
+  return index;
+};
+
+const graphemeLength = (str: string): number => segmentGraphemes(str).length;
+
+
 //#region Arrow Handler
 
 export const executeArrow = async (
@@ -18,20 +43,20 @@ export const executeArrow = async (
       if (ctx.cursorX > 0) ctx.cursorX--;
       break;
     case 'Right':
-      if (ctx.cursorX < ctx.currentLine.length) ctx.cursorX++;
+      if (ctx.cursorX < graphemeLength(ctx.currentLine)) ctx.cursorX++;
       break;
     case 'Up':
       if (ctx.cursorY > 0) {
         ctx.cursorY--;
         ctx.currentLine = ctx.lines[ctx.cursorY] || '';
-        ctx.cursorX = Math.min(ctx.cursorX, ctx.currentLine.length);
+        ctx.cursorX = Math.min(ctx.cursorX, graphemeLength(ctx.currentLine));
       }
       break;
     case 'Down':
       if (ctx.cursorY < ctx.lines.length - 1) {
         ctx.cursorY++;
         ctx.currentLine = ctx.lines[ctx.cursorY] || '';
-        ctx.cursorX = Math.min(ctx.cursorX, ctx.currentLine.length);
+        ctx.cursorX = Math.min(ctx.cursorX, graphemeLength(ctx.currentLine));
       }
       break;
   }
@@ -153,7 +178,7 @@ const executeLineNavigation = async (
   toEnd: boolean
 ): Promise<void> => {
   clearSelection(ctx);
-  ctx.cursorX = toEnd ? ctx.currentLine.length : 0;
+  ctx.cursorX = toEnd ? graphemeLength(ctx.currentLine) : 0;
 
   await sleep(50);
   captureFrame(ctx, options, true, true);
@@ -171,8 +196,10 @@ const executeWordDelete = async (
 
   if (deleteCount <= 0) return;
 
-  const before = ctx.currentLine.substring(0, wordStart);
-  const after = ctx.currentLine.substring(ctx.cursorX);
+  const beforeIndex = graphemeToIndex(ctx.currentLine, wordStart);
+  const afterIndex = graphemeToIndex(ctx.currentLine, ctx.cursorX);
+  const before = ctx.currentLine.substring(0, beforeIndex);
+  const after = ctx.currentLine.substring(afterIndex);
   ctx.currentLine = before + after;
   ctx.cursorX = wordStart;
 

@@ -1,0 +1,11 @@
+# Test slow typing to verify progress shows immediately
+Output examples/svgs/emoji-test.svg
+
+Set FontSize 16
+
+Type@50ms "echo '🚀❤️😎'"
+Sleep 200ms
+Enter
+Type "echo '🐢✅🎉'"
+Enter
+Sleep 1s
