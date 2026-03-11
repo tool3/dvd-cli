@@ -68,6 +68,7 @@ export const renderTextLayer = (rows: SpanRow[], config: TextRendererConfig): st
             x: charX,
             y: baseY,
             color,
+            backgroundColor: theme.background,
             lineWidth: glyphLineWidth,
             heavyLineWidth: glyphHeavyLineWidth,
           };

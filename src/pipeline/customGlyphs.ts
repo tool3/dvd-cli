@@ -6,6 +6,7 @@ export interface GlyphContext {
   x: number;
   y: number;
   color: string;
+  backgroundColor: string;
   lineWidth: number;
   heavyLineWidth: number;
 }
@@ -21,6 +22,47 @@ interface BoxSegments {
   left: number;
   right: number;
 }
+
+
+//#region Color Blending
+
+const parseColor = (color: string): [number, number, number] => {
+  // Handle hex colors (#RGB, #RRGGBB)
+  if (color.startsWith('#')) {
+    const hex = color.slice(1);
+    if (hex.length === 3) {
+      return [
+        parseInt(hex[0] + hex[0], 16),
+        parseInt(hex[1] + hex[1], 16),
+        parseInt(hex[2] + hex[2], 16),
+      ];
+    }
+    if (hex.length === 6) {
+      return [
+        parseInt(hex.slice(0, 2), 16),
+        parseInt(hex.slice(2, 4), 16),
+        parseInt(hex.slice(4, 6), 16),
+      ];
+    }
+  }
+  // Handle rgb(r, g, b) format
+  const rgbMatch = color.match(/rgb\((\d+),\s*(\d+),\s*(\d+)\)/);
+  if (rgbMatch) {
+    return [parseInt(rgbMatch[1]), parseInt(rgbMatch[2]), parseInt(rgbMatch[3])];
+  }
+  // Default to black if parsing fails
+  return [0, 0, 0];
+};
+
+const blendColors = (fg: string, bg: string, opacity: number): string => {
+  const [fgR, fgG, fgB] = parseColor(fg);
+  const [bgR, bgG, bgB] = parseColor(bg);
+  const r = Math.round(fgR * opacity + bgR * (1 - opacity));
+  const g = Math.round(fgG * opacity + bgG * (1 - opacity));
+  const b = Math.round(fgB * opacity + bgB * (1 - opacity));
+  const toHex = (n: number) => n.toString(16).padStart(2, '0');
+  return `#${toHex(r)}${toHex(g)}${toHex(b)}`;
+};
 
 
 //#region Detection
@@ -263,7 +305,7 @@ const renderDiagonalLine = (codePoint: number, ctx: GlyphContext): GlyphResult =
 //#region Block Elements (U+2580-U+259F)
 
 const renderBlockElement = (codePoint: number, ctx: GlyphContext): GlyphResult => {
-  const { cellWidth, cellHeight, x, y, color } = ctx;
+  const { cellWidth, cellHeight, x, y, color, backgroundColor } = ctx;
   const crisp = ' shape-rendering="crispEdges"';
   // 1px overlap prevents sub-pixel gaps between adjacent blocks in gradient mode
   const overlap = 1;
@@ -287,9 +329,10 @@ const renderBlockElement = (codePoint: number, ctx: GlyphContext): GlyphResult =
     case 0x258e: svg = `<rect x="${x}" y="${y}" width="${cellWidth / 4}" height="${cellHeight + overlap}" fill="${color}"${crisp}/>`; break;
     case 0x258f: svg = `<rect x="${x}" y="${y}" width="${cellWidth / 8}" height="${cellHeight + overlap}" fill="${color}"${crisp}/>`; break;
     case 0x2590: svg = `<rect x="${x + cellWidth / 2}" y="${y}" width="${cellWidth / 2 + overlap}" height="${cellHeight + overlap}" fill="${color}"${crisp}/>`; break;
-    case 0x2591: svg = `<rect x="${x}" y="${y}" width="${cellWidth}" height="${cellHeight}" fill="${color}" fill-opacity="0.25"${crisp}/>`; break;
-    case 0x2592: svg = `<rect x="${x}" y="${y}" width="${cellWidth}" height="${cellHeight}" fill="${color}" fill-opacity="0.5"${crisp}/>`; break;
-    case 0x2593: svg = `<rect x="${x}" y="${y}" width="${cellWidth}" height="${cellHeight}" fill="${color}" fill-opacity="0.75"${crisp}/>`; break;
+    // Shade characters - pre-blend to avoid subpixel seams on high-DPI displays
+    case 0x2591: svg = `<rect x="${x}" y="${y}" width="${cellWidth + overlap}" height="${cellHeight + overlap}" fill="${blendColors(color, backgroundColor, 0.25)}"${crisp}/>`; break;
+    case 0x2592: svg = `<rect x="${x}" y="${y}" width="${cellWidth + overlap}" height="${cellHeight + overlap}" fill="${blendColors(color, backgroundColor, 0.5)}"${crisp}/>`; break;
+    case 0x2593: svg = `<rect x="${x}" y="${y}" width="${cellWidth + overlap}" height="${cellHeight + overlap}" fill="${blendColors(color, backgroundColor, 0.75)}"${crisp}/>`; break;
     case 0x2594: svg = `<rect x="${x}" y="${y}" width="${cellWidth + overlap}" height="${cellHeight / 8}" fill="${color}"${crisp}/>`; break;
     case 0x2595: svg = `<rect x="${x + cellWidth * 7 / 8}" y="${y}" width="${cellWidth / 8 + overlap}" height="${cellHeight + overlap}" fill="${color}"${crisp}/>`; break;
     case 0x2596: svg = `<rect x="${x}" y="${y + cellHeight / 2}" width="${cellWidth / 2}" height="${cellHeight / 2 + overlap}" fill="${color}"${crisp}/>`; break;
