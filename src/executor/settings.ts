@@ -2,7 +2,7 @@
 
 import { readFileSync, existsSync } from 'node:fs';
 import { resolve } from 'node:path';
-import type { ExecutorContext } from './types';
+import type { ExecutorContext, WatermarkConfig } from './types';
 import { parseEscapes } from './types';
 import { themes as pipelineThemes } from '../pipeline';
 import { themes as shellfieThemes } from 'shellfie';
@@ -43,7 +43,13 @@ export const applySetting = (ctx: ExecutorContext, key: string, value: string): 
       ctx.promptPrefix = parseEscapes(value);
     },
     Watermark: () => {
-      ctx.watermark = parseEscapes(value);
+      setWatermarkContent(ctx, parseEscapes(value));
+    },
+    WaterMark: () => {
+      setWatermarkContent(ctx, parseEscapes(value));
+    },
+    WatermarkStyle: () => {
+      setWatermarkStyleString(ctx, value);
     },
     CursorBlink: () => {
       ctx.cursorBlink = value.toLowerCase() !== 'false';
@@ -189,6 +195,43 @@ export const embedFontFromPath = (ctx: ExecutorContext, fontPath: string): void 
     ctx.embedFont = true;
   } catch (err) {
     console.warn(`Failed to embed font: ${err}`);
+  }
+};
+
+
+//#region Watermark Helpers
+
+const ensureWatermarkConfig = (ctx: ExecutorContext): WatermarkConfig => {
+  if (typeof ctx.watermark === 'string') {
+    ctx.watermark = { content: ctx.watermark };
+  } else if (!ctx.watermark) {
+    ctx.watermark = { content: '' };
+  }
+  return ctx.watermark;
+};
+
+const setWatermarkContent = (ctx: ExecutorContext, content: string): void => {
+  if (typeof ctx.watermark === 'string' || !ctx.watermark) {
+    ctx.watermark = { content };
+  } else {
+    ctx.watermark.content = content;
+  }
+};
+
+const setWatermarkStyleString = (ctx: ExecutorContext, styleStr: string): void => {
+  const config = ensureWatermarkConfig(ctx);
+  if (!config.style) {
+    config.style = {};
+  }
+
+  // Parse CSS-like style string: "opacity: 0.5; padding: 10"
+  const pairs = styleStr.split(';').map(s => s.trim()).filter(Boolean);
+  for (const pair of pairs) {
+    const [key, value] = pair.split(':').map(s => s.trim());
+    if (key && value) {
+      const numValue = parseFloat(value);
+      config.style[key] = isNaN(numValue) ? value : numValue;
+    }
   }
 };
 

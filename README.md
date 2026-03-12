@@ -284,10 +284,19 @@ Set FooterBorder true
 
 ### Watermark
 
-Add a watermark in the corner.
+Add a watermark in the corner with optional styling.
 
 ```
 Set Watermark "Made with DVD"
+Set WatermarkStyle "opacity: 0.5; padding: 10"
+```
+
+For SVG markup watermarks (e.g., clickable links), use backticks for multiline content:
+
+```
+Set Watermark `<a href="https://github.com">
+  <text text-anchor="end">GitHub</text>
+</a>`
 ```
 
 ## CLI Options

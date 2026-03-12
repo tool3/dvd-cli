@@ -65,10 +65,29 @@ export const emitAnimated = (
   const totalDuration = lastFrame.timestamp + pauseAtEnd;
   const parts: string[] = [];
 
+  // Extract watermark content and defs early so we can add defs to root
+  const rawWatermarkContent = typeof options.watermark === 'string' ? options.watermark : options.watermark?.content;
+  const isMarkup = typeof options.watermark === 'object'
+    ? (options.watermark.type === 'markup' || rawWatermarkContent?.trimStart().startsWith('<'))
+    : rawWatermarkContent?.trimStart().startsWith('<');
+
+  let watermarkDefs = '';
+  let watermarkContent = rawWatermarkContent;
+  if (isMarkup && rawWatermarkContent) {
+    const extracted = extractWatermarkDefs(rawWatermarkContent);
+    watermarkDefs = extracted.defs;
+    watermarkContent = extracted.content;
+  }
+
   parts.push(
     `<svg xmlns="http://www.w3.org/2000/svg" width="${width}" height="${height}" viewBox="0 0 ${width} ${height}">`
   );
   parts.push('<defs>');
+
+  // Add watermark defs to root defs section
+  if (watermarkDefs) {
+    parts.push(watermarkDefs);
+  }
 
   if (borderRadius > 0) {
     parts.push(
@@ -142,15 +161,25 @@ export const emitAnimated = (
     parts.push(`<use href="#f${i}" class="frame frame-${i}"/>`);
   });
 
-  if (options.watermark) {
+  // Use watermarkContent extracted earlier (with defs removed for markup)
+  if (watermarkContent) {
     const watermarkHeight = lineHeight;
     const watermarkY = height - padding - watermarkHeight / 2;
     const watermarkX = width - padding;
+    const wmFontSize = Math.round(fontSize * 0.75);
+    const defaultFonts = "'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace";
+    const fontFamily = options.fontFamily ? `'${options.fontFamily}', monospace` : defaultFonts;
 
-    parts.push(
-      `<text class="text dim" x="${watermarkX}" y="${watermarkY}" ` +
-        `text-anchor="end" fill="${theme.foreground}">${escapeXml(options.watermark)}</text>`
-    );
+    if (isMarkup) {
+      parts.push(
+        `<g transform="translate(${watermarkX}, ${watermarkY})" font-family="${fontFamily}" font-size="${wmFontSize}" fill="${theme.foreground}">${watermarkContent}</g>`
+      );
+    } else {
+      parts.push(
+        `<text class="text dim" x="${watermarkX}" y="${watermarkY}" ` +
+          `text-anchor="end" fill="${theme.foreground}">${escapeXml(watermarkContent)}</text>`
+      );
+    }
   }
 
   if (borderRadius > 0) parts.push('</g>');
@@ -275,6 +304,29 @@ const generateFrameContent = (
   }
 
   return parts.join('\n');
+};
+
+
+//#region Watermark Defs Extraction
+
+const extractWatermarkDefs = (content: string): { defs: string; content: string } => {
+  const defsRegex = /<defs[^>]*>([\s\S]*?)<\/defs>/gi;
+  const matches: string[] = [];
+  let cleanContent = content;
+
+  let match;
+  while ((match = defsRegex.exec(content)) !== null) {
+    matches.push(match[1]); // Inner content of <defs>
+  }
+
+  if (matches.length > 0) {
+    cleanContent = content.replace(defsRegex, '');
+  }
+
+  return {
+    defs: matches.join('\n'),
+    content: cleanContent
+  };
 };
 
 

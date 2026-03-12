@@ -35,7 +35,10 @@ const extractDynamicContent = (svg: string, frameId: string): string => {
   content = content.replace(/<rect class="window-bg"[^>]*\/>/g, '');
   content = content.replace(/<g class="chrome">[\s\S]*?<\/g>/g, '');
   content = content.replace(/<g class="footer">[\s\S]*?<\/g>/g, '');
+  // Remove text watermarks
   content = content.replace(/<text class="watermark"[^>]*>[\s\S]*?<\/text>/g, '');
+  // Remove markup watermarks (g element with translate transform and font-family at end)
+  content = content.replace(/<g transform="translate\([^"]+\)"[^>]*font-family[^>]*>[\s\S]*?<\/g>\s*$/g, '');
   content = content
     .replace(/id="([^"]*)"/g, `id="$1-${frameId}"`)
     .replace(/url\(#([^)]*)\)/g, `url(#$1-${frameId})`);
@@ -55,8 +58,32 @@ const extractFooter = (svg: string): string => {
 };
 
 const extractWatermark = (svg: string): string => {
-  const watermarkMatch = svg.match(/<text class="watermark"[^>]*>[\s\S]*?<\/text>/);
-  return watermarkMatch ? watermarkMatch[0] : '';
+  // First try to find text-based watermark
+  const textWatermarkMatch = svg.match(/<text class="watermark"[^>]*>[\s\S]*?<\/text>/);
+  if (textWatermarkMatch) return textWatermarkMatch[0];
+
+  // Look for a markup watermark (g element with transform at end of content)
+  const markupWatermarkMatch = svg.match(/<g transform="translate\([^"]+\)"[^>]*font-family[^>]*>[\s\S]*?<\/g>\s*(?=<\/g>\s*<\/svg>|<\/svg>)/);
+  if (!markupWatermarkMatch) return '';
+
+  // Strip nested defs since they're hoisted to root
+  return markupWatermarkMatch[0].replace(/<defs[^>]*>[\s\S]*?<\/defs>/gi, '');
+};
+
+const extractWatermarkDefs = (svg: string): string => {
+  // Look for defs inside watermark content (markup watermarks may have clipPaths)
+  const watermarkMatch = svg.match(/<g transform="translate\([^"]+\)"[^>]*font-family[^>]*>([\s\S]*?)<\/g>\s*(?=<\/g>\s*<\/svg>|<\/svg>)/);
+  if (!watermarkMatch) return '';
+
+  const watermarkContent = watermarkMatch[1];
+  const defsMatch = watermarkContent.match(/<defs[^>]*>([\s\S]*?)<\/defs>/gi);
+  if (!defsMatch) return '';
+
+  // Return inner content of all defs
+  return defsMatch.map(d => {
+    const inner = d.match(/<defs[^>]*>([\s\S]*?)<\/defs>/i);
+    return inner ? inner[1] : '';
+  }).join('\n');
 };
 
 const getSVGDimensions = (svg: string): { width: number; height: number } => {
@@ -130,6 +157,7 @@ export const createAnimatedSVG = async (
   const chrome = extractChrome(animationFrames[0].svg);
   const footer = extractFooter(animationFrames[0].svg);
   const watermark = extractWatermark(animationFrames[0].svg);
+  const watermarkDefs = extractWatermarkDefs(animationFrames[0].svg);
 
   const keyTimes: number[] = animationFrames.map(f => f.timestamp / animationDurationMs);
   const frameAnimations: string[] = [];
@@ -189,9 +217,14 @@ export const createAnimatedSVG = async (
   </g>`);
   }
 
-  const clipPathDef = borderRadius > 0
-    ? `<defs><clipPath id="rounded-corners"><rect x="0" y="0" width="${width}" height="${height}" rx="${borderRadius}" ry="${borderRadius}"/></clipPath></defs>`
-    : '';
+  const defsContent: string[] = [];
+  if (borderRadius > 0) {
+    defsContent.push(`<clipPath id="rounded-corners"><rect x="0" y="0" width="${width}" height="${height}" rx="${borderRadius}" ry="${borderRadius}"/></clipPath>`);
+  }
+  if (watermarkDefs) {
+    defsContent.push(watermarkDefs);
+  }
+  const clipPathDef = defsContent.length > 0 ? `<defs>${defsContent.join('\n')}</defs>` : '';
   const clipStart = borderRadius > 0 ? `<g clip-path="url(#rounded-corners)">` : '';
   const clipEnd = borderRadius > 0 ? '</g>' : '';
   const bgRx = borderRadius > 0 ? ` rx="${borderRadius}" ry="${borderRadius}"` : '';

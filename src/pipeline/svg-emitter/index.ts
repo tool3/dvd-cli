@@ -42,7 +42,11 @@ export const emit = (
   const borderColor = options.borderColor ?? theme.foreground;
   const headerHeight = options.headerHeight ?? (template === 'minimal' ? 0 : 40);
   const footerHeight = options.footerHeight ?? 0;
-  const watermarkHeight = watermark ? lineHeight : 0;
+  const watermarkContent = typeof watermark === 'string' ? watermark : watermark?.content;
+  const isWatermarkMarkup = typeof watermark === 'object'
+    ? (watermark.type === 'markup' || watermarkContent?.trimStart().startsWith('<'))
+    : watermarkContent?.trimStart().startsWith('<');
+  const watermarkHeight = watermarkContent ? lineHeight : 0;
   const contentStartY = headerHeight + padding;
 
   const parts: string[] = [];
@@ -171,9 +175,12 @@ export const emit = (
     );
   }
 
-  if (watermark) {
+  if (watermarkContent) {
     const watermarkY = height - padding - watermarkHeight / 2;
     const watermarkX = width - padding;
+    const wmFontSize = Math.round(fontSize * 0.75);
+    const defaultFonts = "'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace";
+    const fontFamily = options.fontFamily ? `'${options.fontFamily}', monospace` : defaultFonts;
 
     if (options.footerBackground) {
       parts.push(
@@ -182,10 +189,16 @@ export const emit = (
       );
     }
 
-    parts.push(
-      `<text class="text dim" x="${watermarkX}" y="${watermarkY}" ` +
-        `text-anchor="end" fill="${theme.foreground}">${escapeXml(watermark)}</text>`
-    );
+    if (isWatermarkMarkup) {
+      parts.push(
+        `<g transform="translate(${watermarkX}, ${watermarkY})" font-family="${fontFamily}" font-size="${wmFontSize}" fill="${theme.foreground}">${watermarkContent}</g>`
+      );
+    } else {
+      parts.push(
+        `<text class="text dim" x="${watermarkX}" y="${watermarkY}" ` +
+          `text-anchor="end" fill="${theme.foreground}">${escapeXml(watermarkContent)}</text>`
+      );
+    }
   }
 
   if (borderRadius > 0) parts.push('</g>');

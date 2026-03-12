@@ -156,9 +156,9 @@ export const parseCommand = (line: string, lineNumber: number): CDCommand => {
     if (command === 'Set') {
       if (tokens.length < 3) throw new Error('Set command requires a setting name and value');
       const rawValue = tokens.slice(2).join(' ');
-      const value = rawValue.startsWith('"') && rawValue.endsWith('"')
-        ? parseQuotedString(rawValue)
-        : rawValue;
+      const isQuoted = (rawValue.startsWith('"') && rawValue.endsWith('"')) ||
+                       (rawValue.startsWith('`') && rawValue.endsWith('`'));
+      const value = isQuoted ? parseQuotedString(rawValue) : rawValue;
       return { type: 'Set', setting: tokens[1], value };
     }
 

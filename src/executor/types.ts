@@ -2,6 +2,9 @@
 
 import type { GridState, Theme, SpanRow } from '../types';
 import type { FrameData } from '../pipeline/svg-emitter';
+import type { WatermarkConfig, WatermarkStyle } from 'shellfie';
+
+export type { WatermarkConfig, WatermarkStyle };
 
 
 //#region Terminal State Types
@@ -63,7 +66,7 @@ export interface ExecutorContext {
   template: 'macos' | 'windows' | 'minimal';
   theme: Theme;
   promptPrefix: string;
-  watermark?: string;
+  watermark?: string | WatermarkConfig;
   cursorBlink: boolean;
 
   selectionStart?: number;

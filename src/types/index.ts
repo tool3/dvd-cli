@@ -1,3 +1,8 @@
+//#region Imports
+
+import type { WatermarkConfig } from 'shellfie';
+
+
 //#region Color Types
 
 export type Color =
@@ -185,7 +190,7 @@ export interface EmitterOptions {
   charWidth?: number;
   padding?: number;
   title?: string;
-  watermark?: string;
+  watermark?: string | WatermarkConfig;
   embedFont?: boolean;
   fontData?: string;
   fontFamily?: string;
