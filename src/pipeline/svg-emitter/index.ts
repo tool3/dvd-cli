@@ -159,6 +159,18 @@ export const emit = (
 
   if (cursor && cursorVisible) {
     const hasCustomLineHeight = options.hasCustomLineHeight ?? false;
+    // Find character under cursor for block cursor inversion
+    let charUnderCursor: string | undefined;
+    const cursorRow = rows[cursor.row];
+    if (cursorRow) {
+      for (const span of cursorRow) {
+        const spanEnd = span.col + span.text.length;
+        if (cursor.col >= span.col && cursor.col < spanEnd) {
+          charUnderCursor = span.text[cursor.col - span.col];
+          break;
+        }
+      }
+    }
     parts.push(
       renderCursor({
         cursor,
@@ -171,6 +183,9 @@ export const emit = (
         cursorColor: options.cursorColor ?? theme.cursor ?? theme.foreground,
         cursorStyle: options.cursorStyle ?? 'block',
         activeCursor: options.activeCursor ?? false,
+        charUnderCursor,
+        backgroundColor: theme.background,
+        fontFamily: options.fontFamily,
       })
     );
   }
@@ -190,8 +205,12 @@ export const emit = (
     }
 
     if (isWatermarkMarkup) {
+      // Scale markup watermarks relative to a reference width (320px is shellfie's typical width)
+      const referenceWidth = 320;
+      const scale = Math.min(1, width / referenceWidth);
+      const scaleTransform = scale < 1 ? ` scale(${scale.toFixed(3)})` : '';
       parts.push(
-        `<g transform="translate(${watermarkX}, ${watermarkY})" font-family="${fontFamily}" font-size="${wmFontSize}" fill="${theme.foreground}">${watermarkContent}</g>`
+        `<g transform="translate(${watermarkX}, ${watermarkY})${scaleTransform}" font-family="${fontFamily}" font-size="${wmFontSize}" fill="${theme.foreground}">${watermarkContent}</g>`
       );
     } else {
       parts.push(

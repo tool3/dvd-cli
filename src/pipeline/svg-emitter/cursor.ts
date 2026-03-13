@@ -1,7 +1,7 @@
 //#region Imports
 
 import type { Theme, CursorPosition, EmitterOptions } from '../../types';
-import { r, fmt } from './utils';
+import { r, fmt, escapeXml } from './utils';
 
 
 //#region Cursor Config
@@ -17,6 +17,9 @@ export interface CursorConfig {
   cursorColor: string;
   cursorStyle: 'block' | 'bar' | 'underline';
   activeCursor: boolean;
+  charUnderCursor?: string;
+  backgroundColor?: string;
+  fontFamily?: string;
 }
 
 
@@ -34,6 +37,9 @@ export const renderCursor = (config: CursorConfig): string => {
     cursorColor,
     cursorStyle,
     activeCursor,
+    charUnderCursor,
+    backgroundColor,
+    fontFamily,
   } = config;
 
   const cursorX = r(padding + cursor.col * charWidth);
@@ -51,6 +57,15 @@ export const renderCursor = (config: CursorConfig): string => {
       `<rect class="${cursorClass}" x="${fmt(cursorX)}" y="${fmt(cursorY)}" ` +
         `width="${fmt(charWidth)}" height="${fmt(cursorHeight)}" fill="${cursorColor}"/>`
     );
+    // Render inverted character on top of block cursor (same position as text layer)
+    if (charUnderCursor && charUnderCursor.trim() && backgroundColor) {
+      const defaultFonts = "'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace";
+      const font = fontFamily ? `'${fontFamily}', monospace` : defaultFonts;
+      parts.push(
+        `<text x="${fmt(cursorX)}" y="${fmt(rowY)}" fill="${backgroundColor}" ` +
+          `font-family="${font}" font-size="${fontSize}" dominant-baseline="text-before-edge">${escapeXml(charUnderCursor)}</text>`
+      );
+    }
   } else if (cursorStyle === 'bar') {
     parts.push(
       `<rect class="${cursorClass}" x="${fmt(cursorX)}" y="${fmt(cursorY)}" ` +
