@@ -76,8 +76,8 @@ export const optimizeSvg = (svg: string): string => {
     (_, pre, num, post) => pre + roundNumber(num) + post
   );
 
-  // Shorten hex colors
-  result = result.replace(/#([0-9a-fA-F])\1([0-9a-fA-F])\2([0-9a-fA-F])\3/g, '#$1$2$3');
+  // Shorten hex colors in color attributes only (not in text content)
+  result = result.replace(/((?:fill|stroke|color|stop-color)=")#([0-9a-fA-F])\2([0-9a-fA-F])\3([0-9a-fA-F])\4(")/g, '$1#$2$3$4$5');
 
   // Remove empty class attributes
   result = result.replace(/\s+class=""/g, '');

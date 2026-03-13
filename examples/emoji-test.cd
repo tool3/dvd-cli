@@ -2,10 +2,12 @@
 Output examples/svgs/emoji-test.svg
 
 Set FontSize 16
+Set TypingSpeed 80
 
-Type@50ms "echo '🚀❤️😎'"
-Sleep 200ms
+Type "echo '🚀❤️😎🙈✌🏼'"
+Sleep 500ms
 Enter
-Type "echo '🐢✅🎉'"
+Type "echo '🐢✅🎉👌🏾💜'"
+Sleep 500ms
 Enter
 Sleep 1s

@@ -479,16 +479,24 @@ export const parseInput = (input: string): VTerminalCommand[] => {
       i++;
     }
 
-    // Consume any following variation selectors or zero-width joiners
-    // to keep grapheme clusters together (e.g., ❤️ = ❤ + U+FE0F)
+    // Consume any following variation selectors, zero-width joiners, or skin tone modifiers
+    // to keep grapheme clusters together (e.g., ❤️ = ❤ + U+FE0F, ✌🏼 = ✌ + 🏼)
     while (i < input.length) {
       const nextCode = input.charCodeAt(i);
-      // Variation Selectors (U+FE00-U+FE0F) and Zero Width Joiner (U+200D)
-      if ((nextCode >= 0xfe00 && nextCode <= 0xfe0f) || nextCode === 0x200d) {
+
+      // Variation Selectors (U+FE00-U+FE0F)
+      if (nextCode >= 0xfe00 && nextCode <= 0xfe0f) {
+        char += input[i];
+        i++;
+        continue;
+      }
+
+      // Zero Width Joiner (U+200D)
+      if (nextCode === 0x200d) {
         char += input[i];
         i++;
         // After ZWJ, consume the next character (including surrogate pairs)
-        if (nextCode === 0x200d && i < input.length) {
+        if (i < input.length) {
           const zwjNextCode = input.charCodeAt(i);
           if (zwjNextCode >= 0xd800 && zwjNextCode <= 0xdbff && i + 1 < input.length) {
             const lowCode = input.charCodeAt(i + 1);
@@ -504,9 +512,21 @@ export const parseInput = (input: string): VTerminalCommand[] => {
             i++;
           }
         }
-      } else {
-        break;
+        continue;
       }
+
+      // Skin tone modifiers (U+1F3FB-U+1F3FF) - these are surrogate pairs starting with 0xD83C
+      if (nextCode === 0xd83c && i + 1 < input.length) {
+        const lowCode = input.charCodeAt(i + 1);
+        // Check if it's a skin tone modifier (0xDFFB-0xDFFF)
+        if (lowCode >= 0xdffb && lowCode <= 0xdfff) {
+          char += input.slice(i, i + 2);
+          i += 2;
+          continue;
+        }
+      }
+
+      break;
     }
 
     const width = getCharWidth(char);

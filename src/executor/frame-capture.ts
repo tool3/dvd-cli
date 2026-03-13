@@ -7,6 +7,28 @@ import { coalesce } from '../pipeline/coalescer';
 import { emit } from '../pipeline/svg-emitter';
 
 
+//#region Grapheme Helpers
+
+/**
+ * Segment a string into grapheme clusters.
+ */
+const segmentGraphemes = (str: string): string[] => {
+  if (typeof Intl !== 'undefined' && Intl.Segmenter) {
+    const segmenter = new Intl.Segmenter('en', { granularity: 'grapheme' });
+    return [...segmenter.segment(str)].map((s) => s.segment);
+  }
+  return [...str];
+};
+
+/**
+ * Get substring by grapheme position (not UTF-16 code units).
+ */
+const substringByGrapheme = (str: string, start: number, end?: number): string => {
+  const graphemes = segmentGraphemes(str);
+  return graphemes.slice(start, end).join('');
+};
+
+
 //#region Visible Line Count
 
 export const getVisibleLineCount = (ctx: ExecutorContext): number => {
@@ -116,7 +138,7 @@ export const captureFrame = (
     finalCursorX = grid.cursor.col;
   } else {
     const cursorBuffer = [...ctx.lines];
-    const textUpToCursor = ctx.currentLine.substring(0, ctx.cursorX);
+    const textUpToCursor = substringByGrapheme(ctx.currentLine, 0, ctx.cursorX);
     const displayLineUpToCursor = ctx.promptPrefix + textUpToCursor;
     cursorBuffer[ctx.cursorY] = displayLineUpToCursor;
 
