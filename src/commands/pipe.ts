@@ -257,7 +257,7 @@ export const pipeCommand = async (args: PipeArgs): Promise<void> => {
     const padding = args.padding || 16;
     const borderRadius = args.borderRadius || 8;
     const theme = args.theme ? (themes as unknown as Record<string, typeof themes.dark>)[args.theme] || themes.dark : themes.dark;
-    const title = args.title || 'Terminal Animation';
+    const title = args.title;
     const template = (args.template || 'macos') as 'macos' | 'windows' | 'minimal';
     const cursorStyle = (args.cursorStyle || 'block') as 'block' | 'bar' | 'underline';
 
@@ -292,11 +292,23 @@ export const pipeCommand = async (args: PipeArgs): Promise<void> => {
     let height = args.height;
 
     if (!width || !height) {
-      const sampleFrame = frameContents[0];
-      const plainText = sampleFrame.replace(/\x1b\[[0-9;]*m/g, '');
-      const lines = plainText.split('\n').filter(l => l.length > 0);
-      const maxLineLength = Math.max(...lines.map(l => l.length), 40);
-      const lineCount = Math.max(lines.length, 10);
+      // Check ALL frames for max dimensions, not just the first one
+      let maxLineLength = 40;
+      let maxLineCount = 10;
+
+      for (const frame of frameContents) {
+        const plainText = frame.replace(/\x1b\[[0-9;]*m/g, '');
+        const lines = plainText.split('\n').filter(l => l.length > 0);
+
+        for (const line of lines) {
+          if (line.length > maxLineLength) {
+            maxLineLength = line.length;
+          }
+        }
+        if (lines.length > maxLineCount) {
+          maxLineCount = lines.length;
+        }
+      }
 
       const charWidth = fontSize * 0.6;
       const lineHeightPx = fontSize * lineHeight;
@@ -306,11 +318,11 @@ export const pipeCommand = async (args: PipeArgs): Promise<void> => {
         width = Math.ceil(maxLineLength * charWidth + padding * 2);
       }
       if (!height) {
-        height = Math.ceil(lineCount * lineHeightPx + headerHeight + padding * 2);
+        height = Math.ceil(maxLineCount * lineHeightPx + headerHeight + padding * 2);
       }
 
       if (args.verbose) {
-        console.log(`Auto-detected dimensions: ${width}x${height} (${maxLineLength} cols x ${lineCount} rows)`);
+        console.log(`Auto-detected dimensions: ${width}x${height} (${maxLineLength} cols x ${maxLineCount} rows)`);
       }
     }
 

@@ -1,6 +1,7 @@
 //#region Constants
 
-const SPINNER_FRAMES = ['⠋', '⠙', '⠹', '⠸', '⠼', '⠴', '⠦', '⠧', '⠇', '⠏'];
+// Growing dots spinner
+const SPINNER_FRAMES = ['∙∙∙', '●∙∙', '●●∙', '●●●', '∙●●', '∙∙●'];
 const FRAME_INTERVAL = 80;
 
 
