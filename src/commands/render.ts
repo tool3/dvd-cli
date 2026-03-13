@@ -105,7 +105,7 @@ const getCommandColor = (description: string): string => {
 
 export const renderCommand = async (args: RenderArgs): Promise<void> => {
   const fileName = args.file.split('/').pop() || args.file;
-  const spinner = createSpinner(`Executing ${fileName}`);
+  const spinner = createSpinner(`\x1b[37mExecuting\x1b[0m ${fileName}`);
 
   if (!args.verbose) {
     spinner.start();
@@ -140,9 +140,9 @@ export const renderCommand = async (args: RenderArgs): Promise<void> => {
         const colorCode = description ? getCommandColor(description) : '';
         const descText = description ? ` \x1b[1m${colorCode}${description}\x1b[0m` : '';
         if (args.verbose) {
-          console.log(`\x1b[2mExecuting command ${current}/${total}\x1b[0m${descText}`);
+          console.log(`\x1b[37mExecuting\x1b[0m \x1b[2mcommand ${current}/${total}\x1b[0m${descText}`);
         } else {
-          spinner.update(`\x1b[2mExecuting ${fileName} (${current}/${total})\x1b[0m${descText}`);
+          spinner.update(`\x1b[37mExecuting\x1b[0m \x1b[2m${fileName} (${current}/${total})\x1b[0m${descText}`);
         }
       },
     });
@@ -180,15 +180,30 @@ export const renderCommand = async (args: RenderArgs): Promise<void> => {
 
     const sizeKB = (Buffer.byteLength(svg, 'utf-8') / 1024).toFixed(2);
 
+    // ANSI color codes
+    const green = '\x1b[32m';
+    const white = '\x1b[37m';
+    const lightBlue = '\x1b[94m';
+    const lightPink = '\x1b[95m';
+    const lightOrange = '\x1b[38;5;215m';
+    const limeGreen = '\x1b[92m';
+    const dim = '\x1b[2m';
+    const reset = '\x1b[0m';
+
+    const durationStr = (metadata.duration / 1000).toFixed(2) + 's';
+
     if (args.verbose) {
-      console.log(`\nCreated ${outputPath}`);
-      console.log(`Animation: ${metadata.frameCount} frames @ ${metadata.fps} fps`);
-      console.log(`Duration: ${(metadata.duration / 1000).toFixed(2)}s`);
-      console.log(`File size: ${sizeKB}KB`);
+      console.log(`\n${green}✓${reset} ${white}Created${reset} ${lightBlue}${outputPath}${reset}`);
+      console.log(`  ${dim}├─${reset} ${lightPink}${metadata.frameCount}${reset}${dim} frames${reset}`);
+      console.log(`  ${dim}├─${reset} ${lightOrange}${durationStr}${reset}${dim} duration${reset}`);
+      console.log(`  ${dim}└─${reset} ${limeGreen}${sizeKB}KB${reset}${dim} optimized${reset}`);
     } else {
-      spinner.success(
-        `Created ${outputPath} (${metadata.frameCount} frames, ${(metadata.duration / 1000).toFixed(2)}s, ${sizeKB}KB)`
-      );
+      spinner.successMultiline([
+        `${green}✓${reset} ${white}Created${reset} ${lightBlue}${outputPath}${reset}`,
+        `  ${dim}├─${reset} ${lightPink}${metadata.frameCount}${reset}${dim} frames${reset}`,
+        `  ${dim}├─${reset} ${lightOrange}${durationStr}${reset}${dim} duration${reset}`,
+        `  ${dim}└─${reset} ${limeGreen}${sizeKB}KB${reset}${dim} optimized${reset}`,
+      ]);
     }
 
     await executor.cleanup();

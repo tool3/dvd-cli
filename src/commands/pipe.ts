@@ -117,7 +117,7 @@ const readStdin = async (): Promise<StdinResult> => {
 
 //#region Animation Detection
 
-const detectAnimationType = (content: string): 'terminal-reset' | 'cursor-up' | 'cursor-restore' | 'none' => {
+const detectAnimationType = (content: string): 'terminal-reset' | 'cursor-up' | 'cursor-restore' | 'clear-line' | 'none' => {
   if (content.includes('\x1bc')) {
     return 'terminal-reset';
   }
@@ -127,10 +127,14 @@ const detectAnimationType = (content: string): 'terminal-reset' | 'cursor-up' | 
   if (content.includes('\x1b8') || content.includes('\x1b[?25l')) {
     return 'cursor-restore';
   }
+  // Clear line + cursor to column 0 (used by spinners)
+  if (content.includes('\x1b[2K\x1b[0G') || content.includes('\x1b[2K')) {
+    return 'clear-line';
+  }
   return 'none';
 };
 
-const splitIntoFrames = (content: string, animationType: 'terminal-reset' | 'cursor-up' | 'cursor-restore' | 'none'): string[] => {
+const splitIntoFrames = (content: string, animationType: 'terminal-reset' | 'cursor-up' | 'cursor-restore' | 'clear-line' | 'none'): string[] => {
   if (animationType === 'terminal-reset') {
     return content.split('\x1bc').filter(frame => frame.trim());
   }
@@ -149,6 +153,11 @@ const splitIntoFrames = (content: string, animationType: 'terminal-reset' | 'cur
 
   if (animationType === 'cursor-restore') {
     return content.split('\x1b8').filter(frame => frame.trim());
+  }
+
+  if (animationType === 'clear-line') {
+    // Split on clear-line sequences, filter empty frames
+    return content.split(/\x1b\[2K\x1b\[0G|\x1b\[2K/).filter(frame => frame.trim());
   }
 
   return [content];
@@ -373,15 +382,30 @@ export const pipeCommand = async (args: PipeArgs): Promise<void> => {
     const metadata = getAnimationMetadata(frames);
     const sizeKB = (Buffer.byteLength(svg, 'utf-8') / 1024).toFixed(2);
 
+    // ANSI color codes
+    const green = '\x1b[32m';
+    const white = '\x1b[37m';
+    const lightBlue = '\x1b[94m';
+    const lightPink = '\x1b[95m';
+    const lightOrange = '\x1b[38;5;215m';
+    const limeGreen = '\x1b[92m';
+    const dim = '\x1b[2m';
+    const reset = '\x1b[0m';
+
+    const durationStr = (metadata.duration / 1000).toFixed(2) + 's';
+
     if (args.verbose) {
-      console.log(`\nCreated ${outputPath}`);
-      console.log(`Animation: ${metadata.frameCount} frames @ ${metadata.fps} fps`);
-      console.log(`Duration: ${(metadata.duration / 1000).toFixed(2)}s`);
-      console.log(`File size: ${sizeKB}KB`);
+      console.log(`\n${green}✓${reset} ${white}Created${reset} ${lightBlue}${outputPath}${reset}`);
+      console.log(`  ${dim}├─${reset} ${lightPink}${metadata.frameCount}${reset}${dim} frames${reset}`);
+      console.log(`  ${dim}├─${reset} ${lightOrange}${durationStr}${reset}${dim} duration${reset}`);
+      console.log(`  ${dim}└─${reset} ${limeGreen}${sizeKB}KB${reset}${dim} optimized${reset}`);
     } else {
-      spinner.success(
-        `Created ${outputPath} (${metadata.frameCount} frames, ${(metadata.duration / 1000).toFixed(2)}s, ${sizeKB}KB)`
-      );
+      spinner.successMultiline([
+        `${green}✓${reset} ${white}Created${reset} ${lightBlue}${outputPath}${reset}`,
+        `  ${dim}├─${reset} ${lightPink}${metadata.frameCount}${reset}${dim} frames${reset}`,
+        `  ${dim}├─${reset} ${lightOrange}${durationStr}${reset}${dim} duration${reset}`,
+        `  ${dim}└─${reset} ${limeGreen}${sizeKB}KB${reset}${dim} optimized${reset}`,
+      ]);
     }
 
     process.exit(0);

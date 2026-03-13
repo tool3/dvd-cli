@@ -11,6 +11,7 @@ export interface Spinner {
   stop(): void;
   update(text: string): void;
   success(message: string): void;
+  successMultiline(lines: string[]): void;
   fail(message: string): void;
 }
 
@@ -26,6 +27,9 @@ export const createSpinner = (text: string): Spinner => {
     if (process.stdout.isTTY) {
       process.stdout.clearLine(0);
       process.stdout.cursorTo(0);
+    } else {
+      // Output ANSI codes for non-TTY so piped output can be captured
+      process.stdout.write('\x1b[2K\x1b[0G');
     }
   };
 
@@ -62,10 +66,6 @@ export const createSpinner = (text: string): Spinner => {
 
   return {
     start(): void {
-      if (!process.stdout.isTTY) {
-        console.log(`... ${currentText}`);
-        return;
-      }
       render();
       intervalId = setInterval(render, FRAME_INTERVAL);
     },
@@ -80,14 +80,17 @@ export const createSpinner = (text: string): Spinner => {
 
     update(text: string): void {
       currentText = text;
-      if (process.stdout.isTTY) {
-        render();
-      }
+      render();
     },
 
     success(message: string): void {
       this.stop();
-      console.log(`\x1b[32m✓ ${message}\x1b[0m`);
+      console.log(`\x1b[32m✓\x1b[0m ${message}`);
+    },
+
+    successMultiline(lines: string[]): void {
+      this.stop();
+      lines.forEach((line) => console.log(line));
     },
 
     fail(message: string): void {
