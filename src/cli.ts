@@ -44,29 +44,24 @@ const createParser = () =>
       alias: 'L',
       type: 'string',
       choices: ['loop', 'reverse', 'rewind', 'fade'],
-      describe: 'Animation loop style',
-      default: 'loop',
+      describe: 'Animation loop style (default: loop, or from .cd file)',
     })
     .option('rewind-speed', {
       type: 'number',
-      describe: 'Speed multiplier for rewind loop style',
-      default: 5,
+      describe: 'Speed multiplier for rewind loop style (default: 5)',
     })
     .option('pause-at-end', {
       alias: 'p',
       type: 'number',
-      describe: 'Pause duration at end (ms)',
-      default: 1000,
+      describe: 'Pause duration at end (ms) (default: 1000)',
     })
     .option('loop-pause', {
       type: 'number',
-      describe: 'Pause duration before loop restarts (ms)',
-      default: 0,
+      describe: 'Pause duration before loop restarts (ms) (default: 0)',
     })
     .option('fade-duration', {
       type: 'number',
-      describe: 'Fade duration for fade loop style (ms)',
-      default: 1500,
+      describe: 'Fade duration for fade loop style (ms) (default: 1500)',
     })
     .option('fps', {
       alias: 'f',
