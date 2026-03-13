@@ -1,15 +1,15 @@
-# DVD
-
 <p align="center">
-  <img alt="Demo" src="examples/svgs/dvd.svg" width="500">
-</p>
-<p align="center">to</p>
-<p align="center">
-  <img alt="Demo" src="examples/svgs/figlet.svg" width="500">
+  <img src="assets/og-image.svg" alt="DVD - Terminal Recordings" width="800">
 </p>
 
 <p align="center">
-  <strong>Create animated SVG terminal recordings from simple scripts</strong>
+  <strong>Create animated SVG terminal recordings from simple scripts and stdin</strong>
+</p>
+
+<p align="center">
+  <a href="https://www.npmjs.com/package/dvd-cli"><img src="https://img.shields.io/npm/v/dvd-cli.svg" alt="npm version"></a>
+  <a href="https://www.npmjs.com/package/dvd-cli"><img src="https://img.shields.io/npm/dm/dvd-cli.svg" alt="npm downloads"></a>
+  <a href="https://github.com/tool3/dvd/blob/master/LICENSE"><img src="https://img.shields.io/npm/l/dvd-cli.svg" alt="license"></a>
 </p>
 
 <p align="center">
@@ -17,17 +17,22 @@
   <a href="#quick-start">Quick Start</a> •
   <a href="#commands">Commands</a> •
   <a href="#settings">Settings</a> •
+  <a href="#loop-styles">Loop Styles</a> •
   <a href="#examples">Examples</a>
 </p>
 
 ---
 
-DVD generates animated SVG terminal recordings from declarative scripts. Write what you want to happen, run `dvd`, and get a beautiful, scalable animation.
+<p align="center">
+  <img src="examples/svgs/demo.svg" width="600">
+</p>
+
+DVD generates animated SVG terminal recordings from declarative `.cd` scripts. Write what you want to happen, run `dvd`, and get a beautiful, infinitely scalable animation.
 
 ```
 Output demo.svg
 
-Set Theme dracula
+Set Theme tokyoNight
 Set Template macos
 Set Title "My Demo"
 
@@ -44,21 +49,69 @@ Sleep 2s
 npm install -g dvd-cli
 ```
 
-## Quick Start
+Or use directly with npx:
 
 ```bash
-# Create a new script
-dvd new demo
+npx dvd-cli demo.cd
+```
 
-# Edit it to your liking, then render
+## Quick Start
+
+### 1. Create a script
+
+```bash
+dvd new demo
+```
+
+This creates `demo.cd` with a starter template.
+
+### 2. Edit your script
+
+```
+Output demo.svg
+
+Set Template macos
+Set Theme dracula
+Set Title "My Terminal"
+
+Type "echo 'Hello World!'"
+Sleep 500ms
+Enter
+Sleep 1s
+```
+
+### 3. Render it
+
+```bash
 dvd demo.cd
 ```
 
-Your animated SVG is ready to embed anywhere:
+### 4. Embed anywhere
 
 ```markdown
 ![Demo](demo.svg)
 ```
+
+Your animated SVG works in GitHub READMEs, documentation sites, blogs - anywhere that supports images.
+
+---
+
+## Pipe Mode
+
+Capture any command output directly:
+
+```bash
+# Capture a command's output
+ls -la --color | dvd -o listing.svg
+
+# Pipe animated output
+lolcat -a -d 2 <<< "Hello World" | dvd -o rainbow.svg
+
+# Capture neofetch
+neofetch | dvd -o system-info.svg --title "System Info"
+```
+
+---
 
 ## Commands
 
@@ -72,8 +125,6 @@ Type@100ms "Slow typing..."
 Type@10ms "Speed typing!"
 ```
 
-<img src="examples/svgs/slow-typing-test.svg" width="600">
-
 ### Enter
 
 Execute the current command.
@@ -83,7 +134,7 @@ Type "neofetch"
 Enter
 ```
 
-<img src="examples/svgs/neofetch-autoheight.svg" width="600">
+<img src="examples/svgs/neofetch.svg" width="600">
 
 ### Sleep
 
@@ -119,12 +170,11 @@ Right 10      # Move cursor right 10 times
 
 ### Keyboard Shortcuts
 
-Full keyboard navigation with selection support. All shortcuts support a count parameter.
+Full keyboard navigation with selection support.
 
 ```
 Shift+Left           # Select character left
 Shift+Right          # Select character right
-Shift+Left 5         # Select 5 characters left
 Alt+Left             # Move word left
 Alt+Right            # Move word right
 Alt+Shift+Left       # Select word left
@@ -133,8 +183,6 @@ Cmd+Left             # Move to line start
 Cmd+Right            # Move to line end
 Cmd+Backspace        # Delete word
 ```
-
-<img src="examples/svgs/word-selection-test.svg" width="600">
 
 <img src="examples/svgs/keyboard-navigation-demo.svg" width="600">
 
@@ -148,19 +196,20 @@ Enter
 Screenshot test-results.svg
 ```
 
+---
+
 ## Settings
+
+All settings use the `Set` command: `Set <Setting> <value>`
 
 ### Output
 
-Set the output file path.
-
 ```
 Output demo.svg
+Output path/to/output.svg
 ```
 
 ### Theme
-
-Set the color theme.
 
 ```
 Set Theme dracula
@@ -170,16 +219,14 @@ Set Theme dracula
 
 <img src="examples/svgs/nord-theme.svg" width="600">
 
-<img src="examples/svgs/theme-test.svg" width="600">
-
 ### Template
 
-Set the window chrome style.
+Window chrome style.
 
 ```
 Set Template macos     # macOS traffic lights
 Set Template windows   # Windows-style buttons
-Set Template minimal   # No decorations (default)
+Set Template minimal   # No window decorations
 ```
 
 <table>
@@ -193,9 +240,15 @@ Set Template minimal   # No decorations (default)
 </tr>
 </table>
 
+### Title
+
+```
+Set Title "My Terminal"
+```
+
 ### Dimensions
 
-Set terminal size. Omit for auto-sizing based on content.
+Omit for auto-sizing based on content.
 
 ```
 Set Width 800
@@ -204,29 +257,19 @@ Set Height 600
 
 ### Font
 
-Set font family or embed a custom font for guaranteed rendering.
-
 ```
-# System font (viewer must have it)
+# System font (viewer must have it installed)
 Set FontFamily "Fira Code"
+Set FontSize 14
+Set LineHeight 1.4
 
-# Embedded font (always works)
+# Embedded font (guaranteed to render correctly)
 Set EmbedFont path/to/font.woff2
 ```
 
 <img src="examples/svgs/embed-font-test.svg" width="600">
 
-### Title
-
-Set the window title (shown with macos/windows templates).
-
-```
-Set Title "My Terminal"
-```
-
 ### Cursor
-
-Customize cursor appearance.
 
 ```
 Set CursorStyle block      # block, bar, underline
@@ -236,11 +279,9 @@ Set CursorBlink true
 
 <img src="examples/svgs/cursor-style-test.svg" width="600">
 
-<img src="examples/svgs/underline-cursor-test.svg" width="600">
-
 ### Typing Speed
 
-Control default typing speed in milliseconds per character.
+Default milliseconds per character.
 
 ```
 Set TypingSpeed 50
@@ -248,7 +289,7 @@ Set TypingSpeed 50
 
 ### Prompt
 
-Customize the shell prompt. Supports ANSI escape codes.
+Supports ANSI escape codes for colors.
 
 ```
 Set PromptPrefix "$ "
@@ -260,8 +301,6 @@ Set PromptPrefix "\x1b[95m❯\x1b[0m "    # Colored prompt
 
 ### Border
 
-Style the window border.
-
 ```
 Set BorderRadius 8
 Set BorderWidth 2
@@ -270,14 +309,20 @@ Set BorderColor #ff0000
 
 <img src="examples/svgs/border-test.svg" width="600">
 
-### Header & Footer
+### Padding
 
-Customize header and footer sections.
+```
+Set Padding 16
+```
+
+### Header & Footer
 
 ```
 Set HeaderHeight 40
 Set HeaderBackground #333333
 Set HeaderBorder true
+Set HeaderBorderColor #444444
+Set HeaderBorderWidth 1
 
 Set FooterHeight 30
 Set FooterBackground #333333
@@ -288,53 +333,165 @@ Set FooterBorder true
 
 ### Watermark
 
-Add a watermark in the corner with optional styling.
-
 ```
 Set Watermark "Made with DVD"
 Set WatermarkStyle "opacity: 0.5; padding: 10"
 ```
 
-For SVG markup watermarks (e.g., clickable links), use backticks for multiline content:
+For SVG markup watermarks (e.g., clickable links):
 
 ```
-Set Watermark `<a href="https://github.com">
-  <text text-anchor="end">GitHub</text>
+Set Watermark `<a href="https://github.com/tool3/dvd">
+  <text text-anchor="end">DVD</text>
 </a>`
 ```
+
+### Shell
+
+Set the shell for executing commands.
+
+```
+Set Shell /bin/zsh
+Set Shell /bin/bash
+```
+
+---
+
+## Loop Styles
+
+Control how animations behave when they reach the end.
+
+### Default Loop
+
+Animation restarts from the beginning.
+
+```
+Set LoopStyle loop
+```
+
+### Reverse
+
+Animation plays forward, then backward at the same speed.
+
+```
+Set LoopStyle reverse
+```
+
+<img src="examples/svgs/loop-style-reverse-pause.svg" width="600">
+
+### Rewind
+
+Fast reverse playback - like rewinding a tape.
+
+```
+Set LoopStyle rewind
+Set RewindSpeed 10       # Speed multiplier (default: 5)
+```
+
+<img src="examples/svgs/loop-style-rewind.svg" width="600">
+
+### Fade
+
+Fade to black before restarting.
+
+```
+Set LoopStyle fade
+Set FadeDuration 1500    # Fade duration in ms (default: 1500)
+```
+
+<img src="examples/svgs/loop-style-fade.svg" width="600">
+
+### Loop Pause
+
+Add a pause between animation cycles.
+
+```
+Set LoopPause 2000       # Pause 2 seconds before restarting
+```
+
+---
 
 ## CLI Options
 
 ```bash
-# Render a script
-dvd script.cd
-dvd script.cd -o output.svg
-dvd script.cd --verbose
+# Basic usage
+dvd script.cd                          # Render to script.svg
+dvd script.cd -o output.svg            # Custom output path
+dvd script.cd --verbose                # Show detailed output
 
-# Animation options
-dvd script.cd --no-loop
-dvd script.cd --pause-at-end 2000
+# Loop styles
+dvd script.cd --loop-style reverse     # Reverse animation
+dvd script.cd --loop-style rewind      # Fast rewind
+dvd script.cd --loop-style fade        # Fade to black
+dvd script.cd --rewind-speed 10        # Rewind speed multiplier
+dvd script.cd --fade-duration 2000     # Fade duration (ms)
+dvd script.cd --loop-pause 1500        # Pause between loops (ms)
 
-# Create new script
-dvd new myproject
-dvd new myproject --template showcase
+# Animation control
+dvd script.cd --no-loop                # Play once, don't loop
+dvd script.cd --pause-at-end 2000      # Pause at end before looping
+
+# Styling (override script settings)
+dvd script.cd --theme dracula
+dvd script.cd --template macos
+dvd script.cd --title "My Demo"
+dvd script.cd --font-size 16
+dvd script.cd --cursor-style bar
+
+# Dimensions
+dvd script.cd --width 800 --height 600
+
+# Pipe mode
+command | dvd -o output.svg
+ls -la | dvd -o listing.svg --theme nord
 
 # Utilities
-dvd themes              # List available themes
-dvd validate script.cd  # Validate without rendering
+dvd new my-demo                        # Create new script
+dvd new my-demo --template showcase    # Use template
+dvd themes                             # List themes
+dvd validate script.cd                 # Validate without rendering
 ```
+
+### All CLI Options
+
+| Option | Alias | Description | Default |
+|--------|-------|-------------|---------|
+| `--output` | `-o` | Output file path | `<input>.svg` |
+| `--verbose` | `-v` | Show detailed output | `false` |
+| `--loop` | `-l` | Loop the animation | `true` |
+| `--loop-style` | `-L` | Loop style: `loop`, `reverse`, `rewind`, `fade` | `loop` |
+| `--loop-pause` | | Pause before loop restarts (ms) | `0` |
+| `--pause-at-end` | `-p` | Pause at end before looping (ms) | `1000` |
+| `--fade-duration` | | Fade duration for fade style (ms) | `1500` |
+| `--rewind-speed` | | Speed multiplier for rewind | `5` |
+| `--theme` | `-T` | Color theme | `dark` |
+| `--template` | | Window style: `macos`, `windows`, `minimal` | `macos` |
+| `--title` | `-t` | Window title | |
+| `--width` | `-W` | Width in pixels | auto |
+| `--height` | `-H` | Height in pixels | auto |
+| `--font-size` | | Font size in pixels | `14` |
+| `--font-family` | | Font family name | |
+| `--line-height` | | Line height multiplier | `1.4` |
+| `--padding` | | Content padding (px) | `16` |
+| `--border-radius` | | Border radius (px) | `8` |
+| `--border-color` | | Border color (hex) | |
+| `--border-width` | | Border width (px) | |
+| `--cursor-style` | | `block`, `bar`, `underline` | `block` |
+| `--cursor-color` | | Cursor color (hex) | |
+| `--cursor-blink` | | Enable cursor blink | `true` |
+| `--watermark` | | Watermark text | |
+
+---
 
 ## Examples
 
-### Demo
-
-A simple hello world animation.
+### Hello World
 
 <img src="examples/svgs/demo.svg" width="600">
 
 ### ANSI Colors
 
-Full ANSI color support with 256 colors and truecolor.
+Full 256-color and truecolor support.
 
 <img src="examples/svgs/ansi-colors.svg" width="600">
 
@@ -348,7 +505,7 @@ Full ANSI color support with 256 colors and truecolor.
 
 ### Rainbow Animation
 
-Commands with animated output are automatically captured frame-by-frame.
+Animated command output is captured frame-by-frame.
 
 <img src="examples/svgs/rainbow-lolcat.svg" width="600">
 
@@ -360,25 +517,13 @@ Commands with animated output are automatically captured frame-by-frame.
 
 <img src="examples/svgs/neofetch-theme-cursor.svg" width="600">
 
-### Emoji Support
-
-Full emoji support including skin tones and ZWJ sequences.
-
-<img src="examples/svgs/emoji-test.svg" width="600">
-
 ### Text Selection
-
-Interactive text selection and editing.
 
 <img src="examples/svgs/selection-test.svg" width="600">
 
 ### Word Navigation
 
 <img src="examples/svgs/word-navigation-test.svg" width="600">
-
-### Multiple Font Sizes
-
-<img src="examples/svgs/font-sizes.svg" width="600">
 
 ### Color Tables
 
@@ -390,6 +535,8 @@ Interactive text selection and editing.
 
 See the [examples/](examples/) directory for all scripts and outputs.
 
+---
+
 ## Why DVD?
 
 | | DVD | VHS | asciinema |
@@ -397,19 +544,24 @@ See the [examples/](examples/) directory for all scripts and outputs.
 | **Output** | SVG | GIF/MP4 | asciicast |
 | **Dependencies** | None | ffmpeg, ttyd | Player embed |
 | **File size** | Small | Large | Small |
-| **Scalable** | ✓ | ✗ | ✓ |
+| **Scalable** | Yes | No | Yes |
 | **GitHub README** | Perfect | Works | Embed only |
-| **Editable** | ✓ (XML) | ✗ | ✓ (JSON) |
-| **Offline** | ✓ | ✓ | ✗ |
-| **Print quality** | ✓ | ✗ | ✗ |
+| **Editable** | Yes (XML) | No | Yes (JSON) |
+| **Offline** | Yes | Yes | No |
+| **Print quality** | Yes | No | No |
+| **Loop styles** | 4 modes | Basic | Basic |
+
+---
 
 ## Related Projects
 
 - [VHS](https://github.com/charmbracelet/vhs) - GIF/MP4 terminal recordings
-- [shellfie](https://github.com/tool3/shellfie) - shellfie in code
-- [shellfie-cli](https://github.com/tool3/shellfie-cli) - shellfie in commandl line
-- [shellfied](https://github.com/tool3/shellfied) - shellfie in the web
+- [shellfie](https://github.com/tool3/shellfie) - Terminal screenshots in code
+- [shellfie-cli](https://github.com/tool3/shellfie-cli) - Terminal screenshots CLI
+- [shellfied](https://github.com/tool3/shellfied) - Terminal screenshots web service
+
+---
 
 ## License
 
-MIT
+MIT © [tool3](https://github.com/tool3)
