@@ -1,0 +1,1217 @@
+<svg width="419" height="178" xmlns="http://www.w3.org/2000/svg">
+  <defs><clipPath id="rounded-corners"><rect x="0" y="0" width="419" height="178" rx="8" ry="8"/></clipPath></defs>
+  <style>
+    
+.text {
+  font-family: 'SF Mono', 'Monaco', 'Menlo', 'Consolas', monospace;
+  font-size: 14px;
+  dominant-baseline: text-before-edge;
+  text-rendering: geometricPrecision;
+  white-space: pre;
+}
+.bold { font-weight: bold; }
+.italic { font-style: italic; }
+.uline { text-decoration: underline; }
+.strike { text-decoration: line-through; }
+.dim { opacity: 0.5; }
+.fg { fill: #657b83; }
+.f0 { fill: #073642; }
+.f1 { fill: #dc322f; }
+.f2 { fill: #859900; }
+.f3 { fill: #b58900; }
+.f4 { fill: #268bd2; }
+.f5 { fill: #d33682; }
+.f6 { fill: #2aa198; }
+.f7 { fill: #eee8d5; }
+.f8 { fill: #002b36; }
+.f9 { fill: #cb4b16; }
+.f10 { fill: #586e75; }
+.f11 { fill: #657b83; }
+.f12 { fill: #839496; }
+.f13 { fill: #6c71c4; }
+.f14 { fill: #93a1a1; }
+.f15 { fill: #fdf6e3; }
+.bg { fill: #fdf6e3; }
+.b0 { fill: #073642; }
+.b1 { fill: #dc322f; }
+.b2 { fill: #859900; }
+.b3 { fill: #b58900; }
+.b4 { fill: #268bd2; }
+.b5 { fill: #d33682; }
+.b6 { fill: #2aa198; }
+.b7 { fill: #eee8d5; }
+.b8 { fill: #002b36; }
+.b9 { fill: #cb4b16; }
+.b10 { fill: #586e75; }
+.b11 { fill: #657b83; }
+.b12 { fill: #839496; }
+.b13 { fill: #6c71c4; }
+.b14 { fill: #93a1a1; }
+.b15 { fill: #fdf6e3; }
+.cursor { animation: blink 1s step-end infinite; }
+@keyframes blink {
+  0%, 50% { opacity: 1; }
+  50.01%, 100% { opacity: 0; }
+}
+.cursor-active { opacity: 1; }
+
+  </style>
+
+  <g clip-path="url(#rounded-corners)">
+  <!-- Static background (never animated) -->
+  <rect width="100%" height="100%" fill="#fdf6e3" rx="8" ry="8" />
+
+  <!-- Static chrome (title bar) -->
+  <g class="chrome"><rect class="header-bg" x="0" y="0" width="419" height="40" fill="#fdf6e3" rx="8" ry="8"/>
+<rect x="0" y="32" width="419" height="8" fill="#fdf6e3"/>
+<circle cx="22" cy="20" r="6" fill="#ff5f56"/>
+<circle cx="42" cy="20" r="6" fill="#ffbd2e"/>
+<circle cx="62" cy="20" r="6" fill="#27c93f"/>
+<text class="text fg" x="209.5" y="20" text-anchor="middle" style="dominant-baseline: central">solarizedLight</text></g>
+
+  <!-- Animated frames (only dynamic content) -->
+  
+  <g id="frame-0" visibility="visible">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor" x="32.8" y="56" width="8.4" height="19.6" fill="#657b83"/>
+</g>
+    <animate attributeName="visibility" values="visible;hidden;hidden" keyTimes="0;0.007902;1" dur="7.85s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-1" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> e</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="41.2" y="56" width="8.4" height="19.6" fill="#657b83"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.007902;0.01453;1" dur="7.85s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-2" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> ec</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="49.6" y="56" width="8.4" height="19.6" fill="#657b83"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.01453;0.02103;1" dur="7.85s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-3" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> ech</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="58" y="56" width="8.4" height="19.6" fill="#657b83"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.02103;0.02753;1" dur="7.85s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-4" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="66.4" y="56" width="8.4" height="19.6" fill="#657b83"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.02753;0.03403;1" dur="7.85s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-5" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="74.8" y="56" width="8.4" height="19.6" fill="#657b83"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.03403;0.040403;1" dur="7.85s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-6" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo &apos;</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="83.2" y="56" width="8.4" height="19.6" fill="#657b83"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.040403;0.047285;1" dur="7.85s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-7" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo &apos;W</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="91.6" y="56" width="8.4" height="19.6" fill="#657b83"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.047285;0.054295;1" dur="7.85s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-8" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo &apos;We</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="100" y="56" width="8.4" height="19.6" fill="#657b83"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.054295;0.060795;1" dur="7.85s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-9" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo &apos;Wel</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="108.4" y="56" width="8.4" height="19.6" fill="#657b83"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.060795;0.066658;1" dur="7.85s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-10" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo &apos;Welc</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="116.8" y="56" width="8.4" height="19.6" fill="#657b83"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.066658;0.073413;1" dur="7.85s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-11" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo &apos;Welco</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="125.2" y="56" width="8.4" height="19.6" fill="#657b83"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.073413;0.079913;1" dur="7.85s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-12" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo &apos;Welcom</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="133.6" y="56" width="8.4" height="19.6" fill="#657b83"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.079913;0.086541;1" dur="7.85s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-13" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo &apos;Welcome</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="142" y="56" width="8.4" height="19.6" fill="#657b83"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.086541;0.092786;1" dur="7.85s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-14" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo &apos;Welcome</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="150.4" y="56" width="8.4" height="19.6" fill="#657b83"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.092786;0.099414;1" dur="7.85s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-15" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo &apos;Welcome t</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="158.8" y="56" width="8.4" height="19.6" fill="#657b83"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.099414;0.105914;1" dur="7.85s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-16" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo &apos;Welcome to</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="167.2" y="56" width="8.4" height="19.6" fill="#657b83"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.105914;0.112287;1" dur="7.85s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-17" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo &apos;Welcome to</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="175.6" y="56" width="8.4" height="19.6" fill="#657b83"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.112287;0.118787;1" dur="7.85s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-18" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo &apos;Welcome to t</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="184" y="56" width="8.4" height="19.6" fill="#657b83"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.118787;0.125159;1" dur="7.85s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-19" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo &apos;Welcome to th</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="192.4" y="56" width="8.4" height="19.6" fill="#657b83"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.125159;0.132297;1" dur="7.85s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-20" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo &apos;Welcome to the</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="200.8" y="56" width="8.4" height="19.6" fill="#657b83"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.132297;0.138542;1" dur="7.85s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-21" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo &apos;Welcome to the</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="209.2" y="56" width="8.4" height="19.6" fill="#657b83"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.138542;0.145297;1" dur="7.85s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-22" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo &apos;Welcome to the s</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="217.6" y="56" width="8.4" height="19.6" fill="#657b83"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.145297;0.151797;1" dur="7.85s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-23" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo &apos;Welcome to the so</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="226" y="56" width="8.4" height="19.6" fill="#657b83"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.151797;0.158297;1" dur="7.85s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-24" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo &apos;Welcome to the sol</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="234.4" y="56" width="8.4" height="19.6" fill="#657b83"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.158297;0.16518;1" dur="7.85s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-25" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo &apos;Welcome to the sola</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="242.8" y="56" width="8.4" height="19.6" fill="#657b83"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.16518;0.171935;1" dur="7.85s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-26" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo &apos;Welcome to the solar</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="251.2" y="56" width="8.4" height="19.6" fill="#657b83"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.171935;0.178053;1" dur="7.85s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-27" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo &apos;Welcome to the solari</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="259.6" y="56" width="8.4" height="19.6" fill="#657b83"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.178053;0.184425;1" dur="7.85s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-28" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo &apos;Welcome to the solariz</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="268" y="56" width="8.4" height="19.6" fill="#657b83"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.184425;0.190925;1" dur="7.85s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-29" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo &apos;Welcome to the solarize</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="276.4" y="56" width="8.4" height="19.6" fill="#657b83"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.190925;0.196916;1" dur="7.85s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-30" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo &apos;Welcome to the solarized</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="284.8" y="56" width="8.4" height="19.6" fill="#657b83"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.196916;0.203798;1" dur="7.85s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-31" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo &apos;Welcome to the solarizedL</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="293.2" y="56" width="8.4" height="19.6" fill="#657b83"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.203798;0.210043;1" dur="7.85s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-32" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo &apos;Welcome to the solarizedLi</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="301.6" y="56" width="8.4" height="19.6" fill="#657b83"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.210043;0.216416;1" dur="7.85s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-33" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo &apos;Welcome to the solarizedLig</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="310" y="56" width="8.4" height="19.6" fill="#657b83"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.216416;0.223044;1" dur="7.85s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-34" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo &apos;Welcome to the solarizedLigh</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="318.4" y="56" width="8.4" height="19.6" fill="#657b83"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.223044;0.229544;1" dur="7.85s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-35" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo &apos;Welcome to the solarizedLight</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="326.8" y="56" width="8.4" height="19.6" fill="#657b83"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.229544;0.236171;1" dur="7.85s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-36" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo &apos;Welcome to the solarizedLight</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="335.2" y="56" width="8.4" height="19.6" fill="#657b83"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.236171;0.242926;1" dur="7.85s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-37" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo &apos;Welcome to the solarizedLight t</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="343.6" y="56" width="8.4" height="19.6" fill="#657b83"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.242926;0.249426;1" dur="7.85s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-38" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo &apos;Welcome to the solarizedLight th</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="352" y="56" width="8.4" height="19.6" fill="#657b83"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.249426;0.256181;1" dur="7.85s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-39" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo &apos;Welcome to the solarizedLight the</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="360.4" y="56" width="8.4" height="19.6" fill="#657b83"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.256181;0.262554;1" dur="7.85s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-40" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo &apos;Welcome to the solarizedLight them</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="368.8" y="56" width="8.4" height="19.6" fill="#657b83"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.262554;0.269437;1" dur="7.85s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-41" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo &apos;Welcome to the solarizedLight theme</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="377.2" y="56" width="8.4" height="19.6" fill="#657b83"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.269437;0.275682;1" dur="7.85s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-42" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo &apos;Welcome to the solarizedLight theme!</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="385.6" y="56" width="8.4" height="19.6" fill="#657b83"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.275682;0.282182;1" dur="7.85s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-43" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo &apos;Welcome to the solarizedLight theme!&apos;</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="394" y="56" width="8.4" height="19.6" fill="#657b83"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.282182;0.282055;1" dur="7.85s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-44" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo &apos;Welcome to the solarizedLight theme!&apos;</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor" x="394" y="56" width="8.4" height="19.6" fill="#657b83"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.282055;0.33584;1" dur="7.85s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-45" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo &apos;Welcome to the solarizedLight theme!&apos;</text>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.33584;0.336987;1" dur="7.85s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-46" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo &apos;Welcome to the solarizedLight theme!&apos;</text>
+<text class="text fg" x="16" y="75.6">Welcome to the solarizedLight theme!</text>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.336987;0.351262;1" dur="7.85s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-47" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo &apos;Welcome to the solarizedLight theme!&apos;</text>
+<text class="text fg" x="16" y="75.6">Welcome to the solarizedLight theme!</text>
+<text class="text f13" x="16" y="95.2">❯</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor" x="32.8" y="95.2" width="8.4" height="19.6" fill="#657b83"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.351262;0.424165;1" dur="7.85s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-48" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo &apos;Welcome to the solarizedLight theme!&apos;</text>
+<text class="text fg" x="16" y="75.6">Welcome to the solarizedLight theme!</text>
+<text class="text f13" x="16" y="95.2">❯</text>
+<text class="text fg" x="24" y="95.2"> e</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="41.2" y="95.2" width="8.4" height="19.6" fill="#657b83"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.424165;0.430538;1" dur="7.85s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-49" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo &apos;Welcome to the solarizedLight theme!&apos;</text>
+<text class="text fg" x="16" y="75.6">Welcome to the solarizedLight theme!</text>
+<text class="text f13" x="16" y="95.2">❯</text>
+<text class="text fg" x="24" y="95.2"> ec</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="49.6" y="95.2" width="8.4" height="19.6" fill="#657b83"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.430538;0.437165;1" dur="7.85s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-50" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo &apos;Welcome to the solarizedLight theme!&apos;</text>
+<text class="text fg" x="16" y="75.6">Welcome to the solarizedLight theme!</text>
+<text class="text f13" x="16" y="95.2">❯</text>
+<text class="text fg" x="24" y="95.2"> ech</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="58" y="95.2" width="8.4" height="19.6" fill="#657b83"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.437165;0.443666;1" dur="7.85s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-51" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo &apos;Welcome to the solarizedLight theme!&apos;</text>
+<text class="text fg" x="16" y="75.6">Welcome to the solarizedLight theme!</text>
+<text class="text f13" x="16" y="95.2">❯</text>
+<text class="text fg" x="24" y="95.2"> echo</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="66.4" y="95.2" width="8.4" height="19.6" fill="#657b83"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.443666;0.450166;1" dur="7.85s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-52" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo &apos;Welcome to the solarizedLight theme!&apos;</text>
+<text class="text fg" x="16" y="75.6">Welcome to the solarizedLight theme!</text>
+<text class="text f13" x="16" y="95.2">❯</text>
+<text class="text fg" x="24" y="95.2"> echo</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="74.8" y="95.2" width="8.4" height="19.6" fill="#657b83"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.450166;0.456793;1" dur="7.85s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-53" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo &apos;Welcome to the solarizedLight theme!&apos;</text>
+<text class="text fg" x="16" y="75.6">Welcome to the solarizedLight theme!</text>
+<text class="text f13" x="16" y="95.2">❯</text>
+<text class="text fg" x="24" y="95.2"> echo &apos;</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="83.2" y="95.2" width="8.4" height="19.6" fill="#657b83"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.456793;0.463293;1" dur="7.85s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-54" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo &apos;Welcome to the solarizedLight theme!&apos;</text>
+<text class="text fg" x="16" y="75.6">Welcome to the solarizedLight theme!</text>
+<text class="text f13" x="16" y="95.2">❯</text>
+<text class="text fg" x="24" y="95.2"> echo &apos;T</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="91.6" y="95.2" width="8.4" height="19.6" fill="#657b83"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.463293;0.469794;1" dur="7.85s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-55" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo &apos;Welcome to the solarizedLight theme!&apos;</text>
+<text class="text fg" x="16" y="75.6">Welcome to the solarizedLight theme!</text>
+<text class="text f13" x="16" y="95.2">❯</text>
+<text class="text fg" x="24" y="95.2"> echo &apos;Th</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="100" y="95.2" width="8.4" height="19.6" fill="#657b83"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.469794;0.476549;1" dur="7.85s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-56" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo &apos;Welcome to the solarizedLight theme!&apos;</text>
+<text class="text fg" x="16" y="75.6">Welcome to the solarizedLight theme!</text>
+<text class="text f13" x="16" y="95.2">❯</text>
+<text class="text fg" x="24" y="95.2"> echo &apos;Thi</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="108.4" y="95.2" width="8.4" height="19.6" fill="#657b83"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.476549;0.483049;1" dur="7.85s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-57" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo &apos;Welcome to the solarizedLight theme!&apos;</text>
+<text class="text fg" x="16" y="75.6">Welcome to the solarizedLight theme!</text>
+<text class="text f13" x="16" y="95.2">❯</text>
+<text class="text fg" x="24" y="95.2"> echo &apos;This</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="116.8" y="95.2" width="8.4" height="19.6" fill="#657b83"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.483049;0.489549;1" dur="7.85s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-58" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo &apos;Welcome to the solarizedLight theme!&apos;</text>
+<text class="text fg" x="16" y="75.6">Welcome to the solarizedLight theme!</text>
+<text class="text f13" x="16" y="95.2">❯</text>
+<text class="text fg" x="24" y="95.2"> echo &apos;This</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="125.2" y="95.2" width="8.4" height="19.6" fill="#657b83"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.489549;0.496049;1" dur="7.85s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-59" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo &apos;Welcome to the solarizedLight theme!&apos;</text>
+<text class="text fg" x="16" y="75.6">Welcome to the solarizedLight theme!</text>
+<text class="text f13" x="16" y="95.2">❯</text>
+<text class="text fg" x="24" y="95.2"> echo &apos;This i</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="133.6" y="95.2" width="8.4" height="19.6" fill="#657b83"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.496049;0.502422;1" dur="7.85s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-60" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo &apos;Welcome to the solarizedLight theme!&apos;</text>
+<text class="text fg" x="16" y="75.6">Welcome to the solarizedLight theme!</text>
+<text class="text f13" x="16" y="95.2">❯</text>
+<text class="text fg" x="24" y="95.2"> echo &apos;This is</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="142" y="95.2" width="8.4" height="19.6" fill="#657b83"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.502422;0.508922;1" dur="7.85s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-61" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo &apos;Welcome to the solarizedLight theme!&apos;</text>
+<text class="text fg" x="16" y="75.6">Welcome to the solarizedLight theme!</text>
+<text class="text f13" x="16" y="95.2">❯</text>
+<text class="text fg" x="24" y="95.2"> echo &apos;This is</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="150.4" y="95.2" width="8.4" height="19.6" fill="#657b83"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.508922;0.515549;1" dur="7.85s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-62" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo &apos;Welcome to the solarizedLight theme!&apos;</text>
+<text class="text fg" x="16" y="75.6">Welcome to the solarizedLight theme!</text>
+<text class="text f13" x="16" y="95.2">❯</text>
+<text class="text fg" x="24" y="95.2"> echo &apos;This is h</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="158.8" y="95.2" width="8.4" height="19.6" fill="#657b83"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.515549;0.522049;1" dur="7.85s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-63" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo &apos;Welcome to the solarizedLight theme!&apos;</text>
+<text class="text fg" x="16" y="75.6">Welcome to the solarizedLight theme!</text>
+<text class="text f13" x="16" y="95.2">❯</text>
+<text class="text fg" x="24" y="95.2"> echo &apos;This is ho</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="167.2" y="95.2" width="8.4" height="19.6" fill="#657b83"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.522049;0.52855;1" dur="7.85s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-64" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo &apos;Welcome to the solarizedLight theme!&apos;</text>
+<text class="text fg" x="16" y="75.6">Welcome to the solarizedLight theme!</text>
+<text class="text f13" x="16" y="95.2">❯</text>
+<text class="text fg" x="24" y="95.2"> echo &apos;This is how</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="175.6" y="95.2" width="8.4" height="19.6" fill="#657b83"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.52855;0.535177;1" dur="7.85s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-65" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo &apos;Welcome to the solarizedLight theme!&apos;</text>
+<text class="text fg" x="16" y="75.6">Welcome to the solarizedLight theme!</text>
+<text class="text f13" x="16" y="95.2">❯</text>
+<text class="text fg" x="24" y="95.2"> echo &apos;This is how</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="184" y="95.2" width="8.4" height="19.6" fill="#657b83"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.535177;0.541805;1" dur="7.85s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-66" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo &apos;Welcome to the solarizedLight theme!&apos;</text>
+<text class="text fg" x="16" y="75.6">Welcome to the solarizedLight theme!</text>
+<text class="text f13" x="16" y="95.2">❯</text>
+<text class="text fg" x="24" y="95.2"> echo &apos;This is how y</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="192.4" y="95.2" width="8.4" height="19.6" fill="#657b83"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.541805;0.548177;1" dur="7.85s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-67" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo &apos;Welcome to the solarizedLight theme!&apos;</text>
+<text class="text fg" x="16" y="75.6">Welcome to the solarizedLight theme!</text>
+<text class="text f13" x="16" y="95.2">❯</text>
+<text class="text fg" x="24" y="95.2"> echo &apos;This is how yo</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="200.8" y="95.2" width="8.4" height="19.6" fill="#657b83"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.548177;0.554805;1" dur="7.85s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-68" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo &apos;Welcome to the solarizedLight theme!&apos;</text>
+<text class="text fg" x="16" y="75.6">Welcome to the solarizedLight theme!</text>
+<text class="text f13" x="16" y="95.2">❯</text>
+<text class="text fg" x="24" y="95.2"> echo &apos;This is how you</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="209.2" y="95.2" width="8.4" height="19.6" fill="#657b83"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.554805;0.56105;1" dur="7.85s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-69" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo &apos;Welcome to the solarizedLight theme!&apos;</text>
+<text class="text fg" x="16" y="75.6">Welcome to the solarizedLight theme!</text>
+<text class="text f13" x="16" y="95.2">❯</text>
+<text class="text fg" x="24" y="95.2"> echo &apos;This is how your</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="217.6" y="95.2" width="8.4" height="19.6" fill="#657b83"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.56105;0.567168;1" dur="7.85s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-70" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo &apos;Welcome to the solarizedLight theme!&apos;</text>
+<text class="text fg" x="16" y="75.6">Welcome to the solarizedLight theme!</text>
+<text class="text f13" x="16" y="95.2">❯</text>
+<text class="text fg" x="24" y="95.2"> echo &apos;This is how your</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="226" y="95.2" width="8.4" height="19.6" fill="#657b83"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.567168;0.573668;1" dur="7.85s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-71" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo &apos;Welcome to the solarizedLight theme!&apos;</text>
+<text class="text fg" x="16" y="75.6">Welcome to the solarizedLight theme!</text>
+<text class="text f13" x="16" y="95.2">❯</text>
+<text class="text fg" x="24" y="95.2"> echo &apos;This is how your t</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="234.4" y="95.2" width="8.4" height="19.6" fill="#657b83"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.573668;0.580296;1" dur="7.85s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-72" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo &apos;Welcome to the solarizedLight theme!&apos;</text>
+<text class="text fg" x="16" y="75.6">Welcome to the solarizedLight theme!</text>
+<text class="text f13" x="16" y="95.2">❯</text>
+<text class="text fg" x="24" y="95.2"> echo &apos;This is how your te</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="242.8" y="95.2" width="8.4" height="19.6" fill="#657b83"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.580296;0.586796;1" dur="7.85s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-73" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo &apos;Welcome to the solarizedLight theme!&apos;</text>
+<text class="text fg" x="16" y="75.6">Welcome to the solarizedLight theme!</text>
+<text class="text f13" x="16" y="95.2">❯</text>
+<text class="text fg" x="24" y="95.2"> echo &apos;This is how your ter</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="251.2" y="95.2" width="8.4" height="19.6" fill="#657b83"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.586796;0.593296;1" dur="7.85s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-74" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo &apos;Welcome to the solarizedLight theme!&apos;</text>
+<text class="text fg" x="16" y="75.6">Welcome to the solarizedLight theme!</text>
+<text class="text f13" x="16" y="95.2">❯</text>
+<text class="text fg" x="24" y="95.2"> echo &apos;This is how your term</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="259.6" y="95.2" width="8.4" height="19.6" fill="#657b83"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.593296;0.599924;1" dur="7.85s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-75" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo &apos;Welcome to the solarizedLight theme!&apos;</text>
+<text class="text fg" x="16" y="75.6">Welcome to the solarizedLight theme!</text>
+<text class="text f13" x="16" y="95.2">❯</text>
+<text class="text fg" x="24" y="95.2"> echo &apos;This is how your termi</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="268" y="95.2" width="8.4" height="19.6" fill="#657b83"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.599924;0.606424;1" dur="7.85s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-76" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo &apos;Welcome to the solarizedLight theme!&apos;</text>
+<text class="text fg" x="16" y="75.6">Welcome to the solarizedLight theme!</text>
+<text class="text f13" x="16" y="95.2">❯</text>
+<text class="text fg" x="24" y="95.2"> echo &apos;This is how your termin</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="276.4" y="95.2" width="8.4" height="19.6" fill="#657b83"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.606424;0.612924;1" dur="7.85s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-77" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo &apos;Welcome to the solarizedLight theme!&apos;</text>
+<text class="text fg" x="16" y="75.6">Welcome to the solarizedLight theme!</text>
+<text class="text f13" x="16" y="95.2">❯</text>
+<text class="text fg" x="24" y="95.2"> echo &apos;This is how your termina</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="284.8" y="95.2" width="8.4" height="19.6" fill="#657b83"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.612924;0.618787;1" dur="7.85s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-78" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo &apos;Welcome to the solarizedLight theme!&apos;</text>
+<text class="text fg" x="16" y="75.6">Welcome to the solarizedLight theme!</text>
+<text class="text f13" x="16" y="95.2">❯</text>
+<text class="text fg" x="24" y="95.2"> echo &apos;This is how your terminal</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="293.2" y="95.2" width="8.4" height="19.6" fill="#657b83"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.618787;0.625414;1" dur="7.85s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-79" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo &apos;Welcome to the solarizedLight theme!&apos;</text>
+<text class="text fg" x="16" y="75.6">Welcome to the solarizedLight theme!</text>
+<text class="text f13" x="16" y="95.2">❯</text>
+<text class="text fg" x="24" y="95.2"> echo &apos;This is how your terminal</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="301.6" y="95.2" width="8.4" height="19.6" fill="#657b83"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.625414;0.632297;1" dur="7.85s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-80" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo &apos;Welcome to the solarizedLight theme!&apos;</text>
+<text class="text fg" x="16" y="75.6">Welcome to the solarizedLight theme!</text>
+<text class="text f13" x="16" y="95.2">❯</text>
+<text class="text fg" x="24" y="95.2"> echo &apos;This is how your terminal l</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="310" y="95.2" width="8.4" height="19.6" fill="#657b83"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.632297;0.638924;1" dur="7.85s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-81" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo &apos;Welcome to the solarizedLight theme!&apos;</text>
+<text class="text fg" x="16" y="75.6">Welcome to the solarizedLight theme!</text>
+<text class="text f13" x="16" y="95.2">❯</text>
+<text class="text fg" x="24" y="95.2"> echo &apos;This is how your terminal lo</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="318.4" y="95.2" width="8.4" height="19.6" fill="#657b83"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.638924;0.645552;1" dur="7.85s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-82" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo &apos;Welcome to the solarizedLight theme!&apos;</text>
+<text class="text fg" x="16" y="75.6">Welcome to the solarizedLight theme!</text>
+<text class="text f13" x="16" y="95.2">❯</text>
+<text class="text fg" x="24" y="95.2"> echo &apos;This is how your terminal loo</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="326.8" y="95.2" width="8.4" height="19.6" fill="#657b83"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.645552;0.652052;1" dur="7.85s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-83" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo &apos;Welcome to the solarizedLight theme!&apos;</text>
+<text class="text fg" x="16" y="75.6">Welcome to the solarizedLight theme!</text>
+<text class="text f13" x="16" y="95.2">❯</text>
+<text class="text fg" x="24" y="95.2"> echo &apos;This is how your terminal look</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="335.2" y="95.2" width="8.4" height="19.6" fill="#657b83"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.652052;0.65868;1" dur="7.85s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-84" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo &apos;Welcome to the solarizedLight theme!&apos;</text>
+<text class="text fg" x="16" y="75.6">Welcome to the solarizedLight theme!</text>
+<text class="text f13" x="16" y="95.2">❯</text>
+<text class="text fg" x="24" y="95.2"> echo &apos;This is how your terminal looks</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="343.6" y="95.2" width="8.4" height="19.6" fill="#657b83"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.65868;0.66518;1" dur="7.85s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-85" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo &apos;Welcome to the solarizedLight theme!&apos;</text>
+<text class="text fg" x="16" y="75.6">Welcome to the solarizedLight theme!</text>
+<text class="text f13" x="16" y="95.2">❯</text>
+<text class="text fg" x="24" y="95.2"> echo &apos;This is how your terminal looks.</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="352" y="95.2" width="8.4" height="19.6" fill="#657b83"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.66518;0.671552;1" dur="7.85s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-86" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo &apos;Welcome to the solarizedLight theme!&apos;</text>
+<text class="text fg" x="16" y="75.6">Welcome to the solarizedLight theme!</text>
+<text class="text f13" x="16" y="95.2">❯</text>
+<text class="text fg" x="24" y="95.2"> echo &apos;This is how your terminal looks.&apos;</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="360.4" y="95.2" width="8.4" height="19.6" fill="#657b83"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.671552;0.671043;1" dur="7.85s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-87" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo &apos;Welcome to the solarizedLight theme!&apos;</text>
+<text class="text fg" x="16" y="75.6">Welcome to the solarizedLight theme!</text>
+<text class="text f13" x="16" y="95.2">❯</text>
+<text class="text fg" x="24" y="95.2"> echo &apos;This is how your terminal looks.&apos;</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor" x="360.4" y="95.2" width="8.4" height="19.6" fill="#657b83"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.671043;0.726485;1" dur="7.85s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-88" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo &apos;Welcome to the solarizedLight theme!&apos;</text>
+<text class="text fg" x="16" y="75.6">Welcome to the solarizedLight theme!</text>
+<text class="text f13" x="16" y="95.2">❯</text>
+<text class="text fg" x="24" y="95.2"> echo &apos;This is how your terminal looks.&apos;</text>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.726485;0.726995;1" dur="7.85s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-89" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo &apos;Welcome to the solarizedLight theme!&apos;</text>
+<text class="text fg" x="16" y="75.6">Welcome to the solarizedLight theme!</text>
+<text class="text f13" x="16" y="95.2">❯</text>
+<text class="text fg" x="24" y="95.2"> echo &apos;This is how your terminal looks.&apos;</text>
+<text class="text fg" x="16" y="114.8">This is how your terminal looks.</text>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.726995;0.742417;1" dur="7.85s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-90" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo &apos;Welcome to the solarizedLight theme!&apos;</text>
+<text class="text fg" x="16" y="75.6">Welcome to the solarizedLight theme!</text>
+<text class="text f13" x="16" y="95.2">❯</text>
+<text class="text fg" x="24" y="95.2"> echo &apos;This is how your terminal looks.&apos;</text>
+<text class="text fg" x="16" y="114.8">This is how your terminal looks.</text>
+<text class="text f13" x="16" y="134.4">❯</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor" x="32.8" y="134.4" width="8.4" height="19.6" fill="#657b83"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.742417;0.872547;1" dur="7.85s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-91" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo &apos;Welcome to the solarizedLight theme!&apos;</text>
+<text class="text fg" x="16" y="75.6">Welcome to the solarizedLight theme!</text>
+<text class="text f13" x="16" y="95.2">❯</text>
+<text class="text fg" x="24" y="95.2"> echo &apos;This is how your terminal looks.&apos;</text>
+<text class="text fg" x="16" y="114.8">This is how your terminal looks.</text>
+<text class="text f13" x="16" y="134.4">❯</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor" x="32.8" y="134.4" width="8.4" height="19.6" fill="#657b83"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;visible" keyTimes="0;0.872547;1" dur="7.85s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <!-- Static footer -->
+  
+  
+  </g>
+</svg>

@@ -1,0 +1,1217 @@
+<svg width="419" height="178" xmlns="http://www.w3.org/2000/svg">
+  <defs><clipPath id="rounded-corners"><rect x="0" y="0" width="419" height="178" rx="8" ry="8"/></clipPath></defs>
+  <style>
+    
+.text {
+  font-family: 'SF Mono', 'Monaco', 'Menlo', 'Consolas', monospace;
+  font-size: 14px;
+  dominant-baseline: text-before-edge;
+  text-rendering: geometricPrecision;
+  white-space: pre;
+}
+.bold { font-weight: bold; }
+.italic { font-style: italic; }
+.uline { text-decoration: underline; }
+.strike { text-decoration: line-through; }
+.dim { opacity: 0.5; }
+.fg { fill: #ffffff; }
+.f0 { fill: #000000; }
+.f1 { fill: #ec3a37; }
+.f2 { fill: #3ad900; }
+.f3 { fill: #fad000; }
+.f4 { fill: #6943ff; }
+.f5 { fill: #ff2c70; }
+.f6 { fill: #80fcff; }
+.f7 { fill: #ffffff; }
+.f8 { fill: #5c5c61; }
+.f9 { fill: #ec3a37; }
+.f10 { fill: #3ad900; }
+.f11 { fill: #fad000; }
+.f12 { fill: #6943ff; }
+.f13 { fill: #fb94ff; }
+.f14 { fill: #80fcff; }
+.f15 { fill: #ffffff; }
+.bg { fill: #1e1e3f; }
+.b0 { fill: #000000; }
+.b1 { fill: #ec3a37; }
+.b2 { fill: #3ad900; }
+.b3 { fill: #fad000; }
+.b4 { fill: #6943ff; }
+.b5 { fill: #ff2c70; }
+.b6 { fill: #80fcff; }
+.b7 { fill: #ffffff; }
+.b8 { fill: #5c5c61; }
+.b9 { fill: #ec3a37; }
+.b10 { fill: #3ad900; }
+.b11 { fill: #fad000; }
+.b12 { fill: #6943ff; }
+.b13 { fill: #fb94ff; }
+.b14 { fill: #80fcff; }
+.b15 { fill: #ffffff; }
+.cursor { animation: blink 1s step-end infinite; }
+@keyframes blink {
+  0%, 50% { opacity: 1; }
+  50.01%, 100% { opacity: 0; }
+}
+.cursor-active { opacity: 1; }
+
+  </style>
+
+  <g clip-path="url(#rounded-corners)">
+  <!-- Static background (never animated) -->
+  <rect width="100%" height="100%" fill="#1e1e3f" rx="8" ry="8" />
+
+  <!-- Static chrome (title bar) -->
+  <g class="chrome"><rect class="header-bg" x="0" y="0" width="419" height="40" fill="#1e1e3f" rx="8" ry="8"/>
+<rect x="0" y="32" width="419" height="8" fill="#1e1e3f"/>
+<circle cx="22" cy="20" r="6" fill="#ff5f56"/>
+<circle cx="42" cy="20" r="6" fill="#ffbd2e"/>
+<circle cx="62" cy="20" r="6" fill="#27c93f"/>
+<text class="text fg" x="209.5" y="20" text-anchor="middle" style="dominant-baseline: central">shadesOfPurple</text></g>
+
+  <!-- Animated frames (only dynamic content) -->
+  
+  <g id="frame-0" visibility="visible">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor" x="32.8" y="56" width="8.4" height="19.6" fill="#fad000"/>
+</g>
+    <animate attributeName="visibility" values="visible;hidden;hidden" keyTimes="0;0.007906;1" dur="7.84s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-1" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> e</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="41.2" y="56" width="8.4" height="19.6" fill="#fad000"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.007906;0.014282;1" dur="7.84s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-2" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> ec</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="49.6" y="56" width="8.4" height="19.6" fill="#fad000"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.014282;0.020913;1" dur="7.84s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-3" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> ech</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="58" y="56" width="8.4" height="19.6" fill="#fad000"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.020913;0.027544;1" dur="7.84s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-4" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="66.4" y="56" width="8.4" height="19.6" fill="#fad000"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.027544;0.034302;1" dur="7.84s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-5" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="74.8" y="56" width="8.4" height="19.6" fill="#fad000"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.034302;0.041061;1" dur="7.84s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-6" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo &apos;</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="83.2" y="56" width="8.4" height="19.6" fill="#fad000"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.041061;0.047692;1" dur="7.84s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-7" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo &apos;W</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="91.6" y="56" width="8.4" height="19.6" fill="#fad000"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.047692;0.054833;1" dur="7.84s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-8" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo &apos;We</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="100" y="56" width="8.4" height="19.6" fill="#fad000"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.054833;0.060699;1" dur="7.84s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-9" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo &apos;Wel</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="108.4" y="56" width="8.4" height="19.6" fill="#fad000"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.060699;0.067202;1" dur="7.84s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-10" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo &apos;Welc</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="116.8" y="56" width="8.4" height="19.6" fill="#fad000"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.067202;0.073706;1" dur="7.84s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-11" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo &apos;Welco</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="125.2" y="56" width="8.4" height="19.6" fill="#fad000"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.073706;0.080337;1" dur="7.84s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-12" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo &apos;Welcom</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="133.6" y="56" width="8.4" height="19.6" fill="#fad000"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.080337;0.086968;1" dur="7.84s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-13" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo &apos;Welcome</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="142" y="56" width="8.4" height="19.6" fill="#fad000"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.086968;0.093471;1" dur="7.84s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-14" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo &apos;Welcome</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="150.4" y="56" width="8.4" height="19.6" fill="#fad000"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.093471;0.099974;1" dur="7.84s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-15" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo &apos;Welcome t</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="158.8" y="56" width="8.4" height="19.6" fill="#fad000"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.099974;0.106478;1" dur="7.84s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-16" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo &apos;Welcome to</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="167.2" y="56" width="8.4" height="19.6" fill="#fad000"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.106478;0.113619;1" dur="7.84s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-17" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo &apos;Welcome to</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="175.6" y="56" width="8.4" height="19.6" fill="#fad000"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.113619;0.120377;1" dur="7.84s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-18" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo &apos;Welcome to t</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="184" y="56" width="8.4" height="19.6" fill="#fad000"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.120377;0.127008;1" dur="7.84s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-19" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo &apos;Welcome to th</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="192.4" y="56" width="8.4" height="19.6" fill="#fad000"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.127008;0.132874;1" dur="7.84s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-20" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo &apos;Welcome to the</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="200.8" y="56" width="8.4" height="19.6" fill="#fad000"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.132874;0.139123;1" dur="7.84s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-21" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo &apos;Welcome to the</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="209.2" y="56" width="8.4" height="19.6" fill="#fad000"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.139123;0.146009;1" dur="7.84s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-22" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo &apos;Welcome to the s</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="217.6" y="56" width="8.4" height="19.6" fill="#fad000"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.146009;0.152385;1" dur="7.84s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-23" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo &apos;Welcome to the sh</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="226" y="56" width="8.4" height="19.6" fill="#fad000"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.152385;0.159143;1" dur="7.84s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-24" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo &apos;Welcome to the sha</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="234.4" y="56" width="8.4" height="19.6" fill="#fad000"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.159143;0.165902;1" dur="7.84s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-25" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo &apos;Welcome to the shad</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="242.8" y="56" width="8.4" height="19.6" fill="#fad000"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.165902;0.172277;1" dur="7.84s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-26" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo &apos;Welcome to the shade</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="251.2" y="56" width="8.4" height="19.6" fill="#fad000"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.172277;0.179036;1" dur="7.84s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-27" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo &apos;Welcome to the shades</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="259.6" y="56" width="8.4" height="19.6" fill="#fad000"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.179036;0.185412;1" dur="7.84s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-28" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo &apos;Welcome to the shadesO</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="268" y="56" width="8.4" height="19.6" fill="#fad000"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.185412;0.191788;1" dur="7.84s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-29" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo &apos;Welcome to the shadesOf</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="276.4" y="56" width="8.4" height="19.6" fill="#fad000"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.191788;0.198164;1" dur="7.84s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-30" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo &apos;Welcome to the shadesOfP</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="284.8" y="56" width="8.4" height="19.6" fill="#fad000"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.198164;0.204922;1" dur="7.84s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-31" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo &apos;Welcome to the shadesOfPu</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="293.2" y="56" width="8.4" height="19.6" fill="#fad000"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.204922;0.211426;1" dur="7.84s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-32" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo &apos;Welcome to the shadesOfPur</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="301.6" y="56" width="8.4" height="19.6" fill="#fad000"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.211426;0.218312;1" dur="7.84s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-33" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo &apos;Welcome to the shadesOfPurp</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="310" y="56" width="8.4" height="19.6" fill="#fad000"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.218312;0.224688;1" dur="7.84s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-34" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo &apos;Welcome to the shadesOfPurpl</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="318.4" y="56" width="8.4" height="19.6" fill="#fad000"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.224688;0.231064;1" dur="7.84s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-35" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo &apos;Welcome to the shadesOfPurple</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="326.8" y="56" width="8.4" height="19.6" fill="#fad000"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.231064;0.237694;1" dur="7.84s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-36" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo &apos;Welcome to the shadesOfPurple</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="335.2" y="56" width="8.4" height="19.6" fill="#fad000"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.237694;0.244198;1" dur="7.84s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-37" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo &apos;Welcome to the shadesOfPurple t</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="343.6" y="56" width="8.4" height="19.6" fill="#fad000"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.244198;0.250701;1" dur="7.84s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-38" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo &apos;Welcome to the shadesOfPurple th</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="352" y="56" width="8.4" height="19.6" fill="#fad000"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.250701;0.257715;1" dur="7.84s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-39" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo &apos;Welcome to the shadesOfPurple the</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="360.4" y="56" width="8.4" height="19.6" fill="#fad000"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.257715;0.263963;1" dur="7.84s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-40" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo &apos;Welcome to the shadesOfPurple them</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="368.8" y="56" width="8.4" height="19.6" fill="#fad000"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.263963;0.270722;1" dur="7.84s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-41" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo &apos;Welcome to the shadesOfPurple theme</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="377.2" y="56" width="8.4" height="19.6" fill="#fad000"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.270722;0.27697;1" dur="7.84s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-42" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo &apos;Welcome to the shadesOfPurple theme!</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="385.6" y="56" width="8.4" height="19.6" fill="#fad000"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.27697;0.283984;1" dur="7.84s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-43" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo &apos;Welcome to the shadesOfPurple theme!&apos;</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="394" y="56" width="8.4" height="19.6" fill="#fad000"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.283984;0.283601;1" dur="7.84s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-44" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo &apos;Welcome to the shadesOfPurple theme!&apos;</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor" x="394" y="56" width="8.4" height="19.6" fill="#fad000"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.283601;0.336776;1" dur="7.84s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-45" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo &apos;Welcome to the shadesOfPurple theme!&apos;</text>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.336776;0.337924;1" dur="7.84s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-46" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo &apos;Welcome to the shadesOfPurple theme!&apos;</text>
+<text class="text fg" x="16" y="75.6">Welcome to the shadesOfPurple theme!</text>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.337924;0.352844;1" dur="7.84s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-47" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo &apos;Welcome to the shadesOfPurple theme!&apos;</text>
+<text class="text fg" x="16" y="75.6">Welcome to the shadesOfPurple theme!</text>
+<text class="text f13" x="16" y="95.2">❯</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor" x="32.8" y="95.2" width="8.4" height="19.6" fill="#fad000"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.352844;0.424637;1" dur="7.84s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-48" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo &apos;Welcome to the shadesOfPurple theme!&apos;</text>
+<text class="text fg" x="16" y="75.6">Welcome to the shadesOfPurple theme!</text>
+<text class="text f13" x="16" y="95.2">❯</text>
+<text class="text fg" x="24" y="95.2"> e</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="41.2" y="95.2" width="8.4" height="19.6" fill="#fad000"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.424637;0.431012;1" dur="7.84s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-49" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo &apos;Welcome to the shadesOfPurple theme!&apos;</text>
+<text class="text fg" x="16" y="75.6">Welcome to the shadesOfPurple theme!</text>
+<text class="text f13" x="16" y="95.2">❯</text>
+<text class="text fg" x="24" y="95.2"> ec</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="49.6" y="95.2" width="8.4" height="19.6" fill="#fad000"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.431012;0.437516;1" dur="7.84s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-50" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo &apos;Welcome to the shadesOfPurple theme!&apos;</text>
+<text class="text fg" x="16" y="75.6">Welcome to the shadesOfPurple theme!</text>
+<text class="text f13" x="16" y="95.2">❯</text>
+<text class="text fg" x="24" y="95.2"> ech</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="58" y="95.2" width="8.4" height="19.6" fill="#fad000"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.437516;0.444019;1" dur="7.84s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-51" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo &apos;Welcome to the shadesOfPurple theme!&apos;</text>
+<text class="text fg" x="16" y="75.6">Welcome to the shadesOfPurple theme!</text>
+<text class="text f13" x="16" y="95.2">❯</text>
+<text class="text fg" x="24" y="95.2"> echo</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="66.4" y="95.2" width="8.4" height="19.6" fill="#fad000"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.444019;0.45065;1" dur="7.84s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-52" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo &apos;Welcome to the shadesOfPurple theme!&apos;</text>
+<text class="text fg" x="16" y="75.6">Welcome to the shadesOfPurple theme!</text>
+<text class="text f13" x="16" y="95.2">❯</text>
+<text class="text fg" x="24" y="95.2"> echo</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="74.8" y="95.2" width="8.4" height="19.6" fill="#fad000"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.45065;0.457154;1" dur="7.84s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-53" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo &apos;Welcome to the shadesOfPurple theme!&apos;</text>
+<text class="text fg" x="16" y="75.6">Welcome to the shadesOfPurple theme!</text>
+<text class="text f13" x="16" y="95.2">❯</text>
+<text class="text fg" x="24" y="95.2"> echo &apos;</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="83.2" y="95.2" width="8.4" height="19.6" fill="#fad000"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.457154;0.463912;1" dur="7.84s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-54" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo &apos;Welcome to the shadesOfPurple theme!&apos;</text>
+<text class="text fg" x="16" y="75.6">Welcome to the shadesOfPurple theme!</text>
+<text class="text f13" x="16" y="95.2">❯</text>
+<text class="text fg" x="24" y="95.2"> echo &apos;T</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="91.6" y="95.2" width="8.4" height="19.6" fill="#fad000"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.463912;0.470288;1" dur="7.84s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-55" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo &apos;Welcome to the shadesOfPurple theme!&apos;</text>
+<text class="text fg" x="16" y="75.6">Welcome to the shadesOfPurple theme!</text>
+<text class="text f13" x="16" y="95.2">❯</text>
+<text class="text fg" x="24" y="95.2"> echo &apos;Th</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="100" y="95.2" width="8.4" height="19.6" fill="#fad000"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.470288;0.476919;1" dur="7.84s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-56" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo &apos;Welcome to the shadesOfPurple theme!&apos;</text>
+<text class="text fg" x="16" y="75.6">Welcome to the shadesOfPurple theme!</text>
+<text class="text f13" x="16" y="95.2">❯</text>
+<text class="text fg" x="24" y="95.2"> echo &apos;Thi</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="108.4" y="95.2" width="8.4" height="19.6" fill="#fad000"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.476919;0.483678;1" dur="7.84s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-57" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo &apos;Welcome to the shadesOfPurple theme!&apos;</text>
+<text class="text fg" x="16" y="75.6">Welcome to the shadesOfPurple theme!</text>
+<text class="text f13" x="16" y="95.2">❯</text>
+<text class="text fg" x="24" y="95.2"> echo &apos;This</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="116.8" y="95.2" width="8.4" height="19.6" fill="#fad000"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.483678;0.490181;1" dur="7.84s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-58" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo &apos;Welcome to the shadesOfPurple theme!&apos;</text>
+<text class="text fg" x="16" y="75.6">Welcome to the shadesOfPurple theme!</text>
+<text class="text f13" x="16" y="95.2">❯</text>
+<text class="text fg" x="24" y="95.2"> echo &apos;This</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="125.2" y="95.2" width="8.4" height="19.6" fill="#fad000"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.490181;0.496812;1" dur="7.84s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-59" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo &apos;Welcome to the shadesOfPurple theme!&apos;</text>
+<text class="text fg" x="16" y="75.6">Welcome to the shadesOfPurple theme!</text>
+<text class="text f13" x="16" y="95.2">❯</text>
+<text class="text fg" x="24" y="95.2"> echo &apos;This i</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="133.6" y="95.2" width="8.4" height="19.6" fill="#fad000"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.496812;0.503315;1" dur="7.84s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-60" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo &apos;Welcome to the shadesOfPurple theme!&apos;</text>
+<text class="text fg" x="16" y="75.6">Welcome to the shadesOfPurple theme!</text>
+<text class="text f13" x="16" y="95.2">❯</text>
+<text class="text fg" x="24" y="95.2"> echo &apos;This is</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="142" y="95.2" width="8.4" height="19.6" fill="#fad000"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.503315;0.509819;1" dur="7.84s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-61" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo &apos;Welcome to the shadesOfPurple theme!&apos;</text>
+<text class="text fg" x="16" y="75.6">Welcome to the shadesOfPurple theme!</text>
+<text class="text f13" x="16" y="95.2">❯</text>
+<text class="text fg" x="24" y="95.2"> echo &apos;This is</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="150.4" y="95.2" width="8.4" height="19.6" fill="#fad000"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.509819;0.516322;1" dur="7.84s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-62" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo &apos;Welcome to the shadesOfPurple theme!&apos;</text>
+<text class="text fg" x="16" y="75.6">Welcome to the shadesOfPurple theme!</text>
+<text class="text f13" x="16" y="95.2">❯</text>
+<text class="text fg" x="24" y="95.2"> echo &apos;This is h</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="158.8" y="95.2" width="8.4" height="19.6" fill="#fad000"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.516322;0.522571;1" dur="7.84s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-63" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo &apos;Welcome to the shadesOfPurple theme!&apos;</text>
+<text class="text fg" x="16" y="75.6">Welcome to the shadesOfPurple theme!</text>
+<text class="text f13" x="16" y="95.2">❯</text>
+<text class="text fg" x="24" y="95.2"> echo &apos;This is ho</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="167.2" y="95.2" width="8.4" height="19.6" fill="#fad000"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.522571;0.529074;1" dur="7.84s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-64" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo &apos;Welcome to the shadesOfPurple theme!&apos;</text>
+<text class="text fg" x="16" y="75.6">Welcome to the shadesOfPurple theme!</text>
+<text class="text f13" x="16" y="95.2">❯</text>
+<text class="text fg" x="24" y="95.2"> echo &apos;This is how</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="175.6" y="95.2" width="8.4" height="19.6" fill="#fad000"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.529074;0.53545;1" dur="7.84s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-65" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo &apos;Welcome to the shadesOfPurple theme!&apos;</text>
+<text class="text fg" x="16" y="75.6">Welcome to the shadesOfPurple theme!</text>
+<text class="text f13" x="16" y="95.2">❯</text>
+<text class="text fg" x="24" y="95.2"> echo &apos;This is how</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="184" y="95.2" width="8.4" height="19.6" fill="#fad000"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.53545;0.542081;1" dur="7.84s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-66" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo &apos;Welcome to the shadesOfPurple theme!&apos;</text>
+<text class="text fg" x="16" y="75.6">Welcome to the shadesOfPurple theme!</text>
+<text class="text f13" x="16" y="95.2">❯</text>
+<text class="text fg" x="24" y="95.2"> echo &apos;This is how y</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="192.4" y="95.2" width="8.4" height="19.6" fill="#fad000"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.542081;0.548457;1" dur="7.84s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-67" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo &apos;Welcome to the shadesOfPurple theme!&apos;</text>
+<text class="text fg" x="16" y="75.6">Welcome to the shadesOfPurple theme!</text>
+<text class="text f13" x="16" y="95.2">❯</text>
+<text class="text fg" x="24" y="95.2"> echo &apos;This is how yo</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="200.8" y="95.2" width="8.4" height="19.6" fill="#fad000"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.548457;0.55496;1" dur="7.84s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-68" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo &apos;Welcome to the shadesOfPurple theme!&apos;</text>
+<text class="text fg" x="16" y="75.6">Welcome to the shadesOfPurple theme!</text>
+<text class="text f13" x="16" y="95.2">❯</text>
+<text class="text fg" x="24" y="95.2"> echo &apos;This is how you</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="209.2" y="95.2" width="8.4" height="19.6" fill="#fad000"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.55496;0.561209;1" dur="7.84s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-69" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo &apos;Welcome to the shadesOfPurple theme!&apos;</text>
+<text class="text fg" x="16" y="75.6">Welcome to the shadesOfPurple theme!</text>
+<text class="text f13" x="16" y="95.2">❯</text>
+<text class="text fg" x="24" y="95.2"> echo &apos;This is how your</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="217.6" y="95.2" width="8.4" height="19.6" fill="#fad000"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.561209;0.56784;1" dur="7.84s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-70" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo &apos;Welcome to the shadesOfPurple theme!&apos;</text>
+<text class="text fg" x="16" y="75.6">Welcome to the shadesOfPurple theme!</text>
+<text class="text f13" x="16" y="95.2">❯</text>
+<text class="text fg" x="24" y="95.2"> echo &apos;This is how your</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="226" y="95.2" width="8.4" height="19.6" fill="#fad000"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.56784;0.574343;1" dur="7.84s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-71" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo &apos;Welcome to the shadesOfPurple theme!&apos;</text>
+<text class="text fg" x="16" y="75.6">Welcome to the shadesOfPurple theme!</text>
+<text class="text f13" x="16" y="95.2">❯</text>
+<text class="text fg" x="24" y="95.2"> echo &apos;This is how your t</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="234.4" y="95.2" width="8.4" height="19.6" fill="#fad000"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.574343;0.580847;1" dur="7.84s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-72" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo &apos;Welcome to the shadesOfPurple theme!&apos;</text>
+<text class="text fg" x="16" y="75.6">Welcome to the shadesOfPurple theme!</text>
+<text class="text f13" x="16" y="95.2">❯</text>
+<text class="text fg" x="24" y="95.2"> echo &apos;This is how your te</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="242.8" y="95.2" width="8.4" height="19.6" fill="#fad000"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.580847;0.58735;1" dur="7.84s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-73" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo &apos;Welcome to the shadesOfPurple theme!&apos;</text>
+<text class="text fg" x="16" y="75.6">Welcome to the shadesOfPurple theme!</text>
+<text class="text f13" x="16" y="95.2">❯</text>
+<text class="text fg" x="24" y="95.2"> echo &apos;This is how your ter</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="251.2" y="95.2" width="8.4" height="19.6" fill="#fad000"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.58735;0.593471;1" dur="7.84s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-74" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo &apos;Welcome to the shadesOfPurple theme!&apos;</text>
+<text class="text fg" x="16" y="75.6">Welcome to the shadesOfPurple theme!</text>
+<text class="text f13" x="16" y="95.2">❯</text>
+<text class="text fg" x="24" y="95.2"> echo &apos;This is how your term</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="259.6" y="95.2" width="8.4" height="19.6" fill="#fad000"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.593471;0.599974;1" dur="7.84s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-75" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo &apos;Welcome to the shadesOfPurple theme!&apos;</text>
+<text class="text fg" x="16" y="75.6">Welcome to the shadesOfPurple theme!</text>
+<text class="text f13" x="16" y="95.2">❯</text>
+<text class="text fg" x="24" y="95.2"> echo &apos;This is how your termi</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="268" y="95.2" width="8.4" height="19.6" fill="#fad000"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.599974;0.606733;1" dur="7.84s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-76" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo &apos;Welcome to the shadesOfPurple theme!&apos;</text>
+<text class="text fg" x="16" y="75.6">Welcome to the shadesOfPurple theme!</text>
+<text class="text f13" x="16" y="95.2">❯</text>
+<text class="text fg" x="24" y="95.2"> echo &apos;This is how your termin</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="276.4" y="95.2" width="8.4" height="19.6" fill="#fad000"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.606733;0.613364;1" dur="7.84s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-77" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo &apos;Welcome to the shadesOfPurple theme!&apos;</text>
+<text class="text fg" x="16" y="75.6">Welcome to the shadesOfPurple theme!</text>
+<text class="text f13" x="16" y="95.2">❯</text>
+<text class="text fg" x="24" y="95.2"> echo &apos;This is how your termina</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="284.8" y="95.2" width="8.4" height="19.6" fill="#fad000"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.613364;0.619995;1" dur="7.84s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-78" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo &apos;Welcome to the shadesOfPurple theme!&apos;</text>
+<text class="text fg" x="16" y="75.6">Welcome to the shadesOfPurple theme!</text>
+<text class="text f13" x="16" y="95.2">❯</text>
+<text class="text fg" x="24" y="95.2"> echo &apos;This is how your terminal</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="293.2" y="95.2" width="8.4" height="19.6" fill="#fad000"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.619995;0.625988;1" dur="7.84s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-79" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo &apos;Welcome to the shadesOfPurple theme!&apos;</text>
+<text class="text fg" x="16" y="75.6">Welcome to the shadesOfPurple theme!</text>
+<text class="text f13" x="16" y="95.2">❯</text>
+<text class="text fg" x="24" y="95.2"> echo &apos;This is how your terminal</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="301.6" y="95.2" width="8.4" height="19.6" fill="#fad000"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.625988;0.632492;1" dur="7.84s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-80" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo &apos;Welcome to the shadesOfPurple theme!&apos;</text>
+<text class="text fg" x="16" y="75.6">Welcome to the shadesOfPurple theme!</text>
+<text class="text f13" x="16" y="95.2">❯</text>
+<text class="text fg" x="24" y="95.2"> echo &apos;This is how your terminal l</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="310" y="95.2" width="8.4" height="19.6" fill="#fad000"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.632492;0.640143;1" dur="7.84s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-81" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo &apos;Welcome to the shadesOfPurple theme!&apos;</text>
+<text class="text fg" x="16" y="75.6">Welcome to the shadesOfPurple theme!</text>
+<text class="text f13" x="16" y="95.2">❯</text>
+<text class="text fg" x="24" y="95.2"> echo &apos;This is how your terminal lo</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="318.4" y="95.2" width="8.4" height="19.6" fill="#fad000"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.640143;0.646774;1" dur="7.84s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-82" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo &apos;Welcome to the shadesOfPurple theme!&apos;</text>
+<text class="text fg" x="16" y="75.6">Welcome to the shadesOfPurple theme!</text>
+<text class="text f13" x="16" y="95.2">❯</text>
+<text class="text fg" x="24" y="95.2"> echo &apos;This is how your terminal loo</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="326.8" y="95.2" width="8.4" height="19.6" fill="#fad000"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.646774;0.652895;1" dur="7.84s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-83" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo &apos;Welcome to the shadesOfPurple theme!&apos;</text>
+<text class="text fg" x="16" y="75.6">Welcome to the shadesOfPurple theme!</text>
+<text class="text f13" x="16" y="95.2">❯</text>
+<text class="text fg" x="24" y="95.2"> echo &apos;This is how your terminal look</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="335.2" y="95.2" width="8.4" height="19.6" fill="#fad000"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.652895;0.659271;1" dur="7.84s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-84" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo &apos;Welcome to the shadesOfPurple theme!&apos;</text>
+<text class="text fg" x="16" y="75.6">Welcome to the shadesOfPurple theme!</text>
+<text class="text f13" x="16" y="95.2">❯</text>
+<text class="text fg" x="24" y="95.2"> echo &apos;This is how your terminal looks</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="343.6" y="95.2" width="8.4" height="19.6" fill="#fad000"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.659271;0.665647;1" dur="7.84s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-85" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo &apos;Welcome to the shadesOfPurple theme!&apos;</text>
+<text class="text fg" x="16" y="75.6">Welcome to the shadesOfPurple theme!</text>
+<text class="text f13" x="16" y="95.2">❯</text>
+<text class="text fg" x="24" y="95.2"> echo &apos;This is how your terminal looks.</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="352" y="95.2" width="8.4" height="19.6" fill="#fad000"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.665647;0.672022;1" dur="7.84s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-86" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo &apos;Welcome to the shadesOfPurple theme!&apos;</text>
+<text class="text fg" x="16" y="75.6">Welcome to the shadesOfPurple theme!</text>
+<text class="text f13" x="16" y="95.2">❯</text>
+<text class="text fg" x="24" y="95.2"> echo &apos;This is how your terminal looks.&apos;</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="360.4" y="95.2" width="8.4" height="19.6" fill="#fad000"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.672022;0.671767;1" dur="7.84s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-87" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo &apos;Welcome to the shadesOfPurple theme!&apos;</text>
+<text class="text fg" x="16" y="75.6">Welcome to the shadesOfPurple theme!</text>
+<text class="text f13" x="16" y="95.2">❯</text>
+<text class="text fg" x="24" y="95.2"> echo &apos;This is how your terminal looks.&apos;</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor" x="360.4" y="95.2" width="8.4" height="19.6" fill="#fad000"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.671767;0.726218;1" dur="7.84s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-88" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo &apos;Welcome to the shadesOfPurple theme!&apos;</text>
+<text class="text fg" x="16" y="75.6">Welcome to the shadesOfPurple theme!</text>
+<text class="text f13" x="16" y="95.2">❯</text>
+<text class="text fg" x="24" y="95.2"> echo &apos;This is how your terminal looks.&apos;</text>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.726218;0.726728;1" dur="7.84s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-89" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo &apos;Welcome to the shadesOfPurple theme!&apos;</text>
+<text class="text fg" x="16" y="75.6">Welcome to the shadesOfPurple theme!</text>
+<text class="text f13" x="16" y="95.2">❯</text>
+<text class="text fg" x="24" y="95.2"> echo &apos;This is how your terminal looks.&apos;</text>
+<text class="text fg" x="16" y="114.8">This is how your terminal looks.</text>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.726728;0.741903;1" dur="7.84s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-90" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo &apos;Welcome to the shadesOfPurple theme!&apos;</text>
+<text class="text fg" x="16" y="75.6">Welcome to the shadesOfPurple theme!</text>
+<text class="text f13" x="16" y="95.2">❯</text>
+<text class="text fg" x="24" y="95.2"> echo &apos;This is how your terminal looks.&apos;</text>
+<text class="text fg" x="16" y="114.8">This is how your terminal looks.</text>
+<text class="text f13" x="16" y="134.4">❯</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor" x="32.8" y="134.4" width="8.4" height="19.6" fill="#fad000"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.741903;0.872482;1" dur="7.84s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-91" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo &apos;Welcome to the shadesOfPurple theme!&apos;</text>
+<text class="text fg" x="16" y="75.6">Welcome to the shadesOfPurple theme!</text>
+<text class="text f13" x="16" y="95.2">❯</text>
+<text class="text fg" x="24" y="95.2"> echo &apos;This is how your terminal looks.&apos;</text>
+<text class="text fg" x="16" y="114.8">This is how your terminal looks.</text>
+<text class="text f13" x="16" y="134.4">❯</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor" x="32.8" y="134.4" width="8.4" height="19.6" fill="#fad000"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;visible" keyTimes="0;0.872482;1" dur="7.84s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <!-- Static footer -->
+  
+  
+  </g>
+</svg>

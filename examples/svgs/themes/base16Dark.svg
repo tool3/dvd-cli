@@ -1,0 +1,1173 @@
+<svg width="385" height="178" xmlns="http://www.w3.org/2000/svg">
+  <defs><clipPath id="rounded-corners"><rect x="0" y="0" width="385" height="178" rx="8" ry="8"/></clipPath></defs>
+  <style>
+    
+.text {
+  font-family: 'SF Mono', 'Monaco', 'Menlo', 'Consolas', monospace;
+  font-size: 14px;
+  dominant-baseline: text-before-edge;
+  text-rendering: geometricPrecision;
+  white-space: pre;
+}
+.bold { font-weight: bold; }
+.italic { font-style: italic; }
+.uline { text-decoration: underline; }
+.strike { text-decoration: line-through; }
+.dim { opacity: 0.5; }
+.fg { fill: #d8d8d8; }
+.f0 { fill: #181818; }
+.f1 { fill: #ab4642; }
+.f2 { fill: #a1b56c; }
+.f3 { fill: #f7ca88; }
+.f4 { fill: #7cafc2; }
+.f5 { fill: #ba8baf; }
+.f6 { fill: #86c1b9; }
+.f7 { fill: #d8d8d8; }
+.f8 { fill: #585858; }
+.f9 { fill: #ab4642; }
+.f10 { fill: #a1b56c; }
+.f11 { fill: #f7ca88; }
+.f12 { fill: #7cafc2; }
+.f13 { fill: #ba8baf; }
+.f14 { fill: #86c1b9; }
+.f15 { fill: #f8f8f8; }
+.bg { fill: #181818; }
+.b0 { fill: #181818; }
+.b1 { fill: #ab4642; }
+.b2 { fill: #a1b56c; }
+.b3 { fill: #f7ca88; }
+.b4 { fill: #7cafc2; }
+.b5 { fill: #ba8baf; }
+.b6 { fill: #86c1b9; }
+.b7 { fill: #d8d8d8; }
+.b8 { fill: #585858; }
+.b9 { fill: #ab4642; }
+.b10 { fill: #a1b56c; }
+.b11 { fill: #f7ca88; }
+.b12 { fill: #7cafc2; }
+.b13 { fill: #ba8baf; }
+.b14 { fill: #86c1b9; }
+.b15 { fill: #f8f8f8; }
+.cursor { animation: blink 1s step-end infinite; }
+@keyframes blink {
+  0%, 50% { opacity: 1; }
+  50.01%, 100% { opacity: 0; }
+}
+.cursor-active { opacity: 1; }
+
+  </style>
+
+  <g clip-path="url(#rounded-corners)">
+  <!-- Static background (never animated) -->
+  <rect width="100%" height="100%" fill="#181818" rx="8" ry="8" />
+
+  <!-- Static chrome (title bar) -->
+  <g class="chrome"><rect class="header-bg" x="0" y="0" width="385" height="40" fill="#181818" rx="8" ry="8"/>
+<rect x="0" y="32" width="385" height="8" fill="#181818"/>
+<circle cx="22" cy="20" r="6" fill="#ff5f56"/>
+<circle cx="42" cy="20" r="6" fill="#ffbd2e"/>
+<circle cx="62" cy="20" r="6" fill="#27c93f"/>
+<text class="text fg" x="192.5" y="20" text-anchor="middle" style="dominant-baseline: central">base16Dark</text></g>
+
+  <!-- Animated frames (only dynamic content) -->
+  
+  <g id="frame-0" visibility="visible">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor" x="32.8" y="56" width="8.4" height="19.6" fill="#d8d8d8"/>
+</g>
+    <animate attributeName="visibility" values="visible;hidden;hidden" keyTimes="0;0.008128;1" dur="7.63s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-1" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> e</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="41.2" y="56" width="8.4" height="19.6" fill="#d8d8d8"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.008128;0.014814;1" dur="7.63s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-2" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> ec</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="49.6" y="56" width="8.4" height="19.6" fill="#d8d8d8"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.014814;0.021631;1" dur="7.63s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-3" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> ech</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="58" y="56" width="8.4" height="19.6" fill="#d8d8d8"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.021631;0.028317;1" dur="7.63s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-4" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="66.4" y="56" width="8.4" height="19.6" fill="#d8d8d8"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.028317;0.035003;1" dur="7.63s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-5" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="74.8" y="56" width="8.4" height="19.6" fill="#d8d8d8"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.035003;0.041689;1" dur="7.63s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-6" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo &apos;</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="83.2" y="56" width="8.4" height="19.6" fill="#d8d8d8"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.041689;0.048374;1" dur="7.63s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-7" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo &apos;W</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="91.6" y="56" width="8.4" height="19.6" fill="#d8d8d8"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.048374;0.05506;1" dur="7.63s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-8" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo &apos;We</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="100" y="56" width="8.4" height="19.6" fill="#d8d8d8"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.05506;0.061746;1" dur="7.63s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-9" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo &apos;Wel</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="108.4" y="56" width="8.4" height="19.6" fill="#d8d8d8"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.061746;0.068432;1" dur="7.63s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-10" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo &apos;Welc</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="116.8" y="56" width="8.4" height="19.6" fill="#d8d8d8"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.068432;0.075249;1" dur="7.63s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-11" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo &apos;Welco</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="125.2" y="56" width="8.4" height="19.6" fill="#d8d8d8"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.075249;0.081804;1" dur="7.63s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-12" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo &apos;Welcom</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="133.6" y="56" width="8.4" height="19.6" fill="#d8d8d8"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.081804;0.08849;1" dur="7.63s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-13" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo &apos;Welcome</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="142" y="56" width="8.4" height="19.6" fill="#d8d8d8"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.08849;0.095176;1" dur="7.63s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-14" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo &apos;Welcome</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="150.4" y="56" width="8.4" height="19.6" fill="#d8d8d8"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.095176;0.10173;1" dur="7.63s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-15" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo &apos;Welcome t</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="158.8" y="56" width="8.4" height="19.6" fill="#d8d8d8"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.10173;0.108416;1" dur="7.63s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-16" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo &apos;Welcome to</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="167.2" y="56" width="8.4" height="19.6" fill="#d8d8d8"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.108416;0.115233;1" dur="7.63s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-17" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo &apos;Welcome to</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="175.6" y="56" width="8.4" height="19.6" fill="#d8d8d8"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.115233;0.121788;1" dur="7.63s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-18" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo &apos;Welcome to t</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="184" y="56" width="8.4" height="19.6" fill="#d8d8d8"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.121788;0.128474;1" dur="7.63s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-19" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo &apos;Welcome to th</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="192.4" y="56" width="8.4" height="19.6" fill="#d8d8d8"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.128474;0.135291;1" dur="7.63s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-20" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo &apos;Welcome to the</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="200.8" y="56" width="8.4" height="19.6" fill="#d8d8d8"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.135291;0.141846;1" dur="7.63s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-21" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo &apos;Welcome to the</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="209.2" y="56" width="8.4" height="19.6" fill="#d8d8d8"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.141846;0.148663;1" dur="7.63s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-22" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo &apos;Welcome to the b</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="217.6" y="56" width="8.4" height="19.6" fill="#d8d8d8"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.148663;0.15548;1" dur="7.63s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-23" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo &apos;Welcome to the ba</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="226" y="56" width="8.4" height="19.6" fill="#d8d8d8"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.15548;0.162035;1" dur="7.63s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-24" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo &apos;Welcome to the bas</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="234.4" y="56" width="8.4" height="19.6" fill="#d8d8d8"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.162035;0.168852;1" dur="7.63s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-25" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo &apos;Welcome to the base</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="242.8" y="56" width="8.4" height="19.6" fill="#d8d8d8"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.168852;0.175537;1" dur="7.63s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-26" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo &apos;Welcome to the base1</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="251.2" y="56" width="8.4" height="19.6" fill="#d8d8d8"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.175537;0.182223;1" dur="7.63s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-27" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo &apos;Welcome to the base16</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="259.6" y="56" width="8.4" height="19.6" fill="#d8d8d8"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.182223;0.188909;1" dur="7.63s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-28" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo &apos;Welcome to the base16D</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="268" y="56" width="8.4" height="19.6" fill="#d8d8d8"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.188909;0.195857;1" dur="7.63s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-29" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo &apos;Welcome to the base16Da</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="276.4" y="56" width="8.4" height="19.6" fill="#d8d8d8"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.195857;0.202543;1" dur="7.63s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-30" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo &apos;Welcome to the base16Dar</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="284.8" y="56" width="8.4" height="19.6" fill="#d8d8d8"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.202543;0.209229;1" dur="7.63s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-31" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo &apos;Welcome to the base16Dark</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="293.2" y="56" width="8.4" height="19.6" fill="#d8d8d8"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.209229;0.216046;1" dur="7.63s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-32" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo &apos;Welcome to the base16Dark</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="301.6" y="56" width="8.4" height="19.6" fill="#d8d8d8"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.216046;0.222601;1" dur="7.63s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-33" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo &apos;Welcome to the base16Dark t</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="310" y="56" width="8.4" height="19.6" fill="#d8d8d8"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.222601;0.229549;1" dur="7.63s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-34" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo &apos;Welcome to the base16Dark th</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="318.4" y="56" width="8.4" height="19.6" fill="#d8d8d8"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.229549;0.236366;1" dur="7.63s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-35" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo &apos;Welcome to the base16Dark the</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="326.8" y="56" width="8.4" height="19.6" fill="#d8d8d8"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.236366;0.243052;1" dur="7.63s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-36" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo &apos;Welcome to the base16Dark them</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="335.2" y="56" width="8.4" height="19.6" fill="#d8d8d8"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.243052;0.249738;1" dur="7.63s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-37" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo &apos;Welcome to the base16Dark theme</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="343.6" y="56" width="8.4" height="19.6" fill="#d8d8d8"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.249738;0.256817;1" dur="7.63s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-38" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo &apos;Welcome to the base16Dark theme!</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="352" y="56" width="8.4" height="19.6" fill="#d8d8d8"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.256817;0.263241;1" dur="7.63s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-39" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo &apos;Welcome to the base16Dark theme!&apos;</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="360.4" y="56" width="8.4" height="19.6" fill="#d8d8d8"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.263241;0.262979;1" dur="7.63s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-40" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo &apos;Welcome to the base16Dark theme!&apos;</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor" x="360.4" y="56" width="8.4" height="19.6" fill="#d8d8d8"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.262979;0.317908;1" dur="7.63s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-41" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo &apos;Welcome to the base16Dark theme!&apos;</text>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.317908;0.318825;1" dur="7.63s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-42" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo &apos;Welcome to the base16Dark theme!&apos;</text>
+<text class="text fg" x="16" y="75.6">Welcome to the base16Dark theme!</text>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.318825;0.333377;1" dur="7.63s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-43" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo &apos;Welcome to the base16Dark theme!&apos;</text>
+<text class="text fg" x="16" y="75.6">Welcome to the base16Dark theme!</text>
+<text class="text f13" x="16" y="95.2">❯</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor" x="32.8" y="95.2" width="8.4" height="19.6" fill="#d8d8d8"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.333377;0.407446;1" dur="7.63s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-44" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo &apos;Welcome to the base16Dark theme!&apos;</text>
+<text class="text fg" x="16" y="75.6">Welcome to the base16Dark theme!</text>
+<text class="text f13" x="16" y="95.2">❯</text>
+<text class="text fg" x="24" y="95.2"> e</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="41.2" y="95.2" width="8.4" height="19.6" fill="#d8d8d8"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.407446;0.414132;1" dur="7.63s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-45" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo &apos;Welcome to the base16Dark theme!&apos;</text>
+<text class="text fg" x="16" y="75.6">Welcome to the base16Dark theme!</text>
+<text class="text f13" x="16" y="95.2">❯</text>
+<text class="text fg" x="24" y="95.2"> ec</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="49.6" y="95.2" width="8.4" height="19.6" fill="#d8d8d8"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.414132;0.420949;1" dur="7.63s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-46" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo &apos;Welcome to the base16Dark theme!&apos;</text>
+<text class="text fg" x="16" y="75.6">Welcome to the base16Dark theme!</text>
+<text class="text f13" x="16" y="95.2">❯</text>
+<text class="text fg" x="24" y="95.2"> ech</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="58" y="95.2" width="8.4" height="19.6" fill="#d8d8d8"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.420949;0.427504;1" dur="7.63s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-47" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo &apos;Welcome to the base16Dark theme!&apos;</text>
+<text class="text fg" x="16" y="75.6">Welcome to the base16Dark theme!</text>
+<text class="text f13" x="16" y="95.2">❯</text>
+<text class="text fg" x="24" y="95.2"> echo</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="66.4" y="95.2" width="8.4" height="19.6" fill="#d8d8d8"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.427504;0.43419;1" dur="7.63s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-48" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo &apos;Welcome to the base16Dark theme!&apos;</text>
+<text class="text fg" x="16" y="75.6">Welcome to the base16Dark theme!</text>
+<text class="text f13" x="16" y="95.2">❯</text>
+<text class="text fg" x="24" y="95.2"> echo</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="74.8" y="95.2" width="8.4" height="19.6" fill="#d8d8d8"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.43419;0.441138;1" dur="7.63s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-49" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo &apos;Welcome to the base16Dark theme!&apos;</text>
+<text class="text fg" x="16" y="75.6">Welcome to the base16Dark theme!</text>
+<text class="text f13" x="16" y="95.2">❯</text>
+<text class="text fg" x="24" y="95.2"> echo &apos;</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="83.2" y="95.2" width="8.4" height="19.6" fill="#d8d8d8"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.441138;0.447955;1" dur="7.63s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-50" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo &apos;Welcome to the base16Dark theme!&apos;</text>
+<text class="text fg" x="16" y="75.6">Welcome to the base16Dark theme!</text>
+<text class="text f13" x="16" y="95.2">❯</text>
+<text class="text fg" x="24" y="95.2"> echo &apos;T</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="91.6" y="95.2" width="8.4" height="19.6" fill="#d8d8d8"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.447955;0.454641;1" dur="7.63s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-51" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo &apos;Welcome to the base16Dark theme!&apos;</text>
+<text class="text fg" x="16" y="75.6">Welcome to the base16Dark theme!</text>
+<text class="text f13" x="16" y="95.2">❯</text>
+<text class="text fg" x="24" y="95.2"> echo &apos;Th</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="100" y="95.2" width="8.4" height="19.6" fill="#d8d8d8"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.454641;0.461327;1" dur="7.63s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-52" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo &apos;Welcome to the base16Dark theme!&apos;</text>
+<text class="text fg" x="16" y="75.6">Welcome to the base16Dark theme!</text>
+<text class="text f13" x="16" y="95.2">❯</text>
+<text class="text fg" x="24" y="95.2"> echo &apos;Thi</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="108.4" y="95.2" width="8.4" height="19.6" fill="#d8d8d8"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.461327;0.468013;1" dur="7.63s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-53" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo &apos;Welcome to the base16Dark theme!&apos;</text>
+<text class="text fg" x="16" y="75.6">Welcome to the base16Dark theme!</text>
+<text class="text f13" x="16" y="95.2">❯</text>
+<text class="text fg" x="24" y="95.2"> echo &apos;This</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="116.8" y="95.2" width="8.4" height="19.6" fill="#d8d8d8"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.468013;0.474698;1" dur="7.63s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-54" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo &apos;Welcome to the base16Dark theme!&apos;</text>
+<text class="text fg" x="16" y="75.6">Welcome to the base16Dark theme!</text>
+<text class="text f13" x="16" y="95.2">❯</text>
+<text class="text fg" x="24" y="95.2"> echo &apos;This</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="125.2" y="95.2" width="8.4" height="19.6" fill="#d8d8d8"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.474698;0.480991;1" dur="7.63s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-55" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo &apos;Welcome to the base16Dark theme!&apos;</text>
+<text class="text fg" x="16" y="75.6">Welcome to the base16Dark theme!</text>
+<text class="text f13" x="16" y="95.2">❯</text>
+<text class="text fg" x="24" y="95.2"> echo &apos;This i</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="133.6" y="95.2" width="8.4" height="19.6" fill="#d8d8d8"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.480991;0.487677;1" dur="7.63s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-56" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo &apos;Welcome to the base16Dark theme!&apos;</text>
+<text class="text fg" x="16" y="75.6">Welcome to the base16Dark theme!</text>
+<text class="text f13" x="16" y="95.2">❯</text>
+<text class="text fg" x="24" y="95.2"> echo &apos;This is</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="142" y="95.2" width="8.4" height="19.6" fill="#d8d8d8"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.487677;0.494232;1" dur="7.63s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-57" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo &apos;Welcome to the base16Dark theme!&apos;</text>
+<text class="text fg" x="16" y="75.6">Welcome to the base16Dark theme!</text>
+<text class="text f13" x="16" y="95.2">❯</text>
+<text class="text fg" x="24" y="95.2"> echo &apos;This is</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="150.4" y="95.2" width="8.4" height="19.6" fill="#d8d8d8"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.494232;0.500787;1" dur="7.63s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-58" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo &apos;Welcome to the base16Dark theme!&apos;</text>
+<text class="text fg" x="16" y="75.6">Welcome to the base16Dark theme!</text>
+<text class="text f13" x="16" y="95.2">❯</text>
+<text class="text fg" x="24" y="95.2"> echo &apos;This is h</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="158.8" y="95.2" width="8.4" height="19.6" fill="#d8d8d8"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.500787;0.507604;1" dur="7.63s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-59" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo &apos;Welcome to the base16Dark theme!&apos;</text>
+<text class="text fg" x="16" y="75.6">Welcome to the base16Dark theme!</text>
+<text class="text f13" x="16" y="95.2">❯</text>
+<text class="text fg" x="24" y="95.2"> echo &apos;This is ho</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="167.2" y="95.2" width="8.4" height="19.6" fill="#d8d8d8"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.507604;0.514421;1" dur="7.63s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-60" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo &apos;Welcome to the base16Dark theme!&apos;</text>
+<text class="text fg" x="16" y="75.6">Welcome to the base16Dark theme!</text>
+<text class="text f13" x="16" y="95.2">❯</text>
+<text class="text fg" x="24" y="95.2"> echo &apos;This is how</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="175.6" y="95.2" width="8.4" height="19.6" fill="#d8d8d8"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.514421;0.521106;1" dur="7.63s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-61" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo &apos;Welcome to the base16Dark theme!&apos;</text>
+<text class="text fg" x="16" y="75.6">Welcome to the base16Dark theme!</text>
+<text class="text f13" x="16" y="95.2">❯</text>
+<text class="text fg" x="24" y="95.2"> echo &apos;This is how</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="184" y="95.2" width="8.4" height="19.6" fill="#d8d8d8"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.521106;0.527792;1" dur="7.63s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-62" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo &apos;Welcome to the base16Dark theme!&apos;</text>
+<text class="text fg" x="16" y="75.6">Welcome to the base16Dark theme!</text>
+<text class="text f13" x="16" y="95.2">❯</text>
+<text class="text fg" x="24" y="95.2"> echo &apos;This is how y</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="192.4" y="95.2" width="8.4" height="19.6" fill="#d8d8d8"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.527792;0.534478;1" dur="7.63s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-63" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo &apos;Welcome to the base16Dark theme!&apos;</text>
+<text class="text fg" x="16" y="75.6">Welcome to the base16Dark theme!</text>
+<text class="text f13" x="16" y="95.2">❯</text>
+<text class="text fg" x="24" y="95.2"> echo &apos;This is how yo</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="200.8" y="95.2" width="8.4" height="19.6" fill="#d8d8d8"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.534478;0.541164;1" dur="7.63s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-64" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo &apos;Welcome to the base16Dark theme!&apos;</text>
+<text class="text fg" x="16" y="75.6">Welcome to the base16Dark theme!</text>
+<text class="text f13" x="16" y="95.2">❯</text>
+<text class="text fg" x="24" y="95.2"> echo &apos;This is how you</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="209.2" y="95.2" width="8.4" height="19.6" fill="#d8d8d8"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.541164;0.547981;1" dur="7.63s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-65" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo &apos;Welcome to the base16Dark theme!&apos;</text>
+<text class="text fg" x="16" y="75.6">Welcome to the base16Dark theme!</text>
+<text class="text f13" x="16" y="95.2">❯</text>
+<text class="text fg" x="24" y="95.2"> echo &apos;This is how your</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="217.6" y="95.2" width="8.4" height="19.6" fill="#d8d8d8"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.547981;0.554667;1" dur="7.63s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-66" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo &apos;Welcome to the base16Dark theme!&apos;</text>
+<text class="text fg" x="16" y="75.6">Welcome to the base16Dark theme!</text>
+<text class="text f13" x="16" y="95.2">❯</text>
+<text class="text fg" x="24" y="95.2"> echo &apos;This is how your</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="226" y="95.2" width="8.4" height="19.6" fill="#d8d8d8"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.554667;0.561091;1" dur="7.63s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-67" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo &apos;Welcome to the base16Dark theme!&apos;</text>
+<text class="text fg" x="16" y="75.6">Welcome to the base16Dark theme!</text>
+<text class="text f13" x="16" y="95.2">❯</text>
+<text class="text fg" x="24" y="95.2"> echo &apos;This is how your t</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="234.4" y="95.2" width="8.4" height="19.6" fill="#d8d8d8"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.561091;0.568039;1" dur="7.63s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-68" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo &apos;Welcome to the base16Dark theme!&apos;</text>
+<text class="text fg" x="16" y="75.6">Welcome to the base16Dark theme!</text>
+<text class="text f13" x="16" y="95.2">❯</text>
+<text class="text fg" x="24" y="95.2"> echo &apos;This is how your te</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="242.8" y="95.2" width="8.4" height="19.6" fill="#d8d8d8"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.568039;0.574594;1" dur="7.63s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-69" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo &apos;Welcome to the base16Dark theme!&apos;</text>
+<text class="text fg" x="16" y="75.6">Welcome to the base16Dark theme!</text>
+<text class="text f13" x="16" y="95.2">❯</text>
+<text class="text fg" x="24" y="95.2"> echo &apos;This is how your ter</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="251.2" y="95.2" width="8.4" height="19.6" fill="#d8d8d8"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.574594;0.581279;1" dur="7.63s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-70" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo &apos;Welcome to the base16Dark theme!&apos;</text>
+<text class="text fg" x="16" y="75.6">Welcome to the base16Dark theme!</text>
+<text class="text f13" x="16" y="95.2">❯</text>
+<text class="text fg" x="24" y="95.2"> echo &apos;This is how your term</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="259.6" y="95.2" width="8.4" height="19.6" fill="#d8d8d8"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.581279;0.588096;1" dur="7.63s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-71" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo &apos;Welcome to the base16Dark theme!&apos;</text>
+<text class="text fg" x="16" y="75.6">Welcome to the base16Dark theme!</text>
+<text class="text f13" x="16" y="95.2">❯</text>
+<text class="text fg" x="24" y="95.2"> echo &apos;This is how your termi</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="268" y="95.2" width="8.4" height="19.6" fill="#d8d8d8"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.588096;0.595045;1" dur="7.63s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-72" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo &apos;Welcome to the base16Dark theme!&apos;</text>
+<text class="text fg" x="16" y="75.6">Welcome to the base16Dark theme!</text>
+<text class="text f13" x="16" y="95.2">❯</text>
+<text class="text fg" x="24" y="95.2"> echo &apos;This is how your termin</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="276.4" y="95.2" width="8.4" height="19.6" fill="#d8d8d8"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.595045;0.601599;1" dur="7.63s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-73" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo &apos;Welcome to the base16Dark theme!&apos;</text>
+<text class="text fg" x="16" y="75.6">Welcome to the base16Dark theme!</text>
+<text class="text f13" x="16" y="95.2">❯</text>
+<text class="text fg" x="24" y="95.2"> echo &apos;This is how your termina</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="284.8" y="95.2" width="8.4" height="19.6" fill="#d8d8d8"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.601599;0.608547;1" dur="7.63s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-74" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo &apos;Welcome to the base16Dark theme!&apos;</text>
+<text class="text fg" x="16" y="75.6">Welcome to the base16Dark theme!</text>
+<text class="text f13" x="16" y="95.2">❯</text>
+<text class="text fg" x="24" y="95.2"> echo &apos;This is how your terminal</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="293.2" y="95.2" width="8.4" height="19.6" fill="#d8d8d8"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.608547;0.615233;1" dur="7.63s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-75" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo &apos;Welcome to the base16Dark theme!&apos;</text>
+<text class="text fg" x="16" y="75.6">Welcome to the base16Dark theme!</text>
+<text class="text f13" x="16" y="95.2">❯</text>
+<text class="text fg" x="24" y="95.2"> echo &apos;This is how your terminal</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="301.6" y="95.2" width="8.4" height="19.6" fill="#d8d8d8"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.615233;0.621657;1" dur="7.63s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-76" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo &apos;Welcome to the base16Dark theme!&apos;</text>
+<text class="text fg" x="16" y="75.6">Welcome to the base16Dark theme!</text>
+<text class="text f13" x="16" y="95.2">❯</text>
+<text class="text fg" x="24" y="95.2"> echo &apos;This is how your terminal l</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="310" y="95.2" width="8.4" height="19.6" fill="#d8d8d8"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.621657;0.629392;1" dur="7.63s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-77" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo &apos;Welcome to the base16Dark theme!&apos;</text>
+<text class="text fg" x="16" y="75.6">Welcome to the base16Dark theme!</text>
+<text class="text f13" x="16" y="95.2">❯</text>
+<text class="text fg" x="24" y="95.2"> echo &apos;This is how your terminal lo</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="318.4" y="95.2" width="8.4" height="19.6" fill="#d8d8d8"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.629392;0.635947;1" dur="7.63s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-78" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo &apos;Welcome to the base16Dark theme!&apos;</text>
+<text class="text fg" x="16" y="75.6">Welcome to the base16Dark theme!</text>
+<text class="text f13" x="16" y="95.2">❯</text>
+<text class="text fg" x="24" y="95.2"> echo &apos;This is how your terminal loo</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="326.8" y="95.2" width="8.4" height="19.6" fill="#d8d8d8"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.635947;0.642764;1" dur="7.63s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-79" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo &apos;Welcome to the base16Dark theme!&apos;</text>
+<text class="text fg" x="16" y="75.6">Welcome to the base16Dark theme!</text>
+<text class="text f13" x="16" y="95.2">❯</text>
+<text class="text fg" x="24" y="95.2"> echo &apos;This is how your terminal look</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="335.2" y="95.2" width="8.4" height="19.6" fill="#d8d8d8"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.642764;0.649318;1" dur="7.63s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-80" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo &apos;Welcome to the base16Dark theme!&apos;</text>
+<text class="text fg" x="16" y="75.6">Welcome to the base16Dark theme!</text>
+<text class="text f13" x="16" y="95.2">❯</text>
+<text class="text fg" x="24" y="95.2"> echo &apos;This is how your terminal looks</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="343.6" y="95.2" width="8.4" height="19.6" fill="#d8d8d8"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.649318;0.656135;1" dur="7.63s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-81" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo &apos;Welcome to the base16Dark theme!&apos;</text>
+<text class="text fg" x="16" y="75.6">Welcome to the base16Dark theme!</text>
+<text class="text f13" x="16" y="95.2">❯</text>
+<text class="text fg" x="24" y="95.2"> echo &apos;This is how your terminal looks.</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="352" y="95.2" width="8.4" height="19.6" fill="#d8d8d8"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.656135;0.66269;1" dur="7.63s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-82" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo &apos;Welcome to the base16Dark theme!&apos;</text>
+<text class="text fg" x="16" y="75.6">Welcome to the base16Dark theme!</text>
+<text class="text f13" x="16" y="95.2">❯</text>
+<text class="text fg" x="24" y="95.2"> echo &apos;This is how your terminal looks.&apos;</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="360.4" y="95.2" width="8.4" height="19.6" fill="#d8d8d8"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.66269;0.662428;1" dur="7.63s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-83" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo &apos;Welcome to the base16Dark theme!&apos;</text>
+<text class="text fg" x="16" y="75.6">Welcome to the base16Dark theme!</text>
+<text class="text f13" x="16" y="95.2">❯</text>
+<text class="text fg" x="24" y="95.2"> echo &apos;This is how your terminal looks.&apos;</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor" x="360.4" y="95.2" width="8.4" height="19.6" fill="#d8d8d8"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.662428;0.719192;1" dur="7.63s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-84" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo &apos;Welcome to the base16Dark theme!&apos;</text>
+<text class="text fg" x="16" y="75.6">Welcome to the base16Dark theme!</text>
+<text class="text f13" x="16" y="95.2">❯</text>
+<text class="text fg" x="24" y="95.2"> echo &apos;This is how your terminal looks.&apos;</text>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.719192;0.719717;1" dur="7.63s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-85" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo &apos;Welcome to the base16Dark theme!&apos;</text>
+<text class="text fg" x="16" y="75.6">Welcome to the base16Dark theme!</text>
+<text class="text f13" x="16" y="95.2">❯</text>
+<text class="text fg" x="24" y="95.2"> echo &apos;This is how your terminal looks.&apos;</text>
+<text class="text fg" x="16" y="114.8">This is how your terminal looks.</text>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.719717;0.735317;1" dur="7.63s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-86" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo &apos;Welcome to the base16Dark theme!&apos;</text>
+<text class="text fg" x="16" y="75.6">Welcome to the base16Dark theme!</text>
+<text class="text f13" x="16" y="95.2">❯</text>
+<text class="text fg" x="24" y="95.2"> echo &apos;This is how your terminal looks.&apos;</text>
+<text class="text fg" x="16" y="114.8">This is how your terminal looks.</text>
+<text class="text f13" x="16" y="134.4">❯</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor" x="32.8" y="134.4" width="8.4" height="19.6" fill="#d8d8d8"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.735317;0.868904;1" dur="7.63s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-87" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo &apos;Welcome to the base16Dark theme!&apos;</text>
+<text class="text fg" x="16" y="75.6">Welcome to the base16Dark theme!</text>
+<text class="text f13" x="16" y="95.2">❯</text>
+<text class="text fg" x="24" y="95.2"> echo &apos;This is how your terminal looks.&apos;</text>
+<text class="text fg" x="16" y="114.8">This is how your terminal looks.</text>
+<text class="text f13" x="16" y="134.4">❯</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor" x="32.8" y="134.4" width="8.4" height="19.6" fill="#d8d8d8"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;visible" keyTimes="0;0.868904;1" dur="7.63s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <!-- Static footer -->
+  
+  
+  </g>
+</svg>

@@ -1,0 +1,1140 @@
+<svg width="385" height="178" xmlns="http://www.w3.org/2000/svg">
+  <defs><clipPath id="rounded-corners"><rect x="0" y="0" width="385" height="178" rx="8" ry="8"/></clipPath></defs>
+  <style>
+    
+.text {
+  font-family: 'SF Mono', 'Monaco', 'Menlo', 'Consolas', monospace;
+  font-size: 14px;
+  dominant-baseline: text-before-edge;
+  text-rendering: geometricPrecision;
+  white-space: pre;
+}
+.bold { font-weight: bold; }
+.italic { font-style: italic; }
+.uline { text-decoration: underline; }
+.strike { text-decoration: line-through; }
+.dim { opacity: 0.5; }
+.fg { fill: #f8f8f2; }
+.f0 { fill: #272822; }
+.f1 { fill: #f92672; }
+.f2 { fill: #a6e22e; }
+.f3 { fill: #f4bf75; }
+.f4 { fill: #66d9ef; }
+.f5 { fill: #ae81ff; }
+.f6 { fill: #a1efe4; }
+.f7 { fill: #f8f8f2; }
+.f8 { fill: #75715e; }
+.f9 { fill: #f92672; }
+.f10 { fill: #a6e22e; }
+.f11 { fill: #f4bf75; }
+.f12 { fill: #66d9ef; }
+.f13 { fill: #ae81ff; }
+.f14 { fill: #a1efe4; }
+.f15 { fill: #f9f8f5; }
+.bg { fill: #272822; }
+.b0 { fill: #272822; }
+.b1 { fill: #f92672; }
+.b2 { fill: #a6e22e; }
+.b3 { fill: #f4bf75; }
+.b4 { fill: #66d9ef; }
+.b5 { fill: #ae81ff; }
+.b6 { fill: #a1efe4; }
+.b7 { fill: #f8f8f2; }
+.b8 { fill: #75715e; }
+.b9 { fill: #f92672; }
+.b10 { fill: #a6e22e; }
+.b11 { fill: #f4bf75; }
+.b12 { fill: #66d9ef; }
+.b13 { fill: #ae81ff; }
+.b14 { fill: #a1efe4; }
+.b15 { fill: #f9f8f5; }
+.cursor { animation: blink 1s step-end infinite; }
+@keyframes blink {
+  0%, 50% { opacity: 1; }
+  50.01%, 100% { opacity: 0; }
+}
+.cursor-active { opacity: 1; }
+
+  </style>
+
+  <g clip-path="url(#rounded-corners)">
+  <!-- Static background (never animated) -->
+  <rect width="100%" height="100%" fill="#272822" rx="8" ry="8" />
+
+  <!-- Static chrome (title bar) -->
+  <g class="chrome"><rect class="header-bg" x="0" y="0" width="385" height="40" fill="#272822" rx="8" ry="8"/>
+<rect x="0" y="32" width="385" height="8" fill="#272822"/>
+<circle cx="22" cy="20" r="6" fill="#ff5f56"/>
+<circle cx="42" cy="20" r="6" fill="#ffbd2e"/>
+<circle cx="62" cy="20" r="6" fill="#27c93f"/>
+<text class="text fg" x="192.5" y="20" text-anchor="middle" style="dominant-baseline: central">monokai</text></g>
+
+  <!-- Animated frames (only dynamic content) -->
+  
+  <g id="frame-0" visibility="visible">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor" x="32.8" y="56" width="8.4" height="19.6" fill="#f8f8f2"/>
+</g>
+    <animate attributeName="visibility" values="visible;hidden;hidden" keyTimes="0;0.00843;1" dur="7.47s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-1" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> e</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="41.2" y="56" width="8.4" height="19.6" fill="#f8f8f2"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.00843;0.015255;1" dur="7.47s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-2" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> ec</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="49.6" y="56" width="8.4" height="19.6" fill="#f8f8f2"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.015255;0.022213;1" dur="7.47s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-3" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> ech</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="58" y="56" width="8.4" height="19.6" fill="#f8f8f2"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.022213;0.029038;1" dur="7.47s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-4" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="66.4" y="56" width="8.4" height="19.6" fill="#f8f8f2"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.029038;0.035996;1" dur="7.47s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-5" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="74.8" y="56" width="8.4" height="19.6" fill="#f8f8f2"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.035996;0.042955;1" dur="7.47s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-6" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo &apos;</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="83.2" y="56" width="8.4" height="19.6" fill="#f8f8f2"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.042955;0.049913;1" dur="7.47s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-7" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo &apos;W</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="91.6" y="56" width="8.4" height="19.6" fill="#f8f8f2"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.049913;0.056604;1" dur="7.47s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-8" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo &apos;We</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="100" y="56" width="8.4" height="19.6" fill="#f8f8f2"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.056604;0.064365;1" dur="7.47s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-9" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo &apos;Wel</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="108.4" y="56" width="8.4" height="19.6" fill="#f8f8f2"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.064365;0.070253;1" dur="7.47s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-10" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo &apos;Welc</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="116.8" y="56" width="8.4" height="19.6" fill="#f8f8f2"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.070253;0.077211;1" dur="7.47s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-11" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo &apos;Welco</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="125.2" y="56" width="8.4" height="19.6" fill="#f8f8f2"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.077211;0.084303;1" dur="7.47s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-12" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo &apos;Welcom</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="133.6" y="56" width="8.4" height="19.6" fill="#f8f8f2"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.084303;0.091262;1" dur="7.47s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-13" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo &apos;Welcome</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="142" y="56" width="8.4" height="19.6" fill="#f8f8f2"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.091262;0.098086;1" dur="7.47s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-14" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo &apos;Welcome</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="150.4" y="56" width="8.4" height="19.6" fill="#f8f8f2"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.098086;0.104777;1" dur="7.47s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-15" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo &apos;Welcome t</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="158.8" y="56" width="8.4" height="19.6" fill="#f8f8f2"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.104777;0.111602;1" dur="7.47s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-16" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo &apos;Welcome to</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="167.2" y="56" width="8.4" height="19.6" fill="#f8f8f2"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.111602;0.118828;1" dur="7.47s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-17" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo &apos;Welcome to</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="175.6" y="56" width="8.4" height="19.6" fill="#f8f8f2"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.118828;0.125652;1" dur="7.47s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-18" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo &apos;Welcome to t</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="184" y="56" width="8.4" height="19.6" fill="#f8f8f2"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.125652;0.132477;1" dur="7.47s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-19" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo &apos;Welcome to th</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="192.4" y="56" width="8.4" height="19.6" fill="#f8f8f2"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.132477;0.138766;1" dur="7.47s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-20" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo &apos;Welcome to the</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="200.8" y="56" width="8.4" height="19.6" fill="#f8f8f2"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.138766;0.145992;1" dur="7.47s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-21" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo &apos;Welcome to the</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="209.2" y="56" width="8.4" height="19.6" fill="#f8f8f2"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.145992;0.152683;1" dur="7.47s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-22" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo &apos;Welcome to the m</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="217.6" y="56" width="8.4" height="19.6" fill="#f8f8f2"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.152683;0.159641;1" dur="7.47s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-23" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo &apos;Welcome to the mo</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="226" y="56" width="8.4" height="19.6" fill="#f8f8f2"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.159641;0.1666;1" dur="7.47s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-24" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo &apos;Welcome to the mon</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="234.4" y="56" width="8.4" height="19.6" fill="#f8f8f2"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.1666;0.173692;1" dur="7.47s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-25" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo &apos;Welcome to the mono</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="242.8" y="56" width="8.4" height="19.6" fill="#f8f8f2"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.173692;0.180517;1" dur="7.47s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-26" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo &apos;Welcome to the monok</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="251.2" y="56" width="8.4" height="19.6" fill="#f8f8f2"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.180517;0.187609;1" dur="7.47s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-27" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo &apos;Welcome to the monoka</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="259.6" y="56" width="8.4" height="19.6" fill="#f8f8f2"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.187609;0.193764;1" dur="7.47s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-28" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo &apos;Welcome to the monokai</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="268" y="56" width="8.4" height="19.6" fill="#f8f8f2"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.193764;0.20099;1" dur="7.47s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-29" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo &apos;Welcome to the monokai</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="276.4" y="56" width="8.4" height="19.6" fill="#f8f8f2"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.20099;0.208082;1" dur="7.47s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-30" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo &apos;Welcome to the monokai t</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="284.8" y="56" width="8.4" height="19.6" fill="#f8f8f2"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.208082;0.214639;1" dur="7.47s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-31" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo &apos;Welcome to the monokai th</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="293.2" y="56" width="8.4" height="19.6" fill="#f8f8f2"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.214639;0.22133;1" dur="7.47s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-32" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo &apos;Welcome to the monokai the</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="301.6" y="56" width="8.4" height="19.6" fill="#f8f8f2"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.22133;0.228155;1" dur="7.47s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-33" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo &apos;Welcome to the monokai them</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="310" y="56" width="8.4" height="19.6" fill="#f8f8f2"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.228155;0.234845;1" dur="7.47s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-34" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo &apos;Welcome to the monokai theme</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="318.4" y="56" width="8.4" height="19.6" fill="#f8f8f2"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.234845;0.241536;1" dur="7.47s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-35" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo &apos;Welcome to the monokai theme!</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="326.8" y="56" width="8.4" height="19.6" fill="#f8f8f2"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.241536;0.248361;1" dur="7.47s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-36" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo &apos;Welcome to the monokai theme!&apos;</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="335.2" y="56" width="8.4" height="19.6" fill="#f8f8f2"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.248361;0.248093;1" dur="7.47s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-37" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo &apos;Welcome to the monokai theme!&apos;</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor" x="335.2" y="56" width="8.4" height="19.6" fill="#f8f8f2"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.248093;0.304295;1" dur="7.47s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-38" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo &apos;Welcome to the monokai theme!&apos;</text>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.304295;0.3055;1" dur="7.47s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-39" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo &apos;Welcome to the monokai theme!&apos;</text>
+<text class="text fg" x="16" y="75.6">Welcome to the monokai theme!</text>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.3055;0.320353;1" dur="7.47s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-40" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo &apos;Welcome to the monokai theme!&apos;</text>
+<text class="text fg" x="16" y="75.6">Welcome to the monokai theme!</text>
+<text class="text f13" x="16" y="95.2">❯</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor" x="32.8" y="95.2" width="8.4" height="19.6" fill="#f8f8f2"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.320353;0.396628;1" dur="7.47s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-41" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo &apos;Welcome to the monokai theme!&apos;</text>
+<text class="text fg" x="16" y="75.6">Welcome to the monokai theme!</text>
+<text class="text f13" x="16" y="95.2">❯</text>
+<text class="text fg" x="24" y="95.2"> e</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="41.2" y="95.2" width="8.4" height="19.6" fill="#f8f8f2"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.396628;0.40265;1" dur="7.47s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-42" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo &apos;Welcome to the monokai theme!&apos;</text>
+<text class="text fg" x="16" y="75.6">Welcome to the monokai theme!</text>
+<text class="text f13" x="16" y="95.2">❯</text>
+<text class="text fg" x="24" y="95.2"> ec</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="49.6" y="95.2" width="8.4" height="19.6" fill="#f8f8f2"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.40265;0.409742;1" dur="7.47s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-43" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo &apos;Welcome to the monokai theme!&apos;</text>
+<text class="text fg" x="16" y="75.6">Welcome to the monokai theme!</text>
+<text class="text f13" x="16" y="95.2">❯</text>
+<text class="text fg" x="24" y="95.2"> ech</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="58" y="95.2" width="8.4" height="19.6" fill="#f8f8f2"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.409742;0.416566;1" dur="7.47s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-44" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo &apos;Welcome to the monokai theme!&apos;</text>
+<text class="text fg" x="16" y="75.6">Welcome to the monokai theme!</text>
+<text class="text f13" x="16" y="95.2">❯</text>
+<text class="text fg" x="24" y="95.2"> echo</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="66.4" y="95.2" width="8.4" height="19.6" fill="#f8f8f2"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.416566;0.423257;1" dur="7.47s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-45" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo &apos;Welcome to the monokai theme!&apos;</text>
+<text class="text fg" x="16" y="75.6">Welcome to the monokai theme!</text>
+<text class="text f13" x="16" y="95.2">❯</text>
+<text class="text fg" x="24" y="95.2"> echo</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="74.8" y="95.2" width="8.4" height="19.6" fill="#f8f8f2"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.423257;0.430349;1" dur="7.47s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-46" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo &apos;Welcome to the monokai theme!&apos;</text>
+<text class="text fg" x="16" y="75.6">Welcome to the monokai theme!</text>
+<text class="text f13" x="16" y="95.2">❯</text>
+<text class="text fg" x="24" y="95.2"> echo &apos;</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="83.2" y="95.2" width="8.4" height="19.6" fill="#f8f8f2"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.430349;0.43704;1" dur="7.47s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-47" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo &apos;Welcome to the monokai theme!&apos;</text>
+<text class="text fg" x="16" y="75.6">Welcome to the monokai theme!</text>
+<text class="text f13" x="16" y="95.2">❯</text>
+<text class="text fg" x="24" y="95.2"> echo &apos;T</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="91.6" y="95.2" width="8.4" height="19.6" fill="#f8f8f2"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.43704;0.444132;1" dur="7.47s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-48" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo &apos;Welcome to the monokai theme!&apos;</text>
+<text class="text fg" x="16" y="75.6">Welcome to the monokai theme!</text>
+<text class="text f13" x="16" y="95.2">❯</text>
+<text class="text fg" x="24" y="95.2"> echo &apos;Th</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="100" y="95.2" width="8.4" height="19.6" fill="#f8f8f2"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.444132;0.450823;1" dur="7.47s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-49" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo &apos;Welcome to the monokai theme!&apos;</text>
+<text class="text fg" x="16" y="75.6">Welcome to the monokai theme!</text>
+<text class="text f13" x="16" y="95.2">❯</text>
+<text class="text fg" x="24" y="95.2"> echo &apos;Thi</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="108.4" y="95.2" width="8.4" height="19.6" fill="#f8f8f2"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.450823;0.457781;1" dur="7.47s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-50" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo &apos;Welcome to the monokai theme!&apos;</text>
+<text class="text fg" x="16" y="75.6">Welcome to the monokai theme!</text>
+<text class="text f13" x="16" y="95.2">❯</text>
+<text class="text fg" x="24" y="95.2"> echo &apos;This</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="116.8" y="95.2" width="8.4" height="19.6" fill="#f8f8f2"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.457781;0.46474;1" dur="7.47s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-51" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo &apos;Welcome to the monokai theme!&apos;</text>
+<text class="text fg" x="16" y="75.6">Welcome to the monokai theme!</text>
+<text class="text f13" x="16" y="95.2">❯</text>
+<text class="text fg" x="24" y="95.2"> echo &apos;This</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="125.2" y="95.2" width="8.4" height="19.6" fill="#f8f8f2"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.46474;0.471564;1" dur="7.47s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-52" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo &apos;Welcome to the monokai theme!&apos;</text>
+<text class="text fg" x="16" y="75.6">Welcome to the monokai theme!</text>
+<text class="text f13" x="16" y="95.2">❯</text>
+<text class="text fg" x="24" y="95.2"> echo &apos;This i</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="133.6" y="95.2" width="8.4" height="19.6" fill="#f8f8f2"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.471564;0.478656;1" dur="7.47s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-53" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo &apos;Welcome to the monokai theme!&apos;</text>
+<text class="text fg" x="16" y="75.6">Welcome to the monokai theme!</text>
+<text class="text f13" x="16" y="95.2">❯</text>
+<text class="text fg" x="24" y="95.2"> echo &apos;This is</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="142" y="95.2" width="8.4" height="19.6" fill="#f8f8f2"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.478656;0.485213;1" dur="7.47s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-54" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo &apos;Welcome to the monokai theme!&apos;</text>
+<text class="text fg" x="16" y="75.6">Welcome to the monokai theme!</text>
+<text class="text f13" x="16" y="95.2">❯</text>
+<text class="text fg" x="24" y="95.2"> echo &apos;This is</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="150.4" y="95.2" width="8.4" height="19.6" fill="#f8f8f2"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.485213;0.492038;1" dur="7.47s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-55" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo &apos;Welcome to the monokai theme!&apos;</text>
+<text class="text fg" x="16" y="75.6">Welcome to the monokai theme!</text>
+<text class="text f13" x="16" y="95.2">❯</text>
+<text class="text fg" x="24" y="95.2"> echo &apos;This is h</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="158.8" y="95.2" width="8.4" height="19.6" fill="#f8f8f2"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.492038;0.498729;1" dur="7.47s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-56" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo &apos;Welcome to the monokai theme!&apos;</text>
+<text class="text fg" x="16" y="75.6">Welcome to the monokai theme!</text>
+<text class="text f13" x="16" y="95.2">❯</text>
+<text class="text fg" x="24" y="95.2"> echo &apos;This is ho</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="167.2" y="95.2" width="8.4" height="19.6" fill="#f8f8f2"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.498729;0.505687;1" dur="7.47s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-57" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo &apos;Welcome to the monokai theme!&apos;</text>
+<text class="text fg" x="16" y="75.6">Welcome to the monokai theme!</text>
+<text class="text f13" x="16" y="95.2">❯</text>
+<text class="text fg" x="24" y="95.2"> echo &apos;This is how</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="175.6" y="95.2" width="8.4" height="19.6" fill="#f8f8f2"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.505687;0.512512;1" dur="7.47s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-58" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo &apos;Welcome to the monokai theme!&apos;</text>
+<text class="text fg" x="16" y="75.6">Welcome to the monokai theme!</text>
+<text class="text f13" x="16" y="95.2">❯</text>
+<text class="text fg" x="24" y="95.2"> echo &apos;This is how</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="184" y="95.2" width="8.4" height="19.6" fill="#f8f8f2"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.512512;0.519336;1" dur="7.47s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-59" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo &apos;Welcome to the monokai theme!&apos;</text>
+<text class="text fg" x="16" y="75.6">Welcome to the monokai theme!</text>
+<text class="text f13" x="16" y="95.2">❯</text>
+<text class="text fg" x="24" y="95.2"> echo &apos;This is how y</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="192.4" y="95.2" width="8.4" height="19.6" fill="#f8f8f2"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.519336;0.526295;1" dur="7.47s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-60" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo &apos;Welcome to the monokai theme!&apos;</text>
+<text class="text fg" x="16" y="75.6">Welcome to the monokai theme!</text>
+<text class="text f13" x="16" y="95.2">❯</text>
+<text class="text fg" x="24" y="95.2"> echo &apos;This is how yo</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="200.8" y="95.2" width="8.4" height="19.6" fill="#f8f8f2"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.526295;0.533119;1" dur="7.47s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-61" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo &apos;Welcome to the monokai theme!&apos;</text>
+<text class="text fg" x="16" y="75.6">Welcome to the monokai theme!</text>
+<text class="text f13" x="16" y="95.2">❯</text>
+<text class="text fg" x="24" y="95.2"> echo &apos;This is how you</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="209.2" y="95.2" width="8.4" height="19.6" fill="#f8f8f2"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.533119;0.53981;1" dur="7.47s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-62" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo &apos;Welcome to the monokai theme!&apos;</text>
+<text class="text fg" x="16" y="75.6">Welcome to the monokai theme!</text>
+<text class="text f13" x="16" y="95.2">❯</text>
+<text class="text fg" x="24" y="95.2"> echo &apos;This is how your</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="217.6" y="95.2" width="8.4" height="19.6" fill="#f8f8f2"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.53981;0.546635;1" dur="7.47s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-63" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo &apos;Welcome to the monokai theme!&apos;</text>
+<text class="text fg" x="16" y="75.6">Welcome to the monokai theme!</text>
+<text class="text f13" x="16" y="95.2">❯</text>
+<text class="text fg" x="24" y="95.2"> echo &apos;This is how your</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="226" y="95.2" width="8.4" height="19.6" fill="#f8f8f2"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.546635;0.553459;1" dur="7.47s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-64" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo &apos;Welcome to the monokai theme!&apos;</text>
+<text class="text fg" x="16" y="75.6">Welcome to the monokai theme!</text>
+<text class="text f13" x="16" y="95.2">❯</text>
+<text class="text fg" x="24" y="95.2"> echo &apos;This is how your t</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="234.4" y="95.2" width="8.4" height="19.6" fill="#f8f8f2"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.553459;0.560418;1" dur="7.47s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-65" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo &apos;Welcome to the monokai theme!&apos;</text>
+<text class="text fg" x="16" y="75.6">Welcome to the monokai theme!</text>
+<text class="text f13" x="16" y="95.2">❯</text>
+<text class="text fg" x="24" y="95.2"> echo &apos;This is how your te</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="242.8" y="95.2" width="8.4" height="19.6" fill="#f8f8f2"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.560418;0.567376;1" dur="7.47s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-66" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo &apos;Welcome to the monokai theme!&apos;</text>
+<text class="text fg" x="16" y="75.6">Welcome to the monokai theme!</text>
+<text class="text f13" x="16" y="95.2">❯</text>
+<text class="text fg" x="24" y="95.2"> echo &apos;This is how your ter</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="251.2" y="95.2" width="8.4" height="19.6" fill="#f8f8f2"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.567376;0.574067;1" dur="7.47s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-67" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo &apos;Welcome to the monokai theme!&apos;</text>
+<text class="text fg" x="16" y="75.6">Welcome to the monokai theme!</text>
+<text class="text f13" x="16" y="95.2">❯</text>
+<text class="text fg" x="24" y="95.2"> echo &apos;This is how your term</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="259.6" y="95.2" width="8.4" height="19.6" fill="#f8f8f2"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.574067;0.580891;1" dur="7.47s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-68" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo &apos;Welcome to the monokai theme!&apos;</text>
+<text class="text fg" x="16" y="75.6">Welcome to the monokai theme!</text>
+<text class="text f13" x="16" y="95.2">❯</text>
+<text class="text fg" x="24" y="95.2"> echo &apos;This is how your termi</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="268" y="95.2" width="8.4" height="19.6" fill="#f8f8f2"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.580891;0.587582;1" dur="7.47s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-69" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo &apos;Welcome to the monokai theme!&apos;</text>
+<text class="text fg" x="16" y="75.6">Welcome to the monokai theme!</text>
+<text class="text f13" x="16" y="95.2">❯</text>
+<text class="text fg" x="24" y="95.2"> echo &apos;This is how your termin</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="276.4" y="95.2" width="8.4" height="19.6" fill="#f8f8f2"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.587582;0.594273;1" dur="7.47s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-70" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo &apos;Welcome to the monokai theme!&apos;</text>
+<text class="text fg" x="16" y="75.6">Welcome to the monokai theme!</text>
+<text class="text f13" x="16" y="95.2">❯</text>
+<text class="text fg" x="24" y="95.2"> echo &apos;This is how your termina</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="284.8" y="95.2" width="8.4" height="19.6" fill="#f8f8f2"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.594273;0.601499;1" dur="7.47s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-71" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo &apos;Welcome to the monokai theme!&apos;</text>
+<text class="text fg" x="16" y="75.6">Welcome to the monokai theme!</text>
+<text class="text f13" x="16" y="95.2">❯</text>
+<text class="text fg" x="24" y="95.2"> echo &apos;This is how your terminal</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="293.2" y="95.2" width="8.4" height="19.6" fill="#f8f8f2"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.601499;0.608323;1" dur="7.47s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-72" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo &apos;Welcome to the monokai theme!&apos;</text>
+<text class="text fg" x="16" y="75.6">Welcome to the monokai theme!</text>
+<text class="text f13" x="16" y="95.2">❯</text>
+<text class="text fg" x="24" y="95.2"> echo &apos;This is how your terminal</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="301.6" y="95.2" width="8.4" height="19.6" fill="#f8f8f2"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.608323;0.615148;1" dur="7.47s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-73" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo &apos;Welcome to the monokai theme!&apos;</text>
+<text class="text fg" x="16" y="75.6">Welcome to the monokai theme!</text>
+<text class="text f13" x="16" y="95.2">❯</text>
+<text class="text fg" x="24" y="95.2"> echo &apos;This is how your terminal l</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="310" y="95.2" width="8.4" height="19.6" fill="#f8f8f2"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.615148;0.622106;1" dur="7.47s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-74" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo &apos;Welcome to the monokai theme!&apos;</text>
+<text class="text fg" x="16" y="75.6">Welcome to the monokai theme!</text>
+<text class="text f13" x="16" y="95.2">❯</text>
+<text class="text fg" x="24" y="95.2"> echo &apos;This is how your terminal lo</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="318.4" y="95.2" width="8.4" height="19.6" fill="#f8f8f2"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.622106;0.628797;1" dur="7.47s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-75" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo &apos;Welcome to the monokai theme!&apos;</text>
+<text class="text fg" x="16" y="75.6">Welcome to the monokai theme!</text>
+<text class="text f13" x="16" y="95.2">❯</text>
+<text class="text fg" x="24" y="95.2"> echo &apos;This is how your terminal loo</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="326.8" y="95.2" width="8.4" height="19.6" fill="#f8f8f2"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.628797;0.635755;1" dur="7.47s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-76" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo &apos;Welcome to the monokai theme!&apos;</text>
+<text class="text fg" x="16" y="75.6">Welcome to the monokai theme!</text>
+<text class="text f13" x="16" y="95.2">❯</text>
+<text class="text fg" x="24" y="95.2"> echo &apos;This is how your terminal look</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="335.2" y="95.2" width="8.4" height="19.6" fill="#f8f8f2"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.635755;0.64258;1" dur="7.47s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-77" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo &apos;Welcome to the monokai theme!&apos;</text>
+<text class="text fg" x="16" y="75.6">Welcome to the monokai theme!</text>
+<text class="text f13" x="16" y="95.2">❯</text>
+<text class="text fg" x="24" y="95.2"> echo &apos;This is how your terminal looks</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="343.6" y="95.2" width="8.4" height="19.6" fill="#f8f8f2"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.64258;0.649538;1" dur="7.47s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-78" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo &apos;Welcome to the monokai theme!&apos;</text>
+<text class="text fg" x="16" y="75.6">Welcome to the monokai theme!</text>
+<text class="text f13" x="16" y="95.2">❯</text>
+<text class="text fg" x="24" y="95.2"> echo &apos;This is how your terminal looks.</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="352" y="95.2" width="8.4" height="19.6" fill="#f8f8f2"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.649538;0.656497;1" dur="7.47s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-79" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo &apos;Welcome to the monokai theme!&apos;</text>
+<text class="text fg" x="16" y="75.6">Welcome to the monokai theme!</text>
+<text class="text f13" x="16" y="95.2">❯</text>
+<text class="text fg" x="24" y="95.2"> echo &apos;This is how your terminal looks.&apos;</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="360.4" y="95.2" width="8.4" height="19.6" fill="#f8f8f2"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.656497;0.656095;1" dur="7.47s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-80" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo &apos;Welcome to the monokai theme!&apos;</text>
+<text class="text fg" x="16" y="75.6">Welcome to the monokai theme!</text>
+<text class="text f13" x="16" y="95.2">❯</text>
+<text class="text fg" x="24" y="95.2"> echo &apos;This is how your terminal looks.&apos;</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor" x="360.4" y="95.2" width="8.4" height="19.6" fill="#f8f8f2"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.656095;0.714037;1" dur="7.47s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-81" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo &apos;Welcome to the monokai theme!&apos;</text>
+<text class="text fg" x="16" y="75.6">Welcome to the monokai theme!</text>
+<text class="text f13" x="16" y="95.2">❯</text>
+<text class="text fg" x="24" y="95.2"> echo &apos;This is how your terminal looks.&apos;</text>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.714037;0.714305;1" dur="7.47s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-82" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo &apos;Welcome to the monokai theme!&apos;</text>
+<text class="text fg" x="16" y="75.6">Welcome to the monokai theme!</text>
+<text class="text f13" x="16" y="95.2">❯</text>
+<text class="text fg" x="24" y="95.2"> echo &apos;This is how your terminal looks.&apos;</text>
+<text class="text fg" x="16" y="114.8">This is how your terminal looks.</text>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.714305;0.730496;1" dur="7.47s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-83" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo &apos;Welcome to the monokai theme!&apos;</text>
+<text class="text fg" x="16" y="75.6">Welcome to the monokai theme!</text>
+<text class="text f13" x="16" y="95.2">❯</text>
+<text class="text fg" x="24" y="95.2"> echo &apos;This is how your terminal looks.&apos;</text>
+<text class="text fg" x="16" y="114.8">This is how your terminal looks.</text>
+<text class="text f13" x="16" y="134.4">❯</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor" x="32.8" y="134.4" width="8.4" height="19.6" fill="#f8f8f2"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.730496;0.866185;1" dur="7.47s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-84" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo &apos;Welcome to the monokai theme!&apos;</text>
+<text class="text fg" x="16" y="75.6">Welcome to the monokai theme!</text>
+<text class="text f13" x="16" y="95.2">❯</text>
+<text class="text fg" x="24" y="95.2"> echo &apos;This is how your terminal looks.&apos;</text>
+<text class="text fg" x="16" y="114.8">This is how your terminal looks.</text>
+<text class="text f13" x="16" y="134.4">❯</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor" x="32.8" y="134.4" width="8.4" height="19.6" fill="#f8f8f2"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;visible" keyTimes="0;0.866185;1" dur="7.47s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <!-- Static footer -->
+  
+  
+  </g>
+</svg>
