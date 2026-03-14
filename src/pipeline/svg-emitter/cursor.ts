@@ -33,7 +33,6 @@ export const renderCursor = (config: CursorConfig): string => {
     padding,
     contentStartY,
     fontSize,
-    hasCustomLineHeight,
     cursorColor,
     cursorStyle,
     activeCursor,
@@ -44,9 +43,9 @@ export const renderCursor = (config: CursorConfig): string => {
 
   const cursorX = r(padding + cursor.col * charWidth);
   const rowY = r(contentStartY + cursor.row * lineHeight);
-  const cursorHeight = r(hasCustomLineHeight ? fontSize : lineHeight);
-  // Cursor should start at the same Y as text (no offset needed)
-  const cursorYOffset = 0;
+  // Cursor height matches fontSize, vertically centered in the line
+  const cursorHeight = r(fontSize);
+  const cursorYOffset = (lineHeight - fontSize) / 2;
   const cursorY = r(rowY + cursorYOffset);
   const cursorClass = activeCursor ? 'cursor-active' : 'cursor';
 

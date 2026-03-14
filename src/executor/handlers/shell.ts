@@ -23,6 +23,8 @@ export const executeEnter = async (
   ctx.cursorX = 0;
   ctx.currentLine = '';
   ctx.isMultiLineContinuation = false;
+  ctx.selectionStart = undefined;
+  ctx.selectionEnd = undefined;
 
   if (!ctx.lines[ctx.cursorY]) {
     ctx.lines[ctx.cursorY] = '';

@@ -200,6 +200,9 @@ export class CDExecutor {
         cursorColor: this.context.cursorColor,
         selection: frameData.selection,
         activeCursor: frameData.activeCursor,
+        embedFont: this.context.embedFont,
+        fontData: this.context.fontData,
+        fontFamily: this.context.fontFamily,
       });
 
       this.context.frames[i].svg = svg;

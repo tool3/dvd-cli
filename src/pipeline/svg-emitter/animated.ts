@@ -197,7 +197,7 @@ const generateFrameContent = (
 ): string => {
   const { rows, cursor, cursorVisible, selection, activeCursor } = frame;
   const { charWidth, lineHeight, padding, contentStartY, theme } = config;
-  const fontSize = config.fontSize ?? 16;
+  const fontSize = config.fontSize ?? 14;
   const parts: string[] = [];
 
   const renderConfig: RenderConfig = {
@@ -276,10 +276,9 @@ const generateFrameContent = (
   if (cursor && cursorVisible) {
     const cursorX = r(padding + cursor.col * charWidth);
     const rowY = r(contentStartY + cursor.row * lineHeight);
-    const hasCustomLineHeight = config.hasCustomLineHeight ?? false;
-    const cursorHeight = r(hasCustomLineHeight ? fontSize : lineHeight);
-    // Cursor should start at the same Y as text (no offset needed)
-    const cursorYOffset = 0;
+    // Cursor height matches fontSize, vertically centered in the line
+    const cursorHeight = r(fontSize);
+    const cursorYOffset = (lineHeight - fontSize) / 2;
     const cursorY = r(rowY + cursorYOffset);
     const cursorColor = config.cursorColor ?? theme.cursor ?? theme.foreground;
     const cursorStyle = config.cursorStyle ?? 'block';
