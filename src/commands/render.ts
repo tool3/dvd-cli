@@ -25,6 +25,7 @@ interface RenderArgs {
   'rewind-speed'?: number;
   fps?: number;
   'loop-style'?: 'loop' | 'reverse' | 'rewind' | 'fade';
+  optimize?: boolean;
 }
 
 
@@ -177,15 +178,19 @@ export const renderCommand = async (args: RenderArgs): Promise<void> => {
 
     let svg = await createAnimatedSVG(frames, animationOptions);
 
-    if (!args.verbose) {
-      spinner.update('Optimizing SVG');
-    }
-    const originalSize = Buffer.byteLength(svg, 'utf-8');
-    svg = optimizeSvg(svg);
-    const optimizedSize = Buffer.byteLength(svg, 'utf-8');
-    if (args.verbose) {
-      const savings = ((1 - optimizedSize / originalSize) * 100).toFixed(1);
-      console.log(`Optimized: ${(originalSize / 1024).toFixed(0)}KB → ${(optimizedSize / 1024).toFixed(0)}KB (${savings}% reduction)`);
+    if (args.optimize !== false) {
+      if (!args.verbose) {
+        spinner.update('Optimizing SVG');
+      }
+      const originalSize = Buffer.byteLength(svg, 'utf-8');
+      svg = optimizeSvg(svg);
+      const optimizedSize = Buffer.byteLength(svg, 'utf-8');
+      if (args.verbose) {
+        const savings = ((1 - optimizedSize / originalSize) * 100).toFixed(1);
+        console.log(`Optimized: ${(originalSize / 1024).toFixed(0)}KB → ${(optimizedSize / 1024).toFixed(0)}KB (${savings}% reduction)`);
+      }
+    } else if (args.verbose) {
+      console.log('Skipping optimization (--no-optimize)');
     }
 
     const metadata = getAnimationMetadata(frames);

@@ -278,7 +278,8 @@ const generateFrameContent = (
     const rowY = r(contentStartY + cursor.row * lineHeight);
     const hasCustomLineHeight = config.hasCustomLineHeight ?? false;
     const cursorHeight = r(hasCustomLineHeight ? fontSize : lineHeight);
-    const cursorYOffset = hasCustomLineHeight ? fontSize * 0.85 - cursorHeight / 2 : 0;
+    // Cursor should start at the same Y as text (no offset needed)
+    const cursorYOffset = 0;
     const cursorY = r(rowY + cursorYOffset);
     const cursorColor = config.cursorColor ?? theme.cursor ?? theme.foreground;
     const cursorStyle = config.cursorStyle ?? 'block';

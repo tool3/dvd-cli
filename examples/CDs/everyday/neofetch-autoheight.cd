@@ -1,0 +1,25 @@
+# Neofetch Test - Auto Height
+# Tests neofetch with automatic height calculation
+# Height expands to fit all content without scrolling
+
+Output examples/svgs/everyday/neofetch-autoheight.svg
+
+Set Theme github-dark
+Set Template macos
+Set TypingSpeed 30ms
+Set FontSize 16
+Set Width 1000
+
+# No Set Height - auto-calculate based on content
+
+Type "neofetch"
+
+Sleep 500ms
+
+Enter
+
+Sleep 2s
+
+Type "Auto-height mode!"
+
+Sleep 1s

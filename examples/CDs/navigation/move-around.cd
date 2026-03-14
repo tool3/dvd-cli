@@ -1,0 +1,16 @@
+# Test move around demo
+Output examples/svgs/navigation/move-around.svg
+
+Set FontSize 16
+Set Title "Move around"
+Set PromptPrefix "\x1b[95m❯\x1b[0m "
+Set TypingSpeed 80
+
+# Demo 1: Character Selection
+Type "echo 'The quick brown fox jumps'"
+Sleep 200ms
+Left 10
+Sleep 1s
+Right 10
+Sleep 500ms
+Enter

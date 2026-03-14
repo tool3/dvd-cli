@@ -1,0 +1,36 @@
+
+# Where should we write the SVG?
+Output examples/svgs/watermark/watermark.svg
+
+# Set up a 1200x600 terminal with 46px font.
+Set FontSize 12
+Set TypingSpeed 20
+Set Watermark `<a href="https://github.com/tool3/shellfie">
+  <g transform="translate(-90, -5)">
+    <defs>
+      <clipPath id="wm-clip">
+        <rect width="100" height="15" rx="3" fill="#fff"/>
+      </clipPath>
+    </defs>
+    <g clip-path="url(#wm-clip)">
+      <rect width="60" height="15" fill="#555"/>
+      <rect x="60" width="40" height="15" fill="#34D399"/>
+    </g>
+    <g fill="#fff" text-anchor="middle" font-family="Verdana,Geneva,DejaVu Sans,sans-serif" font-size="110">
+      <text x="385" y="130" transform="scale(.08)" fill="#fff" textLength="650">powered by</text>
+      <text x="985" y="130" transform="scale(.08)" fill="#333" textLength="390">shellfie</text>
+    </g>
+  </g>
+</a>
+`
+
+# Type a command in the terminal.
+Type "echo 'WATERMARK'"
+Screenshot
+# Pause for dramatic effect...
+Sleep 500ms
+
+# Run the command by pressing enter.
+Enter
+
+Sleep 1s

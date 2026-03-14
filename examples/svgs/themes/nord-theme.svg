@@ -1,0 +1,610 @@
+<svg width="474" height="108" xmlns="http://www.w3.org/2000/svg">
+  <defs><clipPath id="rounded-corners"><rect x="0" y="0" width="474" height="108" rx="8" ry="8"/></clipPath></defs>
+  <style>
+    
+.text {
+  font-family: 'SF Mono', 'Monaco', 'Menlo', 'Consolas', monospace;
+  font-size: 16px;
+  dominant-baseline: text-before-edge;
+  text-rendering: geometricPrecision;
+  white-space: pre;
+}
+.bold { font-weight: bold; }
+.italic { font-style: italic; }
+.uline { text-decoration: underline; }
+.strike { text-decoration: line-through; }
+.dim { opacity: 0.5; }
+.fg { fill: #d8dee9; }
+.f0 { fill: #3b4252; }
+.f1 { fill: #bf616a; }
+.f2 { fill: #a3be8c; }
+.f3 { fill: #ebcb8b; }
+.f4 { fill: #81a1c1; }
+.f5 { fill: #b48ead; }
+.f6 { fill: #88c0d0; }
+.f7 { fill: #e5e9f0; }
+.f8 { fill: #4c566a; }
+.f9 { fill: #bf616a; }
+.f10 { fill: #a3be8c; }
+.f11 { fill: #ebcb8b; }
+.f12 { fill: #81a1c1; }
+.f13 { fill: #b48ead; }
+.f14 { fill: #8fbcbb; }
+.f15 { fill: #eceff4; }
+.bg { fill: #2e3440; }
+.b0 { fill: #3b4252; }
+.b1 { fill: #bf616a; }
+.b2 { fill: #a3be8c; }
+.b3 { fill: #ebcb8b; }
+.b4 { fill: #81a1c1; }
+.b5 { fill: #b48ead; }
+.b6 { fill: #88c0d0; }
+.b7 { fill: #e5e9f0; }
+.b8 { fill: #4c566a; }
+.b9 { fill: #bf616a; }
+.b10 { fill: #a3be8c; }
+.b11 { fill: #ebcb8b; }
+.b12 { fill: #81a1c1; }
+.b13 { fill: #b48ead; }
+.b14 { fill: #8fbcbb; }
+.b15 { fill: #eceff4; }
+.cursor { animation: blink 1s step-end infinite; }
+@keyframes blink {
+  0%, 50% { opacity: 1; }
+  50.01%, 100% { opacity: 0; }
+}
+.cursor-active { opacity: 1; }
+
+  </style>
+
+  <g clip-path="url(#rounded-corners)">
+  <!-- Static background (never animated) -->
+  <rect width="100%" height="100%" fill="#2e3440" rx="8" ry="8" />
+
+  <!-- Static chrome (title bar) -->
+  
+
+  <!-- Animated frames (only dynamic content) -->
+  
+  <g id="frame-0" visibility="visible">
+    <g class="text-layer">
+<text class="text f6" x="16" y="16">❯</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor" x="35.2" y="16" width="9.6" height="22.4" fill="#d8dee9"/>
+</g>
+    <animate attributeName="visibility" values="visible;hidden;hidden" keyTimes="0;0.011501;1" dur="5.48s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-1" visibility="hidden">
+    <g class="text-layer">
+<text class="text f6" x="16" y="16">❯</text>
+<text class="text fg" x="26" y="16"> e</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="44.8" y="16" width="9.6" height="22.4" fill="#d8dee9"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.011501;0.020811;1" dur="5.48s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-2" visibility="hidden">
+    <g class="text-layer">
+<text class="text f6" x="16" y="16">❯</text>
+<text class="text fg" x="26" y="16"> ec</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="54.4" y="16" width="9.6" height="22.4" fill="#d8dee9"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.020811;0.030303;1" dur="5.48s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-3" visibility="hidden">
+    <g class="text-layer">
+<text class="text f6" x="16" y="16">❯</text>
+<text class="text fg" x="26" y="16"> ech</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="64" y="16" width="9.6" height="22.4" fill="#d8dee9"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.030303;0.040161;1" dur="5.48s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-4" visibility="hidden">
+    <g class="text-layer">
+<text class="text f6" x="16" y="16">❯</text>
+<text class="text fg" x="26" y="16"> echo</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="73.6" y="16" width="9.6" height="22.4" fill="#d8dee9"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.040161;0.049288;1" dur="5.48s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-5" visibility="hidden">
+    <g class="text-layer">
+<text class="text f6" x="16" y="16">❯</text>
+<text class="text fg" x="26" y="16"> echo</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="83.2" y="16" width="9.6" height="22.4" fill="#d8dee9"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.049288;0.058415;1" dur="5.48s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-6" visibility="hidden">
+    <g class="text-layer">
+<text class="text f6" x="16" y="16">❯</text>
+<text class="text fg" x="26" y="16"> echo &apos;</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="92.8" y="16" width="9.6" height="22.4" fill="#d8dee9"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.058415;0.068091;1" dur="5.48s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-7" visibility="hidden">
+    <g class="text-layer">
+<text class="text f6" x="16" y="16">❯</text>
+<text class="text fg" x="26" y="16"> echo &apos;N</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="102.4" y="16" width="9.6" height="22.4" fill="#d8dee9"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.068091;0.077766;1" dur="5.48s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-8" visibility="hidden">
+    <g class="text-layer">
+<text class="text f6" x="16" y="16">❯</text>
+<text class="text fg" x="26" y="16"> echo &apos;No</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="112" y="16" width="9.6" height="22.4" fill="#d8dee9"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.077766;0.087076;1" dur="5.48s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-9" visibility="hidden">
+    <g class="text-layer">
+<text class="text f6" x="16" y="16">❯</text>
+<text class="text fg" x="26" y="16"> echo &apos;Nor</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="121.6" y="16" width="9.6" height="22.4" fill="#d8dee9"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.087076;0.096203;1" dur="5.48s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-10" visibility="hidden">
+    <g class="text-layer">
+<text class="text f6" x="16" y="16">❯</text>
+<text class="text fg" x="26" y="16"> echo &apos;Nord</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="131.2" y="16" width="9.6" height="22.4" fill="#d8dee9"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.096203;0.105878;1" dur="5.48s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-11" visibility="hidden">
+    <g class="text-layer">
+<text class="text f6" x="16" y="16">❯</text>
+<text class="text fg" x="26" y="16"> echo &apos;Nord</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="140.8" y="16" width="9.6" height="22.4" fill="#d8dee9"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.105878;0.115188;1" dur="5.48s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-12" visibility="hidden">
+    <g class="text-layer">
+<text class="text f6" x="16" y="16">❯</text>
+<text class="text fg" x="26" y="16"> echo &apos;Nord c</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="150.4" y="16" width="9.6" height="22.4" fill="#d8dee9"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.115188;0.124863;1" dur="5.48s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-13" visibility="hidden">
+    <g class="text-layer">
+<text class="text f6" x="16" y="16">❯</text>
+<text class="text fg" x="26" y="16"> echo &apos;Nord co</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="160" y="16" width="9.6" height="22.4" fill="#d8dee9"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.124863;0.133991;1" dur="5.48s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-14" visibility="hidden">
+    <g class="text-layer">
+<text class="text f6" x="16" y="16">❯</text>
+<text class="text fg" x="26" y="16"> echo &apos;Nord col</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="169.6" y="16" width="9.6" height="22.4" fill="#d8dee9"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.133991;0.143483;1" dur="5.48s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-15" visibility="hidden">
+    <g class="text-layer">
+<text class="text f6" x="16" y="16">❯</text>
+<text class="text fg" x="26" y="16"> echo &apos;Nord colo</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="179.2" y="16" width="9.6" height="22.4" fill="#d8dee9"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.143483;0.152976;1" dur="5.48s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-16" visibility="hidden">
+    <g class="text-layer">
+<text class="text f6" x="16" y="16">❯</text>
+<text class="text fg" x="26" y="16"> echo &apos;Nord color</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="188.8" y="16" width="9.6" height="22.4" fill="#d8dee9"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.152976;0.162103;1" dur="5.48s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-17" visibility="hidden">
+    <g class="text-layer">
+<text class="text f6" x="16" y="16">❯</text>
+<text class="text fg" x="26" y="16"> echo &apos;Nord color</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="198.4" y="16" width="9.6" height="22.4" fill="#d8dee9"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.162103;0.17123;1" dur="5.48s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-18" visibility="hidden">
+    <g class="text-layer">
+<text class="text f6" x="16" y="16">❯</text>
+<text class="text fg" x="26" y="16"> echo &apos;Nord color s</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="208" y="16" width="9.6" height="22.4" fill="#d8dee9"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.17123;0.181088;1" dur="5.48s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-19" visibility="hidden">
+    <g class="text-layer">
+<text class="text f6" x="16" y="16">❯</text>
+<text class="text fg" x="26" y="16"> echo &apos;Nord color sc</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="217.6" y="16" width="9.6" height="22.4" fill="#d8dee9"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.181088;0.190398;1" dur="5.48s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-20" visibility="hidden">
+    <g class="text-layer">
+<text class="text f6" x="16" y="16">❯</text>
+<text class="text fg" x="26" y="16"> echo &apos;Nord color sch</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="227.2" y="16" width="9.6" height="22.4" fill="#d8dee9"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.190398;0.199708;1" dur="5.48s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-21" visibility="hidden">
+    <g class="text-layer">
+<text class="text f6" x="16" y="16">❯</text>
+<text class="text fg" x="26" y="16"> echo &apos;Nord color sche</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="236.8" y="16" width="9.6" height="22.4" fill="#d8dee9"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.199708;0.209383;1" dur="5.48s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-22" visibility="hidden">
+    <g class="text-layer">
+<text class="text f6" x="16" y="16">❯</text>
+<text class="text fg" x="26" y="16"> echo &apos;Nord color schem</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="246.4" y="16" width="9.6" height="22.4" fill="#d8dee9"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.209383;0.219241;1" dur="5.48s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-23" visibility="hidden">
+    <g class="text-layer">
+<text class="text f6" x="16" y="16">❯</text>
+<text class="text fg" x="26" y="16"> echo &apos;Nord color scheme</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="256" y="16" width="9.6" height="22.4" fill="#d8dee9"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.219241;0.228916;1" dur="5.48s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-24" visibility="hidden">
+    <g class="text-layer">
+<text class="text f6" x="16" y="16">❯</text>
+<text class="text fg" x="26" y="16"> echo &apos;Nord color scheme</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="265.6" y="16" width="9.6" height="22.4" fill="#d8dee9"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.228916;0.238408;1" dur="5.48s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-25" visibility="hidden">
+    <g class="text-layer">
+<text class="text f6" x="16" y="16">❯</text>
+<text class="text fg" x="26" y="16"> echo &apos;Nord color scheme -</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="275.2" y="16" width="9.6" height="22.4" fill="#d8dee9"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.238408;0.247536;1" dur="5.48s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-26" visibility="hidden">
+    <g class="text-layer">
+<text class="text f6" x="16" y="16">❯</text>
+<text class="text fg" x="26" y="16"> echo &apos;Nord color scheme -</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="284.8" y="16" width="9.6" height="22.4" fill="#d8dee9"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.247536;0.257028;1" dur="5.48s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-27" visibility="hidden">
+    <g class="text-layer">
+<text class="text f6" x="16" y="16">❯</text>
+<text class="text fg" x="26" y="16"> echo &apos;Nord color scheme - c</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="294.4" y="16" width="9.6" height="22.4" fill="#d8dee9"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.257028;0.266338;1" dur="5.48s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-28" visibility="hidden">
+    <g class="text-layer">
+<text class="text f6" x="16" y="16">❯</text>
+<text class="text fg" x="26" y="16"> echo &apos;Nord color scheme - co</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="304" y="16" width="9.6" height="22.4" fill="#d8dee9"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.266338;0.275648;1" dur="5.48s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-29" visibility="hidden">
+    <g class="text-layer">
+<text class="text f6" x="16" y="16">❯</text>
+<text class="text fg" x="26" y="16"> echo &apos;Nord color scheme - coo</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="313.6" y="16" width="9.6" height="22.4" fill="#d8dee9"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.275648;0.285141;1" dur="5.48s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-30" visibility="hidden">
+    <g class="text-layer">
+<text class="text f6" x="16" y="16">❯</text>
+<text class="text fg" x="26" y="16"> echo &apos;Nord color scheme - cool</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="323.2" y="16" width="9.6" height="22.4" fill="#d8dee9"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.285141;0.294633;1" dur="5.48s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-31" visibility="hidden">
+    <g class="text-layer">
+<text class="text f6" x="16" y="16">❯</text>
+<text class="text fg" x="26" y="16"> echo &apos;Nord color scheme - cool</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="332.8" y="16" width="9.6" height="22.4" fill="#d8dee9"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.294633;0.304126;1" dur="5.48s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-32" visibility="hidden">
+    <g class="text-layer">
+<text class="text f6" x="16" y="16">❯</text>
+<text class="text fg" x="26" y="16"> echo &apos;Nord color scheme - cool a</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="342.4" y="16" width="9.6" height="22.4" fill="#d8dee9"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.304126;0.313983;1" dur="5.48s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-33" visibility="hidden">
+    <g class="text-layer">
+<text class="text f6" x="16" y="16">❯</text>
+<text class="text fg" x="26" y="16"> echo &apos;Nord color scheme - cool an</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="352" y="16" width="9.6" height="22.4" fill="#d8dee9"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.313983;0.323111;1" dur="5.48s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-34" visibility="hidden">
+    <g class="text-layer">
+<text class="text f6" x="16" y="16">❯</text>
+<text class="text fg" x="26" y="16"> echo &apos;Nord color scheme - cool and</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="361.6" y="16" width="9.6" height="22.4" fill="#d8dee9"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.323111;0.332968;1" dur="5.48s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-35" visibility="hidden">
+    <g class="text-layer">
+<text class="text f6" x="16" y="16">❯</text>
+<text class="text fg" x="26" y="16"> echo &apos;Nord color scheme - cool and</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="371.2" y="16" width="9.6" height="22.4" fill="#d8dee9"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.332968;0.342278;1" dur="5.48s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-36" visibility="hidden">
+    <g class="text-layer">
+<text class="text f6" x="16" y="16">❯</text>
+<text class="text fg" x="26" y="16"> echo &apos;Nord color scheme - cool and e</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="380.8" y="16" width="9.6" height="22.4" fill="#d8dee9"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.342278;0.351953;1" dur="5.48s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-37" visibility="hidden">
+    <g class="text-layer">
+<text class="text f6" x="16" y="16">❯</text>
+<text class="text fg" x="26" y="16"> echo &apos;Nord color scheme - cool and el</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="390.4" y="16" width="9.6" height="22.4" fill="#d8dee9"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.351953;0.361263;1" dur="5.48s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-38" visibility="hidden">
+    <g class="text-layer">
+<text class="text f6" x="16" y="16">❯</text>
+<text class="text fg" x="26" y="16"> echo &apos;Nord color scheme - cool and ele</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="400" y="16" width="9.6" height="22.4" fill="#d8dee9"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.361263;0.370938;1" dur="5.48s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-39" visibility="hidden">
+    <g class="text-layer">
+<text class="text f6" x="16" y="16">❯</text>
+<text class="text fg" x="26" y="16"> echo &apos;Nord color scheme - cool and eleg</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="409.6" y="16" width="9.6" height="22.4" fill="#d8dee9"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.370938;0.380613;1" dur="5.48s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-40" visibility="hidden">
+    <g class="text-layer">
+<text class="text f6" x="16" y="16">❯</text>
+<text class="text fg" x="26" y="16"> echo &apos;Nord color scheme - cool and elega</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="419.2" y="16" width="9.6" height="22.4" fill="#d8dee9"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.380613;0.389923;1" dur="5.48s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-41" visibility="hidden">
+    <g class="text-layer">
+<text class="text f6" x="16" y="16">❯</text>
+<text class="text fg" x="26" y="16"> echo &apos;Nord color scheme - cool and elegan</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="428.8" y="16" width="9.6" height="22.4" fill="#d8dee9"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.389923;0.399051;1" dur="5.48s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-42" visibility="hidden">
+    <g class="text-layer">
+<text class="text f6" x="16" y="16">❯</text>
+<text class="text fg" x="26" y="16"> echo &apos;Nord color scheme - cool and elegant</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="438.4" y="16" width="9.6" height="22.4" fill="#d8dee9"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.399051;0.408543;1" dur="5.48s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-43" visibility="hidden">
+    <g class="text-layer">
+<text class="text f6" x="16" y="16">❯</text>
+<text class="text fg" x="26" y="16"> echo &apos;Nord color scheme - cool and elegant&apos;</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="448" y="16" width="9.6" height="22.4" fill="#d8dee9"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.408543;0.408543;1" dur="5.48s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-44" visibility="hidden">
+    <g class="text-layer">
+<text class="text f6" x="16" y="16">❯</text>
+<text class="text fg" x="26" y="16"> echo &apos;Nord color scheme - cool and elegant&apos;</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor" x="448" y="16" width="9.6" height="22.4" fill="#d8dee9"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.408543;0.427893;1" dur="5.48s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-45" visibility="hidden">
+    <g class="text-layer">
+<text class="text f6" x="16" y="16">❯</text>
+<text class="text fg" x="26" y="16"> echo &apos;Nord color scheme - cool and elegant&apos;</text>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.427893;0.429354;1" dur="5.48s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-46" visibility="hidden">
+    <g class="text-layer">
+<text class="text f6" x="16" y="16">❯</text>
+<text class="text fg" x="26" y="16"> echo &apos;Nord color scheme - cool and elegant&apos;</text>
+<text class="text fg" x="16" y="38.4">Nord color scheme - cool and elegant</text>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.429354;0.449982;1" dur="5.48s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-47" visibility="hidden">
+    <g class="text-layer">
+<text class="text f6" x="16" y="16">❯</text>
+<text class="text fg" x="26" y="16"> echo &apos;Nord color scheme - cool and elegant&apos;</text>
+<text class="text fg" x="16" y="38.4">Nord color scheme - cool and elegant</text>
+<text class="text f6" x="16" y="60.8">❯</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor" x="35.2" y="60.8" width="9.6" height="22.4" fill="#d8dee9"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.449982;0.817452;1" dur="5.48s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-48" visibility="hidden">
+    <g class="text-layer">
+<text class="text f6" x="16" y="16">❯</text>
+<text class="text fg" x="26" y="16"> echo &apos;Nord color scheme - cool and elegant&apos;</text>
+<text class="text fg" x="16" y="38.4">Nord color scheme - cool and elegant</text>
+<text class="text f6" x="16" y="60.8">❯</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor" x="35.2" y="60.8" width="9.6" height="22.4" fill="#d8dee9"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;visible" keyTimes="0;0.817452;1" dur="5.48s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <!-- Static footer -->
+  
+  
+  </g>
+</svg>

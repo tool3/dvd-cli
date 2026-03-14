@@ -1,0 +1,23 @@
+# Test back space typing
+Output examples/svgs/navigation/backspace.svg
+
+Set FontSize 16
+Set PromptPrefix "\x1b[32m$\x1b[0m "
+Set Template macos
+Set Theme github-dark
+Set Watermark "\x1b[0;2mby tool3\x1b[0m"
+
+Type "echo 'I am an idiot savant developer'"
+Left 10
+Sleep 200ms
+Backspace 7
+Sleep 1s
+Backspace 10
+Space
+Type "a"
+Space
+
+Screenshot examples/svgs/backspace_out.svg
+
+Enter
+Sleep 300ms

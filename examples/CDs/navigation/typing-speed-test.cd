@@ -1,0 +1,13 @@
+# Test slow typing to verify progress shows immediately
+Output examples/svgs/navigation/typing-speed-test.svg
+
+Set FontSize 16
+Set TypingSpeed 500
+Set Shell zsh
+
+Type@50ms "echo 'Lightning fast! ⚡️'"
+Sleep 200ms
+Enter
+Type "echo '🐢 Super slow typing'"
+Enter
+Sleep 1s

@@ -1,0 +1,15 @@
+# Underline Cursor Test
+Output examples/svgs/cursor/underline-cursor-test.svg
+
+Set FontSize 16
+Set Theme one-dark
+Set Title "Underline Cursor"
+
+Set CursorStyle underline
+Set CursorColor #bf616a
+
+Type "Underline cursor style"
+Sleep 500ms
+Enter
+Type "with custom red color"
+Sleep 1s

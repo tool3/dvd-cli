@@ -1,0 +1,13 @@
+# Custom Prompt Prefix Demo
+# Shows how to customize the prompt with ANSI colors
+
+Output examples/svgs/prompt/custom-prompt.svg
+
+Set FontSize 16
+Set Title "Custom Prompt Demo"
+Set PromptPrefix "\x1b[36m➜\x1b[0m "
+
+Type "echo 'Custom cyan arrow prompt!'"
+Sleep 500ms
+Enter
+Sleep 2s

@@ -1,0 +1,43 @@
+# Scroll Test
+# Tests scrolling when content exceeds terminal height
+Output examples/svgs/navigation/scroll-test.svg
+
+Set Width 600
+Set Height 300
+Set FontSize 14
+Set Theme gruvbox-light
+Set Title "Scroll Test"
+Set Scroll true
+Set PromptPrefix "\x1b[95m❯\x1b[0m "
+
+Type "echo 'Line 1'"
+Enter
+Sleep 300ms
+
+Type "echo 'Line 2'"
+Enter
+Sleep 300ms
+
+Type "echo 'Line 3'"
+Enter
+Sleep 300ms
+
+Type "echo 'Line 4'"
+Enter
+Sleep 300ms
+
+Type "echo 'Line 5'"
+Enter
+Sleep 300ms
+
+Type "echo 'Line 6 - should scroll now'"
+Enter
+Sleep 300ms
+
+Type "echo 'Line 7'"
+Enter
+Sleep 300ms
+
+Type "echo 'Line 8'"
+Enter
+Sleep 1s

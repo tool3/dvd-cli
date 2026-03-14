@@ -40,6 +40,11 @@ const createParser = () =>
       describe: 'Loop animation',
       default: true,
     })
+    .option('optimize', {
+      type: 'boolean',
+      describe: 'Optimize SVG output (use --no-optimize for pretty-printed output)',
+      default: true,
+    })
     .option('loop-style', {
       alias: 'L',
       type: 'string',
@@ -338,6 +343,7 @@ const run = async (): Promise<void> => {
       'rewind-speed': argv['rewind-speed'],
       fps: argv.fps,
       'loop-style': argv['loop-style'] as 'loop' | 'reverse' | 'rewind' | 'fade',
+      optimize: argv.optimize,
     });
   } catch (err) {
     console.error(err instanceof Error ? err.message : String(err));

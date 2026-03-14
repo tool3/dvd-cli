@@ -1,0 +1,2463 @@
+<svg width="1000" height="618" xmlns="http://www.w3.org/2000/svg">
+  <defs><clipPath id="rounded-corners"><rect x="0" y="0" width="1000" height="618" rx="8" ry="8"/></clipPath></defs>
+  <style>
+    
+.text {
+  font-family: 'SF Mono', 'Monaco', 'Menlo', 'Consolas', monospace;
+  font-size: 16px;
+  dominant-baseline: text-before-edge;
+  text-rendering: geometricPrecision;
+  white-space: pre;
+}
+.bold { font-weight: bold; }
+.italic { font-style: italic; }
+.uline { text-decoration: underline; }
+.strike { text-decoration: line-through; }
+.dim { opacity: 0.5; }
+.fg { fill: #d8dee9; }
+.f0 { fill: #3b4252; }
+.f1 { fill: #bf616a; }
+.f2 { fill: #a3be8c; }
+.f3 { fill: #ebcb8b; }
+.f4 { fill: #81a1c1; }
+.f5 { fill: #b48ead; }
+.f6 { fill: #88c0d0; }
+.f7 { fill: #e5e9f0; }
+.f8 { fill: #4c566a; }
+.f9 { fill: #bf616a; }
+.f10 { fill: #a3be8c; }
+.f11 { fill: #ebcb8b; }
+.f12 { fill: #81a1c1; }
+.f13 { fill: #b48ead; }
+.f14 { fill: #8fbcbb; }
+.f15 { fill: #eceff4; }
+.bg { fill: #2e3440; }
+.b0 { fill: #3b4252; }
+.b1 { fill: #bf616a; }
+.b2 { fill: #a3be8c; }
+.b3 { fill: #ebcb8b; }
+.b4 { fill: #81a1c1; }
+.b5 { fill: #b48ead; }
+.b6 { fill: #88c0d0; }
+.b7 { fill: #e5e9f0; }
+.b8 { fill: #4c566a; }
+.b9 { fill: #bf616a; }
+.b10 { fill: #a3be8c; }
+.b11 { fill: #ebcb8b; }
+.b12 { fill: #81a1c1; }
+.b13 { fill: #b48ead; }
+.b14 { fill: #8fbcbb; }
+.b15 { fill: #eceff4; }
+.cursor { animation: blink 1s step-end infinite; }
+@keyframes blink {
+  0%, 50% { opacity: 1; }
+  50.01%, 100% { opacity: 0; }
+}
+.cursor-active { opacity: 1; }
+
+  </style>
+
+  <g clip-path="url(#rounded-corners)">
+  <!-- Static background (never animated) -->
+  <rect width="100%" height="100%" fill="#2e3440" rx="8" ry="8" />
+
+  <!-- Static chrome (title bar) -->
+  <g class="chrome"><rect class="header-bg" x="0" y="0" width="1000" height="40" fill="#2e3440" rx="8" ry="8"/>
+<rect x="0" y="32" width="1000" height="8" fill="#2e3440"/>
+<circle cx="22" cy="20" r="6" fill="#ff5f56"/>
+<circle cx="42" cy="20" r="6" fill="#ffbd2e"/>
+<circle cx="62" cy="20" r="6" fill="#27c93f"/></g>
+
+  <!-- Animated frames (only dynamic content) -->
+  
+  <g id="frame-0" visibility="visible">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor" x="35.2" y="56" width="9.6" height="22.4" fill="#d8dee9"/>
+</g>
+    <animate attributeName="visibility" values="visible;hidden;hidden" keyTimes="0;0.00656;1" dur="6.40s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-1" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="26" y="56"> n</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="44.8" y="56" width="9.6" height="22.4" fill="#d8dee9"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.00656;0.011559;1" dur="6.40s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-2" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="26" y="56"> ne</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="54.4" y="56" width="9.6" height="22.4" fill="#d8dee9"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.011559;0.016401;1" dur="6.40s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-3" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="26" y="56"> neo</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="64" y="56" width="9.6" height="22.4" fill="#d8dee9"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.016401;0.021087;1" dur="6.40s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-4" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="26" y="56"> neof</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="73.6" y="56" width="9.6" height="22.4" fill="#d8dee9"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.021087;0.026086;1" dur="6.40s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-5" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="26" y="56"> neofe</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="83.2" y="56" width="9.6" height="22.4" fill="#d8dee9"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.026086;0.030928;1" dur="6.40s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-6" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="26" y="56"> neofet</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="92.8" y="56" width="9.6" height="22.4" fill="#d8dee9"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.030928;0.03577;1" dur="6.40s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-7" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="26" y="56"> neofetc</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="102.4" y="56" width="9.6" height="22.4" fill="#d8dee9"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.03577;0.040612;1" dur="6.40s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-8" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="26" y="56"> neofetch</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="112" y="56" width="9.6" height="22.4" fill="#d8dee9"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.040612;0.040456;1" dur="6.40s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-9" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="26" y="56"> neofetch</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor" x="112" y="56" width="9.6" height="22.4" fill="#d8dee9"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.040456;0.135895;1" dur="6.40s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-10" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="26" y="56"> neofetch</text>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.135895;0.143705;1" dur="6.40s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-11" visibility="hidden">
+    <g class="bg-layer">
+<rect x="332.8" y="459.2" width="28.8" height="22.4" fill="#3b4252"/>
+<rect x="332.8" y="481.6" width="28.8" height="22.4" fill="#4c566a"/>
+<rect x="361.6" y="459.2" width="28.8" height="44.8" fill="#bf616a"/>
+<rect x="390.4" y="459.2" width="28.8" height="44.8" fill="#a3be8c"/>
+<rect x="419.2" y="459.2" width="28.8" height="44.8" fill="#ebcb8b"/>
+<rect x="448" y="459.2" width="28.8" height="44.8" fill="#81a1c1"/>
+<rect x="476.8" y="459.2" width="28.8" height="44.8" fill="#b48ead"/>
+<rect x="505.6" y="459.2" width="28.8" height="22.4" fill="#88c0d0"/>
+<rect x="505.6" y="481.6" width="28.8" height="22.4" fill="#8fbcbb"/>
+<rect x="534.4" y="459.2" width="28.8" height="22.4" fill="#e5e9f0"/>
+<rect x="534.4" y="481.6" width="28.8" height="22.4" fill="#eceff4"/>
+</g>
+<g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="26" y="56"> neofetch</text>
+<text class="text bold f10" x="16" y="78.4">                    &apos;c.</text>
+<text class="text bold f10" x="333" y="78.4">talhayut</text>
+<text class="text fg" x="410" y="78.4">@</text>
+<text class="text bold f10" x="419" y="78.4">Mac</text>
+<text class="text bold f10" x="16" y="100.8">                 ,xNMM.</text>
+<text class="text fg" x="237" y="100.8">          ------------</text>
+<text class="text bold f10" x="16" y="123.2">               .OMMMMo</text>
+<text class="text bold f11" x="333" y="123.2">OS</text>
+<text class="text fg" x="352" y="123.2">: macOS 26.2 25C56 arm64</text>
+<text class="text bold f10" x="16" y="145.6">               OMMM0,</text>
+<text class="text bold f11" x="333" y="145.6">Host</text>
+<text class="text fg" x="371" y="145.6">: Mac16,5</text>
+<text class="text bold f10" x="16" y="168">     .;loddo:&apos; loolloddol;.</text>
+<text class="text bold f11" x="333" y="168">Kernel</text>
+<text class="text fg" x="390" y="168">: 25.2.0</text>
+<text class="text bold f10" x="16" y="190.4">   cKMMMMMMMMMMNWMMMMMMMMMM0:</text>
+<text class="text bold f11" x="333" y="190.4">Uptime</text>
+<text class="text fg" x="390" y="190.4">: 8 days, 9 hours, 1 min</text>
+<text class="text bold f11" x="16" y="212.8"> .KMMMMMMMMMMMMMMMMMMMMMMMWd.</text>
+<text class="text bold f11" x="333" y="212.8">Packages</text>
+<text class="text fg" x="410" y="212.8">: 52 (brew)</text>
+<text class="text bold f11" x="16" y="235.2"> XMMMMMMMMMMMMMMMMMMMMMMMX.</text>
+<text class="text bold f11" x="333" y="235.2">Shell</text>
+<text class="text fg" x="381" y="235.2">: zsh 5.9</text>
+<text class="text bold f9" x="16" y="257.6">;MMMMMMMMMMMMMMMMMMMMMMMM:</text>
+<text class="text bold f11" x="333" y="257.6">Resolution</text>
+<text class="text fg" x="429" y="257.6">: 1728x1117</text>
+<text class="text bold f9" x="16" y="280">:MMMMMMMMMMMMMMMMMMMMMMMM:</text>
+<text class="text bold f11" x="333" y="280">DE</text>
+<text class="text fg" x="352" y="280">: Aqua</text>
+<text class="text bold f9" x="16" y="302.4">.MMMMMMMMMMMMMMMMMMMMMMMMX.</text>
+<text class="text bold f11" x="333" y="302.4">WM</text>
+<text class="text fg" x="352" y="302.4">: Quartz Compositor</text>
+<text class="text bold f9" x="16" y="324.8"> kMMMMMMMMMMMMMMMMMMMMMMMMWd.</text>
+<text class="text bold f11" x="333" y="324.8">WM Theme</text>
+<text class="text fg" x="410" y="324.8">: Blue (Dark)</text>
+<text class="text bold f13" x="26" y="347.2">.XMMMMMMMMMMMMMMMMMMMMMMMMMMk</text>
+<text class="text bold f11" x="333" y="347.2">Terminal</text>
+<text class="text fg" x="410" y="347.2">: node</text>
+<text class="text bold f13" x="16" y="369.6">  .XMMMMMMMMMMMMMMMMMMMMMMMMK.</text>
+<text class="text bold f11" x="333" y="369.6">CPU</text>
+<text class="text fg" x="362" y="369.6">: Apple M4 Max</text>
+<text class="text bold f12" x="54" y="392">kMMMMMMMMMMMMMMMMMMMMMMd</text>
+<text class="text bold f11" x="333" y="392">GPU</text>
+<text class="text fg" x="362" y="392">: Apple M4 Max</text>
+<text class="text bold f12" x="16" y="414.4">     ;KMMMMMMMWXXWMMMMMMMk.</text>
+<text class="text bold f11" x="333" y="414.4">Memory</text>
+<text class="text fg" x="390" y="414.4">: 7224MiB / 36864MiB</text>
+<text class="text bold f12" x="16" y="436.8">       .cooc,.    .,coo:.</text>
+<text class="text f0" x="333" y="459.2">   </text>
+<text class="text f9" x="362" y="459.2">   </text>
+<text class="text f10" x="390" y="459.2">   </text>
+<text class="text f11" x="419" y="459.2">   </text>
+<text class="text f12" x="448" y="459.2">   </text>
+<text class="text f13" x="477" y="459.2">   </text>
+<text class="text f6" x="506" y="459.2">   </text>
+<text class="text f7" x="534" y="459.2">   </text>
+<text class="text f8" x="333" y="481.6">   </text>
+<text class="text f9" x="362" y="481.6">   </text>
+<text class="text f10" x="390" y="481.6">   </text>
+<text class="text f11" x="419" y="481.6">   </text>
+<text class="text f12" x="448" y="481.6">   </text>
+<text class="text f13" x="477" y="481.6">   </text>
+<text class="text f14" x="506" y="481.6">   </text>
+<text class="text f15" x="534" y="481.6">   </text>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.143705;0.22368;1" dur="6.40s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-12" visibility="hidden">
+    <g class="bg-layer">
+<rect x="332.8" y="459.2" width="28.8" height="22.4" fill="#3b4252"/>
+<rect x="332.8" y="481.6" width="28.8" height="22.4" fill="#4c566a"/>
+<rect x="361.6" y="459.2" width="28.8" height="44.8" fill="#bf616a"/>
+<rect x="390.4" y="459.2" width="28.8" height="44.8" fill="#a3be8c"/>
+<rect x="419.2" y="459.2" width="28.8" height="44.8" fill="#ebcb8b"/>
+<rect x="448" y="459.2" width="28.8" height="44.8" fill="#81a1c1"/>
+<rect x="476.8" y="459.2" width="28.8" height="44.8" fill="#b48ead"/>
+<rect x="505.6" y="459.2" width="28.8" height="22.4" fill="#88c0d0"/>
+<rect x="505.6" y="481.6" width="28.8" height="22.4" fill="#8fbcbb"/>
+<rect x="534.4" y="459.2" width="28.8" height="22.4" fill="#e5e9f0"/>
+<rect x="534.4" y="481.6" width="28.8" height="22.4" fill="#eceff4"/>
+</g>
+<g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="26" y="56"> neofetch</text>
+<text class="text bold f10" x="16" y="78.4">                    &apos;c.</text>
+<text class="text bold f10" x="333" y="78.4">talhayut</text>
+<text class="text fg" x="410" y="78.4">@</text>
+<text class="text bold f10" x="419" y="78.4">Mac</text>
+<text class="text bold f10" x="16" y="100.8">                 ,xNMM.</text>
+<text class="text fg" x="237" y="100.8">          ------------</text>
+<text class="text bold f10" x="16" y="123.2">               .OMMMMo</text>
+<text class="text bold f11" x="333" y="123.2">OS</text>
+<text class="text fg" x="352" y="123.2">: macOS 26.2 25C56 arm64</text>
+<text class="text bold f10" x="16" y="145.6">               OMMM0,</text>
+<text class="text bold f11" x="333" y="145.6">Host</text>
+<text class="text fg" x="371" y="145.6">: Mac16,5</text>
+<text class="text bold f10" x="16" y="168">     .;loddo:&apos; loolloddol;.</text>
+<text class="text bold f11" x="333" y="168">Kernel</text>
+<text class="text fg" x="390" y="168">: 25.2.0</text>
+<text class="text bold f10" x="16" y="190.4">   cKMMMMMMMMMMNWMMMMMMMMMM0:</text>
+<text class="text bold f11" x="333" y="190.4">Uptime</text>
+<text class="text fg" x="390" y="190.4">: 8 days, 9 hours, 1 min</text>
+<text class="text bold f11" x="16" y="212.8"> .KMMMMMMMMMMMMMMMMMMMMMMMWd.</text>
+<text class="text bold f11" x="333" y="212.8">Packages</text>
+<text class="text fg" x="410" y="212.8">: 52 (brew)</text>
+<text class="text bold f11" x="16" y="235.2"> XMMMMMMMMMMMMMMMMMMMMMMMX.</text>
+<text class="text bold f11" x="333" y="235.2">Shell</text>
+<text class="text fg" x="381" y="235.2">: zsh 5.9</text>
+<text class="text bold f9" x="16" y="257.6">;MMMMMMMMMMMMMMMMMMMMMMMM:</text>
+<text class="text bold f11" x="333" y="257.6">Resolution</text>
+<text class="text fg" x="429" y="257.6">: 1728x1117</text>
+<text class="text bold f9" x="16" y="280">:MMMMMMMMMMMMMMMMMMMMMMMM:</text>
+<text class="text bold f11" x="333" y="280">DE</text>
+<text class="text fg" x="352" y="280">: Aqua</text>
+<text class="text bold f9" x="16" y="302.4">.MMMMMMMMMMMMMMMMMMMMMMMMX.</text>
+<text class="text bold f11" x="333" y="302.4">WM</text>
+<text class="text fg" x="352" y="302.4">: Quartz Compositor</text>
+<text class="text bold f9" x="16" y="324.8"> kMMMMMMMMMMMMMMMMMMMMMMMMWd.</text>
+<text class="text bold f11" x="333" y="324.8">WM Theme</text>
+<text class="text fg" x="410" y="324.8">: Blue (Dark)</text>
+<text class="text bold f13" x="26" y="347.2">.XMMMMMMMMMMMMMMMMMMMMMMMMMMk</text>
+<text class="text bold f11" x="333" y="347.2">Terminal</text>
+<text class="text fg" x="410" y="347.2">: node</text>
+<text class="text bold f13" x="16" y="369.6">  .XMMMMMMMMMMMMMMMMMMMMMMMMK.</text>
+<text class="text bold f11" x="333" y="369.6">CPU</text>
+<text class="text fg" x="362" y="369.6">: Apple M4 Max</text>
+<text class="text bold f12" x="54" y="392">kMMMMMMMMMMMMMMMMMMMMMMd</text>
+<text class="text bold f11" x="333" y="392">GPU</text>
+<text class="text fg" x="362" y="392">: Apple M4 Max</text>
+<text class="text bold f12" x="16" y="414.4">     ;KMMMMMMMWXXWMMMMMMMk.</text>
+<text class="text bold f11" x="333" y="414.4">Memory</text>
+<text class="text fg" x="390" y="414.4">: 7224MiB / 36864MiB</text>
+<text class="text bold f12" x="16" y="436.8">       .cooc,.    .,coo:.</text>
+<text class="text f0" x="333" y="459.2">   </text>
+<text class="text f9" x="362" y="459.2">   </text>
+<text class="text f10" x="390" y="459.2">   </text>
+<text class="text f11" x="419" y="459.2">   </text>
+<text class="text f12" x="448" y="459.2">   </text>
+<text class="text f13" x="477" y="459.2">   </text>
+<text class="text f6" x="506" y="459.2">   </text>
+<text class="text f7" x="534" y="459.2">   </text>
+<text class="text f8" x="333" y="481.6">   </text>
+<text class="text f9" x="362" y="481.6">   </text>
+<text class="text f10" x="390" y="481.6">   </text>
+<text class="text f11" x="419" y="481.6">   </text>
+<text class="text f12" x="448" y="481.6">   </text>
+<text class="text f13" x="477" y="481.6">   </text>
+<text class="text f14" x="506" y="481.6">   </text>
+<text class="text f15" x="534" y="481.6">   </text>
+<text class="text f13" x="16" y="571.2">❯</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor" x="35.2" y="571.2" width="9.6" height="22.4" fill="#d8dee9"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.22368;0.558263;1" dur="6.40s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-13" visibility="hidden">
+    <g class="bg-layer">
+<rect x="332.8" y="459.2" width="28.8" height="22.4" fill="#3b4252"/>
+<rect x="332.8" y="481.6" width="28.8" height="22.4" fill="#4c566a"/>
+<rect x="361.6" y="459.2" width="28.8" height="44.8" fill="#bf616a"/>
+<rect x="390.4" y="459.2" width="28.8" height="44.8" fill="#a3be8c"/>
+<rect x="419.2" y="459.2" width="28.8" height="44.8" fill="#ebcb8b"/>
+<rect x="448" y="459.2" width="28.8" height="44.8" fill="#81a1c1"/>
+<rect x="476.8" y="459.2" width="28.8" height="44.8" fill="#b48ead"/>
+<rect x="505.6" y="459.2" width="28.8" height="22.4" fill="#88c0d0"/>
+<rect x="505.6" y="481.6" width="28.8" height="22.4" fill="#8fbcbb"/>
+<rect x="534.4" y="459.2" width="28.8" height="22.4" fill="#e5e9f0"/>
+<rect x="534.4" y="481.6" width="28.8" height="22.4" fill="#eceff4"/>
+</g>
+<g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="26" y="56"> neofetch</text>
+<text class="text bold f10" x="16" y="78.4">                    &apos;c.</text>
+<text class="text bold f10" x="333" y="78.4">talhayut</text>
+<text class="text fg" x="410" y="78.4">@</text>
+<text class="text bold f10" x="419" y="78.4">Mac</text>
+<text class="text bold f10" x="16" y="100.8">                 ,xNMM.</text>
+<text class="text fg" x="237" y="100.8">          ------------</text>
+<text class="text bold f10" x="16" y="123.2">               .OMMMMo</text>
+<text class="text bold f11" x="333" y="123.2">OS</text>
+<text class="text fg" x="352" y="123.2">: macOS 26.2 25C56 arm64</text>
+<text class="text bold f10" x="16" y="145.6">               OMMM0,</text>
+<text class="text bold f11" x="333" y="145.6">Host</text>
+<text class="text fg" x="371" y="145.6">: Mac16,5</text>
+<text class="text bold f10" x="16" y="168">     .;loddo:&apos; loolloddol;.</text>
+<text class="text bold f11" x="333" y="168">Kernel</text>
+<text class="text fg" x="390" y="168">: 25.2.0</text>
+<text class="text bold f10" x="16" y="190.4">   cKMMMMMMMMMMNWMMMMMMMMMM0:</text>
+<text class="text bold f11" x="333" y="190.4">Uptime</text>
+<text class="text fg" x="390" y="190.4">: 8 days, 9 hours, 1 min</text>
+<text class="text bold f11" x="16" y="212.8"> .KMMMMMMMMMMMMMMMMMMMMMMMWd.</text>
+<text class="text bold f11" x="333" y="212.8">Packages</text>
+<text class="text fg" x="410" y="212.8">: 52 (brew)</text>
+<text class="text bold f11" x="16" y="235.2"> XMMMMMMMMMMMMMMMMMMMMMMMX.</text>
+<text class="text bold f11" x="333" y="235.2">Shell</text>
+<text class="text fg" x="381" y="235.2">: zsh 5.9</text>
+<text class="text bold f9" x="16" y="257.6">;MMMMMMMMMMMMMMMMMMMMMMMM:</text>
+<text class="text bold f11" x="333" y="257.6">Resolution</text>
+<text class="text fg" x="429" y="257.6">: 1728x1117</text>
+<text class="text bold f9" x="16" y="280">:MMMMMMMMMMMMMMMMMMMMMMMM:</text>
+<text class="text bold f11" x="333" y="280">DE</text>
+<text class="text fg" x="352" y="280">: Aqua</text>
+<text class="text bold f9" x="16" y="302.4">.MMMMMMMMMMMMMMMMMMMMMMMMX.</text>
+<text class="text bold f11" x="333" y="302.4">WM</text>
+<text class="text fg" x="352" y="302.4">: Quartz Compositor</text>
+<text class="text bold f9" x="16" y="324.8"> kMMMMMMMMMMMMMMMMMMMMMMMMWd.</text>
+<text class="text bold f11" x="333" y="324.8">WM Theme</text>
+<text class="text fg" x="410" y="324.8">: Blue (Dark)</text>
+<text class="text bold f13" x="26" y="347.2">.XMMMMMMMMMMMMMMMMMMMMMMMMMMk</text>
+<text class="text bold f11" x="333" y="347.2">Terminal</text>
+<text class="text fg" x="410" y="347.2">: node</text>
+<text class="text bold f13" x="16" y="369.6">  .XMMMMMMMMMMMMMMMMMMMMMMMMK.</text>
+<text class="text bold f11" x="333" y="369.6">CPU</text>
+<text class="text fg" x="362" y="369.6">: Apple M4 Max</text>
+<text class="text bold f12" x="54" y="392">kMMMMMMMMMMMMMMMMMMMMMMd</text>
+<text class="text bold f11" x="333" y="392">GPU</text>
+<text class="text fg" x="362" y="392">: Apple M4 Max</text>
+<text class="text bold f12" x="16" y="414.4">     ;KMMMMMMMWXXWMMMMMMMk.</text>
+<text class="text bold f11" x="333" y="414.4">Memory</text>
+<text class="text fg" x="390" y="414.4">: 7224MiB / 36864MiB</text>
+<text class="text bold f12" x="16" y="436.8">       .cooc,.    .,coo:.</text>
+<text class="text f0" x="333" y="459.2">   </text>
+<text class="text f9" x="362" y="459.2">   </text>
+<text class="text f10" x="390" y="459.2">   </text>
+<text class="text f11" x="419" y="459.2">   </text>
+<text class="text f12" x="448" y="459.2">   </text>
+<text class="text f13" x="477" y="459.2">   </text>
+<text class="text f6" x="506" y="459.2">   </text>
+<text class="text f7" x="534" y="459.2">   </text>
+<text class="text f8" x="333" y="481.6">   </text>
+<text class="text f9" x="362" y="481.6">   </text>
+<text class="text f10" x="390" y="481.6">   </text>
+<text class="text f11" x="419" y="481.6">   </text>
+<text class="text f12" x="448" y="481.6">   </text>
+<text class="text f13" x="477" y="481.6">   </text>
+<text class="text f14" x="506" y="481.6">   </text>
+<text class="text f15" x="534" y="481.6">   </text>
+<text class="text f13" x="16" y="571.2">❯</text>
+<text class="text fg" x="26" y="571.2"> F</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="44.8" y="571.2" width="9.6" height="22.4" fill="#d8dee9"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.558263;0.563105;1" dur="6.40s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-14" visibility="hidden">
+    <g class="bg-layer">
+<rect x="332.8" y="459.2" width="28.8" height="22.4" fill="#3b4252"/>
+<rect x="332.8" y="481.6" width="28.8" height="22.4" fill="#4c566a"/>
+<rect x="361.6" y="459.2" width="28.8" height="44.8" fill="#bf616a"/>
+<rect x="390.4" y="459.2" width="28.8" height="44.8" fill="#a3be8c"/>
+<rect x="419.2" y="459.2" width="28.8" height="44.8" fill="#ebcb8b"/>
+<rect x="448" y="459.2" width="28.8" height="44.8" fill="#81a1c1"/>
+<rect x="476.8" y="459.2" width="28.8" height="44.8" fill="#b48ead"/>
+<rect x="505.6" y="459.2" width="28.8" height="22.4" fill="#88c0d0"/>
+<rect x="505.6" y="481.6" width="28.8" height="22.4" fill="#8fbcbb"/>
+<rect x="534.4" y="459.2" width="28.8" height="22.4" fill="#e5e9f0"/>
+<rect x="534.4" y="481.6" width="28.8" height="22.4" fill="#eceff4"/>
+</g>
+<g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="26" y="56"> neofetch</text>
+<text class="text bold f10" x="16" y="78.4">                    &apos;c.</text>
+<text class="text bold f10" x="333" y="78.4">talhayut</text>
+<text class="text fg" x="410" y="78.4">@</text>
+<text class="text bold f10" x="419" y="78.4">Mac</text>
+<text class="text bold f10" x="16" y="100.8">                 ,xNMM.</text>
+<text class="text fg" x="237" y="100.8">          ------------</text>
+<text class="text bold f10" x="16" y="123.2">               .OMMMMo</text>
+<text class="text bold f11" x="333" y="123.2">OS</text>
+<text class="text fg" x="352" y="123.2">: macOS 26.2 25C56 arm64</text>
+<text class="text bold f10" x="16" y="145.6">               OMMM0,</text>
+<text class="text bold f11" x="333" y="145.6">Host</text>
+<text class="text fg" x="371" y="145.6">: Mac16,5</text>
+<text class="text bold f10" x="16" y="168">     .;loddo:&apos; loolloddol;.</text>
+<text class="text bold f11" x="333" y="168">Kernel</text>
+<text class="text fg" x="390" y="168">: 25.2.0</text>
+<text class="text bold f10" x="16" y="190.4">   cKMMMMMMMMMMNWMMMMMMMMMM0:</text>
+<text class="text bold f11" x="333" y="190.4">Uptime</text>
+<text class="text fg" x="390" y="190.4">: 8 days, 9 hours, 1 min</text>
+<text class="text bold f11" x="16" y="212.8"> .KMMMMMMMMMMMMMMMMMMMMMMMWd.</text>
+<text class="text bold f11" x="333" y="212.8">Packages</text>
+<text class="text fg" x="410" y="212.8">: 52 (brew)</text>
+<text class="text bold f11" x="16" y="235.2"> XMMMMMMMMMMMMMMMMMMMMMMMX.</text>
+<text class="text bold f11" x="333" y="235.2">Shell</text>
+<text class="text fg" x="381" y="235.2">: zsh 5.9</text>
+<text class="text bold f9" x="16" y="257.6">;MMMMMMMMMMMMMMMMMMMMMMMM:</text>
+<text class="text bold f11" x="333" y="257.6">Resolution</text>
+<text class="text fg" x="429" y="257.6">: 1728x1117</text>
+<text class="text bold f9" x="16" y="280">:MMMMMMMMMMMMMMMMMMMMMMMM:</text>
+<text class="text bold f11" x="333" y="280">DE</text>
+<text class="text fg" x="352" y="280">: Aqua</text>
+<text class="text bold f9" x="16" y="302.4">.MMMMMMMMMMMMMMMMMMMMMMMMX.</text>
+<text class="text bold f11" x="333" y="302.4">WM</text>
+<text class="text fg" x="352" y="302.4">: Quartz Compositor</text>
+<text class="text bold f9" x="16" y="324.8"> kMMMMMMMMMMMMMMMMMMMMMMMMWd.</text>
+<text class="text bold f11" x="333" y="324.8">WM Theme</text>
+<text class="text fg" x="410" y="324.8">: Blue (Dark)</text>
+<text class="text bold f13" x="26" y="347.2">.XMMMMMMMMMMMMMMMMMMMMMMMMMMk</text>
+<text class="text bold f11" x="333" y="347.2">Terminal</text>
+<text class="text fg" x="410" y="347.2">: node</text>
+<text class="text bold f13" x="16" y="369.6">  .XMMMMMMMMMMMMMMMMMMMMMMMMK.</text>
+<text class="text bold f11" x="333" y="369.6">CPU</text>
+<text class="text fg" x="362" y="369.6">: Apple M4 Max</text>
+<text class="text bold f12" x="54" y="392">kMMMMMMMMMMMMMMMMMMMMMMd</text>
+<text class="text bold f11" x="333" y="392">GPU</text>
+<text class="text fg" x="362" y="392">: Apple M4 Max</text>
+<text class="text bold f12" x="16" y="414.4">     ;KMMMMMMMWXXWMMMMMMMk.</text>
+<text class="text bold f11" x="333" y="414.4">Memory</text>
+<text class="text fg" x="390" y="414.4">: 7224MiB / 36864MiB</text>
+<text class="text bold f12" x="16" y="436.8">       .cooc,.    .,coo:.</text>
+<text class="text f0" x="333" y="459.2">   </text>
+<text class="text f9" x="362" y="459.2">   </text>
+<text class="text f10" x="390" y="459.2">   </text>
+<text class="text f11" x="419" y="459.2">   </text>
+<text class="text f12" x="448" y="459.2">   </text>
+<text class="text f13" x="477" y="459.2">   </text>
+<text class="text f6" x="506" y="459.2">   </text>
+<text class="text f7" x="534" y="459.2">   </text>
+<text class="text f8" x="333" y="481.6">   </text>
+<text class="text f9" x="362" y="481.6">   </text>
+<text class="text f10" x="390" y="481.6">   </text>
+<text class="text f11" x="419" y="481.6">   </text>
+<text class="text f12" x="448" y="481.6">   </text>
+<text class="text f13" x="477" y="481.6">   </text>
+<text class="text f14" x="506" y="481.6">   </text>
+<text class="text f15" x="534" y="481.6">   </text>
+<text class="text f13" x="16" y="571.2">❯</text>
+<text class="text fg" x="26" y="571.2"> Fo</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="54.4" y="571.2" width="9.6" height="22.4" fill="#d8dee9"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.563105;0.569822;1" dur="6.40s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-15" visibility="hidden">
+    <g class="bg-layer">
+<rect x="332.8" y="459.2" width="28.8" height="22.4" fill="#3b4252"/>
+<rect x="332.8" y="481.6" width="28.8" height="22.4" fill="#4c566a"/>
+<rect x="361.6" y="459.2" width="28.8" height="44.8" fill="#bf616a"/>
+<rect x="390.4" y="459.2" width="28.8" height="44.8" fill="#a3be8c"/>
+<rect x="419.2" y="459.2" width="28.8" height="44.8" fill="#ebcb8b"/>
+<rect x="448" y="459.2" width="28.8" height="44.8" fill="#81a1c1"/>
+<rect x="476.8" y="459.2" width="28.8" height="44.8" fill="#b48ead"/>
+<rect x="505.6" y="459.2" width="28.8" height="22.4" fill="#88c0d0"/>
+<rect x="505.6" y="481.6" width="28.8" height="22.4" fill="#8fbcbb"/>
+<rect x="534.4" y="459.2" width="28.8" height="22.4" fill="#e5e9f0"/>
+<rect x="534.4" y="481.6" width="28.8" height="22.4" fill="#eceff4"/>
+</g>
+<g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="26" y="56"> neofetch</text>
+<text class="text bold f10" x="16" y="78.4">                    &apos;c.</text>
+<text class="text bold f10" x="333" y="78.4">talhayut</text>
+<text class="text fg" x="410" y="78.4">@</text>
+<text class="text bold f10" x="419" y="78.4">Mac</text>
+<text class="text bold f10" x="16" y="100.8">                 ,xNMM.</text>
+<text class="text fg" x="237" y="100.8">          ------------</text>
+<text class="text bold f10" x="16" y="123.2">               .OMMMMo</text>
+<text class="text bold f11" x="333" y="123.2">OS</text>
+<text class="text fg" x="352" y="123.2">: macOS 26.2 25C56 arm64</text>
+<text class="text bold f10" x="16" y="145.6">               OMMM0,</text>
+<text class="text bold f11" x="333" y="145.6">Host</text>
+<text class="text fg" x="371" y="145.6">: Mac16,5</text>
+<text class="text bold f10" x="16" y="168">     .;loddo:&apos; loolloddol;.</text>
+<text class="text bold f11" x="333" y="168">Kernel</text>
+<text class="text fg" x="390" y="168">: 25.2.0</text>
+<text class="text bold f10" x="16" y="190.4">   cKMMMMMMMMMMNWMMMMMMMMMM0:</text>
+<text class="text bold f11" x="333" y="190.4">Uptime</text>
+<text class="text fg" x="390" y="190.4">: 8 days, 9 hours, 1 min</text>
+<text class="text bold f11" x="16" y="212.8"> .KMMMMMMMMMMMMMMMMMMMMMMMWd.</text>
+<text class="text bold f11" x="333" y="212.8">Packages</text>
+<text class="text fg" x="410" y="212.8">: 52 (brew)</text>
+<text class="text bold f11" x="16" y="235.2"> XMMMMMMMMMMMMMMMMMMMMMMMX.</text>
+<text class="text bold f11" x="333" y="235.2">Shell</text>
+<text class="text fg" x="381" y="235.2">: zsh 5.9</text>
+<text class="text bold f9" x="16" y="257.6">;MMMMMMMMMMMMMMMMMMMMMMMM:</text>
+<text class="text bold f11" x="333" y="257.6">Resolution</text>
+<text class="text fg" x="429" y="257.6">: 1728x1117</text>
+<text class="text bold f9" x="16" y="280">:MMMMMMMMMMMMMMMMMMMMMMMM:</text>
+<text class="text bold f11" x="333" y="280">DE</text>
+<text class="text fg" x="352" y="280">: Aqua</text>
+<text class="text bold f9" x="16" y="302.4">.MMMMMMMMMMMMMMMMMMMMMMMMX.</text>
+<text class="text bold f11" x="333" y="302.4">WM</text>
+<text class="text fg" x="352" y="302.4">: Quartz Compositor</text>
+<text class="text bold f9" x="16" y="324.8"> kMMMMMMMMMMMMMMMMMMMMMMMMWd.</text>
+<text class="text bold f11" x="333" y="324.8">WM Theme</text>
+<text class="text fg" x="410" y="324.8">: Blue (Dark)</text>
+<text class="text bold f13" x="26" y="347.2">.XMMMMMMMMMMMMMMMMMMMMMMMMMMk</text>
+<text class="text bold f11" x="333" y="347.2">Terminal</text>
+<text class="text fg" x="410" y="347.2">: node</text>
+<text class="text bold f13" x="16" y="369.6">  .XMMMMMMMMMMMMMMMMMMMMMMMMK.</text>
+<text class="text bold f11" x="333" y="369.6">CPU</text>
+<text class="text fg" x="362" y="369.6">: Apple M4 Max</text>
+<text class="text bold f12" x="54" y="392">kMMMMMMMMMMMMMMMMMMMMMMd</text>
+<text class="text bold f11" x="333" y="392">GPU</text>
+<text class="text fg" x="362" y="392">: Apple M4 Max</text>
+<text class="text bold f12" x="16" y="414.4">     ;KMMMMMMMWXXWMMMMMMMk.</text>
+<text class="text bold f11" x="333" y="414.4">Memory</text>
+<text class="text fg" x="390" y="414.4">: 7224MiB / 36864MiB</text>
+<text class="text bold f12" x="16" y="436.8">       .cooc,.    .,coo:.</text>
+<text class="text f0" x="333" y="459.2">   </text>
+<text class="text f9" x="362" y="459.2">   </text>
+<text class="text f10" x="390" y="459.2">   </text>
+<text class="text f11" x="419" y="459.2">   </text>
+<text class="text f12" x="448" y="459.2">   </text>
+<text class="text f13" x="477" y="459.2">   </text>
+<text class="text f6" x="506" y="459.2">   </text>
+<text class="text f7" x="534" y="459.2">   </text>
+<text class="text f8" x="333" y="481.6">   </text>
+<text class="text f9" x="362" y="481.6">   </text>
+<text class="text f10" x="390" y="481.6">   </text>
+<text class="text f11" x="419" y="481.6">   </text>
+<text class="text f12" x="448" y="481.6">   </text>
+<text class="text f13" x="477" y="481.6">   </text>
+<text class="text f14" x="506" y="481.6">   </text>
+<text class="text f15" x="534" y="481.6">   </text>
+<text class="text f13" x="16" y="571.2">❯</text>
+<text class="text fg" x="26" y="571.2"> Fon</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="64" y="571.2" width="9.6" height="22.4" fill="#d8dee9"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.569822;0.573102;1" dur="6.40s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-16" visibility="hidden">
+    <g class="bg-layer">
+<rect x="332.8" y="459.2" width="28.8" height="22.4" fill="#3b4252"/>
+<rect x="332.8" y="481.6" width="28.8" height="22.4" fill="#4c566a"/>
+<rect x="361.6" y="459.2" width="28.8" height="44.8" fill="#bf616a"/>
+<rect x="390.4" y="459.2" width="28.8" height="44.8" fill="#a3be8c"/>
+<rect x="419.2" y="459.2" width="28.8" height="44.8" fill="#ebcb8b"/>
+<rect x="448" y="459.2" width="28.8" height="44.8" fill="#81a1c1"/>
+<rect x="476.8" y="459.2" width="28.8" height="44.8" fill="#b48ead"/>
+<rect x="505.6" y="459.2" width="28.8" height="22.4" fill="#88c0d0"/>
+<rect x="505.6" y="481.6" width="28.8" height="22.4" fill="#8fbcbb"/>
+<rect x="534.4" y="459.2" width="28.8" height="22.4" fill="#e5e9f0"/>
+<rect x="534.4" y="481.6" width="28.8" height="22.4" fill="#eceff4"/>
+</g>
+<g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="26" y="56"> neofetch</text>
+<text class="text bold f10" x="16" y="78.4">                    &apos;c.</text>
+<text class="text bold f10" x="333" y="78.4">talhayut</text>
+<text class="text fg" x="410" y="78.4">@</text>
+<text class="text bold f10" x="419" y="78.4">Mac</text>
+<text class="text bold f10" x="16" y="100.8">                 ,xNMM.</text>
+<text class="text fg" x="237" y="100.8">          ------------</text>
+<text class="text bold f10" x="16" y="123.2">               .OMMMMo</text>
+<text class="text bold f11" x="333" y="123.2">OS</text>
+<text class="text fg" x="352" y="123.2">: macOS 26.2 25C56 arm64</text>
+<text class="text bold f10" x="16" y="145.6">               OMMM0,</text>
+<text class="text bold f11" x="333" y="145.6">Host</text>
+<text class="text fg" x="371" y="145.6">: Mac16,5</text>
+<text class="text bold f10" x="16" y="168">     .;loddo:&apos; loolloddol;.</text>
+<text class="text bold f11" x="333" y="168">Kernel</text>
+<text class="text fg" x="390" y="168">: 25.2.0</text>
+<text class="text bold f10" x="16" y="190.4">   cKMMMMMMMMMMNWMMMMMMMMMM0:</text>
+<text class="text bold f11" x="333" y="190.4">Uptime</text>
+<text class="text fg" x="390" y="190.4">: 8 days, 9 hours, 1 min</text>
+<text class="text bold f11" x="16" y="212.8"> .KMMMMMMMMMMMMMMMMMMMMMMMWd.</text>
+<text class="text bold f11" x="333" y="212.8">Packages</text>
+<text class="text fg" x="410" y="212.8">: 52 (brew)</text>
+<text class="text bold f11" x="16" y="235.2"> XMMMMMMMMMMMMMMMMMMMMMMMX.</text>
+<text class="text bold f11" x="333" y="235.2">Shell</text>
+<text class="text fg" x="381" y="235.2">: zsh 5.9</text>
+<text class="text bold f9" x="16" y="257.6">;MMMMMMMMMMMMMMMMMMMMMMMM:</text>
+<text class="text bold f11" x="333" y="257.6">Resolution</text>
+<text class="text fg" x="429" y="257.6">: 1728x1117</text>
+<text class="text bold f9" x="16" y="280">:MMMMMMMMMMMMMMMMMMMMMMMM:</text>
+<text class="text bold f11" x="333" y="280">DE</text>
+<text class="text fg" x="352" y="280">: Aqua</text>
+<text class="text bold f9" x="16" y="302.4">.MMMMMMMMMMMMMMMMMMMMMMMMX.</text>
+<text class="text bold f11" x="333" y="302.4">WM</text>
+<text class="text fg" x="352" y="302.4">: Quartz Compositor</text>
+<text class="text bold f9" x="16" y="324.8"> kMMMMMMMMMMMMMMMMMMMMMMMMWd.</text>
+<text class="text bold f11" x="333" y="324.8">WM Theme</text>
+<text class="text fg" x="410" y="324.8">: Blue (Dark)</text>
+<text class="text bold f13" x="26" y="347.2">.XMMMMMMMMMMMMMMMMMMMMMMMMMMk</text>
+<text class="text bold f11" x="333" y="347.2">Terminal</text>
+<text class="text fg" x="410" y="347.2">: node</text>
+<text class="text bold f13" x="16" y="369.6">  .XMMMMMMMMMMMMMMMMMMMMMMMMK.</text>
+<text class="text bold f11" x="333" y="369.6">CPU</text>
+<text class="text fg" x="362" y="369.6">: Apple M4 Max</text>
+<text class="text bold f12" x="54" y="392">kMMMMMMMMMMMMMMMMMMMMMMd</text>
+<text class="text bold f11" x="333" y="392">GPU</text>
+<text class="text fg" x="362" y="392">: Apple M4 Max</text>
+<text class="text bold f12" x="16" y="414.4">     ;KMMMMMMMWXXWMMMMMMMk.</text>
+<text class="text bold f11" x="333" y="414.4">Memory</text>
+<text class="text fg" x="390" y="414.4">: 7224MiB / 36864MiB</text>
+<text class="text bold f12" x="16" y="436.8">       .cooc,.    .,coo:.</text>
+<text class="text f0" x="333" y="459.2">   </text>
+<text class="text f9" x="362" y="459.2">   </text>
+<text class="text f10" x="390" y="459.2">   </text>
+<text class="text f11" x="419" y="459.2">   </text>
+<text class="text f12" x="448" y="459.2">   </text>
+<text class="text f13" x="477" y="459.2">   </text>
+<text class="text f6" x="506" y="459.2">   </text>
+<text class="text f7" x="534" y="459.2">   </text>
+<text class="text f8" x="333" y="481.6">   </text>
+<text class="text f9" x="362" y="481.6">   </text>
+<text class="text f10" x="390" y="481.6">   </text>
+<text class="text f11" x="419" y="481.6">   </text>
+<text class="text f12" x="448" y="481.6">   </text>
+<text class="text f13" x="477" y="481.6">   </text>
+<text class="text f14" x="506" y="481.6">   </text>
+<text class="text f15" x="534" y="481.6">   </text>
+<text class="text f13" x="16" y="571.2">❯</text>
+<text class="text fg" x="26" y="571.2"> Font</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="73.6" y="571.2" width="9.6" height="22.4" fill="#d8dee9"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.573102;0.577476;1" dur="6.40s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-17" visibility="hidden">
+    <g class="bg-layer">
+<rect x="332.8" y="459.2" width="28.8" height="22.4" fill="#3b4252"/>
+<rect x="332.8" y="481.6" width="28.8" height="22.4" fill="#4c566a"/>
+<rect x="361.6" y="459.2" width="28.8" height="44.8" fill="#bf616a"/>
+<rect x="390.4" y="459.2" width="28.8" height="44.8" fill="#a3be8c"/>
+<rect x="419.2" y="459.2" width="28.8" height="44.8" fill="#ebcb8b"/>
+<rect x="448" y="459.2" width="28.8" height="44.8" fill="#81a1c1"/>
+<rect x="476.8" y="459.2" width="28.8" height="44.8" fill="#b48ead"/>
+<rect x="505.6" y="459.2" width="28.8" height="22.4" fill="#88c0d0"/>
+<rect x="505.6" y="481.6" width="28.8" height="22.4" fill="#8fbcbb"/>
+<rect x="534.4" y="459.2" width="28.8" height="22.4" fill="#e5e9f0"/>
+<rect x="534.4" y="481.6" width="28.8" height="22.4" fill="#eceff4"/>
+</g>
+<g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="26" y="56"> neofetch</text>
+<text class="text bold f10" x="16" y="78.4">                    &apos;c.</text>
+<text class="text bold f10" x="333" y="78.4">talhayut</text>
+<text class="text fg" x="410" y="78.4">@</text>
+<text class="text bold f10" x="419" y="78.4">Mac</text>
+<text class="text bold f10" x="16" y="100.8">                 ,xNMM.</text>
+<text class="text fg" x="237" y="100.8">          ------------</text>
+<text class="text bold f10" x="16" y="123.2">               .OMMMMo</text>
+<text class="text bold f11" x="333" y="123.2">OS</text>
+<text class="text fg" x="352" y="123.2">: macOS 26.2 25C56 arm64</text>
+<text class="text bold f10" x="16" y="145.6">               OMMM0,</text>
+<text class="text bold f11" x="333" y="145.6">Host</text>
+<text class="text fg" x="371" y="145.6">: Mac16,5</text>
+<text class="text bold f10" x="16" y="168">     .;loddo:&apos; loolloddol;.</text>
+<text class="text bold f11" x="333" y="168">Kernel</text>
+<text class="text fg" x="390" y="168">: 25.2.0</text>
+<text class="text bold f10" x="16" y="190.4">   cKMMMMMMMMMMNWMMMMMMMMMM0:</text>
+<text class="text bold f11" x="333" y="190.4">Uptime</text>
+<text class="text fg" x="390" y="190.4">: 8 days, 9 hours, 1 min</text>
+<text class="text bold f11" x="16" y="212.8"> .KMMMMMMMMMMMMMMMMMMMMMMMWd.</text>
+<text class="text bold f11" x="333" y="212.8">Packages</text>
+<text class="text fg" x="410" y="212.8">: 52 (brew)</text>
+<text class="text bold f11" x="16" y="235.2"> XMMMMMMMMMMMMMMMMMMMMMMMX.</text>
+<text class="text bold f11" x="333" y="235.2">Shell</text>
+<text class="text fg" x="381" y="235.2">: zsh 5.9</text>
+<text class="text bold f9" x="16" y="257.6">;MMMMMMMMMMMMMMMMMMMMMMMM:</text>
+<text class="text bold f11" x="333" y="257.6">Resolution</text>
+<text class="text fg" x="429" y="257.6">: 1728x1117</text>
+<text class="text bold f9" x="16" y="280">:MMMMMMMMMMMMMMMMMMMMMMMM:</text>
+<text class="text bold f11" x="333" y="280">DE</text>
+<text class="text fg" x="352" y="280">: Aqua</text>
+<text class="text bold f9" x="16" y="302.4">.MMMMMMMMMMMMMMMMMMMMMMMMX.</text>
+<text class="text bold f11" x="333" y="302.4">WM</text>
+<text class="text fg" x="352" y="302.4">: Quartz Compositor</text>
+<text class="text bold f9" x="16" y="324.8"> kMMMMMMMMMMMMMMMMMMMMMMMMWd.</text>
+<text class="text bold f11" x="333" y="324.8">WM Theme</text>
+<text class="text fg" x="410" y="324.8">: Blue (Dark)</text>
+<text class="text bold f13" x="26" y="347.2">.XMMMMMMMMMMMMMMMMMMMMMMMMMMk</text>
+<text class="text bold f11" x="333" y="347.2">Terminal</text>
+<text class="text fg" x="410" y="347.2">: node</text>
+<text class="text bold f13" x="16" y="369.6">  .XMMMMMMMMMMMMMMMMMMMMMMMMK.</text>
+<text class="text bold f11" x="333" y="369.6">CPU</text>
+<text class="text fg" x="362" y="369.6">: Apple M4 Max</text>
+<text class="text bold f12" x="54" y="392">kMMMMMMMMMMMMMMMMMMMMMMd</text>
+<text class="text bold f11" x="333" y="392">GPU</text>
+<text class="text fg" x="362" y="392">: Apple M4 Max</text>
+<text class="text bold f12" x="16" y="414.4">     ;KMMMMMMMWXXWMMMMMMMk.</text>
+<text class="text bold f11" x="333" y="414.4">Memory</text>
+<text class="text fg" x="390" y="414.4">: 7224MiB / 36864MiB</text>
+<text class="text bold f12" x="16" y="436.8">       .cooc,.    .,coo:.</text>
+<text class="text f0" x="333" y="459.2">   </text>
+<text class="text f9" x="362" y="459.2">   </text>
+<text class="text f10" x="390" y="459.2">   </text>
+<text class="text f11" x="419" y="459.2">   </text>
+<text class="text f12" x="448" y="459.2">   </text>
+<text class="text f13" x="477" y="459.2">   </text>
+<text class="text f6" x="506" y="459.2">   </text>
+<text class="text f7" x="534" y="459.2">   </text>
+<text class="text f8" x="333" y="481.6">   </text>
+<text class="text f9" x="362" y="481.6">   </text>
+<text class="text f10" x="390" y="481.6">   </text>
+<text class="text f11" x="419" y="481.6">   </text>
+<text class="text f12" x="448" y="481.6">   </text>
+<text class="text f13" x="477" y="481.6">   </text>
+<text class="text f14" x="506" y="481.6">   </text>
+<text class="text f15" x="534" y="481.6">   </text>
+<text class="text f13" x="16" y="571.2">❯</text>
+<text class="text fg" x="26" y="571.2"> Font</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="83.2" y="571.2" width="9.6" height="22.4" fill="#d8dee9"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.577476;0.582474;1" dur="6.40s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-18" visibility="hidden">
+    <g class="bg-layer">
+<rect x="332.8" y="459.2" width="28.8" height="22.4" fill="#3b4252"/>
+<rect x="332.8" y="481.6" width="28.8" height="22.4" fill="#4c566a"/>
+<rect x="361.6" y="459.2" width="28.8" height="44.8" fill="#bf616a"/>
+<rect x="390.4" y="459.2" width="28.8" height="44.8" fill="#a3be8c"/>
+<rect x="419.2" y="459.2" width="28.8" height="44.8" fill="#ebcb8b"/>
+<rect x="448" y="459.2" width="28.8" height="44.8" fill="#81a1c1"/>
+<rect x="476.8" y="459.2" width="28.8" height="44.8" fill="#b48ead"/>
+<rect x="505.6" y="459.2" width="28.8" height="22.4" fill="#88c0d0"/>
+<rect x="505.6" y="481.6" width="28.8" height="22.4" fill="#8fbcbb"/>
+<rect x="534.4" y="459.2" width="28.8" height="22.4" fill="#e5e9f0"/>
+<rect x="534.4" y="481.6" width="28.8" height="22.4" fill="#eceff4"/>
+</g>
+<g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="26" y="56"> neofetch</text>
+<text class="text bold f10" x="16" y="78.4">                    &apos;c.</text>
+<text class="text bold f10" x="333" y="78.4">talhayut</text>
+<text class="text fg" x="410" y="78.4">@</text>
+<text class="text bold f10" x="419" y="78.4">Mac</text>
+<text class="text bold f10" x="16" y="100.8">                 ,xNMM.</text>
+<text class="text fg" x="237" y="100.8">          ------------</text>
+<text class="text bold f10" x="16" y="123.2">               .OMMMMo</text>
+<text class="text bold f11" x="333" y="123.2">OS</text>
+<text class="text fg" x="352" y="123.2">: macOS 26.2 25C56 arm64</text>
+<text class="text bold f10" x="16" y="145.6">               OMMM0,</text>
+<text class="text bold f11" x="333" y="145.6">Host</text>
+<text class="text fg" x="371" y="145.6">: Mac16,5</text>
+<text class="text bold f10" x="16" y="168">     .;loddo:&apos; loolloddol;.</text>
+<text class="text bold f11" x="333" y="168">Kernel</text>
+<text class="text fg" x="390" y="168">: 25.2.0</text>
+<text class="text bold f10" x="16" y="190.4">   cKMMMMMMMMMMNWMMMMMMMMMM0:</text>
+<text class="text bold f11" x="333" y="190.4">Uptime</text>
+<text class="text fg" x="390" y="190.4">: 8 days, 9 hours, 1 min</text>
+<text class="text bold f11" x="16" y="212.8"> .KMMMMMMMMMMMMMMMMMMMMMMMWd.</text>
+<text class="text bold f11" x="333" y="212.8">Packages</text>
+<text class="text fg" x="410" y="212.8">: 52 (brew)</text>
+<text class="text bold f11" x="16" y="235.2"> XMMMMMMMMMMMMMMMMMMMMMMMX.</text>
+<text class="text bold f11" x="333" y="235.2">Shell</text>
+<text class="text fg" x="381" y="235.2">: zsh 5.9</text>
+<text class="text bold f9" x="16" y="257.6">;MMMMMMMMMMMMMMMMMMMMMMMM:</text>
+<text class="text bold f11" x="333" y="257.6">Resolution</text>
+<text class="text fg" x="429" y="257.6">: 1728x1117</text>
+<text class="text bold f9" x="16" y="280">:MMMMMMMMMMMMMMMMMMMMMMMM:</text>
+<text class="text bold f11" x="333" y="280">DE</text>
+<text class="text fg" x="352" y="280">: Aqua</text>
+<text class="text bold f9" x="16" y="302.4">.MMMMMMMMMMMMMMMMMMMMMMMMX.</text>
+<text class="text bold f11" x="333" y="302.4">WM</text>
+<text class="text fg" x="352" y="302.4">: Quartz Compositor</text>
+<text class="text bold f9" x="16" y="324.8"> kMMMMMMMMMMMMMMMMMMMMMMMMWd.</text>
+<text class="text bold f11" x="333" y="324.8">WM Theme</text>
+<text class="text fg" x="410" y="324.8">: Blue (Dark)</text>
+<text class="text bold f13" x="26" y="347.2">.XMMMMMMMMMMMMMMMMMMMMMMMMMMk</text>
+<text class="text bold f11" x="333" y="347.2">Terminal</text>
+<text class="text fg" x="410" y="347.2">: node</text>
+<text class="text bold f13" x="16" y="369.6">  .XMMMMMMMMMMMMMMMMMMMMMMMMK.</text>
+<text class="text bold f11" x="333" y="369.6">CPU</text>
+<text class="text fg" x="362" y="369.6">: Apple M4 Max</text>
+<text class="text bold f12" x="54" y="392">kMMMMMMMMMMMMMMMMMMMMMMd</text>
+<text class="text bold f11" x="333" y="392">GPU</text>
+<text class="text fg" x="362" y="392">: Apple M4 Max</text>
+<text class="text bold f12" x="16" y="414.4">     ;KMMMMMMMWXXWMMMMMMMk.</text>
+<text class="text bold f11" x="333" y="414.4">Memory</text>
+<text class="text fg" x="390" y="414.4">: 7224MiB / 36864MiB</text>
+<text class="text bold f12" x="16" y="436.8">       .cooc,.    .,coo:.</text>
+<text class="text f0" x="333" y="459.2">   </text>
+<text class="text f9" x="362" y="459.2">   </text>
+<text class="text f10" x="390" y="459.2">   </text>
+<text class="text f11" x="419" y="459.2">   </text>
+<text class="text f12" x="448" y="459.2">   </text>
+<text class="text f13" x="477" y="459.2">   </text>
+<text class="text f6" x="506" y="459.2">   </text>
+<text class="text f7" x="534" y="459.2">   </text>
+<text class="text f8" x="333" y="481.6">   </text>
+<text class="text f9" x="362" y="481.6">   </text>
+<text class="text f10" x="390" y="481.6">   </text>
+<text class="text f11" x="419" y="481.6">   </text>
+<text class="text f12" x="448" y="481.6">   </text>
+<text class="text f13" x="477" y="481.6">   </text>
+<text class="text f14" x="506" y="481.6">   </text>
+<text class="text f15" x="534" y="481.6">   </text>
+<text class="text f13" x="16" y="571.2">❯</text>
+<text class="text fg" x="26" y="571.2"> Font e</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="92.8" y="571.2" width="9.6" height="22.4" fill="#d8dee9"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.582474;0.587473;1" dur="6.40s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-19" visibility="hidden">
+    <g class="bg-layer">
+<rect x="332.8" y="459.2" width="28.8" height="22.4" fill="#3b4252"/>
+<rect x="332.8" y="481.6" width="28.8" height="22.4" fill="#4c566a"/>
+<rect x="361.6" y="459.2" width="28.8" height="44.8" fill="#bf616a"/>
+<rect x="390.4" y="459.2" width="28.8" height="44.8" fill="#a3be8c"/>
+<rect x="419.2" y="459.2" width="28.8" height="44.8" fill="#ebcb8b"/>
+<rect x="448" y="459.2" width="28.8" height="44.8" fill="#81a1c1"/>
+<rect x="476.8" y="459.2" width="28.8" height="44.8" fill="#b48ead"/>
+<rect x="505.6" y="459.2" width="28.8" height="22.4" fill="#88c0d0"/>
+<rect x="505.6" y="481.6" width="28.8" height="22.4" fill="#8fbcbb"/>
+<rect x="534.4" y="459.2" width="28.8" height="22.4" fill="#e5e9f0"/>
+<rect x="534.4" y="481.6" width="28.8" height="22.4" fill="#eceff4"/>
+</g>
+<g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="26" y="56"> neofetch</text>
+<text class="text bold f10" x="16" y="78.4">                    &apos;c.</text>
+<text class="text bold f10" x="333" y="78.4">talhayut</text>
+<text class="text fg" x="410" y="78.4">@</text>
+<text class="text bold f10" x="419" y="78.4">Mac</text>
+<text class="text bold f10" x="16" y="100.8">                 ,xNMM.</text>
+<text class="text fg" x="237" y="100.8">          ------------</text>
+<text class="text bold f10" x="16" y="123.2">               .OMMMMo</text>
+<text class="text bold f11" x="333" y="123.2">OS</text>
+<text class="text fg" x="352" y="123.2">: macOS 26.2 25C56 arm64</text>
+<text class="text bold f10" x="16" y="145.6">               OMMM0,</text>
+<text class="text bold f11" x="333" y="145.6">Host</text>
+<text class="text fg" x="371" y="145.6">: Mac16,5</text>
+<text class="text bold f10" x="16" y="168">     .;loddo:&apos; loolloddol;.</text>
+<text class="text bold f11" x="333" y="168">Kernel</text>
+<text class="text fg" x="390" y="168">: 25.2.0</text>
+<text class="text bold f10" x="16" y="190.4">   cKMMMMMMMMMMNWMMMMMMMMMM0:</text>
+<text class="text bold f11" x="333" y="190.4">Uptime</text>
+<text class="text fg" x="390" y="190.4">: 8 days, 9 hours, 1 min</text>
+<text class="text bold f11" x="16" y="212.8"> .KMMMMMMMMMMMMMMMMMMMMMMMWd.</text>
+<text class="text bold f11" x="333" y="212.8">Packages</text>
+<text class="text fg" x="410" y="212.8">: 52 (brew)</text>
+<text class="text bold f11" x="16" y="235.2"> XMMMMMMMMMMMMMMMMMMMMMMMX.</text>
+<text class="text bold f11" x="333" y="235.2">Shell</text>
+<text class="text fg" x="381" y="235.2">: zsh 5.9</text>
+<text class="text bold f9" x="16" y="257.6">;MMMMMMMMMMMMMMMMMMMMMMMM:</text>
+<text class="text bold f11" x="333" y="257.6">Resolution</text>
+<text class="text fg" x="429" y="257.6">: 1728x1117</text>
+<text class="text bold f9" x="16" y="280">:MMMMMMMMMMMMMMMMMMMMMMMM:</text>
+<text class="text bold f11" x="333" y="280">DE</text>
+<text class="text fg" x="352" y="280">: Aqua</text>
+<text class="text bold f9" x="16" y="302.4">.MMMMMMMMMMMMMMMMMMMMMMMMX.</text>
+<text class="text bold f11" x="333" y="302.4">WM</text>
+<text class="text fg" x="352" y="302.4">: Quartz Compositor</text>
+<text class="text bold f9" x="16" y="324.8"> kMMMMMMMMMMMMMMMMMMMMMMMMWd.</text>
+<text class="text bold f11" x="333" y="324.8">WM Theme</text>
+<text class="text fg" x="410" y="324.8">: Blue (Dark)</text>
+<text class="text bold f13" x="26" y="347.2">.XMMMMMMMMMMMMMMMMMMMMMMMMMMk</text>
+<text class="text bold f11" x="333" y="347.2">Terminal</text>
+<text class="text fg" x="410" y="347.2">: node</text>
+<text class="text bold f13" x="16" y="369.6">  .XMMMMMMMMMMMMMMMMMMMMMMMMK.</text>
+<text class="text bold f11" x="333" y="369.6">CPU</text>
+<text class="text fg" x="362" y="369.6">: Apple M4 Max</text>
+<text class="text bold f12" x="54" y="392">kMMMMMMMMMMMMMMMMMMMMMMd</text>
+<text class="text bold f11" x="333" y="392">GPU</text>
+<text class="text fg" x="362" y="392">: Apple M4 Max</text>
+<text class="text bold f12" x="16" y="414.4">     ;KMMMMMMMWXXWMMMMMMMk.</text>
+<text class="text bold f11" x="333" y="414.4">Memory</text>
+<text class="text fg" x="390" y="414.4">: 7224MiB / 36864MiB</text>
+<text class="text bold f12" x="16" y="436.8">       .cooc,.    .,coo:.</text>
+<text class="text f0" x="333" y="459.2">   </text>
+<text class="text f9" x="362" y="459.2">   </text>
+<text class="text f10" x="390" y="459.2">   </text>
+<text class="text f11" x="419" y="459.2">   </text>
+<text class="text f12" x="448" y="459.2">   </text>
+<text class="text f13" x="477" y="459.2">   </text>
+<text class="text f6" x="506" y="459.2">   </text>
+<text class="text f7" x="534" y="459.2">   </text>
+<text class="text f8" x="333" y="481.6">   </text>
+<text class="text f9" x="362" y="481.6">   </text>
+<text class="text f10" x="390" y="481.6">   </text>
+<text class="text f11" x="419" y="481.6">   </text>
+<text class="text f12" x="448" y="481.6">   </text>
+<text class="text f13" x="477" y="481.6">   </text>
+<text class="text f14" x="506" y="481.6">   </text>
+<text class="text f15" x="534" y="481.6">   </text>
+<text class="text f13" x="16" y="571.2">❯</text>
+<text class="text fg" x="26" y="571.2"> Font em</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="102.4" y="571.2" width="9.6" height="22.4" fill="#d8dee9"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.587473;0.592159;1" dur="6.40s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-20" visibility="hidden">
+    <g class="bg-layer">
+<rect x="332.8" y="459.2" width="28.8" height="22.4" fill="#3b4252"/>
+<rect x="332.8" y="481.6" width="28.8" height="22.4" fill="#4c566a"/>
+<rect x="361.6" y="459.2" width="28.8" height="44.8" fill="#bf616a"/>
+<rect x="390.4" y="459.2" width="28.8" height="44.8" fill="#a3be8c"/>
+<rect x="419.2" y="459.2" width="28.8" height="44.8" fill="#ebcb8b"/>
+<rect x="448" y="459.2" width="28.8" height="44.8" fill="#81a1c1"/>
+<rect x="476.8" y="459.2" width="28.8" height="44.8" fill="#b48ead"/>
+<rect x="505.6" y="459.2" width="28.8" height="22.4" fill="#88c0d0"/>
+<rect x="505.6" y="481.6" width="28.8" height="22.4" fill="#8fbcbb"/>
+<rect x="534.4" y="459.2" width="28.8" height="22.4" fill="#e5e9f0"/>
+<rect x="534.4" y="481.6" width="28.8" height="22.4" fill="#eceff4"/>
+</g>
+<g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="26" y="56"> neofetch</text>
+<text class="text bold f10" x="16" y="78.4">                    &apos;c.</text>
+<text class="text bold f10" x="333" y="78.4">talhayut</text>
+<text class="text fg" x="410" y="78.4">@</text>
+<text class="text bold f10" x="419" y="78.4">Mac</text>
+<text class="text bold f10" x="16" y="100.8">                 ,xNMM.</text>
+<text class="text fg" x="237" y="100.8">          ------------</text>
+<text class="text bold f10" x="16" y="123.2">               .OMMMMo</text>
+<text class="text bold f11" x="333" y="123.2">OS</text>
+<text class="text fg" x="352" y="123.2">: macOS 26.2 25C56 arm64</text>
+<text class="text bold f10" x="16" y="145.6">               OMMM0,</text>
+<text class="text bold f11" x="333" y="145.6">Host</text>
+<text class="text fg" x="371" y="145.6">: Mac16,5</text>
+<text class="text bold f10" x="16" y="168">     .;loddo:&apos; loolloddol;.</text>
+<text class="text bold f11" x="333" y="168">Kernel</text>
+<text class="text fg" x="390" y="168">: 25.2.0</text>
+<text class="text bold f10" x="16" y="190.4">   cKMMMMMMMMMMNWMMMMMMMMMM0:</text>
+<text class="text bold f11" x="333" y="190.4">Uptime</text>
+<text class="text fg" x="390" y="190.4">: 8 days, 9 hours, 1 min</text>
+<text class="text bold f11" x="16" y="212.8"> .KMMMMMMMMMMMMMMMMMMMMMMMWd.</text>
+<text class="text bold f11" x="333" y="212.8">Packages</text>
+<text class="text fg" x="410" y="212.8">: 52 (brew)</text>
+<text class="text bold f11" x="16" y="235.2"> XMMMMMMMMMMMMMMMMMMMMMMMX.</text>
+<text class="text bold f11" x="333" y="235.2">Shell</text>
+<text class="text fg" x="381" y="235.2">: zsh 5.9</text>
+<text class="text bold f9" x="16" y="257.6">;MMMMMMMMMMMMMMMMMMMMMMMM:</text>
+<text class="text bold f11" x="333" y="257.6">Resolution</text>
+<text class="text fg" x="429" y="257.6">: 1728x1117</text>
+<text class="text bold f9" x="16" y="280">:MMMMMMMMMMMMMMMMMMMMMMMM:</text>
+<text class="text bold f11" x="333" y="280">DE</text>
+<text class="text fg" x="352" y="280">: Aqua</text>
+<text class="text bold f9" x="16" y="302.4">.MMMMMMMMMMMMMMMMMMMMMMMMX.</text>
+<text class="text bold f11" x="333" y="302.4">WM</text>
+<text class="text fg" x="352" y="302.4">: Quartz Compositor</text>
+<text class="text bold f9" x="16" y="324.8"> kMMMMMMMMMMMMMMMMMMMMMMMMWd.</text>
+<text class="text bold f11" x="333" y="324.8">WM Theme</text>
+<text class="text fg" x="410" y="324.8">: Blue (Dark)</text>
+<text class="text bold f13" x="26" y="347.2">.XMMMMMMMMMMMMMMMMMMMMMMMMMMk</text>
+<text class="text bold f11" x="333" y="347.2">Terminal</text>
+<text class="text fg" x="410" y="347.2">: node</text>
+<text class="text bold f13" x="16" y="369.6">  .XMMMMMMMMMMMMMMMMMMMMMMMMK.</text>
+<text class="text bold f11" x="333" y="369.6">CPU</text>
+<text class="text fg" x="362" y="369.6">: Apple M4 Max</text>
+<text class="text bold f12" x="54" y="392">kMMMMMMMMMMMMMMMMMMMMMMd</text>
+<text class="text bold f11" x="333" y="392">GPU</text>
+<text class="text fg" x="362" y="392">: Apple M4 Max</text>
+<text class="text bold f12" x="16" y="414.4">     ;KMMMMMMMWXXWMMMMMMMk.</text>
+<text class="text bold f11" x="333" y="414.4">Memory</text>
+<text class="text fg" x="390" y="414.4">: 7224MiB / 36864MiB</text>
+<text class="text bold f12" x="16" y="436.8">       .cooc,.    .,coo:.</text>
+<text class="text f0" x="333" y="459.2">   </text>
+<text class="text f9" x="362" y="459.2">   </text>
+<text class="text f10" x="390" y="459.2">   </text>
+<text class="text f11" x="419" y="459.2">   </text>
+<text class="text f12" x="448" y="459.2">   </text>
+<text class="text f13" x="477" y="459.2">   </text>
+<text class="text f6" x="506" y="459.2">   </text>
+<text class="text f7" x="534" y="459.2">   </text>
+<text class="text f8" x="333" y="481.6">   </text>
+<text class="text f9" x="362" y="481.6">   </text>
+<text class="text f10" x="390" y="481.6">   </text>
+<text class="text f11" x="419" y="481.6">   </text>
+<text class="text f12" x="448" y="481.6">   </text>
+<text class="text f13" x="477" y="481.6">   </text>
+<text class="text f14" x="506" y="481.6">   </text>
+<text class="text f15" x="534" y="481.6">   </text>
+<text class="text f13" x="16" y="571.2">❯</text>
+<text class="text fg" x="26" y="571.2"> Font emb</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="112" y="571.2" width="9.6" height="22.4" fill="#d8dee9"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.592159;0.596845;1" dur="6.40s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-21" visibility="hidden">
+    <g class="bg-layer">
+<rect x="332.8" y="459.2" width="28.8" height="22.4" fill="#3b4252"/>
+<rect x="332.8" y="481.6" width="28.8" height="22.4" fill="#4c566a"/>
+<rect x="361.6" y="459.2" width="28.8" height="44.8" fill="#bf616a"/>
+<rect x="390.4" y="459.2" width="28.8" height="44.8" fill="#a3be8c"/>
+<rect x="419.2" y="459.2" width="28.8" height="44.8" fill="#ebcb8b"/>
+<rect x="448" y="459.2" width="28.8" height="44.8" fill="#81a1c1"/>
+<rect x="476.8" y="459.2" width="28.8" height="44.8" fill="#b48ead"/>
+<rect x="505.6" y="459.2" width="28.8" height="22.4" fill="#88c0d0"/>
+<rect x="505.6" y="481.6" width="28.8" height="22.4" fill="#8fbcbb"/>
+<rect x="534.4" y="459.2" width="28.8" height="22.4" fill="#e5e9f0"/>
+<rect x="534.4" y="481.6" width="28.8" height="22.4" fill="#eceff4"/>
+</g>
+<g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="26" y="56"> neofetch</text>
+<text class="text bold f10" x="16" y="78.4">                    &apos;c.</text>
+<text class="text bold f10" x="333" y="78.4">talhayut</text>
+<text class="text fg" x="410" y="78.4">@</text>
+<text class="text bold f10" x="419" y="78.4">Mac</text>
+<text class="text bold f10" x="16" y="100.8">                 ,xNMM.</text>
+<text class="text fg" x="237" y="100.8">          ------------</text>
+<text class="text bold f10" x="16" y="123.2">               .OMMMMo</text>
+<text class="text bold f11" x="333" y="123.2">OS</text>
+<text class="text fg" x="352" y="123.2">: macOS 26.2 25C56 arm64</text>
+<text class="text bold f10" x="16" y="145.6">               OMMM0,</text>
+<text class="text bold f11" x="333" y="145.6">Host</text>
+<text class="text fg" x="371" y="145.6">: Mac16,5</text>
+<text class="text bold f10" x="16" y="168">     .;loddo:&apos; loolloddol;.</text>
+<text class="text bold f11" x="333" y="168">Kernel</text>
+<text class="text fg" x="390" y="168">: 25.2.0</text>
+<text class="text bold f10" x="16" y="190.4">   cKMMMMMMMMMMNWMMMMMMMMMM0:</text>
+<text class="text bold f11" x="333" y="190.4">Uptime</text>
+<text class="text fg" x="390" y="190.4">: 8 days, 9 hours, 1 min</text>
+<text class="text bold f11" x="16" y="212.8"> .KMMMMMMMMMMMMMMMMMMMMMMMWd.</text>
+<text class="text bold f11" x="333" y="212.8">Packages</text>
+<text class="text fg" x="410" y="212.8">: 52 (brew)</text>
+<text class="text bold f11" x="16" y="235.2"> XMMMMMMMMMMMMMMMMMMMMMMMX.</text>
+<text class="text bold f11" x="333" y="235.2">Shell</text>
+<text class="text fg" x="381" y="235.2">: zsh 5.9</text>
+<text class="text bold f9" x="16" y="257.6">;MMMMMMMMMMMMMMMMMMMMMMMM:</text>
+<text class="text bold f11" x="333" y="257.6">Resolution</text>
+<text class="text fg" x="429" y="257.6">: 1728x1117</text>
+<text class="text bold f9" x="16" y="280">:MMMMMMMMMMMMMMMMMMMMMMMM:</text>
+<text class="text bold f11" x="333" y="280">DE</text>
+<text class="text fg" x="352" y="280">: Aqua</text>
+<text class="text bold f9" x="16" y="302.4">.MMMMMMMMMMMMMMMMMMMMMMMMX.</text>
+<text class="text bold f11" x="333" y="302.4">WM</text>
+<text class="text fg" x="352" y="302.4">: Quartz Compositor</text>
+<text class="text bold f9" x="16" y="324.8"> kMMMMMMMMMMMMMMMMMMMMMMMMWd.</text>
+<text class="text bold f11" x="333" y="324.8">WM Theme</text>
+<text class="text fg" x="410" y="324.8">: Blue (Dark)</text>
+<text class="text bold f13" x="26" y="347.2">.XMMMMMMMMMMMMMMMMMMMMMMMMMMk</text>
+<text class="text bold f11" x="333" y="347.2">Terminal</text>
+<text class="text fg" x="410" y="347.2">: node</text>
+<text class="text bold f13" x="16" y="369.6">  .XMMMMMMMMMMMMMMMMMMMMMMMMK.</text>
+<text class="text bold f11" x="333" y="369.6">CPU</text>
+<text class="text fg" x="362" y="369.6">: Apple M4 Max</text>
+<text class="text bold f12" x="54" y="392">kMMMMMMMMMMMMMMMMMMMMMMd</text>
+<text class="text bold f11" x="333" y="392">GPU</text>
+<text class="text fg" x="362" y="392">: Apple M4 Max</text>
+<text class="text bold f12" x="16" y="414.4">     ;KMMMMMMMWXXWMMMMMMMk.</text>
+<text class="text bold f11" x="333" y="414.4">Memory</text>
+<text class="text fg" x="390" y="414.4">: 7224MiB / 36864MiB</text>
+<text class="text bold f12" x="16" y="436.8">       .cooc,.    .,coo:.</text>
+<text class="text f0" x="333" y="459.2">   </text>
+<text class="text f9" x="362" y="459.2">   </text>
+<text class="text f10" x="390" y="459.2">   </text>
+<text class="text f11" x="419" y="459.2">   </text>
+<text class="text f12" x="448" y="459.2">   </text>
+<text class="text f13" x="477" y="459.2">   </text>
+<text class="text f6" x="506" y="459.2">   </text>
+<text class="text f7" x="534" y="459.2">   </text>
+<text class="text f8" x="333" y="481.6">   </text>
+<text class="text f9" x="362" y="481.6">   </text>
+<text class="text f10" x="390" y="481.6">   </text>
+<text class="text f11" x="419" y="481.6">   </text>
+<text class="text f12" x="448" y="481.6">   </text>
+<text class="text f13" x="477" y="481.6">   </text>
+<text class="text f14" x="506" y="481.6">   </text>
+<text class="text f15" x="534" y="481.6">   </text>
+<text class="text f13" x="16" y="571.2">❯</text>
+<text class="text fg" x="26" y="571.2"> Font embe</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="121.6" y="571.2" width="9.6" height="22.4" fill="#d8dee9"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.596845;0.601687;1" dur="6.40s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-22" visibility="hidden">
+    <g class="bg-layer">
+<rect x="332.8" y="459.2" width="28.8" height="22.4" fill="#3b4252"/>
+<rect x="332.8" y="481.6" width="28.8" height="22.4" fill="#4c566a"/>
+<rect x="361.6" y="459.2" width="28.8" height="44.8" fill="#bf616a"/>
+<rect x="390.4" y="459.2" width="28.8" height="44.8" fill="#a3be8c"/>
+<rect x="419.2" y="459.2" width="28.8" height="44.8" fill="#ebcb8b"/>
+<rect x="448" y="459.2" width="28.8" height="44.8" fill="#81a1c1"/>
+<rect x="476.8" y="459.2" width="28.8" height="44.8" fill="#b48ead"/>
+<rect x="505.6" y="459.2" width="28.8" height="22.4" fill="#88c0d0"/>
+<rect x="505.6" y="481.6" width="28.8" height="22.4" fill="#8fbcbb"/>
+<rect x="534.4" y="459.2" width="28.8" height="22.4" fill="#e5e9f0"/>
+<rect x="534.4" y="481.6" width="28.8" height="22.4" fill="#eceff4"/>
+</g>
+<g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="26" y="56"> neofetch</text>
+<text class="text bold f10" x="16" y="78.4">                    &apos;c.</text>
+<text class="text bold f10" x="333" y="78.4">talhayut</text>
+<text class="text fg" x="410" y="78.4">@</text>
+<text class="text bold f10" x="419" y="78.4">Mac</text>
+<text class="text bold f10" x="16" y="100.8">                 ,xNMM.</text>
+<text class="text fg" x="237" y="100.8">          ------------</text>
+<text class="text bold f10" x="16" y="123.2">               .OMMMMo</text>
+<text class="text bold f11" x="333" y="123.2">OS</text>
+<text class="text fg" x="352" y="123.2">: macOS 26.2 25C56 arm64</text>
+<text class="text bold f10" x="16" y="145.6">               OMMM0,</text>
+<text class="text bold f11" x="333" y="145.6">Host</text>
+<text class="text fg" x="371" y="145.6">: Mac16,5</text>
+<text class="text bold f10" x="16" y="168">     .;loddo:&apos; loolloddol;.</text>
+<text class="text bold f11" x="333" y="168">Kernel</text>
+<text class="text fg" x="390" y="168">: 25.2.0</text>
+<text class="text bold f10" x="16" y="190.4">   cKMMMMMMMMMMNWMMMMMMMMMM0:</text>
+<text class="text bold f11" x="333" y="190.4">Uptime</text>
+<text class="text fg" x="390" y="190.4">: 8 days, 9 hours, 1 min</text>
+<text class="text bold f11" x="16" y="212.8"> .KMMMMMMMMMMMMMMMMMMMMMMMWd.</text>
+<text class="text bold f11" x="333" y="212.8">Packages</text>
+<text class="text fg" x="410" y="212.8">: 52 (brew)</text>
+<text class="text bold f11" x="16" y="235.2"> XMMMMMMMMMMMMMMMMMMMMMMMX.</text>
+<text class="text bold f11" x="333" y="235.2">Shell</text>
+<text class="text fg" x="381" y="235.2">: zsh 5.9</text>
+<text class="text bold f9" x="16" y="257.6">;MMMMMMMMMMMMMMMMMMMMMMMM:</text>
+<text class="text bold f11" x="333" y="257.6">Resolution</text>
+<text class="text fg" x="429" y="257.6">: 1728x1117</text>
+<text class="text bold f9" x="16" y="280">:MMMMMMMMMMMMMMMMMMMMMMMM:</text>
+<text class="text bold f11" x="333" y="280">DE</text>
+<text class="text fg" x="352" y="280">: Aqua</text>
+<text class="text bold f9" x="16" y="302.4">.MMMMMMMMMMMMMMMMMMMMMMMMX.</text>
+<text class="text bold f11" x="333" y="302.4">WM</text>
+<text class="text fg" x="352" y="302.4">: Quartz Compositor</text>
+<text class="text bold f9" x="16" y="324.8"> kMMMMMMMMMMMMMMMMMMMMMMMMWd.</text>
+<text class="text bold f11" x="333" y="324.8">WM Theme</text>
+<text class="text fg" x="410" y="324.8">: Blue (Dark)</text>
+<text class="text bold f13" x="26" y="347.2">.XMMMMMMMMMMMMMMMMMMMMMMMMMMk</text>
+<text class="text bold f11" x="333" y="347.2">Terminal</text>
+<text class="text fg" x="410" y="347.2">: node</text>
+<text class="text bold f13" x="16" y="369.6">  .XMMMMMMMMMMMMMMMMMMMMMMMMK.</text>
+<text class="text bold f11" x="333" y="369.6">CPU</text>
+<text class="text fg" x="362" y="369.6">: Apple M4 Max</text>
+<text class="text bold f12" x="54" y="392">kMMMMMMMMMMMMMMMMMMMMMMd</text>
+<text class="text bold f11" x="333" y="392">GPU</text>
+<text class="text fg" x="362" y="392">: Apple M4 Max</text>
+<text class="text bold f12" x="16" y="414.4">     ;KMMMMMMMWXXWMMMMMMMk.</text>
+<text class="text bold f11" x="333" y="414.4">Memory</text>
+<text class="text fg" x="390" y="414.4">: 7224MiB / 36864MiB</text>
+<text class="text bold f12" x="16" y="436.8">       .cooc,.    .,coo:.</text>
+<text class="text f0" x="333" y="459.2">   </text>
+<text class="text f9" x="362" y="459.2">   </text>
+<text class="text f10" x="390" y="459.2">   </text>
+<text class="text f11" x="419" y="459.2">   </text>
+<text class="text f12" x="448" y="459.2">   </text>
+<text class="text f13" x="477" y="459.2">   </text>
+<text class="text f6" x="506" y="459.2">   </text>
+<text class="text f7" x="534" y="459.2">   </text>
+<text class="text f8" x="333" y="481.6">   </text>
+<text class="text f9" x="362" y="481.6">   </text>
+<text class="text f10" x="390" y="481.6">   </text>
+<text class="text f11" x="419" y="481.6">   </text>
+<text class="text f12" x="448" y="481.6">   </text>
+<text class="text f13" x="477" y="481.6">   </text>
+<text class="text f14" x="506" y="481.6">   </text>
+<text class="text f15" x="534" y="481.6">   </text>
+<text class="text f13" x="16" y="571.2">❯</text>
+<text class="text fg" x="26" y="571.2"> Font embed</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="131.2" y="571.2" width="9.6" height="22.4" fill="#d8dee9"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.601687;0.606529;1" dur="6.40s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-23" visibility="hidden">
+    <g class="bg-layer">
+<rect x="332.8" y="459.2" width="28.8" height="22.4" fill="#3b4252"/>
+<rect x="332.8" y="481.6" width="28.8" height="22.4" fill="#4c566a"/>
+<rect x="361.6" y="459.2" width="28.8" height="44.8" fill="#bf616a"/>
+<rect x="390.4" y="459.2" width="28.8" height="44.8" fill="#a3be8c"/>
+<rect x="419.2" y="459.2" width="28.8" height="44.8" fill="#ebcb8b"/>
+<rect x="448" y="459.2" width="28.8" height="44.8" fill="#81a1c1"/>
+<rect x="476.8" y="459.2" width="28.8" height="44.8" fill="#b48ead"/>
+<rect x="505.6" y="459.2" width="28.8" height="22.4" fill="#88c0d0"/>
+<rect x="505.6" y="481.6" width="28.8" height="22.4" fill="#8fbcbb"/>
+<rect x="534.4" y="459.2" width="28.8" height="22.4" fill="#e5e9f0"/>
+<rect x="534.4" y="481.6" width="28.8" height="22.4" fill="#eceff4"/>
+</g>
+<g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="26" y="56"> neofetch</text>
+<text class="text bold f10" x="16" y="78.4">                    &apos;c.</text>
+<text class="text bold f10" x="333" y="78.4">talhayut</text>
+<text class="text fg" x="410" y="78.4">@</text>
+<text class="text bold f10" x="419" y="78.4">Mac</text>
+<text class="text bold f10" x="16" y="100.8">                 ,xNMM.</text>
+<text class="text fg" x="237" y="100.8">          ------------</text>
+<text class="text bold f10" x="16" y="123.2">               .OMMMMo</text>
+<text class="text bold f11" x="333" y="123.2">OS</text>
+<text class="text fg" x="352" y="123.2">: macOS 26.2 25C56 arm64</text>
+<text class="text bold f10" x="16" y="145.6">               OMMM0,</text>
+<text class="text bold f11" x="333" y="145.6">Host</text>
+<text class="text fg" x="371" y="145.6">: Mac16,5</text>
+<text class="text bold f10" x="16" y="168">     .;loddo:&apos; loolloddol;.</text>
+<text class="text bold f11" x="333" y="168">Kernel</text>
+<text class="text fg" x="390" y="168">: 25.2.0</text>
+<text class="text bold f10" x="16" y="190.4">   cKMMMMMMMMMMNWMMMMMMMMMM0:</text>
+<text class="text bold f11" x="333" y="190.4">Uptime</text>
+<text class="text fg" x="390" y="190.4">: 8 days, 9 hours, 1 min</text>
+<text class="text bold f11" x="16" y="212.8"> .KMMMMMMMMMMMMMMMMMMMMMMMWd.</text>
+<text class="text bold f11" x="333" y="212.8">Packages</text>
+<text class="text fg" x="410" y="212.8">: 52 (brew)</text>
+<text class="text bold f11" x="16" y="235.2"> XMMMMMMMMMMMMMMMMMMMMMMMX.</text>
+<text class="text bold f11" x="333" y="235.2">Shell</text>
+<text class="text fg" x="381" y="235.2">: zsh 5.9</text>
+<text class="text bold f9" x="16" y="257.6">;MMMMMMMMMMMMMMMMMMMMMMMM:</text>
+<text class="text bold f11" x="333" y="257.6">Resolution</text>
+<text class="text fg" x="429" y="257.6">: 1728x1117</text>
+<text class="text bold f9" x="16" y="280">:MMMMMMMMMMMMMMMMMMMMMMMM:</text>
+<text class="text bold f11" x="333" y="280">DE</text>
+<text class="text fg" x="352" y="280">: Aqua</text>
+<text class="text bold f9" x="16" y="302.4">.MMMMMMMMMMMMMMMMMMMMMMMMX.</text>
+<text class="text bold f11" x="333" y="302.4">WM</text>
+<text class="text fg" x="352" y="302.4">: Quartz Compositor</text>
+<text class="text bold f9" x="16" y="324.8"> kMMMMMMMMMMMMMMMMMMMMMMMMWd.</text>
+<text class="text bold f11" x="333" y="324.8">WM Theme</text>
+<text class="text fg" x="410" y="324.8">: Blue (Dark)</text>
+<text class="text bold f13" x="26" y="347.2">.XMMMMMMMMMMMMMMMMMMMMMMMMMMk</text>
+<text class="text bold f11" x="333" y="347.2">Terminal</text>
+<text class="text fg" x="410" y="347.2">: node</text>
+<text class="text bold f13" x="16" y="369.6">  .XMMMMMMMMMMMMMMMMMMMMMMMMK.</text>
+<text class="text bold f11" x="333" y="369.6">CPU</text>
+<text class="text fg" x="362" y="369.6">: Apple M4 Max</text>
+<text class="text bold f12" x="54" y="392">kMMMMMMMMMMMMMMMMMMMMMMd</text>
+<text class="text bold f11" x="333" y="392">GPU</text>
+<text class="text fg" x="362" y="392">: Apple M4 Max</text>
+<text class="text bold f12" x="16" y="414.4">     ;KMMMMMMMWXXWMMMMMMMk.</text>
+<text class="text bold f11" x="333" y="414.4">Memory</text>
+<text class="text fg" x="390" y="414.4">: 7224MiB / 36864MiB</text>
+<text class="text bold f12" x="16" y="436.8">       .cooc,.    .,coo:.</text>
+<text class="text f0" x="333" y="459.2">   </text>
+<text class="text f9" x="362" y="459.2">   </text>
+<text class="text f10" x="390" y="459.2">   </text>
+<text class="text f11" x="419" y="459.2">   </text>
+<text class="text f12" x="448" y="459.2">   </text>
+<text class="text f13" x="477" y="459.2">   </text>
+<text class="text f6" x="506" y="459.2">   </text>
+<text class="text f7" x="534" y="459.2">   </text>
+<text class="text f8" x="333" y="481.6">   </text>
+<text class="text f9" x="362" y="481.6">   </text>
+<text class="text f10" x="390" y="481.6">   </text>
+<text class="text f11" x="419" y="481.6">   </text>
+<text class="text f12" x="448" y="481.6">   </text>
+<text class="text f13" x="477" y="481.6">   </text>
+<text class="text f14" x="506" y="481.6">   </text>
+<text class="text f15" x="534" y="481.6">   </text>
+<text class="text f13" x="16" y="571.2">❯</text>
+<text class="text fg" x="26" y="571.2"> Font embedd</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="140.8" y="571.2" width="9.6" height="22.4" fill="#d8dee9"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.606529;0.611215;1" dur="6.40s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-24" visibility="hidden">
+    <g class="bg-layer">
+<rect x="332.8" y="459.2" width="28.8" height="22.4" fill="#3b4252"/>
+<rect x="332.8" y="481.6" width="28.8" height="22.4" fill="#4c566a"/>
+<rect x="361.6" y="459.2" width="28.8" height="44.8" fill="#bf616a"/>
+<rect x="390.4" y="459.2" width="28.8" height="44.8" fill="#a3be8c"/>
+<rect x="419.2" y="459.2" width="28.8" height="44.8" fill="#ebcb8b"/>
+<rect x="448" y="459.2" width="28.8" height="44.8" fill="#81a1c1"/>
+<rect x="476.8" y="459.2" width="28.8" height="44.8" fill="#b48ead"/>
+<rect x="505.6" y="459.2" width="28.8" height="22.4" fill="#88c0d0"/>
+<rect x="505.6" y="481.6" width="28.8" height="22.4" fill="#8fbcbb"/>
+<rect x="534.4" y="459.2" width="28.8" height="22.4" fill="#e5e9f0"/>
+<rect x="534.4" y="481.6" width="28.8" height="22.4" fill="#eceff4"/>
+</g>
+<g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="26" y="56"> neofetch</text>
+<text class="text bold f10" x="16" y="78.4">                    &apos;c.</text>
+<text class="text bold f10" x="333" y="78.4">talhayut</text>
+<text class="text fg" x="410" y="78.4">@</text>
+<text class="text bold f10" x="419" y="78.4">Mac</text>
+<text class="text bold f10" x="16" y="100.8">                 ,xNMM.</text>
+<text class="text fg" x="237" y="100.8">          ------------</text>
+<text class="text bold f10" x="16" y="123.2">               .OMMMMo</text>
+<text class="text bold f11" x="333" y="123.2">OS</text>
+<text class="text fg" x="352" y="123.2">: macOS 26.2 25C56 arm64</text>
+<text class="text bold f10" x="16" y="145.6">               OMMM0,</text>
+<text class="text bold f11" x="333" y="145.6">Host</text>
+<text class="text fg" x="371" y="145.6">: Mac16,5</text>
+<text class="text bold f10" x="16" y="168">     .;loddo:&apos; loolloddol;.</text>
+<text class="text bold f11" x="333" y="168">Kernel</text>
+<text class="text fg" x="390" y="168">: 25.2.0</text>
+<text class="text bold f10" x="16" y="190.4">   cKMMMMMMMMMMNWMMMMMMMMMM0:</text>
+<text class="text bold f11" x="333" y="190.4">Uptime</text>
+<text class="text fg" x="390" y="190.4">: 8 days, 9 hours, 1 min</text>
+<text class="text bold f11" x="16" y="212.8"> .KMMMMMMMMMMMMMMMMMMMMMMMWd.</text>
+<text class="text bold f11" x="333" y="212.8">Packages</text>
+<text class="text fg" x="410" y="212.8">: 52 (brew)</text>
+<text class="text bold f11" x="16" y="235.2"> XMMMMMMMMMMMMMMMMMMMMMMMX.</text>
+<text class="text bold f11" x="333" y="235.2">Shell</text>
+<text class="text fg" x="381" y="235.2">: zsh 5.9</text>
+<text class="text bold f9" x="16" y="257.6">;MMMMMMMMMMMMMMMMMMMMMMMM:</text>
+<text class="text bold f11" x="333" y="257.6">Resolution</text>
+<text class="text fg" x="429" y="257.6">: 1728x1117</text>
+<text class="text bold f9" x="16" y="280">:MMMMMMMMMMMMMMMMMMMMMMMM:</text>
+<text class="text bold f11" x="333" y="280">DE</text>
+<text class="text fg" x="352" y="280">: Aqua</text>
+<text class="text bold f9" x="16" y="302.4">.MMMMMMMMMMMMMMMMMMMMMMMMX.</text>
+<text class="text bold f11" x="333" y="302.4">WM</text>
+<text class="text fg" x="352" y="302.4">: Quartz Compositor</text>
+<text class="text bold f9" x="16" y="324.8"> kMMMMMMMMMMMMMMMMMMMMMMMMWd.</text>
+<text class="text bold f11" x="333" y="324.8">WM Theme</text>
+<text class="text fg" x="410" y="324.8">: Blue (Dark)</text>
+<text class="text bold f13" x="26" y="347.2">.XMMMMMMMMMMMMMMMMMMMMMMMMMMk</text>
+<text class="text bold f11" x="333" y="347.2">Terminal</text>
+<text class="text fg" x="410" y="347.2">: node</text>
+<text class="text bold f13" x="16" y="369.6">  .XMMMMMMMMMMMMMMMMMMMMMMMMK.</text>
+<text class="text bold f11" x="333" y="369.6">CPU</text>
+<text class="text fg" x="362" y="369.6">: Apple M4 Max</text>
+<text class="text bold f12" x="54" y="392">kMMMMMMMMMMMMMMMMMMMMMMd</text>
+<text class="text bold f11" x="333" y="392">GPU</text>
+<text class="text fg" x="362" y="392">: Apple M4 Max</text>
+<text class="text bold f12" x="16" y="414.4">     ;KMMMMMMMWXXWMMMMMMMk.</text>
+<text class="text bold f11" x="333" y="414.4">Memory</text>
+<text class="text fg" x="390" y="414.4">: 7224MiB / 36864MiB</text>
+<text class="text bold f12" x="16" y="436.8">       .cooc,.    .,coo:.</text>
+<text class="text f0" x="333" y="459.2">   </text>
+<text class="text f9" x="362" y="459.2">   </text>
+<text class="text f10" x="390" y="459.2">   </text>
+<text class="text f11" x="419" y="459.2">   </text>
+<text class="text f12" x="448" y="459.2">   </text>
+<text class="text f13" x="477" y="459.2">   </text>
+<text class="text f6" x="506" y="459.2">   </text>
+<text class="text f7" x="534" y="459.2">   </text>
+<text class="text f8" x="333" y="481.6">   </text>
+<text class="text f9" x="362" y="481.6">   </text>
+<text class="text f10" x="390" y="481.6">   </text>
+<text class="text f11" x="419" y="481.6">   </text>
+<text class="text f12" x="448" y="481.6">   </text>
+<text class="text f13" x="477" y="481.6">   </text>
+<text class="text f14" x="506" y="481.6">   </text>
+<text class="text f15" x="534" y="481.6">   </text>
+<text class="text f13" x="16" y="571.2">❯</text>
+<text class="text fg" x="26" y="571.2"> Font embedde</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="150.4" y="571.2" width="9.6" height="22.4" fill="#d8dee9"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.611215;0.61637;1" dur="6.40s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-25" visibility="hidden">
+    <g class="bg-layer">
+<rect x="332.8" y="459.2" width="28.8" height="22.4" fill="#3b4252"/>
+<rect x="332.8" y="481.6" width="28.8" height="22.4" fill="#4c566a"/>
+<rect x="361.6" y="459.2" width="28.8" height="44.8" fill="#bf616a"/>
+<rect x="390.4" y="459.2" width="28.8" height="44.8" fill="#a3be8c"/>
+<rect x="419.2" y="459.2" width="28.8" height="44.8" fill="#ebcb8b"/>
+<rect x="448" y="459.2" width="28.8" height="44.8" fill="#81a1c1"/>
+<rect x="476.8" y="459.2" width="28.8" height="44.8" fill="#b48ead"/>
+<rect x="505.6" y="459.2" width="28.8" height="22.4" fill="#88c0d0"/>
+<rect x="505.6" y="481.6" width="28.8" height="22.4" fill="#8fbcbb"/>
+<rect x="534.4" y="459.2" width="28.8" height="22.4" fill="#e5e9f0"/>
+<rect x="534.4" y="481.6" width="28.8" height="22.4" fill="#eceff4"/>
+</g>
+<g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="26" y="56"> neofetch</text>
+<text class="text bold f10" x="16" y="78.4">                    &apos;c.</text>
+<text class="text bold f10" x="333" y="78.4">talhayut</text>
+<text class="text fg" x="410" y="78.4">@</text>
+<text class="text bold f10" x="419" y="78.4">Mac</text>
+<text class="text bold f10" x="16" y="100.8">                 ,xNMM.</text>
+<text class="text fg" x="237" y="100.8">          ------------</text>
+<text class="text bold f10" x="16" y="123.2">               .OMMMMo</text>
+<text class="text bold f11" x="333" y="123.2">OS</text>
+<text class="text fg" x="352" y="123.2">: macOS 26.2 25C56 arm64</text>
+<text class="text bold f10" x="16" y="145.6">               OMMM0,</text>
+<text class="text bold f11" x="333" y="145.6">Host</text>
+<text class="text fg" x="371" y="145.6">: Mac16,5</text>
+<text class="text bold f10" x="16" y="168">     .;loddo:&apos; loolloddol;.</text>
+<text class="text bold f11" x="333" y="168">Kernel</text>
+<text class="text fg" x="390" y="168">: 25.2.0</text>
+<text class="text bold f10" x="16" y="190.4">   cKMMMMMMMMMMNWMMMMMMMMMM0:</text>
+<text class="text bold f11" x="333" y="190.4">Uptime</text>
+<text class="text fg" x="390" y="190.4">: 8 days, 9 hours, 1 min</text>
+<text class="text bold f11" x="16" y="212.8"> .KMMMMMMMMMMMMMMMMMMMMMMMWd.</text>
+<text class="text bold f11" x="333" y="212.8">Packages</text>
+<text class="text fg" x="410" y="212.8">: 52 (brew)</text>
+<text class="text bold f11" x="16" y="235.2"> XMMMMMMMMMMMMMMMMMMMMMMMX.</text>
+<text class="text bold f11" x="333" y="235.2">Shell</text>
+<text class="text fg" x="381" y="235.2">: zsh 5.9</text>
+<text class="text bold f9" x="16" y="257.6">;MMMMMMMMMMMMMMMMMMMMMMMM:</text>
+<text class="text bold f11" x="333" y="257.6">Resolution</text>
+<text class="text fg" x="429" y="257.6">: 1728x1117</text>
+<text class="text bold f9" x="16" y="280">:MMMMMMMMMMMMMMMMMMMMMMMM:</text>
+<text class="text bold f11" x="333" y="280">DE</text>
+<text class="text fg" x="352" y="280">: Aqua</text>
+<text class="text bold f9" x="16" y="302.4">.MMMMMMMMMMMMMMMMMMMMMMMMX.</text>
+<text class="text bold f11" x="333" y="302.4">WM</text>
+<text class="text fg" x="352" y="302.4">: Quartz Compositor</text>
+<text class="text bold f9" x="16" y="324.8"> kMMMMMMMMMMMMMMMMMMMMMMMMWd.</text>
+<text class="text bold f11" x="333" y="324.8">WM Theme</text>
+<text class="text fg" x="410" y="324.8">: Blue (Dark)</text>
+<text class="text bold f13" x="26" y="347.2">.XMMMMMMMMMMMMMMMMMMMMMMMMMMk</text>
+<text class="text bold f11" x="333" y="347.2">Terminal</text>
+<text class="text fg" x="410" y="347.2">: node</text>
+<text class="text bold f13" x="16" y="369.6">  .XMMMMMMMMMMMMMMMMMMMMMMMMK.</text>
+<text class="text bold f11" x="333" y="369.6">CPU</text>
+<text class="text fg" x="362" y="369.6">: Apple M4 Max</text>
+<text class="text bold f12" x="54" y="392">kMMMMMMMMMMMMMMMMMMMMMMd</text>
+<text class="text bold f11" x="333" y="392">GPU</text>
+<text class="text fg" x="362" y="392">: Apple M4 Max</text>
+<text class="text bold f12" x="16" y="414.4">     ;KMMMMMMMWXXWMMMMMMMk.</text>
+<text class="text bold f11" x="333" y="414.4">Memory</text>
+<text class="text fg" x="390" y="414.4">: 7224MiB / 36864MiB</text>
+<text class="text bold f12" x="16" y="436.8">       .cooc,.    .,coo:.</text>
+<text class="text f0" x="333" y="459.2">   </text>
+<text class="text f9" x="362" y="459.2">   </text>
+<text class="text f10" x="390" y="459.2">   </text>
+<text class="text f11" x="419" y="459.2">   </text>
+<text class="text f12" x="448" y="459.2">   </text>
+<text class="text f13" x="477" y="459.2">   </text>
+<text class="text f6" x="506" y="459.2">   </text>
+<text class="text f7" x="534" y="459.2">   </text>
+<text class="text f8" x="333" y="481.6">   </text>
+<text class="text f9" x="362" y="481.6">   </text>
+<text class="text f10" x="390" y="481.6">   </text>
+<text class="text f11" x="419" y="481.6">   </text>
+<text class="text f12" x="448" y="481.6">   </text>
+<text class="text f13" x="477" y="481.6">   </text>
+<text class="text f14" x="506" y="481.6">   </text>
+<text class="text f15" x="534" y="481.6">   </text>
+<text class="text f13" x="16" y="571.2">❯</text>
+<text class="text fg" x="26" y="571.2"> Font embedded</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="160" y="571.2" width="9.6" height="22.4" fill="#d8dee9"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.61637;0.621212;1" dur="6.40s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-26" visibility="hidden">
+    <g class="bg-layer">
+<rect x="332.8" y="459.2" width="28.8" height="22.4" fill="#3b4252"/>
+<rect x="332.8" y="481.6" width="28.8" height="22.4" fill="#4c566a"/>
+<rect x="361.6" y="459.2" width="28.8" height="44.8" fill="#bf616a"/>
+<rect x="390.4" y="459.2" width="28.8" height="44.8" fill="#a3be8c"/>
+<rect x="419.2" y="459.2" width="28.8" height="44.8" fill="#ebcb8b"/>
+<rect x="448" y="459.2" width="28.8" height="44.8" fill="#81a1c1"/>
+<rect x="476.8" y="459.2" width="28.8" height="44.8" fill="#b48ead"/>
+<rect x="505.6" y="459.2" width="28.8" height="22.4" fill="#88c0d0"/>
+<rect x="505.6" y="481.6" width="28.8" height="22.4" fill="#8fbcbb"/>
+<rect x="534.4" y="459.2" width="28.8" height="22.4" fill="#e5e9f0"/>
+<rect x="534.4" y="481.6" width="28.8" height="22.4" fill="#eceff4"/>
+</g>
+<g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="26" y="56"> neofetch</text>
+<text class="text bold f10" x="16" y="78.4">                    &apos;c.</text>
+<text class="text bold f10" x="333" y="78.4">talhayut</text>
+<text class="text fg" x="410" y="78.4">@</text>
+<text class="text bold f10" x="419" y="78.4">Mac</text>
+<text class="text bold f10" x="16" y="100.8">                 ,xNMM.</text>
+<text class="text fg" x="237" y="100.8">          ------------</text>
+<text class="text bold f10" x="16" y="123.2">               .OMMMMo</text>
+<text class="text bold f11" x="333" y="123.2">OS</text>
+<text class="text fg" x="352" y="123.2">: macOS 26.2 25C56 arm64</text>
+<text class="text bold f10" x="16" y="145.6">               OMMM0,</text>
+<text class="text bold f11" x="333" y="145.6">Host</text>
+<text class="text fg" x="371" y="145.6">: Mac16,5</text>
+<text class="text bold f10" x="16" y="168">     .;loddo:&apos; loolloddol;.</text>
+<text class="text bold f11" x="333" y="168">Kernel</text>
+<text class="text fg" x="390" y="168">: 25.2.0</text>
+<text class="text bold f10" x="16" y="190.4">   cKMMMMMMMMMMNWMMMMMMMMMM0:</text>
+<text class="text bold f11" x="333" y="190.4">Uptime</text>
+<text class="text fg" x="390" y="190.4">: 8 days, 9 hours, 1 min</text>
+<text class="text bold f11" x="16" y="212.8"> .KMMMMMMMMMMMMMMMMMMMMMMMWd.</text>
+<text class="text bold f11" x="333" y="212.8">Packages</text>
+<text class="text fg" x="410" y="212.8">: 52 (brew)</text>
+<text class="text bold f11" x="16" y="235.2"> XMMMMMMMMMMMMMMMMMMMMMMMX.</text>
+<text class="text bold f11" x="333" y="235.2">Shell</text>
+<text class="text fg" x="381" y="235.2">: zsh 5.9</text>
+<text class="text bold f9" x="16" y="257.6">;MMMMMMMMMMMMMMMMMMMMMMMM:</text>
+<text class="text bold f11" x="333" y="257.6">Resolution</text>
+<text class="text fg" x="429" y="257.6">: 1728x1117</text>
+<text class="text bold f9" x="16" y="280">:MMMMMMMMMMMMMMMMMMMMMMMM:</text>
+<text class="text bold f11" x="333" y="280">DE</text>
+<text class="text fg" x="352" y="280">: Aqua</text>
+<text class="text bold f9" x="16" y="302.4">.MMMMMMMMMMMMMMMMMMMMMMMMX.</text>
+<text class="text bold f11" x="333" y="302.4">WM</text>
+<text class="text fg" x="352" y="302.4">: Quartz Compositor</text>
+<text class="text bold f9" x="16" y="324.8"> kMMMMMMMMMMMMMMMMMMMMMMMMWd.</text>
+<text class="text bold f11" x="333" y="324.8">WM Theme</text>
+<text class="text fg" x="410" y="324.8">: Blue (Dark)</text>
+<text class="text bold f13" x="26" y="347.2">.XMMMMMMMMMMMMMMMMMMMMMMMMMMk</text>
+<text class="text bold f11" x="333" y="347.2">Terminal</text>
+<text class="text fg" x="410" y="347.2">: node</text>
+<text class="text bold f13" x="16" y="369.6">  .XMMMMMMMMMMMMMMMMMMMMMMMMK.</text>
+<text class="text bold f11" x="333" y="369.6">CPU</text>
+<text class="text fg" x="362" y="369.6">: Apple M4 Max</text>
+<text class="text bold f12" x="54" y="392">kMMMMMMMMMMMMMMMMMMMMMMd</text>
+<text class="text bold f11" x="333" y="392">GPU</text>
+<text class="text fg" x="362" y="392">: Apple M4 Max</text>
+<text class="text bold f12" x="16" y="414.4">     ;KMMMMMMMWXXWMMMMMMMk.</text>
+<text class="text bold f11" x="333" y="414.4">Memory</text>
+<text class="text fg" x="390" y="414.4">: 7224MiB / 36864MiB</text>
+<text class="text bold f12" x="16" y="436.8">       .cooc,.    .,coo:.</text>
+<text class="text f0" x="333" y="459.2">   </text>
+<text class="text f9" x="362" y="459.2">   </text>
+<text class="text f10" x="390" y="459.2">   </text>
+<text class="text f11" x="419" y="459.2">   </text>
+<text class="text f12" x="448" y="459.2">   </text>
+<text class="text f13" x="477" y="459.2">   </text>
+<text class="text f6" x="506" y="459.2">   </text>
+<text class="text f7" x="534" y="459.2">   </text>
+<text class="text f8" x="333" y="481.6">   </text>
+<text class="text f9" x="362" y="481.6">   </text>
+<text class="text f10" x="390" y="481.6">   </text>
+<text class="text f11" x="419" y="481.6">   </text>
+<text class="text f12" x="448" y="481.6">   </text>
+<text class="text f13" x="477" y="481.6">   </text>
+<text class="text f14" x="506" y="481.6">   </text>
+<text class="text f15" x="534" y="481.6">   </text>
+<text class="text f13" x="16" y="571.2">❯</text>
+<text class="text fg" x="26" y="571.2"> Font embedded</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="169.6" y="571.2" width="9.6" height="22.4" fill="#d8dee9"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.621212;0.626054;1" dur="6.40s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-27" visibility="hidden">
+    <g class="bg-layer">
+<rect x="332.8" y="459.2" width="28.8" height="22.4" fill="#3b4252"/>
+<rect x="332.8" y="481.6" width="28.8" height="22.4" fill="#4c566a"/>
+<rect x="361.6" y="459.2" width="28.8" height="44.8" fill="#bf616a"/>
+<rect x="390.4" y="459.2" width="28.8" height="44.8" fill="#a3be8c"/>
+<rect x="419.2" y="459.2" width="28.8" height="44.8" fill="#ebcb8b"/>
+<rect x="448" y="459.2" width="28.8" height="44.8" fill="#81a1c1"/>
+<rect x="476.8" y="459.2" width="28.8" height="44.8" fill="#b48ead"/>
+<rect x="505.6" y="459.2" width="28.8" height="22.4" fill="#88c0d0"/>
+<rect x="505.6" y="481.6" width="28.8" height="22.4" fill="#8fbcbb"/>
+<rect x="534.4" y="459.2" width="28.8" height="22.4" fill="#e5e9f0"/>
+<rect x="534.4" y="481.6" width="28.8" height="22.4" fill="#eceff4"/>
+</g>
+<g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="26" y="56"> neofetch</text>
+<text class="text bold f10" x="16" y="78.4">                    &apos;c.</text>
+<text class="text bold f10" x="333" y="78.4">talhayut</text>
+<text class="text fg" x="410" y="78.4">@</text>
+<text class="text bold f10" x="419" y="78.4">Mac</text>
+<text class="text bold f10" x="16" y="100.8">                 ,xNMM.</text>
+<text class="text fg" x="237" y="100.8">          ------------</text>
+<text class="text bold f10" x="16" y="123.2">               .OMMMMo</text>
+<text class="text bold f11" x="333" y="123.2">OS</text>
+<text class="text fg" x="352" y="123.2">: macOS 26.2 25C56 arm64</text>
+<text class="text bold f10" x="16" y="145.6">               OMMM0,</text>
+<text class="text bold f11" x="333" y="145.6">Host</text>
+<text class="text fg" x="371" y="145.6">: Mac16,5</text>
+<text class="text bold f10" x="16" y="168">     .;loddo:&apos; loolloddol;.</text>
+<text class="text bold f11" x="333" y="168">Kernel</text>
+<text class="text fg" x="390" y="168">: 25.2.0</text>
+<text class="text bold f10" x="16" y="190.4">   cKMMMMMMMMMMNWMMMMMMMMMM0:</text>
+<text class="text bold f11" x="333" y="190.4">Uptime</text>
+<text class="text fg" x="390" y="190.4">: 8 days, 9 hours, 1 min</text>
+<text class="text bold f11" x="16" y="212.8"> .KMMMMMMMMMMMMMMMMMMMMMMMWd.</text>
+<text class="text bold f11" x="333" y="212.8">Packages</text>
+<text class="text fg" x="410" y="212.8">: 52 (brew)</text>
+<text class="text bold f11" x="16" y="235.2"> XMMMMMMMMMMMMMMMMMMMMMMMX.</text>
+<text class="text bold f11" x="333" y="235.2">Shell</text>
+<text class="text fg" x="381" y="235.2">: zsh 5.9</text>
+<text class="text bold f9" x="16" y="257.6">;MMMMMMMMMMMMMMMMMMMMMMMM:</text>
+<text class="text bold f11" x="333" y="257.6">Resolution</text>
+<text class="text fg" x="429" y="257.6">: 1728x1117</text>
+<text class="text bold f9" x="16" y="280">:MMMMMMMMMMMMMMMMMMMMMMMM:</text>
+<text class="text bold f11" x="333" y="280">DE</text>
+<text class="text fg" x="352" y="280">: Aqua</text>
+<text class="text bold f9" x="16" y="302.4">.MMMMMMMMMMMMMMMMMMMMMMMMX.</text>
+<text class="text bold f11" x="333" y="302.4">WM</text>
+<text class="text fg" x="352" y="302.4">: Quartz Compositor</text>
+<text class="text bold f9" x="16" y="324.8"> kMMMMMMMMMMMMMMMMMMMMMMMMWd.</text>
+<text class="text bold f11" x="333" y="324.8">WM Theme</text>
+<text class="text fg" x="410" y="324.8">: Blue (Dark)</text>
+<text class="text bold f13" x="26" y="347.2">.XMMMMMMMMMMMMMMMMMMMMMMMMMMk</text>
+<text class="text bold f11" x="333" y="347.2">Terminal</text>
+<text class="text fg" x="410" y="347.2">: node</text>
+<text class="text bold f13" x="16" y="369.6">  .XMMMMMMMMMMMMMMMMMMMMMMMMK.</text>
+<text class="text bold f11" x="333" y="369.6">CPU</text>
+<text class="text fg" x="362" y="369.6">: Apple M4 Max</text>
+<text class="text bold f12" x="54" y="392">kMMMMMMMMMMMMMMMMMMMMMMd</text>
+<text class="text bold f11" x="333" y="392">GPU</text>
+<text class="text fg" x="362" y="392">: Apple M4 Max</text>
+<text class="text bold f12" x="16" y="414.4">     ;KMMMMMMMWXXWMMMMMMMk.</text>
+<text class="text bold f11" x="333" y="414.4">Memory</text>
+<text class="text fg" x="390" y="414.4">: 7224MiB / 36864MiB</text>
+<text class="text bold f12" x="16" y="436.8">       .cooc,.    .,coo:.</text>
+<text class="text f0" x="333" y="459.2">   </text>
+<text class="text f9" x="362" y="459.2">   </text>
+<text class="text f10" x="390" y="459.2">   </text>
+<text class="text f11" x="419" y="459.2">   </text>
+<text class="text f12" x="448" y="459.2">   </text>
+<text class="text f13" x="477" y="459.2">   </text>
+<text class="text f6" x="506" y="459.2">   </text>
+<text class="text f7" x="534" y="459.2">   </text>
+<text class="text f8" x="333" y="481.6">   </text>
+<text class="text f9" x="362" y="481.6">   </text>
+<text class="text f10" x="390" y="481.6">   </text>
+<text class="text f11" x="419" y="481.6">   </text>
+<text class="text f12" x="448" y="481.6">   </text>
+<text class="text f13" x="477" y="481.6">   </text>
+<text class="text f14" x="506" y="481.6">   </text>
+<text class="text f15" x="534" y="481.6">   </text>
+<text class="text f13" x="16" y="571.2">❯</text>
+<text class="text fg" x="26" y="571.2"> Font embedded i</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="179.2" y="571.2" width="9.6" height="22.4" fill="#d8dee9"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.626054;0.631053;1" dur="6.40s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-28" visibility="hidden">
+    <g class="bg-layer">
+<rect x="332.8" y="459.2" width="28.8" height="22.4" fill="#3b4252"/>
+<rect x="332.8" y="481.6" width="28.8" height="22.4" fill="#4c566a"/>
+<rect x="361.6" y="459.2" width="28.8" height="44.8" fill="#bf616a"/>
+<rect x="390.4" y="459.2" width="28.8" height="44.8" fill="#a3be8c"/>
+<rect x="419.2" y="459.2" width="28.8" height="44.8" fill="#ebcb8b"/>
+<rect x="448" y="459.2" width="28.8" height="44.8" fill="#81a1c1"/>
+<rect x="476.8" y="459.2" width="28.8" height="44.8" fill="#b48ead"/>
+<rect x="505.6" y="459.2" width="28.8" height="22.4" fill="#88c0d0"/>
+<rect x="505.6" y="481.6" width="28.8" height="22.4" fill="#8fbcbb"/>
+<rect x="534.4" y="459.2" width="28.8" height="22.4" fill="#e5e9f0"/>
+<rect x="534.4" y="481.6" width="28.8" height="22.4" fill="#eceff4"/>
+</g>
+<g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="26" y="56"> neofetch</text>
+<text class="text bold f10" x="16" y="78.4">                    &apos;c.</text>
+<text class="text bold f10" x="333" y="78.4">talhayut</text>
+<text class="text fg" x="410" y="78.4">@</text>
+<text class="text bold f10" x="419" y="78.4">Mac</text>
+<text class="text bold f10" x="16" y="100.8">                 ,xNMM.</text>
+<text class="text fg" x="237" y="100.8">          ------------</text>
+<text class="text bold f10" x="16" y="123.2">               .OMMMMo</text>
+<text class="text bold f11" x="333" y="123.2">OS</text>
+<text class="text fg" x="352" y="123.2">: macOS 26.2 25C56 arm64</text>
+<text class="text bold f10" x="16" y="145.6">               OMMM0,</text>
+<text class="text bold f11" x="333" y="145.6">Host</text>
+<text class="text fg" x="371" y="145.6">: Mac16,5</text>
+<text class="text bold f10" x="16" y="168">     .;loddo:&apos; loolloddol;.</text>
+<text class="text bold f11" x="333" y="168">Kernel</text>
+<text class="text fg" x="390" y="168">: 25.2.0</text>
+<text class="text bold f10" x="16" y="190.4">   cKMMMMMMMMMMNWMMMMMMMMMM0:</text>
+<text class="text bold f11" x="333" y="190.4">Uptime</text>
+<text class="text fg" x="390" y="190.4">: 8 days, 9 hours, 1 min</text>
+<text class="text bold f11" x="16" y="212.8"> .KMMMMMMMMMMMMMMMMMMMMMMMWd.</text>
+<text class="text bold f11" x="333" y="212.8">Packages</text>
+<text class="text fg" x="410" y="212.8">: 52 (brew)</text>
+<text class="text bold f11" x="16" y="235.2"> XMMMMMMMMMMMMMMMMMMMMMMMX.</text>
+<text class="text bold f11" x="333" y="235.2">Shell</text>
+<text class="text fg" x="381" y="235.2">: zsh 5.9</text>
+<text class="text bold f9" x="16" y="257.6">;MMMMMMMMMMMMMMMMMMMMMMMM:</text>
+<text class="text bold f11" x="333" y="257.6">Resolution</text>
+<text class="text fg" x="429" y="257.6">: 1728x1117</text>
+<text class="text bold f9" x="16" y="280">:MMMMMMMMMMMMMMMMMMMMMMMM:</text>
+<text class="text bold f11" x="333" y="280">DE</text>
+<text class="text fg" x="352" y="280">: Aqua</text>
+<text class="text bold f9" x="16" y="302.4">.MMMMMMMMMMMMMMMMMMMMMMMMX.</text>
+<text class="text bold f11" x="333" y="302.4">WM</text>
+<text class="text fg" x="352" y="302.4">: Quartz Compositor</text>
+<text class="text bold f9" x="16" y="324.8"> kMMMMMMMMMMMMMMMMMMMMMMMMWd.</text>
+<text class="text bold f11" x="333" y="324.8">WM Theme</text>
+<text class="text fg" x="410" y="324.8">: Blue (Dark)</text>
+<text class="text bold f13" x="26" y="347.2">.XMMMMMMMMMMMMMMMMMMMMMMMMMMk</text>
+<text class="text bold f11" x="333" y="347.2">Terminal</text>
+<text class="text fg" x="410" y="347.2">: node</text>
+<text class="text bold f13" x="16" y="369.6">  .XMMMMMMMMMMMMMMMMMMMMMMMMK.</text>
+<text class="text bold f11" x="333" y="369.6">CPU</text>
+<text class="text fg" x="362" y="369.6">: Apple M4 Max</text>
+<text class="text bold f12" x="54" y="392">kMMMMMMMMMMMMMMMMMMMMMMd</text>
+<text class="text bold f11" x="333" y="392">GPU</text>
+<text class="text fg" x="362" y="392">: Apple M4 Max</text>
+<text class="text bold f12" x="16" y="414.4">     ;KMMMMMMMWXXWMMMMMMMk.</text>
+<text class="text bold f11" x="333" y="414.4">Memory</text>
+<text class="text fg" x="390" y="414.4">: 7224MiB / 36864MiB</text>
+<text class="text bold f12" x="16" y="436.8">       .cooc,.    .,coo:.</text>
+<text class="text f0" x="333" y="459.2">   </text>
+<text class="text f9" x="362" y="459.2">   </text>
+<text class="text f10" x="390" y="459.2">   </text>
+<text class="text f11" x="419" y="459.2">   </text>
+<text class="text f12" x="448" y="459.2">   </text>
+<text class="text f13" x="477" y="459.2">   </text>
+<text class="text f6" x="506" y="459.2">   </text>
+<text class="text f7" x="534" y="459.2">   </text>
+<text class="text f8" x="333" y="481.6">   </text>
+<text class="text f9" x="362" y="481.6">   </text>
+<text class="text f10" x="390" y="481.6">   </text>
+<text class="text f11" x="419" y="481.6">   </text>
+<text class="text f12" x="448" y="481.6">   </text>
+<text class="text f13" x="477" y="481.6">   </text>
+<text class="text f14" x="506" y="481.6">   </text>
+<text class="text f15" x="534" y="481.6">   </text>
+<text class="text f13" x="16" y="571.2">❯</text>
+<text class="text fg" x="26" y="571.2"> Font embedded in</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="188.8" y="571.2" width="9.6" height="22.4" fill="#d8dee9"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.631053;0.636051;1" dur="6.40s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-29" visibility="hidden">
+    <g class="bg-layer">
+<rect x="332.8" y="459.2" width="28.8" height="22.4" fill="#3b4252"/>
+<rect x="332.8" y="481.6" width="28.8" height="22.4" fill="#4c566a"/>
+<rect x="361.6" y="459.2" width="28.8" height="44.8" fill="#bf616a"/>
+<rect x="390.4" y="459.2" width="28.8" height="44.8" fill="#a3be8c"/>
+<rect x="419.2" y="459.2" width="28.8" height="44.8" fill="#ebcb8b"/>
+<rect x="448" y="459.2" width="28.8" height="44.8" fill="#81a1c1"/>
+<rect x="476.8" y="459.2" width="28.8" height="44.8" fill="#b48ead"/>
+<rect x="505.6" y="459.2" width="28.8" height="22.4" fill="#88c0d0"/>
+<rect x="505.6" y="481.6" width="28.8" height="22.4" fill="#8fbcbb"/>
+<rect x="534.4" y="459.2" width="28.8" height="22.4" fill="#e5e9f0"/>
+<rect x="534.4" y="481.6" width="28.8" height="22.4" fill="#eceff4"/>
+</g>
+<g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="26" y="56"> neofetch</text>
+<text class="text bold f10" x="16" y="78.4">                    &apos;c.</text>
+<text class="text bold f10" x="333" y="78.4">talhayut</text>
+<text class="text fg" x="410" y="78.4">@</text>
+<text class="text bold f10" x="419" y="78.4">Mac</text>
+<text class="text bold f10" x="16" y="100.8">                 ,xNMM.</text>
+<text class="text fg" x="237" y="100.8">          ------------</text>
+<text class="text bold f10" x="16" y="123.2">               .OMMMMo</text>
+<text class="text bold f11" x="333" y="123.2">OS</text>
+<text class="text fg" x="352" y="123.2">: macOS 26.2 25C56 arm64</text>
+<text class="text bold f10" x="16" y="145.6">               OMMM0,</text>
+<text class="text bold f11" x="333" y="145.6">Host</text>
+<text class="text fg" x="371" y="145.6">: Mac16,5</text>
+<text class="text bold f10" x="16" y="168">     .;loddo:&apos; loolloddol;.</text>
+<text class="text bold f11" x="333" y="168">Kernel</text>
+<text class="text fg" x="390" y="168">: 25.2.0</text>
+<text class="text bold f10" x="16" y="190.4">   cKMMMMMMMMMMNWMMMMMMMMMM0:</text>
+<text class="text bold f11" x="333" y="190.4">Uptime</text>
+<text class="text fg" x="390" y="190.4">: 8 days, 9 hours, 1 min</text>
+<text class="text bold f11" x="16" y="212.8"> .KMMMMMMMMMMMMMMMMMMMMMMMWd.</text>
+<text class="text bold f11" x="333" y="212.8">Packages</text>
+<text class="text fg" x="410" y="212.8">: 52 (brew)</text>
+<text class="text bold f11" x="16" y="235.2"> XMMMMMMMMMMMMMMMMMMMMMMMX.</text>
+<text class="text bold f11" x="333" y="235.2">Shell</text>
+<text class="text fg" x="381" y="235.2">: zsh 5.9</text>
+<text class="text bold f9" x="16" y="257.6">;MMMMMMMMMMMMMMMMMMMMMMMM:</text>
+<text class="text bold f11" x="333" y="257.6">Resolution</text>
+<text class="text fg" x="429" y="257.6">: 1728x1117</text>
+<text class="text bold f9" x="16" y="280">:MMMMMMMMMMMMMMMMMMMMMMMM:</text>
+<text class="text bold f11" x="333" y="280">DE</text>
+<text class="text fg" x="352" y="280">: Aqua</text>
+<text class="text bold f9" x="16" y="302.4">.MMMMMMMMMMMMMMMMMMMMMMMMX.</text>
+<text class="text bold f11" x="333" y="302.4">WM</text>
+<text class="text fg" x="352" y="302.4">: Quartz Compositor</text>
+<text class="text bold f9" x="16" y="324.8"> kMMMMMMMMMMMMMMMMMMMMMMMMWd.</text>
+<text class="text bold f11" x="333" y="324.8">WM Theme</text>
+<text class="text fg" x="410" y="324.8">: Blue (Dark)</text>
+<text class="text bold f13" x="26" y="347.2">.XMMMMMMMMMMMMMMMMMMMMMMMMMMk</text>
+<text class="text bold f11" x="333" y="347.2">Terminal</text>
+<text class="text fg" x="410" y="347.2">: node</text>
+<text class="text bold f13" x="16" y="369.6">  .XMMMMMMMMMMMMMMMMMMMMMMMMK.</text>
+<text class="text bold f11" x="333" y="369.6">CPU</text>
+<text class="text fg" x="362" y="369.6">: Apple M4 Max</text>
+<text class="text bold f12" x="54" y="392">kMMMMMMMMMMMMMMMMMMMMMMd</text>
+<text class="text bold f11" x="333" y="392">GPU</text>
+<text class="text fg" x="362" y="392">: Apple M4 Max</text>
+<text class="text bold f12" x="16" y="414.4">     ;KMMMMMMMWXXWMMMMMMMk.</text>
+<text class="text bold f11" x="333" y="414.4">Memory</text>
+<text class="text fg" x="390" y="414.4">: 7224MiB / 36864MiB</text>
+<text class="text bold f12" x="16" y="436.8">       .cooc,.    .,coo:.</text>
+<text class="text f0" x="333" y="459.2">   </text>
+<text class="text f9" x="362" y="459.2">   </text>
+<text class="text f10" x="390" y="459.2">   </text>
+<text class="text f11" x="419" y="459.2">   </text>
+<text class="text f12" x="448" y="459.2">   </text>
+<text class="text f13" x="477" y="459.2">   </text>
+<text class="text f6" x="506" y="459.2">   </text>
+<text class="text f7" x="534" y="459.2">   </text>
+<text class="text f8" x="333" y="481.6">   </text>
+<text class="text f9" x="362" y="481.6">   </text>
+<text class="text f10" x="390" y="481.6">   </text>
+<text class="text f11" x="419" y="481.6">   </text>
+<text class="text f12" x="448" y="481.6">   </text>
+<text class="text f13" x="477" y="481.6">   </text>
+<text class="text f14" x="506" y="481.6">   </text>
+<text class="text f15" x="534" y="481.6">   </text>
+<text class="text f13" x="16" y="571.2">❯</text>
+<text class="text fg" x="26" y="571.2"> Font embedded in</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="198.4" y="571.2" width="9.6" height="22.4" fill="#d8dee9"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.636051;0.64105;1" dur="6.40s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-30" visibility="hidden">
+    <g class="bg-layer">
+<rect x="332.8" y="459.2" width="28.8" height="22.4" fill="#3b4252"/>
+<rect x="332.8" y="481.6" width="28.8" height="22.4" fill="#4c566a"/>
+<rect x="361.6" y="459.2" width="28.8" height="44.8" fill="#bf616a"/>
+<rect x="390.4" y="459.2" width="28.8" height="44.8" fill="#a3be8c"/>
+<rect x="419.2" y="459.2" width="28.8" height="44.8" fill="#ebcb8b"/>
+<rect x="448" y="459.2" width="28.8" height="44.8" fill="#81a1c1"/>
+<rect x="476.8" y="459.2" width="28.8" height="44.8" fill="#b48ead"/>
+<rect x="505.6" y="459.2" width="28.8" height="22.4" fill="#88c0d0"/>
+<rect x="505.6" y="481.6" width="28.8" height="22.4" fill="#8fbcbb"/>
+<rect x="534.4" y="459.2" width="28.8" height="22.4" fill="#e5e9f0"/>
+<rect x="534.4" y="481.6" width="28.8" height="22.4" fill="#eceff4"/>
+</g>
+<g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="26" y="56"> neofetch</text>
+<text class="text bold f10" x="16" y="78.4">                    &apos;c.</text>
+<text class="text bold f10" x="333" y="78.4">talhayut</text>
+<text class="text fg" x="410" y="78.4">@</text>
+<text class="text bold f10" x="419" y="78.4">Mac</text>
+<text class="text bold f10" x="16" y="100.8">                 ,xNMM.</text>
+<text class="text fg" x="237" y="100.8">          ------------</text>
+<text class="text bold f10" x="16" y="123.2">               .OMMMMo</text>
+<text class="text bold f11" x="333" y="123.2">OS</text>
+<text class="text fg" x="352" y="123.2">: macOS 26.2 25C56 arm64</text>
+<text class="text bold f10" x="16" y="145.6">               OMMM0,</text>
+<text class="text bold f11" x="333" y="145.6">Host</text>
+<text class="text fg" x="371" y="145.6">: Mac16,5</text>
+<text class="text bold f10" x="16" y="168">     .;loddo:&apos; loolloddol;.</text>
+<text class="text bold f11" x="333" y="168">Kernel</text>
+<text class="text fg" x="390" y="168">: 25.2.0</text>
+<text class="text bold f10" x="16" y="190.4">   cKMMMMMMMMMMNWMMMMMMMMMM0:</text>
+<text class="text bold f11" x="333" y="190.4">Uptime</text>
+<text class="text fg" x="390" y="190.4">: 8 days, 9 hours, 1 min</text>
+<text class="text bold f11" x="16" y="212.8"> .KMMMMMMMMMMMMMMMMMMMMMMMWd.</text>
+<text class="text bold f11" x="333" y="212.8">Packages</text>
+<text class="text fg" x="410" y="212.8">: 52 (brew)</text>
+<text class="text bold f11" x="16" y="235.2"> XMMMMMMMMMMMMMMMMMMMMMMMX.</text>
+<text class="text bold f11" x="333" y="235.2">Shell</text>
+<text class="text fg" x="381" y="235.2">: zsh 5.9</text>
+<text class="text bold f9" x="16" y="257.6">;MMMMMMMMMMMMMMMMMMMMMMMM:</text>
+<text class="text bold f11" x="333" y="257.6">Resolution</text>
+<text class="text fg" x="429" y="257.6">: 1728x1117</text>
+<text class="text bold f9" x="16" y="280">:MMMMMMMMMMMMMMMMMMMMMMMM:</text>
+<text class="text bold f11" x="333" y="280">DE</text>
+<text class="text fg" x="352" y="280">: Aqua</text>
+<text class="text bold f9" x="16" y="302.4">.MMMMMMMMMMMMMMMMMMMMMMMMX.</text>
+<text class="text bold f11" x="333" y="302.4">WM</text>
+<text class="text fg" x="352" y="302.4">: Quartz Compositor</text>
+<text class="text bold f9" x="16" y="324.8"> kMMMMMMMMMMMMMMMMMMMMMMMMWd.</text>
+<text class="text bold f11" x="333" y="324.8">WM Theme</text>
+<text class="text fg" x="410" y="324.8">: Blue (Dark)</text>
+<text class="text bold f13" x="26" y="347.2">.XMMMMMMMMMMMMMMMMMMMMMMMMMMk</text>
+<text class="text bold f11" x="333" y="347.2">Terminal</text>
+<text class="text fg" x="410" y="347.2">: node</text>
+<text class="text bold f13" x="16" y="369.6">  .XMMMMMMMMMMMMMMMMMMMMMMMMK.</text>
+<text class="text bold f11" x="333" y="369.6">CPU</text>
+<text class="text fg" x="362" y="369.6">: Apple M4 Max</text>
+<text class="text bold f12" x="54" y="392">kMMMMMMMMMMMMMMMMMMMMMMd</text>
+<text class="text bold f11" x="333" y="392">GPU</text>
+<text class="text fg" x="362" y="392">: Apple M4 Max</text>
+<text class="text bold f12" x="16" y="414.4">     ;KMMMMMMMWXXWMMMMMMMk.</text>
+<text class="text bold f11" x="333" y="414.4">Memory</text>
+<text class="text fg" x="390" y="414.4">: 7224MiB / 36864MiB</text>
+<text class="text bold f12" x="16" y="436.8">       .cooc,.    .,coo:.</text>
+<text class="text f0" x="333" y="459.2">   </text>
+<text class="text f9" x="362" y="459.2">   </text>
+<text class="text f10" x="390" y="459.2">   </text>
+<text class="text f11" x="419" y="459.2">   </text>
+<text class="text f12" x="448" y="459.2">   </text>
+<text class="text f13" x="477" y="459.2">   </text>
+<text class="text f6" x="506" y="459.2">   </text>
+<text class="text f7" x="534" y="459.2">   </text>
+<text class="text f8" x="333" y="481.6">   </text>
+<text class="text f9" x="362" y="481.6">   </text>
+<text class="text f10" x="390" y="481.6">   </text>
+<text class="text f11" x="419" y="481.6">   </text>
+<text class="text f12" x="448" y="481.6">   </text>
+<text class="text f13" x="477" y="481.6">   </text>
+<text class="text f14" x="506" y="481.6">   </text>
+<text class="text f15" x="534" y="481.6">   </text>
+<text class="text f13" x="16" y="571.2">❯</text>
+<text class="text fg" x="26" y="571.2"> Font embedded in S</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="208" y="571.2" width="9.6" height="22.4" fill="#d8dee9"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.64105;0.64558;1" dur="6.40s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-31" visibility="hidden">
+    <g class="bg-layer">
+<rect x="332.8" y="459.2" width="28.8" height="22.4" fill="#3b4252"/>
+<rect x="332.8" y="481.6" width="28.8" height="22.4" fill="#4c566a"/>
+<rect x="361.6" y="459.2" width="28.8" height="44.8" fill="#bf616a"/>
+<rect x="390.4" y="459.2" width="28.8" height="44.8" fill="#a3be8c"/>
+<rect x="419.2" y="459.2" width="28.8" height="44.8" fill="#ebcb8b"/>
+<rect x="448" y="459.2" width="28.8" height="44.8" fill="#81a1c1"/>
+<rect x="476.8" y="459.2" width="28.8" height="44.8" fill="#b48ead"/>
+<rect x="505.6" y="459.2" width="28.8" height="22.4" fill="#88c0d0"/>
+<rect x="505.6" y="481.6" width="28.8" height="22.4" fill="#8fbcbb"/>
+<rect x="534.4" y="459.2" width="28.8" height="22.4" fill="#e5e9f0"/>
+<rect x="534.4" y="481.6" width="28.8" height="22.4" fill="#eceff4"/>
+</g>
+<g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="26" y="56"> neofetch</text>
+<text class="text bold f10" x="16" y="78.4">                    &apos;c.</text>
+<text class="text bold f10" x="333" y="78.4">talhayut</text>
+<text class="text fg" x="410" y="78.4">@</text>
+<text class="text bold f10" x="419" y="78.4">Mac</text>
+<text class="text bold f10" x="16" y="100.8">                 ,xNMM.</text>
+<text class="text fg" x="237" y="100.8">          ------------</text>
+<text class="text bold f10" x="16" y="123.2">               .OMMMMo</text>
+<text class="text bold f11" x="333" y="123.2">OS</text>
+<text class="text fg" x="352" y="123.2">: macOS 26.2 25C56 arm64</text>
+<text class="text bold f10" x="16" y="145.6">               OMMM0,</text>
+<text class="text bold f11" x="333" y="145.6">Host</text>
+<text class="text fg" x="371" y="145.6">: Mac16,5</text>
+<text class="text bold f10" x="16" y="168">     .;loddo:&apos; loolloddol;.</text>
+<text class="text bold f11" x="333" y="168">Kernel</text>
+<text class="text fg" x="390" y="168">: 25.2.0</text>
+<text class="text bold f10" x="16" y="190.4">   cKMMMMMMMMMMNWMMMMMMMMMM0:</text>
+<text class="text bold f11" x="333" y="190.4">Uptime</text>
+<text class="text fg" x="390" y="190.4">: 8 days, 9 hours, 1 min</text>
+<text class="text bold f11" x="16" y="212.8"> .KMMMMMMMMMMMMMMMMMMMMMMMWd.</text>
+<text class="text bold f11" x="333" y="212.8">Packages</text>
+<text class="text fg" x="410" y="212.8">: 52 (brew)</text>
+<text class="text bold f11" x="16" y="235.2"> XMMMMMMMMMMMMMMMMMMMMMMMX.</text>
+<text class="text bold f11" x="333" y="235.2">Shell</text>
+<text class="text fg" x="381" y="235.2">: zsh 5.9</text>
+<text class="text bold f9" x="16" y="257.6">;MMMMMMMMMMMMMMMMMMMMMMMM:</text>
+<text class="text bold f11" x="333" y="257.6">Resolution</text>
+<text class="text fg" x="429" y="257.6">: 1728x1117</text>
+<text class="text bold f9" x="16" y="280">:MMMMMMMMMMMMMMMMMMMMMMMM:</text>
+<text class="text bold f11" x="333" y="280">DE</text>
+<text class="text fg" x="352" y="280">: Aqua</text>
+<text class="text bold f9" x="16" y="302.4">.MMMMMMMMMMMMMMMMMMMMMMMMX.</text>
+<text class="text bold f11" x="333" y="302.4">WM</text>
+<text class="text fg" x="352" y="302.4">: Quartz Compositor</text>
+<text class="text bold f9" x="16" y="324.8"> kMMMMMMMMMMMMMMMMMMMMMMMMWd.</text>
+<text class="text bold f11" x="333" y="324.8">WM Theme</text>
+<text class="text fg" x="410" y="324.8">: Blue (Dark)</text>
+<text class="text bold f13" x="26" y="347.2">.XMMMMMMMMMMMMMMMMMMMMMMMMMMk</text>
+<text class="text bold f11" x="333" y="347.2">Terminal</text>
+<text class="text fg" x="410" y="347.2">: node</text>
+<text class="text bold f13" x="16" y="369.6">  .XMMMMMMMMMMMMMMMMMMMMMMMMK.</text>
+<text class="text bold f11" x="333" y="369.6">CPU</text>
+<text class="text fg" x="362" y="369.6">: Apple M4 Max</text>
+<text class="text bold f12" x="54" y="392">kMMMMMMMMMMMMMMMMMMMMMMd</text>
+<text class="text bold f11" x="333" y="392">GPU</text>
+<text class="text fg" x="362" y="392">: Apple M4 Max</text>
+<text class="text bold f12" x="16" y="414.4">     ;KMMMMMMMWXXWMMMMMMMk.</text>
+<text class="text bold f11" x="333" y="414.4">Memory</text>
+<text class="text fg" x="390" y="414.4">: 7224MiB / 36864MiB</text>
+<text class="text bold f12" x="16" y="436.8">       .cooc,.    .,coo:.</text>
+<text class="text f0" x="333" y="459.2">   </text>
+<text class="text f9" x="362" y="459.2">   </text>
+<text class="text f10" x="390" y="459.2">   </text>
+<text class="text f11" x="419" y="459.2">   </text>
+<text class="text f12" x="448" y="459.2">   </text>
+<text class="text f13" x="477" y="459.2">   </text>
+<text class="text f6" x="506" y="459.2">   </text>
+<text class="text f7" x="534" y="459.2">   </text>
+<text class="text f8" x="333" y="481.6">   </text>
+<text class="text f9" x="362" y="481.6">   </text>
+<text class="text f10" x="390" y="481.6">   </text>
+<text class="text f11" x="419" y="481.6">   </text>
+<text class="text f12" x="448" y="481.6">   </text>
+<text class="text f13" x="477" y="481.6">   </text>
+<text class="text f14" x="506" y="481.6">   </text>
+<text class="text f15" x="534" y="481.6">   </text>
+<text class="text f13" x="16" y="571.2">❯</text>
+<text class="text fg" x="26" y="571.2"> Font embedded in SV</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="217.6" y="571.2" width="9.6" height="22.4" fill="#d8dee9"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.64558;0.650422;1" dur="6.40s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-32" visibility="hidden">
+    <g class="bg-layer">
+<rect x="332.8" y="459.2" width="28.8" height="22.4" fill="#3b4252"/>
+<rect x="332.8" y="481.6" width="28.8" height="22.4" fill="#4c566a"/>
+<rect x="361.6" y="459.2" width="28.8" height="44.8" fill="#bf616a"/>
+<rect x="390.4" y="459.2" width="28.8" height="44.8" fill="#a3be8c"/>
+<rect x="419.2" y="459.2" width="28.8" height="44.8" fill="#ebcb8b"/>
+<rect x="448" y="459.2" width="28.8" height="44.8" fill="#81a1c1"/>
+<rect x="476.8" y="459.2" width="28.8" height="44.8" fill="#b48ead"/>
+<rect x="505.6" y="459.2" width="28.8" height="22.4" fill="#88c0d0"/>
+<rect x="505.6" y="481.6" width="28.8" height="22.4" fill="#8fbcbb"/>
+<rect x="534.4" y="459.2" width="28.8" height="22.4" fill="#e5e9f0"/>
+<rect x="534.4" y="481.6" width="28.8" height="22.4" fill="#eceff4"/>
+</g>
+<g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="26" y="56"> neofetch</text>
+<text class="text bold f10" x="16" y="78.4">                    &apos;c.</text>
+<text class="text bold f10" x="333" y="78.4">talhayut</text>
+<text class="text fg" x="410" y="78.4">@</text>
+<text class="text bold f10" x="419" y="78.4">Mac</text>
+<text class="text bold f10" x="16" y="100.8">                 ,xNMM.</text>
+<text class="text fg" x="237" y="100.8">          ------------</text>
+<text class="text bold f10" x="16" y="123.2">               .OMMMMo</text>
+<text class="text bold f11" x="333" y="123.2">OS</text>
+<text class="text fg" x="352" y="123.2">: macOS 26.2 25C56 arm64</text>
+<text class="text bold f10" x="16" y="145.6">               OMMM0,</text>
+<text class="text bold f11" x="333" y="145.6">Host</text>
+<text class="text fg" x="371" y="145.6">: Mac16,5</text>
+<text class="text bold f10" x="16" y="168">     .;loddo:&apos; loolloddol;.</text>
+<text class="text bold f11" x="333" y="168">Kernel</text>
+<text class="text fg" x="390" y="168">: 25.2.0</text>
+<text class="text bold f10" x="16" y="190.4">   cKMMMMMMMMMMNWMMMMMMMMMM0:</text>
+<text class="text bold f11" x="333" y="190.4">Uptime</text>
+<text class="text fg" x="390" y="190.4">: 8 days, 9 hours, 1 min</text>
+<text class="text bold f11" x="16" y="212.8"> .KMMMMMMMMMMMMMMMMMMMMMMMWd.</text>
+<text class="text bold f11" x="333" y="212.8">Packages</text>
+<text class="text fg" x="410" y="212.8">: 52 (brew)</text>
+<text class="text bold f11" x="16" y="235.2"> XMMMMMMMMMMMMMMMMMMMMMMMX.</text>
+<text class="text bold f11" x="333" y="235.2">Shell</text>
+<text class="text fg" x="381" y="235.2">: zsh 5.9</text>
+<text class="text bold f9" x="16" y="257.6">;MMMMMMMMMMMMMMMMMMMMMMMM:</text>
+<text class="text bold f11" x="333" y="257.6">Resolution</text>
+<text class="text fg" x="429" y="257.6">: 1728x1117</text>
+<text class="text bold f9" x="16" y="280">:MMMMMMMMMMMMMMMMMMMMMMMM:</text>
+<text class="text bold f11" x="333" y="280">DE</text>
+<text class="text fg" x="352" y="280">: Aqua</text>
+<text class="text bold f9" x="16" y="302.4">.MMMMMMMMMMMMMMMMMMMMMMMMX.</text>
+<text class="text bold f11" x="333" y="302.4">WM</text>
+<text class="text fg" x="352" y="302.4">: Quartz Compositor</text>
+<text class="text bold f9" x="16" y="324.8"> kMMMMMMMMMMMMMMMMMMMMMMMMWd.</text>
+<text class="text bold f11" x="333" y="324.8">WM Theme</text>
+<text class="text fg" x="410" y="324.8">: Blue (Dark)</text>
+<text class="text bold f13" x="26" y="347.2">.XMMMMMMMMMMMMMMMMMMMMMMMMMMk</text>
+<text class="text bold f11" x="333" y="347.2">Terminal</text>
+<text class="text fg" x="410" y="347.2">: node</text>
+<text class="text bold f13" x="16" y="369.6">  .XMMMMMMMMMMMMMMMMMMMMMMMMK.</text>
+<text class="text bold f11" x="333" y="369.6">CPU</text>
+<text class="text fg" x="362" y="369.6">: Apple M4 Max</text>
+<text class="text bold f12" x="54" y="392">kMMMMMMMMMMMMMMMMMMMMMMd</text>
+<text class="text bold f11" x="333" y="392">GPU</text>
+<text class="text fg" x="362" y="392">: Apple M4 Max</text>
+<text class="text bold f12" x="16" y="414.4">     ;KMMMMMMMWXXWMMMMMMMk.</text>
+<text class="text bold f11" x="333" y="414.4">Memory</text>
+<text class="text fg" x="390" y="414.4">: 7224MiB / 36864MiB</text>
+<text class="text bold f12" x="16" y="436.8">       .cooc,.    .,coo:.</text>
+<text class="text f0" x="333" y="459.2">   </text>
+<text class="text f9" x="362" y="459.2">   </text>
+<text class="text f10" x="390" y="459.2">   </text>
+<text class="text f11" x="419" y="459.2">   </text>
+<text class="text f12" x="448" y="459.2">   </text>
+<text class="text f13" x="477" y="459.2">   </text>
+<text class="text f6" x="506" y="459.2">   </text>
+<text class="text f7" x="534" y="459.2">   </text>
+<text class="text f8" x="333" y="481.6">   </text>
+<text class="text f9" x="362" y="481.6">   </text>
+<text class="text f10" x="390" y="481.6">   </text>
+<text class="text f11" x="419" y="481.6">   </text>
+<text class="text f12" x="448" y="481.6">   </text>
+<text class="text f13" x="477" y="481.6">   </text>
+<text class="text f14" x="506" y="481.6">   </text>
+<text class="text f15" x="534" y="481.6">   </text>
+<text class="text f13" x="16" y="571.2">❯</text>
+<text class="text fg" x="26" y="571.2"> Font embedded in SVG</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="227.2" y="571.2" width="9.6" height="22.4" fill="#d8dee9"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.650422;0.65542;1" dur="6.40s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-33" visibility="hidden">
+    <g class="bg-layer">
+<rect x="332.8" y="459.2" width="28.8" height="22.4" fill="#3b4252"/>
+<rect x="332.8" y="481.6" width="28.8" height="22.4" fill="#4c566a"/>
+<rect x="361.6" y="459.2" width="28.8" height="44.8" fill="#bf616a"/>
+<rect x="390.4" y="459.2" width="28.8" height="44.8" fill="#a3be8c"/>
+<rect x="419.2" y="459.2" width="28.8" height="44.8" fill="#ebcb8b"/>
+<rect x="448" y="459.2" width="28.8" height="44.8" fill="#81a1c1"/>
+<rect x="476.8" y="459.2" width="28.8" height="44.8" fill="#b48ead"/>
+<rect x="505.6" y="459.2" width="28.8" height="22.4" fill="#88c0d0"/>
+<rect x="505.6" y="481.6" width="28.8" height="22.4" fill="#8fbcbb"/>
+<rect x="534.4" y="459.2" width="28.8" height="22.4" fill="#e5e9f0"/>
+<rect x="534.4" y="481.6" width="28.8" height="22.4" fill="#eceff4"/>
+</g>
+<g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="26" y="56"> neofetch</text>
+<text class="text bold f10" x="16" y="78.4">                    &apos;c.</text>
+<text class="text bold f10" x="333" y="78.4">talhayut</text>
+<text class="text fg" x="410" y="78.4">@</text>
+<text class="text bold f10" x="419" y="78.4">Mac</text>
+<text class="text bold f10" x="16" y="100.8">                 ,xNMM.</text>
+<text class="text fg" x="237" y="100.8">          ------------</text>
+<text class="text bold f10" x="16" y="123.2">               .OMMMMo</text>
+<text class="text bold f11" x="333" y="123.2">OS</text>
+<text class="text fg" x="352" y="123.2">: macOS 26.2 25C56 arm64</text>
+<text class="text bold f10" x="16" y="145.6">               OMMM0,</text>
+<text class="text bold f11" x="333" y="145.6">Host</text>
+<text class="text fg" x="371" y="145.6">: Mac16,5</text>
+<text class="text bold f10" x="16" y="168">     .;loddo:&apos; loolloddol;.</text>
+<text class="text bold f11" x="333" y="168">Kernel</text>
+<text class="text fg" x="390" y="168">: 25.2.0</text>
+<text class="text bold f10" x="16" y="190.4">   cKMMMMMMMMMMNWMMMMMMMMMM0:</text>
+<text class="text bold f11" x="333" y="190.4">Uptime</text>
+<text class="text fg" x="390" y="190.4">: 8 days, 9 hours, 1 min</text>
+<text class="text bold f11" x="16" y="212.8"> .KMMMMMMMMMMMMMMMMMMMMMMMWd.</text>
+<text class="text bold f11" x="333" y="212.8">Packages</text>
+<text class="text fg" x="410" y="212.8">: 52 (brew)</text>
+<text class="text bold f11" x="16" y="235.2"> XMMMMMMMMMMMMMMMMMMMMMMMX.</text>
+<text class="text bold f11" x="333" y="235.2">Shell</text>
+<text class="text fg" x="381" y="235.2">: zsh 5.9</text>
+<text class="text bold f9" x="16" y="257.6">;MMMMMMMMMMMMMMMMMMMMMMMM:</text>
+<text class="text bold f11" x="333" y="257.6">Resolution</text>
+<text class="text fg" x="429" y="257.6">: 1728x1117</text>
+<text class="text bold f9" x="16" y="280">:MMMMMMMMMMMMMMMMMMMMMMMM:</text>
+<text class="text bold f11" x="333" y="280">DE</text>
+<text class="text fg" x="352" y="280">: Aqua</text>
+<text class="text bold f9" x="16" y="302.4">.MMMMMMMMMMMMMMMMMMMMMMMMX.</text>
+<text class="text bold f11" x="333" y="302.4">WM</text>
+<text class="text fg" x="352" y="302.4">: Quartz Compositor</text>
+<text class="text bold f9" x="16" y="324.8"> kMMMMMMMMMMMMMMMMMMMMMMMMWd.</text>
+<text class="text bold f11" x="333" y="324.8">WM Theme</text>
+<text class="text fg" x="410" y="324.8">: Blue (Dark)</text>
+<text class="text bold f13" x="26" y="347.2">.XMMMMMMMMMMMMMMMMMMMMMMMMMMk</text>
+<text class="text bold f11" x="333" y="347.2">Terminal</text>
+<text class="text fg" x="410" y="347.2">: node</text>
+<text class="text bold f13" x="16" y="369.6">  .XMMMMMMMMMMMMMMMMMMMMMMMMK.</text>
+<text class="text bold f11" x="333" y="369.6">CPU</text>
+<text class="text fg" x="362" y="369.6">: Apple M4 Max</text>
+<text class="text bold f12" x="54" y="392">kMMMMMMMMMMMMMMMMMMMMMMd</text>
+<text class="text bold f11" x="333" y="392">GPU</text>
+<text class="text fg" x="362" y="392">: Apple M4 Max</text>
+<text class="text bold f12" x="16" y="414.4">     ;KMMMMMMMWXXWMMMMMMMk.</text>
+<text class="text bold f11" x="333" y="414.4">Memory</text>
+<text class="text fg" x="390" y="414.4">: 7224MiB / 36864MiB</text>
+<text class="text bold f12" x="16" y="436.8">       .cooc,.    .,coo:.</text>
+<text class="text f0" x="333" y="459.2">   </text>
+<text class="text f9" x="362" y="459.2">   </text>
+<text class="text f10" x="390" y="459.2">   </text>
+<text class="text f11" x="419" y="459.2">   </text>
+<text class="text f12" x="448" y="459.2">   </text>
+<text class="text f13" x="477" y="459.2">   </text>
+<text class="text f6" x="506" y="459.2">   </text>
+<text class="text f7" x="534" y="459.2">   </text>
+<text class="text f8" x="333" y="481.6">   </text>
+<text class="text f9" x="362" y="481.6">   </text>
+<text class="text f10" x="390" y="481.6">   </text>
+<text class="text f11" x="419" y="481.6">   </text>
+<text class="text f12" x="448" y="481.6">   </text>
+<text class="text f13" x="477" y="481.6">   </text>
+<text class="text f14" x="506" y="481.6">   </text>
+<text class="text f15" x="534" y="481.6">   </text>
+<text class="text f13" x="16" y="571.2">❯</text>
+<text class="text fg" x="26" y="571.2"> Font embedded in SVG!</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="236.8" y="571.2" width="9.6" height="22.4" fill="#d8dee9"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.65542;0.654795;1" dur="6.40s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-34" visibility="hidden">
+    <g class="bg-layer">
+<rect x="332.8" y="459.2" width="28.8" height="22.4" fill="#3b4252"/>
+<rect x="332.8" y="481.6" width="28.8" height="22.4" fill="#4c566a"/>
+<rect x="361.6" y="459.2" width="28.8" height="44.8" fill="#bf616a"/>
+<rect x="390.4" y="459.2" width="28.8" height="44.8" fill="#a3be8c"/>
+<rect x="419.2" y="459.2" width="28.8" height="44.8" fill="#ebcb8b"/>
+<rect x="448" y="459.2" width="28.8" height="44.8" fill="#81a1c1"/>
+<rect x="476.8" y="459.2" width="28.8" height="44.8" fill="#b48ead"/>
+<rect x="505.6" y="459.2" width="28.8" height="22.4" fill="#88c0d0"/>
+<rect x="505.6" y="481.6" width="28.8" height="22.4" fill="#8fbcbb"/>
+<rect x="534.4" y="459.2" width="28.8" height="22.4" fill="#e5e9f0"/>
+<rect x="534.4" y="481.6" width="28.8" height="22.4" fill="#eceff4"/>
+</g>
+<g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="26" y="56"> neofetch</text>
+<text class="text bold f10" x="16" y="78.4">                    &apos;c.</text>
+<text class="text bold f10" x="333" y="78.4">talhayut</text>
+<text class="text fg" x="410" y="78.4">@</text>
+<text class="text bold f10" x="419" y="78.4">Mac</text>
+<text class="text bold f10" x="16" y="100.8">                 ,xNMM.</text>
+<text class="text fg" x="237" y="100.8">          ------------</text>
+<text class="text bold f10" x="16" y="123.2">               .OMMMMo</text>
+<text class="text bold f11" x="333" y="123.2">OS</text>
+<text class="text fg" x="352" y="123.2">: macOS 26.2 25C56 arm64</text>
+<text class="text bold f10" x="16" y="145.6">               OMMM0,</text>
+<text class="text bold f11" x="333" y="145.6">Host</text>
+<text class="text fg" x="371" y="145.6">: Mac16,5</text>
+<text class="text bold f10" x="16" y="168">     .;loddo:&apos; loolloddol;.</text>
+<text class="text bold f11" x="333" y="168">Kernel</text>
+<text class="text fg" x="390" y="168">: 25.2.0</text>
+<text class="text bold f10" x="16" y="190.4">   cKMMMMMMMMMMNWMMMMMMMMMM0:</text>
+<text class="text bold f11" x="333" y="190.4">Uptime</text>
+<text class="text fg" x="390" y="190.4">: 8 days, 9 hours, 1 min</text>
+<text class="text bold f11" x="16" y="212.8"> .KMMMMMMMMMMMMMMMMMMMMMMMWd.</text>
+<text class="text bold f11" x="333" y="212.8">Packages</text>
+<text class="text fg" x="410" y="212.8">: 52 (brew)</text>
+<text class="text bold f11" x="16" y="235.2"> XMMMMMMMMMMMMMMMMMMMMMMMX.</text>
+<text class="text bold f11" x="333" y="235.2">Shell</text>
+<text class="text fg" x="381" y="235.2">: zsh 5.9</text>
+<text class="text bold f9" x="16" y="257.6">;MMMMMMMMMMMMMMMMMMMMMMMM:</text>
+<text class="text bold f11" x="333" y="257.6">Resolution</text>
+<text class="text fg" x="429" y="257.6">: 1728x1117</text>
+<text class="text bold f9" x="16" y="280">:MMMMMMMMMMMMMMMMMMMMMMMM:</text>
+<text class="text bold f11" x="333" y="280">DE</text>
+<text class="text fg" x="352" y="280">: Aqua</text>
+<text class="text bold f9" x="16" y="302.4">.MMMMMMMMMMMMMMMMMMMMMMMMX.</text>
+<text class="text bold f11" x="333" y="302.4">WM</text>
+<text class="text fg" x="352" y="302.4">: Quartz Compositor</text>
+<text class="text bold f9" x="16" y="324.8"> kMMMMMMMMMMMMMMMMMMMMMMMMWd.</text>
+<text class="text bold f11" x="333" y="324.8">WM Theme</text>
+<text class="text fg" x="410" y="324.8">: Blue (Dark)</text>
+<text class="text bold f13" x="26" y="347.2">.XMMMMMMMMMMMMMMMMMMMMMMMMMMk</text>
+<text class="text bold f11" x="333" y="347.2">Terminal</text>
+<text class="text fg" x="410" y="347.2">: node</text>
+<text class="text bold f13" x="16" y="369.6">  .XMMMMMMMMMMMMMMMMMMMMMMMMK.</text>
+<text class="text bold f11" x="333" y="369.6">CPU</text>
+<text class="text fg" x="362" y="369.6">: Apple M4 Max</text>
+<text class="text bold f12" x="54" y="392">kMMMMMMMMMMMMMMMMMMMMMMd</text>
+<text class="text bold f11" x="333" y="392">GPU</text>
+<text class="text fg" x="362" y="392">: Apple M4 Max</text>
+<text class="text bold f12" x="16" y="414.4">     ;KMMMMMMMWXXWMMMMMMMk.</text>
+<text class="text bold f11" x="333" y="414.4">Memory</text>
+<text class="text fg" x="390" y="414.4">: 7224MiB / 36864MiB</text>
+<text class="text bold f12" x="16" y="436.8">       .cooc,.    .,coo:.</text>
+<text class="text f0" x="333" y="459.2">   </text>
+<text class="text f9" x="362" y="459.2">   </text>
+<text class="text f10" x="390" y="459.2">   </text>
+<text class="text f11" x="419" y="459.2">   </text>
+<text class="text f12" x="448" y="459.2">   </text>
+<text class="text f13" x="477" y="459.2">   </text>
+<text class="text f6" x="506" y="459.2">   </text>
+<text class="text f7" x="534" y="459.2">   </text>
+<text class="text f8" x="333" y="481.6">   </text>
+<text class="text f9" x="362" y="481.6">   </text>
+<text class="text f10" x="390" y="481.6">   </text>
+<text class="text f11" x="419" y="481.6">   </text>
+<text class="text f12" x="448" y="481.6">   </text>
+<text class="text f13" x="477" y="481.6">   </text>
+<text class="text f14" x="506" y="481.6">   </text>
+<text class="text f15" x="534" y="481.6">   </text>
+<text class="text f13" x="16" y="571.2">❯</text>
+<text class="text fg" x="26" y="571.2"> Font embedded in SVG!</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor" x="236.8" y="571.2" width="9.6" height="22.4" fill="#d8dee9"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.654795;0.843799;1" dur="6.40s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-35" visibility="hidden">
+    <g class="bg-layer">
+<rect x="332.8" y="459.2" width="28.8" height="22.4" fill="#3b4252"/>
+<rect x="332.8" y="481.6" width="28.8" height="22.4" fill="#4c566a"/>
+<rect x="361.6" y="459.2" width="28.8" height="44.8" fill="#bf616a"/>
+<rect x="390.4" y="459.2" width="28.8" height="44.8" fill="#a3be8c"/>
+<rect x="419.2" y="459.2" width="28.8" height="44.8" fill="#ebcb8b"/>
+<rect x="448" y="459.2" width="28.8" height="44.8" fill="#81a1c1"/>
+<rect x="476.8" y="459.2" width="28.8" height="44.8" fill="#b48ead"/>
+<rect x="505.6" y="459.2" width="28.8" height="22.4" fill="#88c0d0"/>
+<rect x="505.6" y="481.6" width="28.8" height="22.4" fill="#8fbcbb"/>
+<rect x="534.4" y="459.2" width="28.8" height="22.4" fill="#e5e9f0"/>
+<rect x="534.4" y="481.6" width="28.8" height="22.4" fill="#eceff4"/>
+</g>
+<g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="26" y="56"> neofetch</text>
+<text class="text bold f10" x="16" y="78.4">                    &apos;c.</text>
+<text class="text bold f10" x="333" y="78.4">talhayut</text>
+<text class="text fg" x="410" y="78.4">@</text>
+<text class="text bold f10" x="419" y="78.4">Mac</text>
+<text class="text bold f10" x="16" y="100.8">                 ,xNMM.</text>
+<text class="text fg" x="237" y="100.8">          ------------</text>
+<text class="text bold f10" x="16" y="123.2">               .OMMMMo</text>
+<text class="text bold f11" x="333" y="123.2">OS</text>
+<text class="text fg" x="352" y="123.2">: macOS 26.2 25C56 arm64</text>
+<text class="text bold f10" x="16" y="145.6">               OMMM0,</text>
+<text class="text bold f11" x="333" y="145.6">Host</text>
+<text class="text fg" x="371" y="145.6">: Mac16,5</text>
+<text class="text bold f10" x="16" y="168">     .;loddo:&apos; loolloddol;.</text>
+<text class="text bold f11" x="333" y="168">Kernel</text>
+<text class="text fg" x="390" y="168">: 25.2.0</text>
+<text class="text bold f10" x="16" y="190.4">   cKMMMMMMMMMMNWMMMMMMMMMM0:</text>
+<text class="text bold f11" x="333" y="190.4">Uptime</text>
+<text class="text fg" x="390" y="190.4">: 8 days, 9 hours, 1 min</text>
+<text class="text bold f11" x="16" y="212.8"> .KMMMMMMMMMMMMMMMMMMMMMMMWd.</text>
+<text class="text bold f11" x="333" y="212.8">Packages</text>
+<text class="text fg" x="410" y="212.8">: 52 (brew)</text>
+<text class="text bold f11" x="16" y="235.2"> XMMMMMMMMMMMMMMMMMMMMMMMX.</text>
+<text class="text bold f11" x="333" y="235.2">Shell</text>
+<text class="text fg" x="381" y="235.2">: zsh 5.9</text>
+<text class="text bold f9" x="16" y="257.6">;MMMMMMMMMMMMMMMMMMMMMMMM:</text>
+<text class="text bold f11" x="333" y="257.6">Resolution</text>
+<text class="text fg" x="429" y="257.6">: 1728x1117</text>
+<text class="text bold f9" x="16" y="280">:MMMMMMMMMMMMMMMMMMMMMMMM:</text>
+<text class="text bold f11" x="333" y="280">DE</text>
+<text class="text fg" x="352" y="280">: Aqua</text>
+<text class="text bold f9" x="16" y="302.4">.MMMMMMMMMMMMMMMMMMMMMMMMX.</text>
+<text class="text bold f11" x="333" y="302.4">WM</text>
+<text class="text fg" x="352" y="302.4">: Quartz Compositor</text>
+<text class="text bold f9" x="16" y="324.8"> kMMMMMMMMMMMMMMMMMMMMMMMMWd.</text>
+<text class="text bold f11" x="333" y="324.8">WM Theme</text>
+<text class="text fg" x="410" y="324.8">: Blue (Dark)</text>
+<text class="text bold f13" x="26" y="347.2">.XMMMMMMMMMMMMMMMMMMMMMMMMMMk</text>
+<text class="text bold f11" x="333" y="347.2">Terminal</text>
+<text class="text fg" x="410" y="347.2">: node</text>
+<text class="text bold f13" x="16" y="369.6">  .XMMMMMMMMMMMMMMMMMMMMMMMMK.</text>
+<text class="text bold f11" x="333" y="369.6">CPU</text>
+<text class="text fg" x="362" y="369.6">: Apple M4 Max</text>
+<text class="text bold f12" x="54" y="392">kMMMMMMMMMMMMMMMMMMMMMMd</text>
+<text class="text bold f11" x="333" y="392">GPU</text>
+<text class="text fg" x="362" y="392">: Apple M4 Max</text>
+<text class="text bold f12" x="16" y="414.4">     ;KMMMMMMMWXXWMMMMMMMk.</text>
+<text class="text bold f11" x="333" y="414.4">Memory</text>
+<text class="text fg" x="390" y="414.4">: 7224MiB / 36864MiB</text>
+<text class="text bold f12" x="16" y="436.8">       .cooc,.    .,coo:.</text>
+<text class="text f0" x="333" y="459.2">   </text>
+<text class="text f9" x="362" y="459.2">   </text>
+<text class="text f10" x="390" y="459.2">   </text>
+<text class="text f11" x="419" y="459.2">   </text>
+<text class="text f12" x="448" y="459.2">   </text>
+<text class="text f13" x="477" y="459.2">   </text>
+<text class="text f6" x="506" y="459.2">   </text>
+<text class="text f7" x="534" y="459.2">   </text>
+<text class="text f8" x="333" y="481.6">   </text>
+<text class="text f9" x="362" y="481.6">   </text>
+<text class="text f10" x="390" y="481.6">   </text>
+<text class="text f11" x="419" y="481.6">   </text>
+<text class="text f12" x="448" y="481.6">   </text>
+<text class="text f13" x="477" y="481.6">   </text>
+<text class="text f14" x="506" y="481.6">   </text>
+<text class="text f15" x="534" y="481.6">   </text>
+<text class="text f13" x="16" y="571.2">❯</text>
+<text class="text fg" x="26" y="571.2"> Font embedded in SVG!</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor" x="236.8" y="571.2" width="9.6" height="22.4" fill="#d8dee9"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;visible" keyTimes="0;0.843799;1" dur="6.40s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <!-- Static footer -->
+  
+  
+  </g>
+</svg>

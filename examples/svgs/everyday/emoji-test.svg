@@ -1,0 +1,500 @@
+<svg width="234" height="152" xmlns="http://www.w3.org/2000/svg">
+  <defs><clipPath id="rounded-corners"><rect x="0" y="0" width="234" height="152" rx="8" ry="8"/></clipPath></defs>
+  <style>
+    
+.text {
+  font-family: 'SF Mono', 'Monaco', 'Menlo', 'Consolas', monospace;
+  font-size: 16px;
+  dominant-baseline: text-before-edge;
+  text-rendering: geometricPrecision;
+  white-space: pre;
+}
+.bold { font-weight: bold; }
+.italic { font-style: italic; }
+.uline { text-decoration: underline; }
+.strike { text-decoration: line-through; }
+.dim { opacity: 0.5; }
+.fg { fill: #c9d1d9; }
+.f0 { fill: #000000; }
+.f1 { fill: #ff7b72; }
+.f2 { fill: #3fb950; }
+.f3 { fill: #d29922; }
+.f4 { fill: #58a6ff; }
+.f5 { fill: #bc8cff; }
+.f6 { fill: #39c5cf; }
+.f7 { fill: #b1bac4; }
+.f8 { fill: #6e7681; }
+.f9 { fill: #ffa198; }
+.f10 { fill: #56d364; }
+.f11 { fill: #e3b341; }
+.f12 { fill: #79c0ff; }
+.f13 { fill: #d2a8ff; }
+.f14 { fill: #56d4dd; }
+.f15 { fill: #f0f6fc; }
+.bg { fill: #1e1e1e; }
+.b0 { fill: #000000; }
+.b1 { fill: #ff7b72; }
+.b2 { fill: #3fb950; }
+.b3 { fill: #d29922; }
+.b4 { fill: #58a6ff; }
+.b5 { fill: #bc8cff; }
+.b6 { fill: #39c5cf; }
+.b7 { fill: #b1bac4; }
+.b8 { fill: #6e7681; }
+.b9 { fill: #ffa198; }
+.b10 { fill: #56d364; }
+.b11 { fill: #e3b341; }
+.b12 { fill: #79c0ff; }
+.b13 { fill: #d2a8ff; }
+.b14 { fill: #56d4dd; }
+.b15 { fill: #f0f6fc; }
+.cursor { animation: blink 1s step-end infinite; }
+@keyframes blink {
+  0%, 50% { opacity: 1; }
+  50.01%, 100% { opacity: 0; }
+}
+.cursor-active { opacity: 1; }
+
+  </style>
+
+  <g clip-path="url(#rounded-corners)">
+  <!-- Static background (never animated) -->
+  <rect width="100%" height="100%" fill="#1e1e1e" rx="8" ry="8" />
+
+  <!-- Static chrome (title bar) -->
+  
+
+  <!-- Animated frames (only dynamic content) -->
+  
+  <g id="frame-0" visibility="visible">
+    <g class="text-layer">
+<text class="text f13" x="16" y="16">❯</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor" x="35.2" y="16" width="9.6" height="22.4" fill="#c9d1d9"/>
+</g>
+    <animate attributeName="visibility" values="visible;hidden;hidden" keyTimes="0;0.01698;1" dur="5.42s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-1" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="16">❯</text>
+<text class="text fg" x="26" y="16"> e</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="44.8" y="16" width="9.6" height="22.4" fill="#c9d1d9"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.01698;0.032115;1" dur="5.42s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-2" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="16">❯</text>
+<text class="text fg" x="26" y="16"> ec</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="54.4" y="16" width="9.6" height="22.4" fill="#c9d1d9"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.032115;0.047065;1" dur="5.42s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-3" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="16">❯</text>
+<text class="text fg" x="26" y="16"> ech</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="64" y="16" width="9.6" height="22.4" fill="#c9d1d9"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.047065;0.062385;1" dur="5.42s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-4" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="16">❯</text>
+<text class="text fg" x="26" y="16"> echo</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="73.6" y="16" width="9.6" height="22.4" fill="#c9d1d9"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.062385;0.077335;1" dur="5.42s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-5" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="16">❯</text>
+<text class="text fg" x="26" y="16"> echo</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="83.2" y="16" width="9.6" height="22.4" fill="#c9d1d9"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.077335;0.091731;1" dur="5.42s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-6" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="16">❯</text>
+<text class="text fg" x="26" y="16"> echo &apos;</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="92.8" y="16" width="9.6" height="22.4" fill="#c9d1d9"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.091731;0.106866;1" dur="5.42s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-7" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="16">❯</text>
+<text class="text fg" x="26" y="16"> echo &apos;🚀</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="112" y="16" width="9.6" height="22.4" fill="#c9d1d9"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.106866;0.122185;1" dur="5.42s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-8" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="16">❯</text>
+<text class="text fg" x="26" y="16"> echo &apos;🚀❤️</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="131.2" y="16" width="9.6" height="22.4" fill="#c9d1d9"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.122185;0.13732;1" dur="5.42s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-9" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="16">❯</text>
+<text class="text fg" x="26" y="16"> echo &apos;🚀❤️😎</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="150.4" y="16" width="9.6" height="22.4" fill="#c9d1d9"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.13732;0.152086;1" dur="5.42s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-10" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="16">❯</text>
+<text class="text fg" x="26" y="16"> echo &apos;🚀❤️😎🙈</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="169.6" y="16" width="9.6" height="22.4" fill="#c9d1d9"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.152086;0.167774;1" dur="5.42s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-11" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="16">❯</text>
+<text class="text fg" x="26" y="16"> echo &apos;🚀❤️😎🙈✌🏼</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="188.8" y="16" width="9.6" height="22.4" fill="#c9d1d9"/>
+<text x="188.8" y="16" fill="#1e1e1e" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="16" dominant-baseline="text-before-edge">�</text>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.167774;0.182724;1" dur="5.42s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-12" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="16">❯</text>
+<text class="text fg" x="26" y="16"> echo &apos;🚀❤️😎🙈✌🏼&apos;</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="198.4" y="16" width="9.6" height="22.4" fill="#c9d1d9"/>
+<text x="198.4" y="16" fill="#1e1e1e" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="16" dominant-baseline="text-before-edge">&apos;</text>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.182724;0.18254;1" dur="5.42s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-13" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="16">❯</text>
+<text class="text fg" x="26" y="16"> echo &apos;🚀❤️😎🙈✌🏼&apos;</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor" x="198.4" y="16" width="9.6" height="22.4" fill="#c9d1d9"/>
+<text x="198.4" y="16" fill="#1e1e1e" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="16" dominant-baseline="text-before-edge">&apos;</text>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.18254;0.294758;1" dur="5.42s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-14" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="16">❯</text>
+<text class="text fg" x="26" y="16"> echo &apos;🚀❤️😎🙈✌🏼&apos;</text>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.294758;0.296235;1" dur="5.42s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-15" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="16">❯</text>
+<text class="text fg" x="26" y="16"> echo &apos;🚀❤️😎🙈✌🏼&apos;</text>
+<text class="text fg" x="16" y="38.4">🚀❤️😎🙈✌🏼</text>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.296235;0.316168;1" dur="5.42s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-16" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="16">❯</text>
+<text class="text fg" x="26" y="16"> echo &apos;🚀❤️😎🙈✌🏼&apos;</text>
+<text class="text fg" x="16" y="38.4">🚀❤️😎🙈✌🏼</text>
+<text class="text f13" x="16" y="60.8">❯</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor" x="35.2" y="60.8" width="9.6" height="22.4" fill="#c9d1d9"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.316168;0.331118;1" dur="5.42s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-17" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="16">❯</text>
+<text class="text fg" x="26" y="16"> echo &apos;🚀❤️😎🙈✌🏼&apos;</text>
+<text class="text fg" x="16" y="38.4">🚀❤️😎🙈✌🏼</text>
+<text class="text f13" x="16" y="60.8">❯</text>
+<text class="text fg" x="26" y="60.8"> e</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="44.8" y="60.8" width="9.6" height="22.4" fill="#c9d1d9"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.331118;0.345515;1" dur="5.42s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-18" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="16">❯</text>
+<text class="text fg" x="26" y="16"> echo &apos;🚀❤️😎🙈✌🏼&apos;</text>
+<text class="text fg" x="16" y="38.4">🚀❤️😎🙈✌🏼</text>
+<text class="text f13" x="16" y="60.8">❯</text>
+<text class="text fg" x="26" y="60.8"> ec</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="54.4" y="60.8" width="9.6" height="22.4" fill="#c9d1d9"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.345515;0.360834;1" dur="5.42s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-19" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="16">❯</text>
+<text class="text fg" x="26" y="16"> echo &apos;🚀❤️😎🙈✌🏼&apos;</text>
+<text class="text fg" x="16" y="38.4">🚀❤️😎🙈✌🏼</text>
+<text class="text f13" x="16" y="60.8">❯</text>
+<text class="text fg" x="26" y="60.8"> ech</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="64" y="60.8" width="9.6" height="22.4" fill="#c9d1d9"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.360834;0.3756;1" dur="5.42s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-20" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="16">❯</text>
+<text class="text fg" x="26" y="16"> echo &apos;🚀❤️😎🙈✌🏼&apos;</text>
+<text class="text fg" x="16" y="38.4">🚀❤️😎🙈✌🏼</text>
+<text class="text f13" x="16" y="60.8">❯</text>
+<text class="text fg" x="26" y="60.8"> echo</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="73.6" y="60.8" width="9.6" height="22.4" fill="#c9d1d9"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.3756;0.390735;1" dur="5.42s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-21" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="16">❯</text>
+<text class="text fg" x="26" y="16"> echo &apos;🚀❤️😎🙈✌🏼&apos;</text>
+<text class="text fg" x="16" y="38.4">🚀❤️😎🙈✌🏼</text>
+<text class="text f13" x="16" y="60.8">❯</text>
+<text class="text fg" x="26" y="60.8"> echo</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="83.2" y="60.8" width="9.6" height="22.4" fill="#c9d1d9"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.390735;0.405685;1" dur="5.42s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-22" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="16">❯</text>
+<text class="text fg" x="26" y="16"> echo &apos;🚀❤️😎🙈✌🏼&apos;</text>
+<text class="text fg" x="16" y="38.4">🚀❤️😎🙈✌🏼</text>
+<text class="text f13" x="16" y="60.8">❯</text>
+<text class="text fg" x="26" y="60.8"> echo &apos;</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="92.8" y="60.8" width="9.6" height="22.4" fill="#c9d1d9"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.405685;0.420819;1" dur="5.42s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-23" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="16">❯</text>
+<text class="text fg" x="26" y="16"> echo &apos;🚀❤️😎🙈✌🏼&apos;</text>
+<text class="text fg" x="16" y="38.4">🚀❤️😎🙈✌🏼</text>
+<text class="text f13" x="16" y="60.8">❯</text>
+<text class="text fg" x="26" y="60.8"> echo &apos;🐢</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="112" y="60.8" width="9.6" height="22.4" fill="#c9d1d9"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.420819;0.436323;1" dur="5.42s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-24" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="16">❯</text>
+<text class="text fg" x="26" y="16"> echo &apos;🚀❤️😎🙈✌🏼&apos;</text>
+<text class="text fg" x="16" y="38.4">🚀❤️😎🙈✌🏼</text>
+<text class="text f13" x="16" y="60.8">❯</text>
+<text class="text fg" x="26" y="60.8"> echo &apos;🐢✅</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="131.2" y="60.8" width="9.6" height="22.4" fill="#c9d1d9"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.436323;0.450351;1" dur="5.42s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-25" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="16">❯</text>
+<text class="text fg" x="26" y="16"> echo &apos;🚀❤️😎🙈✌🏼&apos;</text>
+<text class="text fg" x="16" y="38.4">🚀❤️😎🙈✌🏼</text>
+<text class="text f13" x="16" y="60.8">❯</text>
+<text class="text fg" x="26" y="60.8"> echo &apos;🐢✅🎉</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="150.4" y="60.8" width="9.6" height="22.4" fill="#c9d1d9"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.450351;0.465116;1" dur="5.42s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-26" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="16">❯</text>
+<text class="text fg" x="26" y="16"> echo &apos;🚀❤️😎🙈✌🏼&apos;</text>
+<text class="text fg" x="16" y="38.4">🚀❤️😎🙈✌🏼</text>
+<text class="text f13" x="16" y="60.8">❯</text>
+<text class="text fg" x="26" y="60.8"> echo &apos;🐢✅🎉👌🏾</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="169.6" y="60.8" width="9.6" height="22.4" fill="#c9d1d9"/>
+<text x="169.6" y="60.8" fill="#1e1e1e" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="16" dominant-baseline="text-before-edge">�</text>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.465116;0.480251;1" dur="5.42s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-27" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="16">❯</text>
+<text class="text fg" x="26" y="16"> echo &apos;🚀❤️😎🙈✌🏼&apos;</text>
+<text class="text fg" x="16" y="38.4">🚀❤️😎🙈✌🏼</text>
+<text class="text f13" x="16" y="60.8">❯</text>
+<text class="text fg" x="26" y="60.8"> echo &apos;🐢✅🎉👌🏾💜</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="188.8" y="60.8" width="9.6" height="22.4" fill="#c9d1d9"/>
+<text x="188.8" y="60.8" fill="#1e1e1e" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="16" dominant-baseline="text-before-edge">�</text>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.480251;0.495386;1" dur="5.42s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-28" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="16">❯</text>
+<text class="text fg" x="26" y="16"> echo &apos;🚀❤️😎🙈✌🏼&apos;</text>
+<text class="text fg" x="16" y="38.4">🚀❤️😎🙈✌🏼</text>
+<text class="text f13" x="16" y="60.8">❯</text>
+<text class="text fg" x="26" y="60.8"> echo &apos;🐢✅🎉👌🏾💜&apos;</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="198.4" y="60.8" width="9.6" height="22.4" fill="#c9d1d9"/>
+<text x="198.4" y="60.8" fill="#1e1e1e" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="16" dominant-baseline="text-before-edge">&apos;</text>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.495386;0.495201;1" dur="5.42s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-29" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="16">❯</text>
+<text class="text fg" x="26" y="16"> echo &apos;🚀❤️😎🙈✌🏼&apos;</text>
+<text class="text fg" x="16" y="38.4">🚀❤️😎🙈✌🏼</text>
+<text class="text f13" x="16" y="60.8">❯</text>
+<text class="text fg" x="26" y="60.8"> echo &apos;🐢✅🎉👌🏾💜&apos;</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor" x="198.4" y="60.8" width="9.6" height="22.4" fill="#c9d1d9"/>
+<text x="198.4" y="60.8" fill="#1e1e1e" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="16" dominant-baseline="text-before-edge">&apos;</text>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.495201;0.608527;1" dur="5.42s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-30" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="16">❯</text>
+<text class="text fg" x="26" y="16"> echo &apos;🚀❤️😎🙈✌🏼&apos;</text>
+<text class="text fg" x="16" y="38.4">🚀❤️😎🙈✌🏼</text>
+<text class="text f13" x="16" y="60.8">❯</text>
+<text class="text fg" x="26" y="60.8"> echo &apos;🐢✅🎉👌🏾💜&apos;</text>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.608527;0.609635;1" dur="5.42s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-31" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="16">❯</text>
+<text class="text fg" x="26" y="16"> echo &apos;🚀❤️😎🙈✌🏼&apos;</text>
+<text class="text fg" x="16" y="38.4">🚀❤️😎🙈✌🏼</text>
+<text class="text f13" x="16" y="60.8">❯</text>
+<text class="text fg" x="26" y="60.8"> echo &apos;🐢✅🎉👌🏾💜&apos;</text>
+<text class="text fg" x="16" y="83.2">🐢✅🎉👌🏾💜</text>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.609635;0.629753;1" dur="5.42s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-32" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="16">❯</text>
+<text class="text fg" x="26" y="16"> echo &apos;🚀❤️😎🙈✌🏼&apos;</text>
+<text class="text fg" x="16" y="38.4">🚀❤️😎🙈✌🏼</text>
+<text class="text f13" x="16" y="60.8">❯</text>
+<text class="text fg" x="26" y="60.8"> echo &apos;🐢✅🎉👌🏾💜&apos;</text>
+<text class="text fg" x="16" y="83.2">🐢✅🎉👌🏾💜</text>
+<text class="text f13" x="16" y="105.6">❯</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor" x="35.2" y="105.6" width="9.6" height="22.4" fill="#c9d1d9"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.629753;0.81543;1" dur="5.42s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-33" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="16">❯</text>
+<text class="text fg" x="26" y="16"> echo &apos;🚀❤️😎🙈✌🏼&apos;</text>
+<text class="text fg" x="16" y="38.4">🚀❤️😎🙈✌🏼</text>
+<text class="text f13" x="16" y="60.8">❯</text>
+<text class="text fg" x="26" y="60.8"> echo &apos;🐢✅🎉👌🏾💜&apos;</text>
+<text class="text fg" x="16" y="83.2">🐢✅🎉👌🏾💜</text>
+<text class="text f13" x="16" y="105.6">❯</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor" x="35.2" y="105.6" width="9.6" height="22.4" fill="#c9d1d9"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;visible" keyTimes="0;0.81543;1" dur="5.42s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <!-- Static footer -->
+  
+  
+  </g>
+</svg>

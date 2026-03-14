@@ -265,7 +265,8 @@ const processAnimationFrame = (
     state.finalizedLines.push(state.currentAnimatingLine);
 
     for (let j = 1; j < parts.length - 1; j++) {
-      if (parts[j]) state.finalizedLines.push(parts[j]);
+      // Preserve empty lines to maintain correct row positioning
+      state.finalizedLines.push(parts[j]);
     }
 
     state.currentAnimatingLine = parts[parts.length - 1];
@@ -373,7 +374,8 @@ const finalizeTerminalResetAnimation = (
 
     const lines = frame.split('\n');
     for (const line of lines) {
-      if (line) state.finalizedLines.push(line);
+      // Preserve empty lines to maintain correct row positioning
+      state.finalizedLines.push(line);
     }
 
     for (let j = 0; j < state.finalizedLines.length; j++) {

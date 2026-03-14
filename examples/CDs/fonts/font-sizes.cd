@@ -1,0 +1,17 @@
+# Font Size Demo
+# Shows different font size options
+
+Output examples/svgs/fonts/font-sizes.svg
+
+Set FontSize 20
+Set Title "Large Font Demo"
+
+Type "# This uses a 20px font"
+Sleep 400ms
+Enter
+Sleep 500ms
+
+Type "echo 'Great for presentations and readability!'"
+Sleep 400ms
+Enter
+Sleep 2s

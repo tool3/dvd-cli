@@ -1,0 +1,14 @@
+# Test chartscii output
+Output examples/svgs/everyday/chartscii.svg
+
+Set Width 800
+Set Height 400
+Set FontSize 16
+Set PromptPrefix "\x1b[32m$\x1b[0m "
+Set Template minimal
+Set Theme monokai
+
+Type "npx chartscii-cli create $(seq 1 10)"
+Sleep 200ms
+Enter
+Sleep 1s

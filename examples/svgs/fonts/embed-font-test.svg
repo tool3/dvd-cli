@@ -1,0 +1,1175 @@
+<svg width="550" height="200" xmlns="http://www.w3.org/2000/svg">
+  <defs><clipPath id="rounded-corners"><rect x="0" y="0" width="550" height="200" rx="8" ry="8"/></clipPath></defs>
+  <style>
+    
+.text {
+  font-family: 'SF Mono', 'Monaco', 'Menlo', 'Consolas', monospace;
+  font-size: 16px;
+  dominant-baseline: text-before-edge;
+  text-rendering: geometricPrecision;
+  white-space: pre;
+}
+.bold { font-weight: bold; }
+.italic { font-style: italic; }
+.uline { text-decoration: underline; }
+.strike { text-decoration: line-through; }
+.dim { opacity: 0.5; }
+.fg { fill: #d8dee9; }
+.f0 { fill: #3b4252; }
+.f1 { fill: #bf616a; }
+.f2 { fill: #a3be8c; }
+.f3 { fill: #ebcb8b; }
+.f4 { fill: #81a1c1; }
+.f5 { fill: #b48ead; }
+.f6 { fill: #88c0d0; }
+.f7 { fill: #e5e9f0; }
+.f8 { fill: #4c566a; }
+.f9 { fill: #bf616a; }
+.f10 { fill: #a3be8c; }
+.f11 { fill: #ebcb8b; }
+.f12 { fill: #81a1c1; }
+.f13 { fill: #b48ead; }
+.f14 { fill: #8fbcbb; }
+.f15 { fill: #eceff4; }
+.bg { fill: #2e3440; }
+.b0 { fill: #3b4252; }
+.b1 { fill: #bf616a; }
+.b2 { fill: #a3be8c; }
+.b3 { fill: #ebcb8b; }
+.b4 { fill: #81a1c1; }
+.b5 { fill: #b48ead; }
+.b6 { fill: #88c0d0; }
+.b7 { fill: #e5e9f0; }
+.b8 { fill: #4c566a; }
+.b9 { fill: #bf616a; }
+.b10 { fill: #a3be8c; }
+.b11 { fill: #ebcb8b; }
+.b12 { fill: #81a1c1; }
+.b13 { fill: #b48ead; }
+.b14 { fill: #8fbcbb; }
+.b15 { fill: #eceff4; }
+.cursor { animation: blink 1s step-end infinite; }
+@keyframes blink {
+  0%, 50% { opacity: 1; }
+  50.01%, 100% { opacity: 0; }
+}
+.cursor-active { opacity: 1; }
+
+  </style>
+
+  <g clip-path="url(#rounded-corners)">
+  <!-- Static background (never animated) -->
+  <rect width="100%" height="100%" fill="#2e3440" rx="8" ry="8" />
+
+  <!-- Static chrome (title bar) -->
+  
+
+  <!-- Animated frames (only dynamic content) -->
+  
+  <g id="frame-0" visibility="visible">
+    <g class="text-layer">
+<text class="text f13" x="16" y="16">❯</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor" x="35.2" y="16" width="9.6" height="22.4" fill="#d8dee9"/>
+</g>
+    <animate attributeName="visibility" values="visible;hidden;hidden" keyTimes="0;0.008723;1" dur="6.88s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-1" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="16">❯</text>
+<text class="text fg" x="26" y="16"> e</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="44.8" y="16" width="9.6" height="22.4" fill="#d8dee9"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.008723;0.016138;1" dur="6.88s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-2" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="16">❯</text>
+<text class="text fg" x="26" y="16"> ec</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="54.4" y="16" width="9.6" height="22.4" fill="#d8dee9"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.016138;0.023553;1" dur="6.88s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-3" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="16">❯</text>
+<text class="text fg" x="26" y="16"> ech</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="64" y="16" width="9.6" height="22.4" fill="#d8dee9"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.023553;0.030968;1" dur="6.88s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-4" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="16">❯</text>
+<text class="text fg" x="26" y="16"> echo</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="73.6" y="16" width="9.6" height="22.4" fill="#d8dee9"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.030968;0.038674;1" dur="6.88s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-5" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="16">❯</text>
+<text class="text fg" x="26" y="16"> echo</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="83.2" y="16" width="9.6" height="22.4" fill="#d8dee9"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.038674;0.045944;1" dur="6.88s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-6" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="16">❯</text>
+<text class="text fg" x="26" y="16"> echo &apos;</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="92.8" y="16" width="9.6" height="22.4" fill="#d8dee9"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.045944;0.053213;1" dur="6.88s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-7" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="16">❯</text>
+<text class="text fg" x="26" y="16"> echo &apos;J</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="102.4" y="16" width="9.6" height="22.4" fill="#d8dee9"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.053213;0.060919;1" dur="6.88s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-8" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="16">❯</text>
+<text class="text fg" x="26" y="16"> echo &apos;Je</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="112" y="16" width="9.6" height="22.4" fill="#d8dee9"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.060919;0.068334;1" dur="6.88s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-9" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="16">❯</text>
+<text class="text fg" x="26" y="16"> echo &apos;Jet</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="121.6" y="16" width="9.6" height="22.4" fill="#d8dee9"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.068334;0.075313;1" dur="6.88s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-10" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="16">❯</text>
+<text class="text fg" x="26" y="16"> echo &apos;JetB</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="131.2" y="16" width="9.6" height="22.4" fill="#d8dee9"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.075313;0.082728;1" dur="6.88s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-11" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="16">❯</text>
+<text class="text fg" x="26" y="16"> echo &apos;JetBr</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="140.8" y="16" width="9.6" height="22.4" fill="#d8dee9"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.082728;0.090142;1" dur="6.88s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-12" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="16">❯</text>
+<text class="text fg" x="26" y="16"> echo &apos;JetBra</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="150.4" y="16" width="9.6" height="22.4" fill="#d8dee9"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.090142;0.097412;1" dur="6.88s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-13" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="16">❯</text>
+<text class="text fg" x="26" y="16"> echo &apos;JetBrai</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="160" y="16" width="9.6" height="22.4" fill="#d8dee9"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.097412;0.104972;1" dur="6.88s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-14" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="16">❯</text>
+<text class="text fg" x="26" y="16"> echo &apos;JetBrain</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="169.6" y="16" width="9.6" height="22.4" fill="#d8dee9"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.104972;0.112387;1" dur="6.88s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-15" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="16">❯</text>
+<text class="text fg" x="26" y="16"> echo &apos;JetBrains</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="179.2" y="16" width="9.6" height="22.4" fill="#d8dee9"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.112387;0.119657;1" dur="6.88s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-16" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="16">❯</text>
+<text class="text fg" x="26" y="16"> echo &apos;JetBrains</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="188.8" y="16" width="9.6" height="22.4" fill="#d8dee9"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.119657;0.127217;1" dur="6.88s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-17" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="16">❯</text>
+<text class="text fg" x="26" y="16"> echo &apos;JetBrains M</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="198.4" y="16" width="9.6" height="22.4" fill="#d8dee9"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.127217;0.134778;1" dur="6.88s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-18" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="16">❯</text>
+<text class="text fg" x="26" y="16"> echo &apos;JetBrains Mo</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="208" y="16" width="9.6" height="22.4" fill="#d8dee9"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.134778;0.142192;1" dur="6.88s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-19" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="16">❯</text>
+<text class="text fg" x="26" y="16"> echo &apos;JetBrains Mon</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="217.6" y="16" width="9.6" height="22.4" fill="#d8dee9"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.142192;0.149607;1" dur="6.88s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-20" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="16">❯</text>
+<text class="text fg" x="26" y="16"> echo &apos;JetBrains Mono</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="227.2" y="16" width="9.6" height="22.4" fill="#d8dee9"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.149607;0.157022;1" dur="6.88s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-21" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="16">❯</text>
+<text class="text fg" x="26" y="16"> echo &apos;JetBrains Mono</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="236.8" y="16" width="9.6" height="22.4" fill="#d8dee9"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.157022;0.164292;1" dur="6.88s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-22" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="16">❯</text>
+<text class="text fg" x="26" y="16"> echo &apos;JetBrains Mono e</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="246.4" y="16" width="9.6" height="22.4" fill="#d8dee9"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.164292;0.171707;1" dur="6.88s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-23" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="16">❯</text>
+<text class="text fg" x="26" y="16"> echo &apos;JetBrains Mono em</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="256" y="16" width="9.6" height="22.4" fill="#d8dee9"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.171707;0.179413;1" dur="6.88s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-24" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="16">❯</text>
+<text class="text fg" x="26" y="16"> echo &apos;JetBrains Mono emb</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="265.6" y="16" width="9.6" height="22.4" fill="#d8dee9"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.179413;0.186828;1" dur="6.88s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-25" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="16">❯</text>
+<text class="text fg" x="26" y="16"> echo &apos;JetBrains Mono embe</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="275.2" y="16" width="9.6" height="22.4" fill="#d8dee9"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.186828;0.194243;1" dur="6.88s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-26" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="16">❯</text>
+<text class="text fg" x="26" y="16"> echo &apos;JetBrains Mono embed</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="284.8" y="16" width="9.6" height="22.4" fill="#d8dee9"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.194243;0.201512;1" dur="6.88s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-27" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="16">❯</text>
+<text class="text fg" x="26" y="16"> echo &apos;JetBrains Mono embedd</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="294.4" y="16" width="9.6" height="22.4" fill="#d8dee9"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.201512;0.209072;1" dur="6.88s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-28" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="16">❯</text>
+<text class="text fg" x="26" y="16"> echo &apos;JetBrains Mono embedde</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="304" y="16" width="9.6" height="22.4" fill="#d8dee9"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.209072;0.216051;1" dur="6.88s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-29" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="16">❯</text>
+<text class="text fg" x="26" y="16"> echo &apos;JetBrains Mono embedded</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="313.6" y="16" width="9.6" height="22.4" fill="#d8dee9"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.216051;0.223612;1" dur="6.88s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-30" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="16">❯</text>
+<text class="text fg" x="26" y="16"> echo &apos;JetBrains Mono embedded</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="323.2" y="16" width="9.6" height="22.4" fill="#d8dee9"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.223612;0.230881;1" dur="6.88s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-31" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="16">❯</text>
+<text class="text fg" x="26" y="16"> echo &apos;JetBrains Mono embedded i</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="332.8" y="16" width="9.6" height="22.4" fill="#d8dee9"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.230881;0.238296;1" dur="6.88s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-32" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="16">❯</text>
+<text class="text fg" x="26" y="16"> echo &apos;JetBrains Mono embedded in</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="342.4" y="16" width="9.6" height="22.4" fill="#d8dee9"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.238296;0.245856;1" dur="6.88s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-33" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="16">❯</text>
+<text class="text fg" x="26" y="16"> echo &apos;JetBrains Mono embedded in</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="352" y="16" width="9.6" height="22.4" fill="#d8dee9"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.245856;0.253562;1" dur="6.88s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-34" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="16">❯</text>
+<text class="text fg" x="26" y="16"> echo &apos;JetBrains Mono embedded in S</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="361.6" y="16" width="9.6" height="22.4" fill="#d8dee9"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.253562;0.260832;1" dur="6.88s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-35" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="16">❯</text>
+<text class="text fg" x="26" y="16"> echo &apos;JetBrains Mono embedded in SV</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="371.2" y="16" width="9.6" height="22.4" fill="#d8dee9"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.260832;0.268392;1" dur="6.88s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-36" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="16">❯</text>
+<text class="text fg" x="26" y="16"> echo &apos;JetBrains Mono embedded in SVG</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="380.8" y="16" width="9.6" height="22.4" fill="#d8dee9"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.268392;0.275662;1" dur="6.88s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-37" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="16">❯</text>
+<text class="text fg" x="26" y="16"> echo &apos;JetBrains Mono embedded in SVG&apos;</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="390.4" y="16" width="9.6" height="22.4" fill="#d8dee9"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.275662;0.275516;1" dur="6.88s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-38" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="16">❯</text>
+<text class="text fg" x="26" y="16"> echo &apos;JetBrains Mono embedded in SVG&apos;</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor" x="390.4" y="16" width="9.6" height="22.4" fill="#d8dee9"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.275516;0.363914;1" dur="6.88s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-39" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="16">❯</text>
+<text class="text fg" x="26" y="16"> echo &apos;JetBrains Mono embedded in SVG&apos;</text>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.363914;0.365368;1" dur="6.88s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-40" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="16">❯</text>
+<text class="text fg" x="26" y="16"> echo &apos;JetBrains Mono embedded in SVG&apos;</text>
+<text class="text fg" x="16" y="38.4">JetBrains Mono embedded in SVG</text>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.365368;0.380634;1" dur="6.88s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-41" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="16">❯</text>
+<text class="text fg" x="26" y="16"> echo &apos;JetBrains Mono embedded in SVG&apos;</text>
+<text class="text fg" x="16" y="38.4">JetBrains Mono embedded in SVG</text>
+<text class="text f13" x="16" y="60.8">❯</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor" x="35.2" y="60.8" width="9.6" height="22.4" fill="#d8dee9"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.380634;0.388485;1" dur="6.88s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-42" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="16">❯</text>
+<text class="text fg" x="26" y="16"> echo &apos;JetBrains Mono embedded in SVG&apos;</text>
+<text class="text fg" x="16" y="38.4">JetBrains Mono embedded in SVG</text>
+<text class="text f13" x="16" y="60.8">❯</text>
+<text class="text fg" x="26" y="60.8"> e</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="44.8" y="60.8" width="9.6" height="22.4" fill="#d8dee9"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.388485;0.396482;1" dur="6.88s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-43" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="16">❯</text>
+<text class="text fg" x="26" y="16"> echo &apos;JetBrains Mono embedded in SVG&apos;</text>
+<text class="text fg" x="16" y="38.4">JetBrains Mono embedded in SVG</text>
+<text class="text f13" x="16" y="60.8">❯</text>
+<text class="text fg" x="26" y="60.8"> ec</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="54.4" y="60.8" width="9.6" height="22.4" fill="#d8dee9"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.396482;0.403024;1" dur="6.88s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-44" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="16">❯</text>
+<text class="text fg" x="26" y="16"> echo &apos;JetBrains Mono embedded in SVG&apos;</text>
+<text class="text fg" x="16" y="38.4">JetBrains Mono embedded in SVG</text>
+<text class="text f13" x="16" y="60.8">❯</text>
+<text class="text fg" x="26" y="60.8"> ech</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="64" y="60.8" width="9.6" height="22.4" fill="#d8dee9"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.403024;0.410294;1" dur="6.88s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-45" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="16">❯</text>
+<text class="text fg" x="26" y="16"> echo &apos;JetBrains Mono embedded in SVG&apos;</text>
+<text class="text fg" x="16" y="38.4">JetBrains Mono embedded in SVG</text>
+<text class="text f13" x="16" y="60.8">❯</text>
+<text class="text fg" x="26" y="60.8"> echo</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="73.6" y="60.8" width="9.6" height="22.4" fill="#d8dee9"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.410294;0.417854;1" dur="6.88s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-46" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="16">❯</text>
+<text class="text fg" x="26" y="16"> echo &apos;JetBrains Mono embedded in SVG&apos;</text>
+<text class="text fg" x="16" y="38.4">JetBrains Mono embedded in SVG</text>
+<text class="text f13" x="16" y="60.8">❯</text>
+<text class="text fg" x="26" y="60.8"> echo</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="83.2" y="60.8" width="9.6" height="22.4" fill="#d8dee9"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.417854;0.425414;1" dur="6.88s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-47" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="16">❯</text>
+<text class="text fg" x="26" y="16"> echo &apos;JetBrains Mono embedded in SVG&apos;</text>
+<text class="text fg" x="16" y="38.4">JetBrains Mono embedded in SVG</text>
+<text class="text f13" x="16" y="60.8">❯</text>
+<text class="text fg" x="26" y="60.8"> echo &apos;</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="92.8" y="60.8" width="9.6" height="22.4" fill="#d8dee9"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.425414;0.432829;1" dur="6.88s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-48" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="16">❯</text>
+<text class="text fg" x="26" y="16"> echo &apos;JetBrains Mono embedded in SVG&apos;</text>
+<text class="text fg" x="16" y="38.4">JetBrains Mono embedded in SVG</text>
+<text class="text f13" x="16" y="60.8">❯</text>
+<text class="text fg" x="26" y="60.8"> echo &apos;W</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="102.4" y="60.8" width="9.6" height="22.4" fill="#d8dee9"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.432829;0.44039;1" dur="6.88s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-49" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="16">❯</text>
+<text class="text fg" x="26" y="16"> echo &apos;JetBrains Mono embedded in SVG&apos;</text>
+<text class="text fg" x="16" y="38.4">JetBrains Mono embedded in SVG</text>
+<text class="text f13" x="16" y="60.8">❯</text>
+<text class="text fg" x="26" y="60.8"> echo &apos;Wo</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="112" y="60.8" width="9.6" height="22.4" fill="#d8dee9"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.44039;0.447805;1" dur="6.88s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-50" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="16">❯</text>
+<text class="text fg" x="26" y="16"> echo &apos;JetBrains Mono embedded in SVG&apos;</text>
+<text class="text fg" x="16" y="38.4">JetBrains Mono embedded in SVG</text>
+<text class="text f13" x="16" y="60.8">❯</text>
+<text class="text fg" x="26" y="60.8"> echo &apos;Wor</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="121.6" y="60.8" width="9.6" height="22.4" fill="#d8dee9"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.447805;0.455074;1" dur="6.88s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-51" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="16">❯</text>
+<text class="text fg" x="26" y="16"> echo &apos;JetBrains Mono embedded in SVG&apos;</text>
+<text class="text fg" x="16" y="38.4">JetBrains Mono embedded in SVG</text>
+<text class="text f13" x="16" y="60.8">❯</text>
+<text class="text fg" x="26" y="60.8"> echo &apos;Work</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="131.2" y="60.8" width="9.6" height="22.4" fill="#d8dee9"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.455074;0.462925;1" dur="6.88s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-52" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="16">❯</text>
+<text class="text fg" x="26" y="16"> echo &apos;JetBrains Mono embedded in SVG&apos;</text>
+<text class="text fg" x="16" y="38.4">JetBrains Mono embedded in SVG</text>
+<text class="text f13" x="16" y="60.8">❯</text>
+<text class="text fg" x="26" y="60.8"> echo &apos;Works</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="140.8" y="60.8" width="9.6" height="22.4" fill="#d8dee9"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.462925;0.470195;1" dur="6.88s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-53" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="16">❯</text>
+<text class="text fg" x="26" y="16"> echo &apos;JetBrains Mono embedded in SVG&apos;</text>
+<text class="text fg" x="16" y="38.4">JetBrains Mono embedded in SVG</text>
+<text class="text f13" x="16" y="60.8">❯</text>
+<text class="text fg" x="26" y="60.8"> echo &apos;Works</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="150.4" y="60.8" width="9.6" height="22.4" fill="#d8dee9"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.470195;0.477319;1" dur="6.88s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-54" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="16">❯</text>
+<text class="text fg" x="26" y="16"> echo &apos;JetBrains Mono embedded in SVG&apos;</text>
+<text class="text fg" x="16" y="38.4">JetBrains Mono embedded in SVG</text>
+<text class="text f13" x="16" y="60.8">❯</text>
+<text class="text fg" x="26" y="60.8"> echo &apos;Works o</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="160" y="60.8" width="9.6" height="22.4" fill="#d8dee9"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.477319;0.484879;1" dur="6.88s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-55" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="16">❯</text>
+<text class="text fg" x="26" y="16"> echo &apos;JetBrains Mono embedded in SVG&apos;</text>
+<text class="text fg" x="16" y="38.4">JetBrains Mono embedded in SVG</text>
+<text class="text f13" x="16" y="60.8">❯</text>
+<text class="text fg" x="26" y="60.8"> echo &apos;Works of</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="169.6" y="60.8" width="9.6" height="22.4" fill="#d8dee9"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.484879;0.49244;1" dur="6.88s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-56" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="16">❯</text>
+<text class="text fg" x="26" y="16"> echo &apos;JetBrains Mono embedded in SVG&apos;</text>
+<text class="text fg" x="16" y="38.4">JetBrains Mono embedded in SVG</text>
+<text class="text f13" x="16" y="60.8">❯</text>
+<text class="text fg" x="26" y="60.8"> echo &apos;Works off</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="179.2" y="60.8" width="9.6" height="22.4" fill="#d8dee9"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.49244;0.499709;1" dur="6.88s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-57" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="16">❯</text>
+<text class="text fg" x="26" y="16"> echo &apos;JetBrains Mono embedded in SVG&apos;</text>
+<text class="text fg" x="16" y="38.4">JetBrains Mono embedded in SVG</text>
+<text class="text f13" x="16" y="60.8">❯</text>
+<text class="text fg" x="26" y="60.8"> echo &apos;Works offl</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="188.8" y="60.8" width="9.6" height="22.4" fill="#d8dee9"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.499709;0.50727;1" dur="6.88s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-58" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="16">❯</text>
+<text class="text fg" x="26" y="16"> echo &apos;JetBrains Mono embedded in SVG&apos;</text>
+<text class="text fg" x="16" y="38.4">JetBrains Mono embedded in SVG</text>
+<text class="text f13" x="16" y="60.8">❯</text>
+<text class="text fg" x="26" y="60.8"> echo &apos;Works offli</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="198.4" y="60.8" width="9.6" height="22.4" fill="#d8dee9"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.50727;0.514685;1" dur="6.88s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-59" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="16">❯</text>
+<text class="text fg" x="26" y="16"> echo &apos;JetBrains Mono embedded in SVG&apos;</text>
+<text class="text fg" x="16" y="38.4">JetBrains Mono embedded in SVG</text>
+<text class="text f13" x="16" y="60.8">❯</text>
+<text class="text fg" x="26" y="60.8"> echo &apos;Works offlin</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="208" y="60.8" width="9.6" height="22.4" fill="#d8dee9"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.514685;0.521809;1" dur="6.88s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-60" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="16">❯</text>
+<text class="text fg" x="26" y="16"> echo &apos;JetBrains Mono embedded in SVG&apos;</text>
+<text class="text fg" x="16" y="38.4">JetBrains Mono embedded in SVG</text>
+<text class="text f13" x="16" y="60.8">❯</text>
+<text class="text fg" x="26" y="60.8"> echo &apos;Works offline</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="217.6" y="60.8" width="9.6" height="22.4" fill="#d8dee9"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.521809;0.529224;1" dur="6.88s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-61" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="16">❯</text>
+<text class="text fg" x="26" y="16"> echo &apos;JetBrains Mono embedded in SVG&apos;</text>
+<text class="text fg" x="16" y="38.4">JetBrains Mono embedded in SVG</text>
+<text class="text f13" x="16" y="60.8">❯</text>
+<text class="text fg" x="26" y="60.8"> echo &apos;Works offline,</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="227.2" y="60.8" width="9.6" height="22.4" fill="#d8dee9"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.529224;0.536784;1" dur="6.88s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-62" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="16">❯</text>
+<text class="text fg" x="26" y="16"> echo &apos;JetBrains Mono embedded in SVG&apos;</text>
+<text class="text fg" x="16" y="38.4">JetBrains Mono embedded in SVG</text>
+<text class="text f13" x="16" y="60.8">❯</text>
+<text class="text fg" x="26" y="60.8"> echo &apos;Works offline,</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="236.8" y="60.8" width="9.6" height="22.4" fill="#d8dee9"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.536784;0.544344;1" dur="6.88s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-63" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="16">❯</text>
+<text class="text fg" x="26" y="16"> echo &apos;JetBrains Mono embedded in SVG&apos;</text>
+<text class="text fg" x="16" y="38.4">JetBrains Mono embedded in SVG</text>
+<text class="text f13" x="16" y="60.8">❯</text>
+<text class="text fg" x="26" y="60.8"> echo &apos;Works offline, n</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="246.4" y="60.8" width="9.6" height="22.4" fill="#d8dee9"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.544344;0.551905;1" dur="6.88s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-64" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="16">❯</text>
+<text class="text fg" x="26" y="16"> echo &apos;JetBrains Mono embedded in SVG&apos;</text>
+<text class="text fg" x="16" y="38.4">JetBrains Mono embedded in SVG</text>
+<text class="text f13" x="16" y="60.8">❯</text>
+<text class="text fg" x="26" y="60.8"> echo &apos;Works offline, no</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="256" y="60.8" width="9.6" height="22.4" fill="#d8dee9"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.551905;0.559174;1" dur="6.88s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-65" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="16">❯</text>
+<text class="text fg" x="26" y="16"> echo &apos;JetBrains Mono embedded in SVG&apos;</text>
+<text class="text fg" x="16" y="38.4">JetBrains Mono embedded in SVG</text>
+<text class="text f13" x="16" y="60.8">❯</text>
+<text class="text fg" x="26" y="60.8"> echo &apos;Works offline, no</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="265.6" y="60.8" width="9.6" height="22.4" fill="#d8dee9"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.559174;0.566444;1" dur="6.88s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-66" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="16">❯</text>
+<text class="text fg" x="26" y="16"> echo &apos;JetBrains Mono embedded in SVG&apos;</text>
+<text class="text fg" x="16" y="38.4">JetBrains Mono embedded in SVG</text>
+<text class="text f13" x="16" y="60.8">❯</text>
+<text class="text fg" x="26" y="60.8"> echo &apos;Works offline, no f</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="275.2" y="60.8" width="9.6" height="22.4" fill="#d8dee9"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.566444;0.573859;1" dur="6.88s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-67" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="16">❯</text>
+<text class="text fg" x="26" y="16"> echo &apos;JetBrains Mono embedded in SVG&apos;</text>
+<text class="text fg" x="16" y="38.4">JetBrains Mono embedded in SVG</text>
+<text class="text f13" x="16" y="60.8">❯</text>
+<text class="text fg" x="26" y="60.8"> echo &apos;Works offline, no fo</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="284.8" y="60.8" width="9.6" height="22.4" fill="#d8dee9"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.573859;0.581419;1" dur="6.88s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-68" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="16">❯</text>
+<text class="text fg" x="26" y="16"> echo &apos;JetBrains Mono embedded in SVG&apos;</text>
+<text class="text fg" x="16" y="38.4">JetBrains Mono embedded in SVG</text>
+<text class="text f13" x="16" y="60.8">❯</text>
+<text class="text fg" x="26" y="60.8"> echo &apos;Works offline, no fon</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="294.4" y="60.8" width="9.6" height="22.4" fill="#d8dee9"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.581419;0.589125;1" dur="6.88s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-69" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="16">❯</text>
+<text class="text fg" x="26" y="16"> echo &apos;JetBrains Mono embedded in SVG&apos;</text>
+<text class="text fg" x="16" y="38.4">JetBrains Mono embedded in SVG</text>
+<text class="text f13" x="16" y="60.8">❯</text>
+<text class="text fg" x="26" y="60.8"> echo &apos;Works offline, no font</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="304" y="60.8" width="9.6" height="22.4" fill="#d8dee9"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.589125;0.596249;1" dur="6.88s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-70" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="16">❯</text>
+<text class="text fg" x="26" y="16"> echo &apos;JetBrains Mono embedded in SVG&apos;</text>
+<text class="text fg" x="16" y="38.4">JetBrains Mono embedded in SVG</text>
+<text class="text f13" x="16" y="60.8">❯</text>
+<text class="text fg" x="26" y="60.8"> echo &apos;Works offline, no font</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="313.6" y="60.8" width="9.6" height="22.4" fill="#d8dee9"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.596249;0.603809;1" dur="6.88s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-71" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="16">❯</text>
+<text class="text fg" x="26" y="16"> echo &apos;JetBrains Mono embedded in SVG&apos;</text>
+<text class="text fg" x="16" y="38.4">JetBrains Mono embedded in SVG</text>
+<text class="text f13" x="16" y="60.8">❯</text>
+<text class="text fg" x="26" y="60.8"> echo &apos;Works offline, no font i</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="323.2" y="60.8" width="9.6" height="22.4" fill="#d8dee9"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.603809;0.61166;1" dur="6.88s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-72" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="16">❯</text>
+<text class="text fg" x="26" y="16"> echo &apos;JetBrains Mono embedded in SVG&apos;</text>
+<text class="text fg" x="16" y="38.4">JetBrains Mono embedded in SVG</text>
+<text class="text f13" x="16" y="60.8">❯</text>
+<text class="text fg" x="26" y="60.8"> echo &apos;Works offline, no font in</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="332.8" y="60.8" width="9.6" height="22.4" fill="#d8dee9"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.61166;0.618785;1" dur="6.88s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-73" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="16">❯</text>
+<text class="text fg" x="26" y="16"> echo &apos;JetBrains Mono embedded in SVG&apos;</text>
+<text class="text fg" x="16" y="38.4">JetBrains Mono embedded in SVG</text>
+<text class="text f13" x="16" y="60.8">❯</text>
+<text class="text fg" x="26" y="60.8"> echo &apos;Works offline, no font ins</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="342.4" y="60.8" width="9.6" height="22.4" fill="#d8dee9"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.618785;0.626054;1" dur="6.88s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-74" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="16">❯</text>
+<text class="text fg" x="26" y="16"> echo &apos;JetBrains Mono embedded in SVG&apos;</text>
+<text class="text fg" x="16" y="38.4">JetBrains Mono embedded in SVG</text>
+<text class="text f13" x="16" y="60.8">❯</text>
+<text class="text fg" x="26" y="60.8"> echo &apos;Works offline, no font inst</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="352" y="60.8" width="9.6" height="22.4" fill="#d8dee9"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.626054;0.633614;1" dur="6.88s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-75" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="16">❯</text>
+<text class="text fg" x="26" y="16"> echo &apos;JetBrains Mono embedded in SVG&apos;</text>
+<text class="text fg" x="16" y="38.4">JetBrains Mono embedded in SVG</text>
+<text class="text f13" x="16" y="60.8">❯</text>
+<text class="text fg" x="26" y="60.8"> echo &apos;Works offline, no font insta</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="361.6" y="60.8" width="9.6" height="22.4" fill="#d8dee9"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.633614;0.64132;1" dur="6.88s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-76" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="16">❯</text>
+<text class="text fg" x="26" y="16"> echo &apos;JetBrains Mono embedded in SVG&apos;</text>
+<text class="text fg" x="16" y="38.4">JetBrains Mono embedded in SVG</text>
+<text class="text f13" x="16" y="60.8">❯</text>
+<text class="text fg" x="26" y="60.8"> echo &apos;Works offline, no font instal</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="371.2" y="60.8" width="9.6" height="22.4" fill="#d8dee9"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.64132;0.64859;1" dur="6.88s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-77" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="16">❯</text>
+<text class="text fg" x="26" y="16"> echo &apos;JetBrains Mono embedded in SVG&apos;</text>
+<text class="text fg" x="16" y="38.4">JetBrains Mono embedded in SVG</text>
+<text class="text f13" x="16" y="60.8">❯</text>
+<text class="text fg" x="26" y="60.8"> echo &apos;Works offline, no font install</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="380.8" y="60.8" width="9.6" height="22.4" fill="#d8dee9"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.64859;0.655859;1" dur="6.88s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-78" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="16">❯</text>
+<text class="text fg" x="26" y="16"> echo &apos;JetBrains Mono embedded in SVG&apos;</text>
+<text class="text fg" x="16" y="38.4">JetBrains Mono embedded in SVG</text>
+<text class="text f13" x="16" y="60.8">❯</text>
+<text class="text fg" x="26" y="60.8"> echo &apos;Works offline, no font install</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="390.4" y="60.8" width="9.6" height="22.4" fill="#d8dee9"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.655859;0.663565;1" dur="6.88s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-79" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="16">❯</text>
+<text class="text fg" x="26" y="16"> echo &apos;JetBrains Mono embedded in SVG&apos;</text>
+<text class="text fg" x="16" y="38.4">JetBrains Mono embedded in SVG</text>
+<text class="text f13" x="16" y="60.8">❯</text>
+<text class="text fg" x="26" y="60.8"> echo &apos;Works offline, no font install n</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="400" y="60.8" width="9.6" height="22.4" fill="#d8dee9"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.663565;0.670835;1" dur="6.88s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-80" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="16">❯</text>
+<text class="text fg" x="26" y="16"> echo &apos;JetBrains Mono embedded in SVG&apos;</text>
+<text class="text fg" x="16" y="38.4">JetBrains Mono embedded in SVG</text>
+<text class="text f13" x="16" y="60.8">❯</text>
+<text class="text fg" x="26" y="60.8"> echo &apos;Works offline, no font install ne</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="409.6" y="60.8" width="9.6" height="22.4" fill="#d8dee9"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.670835;0.678104;1" dur="6.88s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-81" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="16">❯</text>
+<text class="text fg" x="26" y="16"> echo &apos;JetBrains Mono embedded in SVG&apos;</text>
+<text class="text fg" x="16" y="38.4">JetBrains Mono embedded in SVG</text>
+<text class="text f13" x="16" y="60.8">❯</text>
+<text class="text fg" x="26" y="60.8"> echo &apos;Works offline, no font install nee</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="419.2" y="60.8" width="9.6" height="22.4" fill="#d8dee9"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.678104;0.685374;1" dur="6.88s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-82" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="16">❯</text>
+<text class="text fg" x="26" y="16"> echo &apos;JetBrains Mono embedded in SVG&apos;</text>
+<text class="text fg" x="16" y="38.4">JetBrains Mono embedded in SVG</text>
+<text class="text f13" x="16" y="60.8">❯</text>
+<text class="text fg" x="26" y="60.8"> echo &apos;Works offline, no font install need</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="428.8" y="60.8" width="9.6" height="22.4" fill="#d8dee9"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.685374;0.693079;1" dur="6.88s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-83" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="16">❯</text>
+<text class="text fg" x="26" y="16"> echo &apos;JetBrains Mono embedded in SVG&apos;</text>
+<text class="text fg" x="16" y="38.4">JetBrains Mono embedded in SVG</text>
+<text class="text f13" x="16" y="60.8">❯</text>
+<text class="text fg" x="26" y="60.8"> echo &apos;Works offline, no font install neede</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="438.4" y="60.8" width="9.6" height="22.4" fill="#d8dee9"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.693079;0.70064;1" dur="6.88s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-84" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="16">❯</text>
+<text class="text fg" x="26" y="16"> echo &apos;JetBrains Mono embedded in SVG&apos;</text>
+<text class="text fg" x="16" y="38.4">JetBrains Mono embedded in SVG</text>
+<text class="text f13" x="16" y="60.8">❯</text>
+<text class="text fg" x="26" y="60.8"> echo &apos;Works offline, no font install needed</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="448" y="60.8" width="9.6" height="22.4" fill="#d8dee9"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.70064;0.707909;1" dur="6.88s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-85" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="16">❯</text>
+<text class="text fg" x="26" y="16"> echo &apos;JetBrains Mono embedded in SVG&apos;</text>
+<text class="text fg" x="16" y="38.4">JetBrains Mono embedded in SVG</text>
+<text class="text f13" x="16" y="60.8">❯</text>
+<text class="text fg" x="26" y="60.8"> echo &apos;Works offline, no font install needed&apos;</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="457.6" y="60.8" width="9.6" height="22.4" fill="#d8dee9"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.707909;0.708055;1" dur="6.88s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-86" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="16">❯</text>
+<text class="text fg" x="26" y="16"> echo &apos;JetBrains Mono embedded in SVG&apos;</text>
+<text class="text fg" x="16" y="38.4">JetBrains Mono embedded in SVG</text>
+<text class="text f13" x="16" y="60.8">❯</text>
+<text class="text fg" x="26" y="60.8"> echo &apos;Works offline, no font install needed&apos;</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor" x="457.6" y="60.8" width="9.6" height="22.4" fill="#d8dee9"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.708055;0.854609;1" dur="6.88s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-87" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="16">❯</text>
+<text class="text fg" x="26" y="16"> echo &apos;JetBrains Mono embedded in SVG&apos;</text>
+<text class="text fg" x="16" y="38.4">JetBrains Mono embedded in SVG</text>
+<text class="text f13" x="16" y="60.8">❯</text>
+<text class="text fg" x="26" y="60.8"> echo &apos;Works offline, no font install needed&apos;</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor" x="457.6" y="60.8" width="9.6" height="22.4" fill="#d8dee9"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;visible" keyTimes="0;0.854609;1" dur="6.88s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <!-- Static footer -->
+  
+  
+  </g>
+</svg>

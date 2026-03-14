@@ -1,0 +1,2102 @@
+<svg width="400" height="220" xmlns="http://www.w3.org/2000/svg">
+  <defs><clipPath id="rounded-corners"><rect x="0" y="0" width="400" height="220" rx="8" ry="8"/></clipPath></defs>
+  <style>
+    
+.text {
+  font-family: 'SF Mono', 'Monaco', 'Menlo', 'Consolas', monospace;
+  font-size: 14px;
+  dominant-baseline: text-before-edge;
+  text-rendering: geometricPrecision;
+  white-space: pre;
+}
+.bold { font-weight: bold; }
+.italic { font-style: italic; }
+.uline { text-decoration: underline; }
+.strike { text-decoration: line-through; }
+.dim { opacity: 0.5; }
+.fg { fill: #c9d1d9; }
+.f0 { fill: #484f58; }
+.f1 { fill: #ff7b72; }
+.f2 { fill: #3fb950; }
+.f3 { fill: #d29922; }
+.f4 { fill: #58a6ff; }
+.f5 { fill: #bc8cff; }
+.f6 { fill: #39c5cf; }
+.f7 { fill: #b1bac4; }
+.f8 { fill: #6e7681; }
+.f9 { fill: #ffa198; }
+.f10 { fill: #56d364; }
+.f11 { fill: #e3b341; }
+.f12 { fill: #79c0ff; }
+.f13 { fill: #d2a8ff; }
+.f14 { fill: #56d4dd; }
+.f15 { fill: #f0f6fc; }
+.bg { fill: #0d1117; }
+.b0 { fill: #484f58; }
+.b1 { fill: #ff7b72; }
+.b2 { fill: #3fb950; }
+.b3 { fill: #d29922; }
+.b4 { fill: #58a6ff; }
+.b5 { fill: #bc8cff; }
+.b6 { fill: #39c5cf; }
+.b7 { fill: #b1bac4; }
+.b8 { fill: #6e7681; }
+.b9 { fill: #ffa198; }
+.b10 { fill: #56d364; }
+.b11 { fill: #e3b341; }
+.b12 { fill: #79c0ff; }
+.b13 { fill: #d2a8ff; }
+.b14 { fill: #56d4dd; }
+.b15 { fill: #f0f6fc; }
+.cursor { animation: blink 1s step-end infinite; }
+@keyframes blink {
+  0%, 50% { opacity: 1; }
+  50.01%, 100% { opacity: 0; }
+}
+.cursor-active { opacity: 1; }
+
+  </style>
+
+  <g clip-path="url(#rounded-corners)">
+  <!-- Static background (never animated) -->
+  <rect width="100%" height="100%" fill="#0d1117" rx="8" ry="8" />
+
+  <!-- Static chrome (title bar) -->
+  <g class="chrome"><rect class="header-bg" x="0" y="0" width="400" height="40" fill="#0d1117" rx="8" ry="8"/>
+<rect x="0" y="32" width="400" height="8" fill="#0d1117"/>
+<circle cx="22" cy="20" r="6" fill="#ff5f56"/>
+<circle cx="42" cy="20" r="6" fill="#ffbd2e"/>
+<circle cx="62" cy="20" r="6" fill="#27c93f"/>
+<text class="text fg" x="200" y="20" text-anchor="middle" style="dominant-baseline: central">ASCII Art Demo</text></g>
+
+  <!-- Animated frames (only dynamic content) -->
+  
+  <g id="frame-0" visibility="visible">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor" x="32.8" y="56" width="8.4" height="14" fill="#c9d1d9"/>
+</g>
+    <animate attributeName="visibility" values="visible;hidden;hidden" keyTimes="0;0.003804;1" dur="5.52s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-1" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> e</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="41.2" y="56" width="8.4" height="14" fill="#c9d1d9"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.003804;0.005797;1" dur="5.52s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-2" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> ec</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="49.6" y="56" width="8.4" height="14" fill="#c9d1d9"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.005797;0.00779;1" dur="5.52s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-3" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> ech</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="58" y="56" width="8.4" height="14" fill="#c9d1d9"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.00779;0.010145;1" dur="5.52s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-4" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="66.4" y="56" width="8.4" height="14" fill="#c9d1d9"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.010145;0.012138;1" dur="5.52s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-5" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="74.8" y="56" width="8.4" height="14" fill="#c9d1d9"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.012138;0.01413;1" dur="5.52s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-6" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo -</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="83.2" y="56" width="8.4" height="14" fill="#c9d1d9"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.01413;0.016304;1" dur="5.52s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-7" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo -e</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="91.6" y="56" width="8.4" height="14" fill="#c9d1d9"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.016304;0.018297;1" dur="5.52s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-8" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo -e</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="100" y="56" width="8.4" height="14" fill="#c9d1d9"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.018297;0.02029;1" dur="5.52s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-9" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo -e &apos;</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="108.4" y="56" width="8.4" height="14" fill="#c9d1d9"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.02029;0.022283;1" dur="5.52s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-10" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo -e &apos;</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="116.8" y="56" width="8.4" height="14" fill="#c9d1d9"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.022283;0.024275;1" dur="5.52s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-11" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo -e &apos;</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="125.2" y="56" width="8.4" height="14" fill="#c9d1d9"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.024275;0.026449;1" dur="5.52s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-12" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo -e &apos;</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="133.6" y="56" width="8.4" height="14" fill="#c9d1d9"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.026449;0.028442;1" dur="5.52s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-13" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo -e &apos;</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="142" y="56" width="8.4" height="14" fill="#c9d1d9"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.028442;0.030254;1" dur="5.52s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-14" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo -e &apos;    _</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="150.4" y="56" width="8.4" height="14" fill="#c9d1d9"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.030254;0.032428;1" dur="5.52s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-15" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo -e &apos;    __</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="158.8" y="56" width="8.4" height="14" fill="#c9d1d9"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.032428;0.034601;1" dur="5.52s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-16" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo -e &apos;    ___</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="167.2" y="56" width="8.4" height="14" fill="#c9d1d9"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.034601;0.036594;1" dur="5.52s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-17" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo -e &apos;    ____</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="175.6" y="56" width="8.4" height="14" fill="#c9d1d9"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.036594;0.038406;1" dur="5.52s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-18" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo -e &apos;    ____</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="184" y="56" width="8.4" height="14" fill="#c9d1d9"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.038406;0.040399;1" dur="5.52s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-19" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo -e &apos;    ____</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="192.4" y="56" width="8.4" height="14" fill="#c9d1d9"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.040399;0.042029;1" dur="5.52s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-20" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo -e &apos;    ____  _</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="200.8" y="56" width="8.4" height="14" fill="#c9d1d9"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.042029;0.044022;1" dur="5.52s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-21" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo -e &apos;    ____  __</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="209.2" y="56" width="8.4" height="14" fill="#c9d1d9"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.044022;0.046196;1" dur="5.52s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-22" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo -e &apos;    ____  __</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="217.6" y="56" width="8.4" height="14" fill="#c9d1d9"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.046196;0.048007;1" dur="5.52s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-23" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo -e &apos;    ____  __</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="226" y="56" width="8.4" height="14" fill="#c9d1d9"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.048007;0.050181;1" dur="5.52s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-24" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo -e &apos;    ____  __</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="234.4" y="56" width="8.4" height="14" fill="#c9d1d9"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.050181;0.052355;1" dur="5.52s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-25" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo -e &apos;    ____  __</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="242.8" y="56" width="8.4" height="14" fill="#c9d1d9"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.052355;0.05471;1" dur="5.52s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-26" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo -e &apos;    ____  __</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="251.2" y="56" width="8.4" height="14" fill="#c9d1d9"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.05471;0.056703;1" dur="5.52s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-27" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo -e &apos;    ____  __     _</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="259.6" y="56" width="8.4" height="14" fill="#c9d1d9"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.056703;0.058696;1" dur="5.52s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-28" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo -e &apos;    ____  __     __</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="268" y="56" width="8.4" height="14" fill="#c9d1d9"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.058696;0.060326;1" dur="5.52s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-29" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo -e &apos;    ____  __     __</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="276.4" y="56" width="8.4" height="14" fill="#c9d1d9"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.060326;0.0625;1" dur="5.52s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-30" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo -e &apos;    ____  __     __ _</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="284.8" y="56" width="8.4" height="14" fill="#c9d1d9"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.0625;0.064312;1" dur="5.52s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-31" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo -e &apos;    ____  __     __ __</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="293.2" y="56" width="8.4" height="14" fill="#c9d1d9"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.064312;0.066486;1" dur="5.52s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-32" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo -e &apos;    ____  __     __ ___</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="301.6" y="56" width="8.4" height="14" fill="#c9d1d9"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.066486;0.068116;1" dur="5.52s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-33" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo -e &apos;    ____  __     __ ____</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="310" y="56" width="8.4" height="14" fill="#c9d1d9"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.068116;0.07029;1" dur="5.52s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-34" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo -e &apos;    ____  __     __ ____</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="318.4" y="56" width="8.4" height="14" fill="#c9d1d9"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.07029;0.072101;1" dur="5.52s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-35" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo -e &apos;    ____  __     __ ____</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="326.8" y="56" width="8.4" height="14" fill="#c9d1d9"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.072101;0.074094;1" dur="5.52s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-36" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo -e &apos;    ____  __     __ ____  \</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="335.2" y="56" width="8.4" height="14" fill="#c9d1d9"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.074094;0.076087;1" dur="5.52s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-37" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo -e &apos;    ____  __     __ ____  \n</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="343.6" y="56" width="8.4" height="14" fill="#c9d1d9"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.076087;0.07808;1" dur="5.52s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-38" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo -e &apos;    ____  __     __ ____  \n</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="352" y="56" width="8.4" height="14" fill="#c9d1d9"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.07808;0.080072;1" dur="5.52s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-39" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo -e &apos;    ____  __     __ ____  \n</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="360.4" y="56" width="8.4" height="14" fill="#c9d1d9"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.080072;0.082065;1" dur="5.52s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-40" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo -e &apos;    ____  __     __ ____  \n</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="368.8" y="56" width="8.4" height="14" fill="#c9d1d9"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.082065;0.08442;1" dur="5.52s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-41" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo -e &apos;    ____  __     __ ____  \n   |</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="368.8" y="56" width="8.4" height="14" fill="#c9d1d9"/>
+<text x="368.8" y="56" fill="#0d1117" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="14" dominant-baseline="text-before-edge">|</text>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.08442;0.086413;1" dur="5.52s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-42" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo -e &apos;    ____  __     __ ____  \n   |</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="24.4" y="70" width="8.4" height="14" fill="#c9d1d9"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.086413;0.088406;1" dur="5.52s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-43" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo -e &apos;    ____  __     __ ____  \n   |</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="32.8" y="70" width="8.4" height="14" fill="#c9d1d9"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.088406;0.09058;1" dur="5.52s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-44" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo -e &apos;    ____  __     __ ____  \n   |</text>
+<text class="text fg" x="16" y="70">  _</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="41.2" y="70" width="8.4" height="14" fill="#c9d1d9"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.09058;0.092572;1" dur="5.52s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-45" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo -e &apos;    ____  __     __ ____  \n   |</text>
+<text class="text fg" x="16" y="70">  _</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="49.6" y="70" width="8.4" height="14" fill="#c9d1d9"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.092572;0.094565;1" dur="5.52s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-46" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo -e &apos;    ____  __     __ ____  \n   |</text>
+<text class="text fg" x="16" y="70">  _ \</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="58" y="70" width="8.4" height="14" fill="#c9d1d9"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.094565;0.096558;1" dur="5.52s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-47" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo -e &apos;    ____  __     __ ____  \n   |</text>
+<text class="text fg" x="16" y="70">  _ \\</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="66.4" y="70" width="8.4" height="14" fill="#c9d1d9"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.096558;0.09837;1" dur="5.52s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-48" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo -e &apos;    ____  __     __ ____  \n   |</text>
+<text class="text fg" x="16" y="70">  _ \\</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="74.8" y="70" width="8.4" height="14" fill="#c9d1d9"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.09837;0.100362;1" dur="5.52s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-49" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo -e &apos;    ____  __     __ ____  \n   |</text>
+<text class="text fg" x="16" y="70">  _ \\ \</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="83.2" y="70" width="8.4" height="14" fill="#c9d1d9"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.100362;0.102355;1" dur="5.52s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-50" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo -e &apos;    ____  __     __ ____  \n   |</text>
+<text class="text fg" x="16" y="70">  _ \\ \\</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="91.6" y="70" width="8.4" height="14" fill="#c9d1d9"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.102355;0.104348;1" dur="5.52s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-51" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo -e &apos;    ____  __     __ ____  \n   |</text>
+<text class="text fg" x="16" y="70">  _ \\ \\</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="100" y="70" width="8.4" height="14" fill="#c9d1d9"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.104348;0.106341;1" dur="5.52s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-52" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo -e &apos;    ____  __     __ ____  \n   |</text>
+<text class="text fg" x="16" y="70">  _ \\ \\ \</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="108.4" y="70" width="8.4" height="14" fill="#c9d1d9"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.106341;0.108152;1" dur="5.52s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-53" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo -e &apos;    ____  __     __ ____  \n   |</text>
+<text class="text fg" x="16" y="70">  _ \\ \\ \\</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="116.8" y="70" width="8.4" height="14" fill="#c9d1d9"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.108152;0.110145;1" dur="5.52s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-54" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo -e &apos;    ____  __     __ ____  \n   |</text>
+<text class="text fg" x="16" y="70">  _ \\ \\ \\</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="125.2" y="70" width="8.4" height="14" fill="#c9d1d9"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.110145;0.1125;1" dur="5.52s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-55" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo -e &apos;    ____  __     __ ____  \n   |</text>
+<text class="text fg" x="16" y="70">  _ \\ \\ \\</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="133.6" y="70" width="8.4" height="14" fill="#c9d1d9"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.1125;0.114493;1" dur="5.52s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-56" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo -e &apos;    ____  __     __ ____  \n   |</text>
+<text class="text fg" x="16" y="70">  _ \\ \\ \\</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="142" y="70" width="8.4" height="14" fill="#c9d1d9"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.114493;0.116667;1" dur="5.52s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-57" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo -e &apos;    ____  __     __ ____  \n   |</text>
+<text class="text fg" x="16" y="70">  _ \\ \\ \\   /</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="150.4" y="70" width="8.4" height="14" fill="#c9d1d9"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.116667;0.118841;1" dur="5.52s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-58" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo -e &apos;    ____  __     __ ____  \n   |</text>
+<text class="text fg" x="16" y="70">  _ \\ \\ \\   /</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="158.8" y="70" width="8.4" height="14" fill="#c9d1d9"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.118841;0.120652;1" dur="5.52s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-59" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo -e &apos;    ____  __     __ ____  \n   |</text>
+<text class="text fg" x="16" y="70">  _ \\ \\ \\   / /</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="167.2" y="70" width="8.4" height="14" fill="#c9d1d9"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.120652;0.122645;1" dur="5.52s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-60" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo -e &apos;    ____  __     __ ____  \n   |</text>
+<text class="text fg" x="16" y="70">  _ \\ \\ \\   / /|</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="175.6" y="70" width="8.4" height="14" fill="#c9d1d9"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.122645;0.124457;1" dur="5.52s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-61" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo -e &apos;    ____  __     __ ____  \n   |</text>
+<text class="text fg" x="16" y="70">  _ \\ \\ \\   / /|</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="184" y="70" width="8.4" height="14" fill="#c9d1d9"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.124457;0.12663;1" dur="5.52s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-62" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo -e &apos;    ____  __     __ ____  \n   |</text>
+<text class="text fg" x="16" y="70">  _ \\ \\ \\   / /|</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="192.4" y="70" width="8.4" height="14" fill="#c9d1d9"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.12663;0.128623;1" dur="5.52s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-63" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo -e &apos;    ____  __     __ ____  \n   |</text>
+<text class="text fg" x="16" y="70">  _ \\ \\ \\   / /|  _</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="200.8" y="70" width="8.4" height="14" fill="#c9d1d9"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.128623;0.130435;1" dur="5.52s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-64" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo -e &apos;    ____  __     __ ____  \n   |</text>
+<text class="text fg" x="16" y="70">  _ \\ \\ \\   / /|  _</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="209.2" y="70" width="8.4" height="14" fill="#c9d1d9"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.130435;0.132428;1" dur="5.52s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-65" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo -e &apos;    ____  __     __ ____  \n   |</text>
+<text class="text fg" x="16" y="70">  _ \\ \\ \\   / /|  _ \</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="217.6" y="70" width="8.4" height="14" fill="#c9d1d9"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.132428;0.134601;1" dur="5.52s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-66" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo -e &apos;    ____  __     __ ____  \n   |</text>
+<text class="text fg" x="16" y="70">  _ \\ \\ \\   / /|  _ \\</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="226" y="70" width="8.4" height="14" fill="#c9d1d9"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.134601;0.136594;1" dur="5.52s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-67" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo -e &apos;    ____  __     __ ____  \n   |</text>
+<text class="text fg" x="16" y="70">  _ \\ \\ \\   / /|  _ \\</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="234.4" y="70" width="8.4" height="14" fill="#c9d1d9"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.136594;0.138587;1" dur="5.52s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-68" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo -e &apos;    ____  __     __ ____  \n   |</text>
+<text class="text fg" x="16" y="70">  _ \\ \\ \\   / /|  _ \\ \</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="242.8" y="70" width="8.4" height="14" fill="#c9d1d9"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.138587;0.140399;1" dur="5.52s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-69" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo -e &apos;    ____  __     __ ____  \n   |</text>
+<text class="text fg" x="16" y="70">  _ \\ \\ \\   / /|  _ \\ \n</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="251.2" y="70" width="8.4" height="14" fill="#c9d1d9"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.140399;0.142572;1" dur="5.52s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-70" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo -e &apos;    ____  __     __ ____  \n   |</text>
+<text class="text fg" x="16" y="70">  _ \\ \\ \\   / /|  _ \\ \n</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="259.6" y="70" width="8.4" height="14" fill="#c9d1d9"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.142572;0.144384;1" dur="5.52s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-71" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo -e &apos;    ____  __     __ ____  \n   |</text>
+<text class="text fg" x="16" y="70">  _ \\ \\ \\   / /|  _ \\ \n</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="268" y="70" width="8.4" height="14" fill="#c9d1d9"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.144384;0.146377;1" dur="5.52s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-72" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo -e &apos;    ____  __     __ ____  \n   |</text>
+<text class="text fg" x="16" y="70">  _ \\ \\ \\   / /|  _ \\ \n</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="276.4" y="70" width="8.4" height="14" fill="#c9d1d9"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.146377;0.14837;1" dur="5.52s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-73" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo -e &apos;    ____  __     __ ____  \n   |</text>
+<text class="text fg" x="16" y="70">  _ \\ \\ \\   / /|  _ \\ \n   |</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="284.8" y="70" width="8.4" height="14" fill="#c9d1d9"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.14837;0.150362;1" dur="5.52s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-74" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo -e &apos;    ____  __     __ ____  \n   |</text>
+<text class="text fg" x="16" y="70">  _ \\ \\ \\   / /|  _ \\ \n   |</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="293.2" y="70" width="8.4" height="14" fill="#c9d1d9"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.150362;0.152355;1" dur="5.52s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-75" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo -e &apos;    ____  __     __ ____  \n   |</text>
+<text class="text fg" x="16" y="70">  _ \\ \\ \\   / /|  _ \\ \n   | |</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="301.6" y="70" width="8.4" height="14" fill="#c9d1d9"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.152355;0.154348;1" dur="5.52s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-76" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo -e &apos;    ____  __     __ ____  \n   |</text>
+<text class="text fg" x="16" y="70">  _ \\ \\ \\   / /|  _ \\ \n   | |</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="310" y="70" width="8.4" height="14" fill="#c9d1d9"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.154348;0.156341;1" dur="5.52s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-77" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo -e &apos;    ____  __     __ ____  \n   |</text>
+<text class="text fg" x="16" y="70">  _ \\ \\ \\   / /|  _ \\ \n   | | |</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="318.4" y="70" width="8.4" height="14" fill="#c9d1d9"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.156341;0.158333;1" dur="5.52s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-78" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo -e &apos;    ____  __     __ ____  \n   |</text>
+<text class="text fg" x="16" y="70">  _ \\ \\ \\   / /|  _ \\ \n   | | |</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="326.8" y="70" width="8.4" height="14" fill="#c9d1d9"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.158333;0.160507;1" dur="5.52s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-79" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo -e &apos;    ____  __     __ ____  \n   |</text>
+<text class="text fg" x="16" y="70">  _ \\ \\ \\   / /|  _ \\ \n   | | | |</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="335.2" y="70" width="8.4" height="14" fill="#c9d1d9"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.160507;0.162138;1" dur="5.52s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-80" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo -e &apos;    ____  __     __ ____  \n   |</text>
+<text class="text fg" x="16" y="70">  _ \\ \\ \\   / /|  _ \\ \n   | | | |</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="343.6" y="70" width="8.4" height="14" fill="#c9d1d9"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.162138;0.164312;1" dur="5.52s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-81" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo -e &apos;    ____  __     __ ____  \n   |</text>
+<text class="text fg" x="16" y="70">  _ \\ \\ \\   / /|  _ \\ \n   | | | | \</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="352" y="70" width="8.4" height="14" fill="#c9d1d9"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.164312;0.166304;1" dur="5.52s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-82" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo -e &apos;    ____  __     __ ____  \n   |</text>
+<text class="text fg" x="16" y="70">  _ \\ \\ \\   / /|  _ \\ \n   | | | | \\</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="360.4" y="70" width="8.4" height="14" fill="#c9d1d9"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.166304;0.168116;1" dur="5.52s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-83" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo -e &apos;    ____  __     __ ____  \n   |</text>
+<text class="text fg" x="16" y="70">  _ \\ \\ \\   / /|  _ \\ \n   | | | | \\</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="368.8" y="70" width="8.4" height="14" fill="#c9d1d9"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.168116;0.17029;1" dur="5.52s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-84" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo -e &apos;    ____  __     __ ____  \n   |</text>
+<text class="text fg" x="16" y="70">  _ \\ \\ \\   / /|  _ \\ \n   | | | | \\ \</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="368.8" y="70" width="8.4" height="14" fill="#c9d1d9"/>
+<text x="368.8" y="70" fill="#0d1117" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="14" dominant-baseline="text-before-edge">\</text>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.17029;0.172283;1" dur="5.52s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-85" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo -e &apos;    ____  __     __ ____  \n   |</text>
+<text class="text fg" x="16" y="70">  _ \\ \\ \\   / /|  _ \\ \n   | | | | \\ \</text>
+<text class="text fg" x="16" y="84">\</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="24.4" y="84" width="8.4" height="14" fill="#c9d1d9"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.172283;0.174457;1" dur="5.52s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-86" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo -e &apos;    ____  __     __ ____  \n   |</text>
+<text class="text fg" x="16" y="70">  _ \\ \\ \\   / /|  _ \\ \n   | | | | \\ \</text>
+<text class="text fg" x="16" y="84">\</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="32.8" y="84" width="8.4" height="14" fill="#c9d1d9"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.174457;0.17663;1" dur="5.52s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-87" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo -e &apos;    ____  __     __ ____  \n   |</text>
+<text class="text fg" x="16" y="70">  _ \\ \\ \\   / /|  _ \\ \n   | | | | \\ \</text>
+<text class="text fg" x="16" y="84">\ /</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="41.2" y="84" width="8.4" height="14" fill="#c9d1d9"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.17663;0.178804;1" dur="5.52s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-88" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo -e &apos;    ____  __     __ ____  \n   |</text>
+<text class="text fg" x="16" y="70">  _ \\ \\ \\   / /|  _ \\ \n   | | | | \\ \</text>
+<text class="text fg" x="16" y="84">\ /</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="49.6" y="84" width="8.4" height="14" fill="#c9d1d9"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.178804;0.180797;1" dur="5.52s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-89" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo -e &apos;    ____  __     __ ____  \n   |</text>
+<text class="text fg" x="16" y="70">  _ \\ \\ \\   / /|  _ \\ \n   | | | | \\ \</text>
+<text class="text fg" x="16" y="84">\ / /</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="58" y="84" width="8.4" height="14" fill="#c9d1d9"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.180797;0.18279;1" dur="5.52s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-90" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo -e &apos;    ____  __     __ ____  \n   |</text>
+<text class="text fg" x="16" y="70">  _ \\ \\ \\   / /|  _ \\ \n   | | | | \\ \</text>
+<text class="text fg" x="16" y="84">\ / /</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="66.4" y="84" width="8.4" height="14" fill="#c9d1d9"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.18279;0.184783;1" dur="5.52s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-91" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo -e &apos;    ____  __     __ ____  \n   |</text>
+<text class="text fg" x="16" y="70">  _ \\ \\ \\   / /|  _ \\ \n   | | | | \\ \</text>
+<text class="text fg" x="16" y="84">\ / / |</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="74.8" y="84" width="8.4" height="14" fill="#c9d1d9"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.184783;0.186775;1" dur="5.52s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-92" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo -e &apos;    ____  __     __ ____  \n   |</text>
+<text class="text fg" x="16" y="70">  _ \\ \\ \\   / /|  _ \\ \n   | | | | \\ \</text>
+<text class="text fg" x="16" y="84">\ / / |</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="83.2" y="84" width="8.4" height="14" fill="#c9d1d9"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.186775;0.188768;1" dur="5.52s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-93" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo -e &apos;    ____  __     __ ____  \n   |</text>
+<text class="text fg" x="16" y="70">  _ \\ \\ \\   / /|  _ \\ \n   | | | | \\ \</text>
+<text class="text fg" x="16" y="84">\ / / | |</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="91.6" y="84" width="8.4" height="14" fill="#c9d1d9"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.188768;0.190942;1" dur="5.52s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-94" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo -e &apos;    ____  __     __ ____  \n   |</text>
+<text class="text fg" x="16" y="70">  _ \\ \\ \\   / /|  _ \\ \n   | | | | \\ \</text>
+<text class="text fg" x="16" y="84">\ / / | |</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="100" y="84" width="8.4" height="14" fill="#c9d1d9"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.190942;0.192572;1" dur="5.52s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-95" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo -e &apos;    ____  __     __ ____  \n   |</text>
+<text class="text fg" x="16" y="70">  _ \\ \\ \\   / /|  _ \\ \n   | | | | \\ \</text>
+<text class="text fg" x="16" y="84">\ / / | | |</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="108.4" y="84" width="8.4" height="14" fill="#c9d1d9"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.192572;0.194746;1" dur="5.52s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-96" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo -e &apos;    ____  __     __ ____  \n   |</text>
+<text class="text fg" x="16" y="70">  _ \\ \\ \\   / /|  _ \\ \n   | | | | \\ \</text>
+<text class="text fg" x="16" y="84">\ / / | | |</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="116.8" y="84" width="8.4" height="14" fill="#c9d1d9"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.194746;0.196558;1" dur="5.52s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-97" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo -e &apos;    ____  __     __ ____  \n   |</text>
+<text class="text fg" x="16" y="70">  _ \\ \\ \\   / /|  _ \\ \n   | | | | \\ \</text>
+<text class="text fg" x="16" y="84">\ / / | | | |</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="125.2" y="84" width="8.4" height="14" fill="#c9d1d9"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.196558;0.198732;1" dur="5.52s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-98" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo -e &apos;    ____  __     __ ____  \n   |</text>
+<text class="text fg" x="16" y="70">  _ \\ \\ \\   / /|  _ \\ \n   | | | | \\ \</text>
+<text class="text fg" x="16" y="84">\ / / | | | |\</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="133.6" y="84" width="8.4" height="14" fill="#c9d1d9"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.198732;0.200725;1" dur="5.52s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-99" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo -e &apos;    ____  __     __ ____  \n   |</text>
+<text class="text fg" x="16" y="70">  _ \\ \\ \\   / /|  _ \\ \n   | | | | \\ \</text>
+<text class="text fg" x="16" y="84">\ / / | | | |\n</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="142" y="84" width="8.4" height="14" fill="#c9d1d9"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.200725;0.202536;1" dur="5.52s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-100" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo -e &apos;    ____  __     __ ____  \n   |</text>
+<text class="text fg" x="16" y="70">  _ \\ \\ \\   / /|  _ \\ \n   | | | | \\ \</text>
+<text class="text fg" x="16" y="84">\ / / | | | |\n</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="150.4" y="84" width="8.4" height="14" fill="#c9d1d9"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.202536;0.20471;1" dur="5.52s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-101" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo -e &apos;    ____  __     __ ____  \n   |</text>
+<text class="text fg" x="16" y="70">  _ \\ \\ \\   / /|  _ \\ \n   | | | | \\ \</text>
+<text class="text fg" x="16" y="84">\ / / | | | |\n</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="158.8" y="84" width="8.4" height="14" fill="#c9d1d9"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.20471;0.206522;1" dur="5.52s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-102" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo -e &apos;    ____  __     __ ____  \n   |</text>
+<text class="text fg" x="16" y="70">  _ \\ \\ \\   / /|  _ \\ \n   | | | | \\ \</text>
+<text class="text fg" x="16" y="84">\ / / | | | |\n</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="167.2" y="84" width="8.4" height="14" fill="#c9d1d9"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.206522;0.208333;1" dur="5.52s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-103" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo -e &apos;    ____  __     __ ____  \n   |</text>
+<text class="text fg" x="16" y="70">  _ \\ \\ \\   / /|  _ \\ \n   | | | | \\ \</text>
+<text class="text fg" x="16" y="84">\ / / | | | |\n   |</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="175.6" y="84" width="8.4" height="14" fill="#c9d1d9"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.208333;0.210688;1" dur="5.52s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-104" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo -e &apos;    ____  __     __ ____  \n   |</text>
+<text class="text fg" x="16" y="70">  _ \\ \\ \\   / /|  _ \\ \n   | | | | \\ \</text>
+<text class="text fg" x="16" y="84">\ / / | | | |\n   |</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="184" y="84" width="8.4" height="14" fill="#c9d1d9"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.210688;0.2125;1" dur="5.52s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-105" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo -e &apos;    ____  __     __ ____  \n   |</text>
+<text class="text fg" x="16" y="70">  _ \\ \\ \\   / /|  _ \\ \n   | | | | \\ \</text>
+<text class="text fg" x="16" y="84">\ / / | | | |\n   | |</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="192.4" y="84" width="8.4" height="14" fill="#c9d1d9"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.2125;0.214312;1" dur="5.52s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-106" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo -e &apos;    ____  __     __ ____  \n   |</text>
+<text class="text fg" x="16" y="70">  _ \\ \\ \\   / /|  _ \\ \n   | | | | \\ \</text>
+<text class="text fg" x="16" y="84">\ / / | | | |\n   | |_</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="200.8" y="84" width="8.4" height="14" fill="#c9d1d9"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.214312;0.216304;1" dur="5.52s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-107" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo -e &apos;    ____  __     __ ____  \n   |</text>
+<text class="text fg" x="16" y="70">  _ \\ \\ \\   / /|  _ \\ \n   | | | | \\ \</text>
+<text class="text fg" x="16" y="84">\ / / | | | |\n   | |_|</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="209.2" y="84" width="8.4" height="14" fill="#c9d1d9"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.216304;0.218297;1" dur="5.52s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-108" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo -e &apos;    ____  __     __ ____  \n   |</text>
+<text class="text fg" x="16" y="70">  _ \\ \\ \\   / /|  _ \\ \n   | | | | \\ \</text>
+<text class="text fg" x="16" y="84">\ / / | | | |\n   | |_|</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="217.6" y="84" width="8.4" height="14" fill="#c9d1d9"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.218297;0.22029;1" dur="5.52s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-109" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo -e &apos;    ____  __     __ ____  \n   |</text>
+<text class="text fg" x="16" y="70">  _ \\ \\ \\   / /|  _ \\ \n   | | | | \\ \</text>
+<text class="text fg" x="16" y="84">\ / / | | | |\n   | |_| |</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="226" y="84" width="8.4" height="14" fill="#c9d1d9"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.22029;0.222283;1" dur="5.52s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-110" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo -e &apos;    ____  __     __ ____  \n   |</text>
+<text class="text fg" x="16" y="70">  _ \\ \\ \\   / /|  _ \\ \n   | | | | \\ \</text>
+<text class="text fg" x="16" y="84">\ / / | | | |\n   | |_| |</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="234.4" y="84" width="8.4" height="14" fill="#c9d1d9"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.222283;0.224275;1" dur="5.52s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-111" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo -e &apos;    ____  __     __ ____  \n   |</text>
+<text class="text fg" x="16" y="70">  _ \\ \\ \\   / /|  _ \\ \n   | | | | \\ \</text>
+<text class="text fg" x="16" y="84">\ / / | | | |\n   | |_| |</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="242.8" y="84" width="8.4" height="14" fill="#c9d1d9"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.224275;0.226268;1" dur="5.52s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-112" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo -e &apos;    ____  __     __ ____  \n   |</text>
+<text class="text fg" x="16" y="70">  _ \\ \\ \\   / /|  _ \\ \n   | | | | \\ \</text>
+<text class="text fg" x="16" y="84">\ / / | | | |\n   | |_| |  \</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="251.2" y="84" width="8.4" height="14" fill="#c9d1d9"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.226268;0.228261;1" dur="5.52s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-113" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo -e &apos;    ____  __     __ ____  \n   |</text>
+<text class="text fg" x="16" y="70">  _ \\ \\ \\   / /|  _ \\ \n   | | | | \\ \</text>
+<text class="text fg" x="16" y="84">\ / / | | | |\n   | |_| |  \\</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="259.6" y="84" width="8.4" height="14" fill="#c9d1d9"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.228261;0.230254;1" dur="5.52s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-114" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo -e &apos;    ____  __     __ ____  \n   |</text>
+<text class="text fg" x="16" y="70">  _ \\ \\ \\   / /|  _ \\ \n   | | | | \\ \</text>
+<text class="text fg" x="16" y="84">\ / / | | | |\n   | |_| |  \\</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="268" y="84" width="8.4" height="14" fill="#c9d1d9"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.230254;0.232246;1" dur="5.52s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-115" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo -e &apos;    ____  __     __ ____  \n   |</text>
+<text class="text fg" x="16" y="70">  _ \\ \\ \\   / /|  _ \\ \n   | | | | \\ \</text>
+<text class="text fg" x="16" y="84">\ / / | | | |\n   | |_| |  \\ V</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="276.4" y="84" width="8.4" height="14" fill="#c9d1d9"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.232246;0.234239;1" dur="5.52s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-116" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo -e &apos;    ____  __     __ ____  \n   |</text>
+<text class="text fg" x="16" y="70">  _ \\ \\ \\   / /|  _ \\ \n   | | | | \\ \</text>
+<text class="text fg" x="16" y="84">\ / / | | | |\n   | |_| |  \\ V</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="284.8" y="84" width="8.4" height="14" fill="#c9d1d9"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.234239;0.236232;1" dur="5.52s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-117" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo -e &apos;    ____  __     __ ____  \n   |</text>
+<text class="text fg" x="16" y="70">  _ \\ \\ \\   / /|  _ \\ \n   | | | | \\ \</text>
+<text class="text fg" x="16" y="84">\ / / | | | |\n   | |_| |  \\ V /</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="293.2" y="84" width="8.4" height="14" fill="#c9d1d9"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.236232;0.238406;1" dur="5.52s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-118" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo -e &apos;    ____  __     __ ____  \n   |</text>
+<text class="text fg" x="16" y="70">  _ \\ \\ \\   / /|  _ \\ \n   | | | | \\ \</text>
+<text class="text fg" x="16" y="84">\ / / | | | |\n   | |_| |  \\ V /</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="301.6" y="84" width="8.4" height="14" fill="#c9d1d9"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.238406;0.24058;1" dur="5.52s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-119" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo -e &apos;    ____  __     __ ____  \n   |</text>
+<text class="text fg" x="16" y="70">  _ \\ \\ \\   / /|  _ \\ \n   | | | | \\ \</text>
+<text class="text fg" x="16" y="84">\ / / | | | |\n   | |_| |  \\ V /</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="310" y="84" width="8.4" height="14" fill="#c9d1d9"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.24058;0.242572;1" dur="5.52s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-120" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo -e &apos;    ____  __     __ ____  \n   |</text>
+<text class="text fg" x="16" y="70">  _ \\ \\ \\   / /|  _ \\ \n   | | | | \\ \</text>
+<text class="text fg" x="16" y="84">\ / / | | | |\n   | |_| |  \\ V /  |</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="318.4" y="84" width="8.4" height="14" fill="#c9d1d9"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.242572;0.244384;1" dur="5.52s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-121" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo -e &apos;    ____  __     __ ____  \n   |</text>
+<text class="text fg" x="16" y="70">  _ \\ \\ \\   / /|  _ \\ \n   | | | | \\ \</text>
+<text class="text fg" x="16" y="84">\ / / | | | |\n   | |_| |  \\ V /  |</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="326.8" y="84" width="8.4" height="14" fill="#c9d1d9"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.244384;0.246739;1" dur="5.52s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-122" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo -e &apos;    ____  __     __ ____  \n   |</text>
+<text class="text fg" x="16" y="70">  _ \\ \\ \\   / /|  _ \\ \n   | | | | \\ \</text>
+<text class="text fg" x="16" y="84">\ / / | | | |\n   | |_| |  \\ V /  | |</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="335.2" y="84" width="8.4" height="14" fill="#c9d1d9"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.246739;0.248551;1" dur="5.52s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-123" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo -e &apos;    ____  __     __ ____  \n   |</text>
+<text class="text fg" x="16" y="70">  _ \\ \\ \\   / /|  _ \\ \n   | | | | \\ \</text>
+<text class="text fg" x="16" y="84">\ / / | | | |\n   | |_| |  \\ V /  | |_</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="343.6" y="84" width="8.4" height="14" fill="#c9d1d9"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.248551;0.250543;1" dur="5.52s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-124" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo -e &apos;    ____  __     __ ____  \n   |</text>
+<text class="text fg" x="16" y="70">  _ \\ \\ \\   / /|  _ \\ \n   | | | | \\ \</text>
+<text class="text fg" x="16" y="84">\ / / | | | |\n   | |_| |  \\ V /  | |_|</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="352" y="84" width="8.4" height="14" fill="#c9d1d9"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.250543;0.252717;1" dur="5.52s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-125" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo -e &apos;    ____  __     __ ____  \n   |</text>
+<text class="text fg" x="16" y="70">  _ \\ \\ \\   / /|  _ \\ \n   | | | | \\ \</text>
+<text class="text fg" x="16" y="84">\ / / | | | |\n   | |_| |  \\ V /  | |_|</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="360.4" y="84" width="8.4" height="14" fill="#c9d1d9"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.252717;0.254529;1" dur="5.52s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-126" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo -e &apos;    ____  __     __ ____  \n   |</text>
+<text class="text fg" x="16" y="70">  _ \\ \\ \\   / /|  _ \\ \n   | | | | \\ \</text>
+<text class="text fg" x="16" y="84">\ / / | | | |\n   | |_| |  \\ V /  | |_| |</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="368.8" y="84" width="8.4" height="14" fill="#c9d1d9"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.254529;0.256703;1" dur="5.52s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-127" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo -e &apos;    ____  __     __ ____  \n   |</text>
+<text class="text fg" x="16" y="70">  _ \\ \\ \\   / /|  _ \\ \n   | | | | \\ \</text>
+<text class="text fg" x="16" y="84">\ / / | | | |\n   | |_| |  \\ V /  | |_| |\</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="368.8" y="84" width="8.4" height="14" fill="#c9d1d9"/>
+<text x="368.8" y="84" fill="#0d1117" font-family="'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace" font-size="14" dominant-baseline="text-before-edge">\</text>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.256703;0.258514;1" dur="5.52s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-128" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo -e &apos;    ____  __     __ ____  \n   |</text>
+<text class="text fg" x="16" y="70">  _ \\ \\ \\   / /|  _ \\ \n   | | | | \\ \</text>
+<text class="text fg" x="16" y="84">\ / / | | | |\n   | |_| |  \\ V /  | |_| |\</text>
+<text class="text fg" x="16" y="98">n</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="24.4" y="98" width="8.4" height="14" fill="#c9d1d9"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.258514;0.260507;1" dur="5.52s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-129" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo -e &apos;    ____  __     __ ____  \n   |</text>
+<text class="text fg" x="16" y="70">  _ \\ \\ \\   / /|  _ \\ \n   | | | | \\ \</text>
+<text class="text fg" x="16" y="84">\ / / | | | |\n   | |_| |  \\ V /  | |_| |\</text>
+<text class="text fg" x="16" y="98">n</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="32.8" y="98" width="8.4" height="14" fill="#c9d1d9"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.260507;0.262319;1" dur="5.52s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-130" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo -e &apos;    ____  __     __ ____  \n   |</text>
+<text class="text fg" x="16" y="70">  _ \\ \\ \\   / /|  _ \\ \n   | | | | \\ \</text>
+<text class="text fg" x="16" y="84">\ / / | | | |\n   | |_| |  \\ V /  | |_| |\</text>
+<text class="text fg" x="16" y="98">n</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="41.2" y="98" width="8.4" height="14" fill="#c9d1d9"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.262319;0.264493;1" dur="5.52s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-131" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo -e &apos;    ____  __     __ ____  \n   |</text>
+<text class="text fg" x="16" y="70">  _ \\ \\ \\   / /|  _ \\ \n   | | | | \\ \</text>
+<text class="text fg" x="16" y="84">\ / / | | | |\n   | |_| |  \\ V /  | |_| |\</text>
+<text class="text fg" x="16" y="98">n</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="49.6" y="98" width="8.4" height="14" fill="#c9d1d9"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.264493;0.266667;1" dur="5.52s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-132" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo -e &apos;    ____  __     __ ____  \n   |</text>
+<text class="text fg" x="16" y="70">  _ \\ \\ \\   / /|  _ \\ \n   | | | | \\ \</text>
+<text class="text fg" x="16" y="84">\ / / | | | |\n   | |_| |  \\ V /  | |_| |\</text>
+<text class="text fg" x="16" y="98">n   |</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="58" y="98" width="8.4" height="14" fill="#c9d1d9"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.266667;0.268659;1" dur="5.52s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-133" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo -e &apos;    ____  __     __ ____  \n   |</text>
+<text class="text fg" x="16" y="70">  _ \\ \\ \\   / /|  _ \\ \n   | | | | \\ \</text>
+<text class="text fg" x="16" y="84">\ / / | | | |\n   | |_| |  \\ V /  | |_| |\</text>
+<text class="text fg" x="16" y="98">n   |_</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="66.4" y="98" width="8.4" height="14" fill="#c9d1d9"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.268659;0.270652;1" dur="5.52s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-134" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo -e &apos;    ____  __     __ ____  \n   |</text>
+<text class="text fg" x="16" y="70">  _ \\ \\ \\   / /|  _ \\ \n   | | | | \\ \</text>
+<text class="text fg" x="16" y="84">\ / / | | | |\n   | |_| |  \\ V /  | |_| |\</text>
+<text class="text fg" x="16" y="98">n   |__</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="74.8" y="98" width="8.4" height="14" fill="#c9d1d9"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.270652;0.272464;1" dur="5.52s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-135" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo -e &apos;    ____  __     __ ____  \n   |</text>
+<text class="text fg" x="16" y="70">  _ \\ \\ \\   / /|  _ \\ \n   | | | | \\ \</text>
+<text class="text fg" x="16" y="84">\ / / | | | |\n   | |_| |  \\ V /  | |_| |\</text>
+<text class="text fg" x="16" y="98">n   |___</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="83.2" y="98" width="8.4" height="14" fill="#c9d1d9"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.272464;0.274275;1" dur="5.52s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-136" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo -e &apos;    ____  __     __ ____  \n   |</text>
+<text class="text fg" x="16" y="70">  _ \\ \\ \\   / /|  _ \\ \n   | | | | \\ \</text>
+<text class="text fg" x="16" y="84">\ / / | | | |\n   | |_| |  \\ V /  | |_| |\</text>
+<text class="text fg" x="16" y="98">n   |____</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="91.6" y="98" width="8.4" height="14" fill="#c9d1d9"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.274275;0.276449;1" dur="5.52s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-137" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo -e &apos;    ____  __     __ ____  \n   |</text>
+<text class="text fg" x="16" y="70">  _ \\ \\ \\   / /|  _ \\ \n   | | | | \\ \</text>
+<text class="text fg" x="16" y="84">\ / / | | | |\n   | |_| |  \\ V /  | |_| |\</text>
+<text class="text fg" x="16" y="98">n   |____/</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="100" y="98" width="8.4" height="14" fill="#c9d1d9"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.276449;0.278623;1" dur="5.52s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-138" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo -e &apos;    ____  __     __ ____  \n   |</text>
+<text class="text fg" x="16" y="70">  _ \\ \\ \\   / /|  _ \\ \n   | | | | \\ \</text>
+<text class="text fg" x="16" y="84">\ / / | | | |\n   | |_| |  \\ V /  | |_| |\</text>
+<text class="text fg" x="16" y="98">n   |____/</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="108.4" y="98" width="8.4" height="14" fill="#c9d1d9"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.278623;0.280616;1" dur="5.52s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-139" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo -e &apos;    ____  __     __ ____  \n   |</text>
+<text class="text fg" x="16" y="70">  _ \\ \\ \\   / /|  _ \\ \n   | | | | \\ \</text>
+<text class="text fg" x="16" y="84">\ / / | | | |\n   | |_| |  \\ V /  | |_| |\</text>
+<text class="text fg" x="16" y="98">n   |____/</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="116.8" y="98" width="8.4" height="14" fill="#c9d1d9"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.280616;0.282609;1" dur="5.52s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-140" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo -e &apos;    ____  __     __ ____  \n   |</text>
+<text class="text fg" x="16" y="70">  _ \\ \\ \\   / /|  _ \\ \n   | | | | \\ \</text>
+<text class="text fg" x="16" y="84">\ / / | | | |\n   | |_| |  \\ V /  | |_| |\</text>
+<text class="text fg" x="16" y="98">n   |____/</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="125.2" y="98" width="8.4" height="14" fill="#c9d1d9"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.282609;0.284601;1" dur="5.52s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-141" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo -e &apos;    ____  __     __ ____  \n   |</text>
+<text class="text fg" x="16" y="70">  _ \\ \\ \\   / /|  _ \\ \n   | | | | \\ \</text>
+<text class="text fg" x="16" y="84">\ / / | | | |\n   | |_| |  \\ V /  | |_| |\</text>
+<text class="text fg" x="16" y="98">n   |____/</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="133.6" y="98" width="8.4" height="14" fill="#c9d1d9"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.284601;0.286594;1" dur="5.52s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-142" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo -e &apos;    ____  __     __ ____  \n   |</text>
+<text class="text fg" x="16" y="70">  _ \\ \\ \\   / /|  _ \\ \n   | | | | \\ \</text>
+<text class="text fg" x="16" y="84">\ / / | | | |\n   | |_| |  \\ V /  | |_| |\</text>
+<text class="text fg" x="16" y="98">n   |____/    \</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="142" y="98" width="8.4" height="14" fill="#c9d1d9"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.286594;0.288406;1" dur="5.52s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-143" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo -e &apos;    ____  __     __ ____  \n   |</text>
+<text class="text fg" x="16" y="70">  _ \\ \\ \\   / /|  _ \\ \n   | | | | \\ \</text>
+<text class="text fg" x="16" y="84">\ / / | | | |\n   | |_| |  \\ V /  | |_| |\</text>
+<text class="text fg" x="16" y="98">n   |____/    \\</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="150.4" y="98" width="8.4" height="14" fill="#c9d1d9"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.288406;0.290399;1" dur="5.52s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-144" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo -e &apos;    ____  __     __ ____  \n   |</text>
+<text class="text fg" x="16" y="70">  _ \\ \\ \\   / /|  _ \\ \n   | | | | \\ \</text>
+<text class="text fg" x="16" y="84">\ / / | | | |\n   | |_| |  \\ V /  | |_| |\</text>
+<text class="text fg" x="16" y="98">n   |____/    \\_</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="158.8" y="98" width="8.4" height="14" fill="#c9d1d9"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.290399;0.292391;1" dur="5.52s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-145" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo -e &apos;    ____  __     __ ____  \n   |</text>
+<text class="text fg" x="16" y="70">  _ \\ \\ \\   / /|  _ \\ \n   | | | | \\ \</text>
+<text class="text fg" x="16" y="84">\ / / | | | |\n   | |_| |  \\ V /  | |_| |\</text>
+<text class="text fg" x="16" y="98">n   |____/    \\_/</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="167.2" y="98" width="8.4" height="14" fill="#c9d1d9"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.292391;0.294746;1" dur="5.52s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-146" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo -e &apos;    ____  __     __ ____  \n   |</text>
+<text class="text fg" x="16" y="70">  _ \\ \\ \\   / /|  _ \\ \n   | | | | \\ \</text>
+<text class="text fg" x="16" y="84">\ / / | | | |\n   | |_| |  \\ V /  | |_| |\</text>
+<text class="text fg" x="16" y="98">n   |____/    \\_/</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="175.6" y="98" width="8.4" height="14" fill="#c9d1d9"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.294746;0.296558;1" dur="5.52s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-147" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo -e &apos;    ____  __     __ ____  \n   |</text>
+<text class="text fg" x="16" y="70">  _ \\ \\ \\   / /|  _ \\ \n   | | | | \\ \</text>
+<text class="text fg" x="16" y="84">\ / / | | | |\n   | |_| |  \\ V /  | |_| |\</text>
+<text class="text fg" x="16" y="98">n   |____/    \\_/</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="184" y="98" width="8.4" height="14" fill="#c9d1d9"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.296558;0.298551;1" dur="5.52s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-148" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo -e &apos;    ____  __     __ ____  \n   |</text>
+<text class="text fg" x="16" y="70">  _ \\ \\ \\   / /|  _ \\ \n   | | | | \\ \</text>
+<text class="text fg" x="16" y="84">\ / / | | | |\n   | |_| |  \\ V /  | |_| |\</text>
+<text class="text fg" x="16" y="98">n   |____/    \\_/</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="192.4" y="98" width="8.4" height="14" fill="#c9d1d9"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.298551;0.300543;1" dur="5.52s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-149" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo -e &apos;    ____  __     __ ____  \n   |</text>
+<text class="text fg" x="16" y="70">  _ \\ \\ \\   / /|  _ \\ \n   | | | | \\ \</text>
+<text class="text fg" x="16" y="84">\ / / | | | |\n   | |_| |  \\ V /  | |_| |\</text>
+<text class="text fg" x="16" y="98">n   |____/    \\_/   |</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="200.8" y="98" width="8.4" height="14" fill="#c9d1d9"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.300543;0.302717;1" dur="5.52s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-150" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo -e &apos;    ____  __     __ ____  \n   |</text>
+<text class="text fg" x="16" y="70">  _ \\ \\ \\   / /|  _ \\ \n   | | | | \\ \</text>
+<text class="text fg" x="16" y="84">\ / / | | | |\n   | |_| |  \\ V /  | |_| |\</text>
+<text class="text fg" x="16" y="98">n   |____/    \\_/   |_</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="209.2" y="98" width="8.4" height="14" fill="#c9d1d9"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.302717;0.304529;1" dur="5.52s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-151" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo -e &apos;    ____  __     __ ____  \n   |</text>
+<text class="text fg" x="16" y="70">  _ \\ \\ \\   / /|  _ \\ \n   | | | | \\ \</text>
+<text class="text fg" x="16" y="84">\ / / | | | |\n   | |_| |  \\ V /  | |_| |\</text>
+<text class="text fg" x="16" y="98">n   |____/    \\_/   |__</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="217.6" y="98" width="8.4" height="14" fill="#c9d1d9"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.304529;0.306703;1" dur="5.52s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-152" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo -e &apos;    ____  __     __ ____  \n   |</text>
+<text class="text fg" x="16" y="70">  _ \\ \\ \\   / /|  _ \\ \n   | | | | \\ \</text>
+<text class="text fg" x="16" y="84">\ / / | | | |\n   | |_| |  \\ V /  | |_| |\</text>
+<text class="text fg" x="16" y="98">n   |____/    \\_/   |___</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="226" y="98" width="8.4" height="14" fill="#c9d1d9"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.306703;0.308696;1" dur="5.52s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-153" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo -e &apos;    ____  __     __ ____  \n   |</text>
+<text class="text fg" x="16" y="70">  _ \\ \\ \\   / /|  _ \\ \n   | | | | \\ \</text>
+<text class="text fg" x="16" y="84">\ / / | | | |\n   | |_| |  \\ V /  | |_| |\</text>
+<text class="text fg" x="16" y="98">n   |____/    \\_/   |____</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="234.4" y="98" width="8.4" height="14" fill="#c9d1d9"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.308696;0.31087;1" dur="5.52s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-154" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo -e &apos;    ____  __     __ ____  \n   |</text>
+<text class="text fg" x="16" y="70">  _ \\ \\ \\   / /|  _ \\ \n   | | | | \\ \</text>
+<text class="text fg" x="16" y="84">\ / / | | | |\n   | |_| |  \\ V /  | |_| |\</text>
+<text class="text fg" x="16" y="98">n   |____/    \\_/   |____/</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="242.8" y="98" width="8.4" height="14" fill="#c9d1d9"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.31087;0.312681;1" dur="5.52s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-155" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo -e &apos;    ____  __     __ ____  \n   |</text>
+<text class="text fg" x="16" y="70">  _ \\ \\ \\   / /|  _ \\ \n   | | | | \\ \</text>
+<text class="text fg" x="16" y="84">\ / / | | | |\n   | |_| |  \\ V /  | |_| |\</text>
+<text class="text fg" x="16" y="98">n   |____/    \\_/   |____/</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="251.2" y="98" width="8.4" height="14" fill="#c9d1d9"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.312681;0.314674;1" dur="5.52s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-156" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo -e &apos;    ____  __     __ ____  \n   |</text>
+<text class="text fg" x="16" y="70">  _ \\ \\ \\   / /|  _ \\ \n   | | | | \\ \</text>
+<text class="text fg" x="16" y="84">\ / / | | | |\n   | |_| |  \\ V /  | |_| |\</text>
+<text class="text fg" x="16" y="98">n   |____/    \\_/   |____/ &apos;</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor-active" x="259.6" y="98" width="8.4" height="14" fill="#c9d1d9"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.314674;0.314855;1" dur="5.52s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-157" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo -e &apos;    ____  __     __ ____  \n   |</text>
+<text class="text fg" x="16" y="70">  _ \\ \\ \\   / /|  _ \\ \n   | | | | \\ \</text>
+<text class="text fg" x="16" y="84">\ / / | | | |\n   | |_| |  \\ V /  | |_| |\</text>
+<text class="text fg" x="16" y="98">n   |____/    \\_/   |____/ &apos;</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor" x="259.6" y="98" width="8.4" height="14" fill="#c9d1d9"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.314855;0.428804;1" dur="5.52s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-158" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo -e &apos;    ____  __     __ ____  \n   |</text>
+<text class="text fg" x="16" y="70">  _ \\ \\ \\   / /|  _ \\ \n   | | | | \\ \</text>
+<text class="text fg" x="16" y="84">\ / / | | | |\n   | |_| |  \\ V /  | |_| |\</text>
+<text class="text fg" x="16" y="98">n   |____/    \\_/   |____/ &apos;</text>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.428804;0.430616;1" dur="5.52s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-159" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo -e &apos;    ____  __     __ ____  \n   |</text>
+<text class="text fg" x="16" y="70">  _ \\ \\ \\   / /|  _ \\ \n   | | | | \\ \</text>
+<text class="text fg" x="16" y="84">\ / / | | | |\n   | |_| |  \\ V /  | |_| |\</text>
+<text class="text fg" x="16" y="98">n   |____/    \\_/   |____/ &apos;</text>
+<text class="text fg" x="16" y="112">    ____  __     __ ____</text>
+<text class="text fg" x="16" y="126">   |  _ \ \ \   / /|  _ \</text>
+<text class="text fg" x="16" y="140">   | | | | \ \ / / | | | |</text>
+<text class="text fg" x="16" y="154">   | |_| |  \ V /  | |_| |</text>
+<text class="text fg" x="16" y="168">   |____/    \_/   |____/</text>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.430616;0.452899;1" dur="5.52s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-160" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo -e &apos;    ____  __     __ ____  \n   |</text>
+<text class="text fg" x="16" y="70">  _ \\ \\ \\   / /|  _ \\ \n   | | | | \\ \</text>
+<text class="text fg" x="16" y="84">\ / / | | | |\n   | |_| |  \\ V /  | |_| |\</text>
+<text class="text fg" x="16" y="98">n   |____/    \\_/   |____/ &apos;</text>
+<text class="text fg" x="16" y="112">    ____  __     __ ____</text>
+<text class="text fg" x="16" y="126">   |  _ \ \ \   / /|  _ \</text>
+<text class="text fg" x="16" y="140">   | | | | \ \ / / | | | |</text>
+<text class="text fg" x="16" y="154">   | |_| |  \ V /  | |_| |</text>
+<text class="text fg" x="16" y="168">   |____/    \_/   |____/</text>
+<text class="text f13" x="16" y="182">❯</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor" x="32.8" y="182" width="8.4" height="14" fill="#c9d1d9"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;hidden;hidden" keyTimes="0;0.452899;0.818841;1" dur="5.52s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <g id="frame-161" visibility="hidden">
+    <g class="text-layer">
+<text class="text f13" x="16" y="56">❯</text>
+<text class="text fg" x="24" y="56"> echo -e &apos;    ____  __     __ ____  \n   |</text>
+<text class="text fg" x="16" y="70">  _ \\ \\ \\   / /|  _ \\ \n   | | | | \\ \</text>
+<text class="text fg" x="16" y="84">\ / / | | | |\n   | |_| |  \\ V /  | |_| |\</text>
+<text class="text fg" x="16" y="98">n   |____/    \\_/   |____/ &apos;</text>
+<text class="text fg" x="16" y="112">    ____  __     __ ____</text>
+<text class="text fg" x="16" y="126">   |  _ \ \ \   / /|  _ \</text>
+<text class="text fg" x="16" y="140">   | | | | \ \ / / | | | |</text>
+<text class="text fg" x="16" y="154">   | |_| |  \ V /  | |_| |</text>
+<text class="text fg" x="16" y="168">   |____/    \_/   |____/</text>
+<text class="text f13" x="16" y="182">❯</text>
+</g>
+<g class="cursor-layer">
+<rect class="cursor" x="32.8" y="182" width="8.4" height="14" fill="#c9d1d9"/>
+</g>
+    <animate attributeName="visibility" values="hidden;visible;visible" keyTimes="0;0.818841;1" dur="5.52s" repeatCount="indefinite" calcMode="discrete" fill="freeze"/>
+  </g>
+
+  <!-- Static footer -->
+  
+  
+  </g>
+</svg>

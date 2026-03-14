@@ -1,0 +1,18 @@
+# Lolcat Rainbow Test
+# Tests rainbow gradient colors with lolcat
+Output examples/svgs/animated/rainbow-lolcat.svg
+
+Set Theme github-dark
+Set Template macos
+Set Title "Rainbow Colors"
+Set FontSize 14
+
+Type "echo 'DVD renders beautiful terminal animations!' | lolcat -fa"
+Sleep 500ms
+Enter
+Sleep 1.5s
+
+Type "echo -e 'Line 1\\nLine 2\\nLine 3\\nLine 4\\nLine 5' | lolcat -f"
+Sleep 500ms
+Enter
+Sleep 2s
