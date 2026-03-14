@@ -24,7 +24,7 @@
 ---
 
 <p align="center">
-  <img src="examples/svgs/demo.svg" width="600">
+  <img src="examples/svgs/everyday/demo.svg" width="600">
 </p>
 
 DVD generates animated SVG terminal recordings from declarative `.cd` scripts. Write what you want to happen, run `dvd`, and get a beautiful, infinitely scalable animation.
@@ -134,7 +134,7 @@ Type "neofetch"
 Enter
 ```
 
-<img src="examples/svgs/neofetch.svg" width="600">
+<img src="examples/svgs/everyday/neofetch.svg" width="600">
 
 ### Sleep
 
@@ -155,7 +155,7 @@ Backspace 4
 Type "orld!"
 ```
 
-<img src="examples/svgs/backspace.svg" width="600">
+<img src="examples/svgs/navigation/backspace.svg" width="600">
 
 ### Arrow Keys
 
@@ -184,7 +184,7 @@ Cmd+Right            # Move to line end
 Cmd+Backspace        # Delete word
 ```
 
-<img src="examples/svgs/keyboard-navigation-demo.svg" width="600">
+<img src="examples/svgs/navigation/keyboard-navigation-demo.svg" width="600">
 
 ### Screenshot
 
@@ -301,8 +301,8 @@ Set Template minimal   # No window decorations
 <td><strong>Windows</strong></td>
 </tr>
 <tr>
-<td><img src="examples/svgs/macos-style.svg" width="400"></td>
-<td><img src="examples/svgs/windows-style.svg" width="400"></td>
+<td><img src="examples/svgs/templates/macos-style.svg" width="400"></td>
+<td><img src="examples/svgs/templates/windows-style.svg" width="400"></td>
 </tr>
 </table>
 
@@ -333,7 +333,7 @@ Set LineHeight 1.4
 Set EmbedFont path/to/font.woff2
 ```
 
-<img src="examples/svgs/embed-font-test.svg" width="600">
+<img src="examples/svgs/fonts/embed-font-test.svg" width="600">
 
 ### Cursor
 
@@ -343,7 +343,7 @@ Set CursorColor #ffffff
 Set CursorBlink true
 ```
 
-<img src="examples/svgs/cursor-style-test.svg" width="600">
+<img src="examples/svgs/cursor/cursor-style-test.svg" width="600">
 
 ### Typing Speed
 
@@ -363,7 +363,7 @@ Set PromptPrefix "❯ "
 Set PromptPrefix "\x1b[95m❯\x1b[0m "    # Colored prompt
 ```
 
-<img src="examples/svgs/custom-prompt.svg" width="600">
+<img src="examples/svgs/prompt/custom-prompt.svg" width="600">
 
 ### Border
 
@@ -373,7 +373,7 @@ Set BorderWidth 2
 Set BorderColor #ff0000
 ```
 
-<img src="examples/svgs/border-test.svg" width="600">
+<img src="examples/svgs/templates/border-test.svg" width="600">
 
 ### Padding
 
@@ -395,7 +395,7 @@ Set FooterBackground #333333
 Set FooterBorder true
 ```
 
-<img src="examples/svgs/header-footer-test.svg" width="600">
+<img src="examples/svgs/templates/header-footer-test.svg" width="600">
 
 ### Watermark
 
@@ -443,7 +443,7 @@ Animation plays forward, then backward at the same speed.
 Set LoopStyle reverse
 ```
 
-<img src="examples/svgs/loop-style-reverse-pause.svg" width="600">
+<img src="examples/svgs/loop-style/loop-style-reverse-pause.svg" width="600">
 
 ### Rewind
 
@@ -454,7 +454,7 @@ Set LoopStyle rewind
 Set RewindSpeed 10       # Speed multiplier (default: 5)
 ```
 
-<img src="examples/svgs/loop-style-rewind.svg" width="600">
+<img src="examples/svgs/loop-style/loop-style-rewind.svg" width="600">
 
 ### Fade
 
@@ -465,7 +465,7 @@ Set LoopStyle fade
 Set FadeDuration 1500    # Fade duration in ms (default: 1500)
 ```
 
-<img src="examples/svgs/loop-style-fade.svg" width="600">
+<img src="examples/svgs/loop-style/loop-style-fade.svg" width="600">
 
 ### Loop Pause
 
@@ -553,51 +553,51 @@ dvd validate script.cd                 # Validate without rendering
 
 ### Hello World
 
-<img src="examples/svgs/demo.svg" width="600">
+<img src="examples/svgs/everyday/demo.svg" width="600">
 
 ### ANSI Colors
 
 Full 256-color and truecolor support.
 
-<img src="examples/svgs/ansi-colors.svg" width="600">
+<img src="examples/svgs/ansi/ansi-colors.svg" width="600">
 
 ### ASCII Art with Figlet
 
-<img src="examples/svgs/figlet.svg" width="600">
+<img src="examples/svgs/ascii/figlet.svg" width="600">
 
 ### Charts with Chartscii
 
-<img src="examples/svgs/chartscii.svg" width="600">
+<img src="examples/svgs/everyday/chartscii.svg" width="600">
 
 ### Rainbow Animation
 
 Animated command output is captured frame-by-frame.
 
-<img src="examples/svgs/rainbow-lolcat.svg" width="600">
+<img src="examples/svgs/animated/rainbow-lolcat.svg" width="600">
 
 ### Git Log
 
-<img src="examples/svgs/git-log.svg" width="600">
+<img src="examples/svgs/everyday/git-log.svg" width="600">
 
 ### System Info
 
-<img src="examples/svgs/neofetch-theme-cursor.svg" width="600">
+<img src="examples/svgs/cursor/neofetch-theme-cursor.svg" width="600">
 
 ### Text Selection
 
-<img src="examples/svgs/selection-test.svg" width="600">
+<img src="examples/svgs/selection/selection-test.svg" width="600">
 
 ### Word Navigation
 
-<img src="examples/svgs/word-navigation-test.svg" width="600">
+<img src="examples/svgs/navigation/word-navigation-test.svg" width="600">
 
 ### Color Tables
 
-<img src="examples/svgs/colors-table.svg" width="600">
+<img src="examples/svgs/ansi/colors-table.svg" width="600">
 
 ### Directory Listing
 
-<img src="examples/svgs/ls-colors.svg" width="600">
+<img src="examples/svgs/everyday/ls-colors.svg" width="600">
 
 See the [examples/](examples/) directory for all scripts and outputs.
 
