@@ -215,9 +215,75 @@ Output path/to/output.svg
 Set Theme dracula
 ```
 
-**Available themes (37):** `a11yDark`, `base16Dark`, `base16Light`, `blackboard`, `catppuccinMocha`, `cobalt`, `dark`, `dracula`, `draculaPro`, `duotoneDark`, `githubDark`, `githubLight`, `gruvboxDark`, `gruvboxLight`, `hopscotch`, `lucario`, `material`, `monokai`, `night3024`, `nord`, `oceanicNext`, `oneDark`, `oneLight`, `pandaSyntax`, `paraisoDark`, `seti`, `shadesOfPurple`, `solarizedDark`, `solarizedLight`, `synthwave84`, `terminal`, `tokyoNight`, `twilight`, `verminal`, `vscode`, `yeti`, `zenburn`
+**Available themes (37):**
 
-<img src="examples/svgs/nord-theme.svg" width="600">
+<table>
+<tr>
+<td align="center"><strong>a11yDark</strong><br><img src="examples/svgs/themes/a11yDark.svg" width="280"></td>
+<td align="center"><strong>base16Dark</strong><br><img src="examples/svgs/themes/base16Dark.svg" width="280"></td>
+<td align="center"><strong>base16Light</strong><br><img src="examples/svgs/themes/base16Light.svg" width="280"></td>
+</tr>
+<tr>
+<td align="center"><strong>blackboard</strong><br><img src="examples/svgs/themes/blackboard.svg" width="280"></td>
+<td align="center"><strong>catppuccinMocha</strong><br><img src="examples/svgs/themes/catppuccinMocha.svg" width="280"></td>
+<td align="center"><strong>cobalt</strong><br><img src="examples/svgs/themes/cobalt.svg" width="280"></td>
+</tr>
+<tr>
+<td align="center"><strong>dark</strong><br><img src="examples/svgs/themes/dark.svg" width="280"></td>
+<td align="center"><strong>dracula</strong><br><img src="examples/svgs/themes/dracula.svg" width="280"></td>
+<td align="center"><strong>draculaPro</strong><br><img src="examples/svgs/themes/draculaPro.svg" width="280"></td>
+</tr>
+<tr>
+<td align="center"><strong>duotoneDark</strong><br><img src="examples/svgs/themes/duotoneDark.svg" width="280"></td>
+<td align="center"><strong>githubDark</strong><br><img src="examples/svgs/themes/githubDark.svg" width="280"></td>
+<td align="center"><strong>githubLight</strong><br><img src="examples/svgs/themes/githubLight.svg" width="280"></td>
+</tr>
+<tr>
+<td align="center"><strong>gruvboxDark</strong><br><img src="examples/svgs/themes/gruvboxDark.svg" width="280"></td>
+<td align="center"><strong>gruvboxLight</strong><br><img src="examples/svgs/themes/gruvboxLight.svg" width="280"></td>
+<td align="center"><strong>hopscotch</strong><br><img src="examples/svgs/themes/hopscotch.svg" width="280"></td>
+</tr>
+<tr>
+<td align="center"><strong>lucario</strong><br><img src="examples/svgs/themes/lucario.svg" width="280"></td>
+<td align="center"><strong>material</strong><br><img src="examples/svgs/themes/material.svg" width="280"></td>
+<td align="center"><strong>monokai</strong><br><img src="examples/svgs/themes/monokai.svg" width="280"></td>
+</tr>
+<tr>
+<td align="center"><strong>night3024</strong><br><img src="examples/svgs/themes/night3024.svg" width="280"></td>
+<td align="center"><strong>nord</strong><br><img src="examples/svgs/themes/nord.svg" width="280"></td>
+<td align="center"><strong>oceanicNext</strong><br><img src="examples/svgs/themes/oceanicNext.svg" width="280"></td>
+</tr>
+<tr>
+<td align="center"><strong>oneDark</strong><br><img src="examples/svgs/themes/oneDark.svg" width="280"></td>
+<td align="center"><strong>oneLight</strong><br><img src="examples/svgs/themes/oneLight.svg" width="280"></td>
+<td align="center"><strong>pandaSyntax</strong><br><img src="examples/svgs/themes/pandaSyntax.svg" width="280"></td>
+</tr>
+<tr>
+<td align="center"><strong>paraisoDark</strong><br><img src="examples/svgs/themes/paraisoDark.svg" width="280"></td>
+<td align="center"><strong>seti</strong><br><img src="examples/svgs/themes/seti.svg" width="280"></td>
+<td align="center"><strong>shadesOfPurple</strong><br><img src="examples/svgs/themes/shadesOfPurple.svg" width="280"></td>
+</tr>
+<tr>
+<td align="center"><strong>solarizedDark</strong><br><img src="examples/svgs/themes/solarizedDark.svg" width="280"></td>
+<td align="center"><strong>solarizedLight</strong><br><img src="examples/svgs/themes/solarizedLight.svg" width="280"></td>
+<td align="center"><strong>synthwave84</strong><br><img src="examples/svgs/themes/synthwave84.svg" width="280"></td>
+</tr>
+<tr>
+<td align="center"><strong>terminal</strong><br><img src="examples/svgs/themes/terminal.svg" width="280"></td>
+<td align="center"><strong>tokyoNight</strong><br><img src="examples/svgs/themes/tokyoNight.svg" width="280"></td>
+<td align="center"><strong>twilight</strong><br><img src="examples/svgs/themes/twilight.svg" width="280"></td>
+</tr>
+<tr>
+<td align="center"><strong>verminal</strong><br><img src="examples/svgs/themes/verminal.svg" width="280"></td>
+<td align="center"><strong>vscode</strong><br><img src="examples/svgs/themes/vscode.svg" width="280"></td>
+<td align="center"><strong>yeti</strong><br><img src="examples/svgs/themes/yeti.svg" width="280"></td>
+</tr>
+<tr>
+<td align="center"><strong>zenburn</strong><br><img src="examples/svgs/themes/zenburn.svg" width="280"></td>
+<td></td>
+<td></td>
+</tr>
+</table>
 
 ### Template
 
