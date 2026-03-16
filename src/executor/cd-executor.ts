@@ -79,6 +79,8 @@ export class CDExecutor {
         break;
 
       case 'Sleep':
+        // Capture frame at start of sleep with inactive cursor (allows blinking)
+        captureFrame(this.context, this.options, true, false);
         await sleep(command.duration);
         captureFrame(this.context, this.options, true, false);
         break;

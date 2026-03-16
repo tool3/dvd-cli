@@ -275,31 +275,58 @@ const generateFrameContent = (
 
   if (cursor && cursorVisible) {
     const cursorX = r(padding + cursor.col * charWidth);
-    const rowY = r(contentStartY + cursor.row * lineHeight);
-    // Cursor height matches fontSize, vertically centered in the line
-    const cursorHeight = r(fontSize);
-    const cursorYOffset = (lineHeight - fontSize) / 2;
-    const cursorY = r(rowY + cursorYOffset);
+    const cursorY = r(contentStartY + cursor.row * lineHeight);
+    // Cursor height matches lineHeight to align with text selection
+    const cursorHeight = r(lineHeight);
     const cursorColor = config.cursorColor ?? theme.cursor ?? theme.foreground;
     const cursorStyle = config.cursorStyle ?? 'block';
     const cursorClass = activeCursor ? 'cursor-active' : 'cursor';
 
     if (cursorStyle === 'block') {
+      // Find character under cursor for block cursor inversion
+      let charUnderCursor: string | undefined;
+      const cursorRow = rows[cursor.row];
+      if (cursorRow) {
+        for (const span of cursorRow) {
+          const spanEnd = span.col + span.text.length;
+          if (cursor.col >= span.col && cursor.col < spanEnd) {
+            charUnderCursor = span.text[cursor.col - span.col];
+            break;
+          }
+        }
+      }
+
+      // Wrap cursor rect and inverted character in a group so they blink together
+      parts.push(`<g class="${cursorClass}">`);
       parts.push(
-        `<rect class="${cursorClass}" x="${fmt(cursorX)}" y="${fmt(cursorY)}" ` +
+        `<rect x="${fmt(cursorX)}" y="${fmt(cursorY)}" ` +
           `width="${fmt(charWidth)}" height="${fmt(cursorHeight)}" fill="${cursorColor}"/>`
       );
+      // Render inverted character on top of block cursor
+      if (charUnderCursor && charUnderCursor.trim()) {
+        const defaultFonts = "'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace";
+        const font = config.fontFamily ? `'${config.fontFamily}', monospace` : defaultFonts;
+        parts.push(
+          `<text x="${fmt(cursorX)}" y="${fmt(cursorY)}" fill="${theme.background}" ` +
+            `font-family="${font}" font-size="${fontSize}" dominant-baseline="text-before-edge">${escapeXml(charUnderCursor)}</text>`
+        );
+      }
+      parts.push('</g>');
     } else if (cursorStyle === 'bar') {
+      parts.push(`<g class="${cursorClass}">`);
       parts.push(
-        `<rect class="${cursorClass}" x="${fmt(cursorX)}" y="${fmt(cursorY)}" ` +
+        `<rect x="${fmt(cursorX)}" y="${fmt(cursorY)}" ` +
           `width="2" height="${fmt(cursorHeight)}" fill="${cursorColor}"/>`
       );
+      parts.push('</g>');
     } else if (cursorStyle === 'underline') {
       const underlineY = r(cursorY + cursorHeight - 2);
+      parts.push(`<g class="${cursorClass}">`);
       parts.push(
-        `<rect class="${cursorClass}" x="${fmt(cursorX)}" y="${fmt(underlineY)}" ` +
+        `<rect x="${fmt(cursorX)}" y="${fmt(underlineY)}" ` +
           `width="${fmt(charWidth)}" height="2" fill="${cursorColor}"/>`
       );
+      parts.push('</g>');
     }
   }
 

@@ -3,10 +3,12 @@ Output demo.svg
 
 Set FontSize 46
 Set EmbedFont examples/CDs/fonts/menlo-regular-webfont.woff2
-Set PromptPrefix "\x1b[36m➜\x1b[0m "
+Set PromptPrefix "\x1b[36m>\x1b[0m "
+# Set LineHeight 1
 
 # Type a command in the terminal.
 Type "aaaaAAAAA"
+Left 5
 
 # Pause for dramatic effect...
 Sleep 5s
