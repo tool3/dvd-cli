@@ -187,7 +187,9 @@ const renderBoxDrawing = (codePoint: number, ctx: GlyphContext): GlyphResult => 
       );
     } else {
       const w = getWidth(segments.up);
-      paths.push(`<line x1="${centerX}" y1="${y}" x2="${centerX}" y2="${centerY}" stroke="${color}" stroke-width="${w}"/>`);
+      // If there are double horizontal lines, stop the single vertical at the inner edge
+      const endY = (hasDoubleLeft || hasDoubleRight) ? centerY - doubleOffset : centerY;
+      paths.push(`<line x1="${centerX}" y1="${y}" x2="${centerX}" y2="${endY}" stroke="${color}" stroke-width="${w}"/>`);
     }
   }
 
@@ -199,7 +201,9 @@ const renderBoxDrawing = (codePoint: number, ctx: GlyphContext): GlyphResult => 
       );
     } else {
       const w = getWidth(segments.down);
-      paths.push(`<line x1="${centerX}" y1="${centerY}" x2="${centerX}" y2="${y + cellHeight}" stroke="${color}" stroke-width="${w}"/>`);
+      // If there are double horizontal lines, start the single vertical from the inner edge
+      const startY = (hasDoubleLeft || hasDoubleRight) ? centerY + doubleOffset : centerY;
+      paths.push(`<line x1="${centerX}" y1="${startY}" x2="${centerX}" y2="${y + cellHeight}" stroke="${color}" stroke-width="${w}"/>`);
     }
   }
 
@@ -211,7 +215,9 @@ const renderBoxDrawing = (codePoint: number, ctx: GlyphContext): GlyphResult => 
       );
     } else {
       const w = getWidth(segments.left);
-      paths.push(`<line x1="${x}" y1="${centerY}" x2="${centerX}" y2="${centerY}" stroke="${color}" stroke-width="${w}"/>`);
+      // If there are double vertical lines, stop the single horizontal at the inner edge
+      const endX = (hasDoubleUp || hasDoubleDown) ? centerX - doubleOffset : centerX;
+      paths.push(`<line x1="${x}" y1="${centerY}" x2="${endX}" y2="${centerY}" stroke="${color}" stroke-width="${w}"/>`);
     }
   }
 
@@ -223,15 +229,22 @@ const renderBoxDrawing = (codePoint: number, ctx: GlyphContext): GlyphResult => 
       );
     } else {
       const w = getWidth(segments.right);
-      paths.push(`<line x1="${centerX}" y1="${centerY}" x2="${x + cellWidth}" y2="${centerY}" stroke="${color}" stroke-width="${w}"/>`);
+      // If there are double vertical lines, start the single horizontal from the inner edge
+      const startX = (hasDoubleUp || hasDoubleDown) ? centerX + doubleOffset : centerX;
+      paths.push(`<line x1="${startX}" y1="${centerY}" x2="${x + cellWidth}" y2="${centerY}" stroke="${color}" stroke-width="${w}"/>`);
     }
   }
 
-  return { svg: paths.join(''), handled: true };
+  // Wrap in group with crispEdges for pixel-perfect rendering
+  return { svg: `<g shape-rendering="crispEdges">${paths.join('')}</g>`, handled: true };
 };
 
 const renderDoubleLineCorner = (segments: BoxSegments, ctx: GlyphContext, doubleOffset: number): GlyphResult => {
   const { cellWidth, cellHeight, x, y, color, lineWidth } = ctx;
+  const rx = x;
+  const ry = y;
+  const rBottom = y + cellHeight;
+  const rRight = x + cellWidth;
   const centerX = x + cellWidth / 2;
   const centerY = y + cellHeight / 2;
   const paths: string[] = [];
@@ -246,45 +259,109 @@ const renderDoubleLineCorner = (segments: BoxSegments, ctx: GlyphContext, double
   const outerTop = centerY - doubleOffset;
   const outerBottom = centerY + doubleOffset;
 
-  if (hasUp && hasDown && hasLeft && hasRight) {
+  // Corner cases - use path elements for proper L-shaped corners
+  if (hasUp && hasRight && !hasDown && !hasLeft) {
+    // ╚ - bottom-left corner
     paths.push(
-      `<line x1="${outerLeft}" y1="${y}" x2="${outerLeft}" y2="${outerTop}" stroke="${color}" stroke-width="${lineWidth}"/>`,
-      `<line x1="${outerLeft}" y1="${outerBottom}" x2="${outerLeft}" y2="${y + cellHeight}" stroke="${color}" stroke-width="${lineWidth}"/>`,
-      `<line x1="${outerRight}" y1="${y}" x2="${outerRight}" y2="${outerTop}" stroke="${color}" stroke-width="${lineWidth}"/>`,
-      `<line x1="${outerRight}" y1="${outerBottom}" x2="${outerRight}" y2="${y + cellHeight}" stroke="${color}" stroke-width="${lineWidth}"/>`,
-      `<line x1="${x}" y1="${outerTop}" x2="${outerLeft}" y2="${outerTop}" stroke="${color}" stroke-width="${lineWidth}"/>`,
-      `<line x1="${outerRight}" y1="${outerTop}" x2="${x + cellWidth}" y2="${outerTop}" stroke="${color}" stroke-width="${lineWidth}"/>`,
-      `<line x1="${x}" y1="${outerBottom}" x2="${outerLeft}" y2="${outerBottom}" stroke="${color}" stroke-width="${lineWidth}"/>`,
-      `<line x1="${outerRight}" y1="${outerBottom}" x2="${x + cellWidth}" y2="${outerBottom}" stroke="${color}" stroke-width="${lineWidth}"/>`
+      `<path d="M ${outerLeft} ${ry} L ${outerLeft} ${outerBottom} L ${rRight} ${outerBottom}" fill="none" stroke="${color}" stroke-width="${lineWidth}"/>`,
+      `<path d="M ${outerRight} ${ry} L ${outerRight} ${outerTop} L ${rRight} ${outerTop}" fill="none" stroke="${color}" stroke-width="${lineWidth}"/>`
+    );
+  } else if (hasDown && hasRight && !hasUp && !hasLeft) {
+    // ╔ - top-left corner
+    paths.push(
+      `<path d="M ${outerLeft} ${rBottom} L ${outerLeft} ${outerTop} L ${rRight} ${outerTop}" fill="none" stroke="${color}" stroke-width="${lineWidth}"/>`,
+      `<path d="M ${outerRight} ${rBottom} L ${outerRight} ${outerBottom} L ${rRight} ${outerBottom}" fill="none" stroke="${color}" stroke-width="${lineWidth}"/>`
+    );
+  } else if (hasDown && hasLeft && !hasUp && !hasRight) {
+    // ╗ - top-right corner
+    paths.push(
+      `<path d="M ${outerRight} ${rBottom} L ${outerRight} ${outerTop} L ${rx} ${outerTop}" fill="none" stroke="${color}" stroke-width="${lineWidth}"/>`,
+      `<path d="M ${outerLeft} ${rBottom} L ${outerLeft} ${outerBottom} L ${rx} ${outerBottom}" fill="none" stroke="${color}" stroke-width="${lineWidth}"/>`
+    );
+  } else if (hasUp && hasLeft && !hasDown && !hasRight) {
+    // ╝ - bottom-right corner
+    paths.push(
+      `<path d="M ${outerRight} ${ry} L ${outerRight} ${outerBottom} L ${rx} ${outerBottom}" fill="none" stroke="${color}" stroke-width="${lineWidth}"/>`,
+      `<path d="M ${outerLeft} ${ry} L ${outerLeft} ${outerTop} L ${rx} ${outerTop}" fill="none" stroke="${color}" stroke-width="${lineWidth}"/>`
+    );
+  } else if (hasUp && hasDown && hasRight && !hasLeft) {
+    // ╠ - left T-junction
+    paths.push(
+      `<line x1="${outerLeft}" y1="${ry}" x2="${outerLeft}" y2="${rBottom}" stroke="${color}" stroke-width="${lineWidth}"/>`,
+      `<line x1="${outerRight}" y1="${ry}" x2="${outerRight}" y2="${outerTop}" stroke="${color}" stroke-width="${lineWidth}"/>`,
+      `<line x1="${outerRight}" y1="${outerBottom}" x2="${outerRight}" y2="${rBottom}" stroke="${color}" stroke-width="${lineWidth}"/>`,
+      `<line x1="${outerRight}" y1="${outerTop}" x2="${rRight}" y2="${outerTop}" stroke="${color}" stroke-width="${lineWidth}"/>`,
+      `<line x1="${outerRight}" y1="${outerBottom}" x2="${rRight}" y2="${outerBottom}" stroke="${color}" stroke-width="${lineWidth}"/>`
+    );
+  } else if (hasUp && hasDown && hasLeft && !hasRight) {
+    // ╣ - right T-junction
+    paths.push(
+      `<line x1="${outerRight}" y1="${ry}" x2="${outerRight}" y2="${rBottom}" stroke="${color}" stroke-width="${lineWidth}"/>`,
+      `<line x1="${outerLeft}" y1="${ry}" x2="${outerLeft}" y2="${outerTop}" stroke="${color}" stroke-width="${lineWidth}"/>`,
+      `<line x1="${outerLeft}" y1="${outerBottom}" x2="${outerLeft}" y2="${rBottom}" stroke="${color}" stroke-width="${lineWidth}"/>`,
+      `<line x1="${rx}" y1="${outerTop}" x2="${outerLeft}" y2="${outerTop}" stroke="${color}" stroke-width="${lineWidth}"/>`,
+      `<line x1="${rx}" y1="${outerBottom}" x2="${outerLeft}" y2="${outerBottom}" stroke="${color}" stroke-width="${lineWidth}"/>`
+    );
+  } else if (hasDown && hasLeft && hasRight && !hasUp) {
+    // ╦ - top T-junction
+    paths.push(
+      `<line x1="${rx}" y1="${outerTop}" x2="${rRight}" y2="${outerTop}" stroke="${color}" stroke-width="${lineWidth}"/>`,
+      `<line x1="${rx}" y1="${outerBottom}" x2="${outerLeft}" y2="${outerBottom}" stroke="${color}" stroke-width="${lineWidth}"/>`,
+      `<line x1="${outerRight}" y1="${outerBottom}" x2="${rRight}" y2="${outerBottom}" stroke="${color}" stroke-width="${lineWidth}"/>`,
+      `<line x1="${outerLeft}" y1="${outerBottom}" x2="${outerLeft}" y2="${rBottom}" stroke="${color}" stroke-width="${lineWidth}"/>`,
+      `<line x1="${outerRight}" y1="${outerBottom}" x2="${outerRight}" y2="${rBottom}" stroke="${color}" stroke-width="${lineWidth}"/>`
+    );
+  } else if (hasUp && hasLeft && hasRight && !hasDown) {
+    // ╩ - bottom T-junction
+    paths.push(
+      `<line x1="${rx}" y1="${outerBottom}" x2="${rRight}" y2="${outerBottom}" stroke="${color}" stroke-width="${lineWidth}"/>`,
+      `<line x1="${rx}" y1="${outerTop}" x2="${outerLeft}" y2="${outerTop}" stroke="${color}" stroke-width="${lineWidth}"/>`,
+      `<line x1="${outerRight}" y1="${outerTop}" x2="${rRight}" y2="${outerTop}" stroke="${color}" stroke-width="${lineWidth}"/>`,
+      `<line x1="${outerLeft}" y1="${ry}" x2="${outerLeft}" y2="${outerTop}" stroke="${color}" stroke-width="${lineWidth}"/>`,
+      `<line x1="${outerRight}" y1="${ry}" x2="${outerRight}" y2="${outerTop}" stroke="${color}" stroke-width="${lineWidth}"/>`
+    );
+  } else if (hasUp && hasDown && hasLeft && hasRight) {
+    // ╬ - cross
+    paths.push(
+      `<line x1="${outerLeft}" y1="${ry}" x2="${outerLeft}" y2="${outerTop}" stroke="${color}" stroke-width="${lineWidth}"/>`,
+      `<line x1="${outerLeft}" y1="${outerBottom}" x2="${outerLeft}" y2="${rBottom}" stroke="${color}" stroke-width="${lineWidth}"/>`,
+      `<line x1="${outerRight}" y1="${ry}" x2="${outerRight}" y2="${outerTop}" stroke="${color}" stroke-width="${lineWidth}"/>`,
+      `<line x1="${outerRight}" y1="${outerBottom}" x2="${outerRight}" y2="${rBottom}" stroke="${color}" stroke-width="${lineWidth}"/>`,
+      `<line x1="${rx}" y1="${outerTop}" x2="${outerLeft}" y2="${outerTop}" stroke="${color}" stroke-width="${lineWidth}"/>`,
+      `<line x1="${outerRight}" y1="${outerTop}" x2="${rRight}" y2="${outerTop}" stroke="${color}" stroke-width="${lineWidth}"/>`,
+      `<line x1="${rx}" y1="${outerBottom}" x2="${outerLeft}" y2="${outerBottom}" stroke="${color}" stroke-width="${lineWidth}"/>`,
+      `<line x1="${outerRight}" y1="${outerBottom}" x2="${rRight}" y2="${outerBottom}" stroke="${color}" stroke-width="${lineWidth}"/>`
     );
   } else {
+    // Fallback for other combinations
     if (hasUp) {
       paths.push(
-        `<line x1="${outerLeft}" y1="${y}" x2="${outerLeft}" y2="${centerY}" stroke="${color}" stroke-width="${lineWidth}"/>`,
-        `<line x1="${outerRight}" y1="${y}" x2="${outerRight}" y2="${centerY}" stroke="${color}" stroke-width="${lineWidth}"/>`
+        `<line x1="${outerLeft}" y1="${ry}" x2="${outerLeft}" y2="${centerY}" stroke="${color}" stroke-width="${lineWidth}"/>`,
+        `<line x1="${outerRight}" y1="${ry}" x2="${outerRight}" y2="${centerY}" stroke="${color}" stroke-width="${lineWidth}"/>`
       );
     }
     if (hasDown) {
       paths.push(
-        `<line x1="${outerLeft}" y1="${centerY}" x2="${outerLeft}" y2="${y + cellHeight}" stroke="${color}" stroke-width="${lineWidth}"/>`,
-        `<line x1="${outerRight}" y1="${centerY}" x2="${outerRight}" y2="${y + cellHeight}" stroke="${color}" stroke-width="${lineWidth}"/>`
+        `<line x1="${outerLeft}" y1="${centerY}" x2="${outerLeft}" y2="${rBottom}" stroke="${color}" stroke-width="${lineWidth}"/>`,
+        `<line x1="${outerRight}" y1="${centerY}" x2="${outerRight}" y2="${rBottom}" stroke="${color}" stroke-width="${lineWidth}"/>`
       );
     }
     if (hasLeft) {
       paths.push(
-        `<line x1="${x}" y1="${outerTop}" x2="${centerX}" y2="${outerTop}" stroke="${color}" stroke-width="${lineWidth}"/>`,
-        `<line x1="${x}" y1="${outerBottom}" x2="${centerX}" y2="${outerBottom}" stroke="${color}" stroke-width="${lineWidth}"/>`
+        `<line x1="${rx}" y1="${outerTop}" x2="${centerX}" y2="${outerTop}" stroke="${color}" stroke-width="${lineWidth}"/>`,
+        `<line x1="${rx}" y1="${outerBottom}" x2="${centerX}" y2="${outerBottom}" stroke="${color}" stroke-width="${lineWidth}"/>`
       );
     }
     if (hasRight) {
       paths.push(
-        `<line x1="${centerX}" y1="${outerTop}" x2="${x + cellWidth}" y2="${outerTop}" stroke="${color}" stroke-width="${lineWidth}"/>`,
-        `<line x1="${centerX}" y1="${outerBottom}" x2="${x + cellWidth}" y2="${outerBottom}" stroke="${color}" stroke-width="${lineWidth}"/>`
+        `<line x1="${centerX}" y1="${outerTop}" x2="${rRight}" y2="${outerTop}" stroke="${color}" stroke-width="${lineWidth}"/>`,
+        `<line x1="${centerX}" y1="${outerBottom}" x2="${rRight}" y2="${outerBottom}" stroke="${color}" stroke-width="${lineWidth}"/>`
       );
     }
   }
 
-  return { svg: paths.join(''), handled: true };
+  // Wrap in group with crispEdges for pixel-perfect rendering
+  return { svg: `<g shape-rendering="crispEdges">${paths.join('')}</g>`, handled: true };
 };
 
 const renderDiagonalLine = (codePoint: number, ctx: GlyphContext): GlyphResult => {

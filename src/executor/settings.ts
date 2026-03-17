@@ -24,7 +24,9 @@ export const applySetting = (ctx: ExecutorContext, key: string, value: string): 
       ctx.fontSize = parseInt(value, 10);
     },
     LineHeight: () => {
-      ctx.lineHeight = parseFloat(value);
+      const parsed = parseFloat(value);
+      // Enforce minimum lineHeight of 1
+      ctx.lineHeight = Math.max(1, parsed);
       ctx.hasCustomLineHeight = true;
     },
     TypingSpeed: () => {

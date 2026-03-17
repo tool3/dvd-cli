@@ -33,6 +33,7 @@ export const renderCursor = (config: CursorConfig): string => {
     padding,
     contentStartY,
     fontSize,
+    hasCustomLineHeight,
     cursorColor,
     cursorStyle,
     activeCursor,
@@ -42,7 +43,12 @@ export const renderCursor = (config: CursorConfig): string => {
   } = config;
 
   const cursorX = r(padding + cursor.col * charWidth);
-  const cursorY = r(contentStartY + cursor.row * lineHeight);
+  // Text baseline Y (same as text-layer rendering)
+  const textY = r(contentStartY + cursor.row * lineHeight);
+  // When custom lineHeight is provided, offset cursor to align with capital letters
+  // Capital letters start ~18% below the top of the em-box (ascender space)
+  const glyphOffset = hasCustomLineHeight ? fontSize * 0.18 : 0;
+  const cursorY = r(contentStartY + cursor.row * lineHeight + glyphOffset);
   // Cursor height matches lineHeight to align with text selection
   const cursorHeight = r(lineHeight);
   const cursorClass = activeCursor ? 'cursor-active' : 'cursor';
@@ -62,7 +68,7 @@ export const renderCursor = (config: CursorConfig): string => {
       const defaultFonts = "'SF Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace";
       const font = fontFamily ? `'${fontFamily}', monospace` : defaultFonts;
       parts.push(
-        `<text x="${fmt(cursorX)}" y="${fmt(cursorY)}" fill="${backgroundColor}" ` +
+        `<text x="${fmt(cursorX)}" y="${fmt(textY)}" fill="${backgroundColor}" ` +
           `font-family="${font}" font-size="${fontSize}" dominant-baseline="text-before-edge">${escapeXml(charUnderCursor)}</text>`
       );
     }
@@ -100,6 +106,8 @@ export interface SelectionConfig {
   padding: number;
   contentStartY: number;
   selectionColor: string;
+  fontSize?: number;
+  hasCustomLineHeight?: boolean;
 }
 
 export const renderSelection = (config: SelectionConfig): string => {
@@ -112,12 +120,16 @@ export const renderSelection = (config: SelectionConfig): string => {
     padding,
     contentStartY,
     selectionColor,
+    fontSize = 14,
+    hasCustomLineHeight = false,
   } = config;
 
   const selStart = Math.min(start, end);
   const selEnd = Math.max(start, end);
   const selectionX = r(padding + selStart * charWidth);
-  const selectionY = r(contentStartY + row * lineHeight);
+  // When custom lineHeight is provided, offset selection to align with capital letters
+  const glyphOffset = hasCustomLineHeight ? fontSize * 0.18 : 0;
+  const selectionY = r(contentStartY + row * lineHeight + glyphOffset);
   const selectionWidth = r((selEnd - selStart) * charWidth);
 
   const parts: string[] = [];

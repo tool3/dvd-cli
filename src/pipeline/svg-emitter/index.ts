@@ -153,6 +153,8 @@ export const emit = (
         padding,
         contentStartY,
         selectionColor: theme.selection ?? '#44475a',
+        fontSize,
+        hasCustomLineHeight: options.hasCustomLineHeight,
       })
     );
   }
