@@ -39,13 +39,13 @@ Write what you want to happen, run `dvd`, and get a beautiful, infinitely-scalab
 ## Installation
 
 ```bash
-npm install -g dvd-cli
+npm install -g dvdr
 ```
 
 Or use directly with npx:
 
 ```bash
-npx dvd-cli demo.cd
+npx dvdr demo.cd
 ```
 
 ## Quick Start
