@@ -631,3 +631,8 @@ See the [examples/](examples/) directory for all scripts and outputs.
 ## License
 
 MIT © [tool3](https://github.com/tool3)
+
+
+![10](examples/svgs/fonts//font-size-10.svg)   
+![20](examples/svgs/fonts//font-size-20.svg)   
+![40](examples/svgs/fonts//font-size-40.svg)   

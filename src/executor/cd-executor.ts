@@ -173,7 +173,6 @@ export class CDExecutor {
       this.context.height = Math.ceil(
         headerHeight + padding + rows * lineHeight + watermarkHeight + padding + cursorBuffer
       );
-      if (this.context.height < 100) this.context.height = 100;
     }
 
     this.updateGridDimensions();
