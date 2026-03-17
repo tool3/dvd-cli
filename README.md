@@ -488,6 +488,10 @@ Set Theme {"background": "#0d1117", "foreground": "#c9d1d9"}
 Set Theme {"background": "#0a0a0a", "foreground": "#00ff00", "cursor": "#00ff00"}
 ```
 
+<img src="examples/svgs/themes/custom-theme.svg" /> </br>
+<img src="examples/svgs/themes/partial-theme-override.svg" /> </br>
+
+
 **Available theme properties:**
 
 | Property                                                                                                              | Description               |
