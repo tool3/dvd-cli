@@ -31,6 +31,12 @@ export const executeEnter = async (
   }
 
   if (command) {
+    // Handle 'clear' command specially - reset terminal state like a real terminal
+    if (command === 'clear') {
+      await executeClearCommand(ctx, options);
+      return;
+    }
+
     ctx.isExecutingCommand = true;
     await sleep(100);
     const captureStart = Date.now();
@@ -41,6 +47,25 @@ export const executeEnter = async (
     await sleep(100);
     captureFrame(ctx, options, true, false);
   }
+};
+
+
+//#region Clear Command Handler
+
+const executeClearCommand = async (
+  ctx: ExecutorContext,
+  options: CDExecutorOptions
+): Promise<void> => {
+  // Clear all lines and reset cursor to first row (like real terminal)
+  ctx.lines = [''];
+  ctx.cursorY = 0;
+  ctx.cursorX = 0;
+  ctx.currentLine = '';
+  ctx.scrollOffset = 0;
+  ctx.isExecutingCommand = false;
+
+  await sleep(100);
+  captureFrame(ctx, options, true, false);
 };
 
 

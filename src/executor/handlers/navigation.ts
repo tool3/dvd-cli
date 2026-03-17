@@ -79,6 +79,12 @@ export const executeShortcut = async (
 ): Promise<void> => {
   const metaKey = cmd || ctrl;
 
+  // Handle Ctrl+C - cancel current input like a real terminal
+  if (ctrl && !alt && !shift && !cmd && key === 'C') {
+    await executeCtrlC(ctx, options);
+    return;
+  }
+
   if (shift && !alt && !metaKey) {
     if (key === 'Left' || key === 'Right') {
       await executeSelectionMove(ctx, options, key === 'Right', shift);
@@ -98,6 +104,33 @@ export const executeShortcut = async (
       await executeWordDelete(ctx, options);
     }
   }
+};
+
+
+//#region Ctrl+C Handler
+
+const executeCtrlC = async (
+  ctx: ExecutorContext,
+  options: CDExecutorOptions
+): Promise<void> => {
+  // Show ^C at end of current line (like real terminal)
+  const currentLineWithPrompt = ctx.promptPrefix + ctx.currentLine + '^C';
+  ctx.lines[ctx.cursorY] = currentLineWithPrompt;
+
+  // Move to new line
+  ctx.cursorY++;
+  ctx.cursorX = 0;
+  ctx.currentLine = '';
+  ctx.selectionStart = undefined;
+  ctx.selectionEnd = undefined;
+
+  // Ensure the new line exists
+  if (!ctx.lines[ctx.cursorY]) {
+    ctx.lines[ctx.cursorY] = '';
+  }
+
+  await sleep(50);
+  captureFrame(ctx, options, true, false);
 };
 
 

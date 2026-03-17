@@ -1,0 +1,23 @@
+# Test back space typing
+Output examples/svgs/navigation/generic.svg
+
+Set FontSize 16
+Set PromptPrefix "\x1b[32m$\x1b[0m "
+Set Template macos
+Set Theme github-dark
+Set Watermark "\x1b[0;2m$USER\x1b[0m"
+
+Type "echo 'Lets not do this'"
+Sleep 300ms
+Ctrl+C
+Type "echo 'Lets start over'"
+Sleep 200ms
+Enter
+
+Type "clear"
+Sleep 200ms
+Enter
+
+Type `echo "No place like ${HOME}"`
+Sleep 200ms
+Enter

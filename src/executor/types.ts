@@ -140,9 +140,26 @@ export const sleep = (ms: number): Promise<void> =>
   new Promise((resolve) => setTimeout(resolve, ms));
 
 export const parseEscapes = (value: string): string =>
+  expandEnvVars(
+    value
+      .replace(/\\e/g, '\x1b')
+      .replace(/\\x1b/g, '\x1b')
+      .replace(/\\n/g, '\n')
+      .replace(/\\t/g, '\t')
+  );
+
+/**
+ * Expand environment variables in a string.
+ * Supports $VAR and ${VAR} syntax.
+ */
+export const expandEnvVars = (value: string): string =>
   value
-    .replace(/\\e/g, '\x1b')
-    .replace(/\\x1b/g, '\x1b')
-    .replace(/\\n/g, '\n')
-    .replace(/\\t/g, '\t');
+    // Handle ${VAR} syntax first (with braces)
+    .replace(/\$\{([A-Za-z_][A-Za-z0-9_]*)\}/g, (_, varName) =>
+      process.env[varName] ?? ''
+    )
+    // Handle $VAR syntax (without braces)
+    .replace(/\$([A-Za-z_][A-Za-z0-9_]*)/g, (_, varName) =>
+      process.env[varName] ?? ''
+    );
 

@@ -1,0 +1,21 @@
+# Cursor Style Test
+# Tests bar cursor style with custom color
+Output examples/svgs/cursor/prompt-emoji.svg
+
+Set FontSize 16
+Set Theme twilight
+Set Title "Bar Cursor Style"
+
+# Use bar cursor style with green color
+Set CursorStyle bar
+Set CursorColor #50fa7b
+Set PromptPrefix "🧪"
+
+Type "echo 'This uses a bar cursor'"
+Sleep 500ms
+Enter
+Type "echo 'with a custom green color'"
+Enter
+Type "echo 'and a emoji prompt prefix'"
+Enter
+Sleep 1s
