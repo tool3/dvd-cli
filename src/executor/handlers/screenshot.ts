@@ -3,7 +3,8 @@
 import { writeFileSync } from 'node:fs';
 import { resolve } from 'node:path';
 import type { ExecutorContext } from '../types';
-import { shellfie, type shellfieOptions, type Theme as ShellfieTheme } from 'shellfie';
+import type { Gradient } from '../../types';
+import { shellfie, isGradient, type shellfieOptions, type Theme as ShellfieTheme, type Gradient as ShellfieGradient } from 'shellfie';
 
 
 //#region Screenshot Handler
@@ -75,6 +76,16 @@ const convertToShellfieTheme = (ctx: ExecutorContext): ShellfieTheme => ({
 });
 
 
+//#region Gradient Conversion
+
+const convertToShellfieGradient = (gradient: Gradient): ShellfieGradient => ({
+  type: 'gradient',
+  colors: gradient.colors,
+  direction: gradient.direction,
+  reverse: gradient.reverse,
+});
+
+
 //#region Options Builder
 
 const buildShellfieOptions = (
@@ -99,6 +110,19 @@ const buildShellfieOptions = (
 
   if (ctx.headerBackground) {
     options.header = { backgroundColor: ctx.headerBackground };
+  }
+
+  // Pass background options to shellfie
+  if (ctx.background) {
+    const bgColor = isGradient(ctx.background)
+      ? convertToShellfieGradient(ctx.background)
+      : ctx.background;
+
+    options.background = {
+      color: bgColor,
+      padding: ctx.backgroundPadding,
+      borderRadius: ctx.backgroundRadius,
+    };
   }
 
   return options;

@@ -5,10 +5,10 @@ Output examples/svgs/backgrounds/gradient-background.svg
 Set FontSize 16
 Set Template macos
 Set Theme dracula
-Set Background "gradient(#ff6b6b, #4ecdc4)"
+Set Background "gradient(#ff6b6b, #4ecdc4:diagonal:reverse)"
 Set BackgroundPadding 20
 
-Type "echo 'Hello from a gradient background!'"
+Type "echo 'Hello from a reversed diagonal gradient background!'"
 Sleep 500ms
 Enter
 

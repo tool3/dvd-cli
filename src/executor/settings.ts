@@ -6,8 +6,7 @@ import type { Theme } from '../types';
 import type { ExecutorContext, WatermarkConfig } from './types';
 import { parseEscapes } from './types';
 import { themes as pipelineThemes } from '../pipeline';
-import { themes as shellfieThemes } from 'shellfie';
-import { parseGradient } from './gradient-parser';
+import { themes as shellfieThemes, parseGradient } from 'shellfie';
 
 
 //#region Setting Application
@@ -155,6 +154,9 @@ export const applySetting = (ctx: ExecutorContext, key: string, value: string): 
     },
     BackgroundPadding: () => {
       ctx.backgroundPadding = parseInt(value, 10);
+    },
+    BackgroundRadius: () => {
+      ctx.backgroundRadius = parseInt(value, 10);
     },
     PlaybackSpeed: () => {
       ctx.playbackSpeed = parseFloat(value);

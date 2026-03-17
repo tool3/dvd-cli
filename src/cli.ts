@@ -233,6 +233,10 @@ const createParser = () =>
       type: 'number',
       describe: 'Padding around terminal window in pixels (default: 0)',
     })
+    .option('background-radius', {
+      type: 'number',
+      describe: 'Border radius for outer background (default: 12)',
+    })
     .option('playback-speed', {
       alias: 'S',
       type: 'number',
@@ -367,6 +371,7 @@ const run = async (): Promise<void> => {
         letterSpacing: argv['letter-spacing'],
         background: argv.background,
         backgroundPadding: argv['background-padding'],
+        backgroundRadius: argv['background-radius'],
         playbackSpeed: argv['playback-speed'],
       });
     } catch (err) {

@@ -36,8 +36,8 @@ const extractDynamicContent = (svg: string, frameId: string): string => {
   let content = contentMatch[1];
   content = content.replace(/<style>[\s\S]*?<\/style>/g, '');
   content = content.replace(/<defs>[\s\S]*?<\/defs>/g, '');
-  // Remove outer background rect (solid color or gradient)
-  content = content.replace(/<rect x="0" y="0" width="\d+" height="\d+" fill="[^"]*"\/>/g, '');
+  // Remove outer background rect (solid color or gradient, with optional border radius)
+  content = content.replace(/<rect x="0" y="0" width="\d+" height="\d+" fill="[^"]*"(?: rx="\d+" ry="\d+")?\/>/g, '');
   // Count how many wrapper groups we need to remove (translate group and/or clip-path group)
   let closingTagsToRemove = 0;
   if (/<g transform="translate\(\d+, \d+\)">/.test(content)) {
@@ -130,13 +130,15 @@ const extractBackgroundPadding = (svg: string): number => {
   return translateMatch ? parseInt(translateMatch[1], 10) : 0;
 };
 
-const extractOuterBackground = (svg: string): { fill: string; isGradient: boolean } | null => {
+const extractOuterBackground = (svg: string): { fill: string; isGradient: boolean; borderRadius: number } | null => {
   // Look for a rect that fills the entire outer area (before the terminal window group)
   // This rect appears after defs but before the translate group
-  const bgMatch = svg.match(/<rect x="0" y="0" width="\d+" height="\d+" fill="([^"]+)"\/>/);
+  // Match with optional rx/ry attributes for border radius
+  const bgMatch = svg.match(/<rect x="0" y="0" width="\d+" height="\d+" fill="([^"]+)"(?: rx="(\d+)" ry="\d+")?\/>/);
   if (bgMatch) {
     const fill = bgMatch[1];
-    return { fill, isGradient: fill.startsWith('url(#') };
+    const borderRadius = bgMatch[2] ? parseInt(bgMatch[2], 10) : 0;
+    return { fill, isGradient: fill.startsWith('url(#'), borderRadius };
   }
   return null;
 };
@@ -503,8 +505,9 @@ export const createAnimatedSVG = async (
   const footerSection = footer ? `<g class="footer">${footer}</g>` : '';
 
   // Build outer background rect if present
+  const outerBgRx = outerBackground?.borderRadius ? ` rx="${outerBackground.borderRadius}" ry="${outerBackground.borderRadius}"` : '';
   const outerBgRect = outerBackground
-    ? `<rect x="0" y="0" width="${totalWidth}" height="${totalHeight}" fill="${outerBackground.fill}"/>`
+    ? `<rect x="0" y="0" width="${totalWidth}" height="${totalHeight}" fill="${outerBackground.fill}"${outerBgRx}/>`
     : '';
 
   // Wrap terminal content in translate group if there's background padding

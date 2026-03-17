@@ -209,6 +209,7 @@ export class CDExecutor {
         letterSpacing: this.context.letterSpacing,
         background: this.context.background,
         backgroundPadding: this.context.backgroundPadding,
+        backgroundRadius: this.context.backgroundRadius,
       });
 
       this.context.frames[i].svg = svg;
@@ -320,6 +321,7 @@ const createContext = (options: CDExecutorOptions): ExecutorContext => {
     rewindSpeed: 5,
 
     backgroundPadding: 0,
+    backgroundRadius: 12,
 
     playbackSpeed: 1,
   };

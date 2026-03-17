@@ -8,7 +8,7 @@ import { createGridState, processInput } from '../pipeline/vterminal';
 import { coalesce } from '../pipeline/coalescer';
 import { emit } from '../pipeline/svg-emitter';
 import { themes } from '../pipeline';
-import { parseGradient } from '../executor/gradient-parser';
+import { parseGradient } from 'shellfie';
 import type { TerminalFrame } from '../executor/cd-executor';
 import type { AnimationOptions } from '../animator/svg-animator';
 import type { Gradient } from '../types';
@@ -54,6 +54,7 @@ interface PipeArgs {
   letterSpacing?: number;
   background?: string;
   backgroundPadding?: number;
+  backgroundRadius?: number;
   playbackSpeed?: number;
 }
 
@@ -92,6 +93,7 @@ interface RenderFrameOptions {
   letterSpacing?: number;
   background?: string | Gradient;
   backgroundPadding?: number;
+  backgroundRadius?: number;
 }
 
 
@@ -224,6 +226,7 @@ const renderFrame = (content: string, options: RenderFrameOptions): string => {
     letterSpacing: options.letterSpacing,
     background: options.background,
     backgroundPadding: options.backgroundPadding,
+    backgroundRadius: options.backgroundRadius,
   });
 
   return svg;
@@ -307,6 +310,7 @@ export const pipeCommand = async (args: PipeArgs): Promise<void> => {
       letterSpacing: args.letterSpacing,
       background: args.background ? parseGradient(args.background) : undefined,
       backgroundPadding: args.backgroundPadding,
+      backgroundRadius: args.backgroundRadius,
     };
 
     let width = args.width;

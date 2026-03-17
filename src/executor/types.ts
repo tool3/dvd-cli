@@ -130,6 +130,7 @@ export interface ExecutorContext {
 
   background?: string | Gradient;
   backgroundPadding: number;
+  backgroundRadius: number;
 
   playbackSpeed: number;
 }

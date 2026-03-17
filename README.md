@@ -106,6 +106,7 @@ neofetch | dvd -o system-info.svg --title "System Info"
 # simple chartscii chart with gradient and animation - dvd reverses and pauses between cycles
 chartscii $(seq 1 5) -c "gradient(pink,cyan)" --animate | dvd -L reverse -P 1000 -w "made with dvd"
 ```
+<img src="examples/svgs/stdin/chartscii-sine.svg" ></br>
 <img src="examples/svgs/stdin/chartscii-stdin.svg" >
 
 ---
@@ -365,7 +366,11 @@ Add a colored or gradient background around your terminal window.
 Set Background #1a1a2e
 Set BackgroundPadding 40
 
-# Gradient background (vertical - default)
+# Vertical background (default)
+Set Background gradient(#667eea, #764ba2)
+Set BackgroundPadding 40
+
+# Diagonal gradient (diagonal reversed)
 Set Background gradient(#667eea, #764ba2)
 Set BackgroundPadding 40
 
@@ -379,6 +384,7 @@ Set BackgroundPadding 60
 ```
 
 <img src="examples/svgs/backgrounds/solid-background.svg" /> </br>
+<img src="examples/svgs/backgrounds/vertical-gradient.svg" /> </br>
 <img src="examples/svgs/backgrounds/gradient-background.svg" /></br>
 <img src="examples/svgs/backgrounds/horizontal-gradient.svg" /> </br>
 

@@ -22,12 +22,21 @@ interface GradientOptions {
   totalHeight?: number;
 }
 
+const getGradientCoords = (direction: 'horizontal' | 'vertical' | 'diagonal'): { x1: string; y1: string; x2: string; y2: string } => {
+  switch (direction) {
+    case 'horizontal':
+      return { x1: '0%', y1: '0%', x2: '100%', y2: '0%' };
+    case 'diagonal':
+      return { x1: '0%', y1: '0%', x2: '100%', y2: '100%' };
+    case 'vertical':
+    default:
+      return { x1: '0%', y1: '0%', x2: '0%', y2: '100%' };
+  }
+};
+
 const generateGradientDef = (gradient: Gradient, id: string, options?: GradientOptions): string => {
   const direction = gradient.direction ?? 'vertical';
-  const x1 = direction === 'horizontal' ? '0%' : '0%';
-  const y1 = direction === 'horizontal' ? '0%' : '0%';
-  const x2 = direction === 'horizontal' ? '100%' : '0%';
-  const y2 = direction === 'horizontal' ? '0%' : '100%';
+  const { x1, y1, x2, y2 } = getGradientCoords(direction);
 
   // Calculate offset adjustment to center gradient on terminal window (excluding padding)
   const padding = options?.padding ?? 0;
@@ -40,8 +49,11 @@ const generateGradientDef = (gradient: Gradient, id: string, options?: GradientO
   const paddingPercent = totalSize > 0 ? (padding / totalSize) * 100 : 0;
   const rangePercent = 100 - (paddingPercent * 2); // The percentage range for the terminal
 
-  const stops = gradient.colors.map((color, i) => {
-    const baseOffset = gradient.colors.length === 1 ? 50 : (i / (gradient.colors.length - 1)) * 100;
+  // Apply reverse if specified
+  const colors = gradient.reverse ? [...gradient.colors].reverse() : gradient.colors;
+
+  const stops = colors.map((color, i) => {
+    const baseOffset = colors.length === 1 ? 50 : (i / (colors.length - 1)) * 100;
     // Map the 0-100% range to paddingPercent to (100-paddingPercent)
     const adjustedOffset = paddingPercent + (baseOffset / 100) * rangePercent;
     return `<stop offset="${adjustedOffset.toFixed(2)}%" stop-color="${color}"/>`;
@@ -92,6 +104,7 @@ export const emit = (
 
   // Background padding (margin around terminal window)
   const bgPadding = options.backgroundPadding ?? 0;
+  const bgRadius = options.backgroundRadius ?? 12;
   const totalWidth = width + bgPadding * 2;
   const totalHeight = height + bgPadding * 2;
   const hasBackground = options.background && bgPadding > 0;
@@ -136,7 +149,7 @@ export const emit = (
   if (hasBackground) {
     const bgFill = isGradient(options.background) ? 'url(#bg-gradient)' : options.background;
     parts.push(
-      `<rect x="0" y="0" width="${totalWidth}" height="${totalHeight}" fill="${bgFill}"/>`
+      `<rect x="0" y="0" width="${totalWidth}" height="${totalHeight}" fill="${bgFill}" rx="${bgRadius}" ry="${bgRadius}"/>`
     );
   }
 

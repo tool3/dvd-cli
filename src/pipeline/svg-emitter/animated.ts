@@ -15,15 +15,27 @@ const isGradient = (value: unknown): value is Gradient => {
   return typeof value === 'object' && value !== null && (value as Gradient).type === 'gradient';
 };
 
+const getGradientCoords = (direction: 'horizontal' | 'vertical' | 'diagonal'): { x1: string; y1: string; x2: string; y2: string } => {
+  switch (direction) {
+    case 'horizontal':
+      return { x1: '0%', y1: '0%', x2: '100%', y2: '0%' };
+    case 'diagonal':
+      return { x1: '0%', y1: '0%', x2: '100%', y2: '100%' };
+    case 'vertical':
+    default:
+      return { x1: '0%', y1: '0%', x2: '0%', y2: '100%' };
+  }
+};
+
 const generateGradientDef = (gradient: Gradient, id: string): string => {
   const direction = gradient.direction ?? 'vertical';
-  const x1 = direction === 'horizontal' ? '0%' : '0%';
-  const y1 = direction === 'horizontal' ? '0%' : '0%';
-  const x2 = direction === 'horizontal' ? '100%' : '0%';
-  const y2 = direction === 'horizontal' ? '0%' : '100%';
+  const { x1, y1, x2, y2 } = getGradientCoords(direction);
 
-  const stops = gradient.colors.map((color, i) => {
-    const offset = gradient.colors.length === 1 ? 50 : (i / (gradient.colors.length - 1)) * 100;
+  // Apply reverse if specified
+  const colors = gradient.reverse ? [...gradient.colors].reverse() : gradient.colors;
+
+  const stops = colors.map((color, i) => {
+    const offset = colors.length === 1 ? 50 : (i / (colors.length - 1)) * 100;
     return `<stop offset="${offset}%" stop-color="${color}"/>`;
   }).join('');
 
@@ -85,6 +97,7 @@ export const emitAnimated = (
 
   // Background padding (margin around terminal window)
   const bgPadding = options.backgroundPadding ?? 0;
+  const bgRadius = options.backgroundRadius ?? 12;
   const totalWidth = width + bgPadding * 2;
   const totalHeight = height + bgPadding * 2;
   const hasBackground = options.background && bgPadding > 0;
@@ -156,7 +169,7 @@ export const emitAnimated = (
   if (hasBackground) {
     const bgFill = isGradient(options.background) ? 'url(#bg-gradient)' : options.background;
     parts.push(
-      `<rect x="0" y="0" width="${totalWidth}" height="${totalHeight}" fill="${bgFill}"/>`
+      `<rect x="0" y="0" width="${totalWidth}" height="${totalHeight}" fill="${bgFill}" rx="${bgRadius}" ry="${bgRadius}"/>`
     );
   }
 

@@ -183,7 +183,8 @@ export interface Theme {
 export interface Gradient {
   type: 'gradient';
   colors: string[];
-  direction?: 'horizontal' | 'vertical';
+  direction?: 'horizontal' | 'vertical' | 'diagonal';
+  reverse?: boolean;
 }
 
 
@@ -225,6 +226,7 @@ export interface EmitterOptions {
   hasCustomLineHeight?: boolean;
   background?: string | Gradient;
   backgroundPadding?: number;
+  backgroundRadius?: number;
 }
 
 

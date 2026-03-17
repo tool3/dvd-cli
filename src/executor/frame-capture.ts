@@ -220,6 +220,7 @@ export const captureFrame = (
       letterSpacing: ctx.letterSpacing,
       background: ctx.background,
       backgroundPadding: ctx.backgroundPadding,
+      backgroundRadius: ctx.backgroundRadius,
     }
   );
 
