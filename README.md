@@ -102,6 +102,12 @@ neofetch | dvd -o system-info.svg --title "System Info"
 
 <img src="examples/svgs/everyday/neofetch.svg" >
 
+```bash
+# simple chartscii chart with gradient and animation - dvd reverses and pauses between cycles
+chartscii $(seq 1 5) -c "gradient(pink,cyan)" --animate | dvd -L reverse -P 1000 -w "made with dvd"
+```
+<img src="examples/svgs/stdin/chartscii-stdin.svg" >
+
 ---
 
 ## Syntax
