@@ -91,18 +91,26 @@ export const cellToStyle = (cell: Cell, theme: Theme): CellStyle => {
 
 //#region Coalescing Algorithm
 
+/**
+ * Determine if a span has visible (non-whitespace) content.
+ */
+const hasVisibleContent = (span: Span): boolean => {
+  return span.text.trim().length > 0 || !!span.style.bg;
+};
+
 export const coalesce = (grid: GridState, theme: Theme): SpanRow[] => {
   const result: SpanRow[] = [];
 
   for (let row = 0; row < grid.cells.length; row++) {
     const cells = grid.cells[row];
-    const spans: Span[] = [];
 
     if (cells.length === 0) {
       result.push([]);
       continue;
     }
 
+    // First pass: create all spans (including whitespace)
+    const allSpans: Span[] = [];
     let currentSpan: Span | null = null;
 
     for (let col = 0; col < cells.length; col++) {
@@ -116,17 +124,35 @@ export const coalesce = (grid: GridState, theme: Theme): SpanRow[] => {
       if (currentSpan && stylesEqual(currentSpan.style, style)) {
         currentSpan.text += cell.char;
       } else {
-        if (currentSpan && (currentSpan.text.trim().length > 0 || currentSpan.style.bg)) {
-          spans.push(currentSpan);
+        if (currentSpan) {
+          allSpans.push(currentSpan);
         }
         currentSpan = { text: cell.char, style, col, row };
       }
     }
 
-    if (currentSpan && (currentSpan.text.trim().length > 0 || currentSpan.style.bg)) {
-      spans.push(currentSpan);
+    if (currentSpan) {
+      allSpans.push(currentSpan);
     }
 
+    // Find the last span with visible content
+    let lastVisibleIndex = -1;
+    for (let i = allSpans.length - 1; i >= 0; i--) {
+      if (hasVisibleContent(allSpans[i])) {
+        lastVisibleIndex = i;
+        break;
+      }
+    }
+
+    // Keep all spans up to and including the last visible span
+    // This preserves whitespace BEFORE visible content (like spaces after prompt)
+    // but drops trailing whitespace-only spans
+    const spans: Span[] = [];
+    for (let i = 0; i <= lastVisibleIndex; i++) {
+      if (allSpans[i].text.length > 0) {
+        spans.push(allSpans[i]);
+      }
+    }
     result.push(spans);
   }
 

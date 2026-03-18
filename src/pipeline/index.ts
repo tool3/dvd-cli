@@ -3,7 +3,7 @@
 import type { GridState, Theme, EmitterOptions } from '../types';
 import { createGridState, processInput } from './vterminal';
 import { coalesce, getCoalesceStats } from './coalescer';
-import { emit, emitAnimated, type FrameData, type EmitResult } from './svg-emitter';
+import { emit, emitAnimated, emitFilmstripAnimated, type FrameData, type EmitResult, type FilmstripOptions } from './svg-emitter';
 import { executeCommandStreaming, type CommandResult, type OutputChunk } from '../shell/persistent-shell';
 
 
@@ -56,13 +56,20 @@ export const renderStatic = (input: string, options: RenderOptions): EmitResult 
 
 export const renderAnimated = (
   frames: FrameData[],
-  options: RenderOptions & { fps?: number; loop?: boolean }
+  options: RenderOptions & { fps?: number; loop?: boolean; useFilmstrip?: boolean }
 ): EmitResult => {
-  return emitAnimated(frames, {
+  const emitterOptions = {
     ...createEmitterOptions(options),
     fps: options.fps,
     loop: options.loop,
-  });
+  };
+
+  // Use filmstrip (svg-term style) for better file size with truecolor content
+  if (options.useFilmstrip) {
+    return emitFilmstripAnimated(frames, emitterOptions);
+  }
+
+  return emitAnimated(frames, emitterOptions);
 };
 
 

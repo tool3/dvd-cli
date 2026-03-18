@@ -2,9 +2,10 @@
 
 import type { CDCommand, CDScript } from '../parser/cd-parser';
 import { createGridState } from '../pipeline/vterminal';
-import { emit } from '../pipeline/svg-emitter';
+import { emit, type FrameData } from '../pipeline/svg-emitter';
 import { themes as pipelineThemes } from '../pipeline';
 import type { ExecutorContext, TerminalFrame, CDExecutorOptions } from './types';
+export type { ExecutorContext };
 import { sleep } from './types';
 import { captureFrame } from './frame-capture';
 import {
@@ -247,6 +248,22 @@ export class CDExecutor {
 
   getRewindSpeed(): number {
     return this.context.rewindSpeed;
+  }
+
+  getFrameData(): FrameData[] {
+    // Apply playback speed to timestamps
+    const speed = this.context.playbackSpeed;
+    if (speed !== 1 && speed > 0) {
+      return this.context.frameData.map(frame => ({
+        ...frame,
+        timestamp: Math.round(frame.timestamp / speed),
+      }));
+    }
+    return this.context.frameData;
+  }
+
+  getContext(): ExecutorContext {
+    return this.context;
   }
 
   async cleanup(): Promise<void> {

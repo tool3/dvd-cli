@@ -3,10 +3,10 @@
 import type { SpanRow, Theme, EmitterOptions, CursorPosition, Gradient } from '../../types';
 import { coalesceBackgrounds, mergeVerticalBackgrounds, type RenderConfig } from '../coalescer';
 import { r, fmt, escapeXml } from './utils';
-import { generateStylesheet, styleToClasses, getColorClass } from './stylesheet';
+import { generateStylesheet } from './stylesheet';
 import { generateChrome, generateFooter } from './chrome';
-import { isTruecolor } from './utils';
 import type { EmitResult } from './index';
+import { renderTextLayer, type TextRendererConfig } from './text-renderer';
 
 
 //#region Gradient Helpers
@@ -303,42 +303,16 @@ const generateFrameContent = (
     parts.push('</g>');
   }
 
-  parts.push('<g class="text-layer">');
-  rows.forEach((row) => {
-    row.forEach((span) => {
-      const x = Math.round(padding + span.col * charWidth);
-      const y = r(contentStartY + span.row * lineHeight);
-      const classes = ['text', ...styleToClasses(span.style)];
-      let fillAttr = '';
-
-      if (span.style.fg) {
-        if (isTruecolor(span.style.fg)) {
-          fillAttr = ` fill="${span.style.fg}"`;
-        } else {
-          const colorClass = getColorClass(span.style.fg, theme);
-          if (colorClass) classes.push(colorClass);
-          else fillAttr = ` fill="${span.style.fg}"`;
-        }
-      } else {
-        classes.push('fg');
-      }
-
-      const rawText = span.style.bg ? span.text : span.text.trimEnd();
-      if (!rawText) return;
-
-      const escaped = rawText
-        .replace(/&/g, '&amp;')
-        .replace(/</g, '&lt;')
-        .replace(/>/g, '&gt;')
-        .replace(/"/g, '&quot;')
-        .replace(/'/g, '&apos;');
-
-      parts.push(
-        `<text class="${classes.join(' ')}" x="${fmt(x)}" y="${fmt(y)}"${fillAttr}>${escaped}</text>`
-      );
-    });
-  });
-  parts.push('</g>');
+  // Use renderTextLayer which handles custom glyphs (box drawing characters, etc.)
+  const textRendererConfig: TextRendererConfig = {
+    charWidth,
+    lineHeight,
+    padding,
+    contentStartY,
+    fontSize,
+    theme,
+  };
+  parts.push(renderTextLayer(rows, textRendererConfig));
 
   if (cursor && cursorVisible) {
     const cursorX = r(padding + cursor.col * charWidth);

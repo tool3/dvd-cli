@@ -1,4 +1,6 @@
-import type { TerminalFrame } from '../executor/cd-executor';
+import type { TerminalFrame } from '../executor/types';
+import { emitFilmstripAnimated, type FrameData } from '../pipeline/svg-emitter';
+import type { Theme, Gradient } from '../types';
 
 //#region Types
 
@@ -12,6 +14,7 @@ export interface AnimationOptions {
   loopPause?: number;
   fadeDuration?: number;
   rewindSpeed?: number;
+  useFilmstrip?: boolean;
 }
 
 
@@ -574,5 +577,87 @@ export const getAnimationMetadata = (frames: TerminalFrame[]): {
   const frameCount = frames.length;
   const fps = frameCount > 1 ? frameCount / (duration / 1000) : 0;
   return { duration, frameCount, fps: Math.round(fps * 10) / 10 };
+};
+
+
+//#region Filmstrip Animation (svg-term style)
+
+export interface FilmstripAnimationContext {
+  frameData: FrameData[];
+  theme: Theme;
+  width: number;
+  height: number;
+  fontSize: number;
+  template?: 'macos' | 'windows' | 'minimal';
+  title?: string;
+  watermark?: string;
+  lineHeight?: number;
+  charWidth?: number;
+  padding?: number;
+  borderRadius?: number;
+  headerHeight?: number;
+  footerHeight?: number;
+  cursorStyle?: 'block' | 'bar' | 'underline';
+  cursorColor?: string;
+  fontFamily?: string;
+  background?: string | Gradient;
+  backgroundPadding?: number;
+  backgroundRadius?: number;
+  headerBackground?: string;
+  footerBackground?: string;
+}
+
+export const createFilmstripSVG = (
+  ctx: FilmstripAnimationContext,
+  options: AnimationOptions = {}
+): string => {
+  if (ctx.frameData.length === 0) throw new Error('No frames to animate');
+
+  const pauseAtEnd = options.pauseAtEnd ?? 1000;
+
+  // Adjust timestamps to include pauseAtEnd
+  const adjustedFrames = ctx.frameData.map((frame, i) => {
+    if (i === ctx.frameData.length - 1) {
+      return { ...frame };
+    }
+    return frame;
+  });
+
+  // If we have pauseAtEnd, duplicate last frame's timestamp
+  if (pauseAtEnd > 0 && adjustedFrames.length > 0) {
+    const lastFrame = adjustedFrames[adjustedFrames.length - 1];
+    adjustedFrames[adjustedFrames.length - 1] = {
+      ...lastFrame,
+      timestamp: lastFrame.timestamp + pauseAtEnd,
+    };
+  }
+
+  const result = emitFilmstripAnimated(adjustedFrames, {
+    theme: ctx.theme,
+    width: ctx.width,
+    height: ctx.height,
+    fontSize: ctx.fontSize,
+    template: ctx.template ?? 'minimal',
+    title: ctx.title,
+    watermark: ctx.watermark,
+    lineHeight: ctx.lineHeight,
+    charWidth: ctx.charWidth,
+    padding: ctx.padding,
+    borderRadius: ctx.borderRadius,
+    headerHeight: ctx.headerHeight,
+    footerHeight: ctx.footerHeight,
+    cursorStyle: ctx.cursorStyle,
+    cursorColor: ctx.cursorColor,
+    fontFamily: ctx.fontFamily,
+    background: ctx.background,
+    backgroundPadding: ctx.backgroundPadding,
+    backgroundRadius: ctx.backgroundRadius,
+    headerBackground: ctx.headerBackground,
+    footerBackground: ctx.footerBackground,
+    loop: options.loop,
+    pauseAtEnd,
+  });
+
+  return result.svg;
 };
 

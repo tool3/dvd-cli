@@ -5,6 +5,7 @@ import { StringDecoder } from 'node:string_decoder';
 import type { ExecutorContext, CDExecutorOptions } from '../types';
 import { sleep, stripAnsi } from '../types';
 import { captureFrame } from '../frame-capture';
+import { executeShellCommandWithRecording } from './shell-recorder';
 
 
 //#region Enter Handler
@@ -101,7 +102,24 @@ const buildMultiLineCommand = (ctx: ExecutorContext): string => {
 
 //#region Shell Command Execution
 
+/**
+ * Execute a shell command using the recording-based approach.
+ * This properly captures ALL terminal output (including lolcat, animations, etc.)
+ * by recording events and replaying them through vterminal.
+ */
 export const executeShellCommand = async (
+  ctx: ExecutorContext,
+  options: CDExecutorOptions,
+  command: string
+): Promise<void> => {
+  // Use the new recording-based approach for all shell commands
+  return executeShellCommandWithRecording(ctx, options, command);
+};
+
+
+//#region Legacy Shell Execution (kept for reference/fallback)
+
+export const executeShellCommandLegacy = async (
   ctx: ExecutorContext,
   options: CDExecutorOptions,
   command: string

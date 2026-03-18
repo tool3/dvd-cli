@@ -3,6 +3,7 @@
 export {
   emit,
   emitAnimated,
+  emitFilmstripAnimated,
   styleToClasses,
   generateStylesheet,
   getColorClass,
@@ -10,5 +11,6 @@ export {
   type EmitResult,
   type FrameData,
   type AnimatedSVGOptions,
+  type FilmstripOptions,
 } from './svg-emitter/index';
 

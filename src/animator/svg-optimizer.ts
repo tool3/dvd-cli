@@ -94,8 +94,10 @@ export const optimizeSvg = (svg: string): string => {
   // Remove opacity="1"
   result = result.replace(/\s+opacity="1"/g, '');
 
-  // Remove unnecessary whitespace between tags
-  result = result.replace(/>\s+</g, '><');
+  // Remove unnecessary whitespace between tags, but preserve text content
+  // Only remove whitespace between closing > and opening < (not </text> content)
+  // This preserves spaces that are part of text element content
+  result = result.replace(/>(\s+)<([a-zA-Z])/g, '><$2');
 
   // Collapse multiple spaces/newlines
   result = result.replace(/\n\s*\n/g, '\n');

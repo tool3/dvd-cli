@@ -8,6 +8,7 @@ import { generateChrome, generateFooter } from './chrome';
 import { renderCursor, renderSelection } from './cursor';
 import { renderTextLayer } from './text-renderer';
 import { emitAnimated as emitAnimatedImpl, type FrameData, type AnimatedSVGOptions } from './animated';
+import { emitFilmstrip, type FilmstripOptions } from './filmstrip';
 
 
 //#region Gradient Helpers
@@ -67,6 +68,7 @@ const generateGradientDef = (gradient: Gradient, id: string, options?: GradientO
 
 export { styleToClasses, generateStylesheet, getColorClass, getColorFromClass } from './stylesheet';
 export type { FrameData, AnimatedSVGOptions } from './animated';
+export type { FilmstripOptions } from './filmstrip';
 
 
 //#region Types
@@ -336,5 +338,15 @@ export const emitAnimated = (
   options: AnimatedSVGOptions
 ): EmitResult => {
   return emitAnimatedImpl(frames, options, emit);
+};
+
+
+//#region Filmstrip Emitter (svg-term style)
+
+export const emitFilmstripAnimated = (
+  frames: FrameData[],
+  options: FilmstripOptions
+): EmitResult => {
+  return emitFilmstrip(frames, options, emit);
 };
 

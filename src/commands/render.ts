@@ -5,6 +5,7 @@ import { parseCD } from '../parser/cd-parser';
 import { CDExecutor } from '../executor/cd-executor';
 import {
   createAnimatedSVG,
+  createFilmstripSVG,
   getAnimationMetadata,
 } from '../animator/svg-animator';
 import { optimizeSvg } from '../animator/svg-optimizer';
@@ -26,6 +27,7 @@ interface RenderArgs {
   fps?: number;
   'loop-style'?: 'loop' | 'reverse' | 'rewind' | 'fade';
   optimize?: boolean;
+  filmstrip?: boolean;
 }
 
 
@@ -176,7 +178,39 @@ export const renderCommand = async (args: RenderArgs): Promise<void> => {
       rewindSpeed,
     };
 
-    let svg = await createAnimatedSVG(frames, animationOptions);
+    let svg: string;
+
+    if (args.filmstrip) {
+      // Use filmstrip (svg-term style) rendering for smaller file sizes with truecolor
+      const ctx = executor.getContext();
+      const frameData = executor.getFrameData();
+      svg = createFilmstripSVG({
+        frameData,
+        theme: ctx.theme,
+        width: ctx.width,
+        height: ctx.height,
+        fontSize: ctx.fontSize,
+        template: ctx.template,
+        title: ctx.title,
+        watermark: typeof ctx.watermark === 'string' ? ctx.watermark : ctx.watermark?.content,
+        lineHeight: ctx.fontSize * ctx.lineHeight,
+        charWidth: ctx.fontSize * ctx.charWidthRatio,
+        padding: ctx.padding,
+        borderRadius: ctx.borderRadius,
+        headerHeight: ctx.headerHeight,
+        footerHeight: ctx.footerHeight,
+        cursorStyle: ctx.cursorStyle,
+        cursorColor: ctx.cursorColor,
+        fontFamily: ctx.fontFamily,
+        background: ctx.background,
+        backgroundPadding: ctx.backgroundPadding,
+        backgroundRadius: ctx.backgroundRadius,
+        headerBackground: ctx.headerBackground,
+        footerBackground: ctx.footerBackground,
+      }, animationOptions);
+    } else {
+      svg = await createAnimatedSVG(frames, animationOptions);
+    }
 
     if (args.optimize !== false) {
       if (!args.verbose) {
