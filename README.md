@@ -759,7 +759,6 @@ See the [examples/](examples/) directory for all scripts and outputs.
 | ----------------- | :-------: | :----------: | :----------: |
 | **Output**        |    SVG    |   GIF/MP4    |  asciicast   |
 | **Dependencies**  |   None    | ffmpeg, ttyd | Player embed |
-| **File size**     |   Small   |    Large     |    Small     |
 | **Scalable**      |    Yes    |      No      |     Yes      |
 | **GitHub README** |  Perfect  |    Works     |  Embed only  |
 | **Editable**      | Yes (XML) |      No      |  Yes (JSON)  |
