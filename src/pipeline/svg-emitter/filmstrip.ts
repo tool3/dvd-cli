@@ -14,6 +14,8 @@ export interface FilmstripOptions extends EmitterOptions {
   pauseAtEnd?: number;
   loopPause?: number;
   loopStyle?: 'loop' | 'reverse' | 'rewind' | 'fade';
+  fadeDuration?: number;
+  rewindSpeed?: number;
 }
 
 interface SymbolRegistry {
@@ -225,6 +227,9 @@ export const emitFilmstrip = (
   const loop = options.loop ?? true;
   const pauseAtEnd = options.pauseAtEnd ?? 0;
   const loopPause = options.loopPause ?? 0;
+  const loopStyle = options.loopStyle ?? 'loop';
+  const fadeDuration = options.fadeDuration ?? 1500;
+  const rewindSpeed = options.rewindSpeed ?? 5;
 
   // Background padding
   const bgPadding = options.backgroundPadding ?? 0;
@@ -234,7 +239,23 @@ export const emitFilmstrip = (
   const hasBackground = !!(options.background && bgPadding > 0);
 
   const lastFrame = frames[frames.length - 1];
-  const totalDuration = lastFrame.timestamp + pauseAtEnd + loopPause;
+  const forwardDuration = lastFrame.timestamp + pauseAtEnd;
+
+  // Calculate total duration based on loop style
+  let totalDuration: number;
+  if (loopStyle === 'reverse') {
+    // Forward + reverse at same speed + optional loop pause
+    totalDuration = forwardDuration + lastFrame.timestamp + loopPause;
+  } else if (loopStyle === 'rewind') {
+    // Forward + fast rewind + optional loop pause
+    totalDuration = forwardDuration + (lastFrame.timestamp / rewindSpeed) + loopPause;
+  } else if (loopStyle === 'fade') {
+    // Forward + fade duration + optional loop pause
+    totalDuration = forwardDuration + fadeDuration + loopPause;
+  } else {
+    // Simple loop
+    totalDuration = forwardDuration + loopPause;
+  }
 
   // Create symbol registry
   const registry = createRegistry();
@@ -284,7 +305,16 @@ export const emitFilmstrip = (
 
   // Style section
   parts.push('<style>');
-  parts.push(generateKeyframes(uniqueFrames, totalDuration, width));
+  const { translateKeyframes, opacityKeyframes } = generateKeyframes(uniqueFrames, width, {
+    loopStyle,
+    forwardDuration,
+    totalDuration,
+    fadeDuration,
+    rewindSpeed,
+    loopPause,
+  });
+  parts.push(translateKeyframes);
+  if (opacityKeyframes) parts.push(opacityKeyframes);
   parts.push(generateColorStyles(registry, theme, hasBackground, options.background));
 
   // Font styling
@@ -341,9 +371,11 @@ export const emitFilmstrip = (
   parts.push(`<clipPath id="content-clip"><rect x="0" y="${headerHeight}" width="${width}" height="${height - headerHeight}"/></clipPath>`);
   parts.push(`<g clip-path="url(#content-clip)">`);
 
-  // Animated filmstrip group - animates via translateX
+  // Animated filmstrip group - animates via translateX (and opacity for fade)
   const animDuration = (totalDuration / 1000).toFixed(3);
-  parts.push(`<g style="animation:f ${animDuration}s steps(1,end) ${loop ? 'infinite' : '1'}">`);
+  const loopCount = loop ? 'infinite' : '1';
+  const fadeAnim = loopStyle === 'fade' ? `,fade ${animDuration}s ease ${loopCount}` : '';
+  parts.push(`<g style="animation:f ${animDuration}s steps(1,end) ${loopCount}${fadeAnim}">`);
 
   // Generate frame content
   uniqueFrames.forEach(({ frame, frameIndex }) => {
@@ -390,22 +422,79 @@ export const emitFilmstrip = (
 
 //#region Keyframes Generation
 
+interface KeyframeOptions {
+  loopStyle: 'loop' | 'reverse' | 'rewind' | 'fade';
+  forwardDuration: number;
+  totalDuration: number;
+  fadeDuration: number;
+  rewindSpeed: number;
+  loopPause: number;
+}
+
 const generateKeyframes = (
   uniqueFrames: UniqueFrame[],
-  totalDuration: number,
-  frameWidth: number
-): string => {
-  if (uniqueFrames.length === 0) return '';
+  frameWidth: number,
+  options: KeyframeOptions
+): { translateKeyframes: string; opacityKeyframes: string } => {
+  if (uniqueFrames.length === 0) return { translateKeyframes: '', opacityKeyframes: '' };
 
-  const keyframes: string[] = [];
+  const { loopStyle, forwardDuration, totalDuration, fadeDuration, loopPause } = options;
+  const lastFrameIndex = uniqueFrames[uniqueFrames.length - 1].frameIndex;
+  const lastFrameX = -(lastFrameIndex * frameWidth);
 
+  const translateKf: string[] = [];
+  const opacityKf: string[] = [];
+
+  // Forward animation keyframes
   uniqueFrames.forEach(({ frameIndex, timestamp }) => {
     const percent = (timestamp / totalDuration) * 100;
     const translateX = -(frameIndex * frameWidth);
-    keyframes.push(`${percent.toFixed(1)}%{transform:translateX(${translateX}px)}`);
+    translateKf.push(`${percent.toFixed(2)}%{transform:translateX(${translateX}px)}`);
   });
 
-  return `@keyframes f{${keyframes.join('')}}`;
+  if (loopStyle === 'reverse' || loopStyle === 'rewind') {
+    // Add reverse keyframes
+    const reverseStartPercent = (forwardDuration / totalDuration) * 100;
+    const reverseEndPercent = loopPause > 0 ? ((totalDuration - loopPause) / totalDuration) * 100 : 100;
+    const reverseDuration = reverseEndPercent - reverseStartPercent;
+
+    // Iterate frames in reverse order (excluding the last frame which we're already on)
+    const reversedFrames = [...uniqueFrames].reverse().slice(1);
+    reversedFrames.forEach((frame, idx) => {
+      const reverseProgress = (idx + 1) / uniqueFrames.length;
+      const percent = reverseStartPercent + (reverseDuration * reverseProgress);
+      const translateX = -(frame.frameIndex * frameWidth);
+      translateKf.push(`${percent.toFixed(2)}%{transform:translateX(${translateX}px)}`);
+    });
+
+    // End at frame 0
+    if (loopPause > 0) {
+      translateKf.push(`${reverseEndPercent.toFixed(2)}%{transform:translateX(0px)}`);
+      translateKf.push(`100%{transform:translateX(0px)}`);
+    }
+  } else if (loopStyle === 'fade') {
+    // Stay on last frame, add opacity keyframes
+    const fadeStartPercent = (forwardDuration / totalDuration) * 100;
+    const fadeEndPercent = ((forwardDuration + fadeDuration) / totalDuration) * 100;
+
+    // Keep translateX at last frame position during fade
+    translateKf.push(`${fadeStartPercent.toFixed(2)}%{transform:translateX(${lastFrameX}px)}`);
+    translateKf.push(`100%{transform:translateX(${lastFrameX}px)}`);
+
+    // Opacity animation for fade
+    opacityKf.push(`0%{opacity:1}`);
+    opacityKf.push(`${fadeStartPercent.toFixed(2)}%{opacity:1}`);
+    opacityKf.push(`${fadeEndPercent.toFixed(2)}%{opacity:0}`);
+    if (loopPause > 0) {
+      opacityKf.push(`${(100 - (loopPause / totalDuration) * 100).toFixed(2)}%{opacity:0}`);
+    }
+    opacityKf.push(`100%{opacity:0}`);
+  }
+
+  const translateKeyframes = `@keyframes f{${translateKf.join('')}}`;
+  const opacityKeyframes = opacityKf.length > 0 ? `@keyframes fade{${opacityKf.join('')}}` : '';
+
+  return { translateKeyframes, opacityKeyframes };
 };
 
 

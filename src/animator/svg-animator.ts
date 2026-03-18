@@ -656,6 +656,10 @@ export const createFilmstripSVG = (
     footerBackground: ctx.footerBackground,
     loop: options.loop,
     pauseAtEnd,
+    loopStyle: options.loopStyle,
+    loopPause: options.loopPause,
+    fadeDuration: options.fadeDuration,
+    rewindSpeed: options.rewindSpeed,
   });
 
   return result.svg;
