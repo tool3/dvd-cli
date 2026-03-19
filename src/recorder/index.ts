@@ -19,3 +19,5 @@ export {
   generateFramesFromRecording,
   optimizeFrames,
 } from './recording-player';
+
+export { parseCastFile, serializeCastFile } from './cast-parser';

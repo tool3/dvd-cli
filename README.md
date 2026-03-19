@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="examples/svgs/branding/intro.svg" alt="DVD - Terminal Recordings" >
+  <img src="examples/svgs/branding/intro_original.svg" alt="DVD - Terminal Recordings" >
 </p>
 
 <p align="center">

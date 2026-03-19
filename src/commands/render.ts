@@ -28,6 +28,7 @@ interface RenderArgs {
   'loop-style'?: 'loop' | 'reverse' | 'rewind' | 'fade';
   optimize?: boolean;
   filmstrip?: boolean;
+  'custom-glyphs'?: boolean;
 }
 
 
@@ -207,6 +208,7 @@ export const renderCommand = async (args: RenderArgs): Promise<void> => {
         backgroundRadius: ctx.backgroundRadius,
         headerBackground: ctx.headerBackground,
         footerBackground: ctx.footerBackground,
+        customGlyphs: args['custom-glyphs'],
       }, animationOptions);
     } else {
       svg = await createAnimatedSVG(frames, animationOptions);

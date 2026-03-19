@@ -88,6 +88,7 @@ export interface GridState {
   savedCursor: SavedCursorState | null;
   autoWrap: boolean;
   wrapPending: boolean;
+  cursorVisible: boolean;
 }
 
 
@@ -116,6 +117,7 @@ export type VTerminalCommand =
   | { type: 'scrollUp'; count: number }
   | { type: 'scrollDown'; count: number }
   | { type: 'setAutoWrap'; enabled: boolean }
+  | { type: 'setCursorVisible'; visible: boolean }
   | { type: 'noop' };
 
 

@@ -5,6 +5,7 @@
 import yargs from 'yargs';
 import { hideBin } from 'yargs/helpers';
 import { renderCommand } from './commands/render';
+import { renderCastCommand } from './commands/render-cast';
 import { pipeCommand } from './commands/pipe';
 import { newCommand } from './commands/new';
 import { themesCommand } from './commands/themes';
@@ -50,6 +51,12 @@ const createParser = () =>
       alias: 'x',
       type: 'boolean',
       describe: 'Use filmstrip rendering (svg-term style) for smaller file sizes with truecolor',
+      default: false,
+    })
+    .option('custom-glyphs', {
+      alias: 'G',
+      type: 'boolean',
+      describe: 'Render block elements (▀▄█) as geometric shapes for seamless display (filmstrip mode only)',
       default: false,
     })
     .option('loop-style', {
@@ -195,7 +202,6 @@ const createParser = () =>
       describe: 'Header border color (hex)',
     })
     .option('header-border-width', {
-      alias: 'G',
       type: 'number',
       describe: 'Header border width in pixels',
     })
@@ -305,12 +311,105 @@ const createParser = () =>
         }
       }
     )
+    .command(
+      'render <file>',
+      'Render an asciinema .cast file to SVG',
+      (yargs) =>
+        yargs
+          .positional('file', {
+            type: 'string',
+            describe: '.cast file to render',
+            demandOption: true,
+          })
+          .option('output', {
+            alias: 'o',
+            type: 'string',
+            describe: 'Output SVG file path',
+          })
+          .option('theme', {
+            alias: 'T',
+            type: 'string',
+            choices: ['dark', 'dracula', 'nord', 'monokai', 'oneDark', 'catppuccinMocha', 'tokyoNight'],
+            describe: 'Color theme',
+            default: 'dark',
+          })
+          .option('template', {
+            alias: 'm',
+            type: 'string',
+            choices: ['macos', 'windows', 'minimal'],
+            describe: 'Window template style',
+            default: 'macos',
+          })
+          .option('title', {
+            alias: 't',
+            type: 'string',
+            describe: 'Window title text',
+          })
+          .option('font-size', {
+            alias: 's',
+            type: 'number',
+            describe: 'Font size in pixels',
+            default: 14,
+          })
+          .option('line-height', {
+            alias: 'Y',
+            type: 'number',
+            describe: 'Line height multiplier',
+            default: 1.4,
+          })
+          .option('padding', {
+            alias: 'd',
+            type: 'number',
+            describe: 'Content padding in pixels',
+            default: 16,
+          })
+          .option('border-radius', {
+            alias: 'R',
+            type: 'number',
+            describe: 'Window border radius in pixels',
+            default: 8,
+          })
+          .option('custom-glyphs', {
+            alias: 'G',
+            type: 'boolean',
+            describe: 'Render block elements as geometric shapes',
+            default: false,
+          })
+          .option('loop-style', {
+            alias: 'L',
+            type: 'string',
+            choices: ['loop', 'reverse', 'rewind', 'fade'],
+            describe: 'Animation loop style',
+            default: 'loop',
+          })
+          .option('verbose', {
+            alias: 'v',
+            type: 'boolean',
+            describe: 'Verbose output',
+            default: false,
+          })
+          .option('optimize', {
+            alias: 'O',
+            type: 'boolean',
+            describe: 'Optimize SVG output',
+            default: true,
+          }),
+      async (args) => {
+        try {
+          await renderCastCommand(args as any);
+        } catch (err) {
+          console.error(err instanceof Error ? err.message : String(err));
+          process.exit(1);
+        }
+      }
+    )
     .example('$0 demo.cd', 'Render demo.cd to demo.svg')
     .example('$0 script.cd -o output.svg', 'Render with custom output')
     .example('command | $0 -o output.svg', 'Read from stdin (auto-detected)')
     .example('$0 new my-demo --template showcase', 'Create new script from template')
     .example('$0 themes', 'List available themes')
     .example('$0 validate script.cd', 'Validate a script')
+    .example('$0 render recording.cast -T dracula', 'Render asciinema cast with Dracula theme')
     .demandCommand(0)
     .help()
     .alias('help', 'h')
@@ -326,7 +425,7 @@ const run = async (): Promise<void> => {
   const parser = createParser();
   const argv = await parser.parse();
 
-  const subcommands = ['new', 'themes', 'validate'];
+  const subcommands = ['new', 'themes', 'validate', 'render'];
   const ranSubcommand = subcommands.some((cmd) => argv._.includes(cmd));
 
   if (ranSubcommand) {
@@ -406,6 +505,7 @@ const run = async (): Promise<void> => {
       'loop-style': argv['loop-style'] as 'loop' | 'reverse' | 'rewind' | 'fade',
       optimize: argv.optimize,
       filmstrip: argv.filmstrip,
+      'custom-glyphs': argv['custom-glyphs'],
     });
   } catch (err) {
     console.error(err instanceof Error ? err.message : String(err));

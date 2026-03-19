@@ -296,7 +296,11 @@ const mergeRows = (preCommandRows: SpanRow[], recordingRows: SpanRow[], outputSt
 };
 
 /**
- * Generate frames from a recording by replaying through vterminal
+ * Generate frames from a recording by replaying through vterminal.
+ *
+ * Shell command output appears instantly in real terminals - when you run
+ * `echo 'hello'`, the output shows in one frame, not character by character.
+ * So we only capture the final state of the command output.
  */
 const generateRecordingFrames = (
   recording: Recording,
@@ -310,62 +314,32 @@ const generateRecordingFrames = (
   if (events.length === 0) return frames;
 
   // Get the last frame's rows to preserve pre-command terminal content
-  // This includes the prompt line and any content above it
   const lastFrameData = ctx.frameData.length > 0 ? ctx.frameData[ctx.frameData.length - 1] : null;
   const preCommandRows: SpanRow[] = lastFrameData ? lastFrameData.rows : [];
 
   // Create a fresh grid for replaying the command output
   let grid = createGridState(recording.header.width, recording.header.height);
 
-  // Track frame timing
-  const minFrameInterval = 16; // ~60fps max
-  let lastFrameTime = -minFrameInterval / 1000;
+  // Apply all output events to get final terminal state
+  const outputEvents = events.filter(([, eventType]) => eventType === 'o');
+  if (outputEvents.length === 0) return frames;
 
-  for (let i = 0; i < events.length; i++) {
-    const [timestamp, eventType, data] = events[i];
-
-    // Only process output events
-    if (eventType !== 'o') continue;
-
-    // Apply the output to the terminal
+  for (const [, , data] of outputEvents) {
     grid = processInput(grid, data);
-
-    // Check if we should capture a frame (rate limiting)
-    const timeSinceLastFrame = timestamp - lastFrameTime;
-    if (timeSinceLastFrame >= minFrameInterval / 1000) {
-      const recordingRows = coalesce(grid, ctx.theme);
-      // Merge pre-command content with recording output
-      const rows = mergeRows(preCommandRows, recordingRows, outputStartLine);
-      const frameTimestamp = baseTimestamp + timestamp * 1000;
-
-      frames.push({
-        rows,
-        cursor: { row: grid.cursor.row + outputStartLine, col: grid.cursor.col },
-        cursorVisible: false, // Hide cursor during command execution
-        timestamp: frameTimestamp,
-        activeCursor: false,
-      });
-
-      lastFrameTime = timestamp;
-    }
   }
 
-  // Always capture final state
-  if (events.length > 0) {
-    const finalTimestamp = events[events.length - 1][0];
-    if (finalTimestamp > lastFrameTime) {
-      const recordingRows = coalesce(grid, ctx.theme);
-      const rows = mergeRows(preCommandRows, recordingRows, outputStartLine);
+  // Capture single frame with final output (like a real terminal)
+  const finalTimestamp = outputEvents[outputEvents.length - 1][0];
+  const recordingRows = coalesce(grid, ctx.theme);
+  const rows = mergeRows(preCommandRows, recordingRows, outputStartLine);
 
-      frames.push({
-        rows,
-        cursor: { row: grid.cursor.row + outputStartLine, col: grid.cursor.col },
-        cursorVisible: false,
-        timestamp: baseTimestamp + finalTimestamp * 1000,
-        activeCursor: false,
-      });
-    }
-  }
+  frames.push({
+    rows,
+    cursor: { row: grid.cursor.row + outputStartLine, col: grid.cursor.col },
+    cursorVisible: false,
+    timestamp: baseTimestamp + finalTimestamp * 1000,
+    activeCursor: false,
+  });
 
   return frames;
 };

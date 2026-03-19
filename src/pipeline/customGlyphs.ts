@@ -9,6 +9,8 @@ export interface GlyphContext {
   backgroundColor: string;
   lineWidth: number;
   heavyLineWidth: number;
+  // Optional CSS class for fill/stroke - if provided, uses class instead of inline color
+  colorClass?: string;
 }
 
 // Round to 2 decimal places to avoid floating-point imprecision in SVG output
@@ -25,7 +27,6 @@ interface BoxSegments {
   left: number;
   right: number;
 }
-
 
 //#region Color Blending
 
@@ -70,12 +71,26 @@ const blendColors = (fg: string, bg: string, opacity: number): string => {
 
 //#region Detection
 
+// Box-drawing characters that need precise geometric rendering for seamless connections
+export const isBoxDrawing = (codePoint: number): boolean =>
+  codePoint >= 0x2500 && codePoint <= 0x257f;
+
+// All custom glyphs including block elements, braille, etc.
 export const isCustomGlyph = (codePoint: number): boolean =>
   (codePoint >= 0x2500 && codePoint <= 0x257f) ||
   (codePoint >= 0x2580 && codePoint <= 0x259f) ||
   codePoint === 0x25a0 ||
   (codePoint >= 0x2800 && codePoint <= 0x28ff) ||
   (codePoint >= 0x1fb00 && codePoint <= 0x1fbff);
+
+// Check if text contains box-drawing characters (need geometric rendering)
+export const containsBoxDrawing = (text: string): boolean => {
+  for (const char of text) {
+    const codePoint = char.codePointAt(0);
+    if (codePoint !== undefined && isBoxDrawing(codePoint)) return true;
+  }
+  return false;
+};
 
 export const containsCustomGlyphs = (text: string): boolean => {
   for (const char of text) {
@@ -88,28 +103,70 @@ export const containsCustomGlyphs = (text: string): boolean => {
 
 //#region Main Renderer
 
+// Post-process SVG to replace inline colors with CSS class
+const applyColorClass = (svg: string, ctx: GlyphContext): string => {
+  if (!ctx.colorClass) return svg;
+
+  // Strategy:
+  // - For rect elements: replace fill="color" with class (CSS handles fill)
+  // - For line elements: replace stroke="color" with class (CSS handles stroke)
+  // - For path elements: KEEP fill="none", replace stroke="color" with class
+  //   Path elements for box-drawing must remain unfilled (stroke only)
+
+  let result = svg;
+
+  // Handle rect elements - replace fill with class
+  // Rects use fill, not stroke
+  result = result.replace(/<rect([^>]*?)fill="[^"]+"/g, `<rect$1class="${ctx.colorClass}"`);
+
+  // Handle line elements - replace stroke with class
+  // Lines use stroke, not fill
+  result = result.replace(/<line([^>]*?)stroke="[^"]+"/g, `<line$1class="${ctx.colorClass}"`);
+
+  // Handle path elements - keep fill="none", replace stroke with class
+  // Paths for box-drawing corners need fill="none" to avoid filling the path interior
+  result = result.replace(/<path([^>]*?)stroke="[^"]+"/g, `<path$1class="${ctx.colorClass}"`);
+
+  // Handle circle elements (braille dots) - replace fill with class
+  result = result.replace(/<circle([^>]*?)fill="[^"]+"/g, `<circle$1class="${ctx.colorClass}"`);
+
+  return result;
+};
+
 export const renderCustomGlyph = (char: string, ctx: GlyphContext): GlyphResult => {
   const codePoint = char.codePointAt(0);
   if (codePoint === undefined) return { svg: '', handled: false };
 
-  if (codePoint >= 0x2500 && codePoint <= 0x257f) return renderBoxDrawing(codePoint, ctx);
-  if (codePoint >= 0x2580 && codePoint <= 0x259f) return renderBlockElement(codePoint, ctx);
+  let result: GlyphResult;
 
-  // Black Square (U+25A0) - cell-width square, vertically centered
-  if (codePoint === 0x25a0) {
+  if (codePoint >= 0x2500 && codePoint <= 0x257f) {
+    result = renderBoxDrawing(codePoint, ctx);
+  } else if (codePoint >= 0x2580 && codePoint <= 0x259f) {
+    result = renderBlockElement(codePoint, ctx);
+  } else if (codePoint === 0x25a0) {
+    // Black Square (U+25A0) - cell-width square, vertically centered
     const { cellWidth, cellHeight, x, y, color } = ctx;
     const size = cellWidth;
     const squareY = y + (cellHeight - size) / 2;
-    return {
+    result = {
       svg: `<rect x="${x}" y="${squareY}" width="${size}" height="${size}" fill="${color}" shape-rendering="crispEdges"/>`,
       handled: true,
     };
+  } else if (codePoint >= 0x2800 && codePoint <= 0x28ff) {
+    result = renderBraille(codePoint, ctx);
+  } else if (codePoint >= 0x1fb00 && codePoint <= 0x1fbff) {
+    result = renderLegacyComputing(codePoint, ctx);
+  } else {
+    return { svg: '', handled: false };
   }
 
-  if (codePoint >= 0x2800 && codePoint <= 0x28ff) return renderBraille(codePoint, ctx);
-  if (codePoint >= 0x1fb00 && codePoint <= 0x1fbff) return renderLegacyComputing(codePoint, ctx);
+  // Apply CSS class if provided, but NOT for shade characters
+  // Shade characters (U+2591-U+2593) use computed blended colors that must be inline
+  if (result.handled && ctx.colorClass && !isShadeCharacter(codePoint)) {
+    result.svg = applyColorClass(result.svg, ctx);
+  }
 
-  return { svg: '', handled: false };
+  return result;
 };
 
 
@@ -166,8 +223,12 @@ const renderBoxDrawing = (codePoint: number, ctx: GlyphContext): GlyphResult => 
   const { cellWidth, cellHeight, x, y, color, lineWidth, heavyLineWidth } = ctx;
   const centerX = r(x + cellWidth / 2);
   const centerY = r(y + cellHeight / 2);
-  const cellBottom = r(y + cellHeight);
-  const cellRight = r(x + cellWidth);
+  // Add small overlap (0.5px) to ensure seamless connections between cells
+  const overlap = 0.5;
+  const cellTop = r(y - overlap);
+  const cellBottom = r(y + cellHeight + overlap);
+  const cellLeft = r(x - overlap);
+  const cellRight = r(x + cellWidth + overlap);
 
   const getWidth = (type: number): number =>
     type === 0 ? 0 : type === 1 ? lineWidth : type === 2 ? heavyLineWidth : lineWidth;
@@ -187,14 +248,14 @@ const renderBoxDrawing = (codePoint: number, ctx: GlyphContext): GlyphResult => 
   if (segments.up > 0) {
     if (segments.up === 3) {
       paths.push(
-        `<line x1="${r(centerX - doubleOffset)}" y1="${r(y)}" x2="${r(centerX - doubleOffset)}" y2="${centerY}" stroke="${color}" stroke-width="${lineWidth}"/>`,
-        `<line x1="${r(centerX + doubleOffset)}" y1="${r(y)}" x2="${r(centerX + doubleOffset)}" y2="${centerY}" stroke="${color}" stroke-width="${lineWidth}"/>`
+        `<line x1="${r(centerX - doubleOffset)}" y1="${cellTop}" x2="${r(centerX - doubleOffset)}" y2="${centerY}" stroke="${color}" stroke-width="${lineWidth}"/>`,
+        `<line x1="${r(centerX + doubleOffset)}" y1="${cellTop}" x2="${r(centerX + doubleOffset)}" y2="${centerY}" stroke="${color}" stroke-width="${lineWidth}"/>`
       );
     } else {
       const w = getWidth(segments.up);
       // If there are double horizontal lines, stop the single vertical at the inner edge
       const endY = (hasDoubleLeft || hasDoubleRight) ? r(centerY - doubleOffset) : centerY;
-      paths.push(`<line x1="${centerX}" y1="${r(y)}" x2="${centerX}" y2="${endY}" stroke="${color}" stroke-width="${w}"/>`);
+      paths.push(`<line x1="${centerX}" y1="${cellTop}" x2="${centerX}" y2="${endY}" stroke="${color}" stroke-width="${w}"/>`);
     }
   }
 
@@ -215,14 +276,14 @@ const renderBoxDrawing = (codePoint: number, ctx: GlyphContext): GlyphResult => 
   if (segments.left > 0) {
     if (segments.left === 3) {
       paths.push(
-        `<line x1="${r(x)}" y1="${r(centerY - doubleOffset)}" x2="${centerX}" y2="${r(centerY - doubleOffset)}" stroke="${color}" stroke-width="${lineWidth}"/>`,
-        `<line x1="${r(x)}" y1="${r(centerY + doubleOffset)}" x2="${centerX}" y2="${r(centerY + doubleOffset)}" stroke="${color}" stroke-width="${lineWidth}"/>`
+        `<line x1="${cellLeft}" y1="${r(centerY - doubleOffset)}" x2="${centerX}" y2="${r(centerY - doubleOffset)}" stroke="${color}" stroke-width="${lineWidth}"/>`,
+        `<line x1="${cellLeft}" y1="${r(centerY + doubleOffset)}" x2="${centerX}" y2="${r(centerY + doubleOffset)}" stroke="${color}" stroke-width="${lineWidth}"/>`
       );
     } else {
       const w = getWidth(segments.left);
       // If there are double vertical lines, stop the single horizontal at the inner edge
       const endX = (hasDoubleUp || hasDoubleDown) ? r(centerX - doubleOffset) : centerX;
-      paths.push(`<line x1="${r(x)}" y1="${centerY}" x2="${endX}" y2="${centerY}" stroke="${color}" stroke-width="${w}"/>`);
+      paths.push(`<line x1="${cellLeft}" y1="${centerY}" x2="${endX}" y2="${centerY}" stroke="${color}" stroke-width="${w}"/>`);
     }
   }
 
@@ -246,10 +307,12 @@ const renderBoxDrawing = (codePoint: number, ctx: GlyphContext): GlyphResult => 
 
 const renderDoubleLineCorner = (segments: BoxSegments, ctx: GlyphContext, doubleOffset: number): GlyphResult => {
   const { cellWidth, cellHeight, x, y, color, lineWidth } = ctx;
-  const rx = r(x);
-  const ry = r(y);
-  const rBottom = r(y + cellHeight);
-  const rRight = r(x + cellWidth);
+  // Add small overlap to ensure seamless connections
+  const overlap = 0.5;
+  const rx = r(x - overlap);
+  const ry = r(y - overlap);
+  const rBottom = r(y + cellHeight + overlap);
+  const rRight = r(x + cellWidth + overlap);
   const centerX = r(x + cellWidth / 2);
   const centerY = r(y + cellHeight / 2);
   const paths: string[] = [];
@@ -386,6 +449,11 @@ const renderDiagonalLine = (codePoint: number, ctx: GlyphContext): GlyphResult =
 
 //#region Block Elements (U+2580-U+259F)
 
+// Check if a block element uses blended colors (shades)
+// These should NOT have CSS class applied since they use computed colors
+export const isShadeCharacter = (codePoint: number): boolean =>
+  codePoint >= 0x2591 && codePoint <= 0x2593;
+
 const renderBlockElement = (codePoint: number, ctx: GlyphContext): GlyphResult => {
   const { cellWidth, cellHeight, x, y, color, backgroundColor } = ctx;
   const crisp = ' shape-rendering="crispEdges"';
@@ -412,9 +480,11 @@ const renderBlockElement = (codePoint: number, ctx: GlyphContext): GlyphResult =
     case 0x258f: svg = `<rect x="${x}" y="${y}" width="${cellWidth / 8}" height="${cellHeight + overlap}" fill="${color}"${crisp}/>`; break;
     case 0x2590: svg = `<rect x="${x + cellWidth / 2}" y="${y}" width="${cellWidth / 2 + overlap}" height="${cellHeight + overlap}" fill="${color}"${crisp}/>`; break;
     // Shade characters - pre-blend to avoid subpixel seams on high-DPI displays
-    case 0x2591: svg = `<rect x="${x}" y="${y}" width="${cellWidth + overlap}" height="${cellHeight + overlap}" fill="${blendColors(color, backgroundColor, 0.25)}"${crisp}/>`; break;
-    case 0x2592: svg = `<rect x="${x}" y="${y}" width="${cellWidth + overlap}" height="${cellHeight + overlap}" fill="${blendColors(color, backgroundColor, 0.5)}"${crisp}/>`; break;
-    case 0x2593: svg = `<rect x="${x}" y="${y}" width="${cellWidth + overlap}" height="${cellHeight + overlap}" fill="${blendColors(color, backgroundColor, 0.75)}"${crisp}/>`; break;
+    // These use computed blended colors, so they should NOT have CSS class applied
+    // No overlap for shades - they're full-cell fills and the blended color handles anti-aliasing
+    case 0x2591: svg = `<rect x="${x}" y="${y}" width="${cellWidth}" height="${cellHeight}" fill="${blendColors(color, backgroundColor, 0.25)}"${crisp}/>`; break;
+    case 0x2592: svg = `<rect x="${x}" y="${y}" width="${cellWidth}" height="${cellHeight}" fill="${blendColors(color, backgroundColor, 0.5)}"${crisp}/>`; break;
+    case 0x2593: svg = `<rect x="${x}" y="${y}" width="${cellWidth}" height="${cellHeight}" fill="${blendColors(color, backgroundColor, 0.75)}"${crisp}/>`; break;
     case 0x2594: svg = `<rect x="${x}" y="${y}" width="${cellWidth + overlap}" height="${cellHeight / 8}" fill="${color}"${crisp}/>`; break;
     case 0x2595: svg = `<rect x="${x + cellWidth * 7 / 8}" y="${y}" width="${cellWidth / 8 + overlap}" height="${cellHeight + overlap}" fill="${color}"${crisp}/>`; break;
     case 0x2596: svg = `<rect x="${x}" y="${y + cellHeight / 2}" width="${cellWidth / 2}" height="${cellHeight / 2 + overlap}" fill="${color}"${crisp}/>`; break;

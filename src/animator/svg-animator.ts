@@ -605,6 +605,8 @@ export interface FilmstripAnimationContext {
   backgroundRadius?: number;
   headerBackground?: string;
   footerBackground?: string;
+  // When true, render block elements as geometric shapes for seamless display
+  customGlyphs?: boolean;
 }
 
 export const createFilmstripSVG = (
@@ -654,6 +656,7 @@ export const createFilmstripSVG = (
     backgroundRadius: ctx.backgroundRadius,
     headerBackground: ctx.headerBackground,
     footerBackground: ctx.footerBackground,
+    customGlyphs: ctx.customGlyphs,
     loop: options.loop,
     pauseAtEnd,
     loopStyle: options.loopStyle,

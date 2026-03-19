@@ -28,6 +28,7 @@ export const createGridState = (width: number, height: number): GridState => {
     savedCursor: null,
     autoWrap: true,
     wrapPending: false,
+    cursorVisible: true,
   };
 };
 
@@ -80,6 +81,8 @@ export const applyCommand = (state: GridState, command: VTerminalCommand): GridS
       return handleScrollDown(state, command.count);
     case 'setAutoWrap':
       return { ...state, autoWrap: command.enabled };
+    case 'setCursorVisible':
+      return { ...state, cursorVisible: command.visible };
     case 'noop':
       return state;
     default:
@@ -550,6 +553,20 @@ const parseEscapeSequence = (input: string, start: number): ParseResult | null =
   if (next === '7') return { command: { type: 'saveCursor' }, endIndex: start + 2 };
   if (next === '8') return { command: { type: 'restoreCursor' }, endIndex: start + 2 };
 
+  // Keypad modes (DECKPAM / DECKPNM)
+  if (next === '=') return { command: { type: 'noop' }, endIndex: start + 2 }; // Application Keypad Mode
+  if (next === '>') return { command: { type: 'noop' }, endIndex: start + 2 }; // Normal Keypad Mode
+
+  // DEC private mode sequences without CSI (ESC followed by other chars)
+  // These are single-character escape sequences that should be ignored
+  if (next === '(' || next === ')' || next === '*' || next === '+') {
+    // Character set designation (e.g., ESC ( B for ASCII)
+    if (start + 2 < input.length) {
+      return { command: { type: 'noop' }, endIndex: start + 3 };
+    }
+    return { command: { type: 'noop' }, endIndex: start + 2 };
+  }
+
   if (next === ']') {
     let j = start + 2;
     while (j < input.length) {
@@ -614,7 +631,11 @@ const interpretCSI = (params: string, _intermediate: string, final: string): VTe
     case 'u': return { type: 'restoreCursor' };
     case 'h':
     case 'l':
-      if (isPrivate && paramList[0] === 7) return { type: 'setAutoWrap', enabled: final === 'h' };
+      if (isPrivate) {
+        // DEC Private Mode Set/Reset
+        if (paramList[0] === 7) return { type: 'setAutoWrap', enabled: final === 'h' };
+        if (paramList[0] === 25) return { type: 'setCursorVisible', visible: final === 'h' };
+      }
       return { type: 'noop' };
     default: return { type: 'noop' };
   }
