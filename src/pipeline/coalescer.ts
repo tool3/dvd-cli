@@ -150,7 +150,15 @@ export const coalesce = (grid: GridState, theme: Theme): SpanRow[] => {
     const spans: Span[] = [];
     for (let i = 0; i <= lastVisibleIndex; i++) {
       if (allSpans[i].text.length > 0) {
-        spans.push(allSpans[i]);
+        // For the last visible span, trim trailing whitespace (unless it has background color)
+        if (i === lastVisibleIndex && !allSpans[i].style.bg) {
+          const trimmed = allSpans[i].text.trimEnd();
+          if (trimmed.length > 0) {
+            spans.push({ ...allSpans[i], text: trimmed });
+          }
+        } else {
+          spans.push(allSpans[i]);
+        }
       }
     }
     result.push(spans);

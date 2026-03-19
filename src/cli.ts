@@ -4,12 +4,16 @@
 
 import yargs from 'yargs';
 import { hideBin } from 'yargs/helpers';
+import { themes } from 'shellfie';
 import { renderCommand } from './commands/render';
 import { renderCastCommand } from './commands/render-cast';
 import { pipeCommand } from './commands/pipe';
 import { newCommand } from './commands/new';
 import { themesCommand } from './commands/themes';
 import { validateCommand } from './commands/validate';
+
+// Generate theme choices from shellfie themes
+const themeChoices = Object.keys(themes) as string[];
 
 
 //#region CLI Parser
@@ -57,7 +61,7 @@ const createParser = () =>
       alias: 'G',
       type: 'boolean',
       describe: 'Render block elements (▀▄█) as geometric shapes for seamless display (filmstrip mode only)',
-      default: false,
+      default: true,
     })
     .option('loop-style', {
       alias: 'L',
@@ -108,7 +112,7 @@ const createParser = () =>
     .option('theme', {
       alias: 'T',
       type: 'string',
-      choices: ['dark', 'dracula', 'nord', 'monokai', 'oneDark', 'catppuccinMocha', 'tokyoNight'],
+      choices: themeChoices,
       describe: 'Color theme',
       default: 'dark',
     })
@@ -329,7 +333,7 @@ const createParser = () =>
           .option('theme', {
             alias: 'T',
             type: 'string',
-            choices: ['dark', 'dracula', 'nord', 'monokai', 'oneDark', 'catppuccinMocha', 'tokyoNight'],
+            choices: themeChoices,
             describe: 'Color theme',
             default: 'dark',
           })
@@ -373,7 +377,7 @@ const createParser = () =>
             alias: 'G',
             type: 'boolean',
             describe: 'Render block elements as geometric shapes',
-            default: false,
+            default: true,
           })
           .option('loop-style', {
             alias: 'L',

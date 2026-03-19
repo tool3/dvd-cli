@@ -9,6 +9,9 @@ import type { Recording, CastHeader, CastEvent, CastEventType } from './types';
  * Format:
  * - Line 1: JSON header object with version, width/height (v1/v2) or term.cols/rows (v3)
  * - Lines 2+: JSON arrays [timestamp, event_type, data]
+ *
+ * Note: v3 uses relative (delta) timestamps while v1/v2 use absolute timestamps.
+ * This parser normalizes v3 timestamps to absolute for consistent processing.
  */
 export const parseCastFile = (content: string): Recording => {
   const lines = content.split('\n').filter((line) => line.trim().length > 0);
@@ -17,10 +20,12 @@ export const parseCastFile = (content: string): Recording => {
     throw new Error('Cast file is empty');
   }
 
-  // Parse header (first line)
+  // Parse header (first line) and get original version for timestamp handling
   let header: CastHeader;
+  let originalVersion: number;
   try {
     const rawHeader = JSON.parse(lines[0]);
+    originalVersion = typeof rawHeader.version === 'number' ? rawHeader.version : 2;
     header = validateHeader(rawHeader);
   } catch (err) {
     if (err instanceof SyntaxError) {
@@ -30,14 +35,25 @@ export const parseCastFile = (content: string): Recording => {
   }
 
   // Parse events (remaining lines)
+  // v3 uses relative timestamps (delta from previous event)
+  // v1/v2 use absolute timestamps
   const events: CastEvent[] = [];
+  let cumulativeTime = 0;
+
   for (let i = 1; i < lines.length; i++) {
     try {
       const rawEvent = JSON.parse(lines[i]);
       const event = validateEvent(rawEvent, i + 1);
       // validateEvent returns null for event types we don't handle
       if (event !== null) {
-        events.push(event);
+        if (originalVersion === 3) {
+          // v3: convert relative timestamp to absolute
+          cumulativeTime += event[0];
+          events.push([cumulativeTime, event[1], event[2]]);
+        } else {
+          // v1/v2: timestamps are already absolute
+          events.push(event);
+        }
       }
     } catch (err) {
       if (err instanceof SyntaxError) {

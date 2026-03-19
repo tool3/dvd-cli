@@ -119,8 +119,6 @@ export const executeType = async (
     captureFrame(ctx, options, true, true);
     ctx.captureOverhead += Date.now() - captureStart;
   }
-
-  captureFrame(ctx, options, true, false);
 };
 
 

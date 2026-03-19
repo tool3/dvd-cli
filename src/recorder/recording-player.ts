@@ -4,6 +4,81 @@ import type { FrameData } from '../pipeline/svg-emitter';
 import { createGridState, processInput } from '../pipeline/vterminal';
 import { coalesce } from '../pipeline/coalescer';
 
+
+//#region Event Coalescing
+
+/**
+ * Check if a string ends with an incomplete ANSI escape sequence.
+ * This detects sequences like "\x1b[38;2;134" that are missing the final command letter.
+ */
+const endsWithIncompleteSequence = (data: string): boolean => {
+  // Look for ESC that starts a sequence but doesn't have a terminator
+  const lastEsc = data.lastIndexOf('\x1b');
+  if (lastEsc === -1) return false;
+
+  const afterEsc = data.slice(lastEsc);
+
+  // Check for CSI sequence (ESC [) without final byte (0x40-0x7E)
+  if (afterEsc.startsWith('\x1b[')) {
+    const csiContent = afterEsc.slice(2);
+    // CSI sequences end with a letter (A-Z, a-z, @, etc.)
+    // If we only have digits, semicolons, or nothing, it's incomplete
+    if (csiContent.length === 0) return true;
+    const lastChar = csiContent.charCodeAt(csiContent.length - 1);
+    // Final bytes are in range 0x40-0x7E (@ through ~)
+    return lastChar < 0x40 || lastChar > 0x7e;
+  }
+
+  // Check for bare ESC at the end
+  if (afterEsc === '\x1b') return true;
+
+  // Check for OSC sequence (ESC ]) without terminator (BEL or ST)
+  if (afterEsc.startsWith('\x1b]')) {
+    return !afterEsc.includes('\x07') && !afterEsc.includes('\x1b\\');
+  }
+
+  return false;
+};
+
+/**
+ * Coalesce events that happen within a very short time window OR that have
+ * split ANSI sequences. Cast files often split output at arbitrary byte
+ * boundaries, causing escape sequences to span multiple events.
+ */
+const coalesceEvents = (events: CastEvent[], threshold: number = 0.005): CastEvent[] => {
+  if (events.length === 0) return [];
+
+  const result: CastEvent[] = [];
+  let currentTimestamp = events[0][0];
+  let currentType = events[0][1];
+  let currentData = events[0][2];
+
+  for (let i = 1; i < events.length; i++) {
+    const [timestamp, eventType, data] = events[i];
+
+    // Coalesce if:
+    // 1. Same type AND within time threshold, OR
+    // 2. Same type AND previous data ends with incomplete escape sequence
+    const withinThreshold = (timestamp - currentTimestamp) < threshold;
+    const hasIncompleteSequence = endsWithIncompleteSequence(currentData);
+
+    if (eventType === currentType && (withinThreshold || hasIncompleteSequence)) {
+      currentData += data;
+    } else {
+      result.push([currentTimestamp, currentType, currentData]);
+      currentTimestamp = timestamp;
+      currentType = eventType;
+      currentData = data;
+    }
+  }
+
+  // Push the last accumulated event
+  result.push([currentTimestamp, currentType, currentData]);
+
+  return result;
+};
+
+
 //#region Frame Generation
 
 /**
@@ -39,7 +114,8 @@ export class RecordingPlayer {
     this.reset();
 
     const frames: FrameData[] = [];
-    const events = this.recording.events;
+    // Coalesce events to prevent split ANSI sequences
+    const events = coalesceEvents(this.recording.events);
     let lastFrameTime = -minFrameInterval;
 
     // Pre-analyze events to detect typing vs command output
@@ -63,16 +139,16 @@ export class RecordingPlayer {
       const timeSinceLastFrame = timestamp - lastFrameTime;
       const state = eventStates[i];
 
-      // Skip capturing during bursts UNLESS this is the end of a burst
-      // This ensures we capture the final state of burst sequences (like prompt redraws)
+      // Determine if this is the end of a burst (significant gap after this event)
       const isEndOfBurst = i >= events.length - 1 ||
         (events[i + 1][0] - timestamp) >= 0.1; // 100ms gap = end of burst
 
+      // Capture frames at regular intervals, even during bursts
+      // This preserves animations that rapidly redraw content (like progress bars, charts)
       const shouldCapture =
         captureEveryOutput &&
         eventType === 'o' &&
-        timeSinceLastFrame >= minFrameInterval / 1000 &&
-        (state.showCursor || isEndOfBurst); // Capture at end of bursts too
+        timeSinceLastFrame >= minFrameInterval / 1000;
 
       if (shouldCapture) {
         // Cap the timestamp delta to maxFrameInterval

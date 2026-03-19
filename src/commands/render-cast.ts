@@ -5,7 +5,8 @@ import { parseCastFile, generateFramesFromRecording } from '../recorder';
 import { createFilmstripSVG } from '../animator/svg-animator';
 import { optimizeSvg } from '../animator/svg-optimizer';
 import { createSpinner } from '../utils/spinner';
-import { themes } from '../pipeline';
+import { themes as pipelineThemes } from '../pipeline';
+import { themes as shellfieThemes } from 'shellfie';
 import type { AnimationOptions } from '../animator/svg-animator';
 import type { Theme } from '../types';
 
@@ -46,7 +47,7 @@ export interface RenderCastArgs {
   background?: string;
   'background-padding'?: number;
   'background-radius'?: number;
-  // Dimension overrides
+  // Dimension overrides (if not provided, auto-calculated from content)
   width?: number;
   height?: number;
 }
@@ -70,12 +71,94 @@ const loadCastFile = (filePath: string) => {
 //#region Theme Resolution
 
 const resolveTheme = (themeName: string): Theme => {
-  const theme = themes[themeName as keyof typeof themes];
-  if (!theme) {
-    const available = Object.keys(themes).join(', ');
-    throw new Error(`Unknown theme: "${themeName}". Available themes: ${available}`);
+  // Check pipeline themes first
+  const pipelineTheme = pipelineThemes[themeName as keyof typeof pipelineThemes];
+  if (pipelineTheme) {
+    return pipelineTheme as Theme;
   }
-  return theme as Theme;
+
+  // Check shellfie themes (with camelCase conversion)
+  let name = themeName as keyof typeof shellfieThemes;
+  if (!shellfieThemes[name]) {
+    const camelCase = themeName.replace(/-([a-z])/g, (_, letter) =>
+      letter.toUpperCase()
+    ) as keyof typeof shellfieThemes;
+    if (shellfieThemes[camelCase]) {
+      name = camelCase;
+    }
+  }
+
+  if (shellfieThemes[name]) {
+    const st = shellfieThemes[name];
+    return {
+      name: themeName,
+      background: st.background,
+      foreground: st.foreground,
+      cursor: st.cursor,
+      selection: st.selection,
+      black: st.black,
+      red: st.red,
+      green: st.green,
+      yellow: st.yellow,
+      blue: st.blue,
+      magenta: st.magenta,
+      cyan: st.cyan,
+      white: st.white,
+      brightBlack: st.brightBlack,
+      brightRed: st.brightRed,
+      brightGreen: st.brightGreen,
+      brightYellow: st.brightYellow,
+      brightBlue: st.brightBlue,
+      brightMagenta: st.brightMagenta,
+      brightCyan: st.brightCyan,
+      brightWhite: st.brightWhite,
+    };
+  }
+
+  const available = Object.keys(shellfieThemes).join(', ');
+  throw new Error(`Unknown theme: "${themeName}". Available themes: ${available}`);
+};
+
+
+//#region Auto-Dimension Calculation
+
+import type { FrameData } from '../pipeline/svg-emitter';
+
+/**
+ * Calculate content dimensions from frame data.
+ * Returns the max column and max row used across all frames.
+ */
+const calculateContentDimensions = (frames: FrameData[]): { cols: number; rows: number } => {
+  let maxCol = 0;
+  let maxRow = 0;
+
+  for (const frame of frames) {
+    for (const row of frame.rows) {
+      for (const span of row) {
+        // Track max row index
+        if (span.row > maxRow) {
+          maxRow = span.row;
+        }
+        // Track max column (span start + text length, trimmed)
+        const endCol = span.col + span.text.trimEnd().length;
+        if (endCol > maxCol) {
+          maxCol = endCol;
+        }
+      }
+    }
+    // Also consider cursor position
+    if (frame.cursor) {
+      if (frame.cursor.row > maxRow) {
+        maxRow = frame.cursor.row;
+      }
+      if (frame.cursor.col > maxCol) {
+        maxCol = frame.cursor.col;
+      }
+    }
+  }
+
+  // Add 1 to convert from 0-indexed to count
+  return { cols: maxCol + 1, rows: maxRow + 1 };
 };
 
 
@@ -130,16 +213,43 @@ export const renderCastCommand = async (args: RenderCastArgs): Promise<void> => 
     const headerHeight = args['header-height'] ?? (template === 'minimal' ? 0 : 40);
     const footerHeight = args['footer-height'] ?? 0;
 
-    // Use cast dimensions or override
-    const termWidth = args.width ?? recording.header.width;
-    const termHeight = args.height ?? recording.header.height;
-
     const charWidth = fontSize * charWidthRatio;
     const lineHeightPx = fontSize * lineHeight;
-    const contentWidth = termWidth * charWidth;
-    const contentHeight = termHeight * lineHeightPx;
-    const totalWidth = contentWidth + padding * 2;
-    const totalHeight = contentHeight + headerHeight + footerHeight + padding * 2;
+
+    // Calculate dimensions - auto from content unless explicitly provided
+    let totalWidth: number;
+    let totalHeight: number;
+
+    if (args.width !== undefined && args.height !== undefined) {
+      // Both explicitly provided as pixel dimensions
+      totalWidth = args.width;
+      totalHeight = args.height;
+    } else {
+      // Calculate from content
+      const contentDims = calculateContentDimensions(frameData);
+
+      if (args.width !== undefined) {
+        // Width provided as pixels
+        totalWidth = args.width;
+      } else {
+        // Auto width from content
+        const contentWidth = contentDims.cols * charWidth;
+        totalWidth = contentWidth + padding * 2;
+      }
+
+      if (args.height !== undefined) {
+        // Height provided as pixels
+        totalHeight = args.height;
+      } else {
+        // Auto height from content
+        const contentHeight = contentDims.rows * lineHeightPx;
+        totalHeight = contentHeight + headerHeight + footerHeight + padding * 2;
+      }
+
+      if (args.verbose) {
+        console.log(`Auto-calculated dimensions: ${Math.round(totalWidth)}x${Math.round(totalHeight)} px (${contentDims.cols} cols x ${contentDims.rows} rows)`);
+      }
+    }
 
     // Build animation options
     const loopStyle = args['loop-style'] || 'loop';

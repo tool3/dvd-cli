@@ -440,9 +440,12 @@ export const emitFilmstrip = (
   parts.push('.bold{font-weight:700}.italic{font-style:italic}.uline{text-decoration:underline}.strike{text-decoration:line-through}.dim{opacity:0.5}');
 
   // Cursor blink animation - .cursor blinks, .cursor-active stays solid (during typing)
+  // Use mix-blend-mode:difference to invert text color under the cursor
   const cursorBlink = options.cursorBlink !== false;
   if (cursorBlink) {
-    parts.push(`@keyframes blink{0%,50%{opacity:1}50.01%,100%{opacity:0}}.cursor{animation:blink 1s step-end infinite}.cursor-active{opacity:1}`);
+    parts.push(`@keyframes blink{0%,50%{opacity:1}50.01%,100%{opacity:0}}.cursor{animation:blink 1s step-end infinite;mix-blend-mode:difference}.cursor-active{opacity:1;mix-blend-mode:difference}`);
+  } else {
+    parts.push(`.cursor,.cursor-active{mix-blend-mode:difference}`);
   }
   parts.push('</style>');
 
@@ -538,7 +541,8 @@ export const emitFilmstrip = (
       const cursorClass = cursorBlink ? ` class="${cursorClassName}"` : '';
 
       if (cursorStyleType === 'block') {
-        parts.push(`<rect${cursorClass} x="${fmt(cursorX)}" y="${fmt(cursorY)}" width="${fmt(charWidth)}" height="${fmt(lineHeight)}" fill="${cursorColor}"/>`);
+        // Use white fill for block cursor with mix-blend-mode:difference to invert text
+        parts.push(`<rect${cursorClass} x="${fmt(cursorX)}" y="${fmt(cursorY)}" width="${fmt(charWidth)}" height="${fmt(lineHeight)}" fill="#fff"/>`);
       } else if (cursorStyleType === 'bar') {
         parts.push(`<rect${cursorClass} x="${fmt(cursorX)}" y="${fmt(cursorY)}" width="2" height="${fmt(lineHeight)}" fill="${cursorColor}"/>`);
       } else {

@@ -6,11 +6,26 @@ import { optimizeSvg } from '../animator/svg-optimizer';
 import { createSpinner } from '../utils/spinner';
 import { createGridState, processInput } from '../pipeline/vterminal';
 import { coalesce } from '../pipeline/coalescer';
-import { themes } from '../pipeline';
-import { parseGradient } from 'shellfie';
+import { themes as pipelineThemes } from '../pipeline';
+import { parseGradient, themes as shellfieThemes } from 'shellfie';
 import type { FrameData } from '../pipeline/svg-emitter';
 import type { AnimationOptions } from '../animator/svg-animator';
 import type { Gradient } from '../types';
+
+type Theme = typeof pipelineThemes.dark;
+
+const resolveTheme = (themeName: string): Theme => {
+  // Check pipeline themes first
+  if (themeName in pipelineThemes) {
+    return (pipelineThemes as unknown as Record<string, Theme>)[themeName];
+  }
+  // Fall back to shellfie themes
+  if (themeName in shellfieThemes) {
+    return (shellfieThemes as unknown as Record<string, Theme>)[themeName];
+  }
+  // Default to dark theme
+  return pipelineThemes.dark;
+};
 
 
 //#region Types
@@ -70,7 +85,7 @@ interface RenderFrameOptions {
   lineHeight: number;
   padding: number;
   borderRadius: number;
-  theme: typeof themes.dark;
+  theme: typeof pipelineThemes.dark;
   title?: string;
   template: 'macos' | 'windows' | 'minimal';
   borderColor?: string;
@@ -253,7 +268,7 @@ export const pipeCommand = async (args: PipeArgs): Promise<void> => {
     const lineHeight = args.lineHeight || 1.4;
     const padding = args.padding || 16;
     const borderRadius = args.borderRadius || 8;
-    const theme = args.theme ? (themes as unknown as Record<string, typeof themes.dark>)[args.theme] || themes.dark : themes.dark;
+    const theme = args.theme ? resolveTheme(args.theme) : pipelineThemes.dark;
     const title = args.title;
     const template = (args.template || 'macos') as 'macos' | 'windows' | 'minimal';
     const cursorStyle = (args.cursorStyle || 'block') as 'block' | 'bar' | 'underline';
