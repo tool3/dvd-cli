@@ -1,15 +1,14 @@
 //#region Imports
 
 import { writeFileSync } from 'node:fs';
-import { createAnimatedSVG, getAnimationMetadata } from '../animator/svg-animator';
+import { createFilmstripSVG } from '../animator/svg-animator';
 import { optimizeSvg } from '../animator/svg-optimizer';
 import { createSpinner } from '../utils/spinner';
 import { createGridState, processInput } from '../pipeline/vterminal';
 import { coalesce } from '../pipeline/coalescer';
-import { emit } from '../pipeline/svg-emitter';
 import { themes } from '../pipeline';
 import { parseGradient } from 'shellfie';
-import type { TerminalFrame } from '../executor/cd-executor';
+import type { FrameData } from '../pipeline/svg-emitter';
 import type { AnimationOptions } from '../animator/svg-animator';
 import type { Gradient } from '../types';
 
@@ -56,6 +55,7 @@ interface PipeArgs {
   backgroundPadding?: number;
   backgroundRadius?: number;
   playbackSpeed?: number;
+  customGlyphs?: boolean;
 }
 
 interface StdinResult {
@@ -179,9 +179,13 @@ const splitIntoFrames = (content: string, animationType: 'terminal-reset' | 'cur
 };
 
 
-//#region Frame Rendering
+//#region Frame Data Generation
 
-const renderFrame = (content: string, options: RenderFrameOptions): string => {
+const generateFrameData = (
+  content: string,
+  timestamp: number,
+  options: RenderFrameOptions
+): FrameData => {
   const charWidth = options.fontSize * 0.6;
   const lineHeightPx = options.fontSize * options.lineHeight;
   const headerHeight = options.headerHeight ?? 40;
@@ -195,41 +199,13 @@ const renderFrame = (content: string, options: RenderFrameOptions): string => {
 
   const rows = coalesce(grid, options.theme);
 
-  const { svg } = emit(rows, null, false, {
-    theme: options.theme,
-    template: options.template,
-    width: options.width,
-    height: options.height,
-    fontSize: options.fontSize,
-    title: options.title,
-    lineHeight: lineHeightPx,
-    charWidth: charWidth,
-    padding: options.padding,
-    borderRadius: options.borderRadius,
-    borderColor: options.borderColor,
-    borderWidth: options.borderWidth,
-    fontFamily: options.fontFamily,
-    watermark: options.watermark,
-    cursorStyle: options.cursorStyle,
-    cursorColor: options.cursorColor,
-    cursorBlink: options.cursorBlink,
-    headerBackground: options.headerBackground,
-    headerHeight: options.headerHeight,
-    headerBorder: options.headerBorder,
-    headerBorderColor: options.headerBorderColor,
-    headerBorderWidth: options.headerBorderWidth,
-    footerBackground: options.footerBackground,
-    footerHeight: options.footerHeight,
-    footerBorder: options.footerBorder,
-    footerBorderColor: options.footerBorderColor,
-    footerBorderWidth: options.footerBorderWidth,
-    letterSpacing: options.letterSpacing,
-    background: options.background,
-    backgroundPadding: options.backgroundPadding,
-    backgroundRadius: options.backgroundRadius,
-  });
-
-  return svg;
+  return {
+    rows,
+    cursor: { row: grid.cursor.row, col: grid.cursor.col },
+    cursorVisible: false,
+    timestamp,
+    activeCursor: false,
+  };
 };
 
 
@@ -378,34 +354,19 @@ export const pipeCommand = async (args: PipeArgs): Promise<void> => {
       spinner.update(`Rendering ${frameContents.length} frames`);
     }
 
-    const frames: TerminalFrame[] = frameContents.map((content, i) => {
-      const svg = renderFrame(content, { ...renderOptions, width, height });
-      return {
-        timestamp: i * frameDuration,
-        svg,
-        state: {
-          content,
-          cursorX: 0,
-          cursorY: 0,
-          width,
-          height,
-          fontSize,
-          showCursor: false,
-          activeCursor: false,
-        },
-      };
+    // Apply playback speed to frame timestamps
+    const speed = args.playbackSpeed ?? 1;
+
+    const frameData: FrameData[] = frameContents.map((content, i) => {
+      let timestamp = i * frameDuration;
+      if (speed !== 1 && speed > 0) {
+        timestamp = Math.round(timestamp / speed);
+      }
+      return generateFrameData(content, timestamp, { ...renderOptions, width, height });
     });
 
     if (args.verbose) {
-      console.log(`Rendered ${frames.length} frames`);
-    }
-
-    // Apply playback speed to frame timestamps
-    const speed = args.playbackSpeed ?? 1;
-    if (speed !== 1 && speed > 0) {
-      for (const frame of frames) {
-        frame.timestamp = Math.round(frame.timestamp / speed);
-      }
+      console.log(`Rendered ${frameData.length} frames`);
     }
 
     if (!args.verbose) {
@@ -421,7 +382,36 @@ export const pipeCommand = async (args: PipeArgs): Promise<void> => {
       rewindSpeed: args['rewind-speed'] ?? 5,
     };
 
-    let svg = await createAnimatedSVG(frames, animationOptions);
+    const charWidth = fontSize * 0.6;
+    const lineHeightPx = fontSize * lineHeight;
+    const headerHeight = args.headerHeight ?? 40;
+
+    let svg = createFilmstripSVG({
+      frameData,
+      theme,
+      width,
+      height,
+      fontSize,
+      template,
+      title,
+      watermark: args.watermark,
+      lineHeight: lineHeightPx,
+      charWidth,
+      padding,
+      borderRadius,
+      headerHeight,
+      footerHeight: args.footerHeight ?? 0,
+      cursorStyle,
+      cursorColor: args.cursorColor,
+      fontFamily: args.fontFamily,
+      background: args.background ? parseGradient(args.background) : undefined,
+      backgroundPadding: args.backgroundPadding,
+      backgroundRadius: args.backgroundRadius,
+      headerBackground: args.headerBackground,
+      footerBackground: args.footerBackground,
+      cursorBlink: args.cursorBlink,
+      customGlyphs: args.customGlyphs,
+    }, animationOptions);
 
     if (!args.verbose) {
       spinner.update('Optimizing SVG');
@@ -436,11 +426,17 @@ export const pipeCommand = async (args: PipeArgs): Promise<void> => {
       console.log(`Optimized: ${(originalSize / 1024).toFixed(0)}KB → ${(optimizedSize / 1024).toFixed(0)}KB (${savings}% reduction)`);
     }
 
-    const outputPath = args.output || 'output.svg';
+    let outputPath = args.output || 'output.svg';
+    // Ensure .svg extension
+    if (!outputPath.endsWith('.svg')) {
+      outputPath += '.svg';
+    }
 
     writeFileSync(outputPath, svg, 'utf-8');
 
-    const metadata = getAnimationMetadata(frames);
+    // Calculate metadata from frameData
+    const frameCount = frameData.length;
+    const duration = frameData.length > 0 ? frameData[frameData.length - 1].timestamp : 0;
     const sizeKB = (Buffer.byteLength(svg, 'utf-8') / 1024).toFixed(2);
 
     // ANSI color codes
@@ -453,17 +449,17 @@ export const pipeCommand = async (args: PipeArgs): Promise<void> => {
     const dim = '\x1b[2m';
     const reset = '\x1b[0m';
 
-    const durationStr = (metadata.duration / 1000).toFixed(2) + 's';
+    const durationStr = (duration / 1000).toFixed(2) + 's';
 
     if (args.verbose) {
       console.log(`\n${green}✓${reset} ${white}Created${reset} ${lightBlue}${outputPath}${reset}`);
-      console.log(`  ${dim}├─${reset} ${lightPink}${metadata.frameCount}${reset}${dim} frames${reset}`);
+      console.log(`  ${dim}├─${reset} ${lightPink}${frameCount}${reset}${dim} frames${reset}`);
       console.log(`  ${dim}├─${reset} ${lightOrange}${durationStr}${reset}${dim} duration${reset}`);
       console.log(`  ${dim}└─${reset} ${limeGreen}${sizeKB}KB${reset}${dim} optimized${reset}`);
     } else {
       spinner.successMultiline([
         `${green}✓${reset} ${white}Created${reset} ${lightBlue}${outputPath}${reset}`,
-        `  ${dim}├─${reset} ${lightPink}${metadata.frameCount}${reset}${dim} frames${reset}`,
+        `  ${dim}├─${reset} ${lightPink}${frameCount}${reset}${dim} frames${reset}`,
         `  ${dim}├─${reset} ${lightOrange}${durationStr}${reset}${dim} duration${reset}`,
         `  ${dim}└─${reset} ${limeGreen}${sizeKB}KB${reset}${dim} optimized${reset}`,
       ]);

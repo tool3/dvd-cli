@@ -38,6 +38,7 @@ export interface CDExecutorOptions {
   title?: string;
   template?: 'macos' | 'windows' | 'minimal';
   theme?: Theme;
+  playbackSpeed?: number;
   onFrame?: (frame: TerminalFrame) => void;
   onProgress?: (current: number, total: number, description?: string) => void;
 }
@@ -57,6 +58,7 @@ export interface ExecutorContext {
   frameData: FrameData[];
   startTime: number;
   captureOverhead: number;
+  lastFrameTimestamp: number;
 
   width: number;
   height: number;

@@ -379,7 +379,9 @@ const appendFrameToContext = (
   if (ctx.autoWidth) {
     for (const row of frameData.rows) {
       for (const span of row) {
-        const lineLength = span.col + span.text.length;
+        // Trim trailing whitespace for auto-width calculation
+        // Shell output often includes padding to terminal width
+        const lineLength = span.col + span.text.trimEnd().length;
         if (lineLength > ctx.maxLineLength) {
           ctx.maxLineLength = lineLength;
         }

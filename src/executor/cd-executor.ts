@@ -38,8 +38,16 @@ export class CDExecutor {
   //#region Main Execution
 
   async execute(script: CDScript): Promise<TerminalFrame[]> {
+    // Store CLI-provided playbackSpeed before applying settings (CLI takes priority)
+    const cliPlaybackSpeed = this.options.playbackSpeed;
+
     for (const [key, value] of script.settings.entries()) {
       applySetting(this.context, key, value);
+    }
+
+    // Restore CLI playbackSpeed if provided (CLI args override .cd file settings)
+    if (cliPlaybackSpeed !== undefined) {
+      this.context.playbackSpeed = cliPlaybackSpeed;
     }
 
     this.context.outputPath = script.output;
@@ -299,6 +307,7 @@ const createContext = (options: CDExecutorOptions): ExecutorContext => {
     frameData: [],
     startTime: Date.now(),
     captureOverhead: 0,
+    lastFrameTimestamp: 0,
 
     width,
     height,
@@ -340,7 +349,7 @@ const createContext = (options: CDExecutorOptions): ExecutorContext => {
     backgroundPadding: 0,
     backgroundRadius: 12,
 
-    playbackSpeed: 1,
+    playbackSpeed: options.playbackSpeed ?? 1,
   };
 };
 

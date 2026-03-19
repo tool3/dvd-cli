@@ -2,7 +2,7 @@
 
 import type { SpanRow, Theme, EmitterOptions, CursorPosition, Gradient } from '../../types';
 import { coalesceBackgrounds, mergeVerticalBackgrounds, type RenderConfig } from '../coalescer';
-import { r, fmt, escapeXml } from './utils';
+import { r, fmt, escapeXml, extractWatermarkDefs } from './utils';
 import { generateStylesheet } from './stylesheet';
 import { generateChrome, generateFooter } from './chrome';
 import type { EmitResult } from './index';
@@ -88,7 +88,8 @@ export const emitAnimated = (
   const lineHeight = options.lineHeight ?? fontSize * 1.4;
   const charWidth = options.charWidth ?? fontSize * 0.6;
   const padding = options.padding ?? 16;
-  const borderRadius = options.borderRadius ?? (template === 'minimal' ? 0 : 8);
+  // Default border radius to 8 for a polished look, unless explicitly set to 0
+  const borderRadius = options.borderRadius ?? 8;
   const headerHeight = options.headerHeight ?? (template === 'minimal' ? 0 : 40);
   const footerHeight = options.footerHeight ?? 0;
   const contentStartY = headerHeight + padding;
@@ -381,25 +382,6 @@ const generateFrameContent = (
 
 //#region Watermark Defs Extraction
 
-const extractWatermarkDefs = (content: string): { defs: string; content: string } => {
-  const defsRegex = /<defs[^>]*>([\s\S]*?)<\/defs>/gi;
-  const matches: string[] = [];
-  let cleanContent = content;
-
-  let match;
-  while ((match = defsRegex.exec(content)) !== null) {
-    matches.push(match[1]); // Inner content of <defs>
-  }
-
-  if (matches.length > 0) {
-    cleanContent = content.replace(defsRegex, '');
-  }
-
-  return {
-    defs: matches.join('\n'),
-    content: cleanContent
-  };
-};
 
 
 //#region Animation Keyframes

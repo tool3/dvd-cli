@@ -1,7 +1,8 @@
 //#region Imports
 
 import type { SpanRow, Theme, EmitterOptions, Gradient } from '../../types';
-import { fmt, escapeXml } from './utils';
+import type { WatermarkConfig } from 'shellfie';
+import { fmt, escapeXml, extractWatermarkDefs } from './utils';
 import type { EmitResult } from './index';
 import type { FrameData } from './animated';
 import { containsCustomGlyphs, isCustomGlyph, renderCustomGlyph, type GlyphContext } from '../customGlyphs';
@@ -153,7 +154,8 @@ const getTextStyleClasses = (style: { bold: boolean; italic: boolean; underline:
 };
 
 const hashFrameContent = (frame: FrameData): string => {
-  const cursorStr = frame.cursor ? `${frame.cursor.row},${frame.cursor.col},${frame.cursorVisible}` : 'null';
+  // Include activeCursor in hash to distinguish typing (solid cursor) from idle (blinking cursor) frames
+  const cursorStr = frame.cursor ? `${frame.cursor.row},${frame.cursor.col},${frame.cursorVisible},${frame.activeCursor}` : 'null';
   const rowsStr = frame.rows.map(row =>
     row.map(span => `${span.col}:${span.text}:${span.style.fg || ''}:${span.style.bg || ''}:${hashStyleFlags(span.style)}`).join('|')
   ).join('\n');
@@ -307,7 +309,8 @@ export const emitFilmstrip = (
   const lineHeight = options.lineHeight ?? fontSize * 1.4;
   const charWidth = options.charWidth ?? fontSize * 0.6;
   const padding = options.padding ?? 16;
-  const borderRadius = options.borderRadius ?? (template === 'minimal' ? 0 : 8);
+  // Default border radius to 8 for a polished look, unless explicitly set to 0
+  const borderRadius = options.borderRadius ?? 8;
   const headerHeight = options.headerHeight ?? (template === 'minimal' ? 0 : 40);
   const contentStartY = headerHeight + padding;
   const loop = options.loop ?? true;
@@ -375,17 +378,36 @@ export const emitFilmstrip = (
     frameRowSymbols.set(frameIndex, rowSymbolMap);
   });
 
+  // Extract watermark content and defs early so we can add defs to root
+  const rawWatermarkContent = typeof options.watermark === 'string' ? options.watermark : (options.watermark as WatermarkConfig)?.content;
+  const isWatermarkMarkup = typeof options.watermark === 'object'
+    ? ((options.watermark as WatermarkConfig).type === 'markup' || rawWatermarkContent?.trimStart().startsWith('<'))
+    : rawWatermarkContent?.trimStart().startsWith('<');
+
+  let watermarkDefs = '';
+  let watermarkContent = rawWatermarkContent;
+  if (isWatermarkMarkup && rawWatermarkContent) {
+    const extracted = extractWatermarkDefs(rawWatermarkContent);
+    watermarkDefs = extracted.defs;
+    watermarkContent = extracted.content;
+  }
+
   // Build SVG
   const parts: string[] = [];
 
   // Outer SVG - use pixel dimensions, viewBox matches visible area
   parts.push(`<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="${totalWidth}" height="${totalHeight}" viewBox="0 0 ${totalWidth} ${totalHeight}">`);
 
-  // Defs section first (gradients, symbols)
+  // Defs section first (gradients, symbols, watermark defs)
   parts.push('<defs>');
 
   if (hasBackground && isGradient(options.background)) {
     parts.push(generateGradientDef(options.background, 'bg-gradient'));
+  }
+
+  // Add watermark defs to root defs section
+  if (watermarkDefs) {
+    parts.push(watermarkDefs);
   }
 
   // Output all symbol definitions
@@ -491,6 +513,20 @@ export const emitFilmstrip = (
       parts.push(`<use xlink:href="#${symbolId}"/>`);
     });
 
+    // Selection (render before cursor so cursor appears on top)
+    if (frame.selection) {
+      const { start, end, row } = frame.selection;
+      const selStart = Math.min(start, end);
+      const selEnd = Math.max(start, end);
+      const selectionX = padding + selStart * charWidth;
+      const selectionY = contentStartY + row * lineHeight;
+      const selectionWidth = (selEnd - selStart) * charWidth;
+      const selectionColor = theme.selection ?? '#44475a';
+      parts.push(
+        `<rect x="${fmt(selectionX)}" y="${fmt(selectionY)}" width="${fmt(selectionWidth)}" height="${fmt(lineHeight)}" fill="${selectionColor}" opacity="0.5"/>`
+      );
+    }
+
     // Cursor (only render if showCursor option is enabled)
     if (showCursor && frame.cursor && frame.cursorVisible) {
       const cursorX = padding + frame.cursor.col * charWidth;
@@ -517,6 +553,26 @@ export const emitFilmstrip = (
 
   parts.push('</g>'); // animated group
   parts.push('</g>'); // content clip group
+
+  // Watermark (rendered outside clip so it's always visible)
+  if (watermarkContent) {
+    const watermarkHeight = lineHeight;
+    const watermarkY = height - padding - watermarkHeight / 2;
+    const watermarkX = width - padding;
+    const wmFontSize = Math.round(fontSize * 0.75);
+
+    if (isWatermarkMarkup) {
+      parts.push(
+        `<g transform="translate(${watermarkX}, ${watermarkY})" font-family="${fontFamily}" font-size="${wmFontSize}" fill="${theme.foreground}">${watermarkContent}</g>`
+      );
+    } else {
+      parts.push(
+        `<text class="dim" x="${watermarkX}" y="${watermarkY}" ` +
+          `text-anchor="end" dominant-baseline="middle" fill="${theme.foreground}" font-size="${wmFontSize}">${escapeXml(watermarkContent)}</text>`
+      );
+    }
+  }
+
   parts.push('</g>'); // terminal window group
   parts.push('</svg>');
 
@@ -557,23 +613,22 @@ const generateKeyframes = (
   });
 
   if (loopStyle === 'reverse' || loopStyle === 'rewind') {
-    // Add reverse keyframes
-    const reverseStartPercent = (forwardDuration / totalDuration) * 100;
-    const reverseEndPercent = loopPause > 0 ? ((totalDuration - loopPause) / totalDuration) * 100 : 100;
-    const reverseDuration = reverseEndPercent - reverseStartPercent;
+    // True reverse: mirror the forward timestamps
+    // If frame[i+1] appeared at timestamp T in forward, transition TO frame[i] at (lastTimestamp - T)
+    // This ensures frame[i] is visible for the same duration in both directions
 
-    // Iterate frames in reverse order (excluding the last frame which we're already on)
-    const reversedFrames = [...uniqueFrames].reverse().slice(1);
-    reversedFrames.forEach((frame, idx) => {
-      const reverseProgress = (idx + 1) / uniqueFrames.length;
-      const percent = reverseStartPercent + (reverseDuration * reverseProgress);
-      const translateX = -(frame.frameIndex * frameWidth);
+    const lastTimestamp = uniqueFrames[uniqueFrames.length - 1].timestamp;
+    const speedMultiplier = loopStyle === 'rewind' ? options.rewindSpeed : 1;
+
+    for (let i = uniqueFrames.length - 2; i >= 0; i--) {
+      const reverseTime = (lastTimestamp - uniqueFrames[i + 1].timestamp) / speedMultiplier;
+      const absoluteTime = forwardDuration + reverseTime;
+      const percent = (absoluteTime / totalDuration) * 100;
+      const translateX = -(uniqueFrames[i].frameIndex * frameWidth);
       translateKf.push(`${percent.toFixed(2)}%{transform:translateX(${translateX}px)}`);
-    });
+    }
 
-    // End at frame 0
     if (loopPause > 0) {
-      translateKf.push(`${reverseEndPercent.toFixed(2)}%{transform:translateX(0px)}`);
       translateKf.push(`100%{transform:translateX(0px)}`);
     }
   } else if (loopStyle === 'fade') {

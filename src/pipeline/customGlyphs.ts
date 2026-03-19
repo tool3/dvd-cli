@@ -470,7 +470,8 @@ const renderBlockElement = (codePoint: number, ctx: GlyphContext): GlyphResult =
     case 0x2585: svg = `<rect x="${x}" y="${y + cellHeight * 3 / 8}" width="${cellWidth + overlap}" height="${cellHeight * 5 / 8 + overlap}" fill="${color}"${crisp}/>`; break;
     case 0x2586: svg = `<rect x="${x}" y="${y + cellHeight / 4}" width="${cellWidth + overlap}" height="${cellHeight * 3 / 4 + overlap}" fill="${color}"${crisp}/>`; break;
     case 0x2587: svg = `<rect x="${x}" y="${y + cellHeight / 8}" width="${cellWidth + overlap}" height="${cellHeight * 7 / 8 + overlap}" fill="${color}"${crisp}/>`; break;
-    case 0x2588: svg = `<rect x="${x}" y="${y}" width="${cellWidth + overlap}" height="${cellHeight + overlap}" fill="${color}"${crisp}/>`; break;
+    // Full block - no overlap needed since it's a full-cell fill like shades
+    case 0x2588: svg = `<rect x="${x}" y="${y}" width="${cellWidth}" height="${cellHeight}" fill="${color}"${crisp}/>`; break;
     case 0x2589: svg = `<rect x="${x}" y="${y}" width="${cellWidth * 7 / 8}" height="${cellHeight + overlap}" fill="${color}"${crisp}/>`; break;
     case 0x258a: svg = `<rect x="${x}" y="${y}" width="${cellWidth * 3 / 4}" height="${cellHeight + overlap}" fill="${color}"${crisp}/>`; break;
     case 0x258b: svg = `<rect x="${x}" y="${y}" width="${cellWidth * 5 / 8}" height="${cellHeight + overlap}" fill="${color}"${crisp}/>`; break;

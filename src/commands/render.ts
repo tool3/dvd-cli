@@ -27,8 +27,9 @@ interface RenderArgs {
   fps?: number;
   'loop-style'?: 'loop' | 'reverse' | 'rewind' | 'fade';
   optimize?: boolean;
-  filmstrip?: boolean;
+  legacy?: boolean;
   'custom-glyphs'?: boolean;
+  'playback-speed'?: number;
 }
 
 
@@ -130,7 +131,11 @@ export const renderCommand = async (args: RenderArgs): Promise<void> => {
       console.log(`Loaded ${actionCommandCount} commands from ${args.file}`);
     }
 
-    const outputPath = args.output || script.output || args.file.replace(/\.cd$/, '.svg');
+    let outputPath = args.output || script.output || args.file.replace(/\.cd$/, '.svg');
+    // Ensure .svg extension
+    if (!outputPath.endsWith('.svg')) {
+      outputPath += '.svg';
+    }
 
     if (script.requirements.length > 0 && args.verbose) {
       console.log(`Requirements specified: ${script.requirements.join(', ')}`);
@@ -144,6 +149,7 @@ export const renderCommand = async (args: RenderArgs): Promise<void> => {
       fontSize: executorOptions.fontSize,
       title: executorOptions.title,
       template: executorOptions.template,
+      playbackSpeed: args['playback-speed'],
       onProgress: (current: number, total: number, description?: string) => {
         const colorCode = description ? getCommandColor(description) : '';
         const descText = description ? ` \x1b[1m${colorCode}${description}\x1b[0m` : '';
@@ -181,8 +187,11 @@ export const renderCommand = async (args: RenderArgs): Promise<void> => {
 
     let svg: string;
 
-    if (args.filmstrip) {
-      // Use filmstrip (svg-term style) rendering for smaller file sizes with truecolor
+    if (args.legacy) {
+      // Use legacy animated rendering (pre-filmstrip method)
+      svg = await createAnimatedSVG(frames, animationOptions);
+    } else {
+      // Default: filmstrip rendering for smaller file sizes with truecolor
       const ctx = executor.getContext();
       const frameData = executor.getFrameData();
       svg = createFilmstripSVG({
@@ -202,6 +211,7 @@ export const renderCommand = async (args: RenderArgs): Promise<void> => {
         footerHeight: ctx.footerHeight,
         cursorStyle: ctx.cursorStyle,
         cursorColor: ctx.cursorColor,
+        cursorBlink: ctx.cursorBlink,
         fontFamily: ctx.fontFamily,
         background: ctx.background,
         backgroundPadding: ctx.backgroundPadding,
@@ -210,8 +220,6 @@ export const renderCommand = async (args: RenderArgs): Promise<void> => {
         footerBackground: ctx.footerBackground,
         customGlyphs: args['custom-glyphs'],
       }, animationOptions);
-    } else {
-      svg = await createAnimatedSVG(frames, animationOptions);
     }
 
     if (args.optimize !== false) {

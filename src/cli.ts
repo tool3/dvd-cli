@@ -47,10 +47,10 @@ const createParser = () =>
       describe: 'Optimize SVG output (use --no-optimize for pretty-printed output)',
       default: true,
     })
-    .option('filmstrip', {
+    .option('legacy', {
       alias: 'x',
       type: 'boolean',
-      describe: 'Use filmstrip rendering (svg-term style) for smaller file sizes with truecolor',
+      describe: 'Use legacy animated rendering instead of filmstrip',
       default: false,
     })
     .option('custom-glyphs', {
@@ -478,6 +478,7 @@ const run = async (): Promise<void> => {
         backgroundPadding: argv['background-padding'],
         backgroundRadius: argv['background-radius'],
         playbackSpeed: argv['playback-speed'],
+        customGlyphs: argv['custom-glyphs'],
       });
     } catch (err) {
       console.error(err instanceof Error ? err.message : String(err));
@@ -504,8 +505,9 @@ const run = async (): Promise<void> => {
       fps: argv.fps,
       'loop-style': argv['loop-style'] as 'loop' | 'reverse' | 'rewind' | 'fade',
       optimize: argv.optimize,
-      filmstrip: argv.filmstrip,
+      legacy: argv.legacy,
       'custom-glyphs': argv['custom-glyphs'],
+      'playback-speed': argv['playback-speed'],
     });
   } catch (err) {
     console.error(err instanceof Error ? err.message : String(err));

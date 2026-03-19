@@ -599,6 +599,7 @@ export interface FilmstripAnimationContext {
   footerHeight?: number;
   cursorStyle?: 'block' | 'bar' | 'underline';
   cursorColor?: string;
+  cursorBlink?: boolean;
   fontFamily?: string;
   background?: string | Gradient;
   backgroundPadding?: number;
@@ -650,6 +651,7 @@ export const createFilmstripSVG = (
     footerHeight: ctx.footerHeight,
     cursorStyle: ctx.cursorStyle,
     cursorColor: ctx.cursorColor,
+    cursorBlink: ctx.cursorBlink,
     fontFamily: ctx.fontFamily,
     background: ctx.background,
     backgroundPadding: ctx.backgroundPadding,

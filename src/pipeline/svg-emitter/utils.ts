@@ -32,3 +32,26 @@ export const escapeXml = (text: string): string =>
 export const isTruecolor = (color: string | null): boolean =>
   color !== null && color.startsWith('rgb(');
 
+
+//#region Watermark Utilities
+
+export const extractWatermarkDefs = (content: string): { defs: string; content: string } => {
+  const defsRegex = /<defs[^>]*>([\s\S]*?)<\/defs>/gi;
+  const matches: string[] = [];
+  let cleanContent = content;
+
+  let match;
+  while ((match = defsRegex.exec(content)) !== null) {
+    matches.push(match[1]); // Inner content of <defs>
+  }
+
+  if (matches.length > 0) {
+    cleanContent = content.replace(defsRegex, '');
+  }
+
+  return {
+    defs: matches.join('\n'),
+    content: cleanContent
+  };
+};
+

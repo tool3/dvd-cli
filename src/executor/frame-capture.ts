@@ -68,7 +68,9 @@ export const captureFrame = (
 
   if (ctx.autoWidth) {
     for (const line of buffer) {
-      const lineLength = stripAnsi(line).length;
+      // Trim trailing whitespace for auto-width calculation
+      // Shell output often includes padding to terminal width
+      const lineLength = stripAnsi(line).trimEnd().length;
       if (lineLength > ctx.maxLineLength) {
         ctx.maxLineLength = lineLength;
       }
@@ -105,7 +107,9 @@ export const captureFrame = (
   let gridHeight = ctx.grid.height;
 
   if (ctx.autoWidth) {
-    gridWidth = ctx.grid.width;
+    // Start from 0 and find max line length - don't use ctx.grid.width as minimum
+    // because that would include the default terminal width padding
+    gridWidth = 0;
     for (const line of visibleBuffer) {
       const lineLength = stripAnsi(line).length;
       gridWidth = Math.max(gridWidth, lineLength + 1);
@@ -237,7 +241,13 @@ export const captureFrame = (
     selectionEnd: ctx.selectionEnd,
   };
 
-  const timestamp = Date.now() - ctx.startTime - ctx.captureOverhead;
+  // Calculate timestamp, ensuring it's always >= the last frame's timestamp
+  // This prevents out-of-order frames due to captureOverhead adjustments
+  let timestamp = Date.now() - ctx.startTime - ctx.captureOverhead;
+  if (timestamp <= ctx.lastFrameTimestamp) {
+    timestamp = ctx.lastFrameTimestamp + 1; // Ensure at least 1ms after previous frame
+  }
+  ctx.lastFrameTimestamp = timestamp;
 
   const frame: TerminalFrame = {
     timestamp,

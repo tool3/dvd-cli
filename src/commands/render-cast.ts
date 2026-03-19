@@ -38,6 +38,7 @@ export interface RenderCastArgs {
   watermark?: string;
   'cursor-style'?: 'block' | 'bar' | 'underline';
   'cursor-color'?: string;
+  'cursor-blink'?: boolean;
   'header-background'?: string;
   'header-height'?: number;
   'footer-background'?: string;
@@ -173,6 +174,7 @@ export const renderCastCommand = async (args: RenderCastArgs): Promise<void> => 
       footerHeight,
       cursorStyle: args['cursor-style'] || 'block',
       cursorColor: args['cursor-color'],
+      cursorBlink: args['cursor-blink'] !== false,
       fontFamily: args['font-family'],
       background: args.background,
       backgroundPadding: args['background-padding'],
@@ -197,7 +199,11 @@ export const renderCastCommand = async (args: RenderCastArgs): Promise<void> => 
     }
 
     // Determine output path
-    const outputPath = args.output || args.file.replace(/\.cast$/, '.svg');
+    let outputPath = args.output || args.file.replace(/\.cast$/, '.svg');
+    // Ensure .svg extension
+    if (!outputPath.endsWith('.svg')) {
+      outputPath += '.svg';
+    }
 
     // Write output
     writeFileSync(outputPath, svg, 'utf-8');
