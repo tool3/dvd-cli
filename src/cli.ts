@@ -379,6 +379,16 @@ const createParser = () =>
             describe: 'Render block elements as geometric shapes',
             default: true,
           })
+          .option('cursor-blink', {
+            type: 'boolean',
+            describe: 'Enable cursor blinking animation (default: false for cast files)',
+            default: false,
+          })
+          .option('cursor', {
+            type: 'boolean',
+            describe: 'Enable cursor rendering (use --no-cursor to disable)',
+            default: true,
+          })
           .option('loop-style', {
             alias: 'L',
             type: 'string',

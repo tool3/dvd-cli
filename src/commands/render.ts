@@ -11,6 +11,7 @@ import {
 import { optimizeSvg } from '../animator/svg-optimizer';
 import { createSpinner } from '../utils/spinner';
 import type { AnimationOptions } from '../animator/svg-animator';
+import type { CDExecutorOptions } from '../executor/types';
 
 
 //#region Types
@@ -30,6 +31,37 @@ interface RenderArgs {
   legacy?: boolean;
   'custom-glyphs'?: boolean;
   'playback-speed'?: number;
+  // CLI overrides for executor options
+  width?: number;
+  height?: number;
+  title?: string;
+  theme?: string;
+  'font-size'?: number;
+  'line-height'?: number;
+  template?: string;
+  padding?: number;
+  'border-radius'?: number;
+  'border-color'?: string;
+  'border-width'?: number;
+  'font-family'?: string;
+  watermark?: string;
+  'cursor-style'?: string;
+  'cursor-color'?: string;
+  'cursor-blink'?: boolean;
+  'header-background'?: string;
+  'header-height'?: number;
+  'header-border'?: boolean;
+  'header-border-color'?: string;
+  'header-border-width'?: number;
+  'footer-background'?: string;
+  'footer-height'?: number;
+  'footer-border'?: boolean;
+  'footer-border-color'?: string;
+  'footer-border-width'?: number;
+  'letter-spacing'?: number;
+  background?: string;
+  'background-padding'?: number;
+  'background-radius'?: number;
 }
 
 
@@ -50,38 +82,47 @@ const loadCDFile = (filePath: string): ReturnType<typeof parseCD> => {
 
 //#region Executor Options Builder
 
-const buildExecutorOptions = (
-  settings: Map<string, string>
-): {
-  width?: number;
-  height?: number;
-  fontSize?: number;
-  title?: string;
-  template?: 'macos' | 'windows' | 'minimal';
-} => {
-  const options: {
-    width?: number;
-    height?: number;
-    fontSize?: number;
-    title?: string;
-    template?: 'macos' | 'windows' | 'minimal';
-  } = {};
+/**
+ * Build executor options from CLI args.
+ * Script settings are applied by CDExecutor.execute() via applySetting,
+ * then CLI overrides are applied via applyCliOverrides.
+ * This function extracts CLI args that should override script settings.
+ */
+const buildExecutorOptions = (args: RenderArgs): Partial<CDExecutorOptions> => {
+  const options: Partial<CDExecutorOptions> = {};
 
-  if (settings.has('Width')) {
-    options.width = parseInt(settings.get('Width')!, 10);
-  }
-  if (settings.has('Height')) {
-    options.height = parseInt(settings.get('Height')!, 10);
-  }
-  if (settings.has('FontSize')) {
-    options.fontSize = parseInt(settings.get('FontSize')!, 10);
-  }
-  if (settings.has('Title')) {
-    options.title = settings.get('Title');
-  }
-  if (settings.has('Template')) {
-    options.template = settings.get('Template') as 'macos' | 'windows' | 'minimal';
-  }
+  // Only include CLI args that were explicitly provided
+  if (args.width !== undefined) options.width = args.width;
+  if (args.height !== undefined) options.height = args.height;
+  if (args['font-size'] !== undefined) options.fontSize = args['font-size'];
+  if (args['line-height'] !== undefined) options.lineHeight = args['line-height'];
+  if (args.title !== undefined) options.title = args.title;
+  if (args.template !== undefined) options.template = args.template as 'macos' | 'windows' | 'minimal';
+  if (args.theme !== undefined) options.theme = args.theme;
+  if (args.padding !== undefined) options.padding = args.padding;
+  if (args['border-radius'] !== undefined) options.borderRadius = args['border-radius'];
+  if (args['border-color'] !== undefined) options.borderColor = args['border-color'];
+  if (args['border-width'] !== undefined) options.borderWidth = args['border-width'];
+  if (args['font-family'] !== undefined) options.fontFamily = args['font-family'];
+  if (args.watermark !== undefined) options.watermark = args.watermark;
+  if (args['cursor-style'] !== undefined) options.cursorStyle = args['cursor-style'];
+  if (args['cursor-color'] !== undefined) options.cursorColor = args['cursor-color'];
+  if (args['cursor-blink'] !== undefined) options.cursorBlink = args['cursor-blink'];
+  if (args['header-background'] !== undefined) options.headerBackground = args['header-background'];
+  if (args['header-height'] !== undefined) options.headerHeight = args['header-height'];
+  if (args['header-border'] !== undefined) options.headerBorder = args['header-border'];
+  if (args['header-border-color'] !== undefined) options.headerBorderColor = args['header-border-color'];
+  if (args['header-border-width'] !== undefined) options.headerBorderWidth = args['header-border-width'];
+  if (args['footer-background'] !== undefined) options.footerBackground = args['footer-background'];
+  if (args['footer-height'] !== undefined) options.footerHeight = args['footer-height'];
+  if (args['footer-border'] !== undefined) options.footerBorder = args['footer-border'];
+  if (args['footer-border-color'] !== undefined) options.footerBorderColor = args['footer-border-color'];
+  if (args['footer-border-width'] !== undefined) options.footerBorderWidth = args['footer-border-width'];
+  if (args['letter-spacing'] !== undefined) options.letterSpacing = args['letter-spacing'];
+  if (args.background !== undefined) options.background = args.background;
+  if (args['background-padding'] !== undefined) options.backgroundPadding = args['background-padding'];
+  if (args['background-radius'] !== undefined) options.backgroundRadius = args['background-radius'];
+  if (args['playback-speed'] !== undefined) options.playbackSpeed = args['playback-speed'];
 
   return options;
 };
@@ -141,15 +182,10 @@ export const renderCommand = async (args: RenderArgs): Promise<void> => {
       console.log(`Requirements specified: ${script.requirements.join(', ')}`);
     }
 
-    const executorOptions = buildExecutorOptions(script.settings);
+    const executorOptions = buildExecutorOptions(args);
 
     const executor = new CDExecutor({
-      width: executorOptions.width,
-      height: executorOptions.height,
-      fontSize: executorOptions.fontSize,
-      title: executorOptions.title,
-      template: executorOptions.template,
-      playbackSpeed: args['playback-speed'],
+      ...executorOptions,
       onProgress: (current: number, total: number, description?: string) => {
         const colorCode = description ? getCommandColor(description) : '';
         const descText = description ? ` \x1b[1m${colorCode}${description}\x1b[0m` : '';

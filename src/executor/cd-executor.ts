@@ -16,7 +16,7 @@ import {
   executeShortcut,
   executeScreenshot,
 } from './handlers';
-import { applySetting } from './settings';
+import { applySetting, resolveTheme } from './settings';
 
 
 //#region Re-exports for backward compatibility
@@ -38,17 +38,13 @@ export class CDExecutor {
   //#region Main Execution
 
   async execute(script: CDScript): Promise<TerminalFrame[]> {
-    // Store CLI-provided playbackSpeed before applying settings (CLI takes priority)
-    const cliPlaybackSpeed = this.options.playbackSpeed;
-
+    // Apply script settings first
     for (const [key, value] of script.settings.entries()) {
       applySetting(this.context, key, value);
     }
 
-    // Restore CLI playbackSpeed if provided (CLI args override .cd file settings)
-    if (cliPlaybackSpeed !== undefined) {
-      this.context.playbackSpeed = cliPlaybackSpeed;
-    }
+    // Apply CLI overrides (CLI args take precedence over .cd file settings)
+    this.applyCliOverrides();
 
     this.context.outputPath = script.output;
     this.updateGridDimensions();
@@ -145,6 +141,88 @@ export class CDExecutor {
     } else if (command.key === 'Tab') {
       await executeType(this.context, this.options, '    '.repeat(command.count || 1));
     }
+  }
+
+
+  //#region CLI Override Application
+
+  /**
+   * Apply CLI options that should override .cd file settings.
+   * Called after script settings are applied, so CLI takes precedence.
+   */
+  private applyCliOverrides(): void {
+    const opts = this.options;
+
+    // Dimension overrides
+    if (opts.width !== undefined) {
+      this.context.width = opts.width;
+      this.context.autoWidth = false;
+    }
+    if (opts.height !== undefined) {
+      this.context.height = opts.height;
+      this.context.autoHeight = false;
+    }
+    if (opts.fontSize !== undefined) this.context.fontSize = opts.fontSize;
+    if (opts.lineHeight !== undefined) {
+      this.context.lineHeight = Math.max(1, opts.lineHeight);
+      this.context.hasCustomLineHeight = true;
+    }
+
+    // Appearance overrides
+    if (opts.title !== undefined) this.context.title = opts.title;
+    if (opts.template !== undefined) this.context.template = opts.template;
+    if (opts.theme !== undefined) {
+      if (typeof opts.theme === 'string') {
+        resolveTheme(this.context, opts.theme);
+      } else {
+        this.context.theme = opts.theme;
+      }
+    }
+
+    // Border and padding overrides
+    if (opts.padding !== undefined) this.context.padding = opts.padding;
+    if (opts.borderRadius !== undefined) this.context.borderRadius = opts.borderRadius;
+    if (opts.borderColor !== undefined) this.context.borderColor = opts.borderColor;
+    if (opts.borderWidth !== undefined) this.context.borderWidth = opts.borderWidth;
+
+    // Font overrides
+    if (opts.fontFamily !== undefined) this.context.fontFamily = opts.fontFamily;
+    if (opts.letterSpacing !== undefined) this.context.letterSpacing = opts.letterSpacing;
+
+    // Cursor overrides
+    if (opts.cursorStyle !== undefined) {
+      const style = opts.cursorStyle.toLowerCase();
+      if (style === 'block' || style === 'bar' || style === 'underline') {
+        this.context.cursorStyle = style;
+      }
+    }
+    if (opts.cursorColor !== undefined) this.context.cursorColor = opts.cursorColor;
+    if (opts.cursorBlink !== undefined) this.context.cursorBlink = opts.cursorBlink;
+
+    // Header overrides
+    if (opts.headerBackground !== undefined) this.context.headerBackground = opts.headerBackground;
+    if (opts.headerHeight !== undefined) this.context.headerHeight = opts.headerHeight;
+    if (opts.headerBorder !== undefined) this.context.headerBorder = opts.headerBorder;
+    if (opts.headerBorderColor !== undefined) this.context.headerBorderColor = opts.headerBorderColor;
+    if (opts.headerBorderWidth !== undefined) this.context.headerBorderWidth = opts.headerBorderWidth;
+
+    // Footer overrides
+    if (opts.footerBackground !== undefined) this.context.footerBackground = opts.footerBackground;
+    if (opts.footerHeight !== undefined) this.context.footerHeight = opts.footerHeight;
+    if (opts.footerBorder !== undefined) this.context.footerBorder = opts.footerBorder;
+    if (opts.footerBorderColor !== undefined) this.context.footerBorderColor = opts.footerBorderColor;
+    if (opts.footerBorderWidth !== undefined) this.context.footerBorderWidth = opts.footerBorderWidth;
+
+    // Background overrides
+    if (opts.background !== undefined) this.context.background = opts.background;
+    if (opts.backgroundPadding !== undefined) this.context.backgroundPadding = opts.backgroundPadding;
+    if (opts.backgroundRadius !== undefined) this.context.backgroundRadius = opts.backgroundRadius;
+
+    // Watermark override
+    if (opts.watermark !== undefined) this.context.watermark = opts.watermark;
+
+    // Playback speed override
+    if (opts.playbackSpeed !== undefined) this.context.playbackSpeed = opts.playbackSpeed;
   }
 
 
@@ -315,7 +393,8 @@ const createContext = (options: CDExecutorOptions): ExecutorContext => {
     typingSpeed: 50,
     title: options.title,
     template: options.template || 'minimal',
-    theme: options.theme || pipelineThemes.dark,
+    // Theme will be resolved in applyCliOverrides if passed as string
+    theme: typeof options.theme === 'object' ? options.theme : pipelineThemes.dark,
     promptPrefix: '\x1b[95m❯ \x1b[0m',
     cursorBlink: true,
 

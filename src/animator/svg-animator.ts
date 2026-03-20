@@ -608,6 +608,8 @@ export interface FilmstripAnimationContext {
   footerBackground?: string;
   // When true, render block elements as geometric shapes for seamless display
   customGlyphs?: boolean;
+  // When false, disable cursor rendering entirely (like svg-term --no-cursor)
+  showCursor?: boolean;
 }
 
 export const createFilmstripSVG = (
@@ -659,6 +661,7 @@ export const createFilmstripSVG = (
     headerBackground: ctx.headerBackground,
     footerBackground: ctx.footerBackground,
     customGlyphs: ctx.customGlyphs,
+    showCursor: ctx.showCursor,
     loop: options.loop,
     pauseAtEnd,
     loopStyle: options.loopStyle,

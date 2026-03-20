@@ -40,6 +40,7 @@ export interface RenderCastArgs {
   'cursor-style'?: 'block' | 'bar' | 'underline';
   'cursor-color'?: string;
   'cursor-blink'?: boolean;
+  cursor?: boolean;
   'header-background'?: string;
   'header-height'?: number;
   'footer-background'?: string;
@@ -284,7 +285,9 @@ export const renderCastCommand = async (args: RenderCastArgs): Promise<void> => 
       footerHeight,
       cursorStyle: args['cursor-style'] || 'block',
       cursorColor: args['cursor-color'],
-      cursorBlink: args['cursor-blink'] !== false,
+      // Cast file playback: cursor blink is OFF by default (use --cursor-blink to enable)
+      // This matches terminal semantics where cursor state comes from the terminal emulator
+      cursorBlink: args['cursor-blink'] === true,
       fontFamily: args['font-family'],
       background: args.background,
       backgroundPadding: args['background-padding'],
@@ -292,6 +295,8 @@ export const renderCastCommand = async (args: RenderCastArgs): Promise<void> => 
       headerBackground: args['header-background'],
       footerBackground: args['footer-background'],
       customGlyphs: args['custom-glyphs'],
+      // --no-cursor disables cursor rendering entirely (like svg-term --no-cursor)
+      showCursor: args.cursor !== false,
     }, animationOptions);
 
     // Optimize
