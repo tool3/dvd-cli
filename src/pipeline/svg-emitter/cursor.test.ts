@@ -10,7 +10,6 @@ const createCursorConfig = (overrides: Partial<CursorConfig> = {}): CursorConfig
   padding: 12,
   contentStartY: 40,
   fontSize: 14,
-  hasCustomLineHeight: false,
   cursorColor: '#ffffff',
   cursorStyle: 'block',
   activeCursor: false,
@@ -92,8 +91,13 @@ describe('renderCursor', () => {
 
     const result = renderCursor(config);
 
-    // y = contentStartY + row * lineHeight = 40 + 3 * 16 = 88
-    expect(result).toContain('y="88"');
+    // With minimum visual padding (10% of fontSize on each side):
+    // minPadding = 14 * 0.1 = 1.4
+    // minCursorHeight = 14 + 2 * 1.4 = 16.8
+    // effectiveCursorHeight = max(16, 16.8) = 16.8
+    // cursorYOffset = (16 - 16.8) / 2 = -0.4
+    // y = contentStartY + row * lineHeight + cursorYOffset = 40 + 3 * 16 - 0.4 = 87.6
+    expect(result).toContain('y="87.6"');
   });
 
   it('uses provided cursor color', () => {

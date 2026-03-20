@@ -2,7 +2,7 @@
 
 import type { SpanRow, Theme, EmitterOptions, CursorPosition, Gradient } from '../../types';
 import { coalesceBackgrounds, mergeVerticalBackgrounds, type RenderConfig } from '../coalescer';
-import { r, fmt, escapeXml, extractWatermarkDefs } from './utils';
+import { r, fmt, escapeXml, extractWatermarkDefs, getEffectiveLineHeight, getTextOffsetY, getCursorYOffset } from './utils';
 import { generateStylesheet } from './stylesheet';
 import { generateChrome, generateFooter } from './chrome';
 import type { EmitResult } from './index';
@@ -67,7 +67,6 @@ interface FrameRenderConfig {
   contentStartY: number;
   theme: Theme;
   fontSize: number;
-  hasCustomLineHeight?: boolean;
   cursorColor?: string;
   cursorStyle?: 'block' | 'bar' | 'underline';
 }
@@ -144,8 +143,6 @@ export const emitAnimated = (
     );
   }
 
-  const hasCustomLineHeight = options.lineHeight !== undefined;
-
   frames.forEach((frame, i) => {
     const frameContent = generateFrameContent(frame, {
       ...options,
@@ -153,7 +150,6 @@ export const emitAnimated = (
       lineHeight,
       padding,
       contentStartY,
-      hasCustomLineHeight,
       fontSize,
       theme,
     });
@@ -290,9 +286,8 @@ const generateFrameContent = (
     const selStart = Math.min(start, end);
     const selEnd = Math.max(start, end);
     const selectionX = r(padding + selStart * charWidth);
-    // When custom lineHeight is provided, offset selection to align with capital letters
-    const glyphOffset = config.hasCustomLineHeight ? fontSize * 0.18 : 0;
-    const selectionY = r(contentStartY + row * lineHeight + glyphOffset);
+    // Selection covers the entire cell (no offset needed)
+    const selectionY = r(contentStartY + row * lineHeight);
     const selectionWidth = r((selEnd - selStart) * charWidth);
     const selectionColor = theme.selection ?? '#44475a';
 
@@ -317,13 +312,18 @@ const generateFrameContent = (
 
   if (cursor && cursorVisible) {
     const cursorX = r(padding + cursor.col * charWidth);
-    // Text baseline Y (same as text-layer rendering)
-    const textY = r(contentStartY + cursor.row * lineHeight);
-    // When custom lineHeight is provided, offset cursor to align with capital letters
-    const glyphOffset = config.hasCustomLineHeight ? fontSize * 0.18 : 0;
-    const cursorY = r(contentStartY + cursor.row * lineHeight + glyphOffset);
-    // Cursor height matches lineHeight to align with text selection
-    const cursorHeight = r(lineHeight);
+    // Cell Y is top of line cell
+    const cellY = contentStartY + cursor.row * lineHeight;
+    // Use effective cursor height to ensure minimum visual padding
+    const effectiveCursorHeight = getEffectiveLineHeight(lineHeight, fontSize);
+    // Center cursor vertically on the row (may extend above/below)
+    const cursorYOffset = getCursorYOffset(lineHeight, fontSize);
+    const cursorY = r(cellY + cursorYOffset);
+    const cursorHeight = r(effectiveCursorHeight);
+    // Text offset from cursor top to center text within cursor
+    const textOffsetY = getTextOffsetY(lineHeight, fontSize);
+    // Text Y = cursor Y + text offset within cursor
+    const textY = r(cursorY + textOffsetY);
     const cursorColor = config.cursorColor ?? theme.cursor ?? theme.foreground;
     const cursorStyle = config.cursorStyle ?? 'block';
     const cursorClass = activeCursor ? 'cursor-active' : 'cursor';

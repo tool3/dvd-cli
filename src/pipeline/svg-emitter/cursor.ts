@@ -1,7 +1,7 @@
 //#region Imports
 
 import type { Theme, CursorPosition, EmitterOptions } from '../../types';
-import { r, fmt, escapeXml } from './utils';
+import { r, fmt, escapeXml, getEffectiveLineHeight, getTextOffsetY, getCursorYOffset } from './utils';
 
 
 //#region Cursor Config
@@ -13,7 +13,6 @@ export interface CursorConfig {
   padding: number;
   contentStartY: number;
   fontSize: number;
-  hasCustomLineHeight: boolean;
   cursorColor: string;
   cursorStyle: 'block' | 'bar' | 'underline';
   activeCursor: boolean;
@@ -34,7 +33,6 @@ export const renderCursor = (config: CursorConfig): string => {
     padding,
     contentStartY,
     fontSize,
-    hasCustomLineHeight,
     cursorColor,
     cursorStyle,
     activeCursor,
@@ -47,14 +45,18 @@ export const renderCursor = (config: CursorConfig): string => {
   // Account for letter-spacing: each character takes charWidth + letterSpacing
   const effectiveCharWidth = charWidth + letterSpacing;
   const cursorX = r(padding + cursor.col * effectiveCharWidth);
-  // Text baseline Y (same as text-layer rendering)
-  const textY = r(contentStartY + cursor.row * lineHeight);
-  // When custom lineHeight is provided, offset cursor to align with capital letters
-  // Capital letters start ~18% below the top of the em-box (ascender space)
-  const glyphOffset = hasCustomLineHeight ? fontSize * 0.18 : 0;
-  const cursorY = r(contentStartY + cursor.row * lineHeight + glyphOffset);
-  // Cursor height matches lineHeight to align with text selection
-  const cursorHeight = r(lineHeight);
+  // Cell Y is top of line cell
+  const cellY = contentStartY + cursor.row * lineHeight;
+  // Use effective cursor height to ensure minimum visual padding
+  const effectiveCursorHeight = getEffectiveLineHeight(lineHeight, fontSize);
+  // Center cursor vertically on the row (may extend above/below)
+  const cursorYOffset = getCursorYOffset(lineHeight, fontSize);
+  const cursorY = r(cellY + cursorYOffset);
+  const cursorHeight = r(effectiveCursorHeight);
+  // Text offset from cursor top to center text within cursor
+  const textOffsetY = getTextOffsetY(lineHeight, fontSize);
+  // Text Y = cursor Y + text offset within cursor
+  const textY = r(cursorY + textOffsetY);
   const cursorClass = activeCursor ? 'cursor-active' : 'cursor';
 
   const parts: string[] = [];
@@ -110,8 +112,6 @@ export interface SelectionConfig {
   padding: number;
   contentStartY: number;
   selectionColor: string;
-  fontSize?: number;
-  hasCustomLineHeight?: boolean;
 }
 
 export const renderSelection = (config: SelectionConfig): string => {
@@ -124,16 +124,13 @@ export const renderSelection = (config: SelectionConfig): string => {
     padding,
     contentStartY,
     selectionColor,
-    fontSize = 14,
-    hasCustomLineHeight = false,
   } = config;
 
   const selStart = Math.min(start, end);
   const selEnd = Math.max(start, end);
   const selectionX = r(padding + selStart * charWidth);
-  // When custom lineHeight is provided, offset selection to align with capital letters
-  const glyphOffset = hasCustomLineHeight ? fontSize * 0.18 : 0;
-  const selectionY = r(contentStartY + row * lineHeight + glyphOffset);
+  // Selection covers the entire cell (same as cursor)
+  const selectionY = r(contentStartY + row * lineHeight);
   const selectionWidth = r((selEnd - selStart) * charWidth);
 
   const parts: string[] = [];

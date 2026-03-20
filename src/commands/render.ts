@@ -199,11 +199,17 @@ export const renderCommand = async (args: RenderArgs): Promise<void> => {
 
     const frames = await executor.execute(script);
 
+    // Yield to allow final spinner update
+    await new Promise(resolve => setImmediate(resolve));
+
     if (args.verbose) {
       console.log(`Captured ${frames.length} frames`);
     } else {
       spinner.update('Generating animated SVG');
     }
+
+    // Yield after spinner update
+    await new Promise(resolve => setImmediate(resolve));
 
     // Use CLI options if provided, otherwise use script's settings
     const loopStyle = args['loop-style'] || executor.getLoopStyle();
@@ -262,6 +268,8 @@ export const renderCommand = async (args: RenderArgs): Promise<void> => {
       if (!args.verbose) {
         spinner.update('Optimizing SVG');
       }
+      // Yield after spinner update
+      await new Promise(resolve => setImmediate(resolve));
       const originalSize = Buffer.byteLength(svg, 'utf-8');
       svg = optimizeSvg(svg);
       const optimizedSize = Buffer.byteLength(svg, 'utf-8');

@@ -2,7 +2,7 @@
 
 import type { SpanRow, Theme, EmitterOptions, Gradient } from '../../types';
 import type { WatermarkConfig } from 'shellfie';
-import { fmt, escapeXml, extractWatermarkDefs } from './utils';
+import { fmt, escapeXml, extractWatermarkDefs, getEffectiveLineHeight, getTextOffsetY, getCursorYOffset } from './utils';
 import type { EmitResult } from './index';
 import type { FrameData } from './animated';
 import { containsCustomGlyphs, isCustomGlyph, renderCustomGlyph, type GlyphContext } from '../customGlyphs';
@@ -207,8 +207,14 @@ const registerRowSymbol = (
 
   // Generate symbol content - all text elements for this row
   const { charWidth, lineHeight, padding, contentStartY, fontSize, theme, customGlyphs } = config;
-  // Text Y position - with dominant-baseline:text-before-edge, Y is the top of the text box
-  const baseY = contentStartY + rowIndex * lineHeight;
+  // Cell Y position - top of the line cell
+  const cellY = contentStartY + rowIndex * lineHeight;
+  // Cursor Y position - may extend above/below the cell
+  const cursorYOffset = getCursorYOffset(lineHeight, fontSize);
+  const cursorY = cellY + cursorYOffset;
+  // Text Y position - centered within the cursor
+  const textOffsetY = getTextOffsetY(lineHeight, fontSize);
+  const textY = cursorY + textOffsetY;
 
   // Glyph rendering config
   const glyphLineWidth = Math.max(1, fontSize * 0.08);
@@ -217,13 +223,15 @@ const registerRowSymbol = (
   const textParts: string[] = [];
 
   // First pass: render background rects for spans with bg color
+  // First pass: render background rects for spans with bg color
+  // Use cellY so backgrounds fill the entire line cell
   row.forEach((span) => {
     if (!span.style.bg) return;
     const bgX = fmt(padding + span.col * charWidth);
     const bgWidth = fmt(span.text.length * charWidth);
     const bgColorClass = getOrCreateColorClass(registry, span.style.bg);
     textParts.push(
-      `<rect x="${bgX}" y="${fmt(baseY)}" width="${bgWidth}" height="${fmt(lineHeight)}" class="${bgColorClass}"/>`
+      `<rect x="${bgX}" y="${fmt(cellY)}" width="${bgWidth}" height="${fmt(lineHeight)}" class="${bgColorClass}"/>`
     );
   });
 
@@ -254,12 +262,13 @@ const registerRowSymbol = (
         const charX = padding + absoluteCol * charWidth;
 
         // Render custom glyphs (box-drawing, block elements, etc.)
+        // Use cellY so glyphs fill the entire cell
         if (codePoint !== undefined && isCustomGlyph(codePoint)) {
           const glyphCtx: GlyphContext = {
             cellWidth: charWidth,
             cellHeight: lineHeight,
             x: charX,
-            y: baseY,
+            y: cellY,
             color,
             backgroundColor: theme.background,
             lineWidth: glyphLineWidth,
@@ -272,16 +281,16 @@ const registerRowSymbol = (
             return;
           }
         }
-        // Fall back to text for non-custom characters
+        // Fall back to text for non-custom characters - use textY for vertical centering
         textParts.push(
-          `<text x="${fmt(charX)}" y="${fmt(baseY)}" class="${allClasses}">${escapeXml(char)}</text>`
+          `<text x="${fmt(charX)}" y="${fmt(textY)}" class="${allClasses}">${escapeXml(char)}</text>`
         );
       });
     } else {
-      // No custom glyphs - render as single text element
+      // No custom glyphs - render as single text element with textY for vertical centering
       const x = fmt(padding + span.col * charWidth);
       const safeText = escapeXml(rawText);
-      textParts.push(`<text x="${x}" y="${fmt(baseY)}" class="${allClasses}">${safeText}</text>`);
+      textParts.push(`<text x="${x}" y="${fmt(textY)}" class="${allClasses}">${safeText}</text>`);
     }
   });
 
@@ -533,21 +542,26 @@ export const emitFilmstrip = (
     // Cursor (only render if showCursor option is enabled)
     if (showCursor && frame.cursor && frame.cursorVisible) {
       const cursorX = padding + frame.cursor.col * charWidth;
-      const cursorY = contentStartY + frame.cursor.row * lineHeight;
+      // Use effective cursor height to ensure minimum visual padding
+      const effectiveCursorHeight = getEffectiveLineHeight(lineHeight, fontSize);
+      // Center the cursor vertically on the row (may extend above/below)
+      const cursorYOffset = getCursorYOffset(lineHeight, fontSize);
+      const cursorY = contentStartY + frame.cursor.row * lineHeight + cursorYOffset;
       const cursorColor = options.cursorColor || theme.cursor || theme.foreground;
       const cursorStyleType = options.cursorStyle || 'block';
       // Use cursor-active class when typing (solid), cursor class when idle (blinking)
+      // Always apply the class for mix-blend-mode styling, even when blink is disabled
       const cursorClassName = frame.activeCursor ? 'cursor-active' : 'cursor';
-      const cursorClass = cursorBlink ? ` class="${cursorClassName}"` : '';
+      const cursorClass = ` class="${cursorClassName}"`;
 
       if (cursorStyleType === 'block') {
         // Use white fill for block cursor with mix-blend-mode:difference to invert text
-        parts.push(`<rect${cursorClass} x="${fmt(cursorX)}" y="${fmt(cursorY)}" width="${fmt(charWidth)}" height="${fmt(lineHeight)}" fill="#fff"/>`);
+        parts.push(`<rect${cursorClass} x="${fmt(cursorX)}" y="${fmt(cursorY)}" width="${fmt(charWidth)}" height="${fmt(effectiveCursorHeight)}" fill="#fff"/>`);
       } else if (cursorStyleType === 'bar') {
-        parts.push(`<rect${cursorClass} x="${fmt(cursorX)}" y="${fmt(cursorY)}" width="2" height="${fmt(lineHeight)}" fill="${cursorColor}"/>`);
+        parts.push(`<rect${cursorClass} x="${fmt(cursorX)}" y="${fmt(cursorY)}" width="2" height="${fmt(effectiveCursorHeight)}" fill="${cursorColor}"/>`);
       } else {
         // underline
-        const underlineY = cursorY + lineHeight - 2;
+        const underlineY = cursorY + effectiveCursorHeight - 2;
         parts.push(`<rect${cursorClass} x="${fmt(cursorX)}" y="${fmt(underlineY)}" width="${fmt(charWidth)}" height="2" fill="${cursorColor}"/>`);
       }
     }

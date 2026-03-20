@@ -248,14 +248,11 @@ export const emit = (
         padding,
         contentStartY,
         selectionColor: theme.selection ?? '#44475a',
-        fontSize,
-        hasCustomLineHeight: options.hasCustomLineHeight,
       })
     );
   }
 
   if (cursor && cursorVisible) {
-    const hasCustomLineHeight = options.hasCustomLineHeight ?? false;
     // Find character under cursor for block cursor inversion
     let charUnderCursor: string | undefined;
     const cursorRow = rows[cursor.row];
@@ -276,7 +273,6 @@ export const emit = (
         padding,
         contentStartY,
         fontSize,
-        hasCustomLineHeight,
         cursorColor: options.cursorColor ?? theme.cursor ?? theme.foreground,
         cursorStyle: options.cursorStyle ?? 'block',
         activeCursor: options.activeCursor ?? false,

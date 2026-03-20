@@ -267,6 +267,9 @@ export const renderCastCommand = async (args: RenderCastArgs): Promise<void> => 
       spinner.update(`\x1b[37mRendering\x1b[0m \x1b[2m${fileName}\x1b[0m \x1b[35mGenerating SVG\x1b[0m`);
     }
 
+    // Yield after spinner update
+    await new Promise(resolve => setImmediate(resolve));
+
     // Generate SVG using filmstrip renderer
     let svg = createFilmstripSVG({
       frameData,
@@ -304,6 +307,8 @@ export const renderCastCommand = async (args: RenderCastArgs): Promise<void> => 
       if (!args.verbose) {
         spinner.update('Optimizing SVG');
       }
+      // Yield after spinner update
+      await new Promise(resolve => setImmediate(resolve));
       const originalSize = Buffer.byteLength(svg, 'utf-8');
       svg = optimizeSvg(svg);
       const optimizedSize = Buffer.byteLength(svg, 'utf-8');

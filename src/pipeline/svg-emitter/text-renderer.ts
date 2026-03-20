@@ -1,7 +1,7 @@
 //#region Imports
 
 import type { SpanRow, Theme } from '../../types';
-import { r, rx, fmt, escapeXml, isTruecolor } from './utils';
+import { r, rx, fmt, escapeXml, isTruecolor, getTextOffsetY, getCursorYOffset } from './utils';
 import { styleToClasses, getColorClass, getColorFromClass } from './stylesheet';
 import { containsCustomGlyphs, renderCustomGlyph, type GlyphContext } from '../customGlyphs';
 
@@ -29,10 +29,20 @@ export const renderTextLayer = (rows: SpanRow[], config: TextRendererConfig): st
   const glyphLineWidth = Math.max(1, fontSize * 0.08);
   const glyphHeavyLineWidth = glyphLineWidth * 2;
 
+  // Cursor Y offset - cursor may extend above/below the cell
+  const cursorYOffset = getCursorYOffset(lineHeight, fontSize);
+  // Text offset from cursor top to center text within cursor
+  const textOffsetY = getTextOffsetY(lineHeight, fontSize);
+
   rows.forEach((row) => {
     row.forEach((span) => {
       const baseX = rx(padding + span.col * charWidth);
-      const baseY = r(contentStartY + span.row * lineHeight);
+      // Cell Y is top of line cell
+      const cellY = contentStartY + span.row * lineHeight;
+      // Cursor Y position (may extend above cell)
+      const cursorY = r(cellY + cursorYOffset);
+      // Text Y = cursor Y + text offset within cursor
+      const textY = r(cursorY + textOffsetY);
       const classes = ['text', ...styleToClasses(span.style)];
 
       let fillAttr = '';
@@ -64,11 +74,12 @@ export const renderTextLayer = (rows: SpanRow[], config: TextRendererConfig): st
           // Use absolute column position to ensure consistent alignment across spans
           const absoluteCol = span.col + charOffset;
           const charX = padding + absoluteCol * charWidth;
+          // Use cellY for glyphs so they fill the entire cell
           const glyphCtx: GlyphContext = {
             cellWidth: charWidth,
             cellHeight: lineHeight,
             x: charX,
-            y: baseY,
+            y: cellY,
             color,
             backgroundColor: theme.background,
             lineWidth: glyphLineWidth,
@@ -78,14 +89,16 @@ export const renderTextLayer = (rows: SpanRow[], config: TextRendererConfig): st
           if (result.handled) {
             parts.push(result.svg);
           } else {
+            // Use textY for regular characters
             parts.push(
-              `<text class="${classes.join(' ')}" x="${fmt(charX)}" y="${fmt(baseY)}"${fillAttr}>${escapeXml(char)}</text>`
+              `<text class="${classes.join(' ')}" x="${fmt(charX)}" y="${fmt(textY)}"${fillAttr}>${escapeXml(char)}</text>`
             );
           }
         });
       } else {
+        // Use textY for regular text
         parts.push(
-          `<text class="${classes.join(' ')}" x="${fmt(baseX)}" y="${fmt(baseY)}"${fillAttr}>${escapeXml(rawText)}</text>`
+          `<text class="${classes.join(' ')}" x="${fmt(baseX)}" y="${fmt(textY)}"${fillAttr}>${escapeXml(rawText)}</text>`
         );
       }
     });
@@ -102,15 +115,25 @@ export const renderSimpleTextLayer = (
   rows: SpanRow[],
   config: TextRendererConfig
 ): string => {
-  const { charWidth, lineHeight, padding, contentStartY, theme } = config;
+  const { charWidth, lineHeight, padding, contentStartY, fontSize, theme } = config;
 
   const parts: string[] = [];
   parts.push('<g class="text-layer">');
 
+  // Cursor Y offset - cursor may extend above/below the cell
+  const cursorYOffset = getCursorYOffset(lineHeight, fontSize);
+  // Text offset from cursor top to center text within cursor
+  const textOffsetY = getTextOffsetY(lineHeight, fontSize);
+
   rows.forEach((row) => {
     row.forEach((span) => {
       const x = rx(padding + span.col * charWidth);
-      const y = r(contentStartY + span.row * lineHeight);
+      // Cell Y is top of line cell
+      const cellY = contentStartY + span.row * lineHeight;
+      // Cursor Y position (may extend above cell)
+      const cursorY = cellY + cursorYOffset;
+      // Text Y = cursor Y + text offset within cursor
+      const y = r(cursorY + textOffsetY);
       const classes = ['text', ...styleToClasses(span.style)];
       let fillAttr = '';
 

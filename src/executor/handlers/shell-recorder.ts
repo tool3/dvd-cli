@@ -296,11 +296,24 @@ const mergeRows = (preCommandRows: SpanRow[], recordingRows: SpanRow[], outputSt
 };
 
 /**
+ * Check if output contains animation escape sequences (like lolcat uses).
+ * Lolcat and similar tools use terminal reset (\x1bc) or cursor restore (\x1b8)
+ * to create animation effects.
+ */
+const isAnimatedOutput = (events: Recording['events']): boolean => {
+  const allOutput = events
+    .filter(([, eventType]) => eventType === 'o')
+    .map(([, , data]) => data)
+    .join('');
+
+  return allOutput.includes('\x1bc') || allOutput.includes('\x1b8') || allOutput.includes('\x1b[?25l');
+};
+
+/**
  * Generate frames from a recording by replaying through vterminal.
  *
- * Shell command output appears instantly in real terminals - when you run
- * `echo 'hello'`, the output shows in one frame, not character by character.
- * So we only capture the final state of the command output.
+ * For normal commands (echo, ls, etc.), we capture a single frame with the final output.
+ * For animated commands (lolcat, etc.), we capture frames at each terminal reset.
  */
 const generateRecordingFrames = (
   recording: Recording,
@@ -317,12 +330,16 @@ const generateRecordingFrames = (
   const lastFrameData = ctx.frameData.length > 0 ? ctx.frameData[ctx.frameData.length - 1] : null;
   const preCommandRows: SpanRow[] = lastFrameData ? lastFrameData.rows : [];
 
-  // Create a fresh grid for replaying the command output
-  let grid = createGridState(recording.header.width, recording.header.height);
-
-  // Apply all output events to get final terminal state
   const outputEvents = events.filter(([, eventType]) => eventType === 'o');
   if (outputEvents.length === 0) return frames;
+
+  // Check if this is animated output
+  if (isAnimatedOutput(events)) {
+    return generateAnimatedFrames(recording, ctx, baseTimestamp, outputStartLine, preCommandRows);
+  }
+
+  // Non-animated: create a fresh grid and apply all output
+  let grid = createGridState(recording.header.width, recording.header.height);
 
   for (const [, , data] of outputEvents) {
     grid = processInput(grid, data);
@@ -340,6 +357,122 @@ const generateRecordingFrames = (
     timestamp: baseTimestamp + finalTimestamp * 1000,
     activeCursor: false,
   });
+
+  return frames;
+};
+
+/**
+ * Generate frames for animated output (lolcat, etc.).
+ *
+ * For terminal reset (\x1bc): each frame clears and redraws (independent frames)
+ * For cursor restore (\x1b8): process incrementally, capturing a frame after each restore
+ *
+ * The key insight is that vterminal properly handles \x1b7 (save) and \x1b8 (restore),
+ * so we just need to feed input incrementally and capture at the right moments.
+ */
+const generateAnimatedFrames = (
+  recording: Recording,
+  ctx: ExecutorContext,
+  baseTimestamp: number,
+  outputStartLine: number,
+  preCommandRows: SpanRow[]
+): FrameData[] => {
+  const frames: FrameData[] = [];
+  const outputEvents = recording.events.filter(([, eventType]) => eventType === 'o');
+
+  if (outputEvents.length === 0) return frames;
+
+  // Collect all output first
+  const allOutput = outputEvents.map(([, , data]) => data).join('');
+
+  // Determine animation type
+  const usesTerminalReset = allOutput.includes('\x1bc');
+  const usesCursorRestore = allOutput.includes('\x1b8');
+
+  if (usesTerminalReset) {
+    // Terminal reset clears screen - each frame is independent
+    const animationFrames = allOutput.split('\x1bc').filter(f => f.trim());
+    if (animationFrames.length === 0) return frames;
+
+    const firstTimestamp = outputEvents[0][0];
+    const lastTimestamp = outputEvents[outputEvents.length - 1][0];
+    const totalDuration = (lastTimestamp - firstTimestamp) * 1000;
+    const frameInterval = animationFrames.length > 1
+      ? totalDuration / (animationFrames.length - 1)
+      : ctx.animationSpeed;
+
+    for (let i = 0; i < animationFrames.length; i++) {
+      let grid = createGridState(recording.header.width, recording.header.height);
+      grid = processInput(grid, animationFrames[i]);
+
+      const recordingRows = coalesce(grid, ctx.theme);
+      const rows = mergeRows(preCommandRows, recordingRows, outputStartLine);
+      const frameTimestamp = baseTimestamp + firstTimestamp * 1000 + i * frameInterval;
+
+      frames.push({
+        rows,
+        cursor: { row: grid.cursor.row + outputStartLine, col: grid.cursor.col },
+        cursorVisible: false,
+        timestamp: frameTimestamp,
+        activeCursor: false,
+      });
+    }
+  } else if (usesCursorRestore) {
+    // Cursor restore animation (lolcat style)
+    // Split by \x1b8 and process incrementally, letting vterminal handle cursor save/restore
+    const segments = allOutput.split('\x1b8');
+
+    const firstTimestamp = outputEvents[0][0];
+    const lastTimestamp = outputEvents[outputEvents.length - 1][0];
+    const totalDuration = (lastTimestamp - firstTimestamp) * 1000;
+    const frameInterval = segments.length > 1
+      ? totalDuration / (segments.length - 1)
+      : ctx.animationSpeed;
+
+    let grid = createGridState(recording.header.width, recording.header.height);
+
+    for (let i = 0; i < segments.length; i++) {
+      const segment = segments[i];
+
+      // Process this segment
+      grid = processInput(grid, segment);
+
+      // Capture frame after processing
+      const recordingRows = coalesce(grid, ctx.theme);
+      const rows = mergeRows(preCommandRows, recordingRows, outputStartLine);
+      const frameTimestamp = baseTimestamp + firstTimestamp * 1000 + i * frameInterval;
+
+      frames.push({
+        rows,
+        cursor: { row: grid.cursor.row + outputStartLine, col: grid.cursor.col },
+        cursorVisible: false,
+        timestamp: frameTimestamp,
+        activeCursor: false,
+      });
+
+      // After capturing, simulate the cursor restore by feeding the \x1b8 sequence
+      // (except for the last segment which doesn't have a following restore)
+      if (i < segments.length - 1) {
+        grid = processInput(grid, '\x1b8');
+      }
+    }
+  } else {
+    // Non-animated - just process everything and capture single frame
+    let grid = createGridState(recording.header.width, recording.header.height);
+    grid = processInput(grid, allOutput);
+
+    const recordingRows = coalesce(grid, ctx.theme);
+    const rows = mergeRows(preCommandRows, recordingRows, outputStartLine);
+    const lastTimestamp = outputEvents[outputEvents.length - 1][0];
+
+    frames.push({
+      rows,
+      cursor: { row: grid.cursor.row + outputStartLine, col: grid.cursor.col },
+      cursorVisible: false,
+      timestamp: baseTimestamp + lastTimestamp * 1000,
+      activeCursor: false,
+    });
+  }
 
   return frames;
 };

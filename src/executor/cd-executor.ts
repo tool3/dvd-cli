@@ -59,6 +59,8 @@ export class CDExecutor {
       const cmdDescription = formatCommandDescription(cmd);
       this.options.onProgress?.(i + 1, actionCommands.length, cmdDescription);
       await this.executeCommand(cmd);
+      // Yield to event loop between commands to allow spinner animation
+      await new Promise(resolve => setImmediate(resolve));
     }
 
     captureFrame(this.context, this.options, true, false);

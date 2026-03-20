@@ -88,7 +88,9 @@ export const executeType = async (
     await sleep(delay);
   }
 
-  for (const char of segmentGraphemes(text)) {
+  const graphemes = segmentGraphemes(text);
+  for (let i = 0; i < graphemes.length; i++) {
+    const char = graphemes[i];
     if (char === '\n') {
       const prefix = ctx.isMultiLineContinuation ? '' : ctx.promptPrefix;
       ctx.lines[ctx.cursorY] = prefix + ctx.currentLine;
@@ -118,6 +120,11 @@ export const executeType = async (
     const captureStart = Date.now();
     captureFrame(ctx, options, true, true);
     ctx.captureOverhead += Date.now() - captureStart;
+
+    // Yield to event loop every 10 characters to allow spinner animation
+    if (i % 10 === 9) {
+      await new Promise(resolve => setImmediate(resolve));
+    }
   }
 };
 

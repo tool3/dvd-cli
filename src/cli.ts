@@ -119,27 +119,23 @@ const createParser = () =>
     .option('font-size', {
       alias: 's',
       type: 'number',
-      describe: 'Font size in pixels',
-      default: 14,
+      describe: 'Font size in pixels (default: 14)',
     })
     .option('line-height', {
       alias: 'Y',
       type: 'number',
-      describe: 'Line height multiplier',
-      default: 1.4,
+      describe: 'Line height multiplier (default: 1.4)',
     })
     .option('template', {
       alias: 'm',
       type: 'string',
       choices: ['macos', 'windows', 'minimal'],
-      describe: 'Window template style',
-      default: 'macos',
+      describe: 'Window template style (default: macos)',
     })
     .option('padding', {
       alias: 'd',
       type: 'number',
-      describe: 'Content padding in pixels',
-      default: 16,
+      describe: 'Content padding in pixels (default: 16)',
     })
     .option('border-radius', {
       alias: 'R',
@@ -352,26 +348,22 @@ const createParser = () =>
           .option('font-size', {
             alias: 's',
             type: 'number',
-            describe: 'Font size in pixels',
-            default: 14,
+            describe: 'Font size in pixels (default: 14)',
           })
           .option('line-height', {
             alias: 'Y',
             type: 'number',
-            describe: 'Line height multiplier',
-            default: 1.4,
+            describe: 'Line height multiplier (default: 1.4)',
           })
           .option('padding', {
             alias: 'd',
             type: 'number',
-            describe: 'Content padding in pixels',
-            default: 16,
+            describe: 'Content padding in pixels (default: 16)',
           })
           .option('border-radius', {
             alias: 'R',
             type: 'number',
-            describe: 'Window border radius in pixels',
-            default: 8,
+            describe: 'Window border radius in pixels (default: 8)',
           })
           .option('custom-glyphs', {
             alias: 'G',
@@ -522,6 +514,37 @@ const run = async (): Promise<void> => {
       legacy: argv.legacy,
       'custom-glyphs': argv['custom-glyphs'],
       'playback-speed': argv['playback-speed'],
+      // Pass through all styling options
+      width: argv.width,
+      height: argv.height,
+      title: argv.title,
+      theme: argv.theme,
+      'font-size': argv['font-size'],
+      'line-height': argv['line-height'],
+      template: argv.template as string,
+      padding: argv.padding,
+      'border-radius': argv['border-radius'],
+      'border-color': argv['border-color'],
+      'border-width': argv['border-width'],
+      'font-family': argv['font-family'],
+      watermark: argv.watermark,
+      'cursor-style': argv['cursor-style'],
+      'cursor-color': argv['cursor-color'],
+      'cursor-blink': argv['cursor-blink'],
+      'header-background': argv['header-background'],
+      'header-height': argv['header-height'],
+      'header-border': argv['header-border'],
+      'header-border-color': argv['header-border-color'],
+      'header-border-width': argv['header-border-width'],
+      'footer-background': argv['footer-background'],
+      'footer-height': argv['footer-height'],
+      'footer-border': argv['footer-border'],
+      'footer-border-color': argv['footer-border-color'],
+      'footer-border-width': argv['footer-border-width'],
+      'letter-spacing': argv['letter-spacing'],
+      background: argv.background,
+      'background-padding': argv['background-padding'],
+      'background-radius': argv['background-radius'],
     });
   } catch (err) {
     console.error(err instanceof Error ? err.message : String(err));
