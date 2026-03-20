@@ -3,6 +3,7 @@
 import type { ExecutorContext, CDExecutorOptions } from '../types';
 import { sleep, stripAnsi } from '../types';
 import { captureFrame } from '../frame-capture';
+import { getCharWidth } from '../../utils/wcwidth';
 
 
 //#region String Index Helpers
@@ -114,7 +115,8 @@ export const executeType = async (
     const before = ctx.currentLine.substring(0, cursorIndex);
     const after = ctx.currentLine.substring(cursorIndex);
     ctx.currentLine = before + char + after;
-    ctx.cursorX++;
+    // Increment cursor by character width (emoji are 2-wide)
+    ctx.cursorX += getCharWidth(char);
 
     await sleep(delay);
     const captureStart = Date.now();

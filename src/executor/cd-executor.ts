@@ -407,7 +407,7 @@ const createContext = (options: CDExecutorOptions): ExecutorContext => {
     maxLineLength: 0,
     maxLines: 0,
     maxVisualRow: 0,
-    scroll: !!options.height,
+    scroll: true, // Enable scroll by default
     scrollOffset: 0,
     isExecutingCommand: false,
     isMultiLineContinuation: false,
