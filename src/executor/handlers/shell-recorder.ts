@@ -365,10 +365,17 @@ const generateRecordingFrames = (
  * Generate frames for animated output (lolcat, etc.).
  *
  * For terminal reset (\x1bc): each frame clears and redraws (independent frames)
- * For cursor restore (\x1b8): process incrementally, capturing a frame after each restore
+ * For cursor restore (\x1b8): split by restore and process each frame
  *
- * The key insight is that vterminal properly handles \x1b7 (save) and \x1b8 (restore),
- * so we just need to feed input incrementally and capture at the right moments.
+ * Lolcat animation pattern:
+ * \x1b[?25l  - hide cursor
+ * \x1b7      - save cursor position (once at start)
+ * <frame1>  - first colored output
+ * \x1b8     - restore cursor
+ * <frame2>  - second colored output (overwrites)
+ * \x1b8     - restore cursor
+ * <frame3>  - third colored output (overwrites)
+ * ... repeats for rainbow animation
  */
 const generateAnimatedFrames = (
   recording: Recording,
@@ -419,41 +426,86 @@ const generateAnimatedFrames = (
     }
   } else if (usesCursorRestore) {
     // Cursor restore animation (lolcat style)
-    // Split by \x1b8 and process incrementally, letting vterminal handle cursor save/restore
-    const segments = allOutput.split('\x1b8');
+    // Each \x1b8 marks the start of a new animation frame that overwrites the previous
+
+    // Detect animation speed from the actual output timing
+    const restoreTimestamps: number[] = [];
+    let outputSoFar = '';
+    for (const [timestamp, eventType, data] of outputEvents) {
+      if (eventType === 'o') {
+        const prevLength = outputSoFar.length;
+        outputSoFar += data;
+        let searchStart = Math.max(0, prevLength - 2);
+        let idx = outputSoFar.indexOf('\x1b8', searchStart);
+        while (idx !== -1 && idx >= prevLength - 2) {
+          restoreTimestamps.push(timestamp);
+          idx = outputSoFar.indexOf('\x1b8', idx + 2);
+        }
+      }
+    }
+
+    // Calculate frame interval from actual restore sequence timing
+    let frameInterval = ctx.animationSpeed;
+    if (restoreTimestamps.length >= 2) {
+      let totalInterval = 0;
+      for (let i = 1; i < restoreTimestamps.length; i++) {
+        totalInterval += (restoreTimestamps[i] - restoreTimestamps[i - 1]) * 1000;
+      }
+      const avgInterval = totalInterval / (restoreTimestamps.length - 1);
+      if (avgInterval > 10) {
+        frameInterval = avgInterval;
+      }
+    }
 
     const firstTimestamp = outputEvents[0][0];
-    const lastTimestamp = outputEvents[outputEvents.length - 1][0];
-    const totalDuration = (lastTimestamp - firstTimestamp) * 1000;
-    const frameInterval = segments.length > 1
-      ? totalDuration / (segments.length - 1)
-      : ctx.animationSpeed;
 
-    let grid = createGridState(recording.header.width, recording.header.height);
+    // Split by \x1b8 (cursor restore) - each segment after the first is a new animation frame
+    const restoreSegments = allOutput.split('\x1b8');
 
-    for (let i = 0; i < segments.length; i++) {
-      const segment = segments[i];
+    // Process segments - first segment is the initial content + cursor save
+    // Subsequent segments are animation frames
+    for (let i = 0; i < restoreSegments.length; i++) {
+      const segment = restoreSegments[i];
+      if (!segment) continue;
 
-      // Process this segment
-      grid = processInput(grid, segment);
+      // Create fresh grid for each frame (since cursor restore rewinds position)
+      let grid = createGridState(recording.header.width, recording.header.height);
 
-      // Capture frame after processing
-      const recordingRows = coalesce(grid, ctx.theme);
-      const rows = mergeRows(preCommandRows, recordingRows, outputStartLine);
-      const frameTimestamp = baseTimestamp + firstTimestamp * 1000 + i * frameInterval;
+      if (i === 0) {
+        // First segment: process everything up to (and including) cursor save
+        // This establishes the initial state
+        grid = processInput(grid, segment);
+      } else {
+        // Subsequent segments: need to restore to saved position first
+        // Extract any setup from first segment (hide cursor, save cursor) and apply it
+        const setupMatch = restoreSegments[0].match(/^(\x1b\[\?25[lh])?(\x1b7)?/);
+        const setup = setupMatch ? setupMatch[0] : '';
 
-      frames.push({
-        rows,
-        cursor: { row: grid.cursor.row + outputStartLine, col: grid.cursor.col },
-        cursorVisible: false,
-        timestamp: frameTimestamp,
-        activeCursor: false,
-      });
+        // Apply setup + cursor save, then restore + this segment's content
+        grid = processInput(grid, setup + '\x1b7\x1b8' + segment);
+      }
 
-      // After capturing, simulate the cursor restore by feeding the \x1b8 sequence
-      // (except for the last segment which doesn't have a following restore)
-      if (i < segments.length - 1) {
-        grid = processInput(grid, '\x1b8');
+      // Check if this segment has visible printable content
+      const visibleContent = segment
+        .replace(/\x1b\[[0-9;]*m/g, '')       // remove color codes
+        .replace(/\x1b\[\?[0-9;]*[hl]/g, '')  // remove cursor hide/show
+        .replace(/\x1b7/g, '')                 // remove cursor save
+        .replace(/\x1b8/g, '')                 // remove cursor restore
+        .trim();
+
+      // Only capture frame if there's visible content
+      if (visibleContent.length > 0) {
+        const recordingRows = coalesce(grid, ctx.theme);
+        const rows = mergeRows(preCommandRows, recordingRows, outputStartLine);
+        const frameTimestamp = baseTimestamp + firstTimestamp * 1000 + frames.length * frameInterval;
+
+        frames.push({
+          rows,
+          cursor: { row: grid.cursor.row + outputStartLine, col: grid.cursor.col },
+          cursorVisible: false,
+          timestamp: frameTimestamp,
+          activeCursor: false,
+        });
       }
     }
   } else {
