@@ -16,6 +16,49 @@ import { validateCommand } from './commands/validate';
 const themeChoices = Object.keys(themes) as string[];
 
 
+//#region CLI Override Detection
+
+/**
+ * Get the set of option names that were explicitly provided by the user.
+ * This allows .cd file settings to take precedence over CLI defaults,
+ * while still allowing explicit CLI overrides.
+ */
+const getExplicitlyProvidedArgs = (): Set<string> => {
+  const args = process.argv.slice(2);
+  const explicit = new Set<string>();
+
+  for (const arg of args) {
+    // Handle --option=value and --option value formats
+    if (arg.startsWith('--')) {
+      const optName = arg.slice(2).split('=')[0];
+      explicit.add(optName);
+    } else if (arg.startsWith('-') && arg.length === 2) {
+      // Handle -T value format (single char alias)
+      explicit.add(arg.slice(1));
+    }
+  }
+
+  return explicit;
+};
+
+/**
+ * Returns value only if it was explicitly provided by user, otherwise undefined.
+ * This allows .cd file settings to be used when CLI arg is just the default.
+ */
+const ifExplicit = <T>(
+  explicit: Set<string>,
+  value: T,
+  ...names: string[]
+): T | undefined => {
+  for (const name of names) {
+    if (explicit.has(name)) {
+      return value;
+    }
+  }
+  return undefined;
+};
+
+
 //#region CLI Parser
 
 const createParser = () =>
@@ -499,6 +542,9 @@ const run = async (): Promise<void> => {
   }
 
   try {
+    // Detect which args were explicitly provided by user (not defaults)
+    const explicit = getExplicitlyProvidedArgs();
+
     await renderCommand({
       file,
       output: argv.output,
@@ -514,37 +560,38 @@ const run = async (): Promise<void> => {
       legacy: argv.legacy,
       'custom-glyphs': argv['custom-glyphs'],
       'playback-speed': argv['playback-speed'],
-      // Pass through all styling options
-      width: argv.width,
-      height: argv.height,
-      title: argv.title,
-      theme: argv.theme,
-      'font-size': argv['font-size'],
-      'line-height': argv['line-height'],
-      template: argv.template as string,
-      padding: argv.padding,
-      'border-radius': argv['border-radius'],
-      'border-color': argv['border-color'],
-      'border-width': argv['border-width'],
-      'font-family': argv['font-family'],
-      watermark: argv.watermark,
-      'cursor-style': argv['cursor-style'],
-      'cursor-color': argv['cursor-color'],
-      'cursor-blink': argv['cursor-blink'],
-      'header-background': argv['header-background'],
-      'header-height': argv['header-height'],
-      'header-border': argv['header-border'],
-      'header-border-color': argv['header-border-color'],
-      'header-border-width': argv['header-border-width'],
-      'footer-background': argv['footer-background'],
-      'footer-height': argv['footer-height'],
-      'footer-border': argv['footer-border'],
-      'footer-border-color': argv['footer-border-color'],
-      'footer-border-width': argv['footer-border-width'],
-      'letter-spacing': argv['letter-spacing'],
-      background: argv.background,
-      'background-padding': argv['background-padding'],
-      'background-radius': argv['background-radius'],
+      // Pass through styling options only if explicitly provided by user
+      // This allows .cd file settings to take precedence over CLI defaults
+      width: ifExplicit(explicit, argv.width, 'width', 'W'),
+      height: ifExplicit(explicit, argv.height, 'height', 'H'),
+      title: ifExplicit(explicit, argv.title, 'title', 't'),
+      theme: ifExplicit(explicit, argv.theme, 'theme', 'T'),
+      'font-size': ifExplicit(explicit, argv['font-size'], 'font-size', 's'),
+      'line-height': ifExplicit(explicit, argv['line-height'], 'line-height', 'Y'),
+      template: ifExplicit(explicit, argv.template as string, 'template', 'm'),
+      padding: ifExplicit(explicit, argv.padding, 'padding', 'd'),
+      'border-radius': ifExplicit(explicit, argv['border-radius'], 'border-radius', 'R'),
+      'border-color': ifExplicit(explicit, argv['border-color'], 'border-color', 'C'),
+      'border-width': ifExplicit(explicit, argv['border-width'], 'border-width', 'B'),
+      'font-family': ifExplicit(explicit, argv['font-family'], 'font-family', 'y'),
+      watermark: ifExplicit(explicit, argv.watermark, 'watermark', 'w'),
+      'cursor-style': ifExplicit(explicit, argv['cursor-style'], 'cursor-style', 'c'),
+      'cursor-color': ifExplicit(explicit, argv['cursor-color'], 'cursor-color', 'k'),
+      'cursor-blink': ifExplicit(explicit, argv['cursor-blink'], 'cursor-blink', 'K'),
+      'header-background': ifExplicit(explicit, argv['header-background'], 'header-background', 'b'),
+      'header-height': ifExplicit(explicit, argv['header-height'], 'header-height', 'e'),
+      'header-border': ifExplicit(explicit, argv['header-border'], 'header-border', 'D'),
+      'header-border-color': ifExplicit(explicit, argv['header-border-color'], 'header-border-color', 'E'),
+      'header-border-width': ifExplicit(explicit, argv['header-border-width'], 'header-border-width'),
+      'footer-background': ifExplicit(explicit, argv['footer-background'], 'footer-background', 'g'),
+      'footer-height': ifExplicit(explicit, argv['footer-height'], 'footer-height', 'i'),
+      'footer-border': ifExplicit(explicit, argv['footer-border'], 'footer-border', 'I'),
+      'footer-border-color': ifExplicit(explicit, argv['footer-border-color'], 'footer-border-color', 'J'),
+      'footer-border-width': ifExplicit(explicit, argv['footer-border-width'], 'footer-border-width', 'j'),
+      'letter-spacing': ifExplicit(explicit, argv['letter-spacing'], 'letter-spacing', 'a'),
+      background: ifExplicit(explicit, argv.background, 'background', 'A'),
+      'background-padding': ifExplicit(explicit, argv['background-padding'], 'background-padding', 'n'),
+      'background-radius': ifExplicit(explicit, argv['background-radius'], 'background-radius'),
     });
   } catch (err) {
     console.error(err instanceof Error ? err.message : String(err));

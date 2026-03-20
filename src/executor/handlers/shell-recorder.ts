@@ -365,17 +365,10 @@ const generateRecordingFrames = (
  * Generate frames for animated output (lolcat, etc.).
  *
  * For terminal reset (\x1bc): each frame clears and redraws (independent frames)
- * For cursor restore (\x1b8): split by restore and process each frame
+ * For cursor restore (\x1b8): process incrementally, capturing a frame after each restore
  *
- * Lolcat animation pattern:
- * \x1b[?25l  - hide cursor
- * \x1b7      - save cursor position (once at start)
- * <frame1>  - first colored output
- * \x1b8     - restore cursor
- * <frame2>  - second colored output (overwrites)
- * \x1b8     - restore cursor
- * <frame3>  - third colored output (overwrites)
- * ... repeats for rainbow animation
+ * The key insight is that vterminal properly handles \x1b7 (save) and \x1b8 (restore),
+ * so we just need to feed input incrementally and capture at the right moments.
  */
 const generateAnimatedFrames = (
   recording: Recording,
@@ -426,7 +419,19 @@ const generateAnimatedFrames = (
     }
   } else if (usesCursorRestore) {
     // Cursor restore animation (lolcat style)
-    // Each \x1b8 marks the start of a new animation frame that overwrites the previous
+    // Process the entire output through vterminal, capturing frames after each \x1b8 + content
+    //
+    // Lolcat pattern:
+    // \x1b[?25l  - hide cursor
+    // \x1b7      - save cursor
+    // <content> - first frame
+    // \x1b8<content> - second frame (restore then draw)
+    // \x1b8<content> - third frame
+    // ... etc
+
+    // Split by \x1b7 (cursor save) to separate "lines" of animation
+    // Each line has multiple \x1b8 frames
+    const cursorSaveSegments = allOutput.split('\x1b7');
 
     // Detect animation speed from the actual output timing
     const restoreTimestamps: number[] = [];
@@ -458,55 +463,51 @@ const generateAnimatedFrames = (
     }
 
     const firstTimestamp = outputEvents[0][0];
+    let grid = createGridState(recording.header.width, recording.header.height);
+    let frameIndex = 0;
 
-    // Split by \x1b8 (cursor restore) - each segment after the first is a new animation frame
-    const restoreSegments = allOutput.split('\x1b8');
+    for (const cursorSaveSegment of cursorSaveSegments) {
+      if (!cursorSaveSegment) continue;
 
-    // Process segments - first segment is the initial content + cursor save
-    // Subsequent segments are animation frames
-    for (let i = 0; i < restoreSegments.length; i++) {
-      const segment = restoreSegments[i];
-      if (!segment) continue;
+      // Split this segment by cursor restore
+      const restoreSegments = cursorSaveSegment.split('\x1b8');
 
-      // Create fresh grid for each frame (since cursor restore rewinds position)
-      let grid = createGridState(recording.header.width, recording.header.height);
+      for (let i = 0; i < restoreSegments.length; i++) {
+        const segment = restoreSegments[i];
+        if (!segment) continue;
 
-      if (i === 0) {
-        // First segment: process everything up to (and including) cursor save
-        // This establishes the initial state
-        grid = processInput(grid, segment);
-      } else {
-        // Subsequent segments: need to restore to saved position first
-        // Extract any setup from first segment (hide cursor, save cursor) and apply it
-        const setupMatch = restoreSegments[0].match(/^(\x1b\[\?25[lh])?(\x1b7)?/);
-        const setup = setupMatch ? setupMatch[0] : '';
+        // For the first segment after a cursor save, process the save first
+        if (i === 0) {
+          // This is the initial content or content after cursor save
+          // Process without restore
+          grid = processInput(grid, segment);
+        } else {
+          // This segment comes after a cursor restore
+          // First restore cursor, then process content
+          grid = processInput(grid, '\x1b8' + segment);
+        }
 
-        // Apply setup + cursor save, then restore + this segment's content
-        grid = processInput(grid, setup + '\x1b7\x1b8' + segment);
+        // Only capture frame if this segment has visible content (not just control sequences)
+        const hasVisibleContent = segment.replace(/\x1b\[[0-9;]*m/g, '').replace(/\x1b\[\?[0-9;]*[hl]/g, '').trim().length > 0;
+        if (hasVisibleContent) {
+          const recordingRows = coalesce(grid, ctx.theme);
+          const rows = mergeRows(preCommandRows, recordingRows, outputStartLine);
+          const frameTimestamp = baseTimestamp + firstTimestamp * 1000 + frameIndex * frameInterval;
+
+          frames.push({
+            rows,
+            cursor: { row: grid.cursor.row + outputStartLine, col: grid.cursor.col },
+            cursorVisible: false,
+            timestamp: frameTimestamp,
+            activeCursor: false,
+          });
+          frameIndex++;
+        }
       }
 
-      // Check if this segment has visible printable content
-      const visibleContent = segment
-        .replace(/\x1b\[[0-9;]*m/g, '')       // remove color codes
-        .replace(/\x1b\[\?[0-9;]*[hl]/g, '')  // remove cursor hide/show
-        .replace(/\x1b7/g, '')                 // remove cursor save
-        .replace(/\x1b8/g, '')                 // remove cursor restore
-        .trim();
-
-      // Only capture frame if there's visible content
-      if (visibleContent.length > 0) {
-        const recordingRows = coalesce(grid, ctx.theme);
-        const rows = mergeRows(preCommandRows, recordingRows, outputStartLine);
-        const frameTimestamp = baseTimestamp + firstTimestamp * 1000 + frames.length * frameInterval;
-
-        frames.push({
-          rows,
-          cursor: { row: grid.cursor.row + outputStartLine, col: grid.cursor.col },
-          cursorVisible: false,
-          timestamp: frameTimestamp,
-          activeCursor: false,
-        });
-      }
+      // After processing all restore segments for this line, process the cursor save
+      // to prepare for the next line
+      grid = processInput(grid, '\x1b7');
     }
   } else {
     // Non-animated - just process everything and capture single frame
