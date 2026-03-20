@@ -352,7 +352,7 @@ export const emitFilmstrip = (
   // Register all unique row symbols across all frames
   const frameRowSymbols: Map<number, Map<number, number>> = new Map(); // frameIndex -> rowIndex -> symbolId
 
-  const customGlyphs = options.customGlyphs ?? false;
+  const customGlyphs = options.customGlyphs ?? true;
   const showCursor = options.showCursor ?? true;
 
   const symbolConfig = {
@@ -680,7 +680,7 @@ const generateColorStyles = (
     styles.push(`.a{fill:${theme.background}}`);
   }
 
-  // Color classes - set fill and stroke (stroke needed for custom glyphs like box-drawing)
+  // Color classes - set fill and stroke (stroke needed for custom glyphs like box-drawing lines)
   // Text elements have stroke:none set with higher specificity to avoid bold appearance
   registry.colorClasses.forEach((className, color) => {
     styles.push(`.${className}{fill:${color};stroke:${color}}`);
@@ -689,6 +689,10 @@ const generateColorStyles = (
   // Path elements with fill="none" should remain unfilled (box-drawing corners)
   // Use attribute selector for higher specificity than class alone
   styles.push('path[fill="none"]{fill:none}');
+
+  // Block elements (rects converted to paths) should NOT have stroke - it makes them appear wider
+  // Only line elements need stroke. Use shape-rendering attribute to identify block elements.
+  styles.push('path[shape-rendering="crispEdges"]{stroke:none}');
 
   return styles.join('');
 };
