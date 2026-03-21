@@ -170,7 +170,12 @@ const splitIntoFrames = (content: string, animationType: 'terminal-reset' | 'cur
   }
 
   if (animationType === 'cursor-up') {
+    // For cursor-up animations, content is drawn, then cursor moves up to redraw
+    // Each section between cursor-up sequences is a frame that overlays the previous
+    // We DON'T accumulate - each frame is independent content that gets drawn at cursor position
     const frames: string[] = [];
+
+    // Split on cursor-up sequences
     const parts = content.split(/\x1b\[\d+A/);
 
     for (const part of parts) {
@@ -178,7 +183,8 @@ const splitIntoFrames = (content: string, animationType: 'terminal-reset' | 'cur
         frames.push(part);
       }
     }
-    return frames;
+
+    return frames.length > 0 ? frames : [content];
   }
 
   if (animationType === 'cursor-restore') {
@@ -307,13 +313,32 @@ export const pipeCommand = async (args: PipeArgs): Promise<void> => {
     let width = args.width;
     let height = args.height;
 
+    // Calculate dimensions early (needed for both auto-detection and frame generation)
+    const charWidth = fontSize * 0.6;
+    const letterSpacingPx = args.letterSpacing ?? 0;
+    const effectiveCharWidth = charWidth + letterSpacingPx;
+    const lineHeightPx = fontSize * lineHeight;
+    const headerHeight = 40;
+    const watermarkHeight = args.watermark ? lineHeightPx : 0;
+
     if (!width || !height) {
       // For stdin, we need to determine dimensions by processing through terminal emulator
       // Strategy: Start with estimated size, process content, find actual bounds
       let maxLineLength = 40; // Min width
       let maxLineCount = 10;  // Min height
 
-      for (const frame of frameContents) {
+      // For cursor-up animations, frames overlay each other, so check the first frame
+      // (which represents one complete draw cycle before the cursor moves up)
+      // For other animation types, check all frames to find max dimensions
+      const framesToCheck = animationType === 'cursor-up' && frameContents.length > 1
+        ? [frameContents[0]]
+        : frameContents;
+
+      if (args.verbose && animationType === 'cursor-up' && frameContents.length > 1) {
+        console.log(`Cursor-up animation: checking only last frame (${frameContents.length} total frames)`);
+      }
+
+      for (const frame of framesToCheck) {
         // First pass: estimate grid size from plain text analysis
         const plainText = frame.replace(/\x1b\[[0-9;]*m/g, '');
         const lines = plainText.split('\n');
@@ -337,6 +362,7 @@ export const pipeCommand = async (args: PipeArgs): Promise<void> => {
 
         for (let row = 0; row < processed.cells.length; row++) {
           let rowHasContent = false;
+          let rowContentSample = '';
           for (let col = 0; col < processed.cells[row].length; col++) {
             const cell = processed.cells[row][col];
             // Check if cell has content (non-space char) or non-default background
@@ -345,7 +371,11 @@ export const pipeCommand = async (args: PipeArgs): Promise<void> => {
               maxRow = Math.max(maxRow, row);
               maxCol = Math.max(maxCol, col);
               rowHasContent = true;
+              if (rowContentSample.length < 20) rowContentSample += cell.char;
             }
+          }
+          if (args.verbose && rowHasContent && row >= 8) {
+            console.log(`  Row ${row}: hasContent=true sample="${rowContentSample}"`);
           }
           // Early exit: if we hit 10 consecutive empty rows after finding content, stop
           if (!rowHasContent && maxRow > 0 && row > maxRow + 10) {
@@ -361,19 +391,13 @@ export const pipeCommand = async (args: PipeArgs): Promise<void> => {
         }
       }
 
-      const charWidth = fontSize * 0.6;
-      const letterSpacingPx = args.letterSpacing ?? 0;
-      const effectiveCharWidth = charWidth + letterSpacingPx;
-      const lineHeightPx = fontSize * lineHeight;
-      const headerHeight = 40;
-      // Add extra space for watermark if present
-      const watermarkHeight = args.watermark ? lineHeightPx : 0;
-
       if (!width) {
         width = Math.ceil(maxLineLength * effectiveCharWidth + padding * 2);
       }
       if (!height) {
-        height = Math.ceil(maxLineCount * lineHeightPx + headerHeight + padding * 2 + watermarkHeight);
+        // Calculate height needed for content with buffer to ensure last row isn't clipped
+        // Add full extra line height to account for Math.floor() in grid calculation
+        height = Math.ceil((maxLineCount + 1) * lineHeightPx + headerHeight + padding * 2 + watermarkHeight);
       }
 
       if (args.verbose) {
@@ -399,12 +423,32 @@ export const pipeCommand = async (args: PipeArgs): Promise<void> => {
     // Apply playback speed to frame timestamps
     const speed = args.playbackSpeed ?? 1;
 
+    // Pre-create grid dimensions to avoid recalculating for each frame
+    const gridWidth = Math.floor((width - padding * 2) / charWidth);
+    const gridHeight = Math.floor((height - headerHeight - padding * 2 - watermarkHeight) / lineHeightPx);
+
+    if (args.verbose) {
+      console.log(`Rendering grid: ${gridWidth}x${gridHeight} (can hold rows 0-${gridHeight - 1})`);
+    }
+
     const frameData: FrameData[] = frameContents.map((content, i) => {
       let timestamp = i * frameDuration;
       if (speed !== 1 && speed > 0) {
         timestamp = Math.round(timestamp / speed);
       }
-      return generateFrameData(content, timestamp, { ...renderOptions, width, height });
+
+      // Create grid and process content
+      let grid = createGridState(gridWidth, gridHeight);
+      grid = processInput(grid, content);
+      const rows = coalesce(grid, theme);
+
+      return {
+        rows,
+        cursor: { row: grid.cursor.row, col: grid.cursor.col },
+        cursorVisible: false,
+        timestamp,
+        activeCursor: false,
+      };
     });
 
     if (args.verbose) {
@@ -423,10 +467,6 @@ export const pipeCommand = async (args: PipeArgs): Promise<void> => {
       fadeDuration: args['fade-duration'] ?? 1500,
       rewindSpeed: args['rewind-speed'] ?? 5,
     };
-
-    const charWidth = fontSize * 0.6;
-    const lineHeightPx = fontSize * lineHeight;
-    const headerHeight = args.headerHeight ?? 40;
 
     let svg = createFilmstripSVG({
       frameData,
