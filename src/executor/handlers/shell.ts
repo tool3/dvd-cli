@@ -20,29 +20,45 @@ export const executeEnter = async (
 
   const prefix = ctx.isMultiLineContinuation ? '' : ctx.promptPrefix;
   ctx.lines[ctx.cursorY] = prefix + ctx.currentLine;
-  ctx.cursorY++;
-  ctx.cursorX = 0;
-  ctx.currentLine = '';
-  ctx.isMultiLineContinuation = false;
-  ctx.selectionStart = undefined;
-  ctx.selectionEnd = undefined;
-
-  if (!ctx.lines[ctx.cursorY]) {
-    ctx.lines[ctx.cursorY] = '';
-  }
 
   if (command) {
     // Handle 'clear' command specially - reset terminal state like a real terminal
     if (command === 'clear') {
+      ctx.cursorY++;
+      ctx.cursorX = 0;
+      ctx.currentLine = '';
+      ctx.isMultiLineContinuation = false;
+      ctx.selectionStart = undefined;
+      ctx.selectionEnd = undefined;
+      if (!ctx.lines[ctx.cursorY]) {
+        ctx.lines[ctx.cursorY] = '';
+      }
       await executeClearCommand(ctx, options);
       return;
     }
 
-    ctx.isExecutingCommand = true;
     await sleep(100);
+
+    // Capture frame showing command typed (before cursor moves down)
+    // This prevents visual jump when shell output appears
     const captureStart = Date.now();
     captureFrame(ctx, options, false, false);
     ctx.captureOverhead += Date.now() - captureStart;
+
+    // Mark as executing AFTER capturing the typed command frame
+    ctx.isExecutingCommand = true;
+
+    // Now move cursor to next line for output
+    ctx.cursorY++;
+    ctx.cursorX = 0;
+    ctx.currentLine = '';
+    ctx.isMultiLineContinuation = false;
+    ctx.selectionStart = undefined;
+    ctx.selectionEnd = undefined;
+    if (!ctx.lines[ctx.cursorY]) {
+      ctx.lines[ctx.cursorY] = '';
+    }
+
     await executeShellCommand(ctx, options, command);
   } else {
     await sleep(100);

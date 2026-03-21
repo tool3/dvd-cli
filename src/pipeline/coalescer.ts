@@ -1,5 +1,6 @@
 import type { Cell, GridState, Color, CellStyle, Span, SpanRow, Theme } from '../types';
 import { stylesEqual } from '../types';
+import { getStringWidth } from '../utils/wcwidth';
 
 //#region Color Resolution
 
@@ -123,11 +124,18 @@ export const coalesce = (grid: GridState, theme: Theme): SpanRow[] => {
 
       if (currentSpan && stylesEqual(currentSpan.style, style)) {
         currentSpan.text += cell.char;
+        currentSpan.width = getStringWidth(currentSpan.text);
       } else {
         if (currentSpan) {
           allSpans.push(currentSpan);
         }
-        currentSpan = { text: cell.char, style, col, row };
+        currentSpan = {
+          text: cell.char,
+          style,
+          col,
+          row,
+          width: getStringWidth(cell.char)
+        };
       }
     }
 
@@ -155,7 +163,11 @@ export const coalesce = (grid: GridState, theme: Theme): SpanRow[] => {
         if (i === lastVisibleIndex) {
           const trimmed = allSpans[i].text.trimEnd();
           if (trimmed.length > 0) {
-            spans.push({ ...allSpans[i], text: trimmed });
+            spans.push({
+              ...allSpans[i],
+              text: trimmed,
+              width: getStringWidth(trimmed)
+            });
           }
         } else {
           spans.push(allSpans[i]);
@@ -206,7 +218,7 @@ export const coalesceBackgrounds = (rows: SpanRow[], config: RenderConfig): BgRe
 
       const x = padding + span.col * charWidth;
       const y = headerHeight + span.row * lineHeight;
-      const width = span.text.length * charWidth;
+      const width = span.width * charWidth;
 
       if (
         currentRect &&

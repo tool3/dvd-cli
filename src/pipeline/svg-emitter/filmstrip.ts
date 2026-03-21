@@ -6,6 +6,7 @@ import { fmt, escapeXml, extractWatermarkDefs, getEffectiveLineHeight, getTextOf
 import type { EmitResult } from './index';
 import type { FrameData } from './animated';
 import { containsCustomGlyphs, isCustomGlyph, renderCustomGlyph, type GlyphContext } from '../customGlyphs';
+import { getCharWidth } from '../../utils/wcwidth';
 
 
 //#region Types
@@ -185,6 +186,7 @@ const registerRowSymbol = (
     fontSize: number;
     theme: Theme;
     customGlyphs: boolean;
+    letterSpacing: number;
   }
 ): number | null => {
   // Skip rows that only contain whitespace with no background color
@@ -206,7 +208,7 @@ const registerRowSymbol = (
   registry.rowSymbols.set(hash, id);
 
   // Generate symbol content - all text elements for this row
-  const { charWidth, lineHeight, padding, contentStartY, fontSize, theme, customGlyphs } = config;
+  const { charWidth, lineHeight, padding, contentStartY, fontSize, theme, customGlyphs, letterSpacing } = config;
   // Cell Y position - top of the line cell
   const cellY = contentStartY + rowIndex * lineHeight;
   // Cursor Y position - may extend above/below the cell
@@ -228,7 +230,7 @@ const registerRowSymbol = (
   row.forEach((span) => {
     if (!span.style.bg) return;
     const bgX = fmt(padding + span.col * charWidth);
-    const bgWidth = fmt(span.text.length * charWidth);
+    const bgWidth = fmt(span.width * charWidth);
     const bgColorClass = getOrCreateColorClass(registry, span.style.bg);
     textParts.push(
       `<rect x="${bgX}" y="${fmt(cellY)}" width="${bgWidth}" height="${fmt(lineHeight)}" class="${bgColorClass}"/>`
@@ -256,10 +258,12 @@ const registerRowSymbol = (
     // Use custom glyph rendering when enabled and text contains special chars
     if (customGlyphs && containsCustomGlyphs(rawText)) {
       // Render character by character for custom glyphs
-      [...rawText].forEach((char, charOffset) => {
+      let colOffset = 0;
+      [...rawText].forEach((char) => {
         const codePoint = char.codePointAt(0);
-        const absoluteCol = span.col + charOffset;
+        const absoluteCol = span.col + colOffset;
         const charX = padding + absoluteCol * charWidth;
+        const charDisplayWidth = getCharWidth(char);
 
         // Render custom glyphs (box-drawing, block elements, etc.)
         // Use cellY so glyphs fill the entire cell
@@ -285,12 +289,21 @@ const registerRowSymbol = (
         textParts.push(
           `<text x="${fmt(charX)}" y="${fmt(textY)}" class="${allClasses}">${escapeXml(char)}</text>`
         );
+
+        // Increment column offset by character display width (emoji are 2-wide)
+        colOffset += charDisplayWidth;
       });
     } else {
       // No custom glyphs - render as single text element with textY for vertical centering
       const x = fmt(padding + span.col * charWidth);
       const safeText = escapeXml(rawText);
-      textParts.push(`<text x="${x}" y="${fmt(textY)}" class="${allClasses}">${safeText}</text>`);
+      // Use textLength to ensure text fits exactly in the allocated width
+      // This is crucial for emoji which may have inconsistent font metrics
+      // Account for letter-spacing: each character gets extra spacing except the last
+      const numChars = [...rawText].length;
+      const totalLetterSpacing = letterSpacing * (numChars - 1);
+      const textWidth = fmt(span.width * charWidth + totalLetterSpacing);
+      textParts.push(`<text x="${x}" y="${fmt(textY)}" textLength="${textWidth}" lengthAdjust="spacingAndGlyphs" class="${allClasses}">${safeText}</text>`);
     }
   });
 
@@ -372,6 +385,7 @@ export const emitFilmstrip = (
     fontSize,
     theme,
     customGlyphs,
+    letterSpacing: options.letterSpacing ?? 0,
   };
 
   uniqueFrames.forEach(({ frame, frameIndex }) => {
@@ -438,12 +452,20 @@ export const emitFilmstrip = (
   if (opacityKeyframes) parts.push(opacityKeyframes);
   parts.push(generateColorStyles(registry, theme, hasBackground, options.background));
 
+  // Font embedding
+  if (options.embedFont && options.fontData) {
+    parts.push(`@font-face{font-family:'DVDMono';src:url(data:font/woff2;base64,${options.fontData}) format('woff2');font-weight:400;font-style:normal;font-display:block}`);
+  }
+
   // Font styling
   const defaultFonts = "'SF Mono',Monaco,Consolas,Menlo,monospace";
-  const fontFamily = options.fontFamily ? `'${options.fontFamily}',${defaultFonts}` : defaultFonts;
+  const fontFamily = options.embedFont && options.fontData
+    ? "'DVDMono',monospace"
+    : options.fontFamily ? `'${options.fontFamily}',${defaultFonts}` : defaultFonts;
+  const letterSpacingStyle = options.letterSpacing ? `letter-spacing:${options.letterSpacing}px;` : '';
   // Base text styling - stroke:none prevents text from looking bolder due to color class stroke
   // Use text[class] selector for higher specificity to override class-level stroke
-  parts.push(`text{font-family:${fontFamily};font-size:${fontSize}px;dominant-baseline:text-before-edge;white-space:pre}text[class]{stroke:none}`);
+  parts.push(`text{font-family:${fontFamily};font-size:${fontSize}px;dominant-baseline:text-before-edge;white-space:pre;${letterSpacingStyle}}text[class]{stroke:none}`);
 
   // Text style classes (bold, italic, etc.)
   parts.push('.bold{font-weight:700}.italic{font-style:italic}.uline{text-decoration:underline}.strike{text-decoration:line-through}.dim{opacity:0.5}');
@@ -547,8 +569,8 @@ export const emitFilmstrip = (
       // Center the cursor vertically on the row (may extend above/below)
       const cursorYOffset = getCursorYOffset(lineHeight, fontSize);
       const cursorY = contentStartY + frame.cursor.row * lineHeight + cursorYOffset;
-      const cursorColor = options.cursorColor || theme.cursor || theme.foreground;
-      const cursorStyleType = options.cursorStyle || 'block';
+      const cursorColor = options.cursorColor ?? theme.cursor ?? theme.foreground;
+      const cursorStyleType = options.cursorStyle ?? 'block';
       // Use cursor-active class when typing (solid), cursor class when idle (blinking)
       // Always apply the class for mix-blend-mode styling, even when blink is disabled
       const cursorClassName = frame.activeCursor ? 'cursor-active' : 'cursor';

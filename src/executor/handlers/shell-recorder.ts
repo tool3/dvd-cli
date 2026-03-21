@@ -612,18 +612,25 @@ const updateContextFromRecording = (
     lines.push(line.trimEnd());
   }
 
-  // Find last non-empty line
-  let lastNonEmpty = lines.length - 1;
-  while (lastNonEmpty >= 0 && !lines[lastNonEmpty]) {
-    lastNonEmpty--;
+  // Find the last line with actual content
+  let lastContentLine = -1;
+  for (let i = lines.length - 1; i >= 0; i--) {
+    if (lines[i].length > 0) {
+      lastContentLine = i;
+      break;
+    }
   }
 
-  // Update context lines
-  for (let i = 0; i <= lastNonEmpty; i++) {
-    ctx.lines[outputStartLine + i] = lines[i];
+  // If cursor is beyond last content line, include empty lines up to cursor
+  // This preserves intentional trailing newlines (like in neofetch)
+  const lastLine = Math.max(lastContentLine, Math.min(grid.cursor.row - 1, lines.length - 1));
+
+  // Update context lines up to last line
+  for (let i = 0; i <= lastLine; i++) {
+    ctx.lines[outputStartLine + i] = lines[i] || '';
   }
 
-  ctx.cursorY = outputStartLine + lastNonEmpty + 1;
+  ctx.cursorY = outputStartLine + lastLine + 1;
   ctx.cursorX = 0;
 
   // Ensure lines array extends to cursor position

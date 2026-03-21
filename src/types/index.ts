@@ -138,6 +138,7 @@ export interface Span {
   style: CellStyle;
   col: number;
   row: number;
+  width: number; // Display width in terminal columns (emoji count as 2)
 }
 
 export type SpanRow = Span[];
