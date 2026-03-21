@@ -297,13 +297,7 @@ const registerRowSymbol = (
       // No custom glyphs - render as single text element with textY for vertical centering
       const x = fmt(padding + span.col * charWidth);
       const safeText = escapeXml(rawText);
-      // Use textLength to ensure text fits exactly in the allocated width
-      // This is crucial for emoji which may have inconsistent font metrics
-      // Account for letter-spacing: each character gets extra spacing except the last
-      const numChars = [...rawText].length;
-      const totalLetterSpacing = letterSpacing * (numChars - 1);
-      const textWidth = fmt(span.width * charWidth + totalLetterSpacing);
-      textParts.push(`<text x="${x}" y="${fmt(textY)}" textLength="${textWidth}" lengthAdjust="spacingAndGlyphs" class="${allClasses}">${safeText}</text>`);
+      textParts.push(`<text x="${x}" y="${fmt(textY)}" class="${allClasses}">${safeText}</text>`);
     }
   });
 
@@ -577,8 +571,8 @@ export const emitFilmstrip = (
       const cursorClass = ` class="${cursorClassName}"`;
 
       if (cursorStyleType === 'block') {
-        // Use white fill for block cursor with mix-blend-mode:difference to invert text
-        parts.push(`<rect${cursorClass} x="${fmt(cursorX)}" y="${fmt(cursorY)}" width="${fmt(charWidth)}" height="${fmt(effectiveCursorHeight)}" fill="#fff"/>`);
+        // Use cursor color from theme (with mix-blend-mode for inversion effect)
+        parts.push(`<rect${cursorClass} x="${fmt(cursorX)}" y="${fmt(cursorY)}" width="${fmt(charWidth)}" height="${fmt(effectiveCursorHeight)}" fill="${cursorColor}"/>`);
       } else if (cursorStyleType === 'bar') {
         parts.push(`<rect${cursorClass} x="${fmt(cursorX)}" y="${fmt(cursorY)}" width="2" height="${fmt(effectiveCursorHeight)}" fill="${cursorColor}"/>`);
       } else {
