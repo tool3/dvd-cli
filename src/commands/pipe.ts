@@ -347,20 +347,27 @@ export const pipeCommand = async (args: PipeArgs): Promise<void> => {
         const plainText = frame.replace(/\x1b\[[0-9;]*m/g, '');
         const lines = plainText.split('\n');
 
+        // Use plain text line lengths as a floor for width detection.
+        // This preserves trailing spaces that are part of chart layouts
+        // (e.g., spacing between bar groups in vertical charts).
+        const nonEmptyLines = lines.filter(l => l.length > 0);
+        const plainTextMaxLength = nonEmptyLines.length > 0 ? Math.max(...nonEmptyLines.map(l => l.length)) : 0;
+        const plainTextLineCount = nonEmptyLines.length;
+
         // Estimate columns: use longest line length, capped at reasonable max
-        const estimatedCols = Math.min(Math.max(...lines.map(l => l.length), 80), 500);
+        const estimatedCols = Math.min(Math.max(plainTextMaxLength, 80), 500);
         // Estimate rows: use line count, capped at reasonable max
         const estimatedRows = Math.min(Math.max(lines.length, 24), 200);
 
         if (args.verbose) {
-          console.log(`Estimated grid size: ${estimatedCols}x${estimatedRows} (from ${lines.length} lines, max length ${Math.max(...lines.map(l => l.length))})`);
+          console.log(`Estimated grid size: ${estimatedCols}x${estimatedRows} (from ${lines.length} lines, max length ${plainTextMaxLength})`);
         }
 
         // Process through appropriately-sized grid
         const grid = createGridState(estimatedCols, estimatedRows);
         const processed = processInput(grid, frame);
 
-        // Scan grid to find actual content bounds
+        // Scan grid to find actual content bounds (non-space chars or non-default bg)
         let maxRow = 0;
         let maxCol = 0;
 
@@ -387,11 +394,14 @@ export const pipeCommand = async (args: PipeArgs): Promise<void> => {
           }
         }
 
-        maxLineCount = Math.max(maxLineCount, maxRow + 1);
-        maxLineLength = Math.max(maxLineLength, maxCol + 1);
+        // Use the larger of grid-scan bounds and plain text bounds.
+        // Grid scan catches content with non-default backgrounds (colored spaces).
+        // Plain text length catches trailing spaces that are part of chart layout.
+        maxLineCount = Math.max(maxLineCount, maxRow + 1, plainTextLineCount);
+        maxLineLength = Math.max(maxLineLength, maxCol + 1, plainTextMaxLength);
 
         if (args.verbose) {
-          console.log(`Found content bounds: ${maxCol + 1} cols x ${maxRow + 1} rows`);
+          console.log(`Found content bounds: ${maxCol + 1} cols x ${maxRow + 1} rows (plain text: ${plainTextMaxLength} cols x ${plainTextLineCount} rows)`);
         }
       }
 
