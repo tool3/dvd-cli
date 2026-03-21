@@ -523,24 +523,25 @@ export const emitFilmstrip = (
   parts.push(`<clipPath id="content-clip"><rect x="0" y="${headerHeight}" width="${width}" height="${height - headerHeight}"/></clipPath>`);
   parts.push(`<g clip-path="url(#content-clip)">`);
 
-  // Visibility-based animation: each frame at same position, only one visible at a time
-  // This avoids creating a massive compositing layer (numFrames × width) that exceeds
-  // mobile GPU texture limits. Instead, only the visible frame is composited.
+  // Opacity-based animation: each frame at same position, only one opaque at a time.
+  // Uses opacity instead of visibility because opacity is GPU-accelerated (composited
+  // on the GPU) while visibility triggers expensive CPU repaints on each frame switch.
+  // With steps(1,end), opacity 0→1 transitions are instant (no fade effect).
   const animDuration = (totalDuration / 1000).toFixed(3);
   const loopCount = loop ? 'infinite' : '1';
 
-  // Generate frame content - all frames at position (0,0), visibility-controlled
+  // Generate frame content - all frames at position (0,0), opacity-controlled
   uniqueFrames.forEach(({ frame, frameIndex }) => {
     const rowSymbolMap = frameRowSymbols.get(frameIndex) || new Map();
     const isFirst = frameIndex === 0;
 
-    // Each frame group at same position, hidden by default (first frame visible)
-    // CSS animation controls visibility timing
+    // Each frame group at same position, transparent by default (first frame opaque)
+    // CSS animation controls opacity timing via GPU-accelerated compositing
     const animName = `v${frameIndex}`;
     const fadeAnim = loopStyle === 'fade' && frameIndex === uniqueFrames.length - 1
       ? `animation:${animName} ${animDuration}s steps(1,end) ${loopCount},fade ${animDuration}s ease ${loopCount}`
       : `animation:${animName} ${animDuration}s steps(1,end) ${loopCount}`;
-    parts.push(`<g style="visibility:${isFirst ? 'visible' : 'hidden'};${fadeAnim}">`);
+    parts.push(`<g style="opacity:${isFirst ? 1 : 0};${fadeAnim}">`);
 
     // Row symbols
     rowSymbolMap.forEach((symbolId) => {
@@ -630,10 +631,10 @@ interface KeyframeOptions {
   loopPause: number;
 }
 
-// Generate per-frame visibility keyframes
-// Each frame gets its own @keyframes block that makes it visible during its time window.
-// This avoids the massive compositing layer of the filmstrip translateX approach,
-// since only one frame is rendered at a time (critical for mobile GPU performance).
+// Generate per-frame opacity keyframes (GPU-accelerated).
+// Each frame gets its own @keyframes block that sets opacity:1 during its time window.
+// Using opacity instead of visibility because opacity is composited on the GPU,
+// while visibility triggers CPU repaints. With steps(1,end), transitions are instant.
 const generateVisibilityKeyframes = (
   uniqueFrames: UniqueFrame[],
   options: KeyframeOptions
@@ -670,27 +671,27 @@ const generateVisibilityKeyframes = (
       const reverseEnd = ((forwardDuration + reverseFrameEnd) / totalDuration) * 100;
 
       if (i === 0) {
-        // First frame: visible at start, hidden during middle, visible again at reverse end + loop pause
-        kf.push(`0%{visibility:visible}`);
+        // First frame: opaque at start, transparent during middle, opaque again at reverse end + loop pause
+        kf.push(`0%{opacity:1}`);
         if (uniqueFrames.length > 1) {
-          kf.push(`${forwardEnd.toFixed(2)}%{visibility:hidden}`);
+          kf.push(`${forwardEnd.toFixed(2)}%{opacity:0}`);
         }
-        kf.push(`${reverseStart.toFixed(2)}%{visibility:visible}`);
-        kf.push(`100%{visibility:visible}`);
+        kf.push(`${reverseStart.toFixed(2)}%{opacity:1}`);
+        kf.push(`100%{opacity:1}`);
       } else if (i === uniqueFrames.length - 1) {
         // Last frame: hidden, visible at forward time, hidden when reverse starts moving past
-        kf.push(`0%{visibility:hidden}`);
-        kf.push(`${forwardStart.toFixed(2)}%{visibility:visible}`);
-        kf.push(`${reverseEnd.toFixed(2)}%{visibility:hidden}`);
-        kf.push(`100%{visibility:hidden}`);
+        kf.push(`0%{opacity:0}`);
+        kf.push(`${forwardStart.toFixed(2)}%{opacity:1}`);
+        kf.push(`${reverseEnd.toFixed(2)}%{opacity:0}`);
+        kf.push(`100%{opacity:0}`);
       } else {
         // Middle frames: hidden, visible during forward, hidden, visible during reverse, hidden
-        kf.push(`0%{visibility:hidden}`);
-        kf.push(`${forwardStart.toFixed(2)}%{visibility:visible}`);
-        kf.push(`${forwardEnd.toFixed(2)}%{visibility:hidden}`);
-        kf.push(`${reverseStart.toFixed(2)}%{visibility:visible}`);
-        kf.push(`${reverseEnd.toFixed(2)}%{visibility:hidden}`);
-        kf.push(`100%{visibility:hidden}`);
+        kf.push(`0%{opacity:0}`);
+        kf.push(`${forwardStart.toFixed(2)}%{opacity:1}`);
+        kf.push(`${forwardEnd.toFixed(2)}%{opacity:0}`);
+        kf.push(`${reverseStart.toFixed(2)}%{opacity:1}`);
+        kf.push(`${reverseEnd.toFixed(2)}%{opacity:0}`);
+        kf.push(`100%{opacity:0}`);
       }
 
       allKeyframes.push(`@keyframes v${i}{${kf.join('')}}`);
@@ -707,21 +708,21 @@ const generateVisibilityKeyframes = (
         : fadeStartPercent;
 
       if (i === 0) {
-        kf.push(`0%{visibility:visible}`);
+        kf.push(`0%{opacity:1}`);
         if (uniqueFrames.length > 1) {
-          kf.push(`${end.toFixed(2)}%{visibility:hidden}`);
+          kf.push(`${end.toFixed(2)}%{opacity:0}`);
         }
-        kf.push(`100%{visibility:hidden}`);
+        kf.push(`100%{opacity:0}`);
       } else if (i === uniqueFrames.length - 1) {
         // Last frame stays visible through fade (opacity handles the fade-out)
-        kf.push(`0%{visibility:hidden}`);
-        kf.push(`${start.toFixed(2)}%{visibility:visible}`);
-        kf.push(`100%{visibility:visible}`);
+        kf.push(`0%{opacity:0}`);
+        kf.push(`${start.toFixed(2)}%{opacity:1}`);
+        kf.push(`100%{opacity:1}`);
       } else {
-        kf.push(`0%{visibility:hidden}`);
-        kf.push(`${start.toFixed(2)}%{visibility:visible}`);
-        kf.push(`${end.toFixed(2)}%{visibility:hidden}`);
-        kf.push(`100%{visibility:hidden}`);
+        kf.push(`0%{opacity:0}`);
+        kf.push(`${start.toFixed(2)}%{opacity:1}`);
+        kf.push(`${end.toFixed(2)}%{opacity:0}`);
+        kf.push(`100%{opacity:0}`);
       }
 
       allKeyframes.push(`@keyframes v${i}{${kf.join('')}}`);
@@ -745,20 +746,20 @@ const generateVisibilityKeyframes = (
         : 100;
 
       if (i === 0) {
-        kf.push(`0%{visibility:visible}`);
+        kf.push(`0%{opacity:1}`);
         if (uniqueFrames.length > 1) {
-          kf.push(`${end.toFixed(2)}%{visibility:hidden}`);
+          kf.push(`${end.toFixed(2)}%{opacity:0}`);
         }
-        kf.push(`100%{visibility:hidden}`);
+        kf.push(`100%{opacity:0}`);
       } else if (i === uniqueFrames.length - 1) {
-        kf.push(`0%{visibility:hidden}`);
-        kf.push(`${start.toFixed(2)}%{visibility:visible}`);
-        kf.push(`100%{visibility:visible}`);
+        kf.push(`0%{opacity:0}`);
+        kf.push(`${start.toFixed(2)}%{opacity:1}`);
+        kf.push(`100%{opacity:1}`);
       } else {
-        kf.push(`0%{visibility:hidden}`);
-        kf.push(`${start.toFixed(2)}%{visibility:visible}`);
-        kf.push(`${end.toFixed(2)}%{visibility:hidden}`);
-        kf.push(`100%{visibility:hidden}`);
+        kf.push(`0%{opacity:0}`);
+        kf.push(`${start.toFixed(2)}%{opacity:1}`);
+        kf.push(`${end.toFixed(2)}%{opacity:0}`);
+        kf.push(`100%{opacity:0}`);
       }
 
       allKeyframes.push(`@keyframes v${i}{${kf.join('')}}`);

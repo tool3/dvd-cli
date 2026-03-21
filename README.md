@@ -107,7 +107,7 @@ neofetch | dvd -o system-info.svg --title "System Info"
 chartscii $(seq 1 5) -c "gradient(pink,cyan)" --animate | dvd -L reverse -P 1000 -w "made with dvd"
 ```
 <img src="examples/svgs/bbb.svg" ></br>
-<img src="examples/svgs/stdin/chartscii-stdin.svg" >
+<img src="examples/svgs/output.svg" >
 
 ---
 
