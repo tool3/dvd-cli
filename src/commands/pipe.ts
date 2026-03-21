@@ -180,7 +180,11 @@ const splitIntoFrames = (content: string, animationType: 'terminal-reset' | 'cur
 
     for (const part of parts) {
       if (part.trim()) {
-        frames.push(part);
+        // Strip leading newline - it's an artifact of the previous frame's trailing newline
+        // and cursor-up repositioning. Without stripping, content starts at row 1 instead of row 0,
+        // wasting a row and misaligning the output vs what the terminal displays.
+        const cleaned = part.startsWith('\n') ? part.slice(1) : part;
+        frames.push(cleaned);
       }
     }
 
@@ -396,8 +400,9 @@ export const pipeCommand = async (args: PipeArgs): Promise<void> => {
       }
       if (!height) {
         // Calculate height needed for content with buffer to ensure last row isn't clipped
-        // Add full extra line height to account for Math.floor() in grid calculation
-        height = Math.ceil((maxLineCount + 1) * lineHeightPx + headerHeight + padding * 2 + watermarkHeight);
+        // Add 2 extra line heights to account for Math.floor() in grid calculation and ensure last row fully visible
+        // This works for both cursor-up and terminal-reset animations
+        height = Math.ceil((maxLineCount + 2) * lineHeightPx + headerHeight + padding * 2 + watermarkHeight);
       }
 
       if (args.verbose) {

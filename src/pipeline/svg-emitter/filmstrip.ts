@@ -282,6 +282,7 @@ const registerRowSymbol = (
           const result = renderCustomGlyph(char, glyphCtx);
           if (result.handled) {
             textParts.push(result.svg);
+            colOffset += charDisplayWidth;
             return;
           }
         }
@@ -434,7 +435,7 @@ export const emitFilmstrip = (
 
   // Style section
   parts.push('<style>');
-  const { translateKeyframes, opacityKeyframes } = generateKeyframes(uniqueFrames, width, {
+  const { visibilityKeyframes, opacityKeyframes } = generateVisibilityKeyframes(uniqueFrames, {
     loopStyle,
     forwardDuration,
     totalDuration,
@@ -442,7 +443,7 @@ export const emitFilmstrip = (
     rewindSpeed,
     loopPause,
   });
-  parts.push(translateKeyframes);
+  parts.push(visibilityKeyframes);
   if (opacityKeyframes) parts.push(opacityKeyframes);
   parts.push(generateColorStyles(registry, theme, hasBackground, options.background));
 
@@ -522,20 +523,24 @@ export const emitFilmstrip = (
   parts.push(`<clipPath id="content-clip"><rect x="0" y="${headerHeight}" width="${width}" height="${height - headerHeight}"/></clipPath>`);
   parts.push(`<g clip-path="url(#content-clip)">`);
 
-  // Animated filmstrip group - animates via translateX (and opacity for fade)
-  // Add will-change for GPU acceleration on mobile
+  // Visibility-based animation: each frame at same position, only one visible at a time
+  // This avoids creating a massive compositing layer (numFrames × width) that exceeds
+  // mobile GPU texture limits. Instead, only the visible frame is composited.
   const animDuration = (totalDuration / 1000).toFixed(3);
   const loopCount = loop ? 'infinite' : '1';
-  const fadeAnim = loopStyle === 'fade' ? `,fade ${animDuration}s ease ${loopCount}` : '';
-  parts.push(`<g style="will-change:transform;animation:f ${animDuration}s steps(1,end) ${loopCount}${fadeAnim}">`);
 
-  // Generate frame content
+  // Generate frame content - all frames at position (0,0), visibility-controlled
   uniqueFrames.forEach(({ frame, frameIndex }) => {
-    const frameX = frameIndex * width;
     const rowSymbolMap = frameRowSymbols.get(frameIndex) || new Map();
+    const isFirst = frameIndex === 0;
 
-    // Frame group positioned at frameX (horizontal filmstrip)
-    parts.push(`<g transform="translate(${frameX},0)">`);
+    // Each frame group at same position, hidden by default (first frame visible)
+    // CSS animation controls visibility timing
+    const animName = `v${frameIndex}`;
+    const fadeAnim = loopStyle === 'fade' && frameIndex === uniqueFrames.length - 1
+      ? `animation:${animName} ${animDuration}s steps(1,end) ${loopCount},fade ${animDuration}s ease ${loopCount}`
+      : `animation:${animName} ${animDuration}s steps(1,end) ${loopCount}`;
+    parts.push(`<g style="visibility:${isFirst ? 'visible' : 'hidden'};${fadeAnim}">`);
 
     // Row symbols
     rowSymbolMap.forEach((symbolId) => {
@@ -586,7 +591,6 @@ export const emitFilmstrip = (
     parts.push('</g>');
   });
 
-  parts.push('</g>'); // animated group
   parts.push('</g>'); // content clip group
 
   // Watermark (rendered outside clip so it's always visible)
@@ -626,57 +630,104 @@ interface KeyframeOptions {
   loopPause: number;
 }
 
-const generateKeyframes = (
+// Generate per-frame visibility keyframes
+// Each frame gets its own @keyframes block that makes it visible during its time window.
+// This avoids the massive compositing layer of the filmstrip translateX approach,
+// since only one frame is rendered at a time (critical for mobile GPU performance).
+const generateVisibilityKeyframes = (
   uniqueFrames: UniqueFrame[],
-  frameWidth: number,
   options: KeyframeOptions
-): { translateKeyframes: string; opacityKeyframes: string } => {
-  if (uniqueFrames.length === 0) return { translateKeyframes: '', opacityKeyframes: '' };
+): { visibilityKeyframes: string; opacityKeyframes: string } => {
+  if (uniqueFrames.length === 0) return { visibilityKeyframes: '', opacityKeyframes: '' };
 
   const { loopStyle, forwardDuration, totalDuration, fadeDuration, loopPause } = options;
-  const lastFrameIndex = uniqueFrames[uniqueFrames.length - 1].frameIndex;
-  const lastFrameX = -(lastFrameIndex * frameWidth);
 
-  const translateKf: string[] = [];
+  const allKeyframes: string[] = [];
   const opacityKf: string[] = [];
 
-  // Forward animation keyframes
-  // Use translate3d for hardware acceleration on mobile (z=0 forces GPU compositing)
-  uniqueFrames.forEach(({ frameIndex, timestamp }) => {
-    const percent = (timestamp / totalDuration) * 100;
-    const translateX = -(frameIndex * frameWidth);
-    translateKf.push(`${percent.toFixed(2)}%{transform:translate3d(${translateX}px,0,0)}`);
-  });
-
   if (loopStyle === 'reverse' || loopStyle === 'rewind') {
-    // True reverse: mirror the forward timestamps
-    // If frame[i+1] appeared at timestamp T in forward, transition TO frame[i] at (lastTimestamp - T)
-    // This ensures frame[i] is visible for the same duration in both directions
-
     const lastTimestamp = uniqueFrames[uniqueFrames.length - 1].timestamp;
     const speedMultiplier = loopStyle === 'rewind' ? options.rewindSpeed : 1;
+    const reverseDuration = lastTimestamp / speedMultiplier;
 
-    for (let i = uniqueFrames.length - 2; i >= 0; i--) {
-      const reverseTime = (lastTimestamp - uniqueFrames[i + 1].timestamp) / speedMultiplier;
-      const absoluteTime = forwardDuration + reverseTime;
-      const percent = (absoluteTime / totalDuration) * 100;
-      const translateX = -(uniqueFrames[i].frameIndex * frameWidth);
-      translateKf.push(`${percent.toFixed(2)}%{transform:translate3d(${translateX}px,0,0)}`);
-    }
+    for (let i = 0; i < uniqueFrames.length; i++) {
+      const kf: string[] = [];
 
-    if (loopPause > 0) {
-      translateKf.push(`100%{transform:translate3d(0,0,0)}`);
+      // Forward: visible from this frame's timestamp to next frame's timestamp
+      const forwardStart = (uniqueFrames[i].timestamp / totalDuration) * 100;
+      const forwardEnd = i < uniqueFrames.length - 1
+        ? (uniqueFrames[i + 1].timestamp / totalDuration) * 100
+        : (forwardDuration / totalDuration) * 100;
+
+      // Reverse: this frame appears in reverse order
+      // Frame[i] in reverse starts when playhead reaches (lastTimestamp - nextFrame.timestamp) / speed
+      // and ends at (lastTimestamp - thisFrame.timestamp) / speed
+      const reverseFrameStart = i < uniqueFrames.length - 1
+        ? (lastTimestamp - uniqueFrames[i + 1].timestamp) / speedMultiplier
+        : 0;
+      const reverseFrameEnd = (lastTimestamp - uniqueFrames[i].timestamp) / speedMultiplier;
+      const reverseStart = ((forwardDuration + reverseFrameStart) / totalDuration) * 100;
+      const reverseEnd = ((forwardDuration + reverseFrameEnd) / totalDuration) * 100;
+
+      if (i === 0) {
+        // First frame: visible at start, hidden during middle, visible again at reverse end + loop pause
+        kf.push(`0%{visibility:visible}`);
+        if (uniqueFrames.length > 1) {
+          kf.push(`${forwardEnd.toFixed(2)}%{visibility:hidden}`);
+        }
+        kf.push(`${reverseStart.toFixed(2)}%{visibility:visible}`);
+        kf.push(`100%{visibility:visible}`);
+      } else if (i === uniqueFrames.length - 1) {
+        // Last frame: hidden, visible at forward time, hidden when reverse starts moving past
+        kf.push(`0%{visibility:hidden}`);
+        kf.push(`${forwardStart.toFixed(2)}%{visibility:visible}`);
+        kf.push(`${reverseEnd.toFixed(2)}%{visibility:hidden}`);
+        kf.push(`100%{visibility:hidden}`);
+      } else {
+        // Middle frames: hidden, visible during forward, hidden, visible during reverse, hidden
+        kf.push(`0%{visibility:hidden}`);
+        kf.push(`${forwardStart.toFixed(2)}%{visibility:visible}`);
+        kf.push(`${forwardEnd.toFixed(2)}%{visibility:hidden}`);
+        kf.push(`${reverseStart.toFixed(2)}%{visibility:visible}`);
+        kf.push(`${reverseEnd.toFixed(2)}%{visibility:hidden}`);
+        kf.push(`100%{visibility:hidden}`);
+      }
+
+      allKeyframes.push(`@keyframes v${i}{${kf.join('')}}`);
     }
   } else if (loopStyle === 'fade') {
-    // Stay on last frame, add opacity keyframes
     const fadeStartPercent = (forwardDuration / totalDuration) * 100;
     const fadeEndPercent = ((forwardDuration + fadeDuration) / totalDuration) * 100;
 
-    // Keep translateX at last frame position during fade
-    translateKf.push(`${fadeStartPercent.toFixed(2)}%{transform:translate3d(${lastFrameX}px,0,0)}`);
-    translateKf.push(`100%{transform:translate3d(${lastFrameX}px,0,0)}`);
+    for (let i = 0; i < uniqueFrames.length; i++) {
+      const kf: string[] = [];
+      const start = (uniqueFrames[i].timestamp / totalDuration) * 100;
+      const end = i < uniqueFrames.length - 1
+        ? (uniqueFrames[i + 1].timestamp / totalDuration) * 100
+        : fadeStartPercent;
 
-    // Opacity animation for fade
+      if (i === 0) {
+        kf.push(`0%{visibility:visible}`);
+        if (uniqueFrames.length > 1) {
+          kf.push(`${end.toFixed(2)}%{visibility:hidden}`);
+        }
+        kf.push(`100%{visibility:hidden}`);
+      } else if (i === uniqueFrames.length - 1) {
+        // Last frame stays visible through fade (opacity handles the fade-out)
+        kf.push(`0%{visibility:hidden}`);
+        kf.push(`${start.toFixed(2)}%{visibility:visible}`);
+        kf.push(`100%{visibility:visible}`);
+      } else {
+        kf.push(`0%{visibility:hidden}`);
+        kf.push(`${start.toFixed(2)}%{visibility:visible}`);
+        kf.push(`${end.toFixed(2)}%{visibility:hidden}`);
+        kf.push(`100%{visibility:hidden}`);
+      }
+
+      allKeyframes.push(`@keyframes v${i}{${kf.join('')}}`);
+    }
+
+    // Opacity animation for fade effect on last frame
     opacityKf.push(`0%{opacity:1}`);
     opacityKf.push(`${fadeStartPercent.toFixed(2)}%{opacity:1}`);
     opacityKf.push(`${fadeEndPercent.toFixed(2)}%{opacity:0}`);
@@ -684,12 +735,40 @@ const generateKeyframes = (
       opacityKf.push(`${(100 - (loopPause / totalDuration) * 100).toFixed(2)}%{opacity:0}`);
     }
     opacityKf.push(`100%{opacity:0}`);
+  } else {
+    // Simple loop
+    for (let i = 0; i < uniqueFrames.length; i++) {
+      const kf: string[] = [];
+      const start = (uniqueFrames[i].timestamp / totalDuration) * 100;
+      const end = i < uniqueFrames.length - 1
+        ? (uniqueFrames[i + 1].timestamp / totalDuration) * 100
+        : 100;
+
+      if (i === 0) {
+        kf.push(`0%{visibility:visible}`);
+        if (uniqueFrames.length > 1) {
+          kf.push(`${end.toFixed(2)}%{visibility:hidden}`);
+        }
+        kf.push(`100%{visibility:hidden}`);
+      } else if (i === uniqueFrames.length - 1) {
+        kf.push(`0%{visibility:hidden}`);
+        kf.push(`${start.toFixed(2)}%{visibility:visible}`);
+        kf.push(`100%{visibility:visible}`);
+      } else {
+        kf.push(`0%{visibility:hidden}`);
+        kf.push(`${start.toFixed(2)}%{visibility:visible}`);
+        kf.push(`${end.toFixed(2)}%{visibility:hidden}`);
+        kf.push(`100%{visibility:hidden}`);
+      }
+
+      allKeyframes.push(`@keyframes v${i}{${kf.join('')}}`);
+    }
   }
 
-  const translateKeyframes = `@keyframes f{${translateKf.join('')}}`;
+  const visibilityKeyframes = allKeyframes.join('');
   const opacityKeyframes = opacityKf.length > 0 ? `@keyframes fade{${opacityKf.join('')}}` : '';
 
-  return { translateKeyframes, opacityKeyframes };
+  return { visibilityKeyframes, opacityKeyframes };
 };
 
 

@@ -104,31 +104,23 @@ export const containsCustomGlyphs = (text: string): boolean => {
 //#region Main Renderer
 
 // Post-process SVG to replace inline colors with CSS class
+// Only replace fill on rect/circle elements (block elements, braille dots).
+// Keep inline stroke on line/path elements (box-drawing) because CSS class-based
+// stroke doesn't reliably resolve inside <symbol>/<use> contexts across renderers.
 const applyColorClass = (svg: string, ctx: GlyphContext): string => {
   if (!ctx.colorClass) return svg;
 
-  // Strategy:
-  // - For rect elements: replace fill="color" with class (CSS handles fill)
-  // - For line elements: replace stroke="color" with class (CSS handles stroke)
-  // - For path elements: KEEP fill="none", replace stroke="color" with class
-  //   Path elements for box-drawing must remain unfilled (stroke only)
-
   let result = svg;
 
-  // Handle rect elements - replace fill with class
-  // Rects use fill, not stroke
+  // Rect elements: replace fill with class (block elements like █ ▒)
   result = result.replace(/<rect([^>]*?)fill="[^"]+"/g, `<rect$1class="${ctx.colorClass}"`);
 
-  // Handle line elements - replace stroke with class
-  // Lines use stroke, not fill
-  result = result.replace(/<line([^>]*?)stroke="[^"]+"/g, `<line$1class="${ctx.colorClass}"`);
-
-  // Handle path elements - keep fill="none", replace stroke with class
-  // Paths for box-drawing corners need fill="none" to avoid filling the path interior
-  result = result.replace(/<path([^>]*?)stroke="[^"]+"/g, `<path$1class="${ctx.colorClass}"`);
-
-  // Handle circle elements (braille dots) - replace fill with class
+  // Circle elements (braille dots): replace fill with class
   result = result.replace(/<circle([^>]*?)fill="[^"]+"/g, `<circle$1class="${ctx.colorClass}"`);
+
+  // Line and path elements: keep inline stroke/fill colors.
+  // Box-drawing characters (═ ║ ╚ ╔ etc.) render as lines/paths with stroke.
+  // Inline colors are more reliable than CSS classes in <symbol>/<use> contexts.
 
   return result;
 };
