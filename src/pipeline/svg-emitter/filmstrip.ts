@@ -434,7 +434,7 @@ export const emitFilmstrip = (
 
   // Style section
   parts.push('<style>');
-  const { translateKeyframes, opacityKeyframes } = generateKeyframes(uniqueFrames, height, {
+  const { translateKeyframes, opacityKeyframes } = generateKeyframes(uniqueFrames, width, {
     loopStyle,
     forwardDuration,
     totalDuration,
@@ -523,18 +523,19 @@ export const emitFilmstrip = (
   parts.push(`<g clip-path="url(#content-clip)">`);
 
   // Animated filmstrip group - animates via translateX (and opacity for fade)
+  // Add will-change for GPU acceleration on mobile
   const animDuration = (totalDuration / 1000).toFixed(3);
   const loopCount = loop ? 'infinite' : '1';
   const fadeAnim = loopStyle === 'fade' ? `,fade ${animDuration}s ease ${loopCount}` : '';
-  parts.push(`<g style="animation:f ${animDuration}s steps(1,end) ${loopCount}${fadeAnim}">`);
+  parts.push(`<g style="will-change:transform;animation:f ${animDuration}s steps(1,end) ${loopCount}${fadeAnim}">`);
 
   // Generate frame content
   uniqueFrames.forEach(({ frame, frameIndex }) => {
-    const frameY = frameIndex * height;
+    const frameX = frameIndex * width;
     const rowSymbolMap = frameRowSymbols.get(frameIndex) || new Map();
 
-    // Frame group positioned at frameY (vertical filmstrip)
-    parts.push(`<g transform="translate(0,${frameY})">`);
+    // Frame group positioned at frameX (horizontal filmstrip)
+    parts.push(`<g transform="translate(${frameX},0)">`);
 
     // Row symbols
     rowSymbolMap.forEach((symbolId) => {
@@ -627,23 +628,24 @@ interface KeyframeOptions {
 
 const generateKeyframes = (
   uniqueFrames: UniqueFrame[],
-  frameHeight: number,
+  frameWidth: number,
   options: KeyframeOptions
 ): { translateKeyframes: string; opacityKeyframes: string } => {
   if (uniqueFrames.length === 0) return { translateKeyframes: '', opacityKeyframes: '' };
 
   const { loopStyle, forwardDuration, totalDuration, fadeDuration, loopPause } = options;
   const lastFrameIndex = uniqueFrames[uniqueFrames.length - 1].frameIndex;
-  const lastFrameY = -(lastFrameIndex * frameHeight);
+  const lastFrameX = -(lastFrameIndex * frameWidth);
 
   const translateKf: string[] = [];
   const opacityKf: string[] = [];
 
-  // Forward animation keyframes - using translateY for vertical filmstrip
+  // Forward animation keyframes
+  // Use translate3d for hardware acceleration on mobile (z=0 forces GPU compositing)
   uniqueFrames.forEach(({ frameIndex, timestamp }) => {
     const percent = (timestamp / totalDuration) * 100;
-    const translateY = -(frameIndex * frameHeight);
-    translateKf.push(`${percent.toFixed(2)}%{transform:translateY(${translateY}px)}`);
+    const translateX = -(frameIndex * frameWidth);
+    translateKf.push(`${percent.toFixed(2)}%{transform:translate3d(${translateX}px,0,0)}`);
   });
 
   if (loopStyle === 'reverse' || loopStyle === 'rewind') {
@@ -658,21 +660,21 @@ const generateKeyframes = (
       const reverseTime = (lastTimestamp - uniqueFrames[i + 1].timestamp) / speedMultiplier;
       const absoluteTime = forwardDuration + reverseTime;
       const percent = (absoluteTime / totalDuration) * 100;
-      const translateY = -(uniqueFrames[i].frameIndex * frameHeight);
-      translateKf.push(`${percent.toFixed(2)}%{transform:translateY(${translateY}px)}`);
+      const translateX = -(uniqueFrames[i].frameIndex * frameWidth);
+      translateKf.push(`${percent.toFixed(2)}%{transform:translate3d(${translateX}px,0,0)}`);
     }
 
     if (loopPause > 0) {
-      translateKf.push(`100%{transform:translateY(0px)}`);
+      translateKf.push(`100%{transform:translate3d(0,0,0)}`);
     }
   } else if (loopStyle === 'fade') {
     // Stay on last frame, add opacity keyframes
     const fadeStartPercent = (forwardDuration / totalDuration) * 100;
     const fadeEndPercent = ((forwardDuration + fadeDuration) / totalDuration) * 100;
 
-    // Keep translateY at last frame position during fade
-    translateKf.push(`${fadeStartPercent.toFixed(2)}%{transform:translateY(${lastFrameY}px)}`);
-    translateKf.push(`100%{transform:translateY(${lastFrameY}px)}`);
+    // Keep translateX at last frame position during fade
+    translateKf.push(`${fadeStartPercent.toFixed(2)}%{transform:translate3d(${lastFrameX}px,0,0)}`);
+    translateKf.push(`100%{transform:translate3d(${lastFrameX}px,0,0)}`);
 
     // Opacity animation for fade
     opacityKf.push(`0%{opacity:1}`);
