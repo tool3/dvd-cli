@@ -433,18 +433,12 @@ export const emitFilmstrip = (
 
   parts.push('</defs>');
 
-  // Style section
+  // Style section — only color classes, font, cursor. Frame switching uses SMIL, not CSS.
+  // SMIL <animate attributeName="visibility" calcMode="discrete"> is handled natively by the
+  // SVG renderer, while CSS @keyframes go through a heavier animation pipeline. On mobile Safari,
+  // SMIL animations are dramatically faster because the SVG engine pre-computes the discrete
+  // visibility schedule and only paints the active frame.
   parts.push('<style>');
-  const { visibilityKeyframes, opacityKeyframes } = generateVisibilityKeyframes(uniqueFrames, {
-    loopStyle,
-    forwardDuration,
-    totalDuration,
-    fadeDuration,
-    rewindSpeed,
-    loopPause,
-  });
-  parts.push(visibilityKeyframes);
-  if (opacityKeyframes) parts.push(opacityKeyframes);
   parts.push(generateColorStyles(registry, theme, hasBackground, options.background));
 
   // Font embedding
@@ -523,25 +517,31 @@ export const emitFilmstrip = (
   parts.push(`<clipPath id="content-clip"><rect x="0" y="${headerHeight}" width="${width}" height="${height - headerHeight}"/></clipPath>`);
   parts.push(`<g clip-path="url(#content-clip)">`);
 
-  // Opacity-based animation: each frame at same position, only one opaque at a time.
-  // Uses opacity instead of visibility because opacity is GPU-accelerated (composited
-  // on the GPU) while visibility triggers expensive CPU repaints on each frame switch.
-  // With steps(1,end), opacity 0→1 transitions are instant (no fade effect).
-  const animDuration = (totalDuration / 1000).toFixed(3);
-  const loopCount = loop ? 'infinite' : '1';
+  // SMIL-based animation: each frame at same position, only one visible at a time.
+  // Uses SMIL <animate attributeName="visibility" calcMode="discrete"> which is handled
+  // natively by the SVG renderer. On mobile Safari, SMIL is dramatically faster than CSS
+  // @keyframes because the SVG engine pre-computes the discrete visibility schedule and
+  // only paints the active frame — no CSS style resolution overhead per animation tick.
+  const animDurationS = (totalDuration / 1000).toFixed(3);
+  const smilRepeat = loop ? 'indefinite' : '1';
 
-  // Generate frame content - all frames at position (0,0), opacity-controlled
+  // Pre-compute SMIL keyTimes and values for each frame
+  const smilAnimations = generateSMILAnimations(uniqueFrames, {
+    loopStyle,
+    forwardDuration,
+    totalDuration,
+    fadeDuration,
+    rewindSpeed,
+    loopPause,
+  });
+
+  // Generate frame content - all frames at position (0,0), SMIL-controlled visibility
   uniqueFrames.forEach(({ frame, frameIndex }) => {
     const rowSymbolMap = frameRowSymbols.get(frameIndex) || new Map();
     const isFirst = frameIndex === 0;
+    const initialVis = isFirst ? 'visible' : 'hidden';
 
-    // Each frame group at same position, transparent by default (first frame opaque)
-    // CSS animation controls opacity timing via GPU-accelerated compositing
-    const animName = `v${frameIndex}`;
-    const fadeAnim = loopStyle === 'fade' && frameIndex === uniqueFrames.length - 1
-      ? `animation:${animName} ${animDuration}s steps(1,end) ${loopCount},fade ${animDuration}s ease ${loopCount}`
-      : `animation:${animName} ${animDuration}s steps(1,end) ${loopCount}`;
-    parts.push(`<g style="opacity:${isFirst ? 1 : 0};${fadeAnim}">`);
+    parts.push(`<g visibility="${initialVis}">`);
 
     // Row symbols
     rowSymbolMap.forEach((symbolId) => {
@@ -589,6 +589,21 @@ export const emitFilmstrip = (
       }
     }
 
+    // SMIL animation for this frame's visibility
+    const smil = smilAnimations[frameIndex];
+    if (smil) {
+      parts.push(`<animate attributeName="visibility" values="${smil.values}" keyTimes="${smil.keyTimes}" dur="${animDurationS}s" repeatCount="${smilRepeat}" calcMode="discrete" fill="freeze"/>`);
+    }
+
+    // Fade overlay for fade loop style (only on last frame)
+    if (loopStyle === 'fade' && frameIndex === uniqueFrames.length - 1) {
+      const fadeStartNorm = forwardDuration / totalDuration;
+      const fadeEndNorm = (forwardDuration + fadeDuration) / totalDuration;
+      const fadeKeyTimes = `0;${fmtKeyTime(fadeStartNorm)};${fmtKeyTime(fadeEndNorm)};1`;
+      const fadeValues = '1;1;0;0';
+      parts.push(`<animate attributeName="opacity" values="${fadeValues}" keyTimes="${fadeKeyTimes}" dur="${animDurationS}s" repeatCount="${smilRepeat}" fill="freeze"/>`);
+    }
+
     parts.push('</g>');
   });
 
@@ -620,7 +635,7 @@ export const emitFilmstrip = (
 };
 
 
-//#region Keyframes Generation
+//#region SMIL Animation Generation
 
 interface KeyframeOptions {
   loopStyle: 'loop' | 'reverse' | 'rewind' | 'fade';
@@ -631,145 +646,139 @@ interface KeyframeOptions {
   loopPause: number;
 }
 
-// Generate per-frame opacity keyframes (GPU-accelerated).
-// Each frame gets its own @keyframes block that sets opacity:1 during its time window.
-// Using opacity instead of visibility because opacity is composited on the GPU,
-// while visibility triggers CPU repaints. With steps(1,end), transitions are instant.
-const generateVisibilityKeyframes = (
+interface SMILAnimation {
+  values: string;    // e.g. "hidden;visible;hidden"
+  keyTimes: string;  // e.g. "0;0.1;0.2"
+}
+
+// Format SMIL keyTime value (0-1 range, minimal precision)
+const fmtKeyTime = (t: number): string => {
+  if (t <= 0) return '0';
+  if (t >= 1) return '1';
+  return parseFloat(t.toFixed(6)).toString();
+};
+
+// Generate SMIL animation data for each frame.
+// Uses <animate attributeName="visibility" calcMode="discrete"> which is the fastest
+// SVG animation method on mobile — handled natively by the SVG renderer with zero
+// CSS overhead. The discrete calcMode means instant switching with no interpolation.
+const generateSMILAnimations = (
   uniqueFrames: UniqueFrame[],
   options: KeyframeOptions
-): { visibilityKeyframes: string; opacityKeyframes: string } => {
-  if (uniqueFrames.length === 0) return { visibilityKeyframes: '', opacityKeyframes: '' };
+): SMILAnimation[] => {
+  if (uniqueFrames.length === 0) return [];
 
   const { loopStyle, forwardDuration, totalDuration, fadeDuration, loopPause } = options;
-
-  const allKeyframes: string[] = [];
-  const opacityKf: string[] = [];
+  const result: SMILAnimation[] = [];
 
   if (loopStyle === 'reverse' || loopStyle === 'rewind') {
     const lastTimestamp = uniqueFrames[uniqueFrames.length - 1].timestamp;
     const speedMultiplier = loopStyle === 'rewind' ? options.rewindSpeed : 1;
-    const reverseDuration = lastTimestamp / speedMultiplier;
 
     for (let i = 0; i < uniqueFrames.length; i++) {
-      const kf: string[] = [];
+      const times: number[] = [];
+      const values: string[] = [];
 
-      // Forward: visible from this frame's timestamp to next frame's timestamp
-      const forwardStart = (uniqueFrames[i].timestamp / totalDuration) * 100;
+      const forwardStart = uniqueFrames[i].timestamp / totalDuration;
       const forwardEnd = i < uniqueFrames.length - 1
-        ? (uniqueFrames[i + 1].timestamp / totalDuration) * 100
-        : (forwardDuration / totalDuration) * 100;
+        ? uniqueFrames[i + 1].timestamp / totalDuration
+        : forwardDuration / totalDuration;
 
-      // Reverse: this frame appears in reverse order
-      // Frame[i] in reverse starts when playhead reaches (lastTimestamp - nextFrame.timestamp) / speed
-      // and ends at (lastTimestamp - thisFrame.timestamp) / speed
       const reverseFrameStart = i < uniqueFrames.length - 1
         ? (lastTimestamp - uniqueFrames[i + 1].timestamp) / speedMultiplier
         : 0;
       const reverseFrameEnd = (lastTimestamp - uniqueFrames[i].timestamp) / speedMultiplier;
-      const reverseStart = ((forwardDuration + reverseFrameStart) / totalDuration) * 100;
-      const reverseEnd = ((forwardDuration + reverseFrameEnd) / totalDuration) * 100;
+      const reverseStart = (forwardDuration + reverseFrameStart) / totalDuration;
+      const reverseEnd = (forwardDuration + reverseFrameEnd) / totalDuration;
 
       if (i === 0) {
-        // First frame: opaque at start, transparent during middle, opaque again at reverse end + loop pause
-        kf.push(`0%{opacity:1}`);
-        if (uniqueFrames.length > 1) {
-          kf.push(`${forwardEnd.toFixed(2)}%{opacity:0}`);
-        }
-        kf.push(`${reverseStart.toFixed(2)}%{opacity:1}`);
-        kf.push(`100%{opacity:1}`);
+        times.push(0); values.push('visible');
+        if (uniqueFrames.length > 1) { times.push(forwardEnd); values.push('hidden'); }
+        times.push(reverseStart); values.push('visible');
+        times.push(1); values.push('visible');
       } else if (i === uniqueFrames.length - 1) {
-        // Last frame: hidden, visible at forward time, hidden when reverse starts moving past
-        kf.push(`0%{opacity:0}`);
-        kf.push(`${forwardStart.toFixed(2)}%{opacity:1}`);
-        kf.push(`${reverseEnd.toFixed(2)}%{opacity:0}`);
-        kf.push(`100%{opacity:0}`);
+        times.push(0); values.push('hidden');
+        times.push(forwardStart); values.push('visible');
+        times.push(reverseEnd); values.push('hidden');
+        times.push(1); values.push('hidden');
       } else {
-        // Middle frames: hidden, visible during forward, hidden, visible during reverse, hidden
-        kf.push(`0%{opacity:0}`);
-        kf.push(`${forwardStart.toFixed(2)}%{opacity:1}`);
-        kf.push(`${forwardEnd.toFixed(2)}%{opacity:0}`);
-        kf.push(`${reverseStart.toFixed(2)}%{opacity:1}`);
-        kf.push(`${reverseEnd.toFixed(2)}%{opacity:0}`);
-        kf.push(`100%{opacity:0}`);
+        times.push(0); values.push('hidden');
+        times.push(forwardStart); values.push('visible');
+        times.push(forwardEnd); values.push('hidden');
+        times.push(reverseStart); values.push('visible');
+        times.push(reverseEnd); values.push('hidden');
+        times.push(1); values.push('hidden');
       }
 
-      allKeyframes.push(`@keyframes v${i}{${kf.join('')}}`);
+      result.push({
+        values: values.join(';'),
+        keyTimes: times.map(fmtKeyTime).join(';'),
+      });
     }
   } else if (loopStyle === 'fade') {
-    const fadeStartPercent = (forwardDuration / totalDuration) * 100;
-    const fadeEndPercent = ((forwardDuration + fadeDuration) / totalDuration) * 100;
+    const fadeStartNorm = forwardDuration / totalDuration;
 
     for (let i = 0; i < uniqueFrames.length; i++) {
-      const kf: string[] = [];
-      const start = (uniqueFrames[i].timestamp / totalDuration) * 100;
+      const times: number[] = [];
+      const values: string[] = [];
+      const start = uniqueFrames[i].timestamp / totalDuration;
       const end = i < uniqueFrames.length - 1
-        ? (uniqueFrames[i + 1].timestamp / totalDuration) * 100
-        : fadeStartPercent;
+        ? uniqueFrames[i + 1].timestamp / totalDuration
+        : fadeStartNorm;
 
       if (i === 0) {
-        kf.push(`0%{opacity:1}`);
-        if (uniqueFrames.length > 1) {
-          kf.push(`${end.toFixed(2)}%{opacity:0}`);
-        }
-        kf.push(`100%{opacity:0}`);
+        times.push(0); values.push('visible');
+        if (uniqueFrames.length > 1) { times.push(end); values.push('hidden'); }
+        times.push(1); values.push('hidden');
       } else if (i === uniqueFrames.length - 1) {
-        // Last frame stays visible through fade (opacity handles the fade-out)
-        kf.push(`0%{opacity:0}`);
-        kf.push(`${start.toFixed(2)}%{opacity:1}`);
-        kf.push(`100%{opacity:1}`);
+        times.push(0); values.push('hidden');
+        times.push(start); values.push('visible');
+        times.push(1); values.push('visible');
       } else {
-        kf.push(`0%{opacity:0}`);
-        kf.push(`${start.toFixed(2)}%{opacity:1}`);
-        kf.push(`${end.toFixed(2)}%{opacity:0}`);
-        kf.push(`100%{opacity:0}`);
+        times.push(0); values.push('hidden');
+        times.push(start); values.push('visible');
+        times.push(end); values.push('hidden');
+        times.push(1); values.push('hidden');
       }
 
-      allKeyframes.push(`@keyframes v${i}{${kf.join('')}}`);
+      result.push({
+        values: values.join(';'),
+        keyTimes: times.map(fmtKeyTime).join(';'),
+      });
     }
-
-    // Opacity animation for fade effect on last frame
-    opacityKf.push(`0%{opacity:1}`);
-    opacityKf.push(`${fadeStartPercent.toFixed(2)}%{opacity:1}`);
-    opacityKf.push(`${fadeEndPercent.toFixed(2)}%{opacity:0}`);
-    if (loopPause > 0) {
-      opacityKf.push(`${(100 - (loopPause / totalDuration) * 100).toFixed(2)}%{opacity:0}`);
-    }
-    opacityKf.push(`100%{opacity:0}`);
   } else {
     // Simple loop
     for (let i = 0; i < uniqueFrames.length; i++) {
-      const kf: string[] = [];
-      const start = (uniqueFrames[i].timestamp / totalDuration) * 100;
+      const times: number[] = [];
+      const values: string[] = [];
+      const start = uniqueFrames[i].timestamp / totalDuration;
       const end = i < uniqueFrames.length - 1
-        ? (uniqueFrames[i + 1].timestamp / totalDuration) * 100
-        : 100;
+        ? uniqueFrames[i + 1].timestamp / totalDuration
+        : 1;
 
       if (i === 0) {
-        kf.push(`0%{opacity:1}`);
-        if (uniqueFrames.length > 1) {
-          kf.push(`${end.toFixed(2)}%{opacity:0}`);
-        }
-        kf.push(`100%{opacity:0}`);
+        times.push(0); values.push('visible');
+        if (uniqueFrames.length > 1) { times.push(end); values.push('hidden'); }
+        times.push(1); values.push('hidden');
       } else if (i === uniqueFrames.length - 1) {
-        kf.push(`0%{opacity:0}`);
-        kf.push(`${start.toFixed(2)}%{opacity:1}`);
-        kf.push(`100%{opacity:1}`);
+        times.push(0); values.push('hidden');
+        times.push(start); values.push('visible');
+        times.push(1); values.push('visible');
       } else {
-        kf.push(`0%{opacity:0}`);
-        kf.push(`${start.toFixed(2)}%{opacity:1}`);
-        kf.push(`${end.toFixed(2)}%{opacity:0}`);
-        kf.push(`100%{opacity:0}`);
+        times.push(0); values.push('hidden');
+        times.push(start); values.push('visible');
+        times.push(end); values.push('hidden');
+        times.push(1); values.push('hidden');
       }
 
-      allKeyframes.push(`@keyframes v${i}{${kf.join('')}}`);
+      result.push({
+        values: values.join(';'),
+        keyTimes: times.map(fmtKeyTime).join(';'),
+      });
     }
   }
 
-  const visibilityKeyframes = allKeyframes.join('');
-  const opacityKeyframes = opacityKf.length > 0 ? `@keyframes fade{${opacityKf.join('')}}` : '';
-
-  return { visibilityKeyframes, opacityKeyframes };
+  return result;
 };
 
 

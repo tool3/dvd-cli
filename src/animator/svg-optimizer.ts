@@ -82,8 +82,8 @@ export const optimizeSvg = (svg: string): string => {
   // Remove empty class attributes
   result = result.replace(/\s+class=""/g, '');
 
-  // Remove default visibility="visible"
-  result = result.replace(/(<[^a][^>]*)\s+visibility="visible"/g, '$1');
+  // Don't remove visibility="visible" — SMIL <animate attributeName="visibility">
+  // needs the initial visibility attribute to be present for correct animation.
 
   // Remove shape-rendering="auto"
   result = result.replace(/\s+shape-rendering="auto"/g, '');
