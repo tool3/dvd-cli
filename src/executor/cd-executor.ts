@@ -260,7 +260,12 @@ export class CDExecutor {
       const watermarkHeight = this.context.watermark ? lineHeight : 0;
       const rows =
         this.context.maxVisualRow > 0 ? this.context.maxVisualRow : this.context.maxLines;
-      const cursorBuffer = 8;
+      // Calculate cursor buffer to ensure full cursor is visible when on last row
+      // The cursor can extend beyond the row by (effectiveCursorHeight - lineHeight) / 2
+      const minCursorPadding = this.context.fontSize * 0.1;
+      const effectiveCursorHeight = Math.max(lineHeight, this.context.fontSize + 2 * minCursorPadding);
+      const cursorExtension = Math.max(0, (effectiveCursorHeight - lineHeight) / 2);
+      const cursorBuffer = Math.ceil(cursorExtension + 4); // +4px for visual breathing room
       this.context.height = Math.ceil(
         headerHeight + padding + rows * lineHeight + watermarkHeight + padding + cursorBuffer
       );

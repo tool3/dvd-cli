@@ -308,29 +308,56 @@ export const pipeCommand = async (args: PipeArgs): Promise<void> => {
     let height = args.height;
 
     if (!width || !height) {
-      // Check ALL frames for max dimensions, not just the first one
-      let maxLineLength = 40;
-      let maxLineCount = 10;
+      // For stdin, we need to determine dimensions by processing through terminal emulator
+      // Strategy: Start with estimated size, process content, find actual bounds
+      let maxLineLength = 40; // Min width
+      let maxLineCount = 10;  // Min height
 
       for (const frame of frameContents) {
+        // First pass: estimate grid size from plain text analysis
         const plainText = frame.replace(/\x1b\[[0-9;]*m/g, '');
-        const allLines = plainText.split('\n');
-        // For max line length, filter empty lines
-        const nonEmptyLines = allLines.filter(l => l.length > 0);
+        const lines = plainText.split('\n');
 
-        for (const line of nonEmptyLines) {
-          if (line.length > maxLineLength) {
-            maxLineLength = line.length;
+        // Estimate columns: use longest line length, capped at reasonable max
+        const estimatedCols = Math.min(Math.max(...lines.map(l => l.length), 80), 500);
+        // Estimate rows: use line count, capped at reasonable max
+        const estimatedRows = Math.min(Math.max(lines.length, 24), 200);
+
+        if (args.verbose) {
+          console.log(`Estimated grid size: ${estimatedCols}x${estimatedRows} (from ${lines.length} lines, max length ${Math.max(...lines.map(l => l.length))})`);
+        }
+
+        // Process through appropriately-sized grid
+        const grid = createGridState(estimatedCols, estimatedRows);
+        const processed = processInput(grid, frame);
+
+        // Scan grid to find actual content bounds
+        let maxRow = 0;
+        let maxCol = 0;
+
+        for (let row = 0; row < processed.cells.length; row++) {
+          let rowHasContent = false;
+          for (let col = 0; col < processed.cells[row].length; col++) {
+            const cell = processed.cells[row][col];
+            // Check if cell has content (non-space char) or non-default background
+            const hasNonDefaultBg = cell.bg && cell.bg.mode !== 'default';
+            if (cell.char !== ' ' || hasNonDefaultBg) {
+              maxRow = Math.max(maxRow, row);
+              maxCol = Math.max(maxCol, col);
+              rowHasContent = true;
+            }
+          }
+          // Early exit: if we hit 10 consecutive empty rows after finding content, stop
+          if (!rowHasContent && maxRow > 0 && row > maxRow + 10) {
+            break;
           }
         }
-        // For row count, count ALL lines (including empty) to preserve vertical spacing
-        // But trim trailing empty lines that might be artifacts
-        let lineCount = allLines.length;
-        while (lineCount > 0 && allLines[lineCount - 1].length === 0) {
-          lineCount--;
-        }
-        if (lineCount > maxLineCount) {
-          maxLineCount = lineCount;
+
+        maxLineCount = Math.max(maxLineCount, maxRow + 1);
+        maxLineLength = Math.max(maxLineLength, maxCol + 1);
+
+        if (args.verbose) {
+          console.log(`Found content bounds: ${maxCol + 1} cols x ${maxRow + 1} rows`);
         }
       }
 

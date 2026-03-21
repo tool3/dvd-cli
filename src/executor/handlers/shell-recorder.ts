@@ -621,9 +621,9 @@ const updateContextFromRecording = (
     }
   }
 
-  // If cursor is beyond last content line, include empty lines up to cursor
-  // This preserves intentional trailing newlines (like in neofetch)
-  const lastLine = Math.max(lastContentLine, Math.min(grid.cursor.row - 1, lines.length - 1));
+  // Include all lines up to the last content line
+  // Don't artificially limit based on cursor position as content may exist beyond cursor
+  const lastLine = lastContentLine >= 0 ? lastContentLine : 0;
 
   // Update context lines up to last line
   for (let i = 0; i <= lastLine; i++) {

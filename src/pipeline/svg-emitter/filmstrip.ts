@@ -434,7 +434,7 @@ export const emitFilmstrip = (
 
   // Style section
   parts.push('<style>');
-  const { translateKeyframes, opacityKeyframes } = generateKeyframes(uniqueFrames, width, {
+  const { translateKeyframes, opacityKeyframes } = generateKeyframes(uniqueFrames, height, {
     loopStyle,
     forwardDuration,
     totalDuration,
@@ -530,11 +530,11 @@ export const emitFilmstrip = (
 
   // Generate frame content
   uniqueFrames.forEach(({ frame, frameIndex }) => {
-    const frameX = frameIndex * width;
+    const frameY = frameIndex * height;
     const rowSymbolMap = frameRowSymbols.get(frameIndex) || new Map();
 
-    // Frame group positioned at frameX
-    parts.push(`<g transform="translate(${frameX},0)">`);
+    // Frame group positioned at frameY (vertical filmstrip)
+    parts.push(`<g transform="translate(0,${frameY})">`);
 
     // Row symbols
     rowSymbolMap.forEach((symbolId) => {
@@ -627,23 +627,23 @@ interface KeyframeOptions {
 
 const generateKeyframes = (
   uniqueFrames: UniqueFrame[],
-  frameWidth: number,
+  frameHeight: number,
   options: KeyframeOptions
 ): { translateKeyframes: string; opacityKeyframes: string } => {
   if (uniqueFrames.length === 0) return { translateKeyframes: '', opacityKeyframes: '' };
 
   const { loopStyle, forwardDuration, totalDuration, fadeDuration, loopPause } = options;
   const lastFrameIndex = uniqueFrames[uniqueFrames.length - 1].frameIndex;
-  const lastFrameX = -(lastFrameIndex * frameWidth);
+  const lastFrameY = -(lastFrameIndex * frameHeight);
 
   const translateKf: string[] = [];
   const opacityKf: string[] = [];
 
-  // Forward animation keyframes
+  // Forward animation keyframes - using translateY for vertical filmstrip
   uniqueFrames.forEach(({ frameIndex, timestamp }) => {
     const percent = (timestamp / totalDuration) * 100;
-    const translateX = -(frameIndex * frameWidth);
-    translateKf.push(`${percent.toFixed(2)}%{transform:translateX(${translateX}px)}`);
+    const translateY = -(frameIndex * frameHeight);
+    translateKf.push(`${percent.toFixed(2)}%{transform:translateY(${translateY}px)}`);
   });
 
   if (loopStyle === 'reverse' || loopStyle === 'rewind') {
@@ -658,21 +658,21 @@ const generateKeyframes = (
       const reverseTime = (lastTimestamp - uniqueFrames[i + 1].timestamp) / speedMultiplier;
       const absoluteTime = forwardDuration + reverseTime;
       const percent = (absoluteTime / totalDuration) * 100;
-      const translateX = -(uniqueFrames[i].frameIndex * frameWidth);
-      translateKf.push(`${percent.toFixed(2)}%{transform:translateX(${translateX}px)}`);
+      const translateY = -(uniqueFrames[i].frameIndex * frameHeight);
+      translateKf.push(`${percent.toFixed(2)}%{transform:translateY(${translateY}px)}`);
     }
 
     if (loopPause > 0) {
-      translateKf.push(`100%{transform:translateX(0px)}`);
+      translateKf.push(`100%{transform:translateY(0px)}`);
     }
   } else if (loopStyle === 'fade') {
     // Stay on last frame, add opacity keyframes
     const fadeStartPercent = (forwardDuration / totalDuration) * 100;
     const fadeEndPercent = ((forwardDuration + fadeDuration) / totalDuration) * 100;
 
-    // Keep translateX at last frame position during fade
-    translateKf.push(`${fadeStartPercent.toFixed(2)}%{transform:translateX(${lastFrameX}px)}`);
-    translateKf.push(`100%{transform:translateX(${lastFrameX}px)}`);
+    // Keep translateY at last frame position during fade
+    translateKf.push(`${fadeStartPercent.toFixed(2)}%{transform:translateY(${lastFrameY}px)}`);
+    translateKf.push(`100%{transform:translateY(${lastFrameY}px)}`);
 
     // Opacity animation for fade
     opacityKf.push(`0%{opacity:1}`);
