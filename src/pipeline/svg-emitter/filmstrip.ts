@@ -369,7 +369,12 @@ export const emitFilmstrip = (
   // Register all unique row symbols across all frames
   const frameRowSymbols: Map<number, Map<number, number>> = new Map(); // frameIndex -> rowIndex -> symbolId
 
-  const customGlyphs = options.customGlyphs ?? true;
+  // Default custom glyphs OFF for mobile performance. Custom glyphs render box-drawing
+  // characters (═║╚) as many individual SVG line/path elements (~310 per border row),
+  // while text rendering uses a single <text> element. Over 55+ frames, this adds ~17K
+  // extra elements that mobile renderers must paint on each SMIL frame switch.
+  // Users can opt-in with --customGlyphs for desktop/high-performance contexts.
+  const customGlyphs = options.customGlyphs ?? false;
   const showCursor = options.showCursor ?? true;
 
   const symbolConfig = {
