@@ -414,24 +414,33 @@ export const emitFilmstrip = (
   const parts: string[] = [];
 
   // Outer SVG - use pixel dimensions, viewBox matches visible area
-  parts.push(`<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="${totalWidth}" height="${totalHeight}" viewBox="0 0 ${totalWidth} ${totalHeight}">`);
+  // No xlink namespace needed — content is inlined, not referenced via <use>
+  parts.push(`<svg xmlns="http://www.w3.org/2000/svg" width="${totalWidth}" height="${totalHeight}" viewBox="0 0 ${totalWidth} ${totalHeight}">`);
 
-  // Defs section first (gradients, symbols, watermark defs)
-  parts.push('<defs>');
-
-  if (hasBackground && isGradient(options.background)) {
-    parts.push(generateGradientDef(options.background, 'bg-gradient'));
+  // Defs section (gradients, watermark defs — NO symbols, content is inlined for performance)
+  // Inlining symbol content avoids <use> shadow DOM resolution on every frame switch,
+  // which causes FPS drops on mobile Safari. Symbols are still used internally for
+  // deduplication during generation, but flattened to inline content in the output.
+  const needsDefs = (hasBackground && isGradient(options.background)) || watermarkDefs;
+  if (needsDefs) {
+    parts.push('<defs>');
+    if (hasBackground && isGradient(options.background)) {
+      parts.push(generateGradientDef(options.background, 'bg-gradient'));
+    }
+    if (watermarkDefs) {
+      parts.push(watermarkDefs);
+    }
+    parts.push('</defs>');
   }
 
-  // Add watermark defs to root defs section
-  if (watermarkDefs) {
-    parts.push(watermarkDefs);
-  }
-
-  // Output all symbol definitions
-  registry.symbolDefs.forEach(def => parts.push(def));
-
-  parts.push('</defs>');
+  // Build a map from symbol ID to its inner content for inlining
+  const symbolContentMap = new Map<number, string>();
+  registry.symbolDefs.forEach(def => {
+    const match = def.match(/^<symbol id="(\d+)">([\s\S]*)<\/symbol>$/);
+    if (match) {
+      symbolContentMap.set(parseInt(match[1], 10), match[2]);
+    }
+  });
 
   // Style section — only color classes, font, cursor. Frame switching uses SMIL, not CSS.
   // SMIL <animate attributeName="visibility" calcMode="discrete"> is handled natively by the
@@ -543,9 +552,10 @@ export const emitFilmstrip = (
 
     parts.push(`<g visibility="${initialVis}">`);
 
-    // Row symbols
+    // Row content — inlined from symbol registry (no <use> refs, faster on mobile)
     rowSymbolMap.forEach((symbolId) => {
-      parts.push(`<use xlink:href="#${symbolId}"/>`);
+      const content = symbolContentMap.get(symbolId);
+      if (content) parts.push(content);
     });
 
     // Selection (render before cursor so cursor appears on top)
