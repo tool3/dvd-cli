@@ -1,15 +1,17 @@
 //#region Imports
 
 import { writeFileSync } from 'node:fs';
-import { createFilmstripSVG } from '../animator/svg-animator';
+import { createAnimatedSVG, createFilmstripSVG } from '../animator/svg-animator';
 import { optimizeSvg } from '../animator/svg-optimizer';
 import { createSpinner } from '../utils/spinner';
 import { createGridState, processInput } from '../pipeline/vterminal';
 import { coalesce } from '../pipeline/coalescer';
+import { emit as emitFrame } from '../pipeline/svg-emitter';
 import { themes as pipelineThemes } from '../pipeline';
 import { parseGradient, themes as shellfieThemes } from 'shellfie';
 import type { FrameData } from '../pipeline/svg-emitter';
 import type { AnimationOptions } from '../animator/svg-animator';
+import type { TerminalFrame } from '../executor/types';
 import type { Gradient } from '../types';
 
 type Theme = typeof pipelineThemes.dark;
@@ -483,13 +485,15 @@ export const pipeCommand = async (args: PipeArgs): Promise<void> => {
       rewindSpeed: args['rewind-speed'] ?? 5,
     };
 
-    let svg = createFilmstripSVG({
-      frameData,
+    // Render each frame as a standalone SVG using the same emit() function master uses.
+    // This produces inline content with inline colors — zero CSS resolution overhead,
+    // zero <use> shadow DOM resolution. Proven smooth 60fps on mobile Safari.
+    const emitterOptions = {
       theme,
+      template,
       width,
       height,
       fontSize,
-      template,
       title,
       watermark: args.watermark,
       lineHeight: lineHeightPx,
@@ -500,15 +504,30 @@ export const pipeCommand = async (args: PipeArgs): Promise<void> => {
       footerHeight: args.footerHeight ?? 0,
       cursorStyle,
       cursorColor: args.cursorColor,
+      cursorBlink: args.cursorBlink,
       fontFamily: args.fontFamily,
       background: args.background ? parseGradient(args.background) : undefined,
       backgroundPadding: args.backgroundPadding,
       backgroundRadius: args.backgroundRadius,
       headerBackground: args.headerBackground,
+      headerBorder: args.headerBorder,
+      headerBorderColor: args.headerBorderColor,
+      headerBorderWidth: args.headerBorderWidth,
       footerBackground: args.footerBackground,
-      cursorBlink: args.cursorBlink,
+      footerBorder: args.footerBorder,
+      footerBorderColor: args.footerBorderColor,
+      footerBorderWidth: args.footerBorderWidth,
+      letterSpacing: args.letterSpacing,
       customGlyphs: args.customGlyphs,
-    }, animationOptions);
+    };
+
+    const terminalFrames: TerminalFrame[] = frameData.map((fd) => ({
+      svg: emitFrame(fd.rows, fd.cursor, fd.cursorVisible, emitterOptions).svg,
+      timestamp: fd.timestamp,
+      state: { content: '', cursorX: fd.cursor?.col ?? 0, cursorY: fd.cursor?.row ?? 0, width, height, fontSize, showCursor: fd.cursorVisible, activeCursor: fd.activeCursor ?? false },
+    }));
+
+    let svg = await createAnimatedSVG(terminalFrames, animationOptions);
 
     if (!args.verbose) {
       spinner.update('Optimizing SVG');
