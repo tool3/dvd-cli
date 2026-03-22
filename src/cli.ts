@@ -103,7 +103,8 @@ const createParser = () =>
     .option('custom-glyphs', {
       alias: 'G',
       type: 'boolean',
-      describe: 'Render block/box-drawing elements as geometric shapes (larger files, enable for desktop only)',
+      describe: 'Render block elements (▀▄█) as geometric shapes for seamless display',
+      default: true,
     })
     .option('loop-style', {
       alias: 'L',
@@ -410,7 +411,8 @@ const createParser = () =>
           .option('custom-glyphs', {
             alias: 'G',
             type: 'boolean',
-            describe: 'Render block/box-drawing elements as geometric shapes (larger files, enable for desktop only)',
+            describe: 'Render block elements as geometric shapes',
+            default: true,
           })
           .option('cursor-blink', {
             type: 'boolean',

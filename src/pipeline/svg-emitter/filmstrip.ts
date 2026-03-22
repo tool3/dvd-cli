@@ -225,35 +225,32 @@ const registerRowSymbol = (
   const textParts: string[] = [];
 
   // First pass: render background rects for spans with bg color
-  // First pass: render background rects for spans with bg color
-  // Use cellY so backgrounds fill the entire line cell
+  // Use inline fill= (not CSS classes) for zero CSS resolution overhead on SMIL frame switches
   row.forEach((span) => {
     if (!span.style.bg) return;
     const bgX = fmt(padding + span.col * charWidth);
     const bgWidth = fmt(span.width * charWidth);
-    const bgColorClass = getOrCreateColorClass(registry, span.style.bg);
     textParts.push(
-      `<rect x="${bgX}" y="${fmt(cellY)}" width="${bgWidth}" height="${fmt(lineHeight)}" class="${bgColorClass}"/>`
+      `<rect x="${bgX}" y="${fmt(cellY)}" width="${bgWidth}" height="${fmt(lineHeight)}" fill="${span.style.bg}"/>`
     );
   });
 
   // Second pass: render text
+  // All colors are inline fill= attributes (matching master's approach for mobile perf).
+  // CSS classes are used ONLY for text styling (bold, italic, etc.) — never for colors.
   row.forEach((span) => {
-    // Don't trim text - preserve all characters including spaces for ASCII art
-    // Only skip completely empty spans
     const rawText = span.text;
     if (!rawText) return;
 
-    // Determine color
+    // Determine color — always inline, never a CSS class
     let color = theme.foreground;
     if (span.style.fg) {
       color = span.style.fg;
     }
-    const colorClass = getOrCreateColorClass(registry, color);
 
-    // Get text style classes (bold, italic, etc.)
+    // Text style classes (bold, italic, etc.) — these are a tiny fixed set, not per-color
     const styleClasses = getTextStyleClasses(span.style);
-    const allClasses = [colorClass, ...styleClasses].join(' ');
+    const classAttr = styleClasses.length > 0 ? ` class="${styleClasses.join(' ')}"` : '';
 
     // Use custom glyph rendering when enabled and text contains special chars
     if (customGlyphs && containsCustomGlyphs(rawText)) {
@@ -266,7 +263,6 @@ const registerRowSymbol = (
         const charDisplayWidth = getCharWidth(char);
 
         // Render custom glyphs (box-drawing, block elements, etc.)
-        // Use cellY so glyphs fill the entire cell
         if (codePoint !== undefined && isCustomGlyph(codePoint)) {
           const glyphCtx: GlyphContext = {
             cellWidth: charWidth,
@@ -277,7 +273,7 @@ const registerRowSymbol = (
             backgroundColor: theme.background,
             lineWidth: glyphLineWidth,
             heavyLineWidth: glyphHeavyLineWidth,
-            colorClass, // Use CSS class instead of inline color
+            colorClass: '', // No CSS class — colors are inline
           };
           const result = renderCustomGlyph(char, glyphCtx);
           if (result.handled) {
@@ -286,19 +282,18 @@ const registerRowSymbol = (
             return;
           }
         }
-        // Fall back to text for non-custom characters - use textY for vertical centering
+        // Fall back to text — inline fill, optional style class
         textParts.push(
-          `<text x="${fmt(charX)}" y="${fmt(textY)}" class="${allClasses}">${escapeXml(char)}</text>`
+          `<text x="${fmt(charX)}" y="${fmt(textY)}" fill="${color}"${classAttr}>${escapeXml(char)}</text>`
         );
 
-        // Increment column offset by character display width (emoji are 2-wide)
         colOffset += charDisplayWidth;
       });
     } else {
-      // No custom glyphs - render as single text element with textY for vertical centering
+      // No custom glyphs - render as single text element with inline fill
       const x = fmt(padding + span.col * charWidth);
       const safeText = escapeXml(rawText);
-      textParts.push(`<text x="${x}" y="${fmt(textY)}" class="${allClasses}">${safeText}</text>`);
+      textParts.push(`<text x="${x}" y="${fmt(textY)}" fill="${color}"${classAttr}>${safeText}</text>`);
     }
   });
 
@@ -369,12 +364,7 @@ export const emitFilmstrip = (
   // Register all unique row symbols across all frames
   const frameRowSymbols: Map<number, Map<number, number>> = new Map(); // frameIndex -> rowIndex -> symbolId
 
-  // Default custom glyphs OFF for mobile performance. Custom glyphs render box-drawing
-  // characters (═║╚) as many individual SVG line/path elements (~310 per border row),
-  // while text rendering uses a single <text> element. Over 55+ frames, this adds ~17K
-  // extra elements that mobile renderers must paint on each SMIL frame switch.
-  // Users can opt-in with --customGlyphs for desktop/high-performance contexts.
-  const customGlyphs = options.customGlyphs ?? false;
+  const customGlyphs = options.customGlyphs ?? true;
   const showCursor = options.showCursor ?? true;
 
   const symbolConfig = {
@@ -418,34 +408,21 @@ export const emitFilmstrip = (
   // Build SVG
   const parts: string[] = [];
 
-  // Outer SVG - use pixel dimensions, viewBox matches visible area
-  // No xlink namespace needed — content is inlined, not referenced via <use>
-  parts.push(`<svg xmlns="http://www.w3.org/2000/svg" width="${totalWidth}" height="${totalHeight}" viewBox="0 0 ${totalWidth} ${totalHeight}">`);
+  // Outer SVG
+  parts.push(`<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="${totalWidth}" height="${totalHeight}" viewBox="0 0 ${totalWidth} ${totalHeight}">`);
 
-  // Defs section (gradients, watermark defs — NO symbols, content is inlined for performance)
-  // Inlining symbol content avoids <use> shadow DOM resolution on every frame switch,
-  // which causes FPS drops on mobile Safari. Symbols are still used internally for
-  // deduplication during generation, but flattened to inline content in the output.
-  const needsDefs = (hasBackground && isGradient(options.background)) || watermarkDefs;
-  if (needsDefs) {
-    parts.push('<defs>');
-    if (hasBackground && isGradient(options.background)) {
-      parts.push(generateGradientDef(options.background, 'bg-gradient'));
-    }
-    if (watermarkDefs) {
-      parts.push(watermarkDefs);
-    }
-    parts.push('</defs>');
+  // Defs: symbols for row dedup + gradients + watermark defs
+  // Symbols use inline colors (no CSS classes) so there's zero CSS resolution on frame switches.
+  // The <use> refs are lightweight DOM lookups; CSS cascade was the real perf bottleneck.
+  parts.push('<defs>');
+  if (hasBackground && isGradient(options.background)) {
+    parts.push(generateGradientDef(options.background, 'bg-gradient'));
   }
-
-  // Build a map from symbol ID to its inner content for inlining
-  const symbolContentMap = new Map<number, string>();
-  registry.symbolDefs.forEach(def => {
-    const match = def.match(/^<symbol id="(\d+)">([\s\S]*)<\/symbol>$/);
-    if (match) {
-      symbolContentMap.set(parseInt(match[1], 10), match[2]);
-    }
-  });
+  if (watermarkDefs) {
+    parts.push(watermarkDefs);
+  }
+  registry.symbolDefs.forEach(def => parts.push(def));
+  parts.push('</defs>');
 
   // Style section — only color classes, font, cursor. Frame switching uses SMIL, not CSS.
   // SMIL <animate attributeName="visibility" calcMode="discrete"> is handled natively by the
@@ -466,9 +443,8 @@ export const emitFilmstrip = (
     ? "'DVDMono',monospace"
     : options.fontFamily ? `'${options.fontFamily}',${defaultFonts}` : defaultFonts;
   const letterSpacingStyle = options.letterSpacing ? `letter-spacing:${options.letterSpacing}px;` : '';
-  // Base text styling - stroke:none prevents text from looking bolder due to color class stroke
-  // Use text[class] selector for higher specificity to override class-level stroke
-  parts.push(`text{font-family:${fontFamily};font-size:${fontSize}px;dominant-baseline:text-before-edge;white-space:pre;${letterSpacingStyle}}text[class]{stroke:none}`);
+  // Base text styling — colors are inline fill= attributes, not CSS classes
+  parts.push(`text{font-family:${fontFamily};font-size:${fontSize}px;dominant-baseline:text-before-edge;white-space:pre;${letterSpacingStyle}}`);
 
   // Text style classes (bold, italic, etc.)
   parts.push('.bold{font-weight:700}.italic{font-style:italic}.uline{text-decoration:underline}.strike{text-decoration:line-through}.dim{opacity:0.5}');
@@ -557,10 +533,9 @@ export const emitFilmstrip = (
 
     parts.push(`<g visibility="${initialVis}">`);
 
-    // Row content — inlined from symbol registry (no <use> refs, faster on mobile)
+    // Row content via symbol references — deduplicates identical rows across frames
     rowSymbolMap.forEach((symbolId) => {
-      const content = symbolContentMap.get(symbolId);
-      if (content) parts.push(content);
+      parts.push(`<use xlink:href="#${symbolId}"/>`);
     });
 
     // Selection (render before cursor so cursor appears on top)
@@ -800,35 +775,15 @@ const generateSMILAnimations = (
 //#region Color Styles Generation
 
 const generateColorStyles = (
-  registry: SymbolRegistry,
-  theme: Theme,
-  hasBackground: boolean,
-  background?: string | Gradient
+  _registry: SymbolRegistry,
+  _theme: Theme,
+  _hasBackground: boolean,
+  _background?: string | Gradient
 ): string => {
-  const styles: string[] = [];
-
-  // Background class 'a' (unused now but kept for compatibility)
-  if (hasBackground && isGradient(background)) {
-    styles.push(`.a{fill:url(#bg-gradient)}`);
-  } else if (hasBackground && background) {
-    styles.push(`.a{fill:${background}}`);
-  } else {
-    styles.push(`.a{fill:${theme.background}}`);
-  }
-
-  // Color classes - set fill and stroke (stroke needed for custom glyphs like box-drawing lines)
-  // Text elements have stroke:none set with higher specificity to avoid bold appearance
-  registry.colorClasses.forEach((className, color) => {
-    styles.push(`.${className}{fill:${color};stroke:${color}}`);
-  });
-
-  // Path elements with fill="none" should remain unfilled (box-drawing corners)
-  // Use attribute selector for higher specificity than class alone
-  styles.push('path[fill="none"]{fill:none}');
-
-  // Block elements (rects converted to paths) should NOT have stroke - it makes them appear wider
-  // Only line elements need stroke. Use shape-rendering attribute to identify block elements.
-  styles.push('path[shape-rendering="crispEdges"]{stroke:none}');
-
-  return styles.join('');
+  // No CSS color classes — all colors are inline fill/stroke attributes.
+  // This eliminates CSS style resolution on SMIL frame switches, which is the
+  // key difference between our approach and master's smooth mobile performance.
+  // Master: inline fill="rgb(...)" + tiny CSS for font styling = smooth 60fps
+  // CSS classes: browser must resolve hundreds of color classes per frame switch = jank
+  return '';
 };
