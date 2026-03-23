@@ -83,6 +83,9 @@ export const applyCommand = (state: GridState, command: VTerminalCommand): GridS
       return { ...state, autoWrap: command.enabled };
     case 'setCursorVisible':
       return { ...state, cursorVisible: command.visible };
+    case 'resetTerminal':
+      // ESC c (RIS) — Reset to Initial State: clear screen, reset cursor, reset attributes
+      return createGridState(state.width, state.height);
     case 'noop':
       return state;
     default:
@@ -550,6 +553,7 @@ const parseEscapeSequence = (input: string, start: number): ParseResult | null =
   const next = input[start + 1];
 
   if (next === '[') return parseCSI(input, start + 2);
+  if (next === 'c') return { command: { type: 'resetTerminal' }, endIndex: start + 2 }; // RIS - Reset to Initial State
   if (next === '7') return { command: { type: 'saveCursor' }, endIndex: start + 2 };
   if (next === '8') return { command: { type: 'restoreCursor' }, endIndex: start + 2 };
 

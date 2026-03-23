@@ -118,6 +118,7 @@ export type VTerminalCommand =
   | { type: 'scrollDown'; count: number }
   | { type: 'setAutoWrap'; enabled: boolean }
   | { type: 'setCursorVisible'; visible: boolean }
+  | { type: 'resetTerminal' }
   | { type: 'noop' };
 
 
