@@ -99,6 +99,12 @@ const createParser = () =>
       type: 'boolean',
       describe: 'Use legacy animated rendering instead of filmstrip',
       default: false,
+      hidden: true,
+    })
+    .option('smil', {
+      type: 'boolean',
+      describe: 'Use SMIL-based animation (frame-per-SVG-group with <animate> visibility switching)',
+      default: false,
     })
     .option('custom-glyphs', {
       alias: 'G',
@@ -557,7 +563,7 @@ const run = async (): Promise<void> => {
       fps: argv.fps,
       'loop-style': argv['loop-style'] as 'loop' | 'reverse' | 'rewind' | 'fade',
       optimize: argv.optimize,
-      legacy: argv.legacy,
+      legacy: argv.legacy || argv.smil,
       'custom-glyphs': argv['custom-glyphs'],
       'playback-speed': argv['playback-speed'],
       // Pass through styling options only if explicitly provided by user
