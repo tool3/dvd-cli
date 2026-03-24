@@ -112,10 +112,43 @@ const analyzeFrames = (frames: FrameData[]): UniqueFrame[] => {
 };
 
 
+//#region Color Class Mapping
+
+// Map colors to CSS class names (matching master's approach).
+// Standard 16 ANSI colors + foreground use CSS classes for efficient caching.
+// Truecolor (24-bit) falls back to inline fill= attributes.
+const buildColorClassMap = (theme: Theme): Map<string, string> => {
+  const map = new Map<string, string>();
+  map.set(theme.foreground, 'fg');
+  const colors = [
+    theme.black, theme.red, theme.green, theme.yellow,
+    theme.blue, theme.magenta, theme.cyan, theme.white,
+    theme.brightBlack, theme.brightRed, theme.brightGreen, theme.brightYellow,
+    theme.brightBlue, theme.brightMagenta, theme.brightCyan, theme.brightWhite,
+  ];
+  colors.forEach((color, i) => {
+    if (!map.has(color)) map.set(color, `f${i}`);
+  });
+  return map;
+};
+
+const buildBgColorClassMap = (theme: Theme): Map<string, string> => {
+  const map = new Map<string, string>();
+  const colors = [
+    theme.black, theme.red, theme.green, theme.yellow,
+    theme.blue, theme.magenta, theme.cyan, theme.white,
+    theme.brightBlack, theme.brightRed, theme.brightGreen, theme.brightYellow,
+    theme.brightBlue, theme.brightMagenta, theme.brightCyan, theme.brightWhite,
+  ];
+  colors.forEach((color, i) => map.set(color, `b${i}`));
+  return map;
+};
+
+
 //#region Row Rendering
 
-// Render a row's content as inline SVG elements (no <symbol>/<use> indirection).
-// All colors are inline fill= attributes for zero CSS overhead on frame switches.
+// Render a row as inline SVG. Uses CSS classes for standard colors (like master),
+// inline fill= only for truecolor. Every <text> gets class="text" for font/rendering.
 const renderRow = (
   row: SpanRow,
   rowIndex: number,
@@ -127,6 +160,9 @@ const renderRow = (
     fontSize: number;
     theme: Theme;
     customGlyphs: boolean;
+    fgColorMap: Map<string, string>;
+    bgColorMap: Map<string, string>;
+    usedClasses: Set<string>;
   }
 ): string | null => {
   const hasContent = row.some(span => {
@@ -136,7 +172,7 @@ const renderRow = (
   });
   if (!hasContent) return null;
 
-  const { charWidth, lineHeight, padding, contentStartY, fontSize, theme, customGlyphs } = config;
+  const { charWidth, lineHeight, padding, contentStartY, fontSize, theme, customGlyphs, fgColorMap, bgColorMap, usedClasses } = config;
   const cellY = contentStartY + rowIndex * lineHeight;
   const cursorYOffset = getCursorYOffset(lineHeight, fontSize);
   const cursorY = cellY + cursorYOffset;
@@ -148,28 +184,44 @@ const renderRow = (
 
   const parts: string[] = [];
 
-  // Background rects
+  // Background rects — use CSS class for standard colors, inline fill for truecolor
   row.forEach((span) => {
     if (!span.style.bg) return;
     const bgX = fmt(padding + span.col * charWidth);
     const bgWidth = fmt(span.width * charWidth);
-    parts.push(
-      `<rect x="${bgX}" y="${fmt(cellY)}" width="${bgWidth}" height="${fmt(lineHeight)}" fill="${span.style.bg}"/>`
-    );
+    const bgClass = bgColorMap.get(span.style.bg);
+    if (bgClass) {
+      usedClasses.add(bgClass);
+      parts.push(
+        `<rect class="${bgClass}" x="${bgX}" y="${fmt(cellY)}" width="${bgWidth}" height="${fmt(lineHeight)}"/>`
+      );
+    } else {
+      parts.push(
+        `<rect x="${bgX}" y="${fmt(cellY)}" width="${bgWidth}" height="${fmt(lineHeight)}" fill="${span.style.bg}"/>`
+      );
+    }
   });
 
-  // Text
+  // Text — CSS class for color when possible, inline fill for truecolor
   row.forEach((span) => {
     const rawText = span.text;
     if (!rawText) return;
 
-    let color = theme.foreground;
-    if (span.style.fg) {
-      color = span.style.fg;
-    }
+    const color = span.style.fg || theme.foreground;
+    const colorClass = fgColorMap.get(color);
 
+    // Build class list: always "text", plus color class if available, plus style classes
+    const classes: string[] = ['text'];
+    if (colorClass) {
+      classes.push(colorClass);
+      usedClasses.add(colorClass);
+    }
     const styleClasses = getTextStyleClasses(span.style);
-    const classAttr = styleClasses.length > 0 ? ` class="${styleClasses.join(' ')}"` : '';
+    classes.push(...styleClasses);
+
+    const classStr = classes.join(' ');
+    // Only add inline fill= for truecolor (no CSS class match)
+    const fillAttr = colorClass ? '' : ` fill="${color}"`;
 
     if (customGlyphs && containsCustomGlyphs(rawText)) {
       let colOffset = 0;
@@ -189,7 +241,7 @@ const renderRow = (
             backgroundColor: theme.background,
             lineWidth: glyphLineWidth,
             heavyLineWidth: glyphHeavyLineWidth,
-            colorClass: '',
+            colorClass: colorClass || '',
           };
           const result = renderCustomGlyph(char, glyphCtx);
           if (result.handled) {
@@ -199,14 +251,14 @@ const renderRow = (
           }
         }
         parts.push(
-          `<text x="${fmt(charX)}" y="${fmt(textY)}" fill="${color}"${classAttr}>${escapeXml(char)}</text>`
+          `<text class="${classStr}" x="${fmt(charX)}" y="${fmt(textY)}"${fillAttr}>${escapeXml(char)}</text>`
         );
         colOffset += charDisplayWidth;
       });
     } else {
       const x = fmt(padding + span.col * charWidth);
       const safeText = escapeXml(rawText);
-      parts.push(`<text x="${x}" y="${fmt(textY)}" fill="${color}"${classAttr}>${safeText}</text>`);
+      parts.push(`<text class="${classStr}" x="${x}" y="${fmt(textY)}"${fillAttr}>${safeText}</text>`);
     }
   });
 
@@ -268,6 +320,11 @@ export const emitFilmstrip = (
   const customGlyphs = options.customGlyphs ?? true;
   const showCursor = options.showCursor ?? true;
 
+  // Build color class maps (standard 16 ANSI colors → CSS classes)
+  const fgColorMap = buildColorClassMap(theme);
+  const bgColorMap = buildBgColorClassMap(theme);
+  const usedClasses = new Set<string>();
+
   const rowConfig = {
     charWidth,
     lineHeight,
@@ -276,6 +333,9 @@ export const emitFilmstrip = (
     fontSize,
     theme,
     customGlyphs,
+    fgColorMap,
+    bgColorMap,
+    usedClasses,
   };
 
   // Extract watermark content and defs
@@ -292,13 +352,81 @@ export const emitFilmstrip = (
     watermarkContent = extracted.content;
   }
 
-  // Build SVG
+  // Pre-render all frame content (populates usedClasses for CSS generation)
+  const frameParts: string[] = [];
+  const animDurationS = (totalDuration / 1000).toFixed(3);
+  const smilRepeat = loop ? 'indefinite' : '1';
+
+  const smilAnimations = generateSMILAnimations(uniqueFrames, {
+    loopStyle,
+    forwardDuration,
+    totalDuration,
+    fadeDuration,
+    rewindSpeed,
+    loopPause,
+  });
+
+  uniqueFrames.forEach(({ frame, frameIndex }) => {
+    const isFirst = frameIndex === 0;
+    const initialVis = isFirst ? 'visible' : 'hidden';
+
+    frameParts.push(`<g visibility="${initialVis}">`);
+
+    frame.rows.forEach((row) => {
+      if (row.length === 0) return;
+      const rowIdx = row[0].row;
+      const rendered = renderRow(row, rowIdx, rowConfig);
+      if (rendered) frameParts.push(rendered);
+    });
+
+    if (frame.selection) {
+      const { start, end, row } = frame.selection;
+      const selStart = Math.min(start, end);
+      const selEnd = Math.max(start, end);
+      const selectionX = padding + selStart * charWidth;
+      const selectionY = contentStartY + row * lineHeight;
+      const selectionWidth = (selEnd - selStart) * charWidth;
+      const selectionColor = theme.selection ?? '#44475a';
+      frameParts.push(
+        `<rect x="${fmt(selectionX)}" y="${fmt(selectionY)}" width="${fmt(selectionWidth)}" height="${fmt(lineHeight)}" fill="${selectionColor}" opacity="0.5"/>`
+      );
+    }
+
+    if (showCursor && frame.cursor && frame.cursorVisible) {
+      const cursorX = padding + frame.cursor.col * charWidth;
+      const effectiveCursorHeight = getEffectiveLineHeight(lineHeight, fontSize);
+      const cursorYOffset = getCursorYOffset(lineHeight, fontSize);
+      const cursorY = contentStartY + frame.cursor.row * lineHeight + cursorYOffset;
+      const cursorColor = options.cursorColor ?? theme.cursor ?? theme.foreground;
+      const cursorStyleType = options.cursorStyle ?? 'block';
+      const cursorClassName = frame.activeCursor ? 'cursor-active' : 'cursor';
+      const cursorClass = ` class="${cursorClassName}"`;
+
+      if (cursorStyleType === 'block') {
+        frameParts.push(`<rect${cursorClass} x="${fmt(cursorX)}" y="${fmt(cursorY)}" width="${fmt(charWidth)}" height="${fmt(effectiveCursorHeight)}" fill="${cursorColor}"/>`);
+      } else if (cursorStyleType === 'bar') {
+        frameParts.push(`<rect${cursorClass} x="${fmt(cursorX)}" y="${fmt(cursorY)}" width="2" height="${fmt(effectiveCursorHeight)}" fill="${cursorColor}"/>`);
+      } else {
+        const underlineY = cursorY + effectiveCursorHeight - 2;
+        frameParts.push(`<rect${cursorClass} x="${fmt(cursorX)}" y="${fmt(underlineY)}" width="${fmt(charWidth)}" height="2" fill="${cursorColor}"/>`);
+      }
+    }
+
+    const smil = smilAnimations[frameIndex];
+    if (smil) {
+      frameParts.push(`<animate attributeName="visibility" values="${smil.values}" keyTimes="${smil.keyTimes}" dur="${animDurationS}s" repeatCount="${smilRepeat}" calcMode="discrete" fill="freeze"/>`);
+    }
+
+    frameParts.push('</g>');
+  });
+
+  // Now build the full SVG — style block uses usedClasses from rendering above
   const parts: string[] = [];
 
   parts.push(`<svg xmlns="http://www.w3.org/2000/svg" width="${totalWidth}" height="${totalHeight}" viewBox="0 0 ${totalWidth} ${totalHeight}">`);
 
-  // Defs: gradients + watermark defs only (no symbols)
-  const hasDefs = (hasBackground && isGradient(options.background)) || watermarkDefs || (borderRadius > 0);
+  // Defs
+  const hasDefs = (hasBackground && isGradient(options.background)) || watermarkDefs;
   if (hasDefs) {
     parts.push('<defs>');
     if (hasBackground && isGradient(options.background)) {
@@ -310,29 +438,47 @@ export const emitFilmstrip = (
     parts.push('</defs>');
   }
 
-  // Style — minimal: font + text decorations + cursor blink. No color classes.
-  parts.push('<style>');
+  // Style — matching master: .text with text-rendering:geometricPrecision,
+  // CSS color classes for standard 16 ANSI colors, simple cursor opacity blink.
+  const styleLines: string[] = [];
 
   if (options.embedFont && options.fontData) {
-    parts.push(`@font-face{font-family:'DVDMono';src:url(data:font/woff2;base64,${options.fontData}) format('woff2');font-weight:400;font-style:normal;font-display:block}`);
+    styleLines.push(`@font-face{font-family:'DVDMono';src:url(data:font/woff2;base64,${options.fontData}) format('woff2');font-weight:400;font-style:normal;font-display:block}`);
   }
 
-  const defaultFonts = "'SF Mono',Monaco,Consolas,Menlo,monospace";
+  const defaultFonts = "'SF Mono','Monaco','Menlo','Consolas',monospace";
   const fontFamily = options.embedFont && options.fontData
     ? "'DVDMono',monospace"
-    : options.fontFamily ? `'${options.fontFamily}',${defaultFonts}` : defaultFonts;
+    : options.fontFamily ? `'${options.fontFamily}',monospace` : defaultFonts;
   const letterSpacingStyle = options.letterSpacing ? `letter-spacing:${options.letterSpacing}px;` : '';
-  parts.push(`text{font-family:${fontFamily};font-size:${fontSize}px;dominant-baseline:text-before-edge;white-space:pre;${letterSpacingStyle}}`);
+  styleLines.push(`.text{font-family:${fontFamily};font-size:${fontSize}px;dominant-baseline:text-before-edge;text-rendering:geometricPrecision;white-space:pre;${letterSpacingStyle}}`);
 
-  parts.push('.bold{font-weight:700}.italic{font-style:italic}.uline{text-decoration:underline}.strike{text-decoration:line-through}.dim{opacity:0.5}');
+  styleLines.push('.bold{font-weight:bold}.italic{font-style:italic}.uline{text-decoration:underline}.strike{text-decoration:line-through}.dim{opacity:0.5}');
 
+  // Color classes — only emit classes that are actually used
+  if (usedClasses.has('fg')) styleLines.push(`.fg{fill:${theme.foreground}}`);
+  const themeColors = [
+    theme.black, theme.red, theme.green, theme.yellow,
+    theme.blue, theme.magenta, theme.cyan, theme.white,
+    theme.brightBlack, theme.brightRed, theme.brightGreen, theme.brightYellow,
+    theme.brightBlue, theme.brightMagenta, theme.brightCyan, theme.brightWhite,
+  ];
+  themeColors.forEach((color, i) => {
+    if (usedClasses.has(`f${i}`)) styleLines.push(`.f${i}{fill:${color}}`);
+    if (usedClasses.has(`b${i}`)) styleLines.push(`.b${i}{fill:${color}}`);
+  });
+
+  // Cursor — simple opacity blink, no mix-blend-mode (matches master)
   const cursorBlink = options.cursorBlink !== false;
   if (cursorBlink) {
-    parts.push(`@keyframes blink{0%,50%{opacity:1}50.01%,100%{opacity:0}}.cursor{animation:blink 1s step-end infinite;mix-blend-mode:difference}.cursor-active{opacity:1;mix-blend-mode:difference}`);
+    styleLines.push(`.cursor{animation:blink 1s step-end infinite}`);
+    styleLines.push(`@keyframes blink{0%,50%{opacity:1}50.01%,100%{opacity:0}}`);
   } else {
-    parts.push(`.cursor,.cursor-active{mix-blend-mode:difference}`);
+    styleLines.push(`.cursor{opacity:1}`);
   }
-  parts.push('</style>');
+  styleLines.push(`.cursor-active{opacity:1}`);
+
+  parts.push(`<style>${styleLines.join('\n')}</style>`);
 
   // Outer background
   if (hasBackground) {
@@ -373,88 +519,11 @@ export const emitFilmstrip = (
     }
   }
 
-  // Content clip
+  // Content clip + pre-rendered frames (rendered above to collect usedClasses)
   const contentHeight = height - headerHeight;
   parts.push(`<clipPath id="content-clip"><rect x="0" y="${headerHeight}" width="${width}" height="${contentHeight}"/></clipPath>`);
   parts.push(`<g clip-path="url(#content-clip)">`);
-
-  // SMIL visibility animation: each frame is a <g> at position (0,0), only one
-  // visible at a time via <animate attributeName="visibility" calcMode="discrete">.
-  // Hidden groups are skipped entirely by the renderer — no paint, no composite.
-  // All content is inline (no <symbol>/<use> indirection) for zero DOM lookup overhead.
-  // This matches master's proven smooth 60/120fps mobile performance.
-  const animDurationS = (totalDuration / 1000).toFixed(3);
-  const smilRepeat = loop ? 'indefinite' : '1';
-
-  // Pre-compute SMIL visibility schedules
-  const smilAnimations = generateSMILAnimations(uniqueFrames, {
-    loopStyle,
-    forwardDuration,
-    totalDuration,
-    fadeDuration,
-    rewindSpeed,
-    loopPause,
-  });
-
-  // Render each frame as inline content in a visibility-toggled <g>
-  uniqueFrames.forEach(({ frame, frameIndex }) => {
-    const isFirst = frameIndex === 0;
-    const initialVis = isFirst ? 'visible' : 'hidden';
-
-    parts.push(`<g visibility="${initialVis}">`);
-
-    // Inline row content — no symbol/use, flat DOM
-    frame.rows.forEach((row) => {
-      if (row.length === 0) return;
-      const rowIdx = row[0].row;
-      const rendered = renderRow(row, rowIdx, rowConfig);
-      if (rendered) parts.push(rendered);
-    });
-
-    // Selection
-    if (frame.selection) {
-      const { start, end, row } = frame.selection;
-      const selStart = Math.min(start, end);
-      const selEnd = Math.max(start, end);
-      const selectionX = padding + selStart * charWidth;
-      const selectionY = contentStartY + row * lineHeight;
-      const selectionWidth = (selEnd - selStart) * charWidth;
-      const selectionColor = theme.selection ?? '#44475a';
-      parts.push(
-        `<rect x="${fmt(selectionX)}" y="${fmt(selectionY)}" width="${fmt(selectionWidth)}" height="${fmt(lineHeight)}" fill="${selectionColor}" opacity="0.5"/>`
-      );
-    }
-
-    // Cursor
-    if (showCursor && frame.cursor && frame.cursorVisible) {
-      const cursorX = padding + frame.cursor.col * charWidth;
-      const effectiveCursorHeight = getEffectiveLineHeight(lineHeight, fontSize);
-      const cursorYOffset = getCursorYOffset(lineHeight, fontSize);
-      const cursorY = contentStartY + frame.cursor.row * lineHeight + cursorYOffset;
-      const cursorColor = options.cursorColor ?? theme.cursor ?? theme.foreground;
-      const cursorStyleType = options.cursorStyle ?? 'block';
-      const cursorClassName = frame.activeCursor ? 'cursor-active' : 'cursor';
-      const cursorClass = ` class="${cursorClassName}"`;
-
-      if (cursorStyleType === 'block') {
-        parts.push(`<rect${cursorClass} x="${fmt(cursorX)}" y="${fmt(cursorY)}" width="${fmt(charWidth)}" height="${fmt(effectiveCursorHeight)}" fill="${cursorColor}"/>`);
-      } else if (cursorStyleType === 'bar') {
-        parts.push(`<rect${cursorClass} x="${fmt(cursorX)}" y="${fmt(cursorY)}" width="2" height="${fmt(effectiveCursorHeight)}" fill="${cursorColor}"/>`);
-      } else {
-        const underlineY = cursorY + effectiveCursorHeight - 2;
-        parts.push(`<rect${cursorClass} x="${fmt(cursorX)}" y="${fmt(underlineY)}" width="${fmt(charWidth)}" height="2" fill="${cursorColor}"/>`);
-      }
-    }
-
-    // SMIL visibility animation
-    const smil = smilAnimations[frameIndex];
-    if (smil) {
-      parts.push(`<animate attributeName="visibility" values="${smil.values}" keyTimes="${smil.keyTimes}" dur="${animDurationS}s" repeatCount="${smilRepeat}" calcMode="discrete" fill="freeze"/>`);
-    }
-
-    parts.push('</g>');
-  });
-
+  parts.push(frameParts.join(''));
   parts.push('</g>'); // content clip group
 
   // Fade overlay — outside content clip, matches terminal border radius
