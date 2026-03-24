@@ -503,35 +503,28 @@ export const emitFilmstrip = (
     }
   }
 
-  // Content area - clip to avoid overflow
-  parts.push(`<clipPath id="content-clip"><rect x="0" y="${headerHeight}" width="${width}" height="${height - headerHeight}"/></clipPath>`);
+  // Content area - clip to show only one frame at a time
+  const contentHeight = height - headerHeight;
+  parts.push(`<clipPath id="content-clip"><rect x="0" y="${headerHeight}" width="${width}" height="${contentHeight}"/></clipPath>`);
   parts.push(`<g clip-path="url(#content-clip)">`);
 
-  // SMIL-based animation: each frame at same position, only one visible at a time.
-  // Uses SMIL <animate attributeName="visibility" calcMode="discrete"> which is handled
-  // natively by the SVG renderer. On mobile Safari, SMIL is dramatically faster than CSS
-  // @keyframes because the SVG engine pre-computes the discrete visibility schedule and
-  // only paints the active frame — no CSS style resolution overhead per animation tick.
+  // Vertical filmstrip animation: all frames stacked vertically, a single
+  // <animateTransform type="translate"> scrolls the strip. The GPU composites
+  // transform changes natively — no layout/paint per frame switch, no visibility
+  // toggling on N groups, no CSS resolution. This is the sprite-sheet approach
+  // used by high-performance SVG animation tools.
   const animDurationS = (totalDuration / 1000).toFixed(3);
   const smilRepeat = loop ? 'indefinite' : '1';
 
-  // Pre-compute SMIL keyTimes and values for each frame
-  const smilAnimations = generateSMILAnimations(uniqueFrames, {
-    loopStyle,
-    forwardDuration,
-    totalDuration,
-    fadeDuration,
-    rewindSpeed,
-    loopPause,
-  });
+  // The filmstrip group: all frames stacked, animated via transform
+  parts.push('<g>');
 
-  // Generate frame content - all frames at position (0,0), SMIL-controlled visibility
+  // Generate frame content — each frame offset by frameIndex * contentHeight
   uniqueFrames.forEach(({ frame, frameIndex }) => {
     const rowSymbolMap = frameRowSymbols.get(frameIndex) || new Map();
-    const isFirst = frameIndex === 0;
-    const initialVis = isFirst ? 'visible' : 'hidden';
+    const yOffset = frameIndex * contentHeight;
 
-    parts.push(`<g visibility="${initialVis}">`);
+    parts.push(`<g transform="translate(0,${fmt(yOffset)})">`);
 
     // Row content via symbol references — deduplicates identical rows across frames
     rowSymbolMap.forEach((symbolId) => {
@@ -555,48 +548,51 @@ export const emitFilmstrip = (
     // Cursor (only render if showCursor option is enabled)
     if (showCursor && frame.cursor && frame.cursorVisible) {
       const cursorX = padding + frame.cursor.col * charWidth;
-      // Use effective cursor height to ensure minimum visual padding
       const effectiveCursorHeight = getEffectiveLineHeight(lineHeight, fontSize);
-      // Center the cursor vertically on the row (may extend above/below)
       const cursorYOffset = getCursorYOffset(lineHeight, fontSize);
       const cursorY = contentStartY + frame.cursor.row * lineHeight + cursorYOffset;
       const cursorColor = options.cursorColor ?? theme.cursor ?? theme.foreground;
       const cursorStyleType = options.cursorStyle ?? 'block';
-      // Use cursor-active class when typing (solid), cursor class when idle (blinking)
-      // Always apply the class for mix-blend-mode styling, even when blink is disabled
       const cursorClassName = frame.activeCursor ? 'cursor-active' : 'cursor';
       const cursorClass = ` class="${cursorClassName}"`;
 
       if (cursorStyleType === 'block') {
-        // Use cursor color from theme (with mix-blend-mode for inversion effect)
         parts.push(`<rect${cursorClass} x="${fmt(cursorX)}" y="${fmt(cursorY)}" width="${fmt(charWidth)}" height="${fmt(effectiveCursorHeight)}" fill="${cursorColor}"/>`);
       } else if (cursorStyleType === 'bar') {
         parts.push(`<rect${cursorClass} x="${fmt(cursorX)}" y="${fmt(cursorY)}" width="2" height="${fmt(effectiveCursorHeight)}" fill="${cursorColor}"/>`);
       } else {
-        // underline
         const underlineY = cursorY + effectiveCursorHeight - 2;
         parts.push(`<rect${cursorClass} x="${fmt(cursorX)}" y="${fmt(underlineY)}" width="${fmt(charWidth)}" height="2" fill="${cursorColor}"/>`);
       }
     }
 
-    // SMIL animation for this frame's visibility
-    const smil = smilAnimations[frameIndex];
-    if (smil) {
-      parts.push(`<animate attributeName="visibility" values="${smil.values}" keyTimes="${smil.keyTimes}" dur="${animDurationS}s" repeatCount="${smilRepeat}" calcMode="discrete" fill="freeze"/>`);
-    }
-
-    // Fade overlay for fade loop style (only on last frame)
-    if (loopStyle === 'fade' && frameIndex === uniqueFrames.length - 1) {
-      const fadeStartNorm = forwardDuration / totalDuration;
-      const fadeEndNorm = (forwardDuration + fadeDuration) / totalDuration;
-      const fadeKeyTimes = `0;${fmtKeyTime(fadeStartNorm)};${fmtKeyTime(fadeEndNorm)};1`;
-      const fadeValues = '1;1;0;0';
-      parts.push(`<animate attributeName="opacity" values="${fadeValues}" keyTimes="${fadeKeyTimes}" dur="${animDurationS}s" repeatCount="${smilRepeat}" fill="freeze"/>`);
-    }
-
     parts.push('</g>');
   });
 
+  // Single animateTransform scrolls through the vertical filmstrip.
+  // calcMode="discrete" = instant jumps (no tweening), type="translate" = GPU-composited.
+  const transformAnimation = generateTransformAnimation(uniqueFrames, contentHeight, {
+    loopStyle,
+    forwardDuration,
+    totalDuration,
+    fadeDuration,
+    rewindSpeed,
+    loopPause,
+  });
+
+  parts.push(`<animateTransform attributeName="transform" type="translate" values="${transformAnimation.values}" keyTimes="${transformAnimation.keyTimes}" dur="${animDurationS}s" repeatCount="${smilRepeat}" calcMode="discrete" fill="freeze"/>`);
+
+  // Fade overlay for fade loop style
+  if (loopStyle === 'fade') {
+    const fadeStartNorm = forwardDuration / totalDuration;
+    const fadeEndNorm = (forwardDuration + fadeDuration) / totalDuration;
+    const fadeKeyTimes = `0;${fmtKeyTime(fadeStartNorm)};${fmtKeyTime(fadeEndNorm)};1`;
+    const fadeValues = '0;0;1;1';
+    const fadeY = headerHeight;
+    parts.push(`<rect x="0" y="${fadeY}" width="${width}" height="${contentHeight}" fill="${theme.background}" opacity="0"><animate attributeName="opacity" values="${fadeValues}" keyTimes="${fadeKeyTimes}" dur="${animDurationS}s" repeatCount="${smilRepeat}" fill="freeze"/></rect>`);
+  }
+
+  parts.push('</g>'); // filmstrip group
   parts.push('</g>'); // content clip group
 
   // Watermark (rendered outside clip so it's always visible)
@@ -625,7 +621,7 @@ export const emitFilmstrip = (
 };
 
 
-//#region SMIL Animation Generation
+//#region Transform Animation Generation
 
 interface KeyframeOptions {
   loopStyle: 'loop' | 'reverse' | 'rewind' | 'fade';
@@ -636,8 +632,8 @@ interface KeyframeOptions {
   loopPause: number;
 }
 
-interface SMILAnimation {
-  values: string;    // e.g. "hidden;visible;hidden"
+interface TransformAnimation {
+  values: string;    // e.g. "0 0; 0 -360; 0 -720"
   keyTimes: string;  // e.g. "0;0.1;0.2"
 }
 
@@ -648,127 +644,84 @@ const fmtKeyTime = (t: number): string => {
   return parseFloat(t.toFixed(6)).toString();
 };
 
-// Generate SMIL animation data for each frame.
-// Uses <animate attributeName="visibility" calcMode="discrete"> which is the fastest
-// SVG animation method on mobile — handled natively by the SVG renderer with zero
-// CSS overhead. The discrete calcMode means instant switching with no interpolation.
-const generateSMILAnimations = (
+// Generate a single <animateTransform> that scrolls the vertical filmstrip.
+// Each frame is stacked at y = frameIndex * contentHeight. The transform jumps
+// to translate(0, -frameIndex * contentHeight) to show the correct frame.
+// Using calcMode="discrete" + type="translate" = GPU-composited instant jumps.
+//
+// IMPORTANT: SVG spec requires keyTimes to start at 0 and end at 1.
+// Browsers will reject the animation entirely if this is violated.
+const generateTransformAnimation = (
   uniqueFrames: UniqueFrame[],
+  contentHeight: number,
   options: KeyframeOptions
-): SMILAnimation[] => {
-  if (uniqueFrames.length === 0) return [];
+): TransformAnimation => {
+  if (uniqueFrames.length === 0) return { values: '0 0', keyTimes: '0;1' };
 
-  const { loopStyle, forwardDuration, totalDuration, fadeDuration, loopPause } = options;
-  const result: SMILAnimation[] = [];
+  const { loopStyle, forwardDuration, totalDuration } = options;
+
+  // Build ordered list of (normalizedTime, frameIndex) pairs
+  const keyframes: { time: number; frameIndex: number }[] = [];
 
   if (loopStyle === 'reverse' || loopStyle === 'rewind') {
     const lastTimestamp = uniqueFrames[uniqueFrames.length - 1].timestamp;
     const speedMultiplier = loopStyle === 'rewind' ? options.rewindSpeed : 1;
 
+    // Forward pass
     for (let i = 0; i < uniqueFrames.length; i++) {
-      const times: number[] = [];
-      const values: string[] = [];
-
-      const forwardStart = uniqueFrames[i].timestamp / totalDuration;
-      const forwardEnd = i < uniqueFrames.length - 1
-        ? uniqueFrames[i + 1].timestamp / totalDuration
-        : forwardDuration / totalDuration;
-
-      const reverseFrameStart = i < uniqueFrames.length - 1
-        ? (lastTimestamp - uniqueFrames[i + 1].timestamp) / speedMultiplier
-        : 0;
-      const reverseFrameEnd = (lastTimestamp - uniqueFrames[i].timestamp) / speedMultiplier;
-      const reverseStart = (forwardDuration + reverseFrameStart) / totalDuration;
-      const reverseEnd = (forwardDuration + reverseFrameEnd) / totalDuration;
-
-      if (i === 0) {
-        times.push(0); values.push('visible');
-        if (uniqueFrames.length > 1) { times.push(forwardEnd); values.push('hidden'); }
-        times.push(reverseStart); values.push('visible');
-        times.push(1); values.push('visible');
-      } else if (i === uniqueFrames.length - 1) {
-        times.push(0); values.push('hidden');
-        times.push(forwardStart); values.push('visible');
-        times.push(reverseEnd); values.push('hidden');
-        times.push(1); values.push('hidden');
-      } else {
-        times.push(0); values.push('hidden');
-        times.push(forwardStart); values.push('visible');
-        times.push(forwardEnd); values.push('hidden');
-        times.push(reverseStart); values.push('visible');
-        times.push(reverseEnd); values.push('hidden');
-        times.push(1); values.push('hidden');
-      }
-
-      result.push({
-        values: values.join(';'),
-        keyTimes: times.map(fmtKeyTime).join(';'),
+      keyframes.push({
+        time: uniqueFrames[i].timestamp / totalDuration,
+        frameIndex: i,
+      });
+    }
+    // Reverse pass (skip last frame — it's already showing from forward)
+    for (let i = uniqueFrames.length - 2; i >= 0; i--) {
+      const reverseOffset = (lastTimestamp - uniqueFrames[i + 1].timestamp) / speedMultiplier;
+      keyframes.push({
+        time: (forwardDuration + reverseOffset) / totalDuration,
+        frameIndex: i,
       });
     }
   } else if (loopStyle === 'fade') {
-    const fadeStartNorm = forwardDuration / totalDuration;
-
+    // Forward pass — last frame stays visible while fade overlay covers it
     for (let i = 0; i < uniqueFrames.length; i++) {
-      const times: number[] = [];
-      const values: string[] = [];
-      const start = uniqueFrames[i].timestamp / totalDuration;
-      const end = i < uniqueFrames.length - 1
-        ? uniqueFrames[i + 1].timestamp / totalDuration
-        : fadeStartNorm;
-
-      if (i === 0) {
-        times.push(0); values.push('visible');
-        if (uniqueFrames.length > 1) { times.push(end); values.push('hidden'); }
-        times.push(1); values.push('hidden');
-      } else if (i === uniqueFrames.length - 1) {
-        times.push(0); values.push('hidden');
-        times.push(start); values.push('visible');
-        times.push(1); values.push('visible');
-      } else {
-        times.push(0); values.push('hidden');
-        times.push(start); values.push('visible');
-        times.push(end); values.push('hidden');
-        times.push(1); values.push('hidden');
-      }
-
-      result.push({
-        values: values.join(';'),
-        keyTimes: times.map(fmtKeyTime).join(';'),
+      keyframes.push({
+        time: uniqueFrames[i].timestamp / totalDuration,
+        frameIndex: i,
       });
+    }
+    // After fade completes, jump back to frame 0 (hidden behind the fade overlay)
+    const fadeEndNorm = (forwardDuration + (options.fadeDuration ?? 1500)) / totalDuration;
+    if (fadeEndNorm < 1) {
+      keyframes.push({ time: fadeEndNorm, frameIndex: 0 });
     }
   } else {
     // Simple loop
     for (let i = 0; i < uniqueFrames.length; i++) {
-      const times: number[] = [];
-      const values: string[] = [];
-      const start = uniqueFrames[i].timestamp / totalDuration;
-      const end = i < uniqueFrames.length - 1
-        ? uniqueFrames[i + 1].timestamp / totalDuration
-        : 1;
-
-      if (i === 0) {
-        times.push(0); values.push('visible');
-        if (uniqueFrames.length > 1) { times.push(end); values.push('hidden'); }
-        times.push(1); values.push('hidden');
-      } else if (i === uniqueFrames.length - 1) {
-        times.push(0); values.push('hidden');
-        times.push(start); values.push('visible');
-        times.push(1); values.push('visible');
-      } else {
-        times.push(0); values.push('hidden');
-        times.push(start); values.push('visible');
-        times.push(end); values.push('hidden');
-        times.push(1); values.push('hidden');
-      }
-
-      result.push({
-        values: values.join(';'),
-        keyTimes: times.map(fmtKeyTime).join(';'),
+      keyframes.push({
+        time: uniqueFrames[i].timestamp / totalDuration,
+        frameIndex: i,
       });
     }
   }
 
-  return result;
+  // Ensure first keyTime is 0 (SVG spec requirement)
+  if (keyframes.length > 0 && keyframes[0].time > 0) {
+    keyframes[0].time = 0;
+  }
+
+  // Ensure last keyTime is 1 — add a sentinel holding the last frame's value.
+  // For loop styles that return to frame 0, the last keyframe already points there.
+  // For simple loop, the last frame holds until the animation restarts.
+  const lastKf = keyframes[keyframes.length - 1];
+  if (lastKf.time < 1) {
+    keyframes.push({ time: 1, frameIndex: lastKf.frameIndex });
+  }
+
+  const values = keyframes.map(kf => `0 ${fmt(-kf.frameIndex * contentHeight)}`).join(';');
+  const keyTimes = keyframes.map(kf => fmtKeyTime(kf.time)).join(';');
+
+  return { values, keyTimes };
 };
 
 
