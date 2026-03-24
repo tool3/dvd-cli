@@ -1,7 +1,7 @@
 //#region Imports
 
 import { readFileSync } from 'node:fs';
-import { parseCD, CDParseError } from '../parser/cd-parser';
+import { parseCDScript as parseCD, CDParseError } from 'dvd';
 import { createSpinner } from '../utils/spinner';
 
 

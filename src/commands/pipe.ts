@@ -1,18 +1,10 @@
 //#region Imports
 
 import { writeFileSync } from 'node:fs';
-import { createAnimatedSVG, createFilmstripSVG } from '../animator/svg-animator';
-import { optimizeSvg } from '../animator/svg-optimizer';
+import { createAnimatedSVG, createFilmstripSVG, optimizeSvg, createGridState, processInput, coalesce, emit, themes as pipelineThemes } from 'dvd';
 import { createSpinner } from '../utils/spinner';
-import { createGridState, processInput } from '../pipeline/vterminal';
-import { coalesce } from '../pipeline/coalescer';
-import { emit } from '../pipeline/svg-emitter';
-import { themes as pipelineThemes } from '../pipeline';
 import { parseGradient, themes as shellfieThemes } from 'shellfie';
-import type { FrameData } from '../pipeline/svg-emitter';
-import type { TerminalFrame } from '../executor/types';
-import type { AnimationOptions } from '../animator/svg-animator';
-import type { Gradient } from '../types';
+import type { FrameData, AnimationOptions, Gradient, TerminalFrame } from 'dvd';
 
 type Theme = typeof pipelineThemes.dark;
 

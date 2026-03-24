@@ -45,6 +45,12 @@ const result = await dvd({
 
 // From a .cast recording
 const result = await dvd({ castContent: '...' });
+
+// SMIL mode (smooth 60/120fps on mobile, larger files)
+const result = await dvd({
+  cdScript: '...',
+  smil: true,  // default false (filmstrip)
+});
 ```
 
 ### API Types
@@ -77,9 +83,10 @@ interface DVDOptions {
   rewindSpeed?: number;
   playbackSpeed?: number;
 
-  // Output
+  // Rendering method
+  smil?: boolean;            // default false; true = SMIL per-frame animation (smooth mobile, larger files)
+                             // false = filmstrip with row dedup (smaller files)
   optimize?: boolean;
-  filmstrip?: boolean;       // default true; false = legacy mode
   customGlyphs?: boolean;
 
   // Callbacks
@@ -127,9 +134,12 @@ Create `src/api.ts` in dvd lib:
   1. Determine input mode (steps → CDScript, cdScript → parse, castContent → parse cast)
   2. Create `CDExecutor` with options
   3. Execute → TerminalFrame[]
-  4. Generate animated SVG (`createFilmstripSVG` or `createAnimatedSVG`)
-  5. Optionally optimize
-  6. Return `DVDResult`
+  4. If `smil: true` → `createAnimatedSVG` (full per-frame SVGs, SMIL visibility)
+  5. If `smil: false` (default) → `createFilmstripSVG` (row dedup, smaller files)
+  6. Optionally optimize
+  7. Return `DVDResult`
+
+The SMIL vs filmstrip choice lives in the lib — consumers (CLI, dvd-web, programmatic users) just pass `smil: true/false`.
 
 ### Phase 3: Update dvd Lib Exports
 
@@ -164,18 +174,25 @@ import { dvd } from 'dvd';
 const result = await dvd({
   cdScript: readFileSync(file, 'utf-8'),
   ...cliOptionsToApiOptions(args),
+  smil: args.smil,
   onProgress: (cur, total, desc) => spinner.update(desc),
 });
 writeFileSync(outputPath, result.svg);
 ```
 
-Similar thin wrappers for `render-cast.ts` and `pipe.ts`.
+Similar thin wrapper for `render-cast.ts`.
 
-**What stays in dvd-cli:**
+**What stays in dvd-cli** (CLI-only concerns):
 - `src/cli.ts` — yargs argument parsing
 - `src/commands/*.ts` — thin wrappers (read input, call `dvd()`, write output, show spinner)
+- `src/commands/pipe.ts` — stdin pipe handling (reads stdin, splits frames, calls lib for rendering)
+- `src/commands/new.ts` — template scaffolding
+- `src/commands/themes.ts` — theme listing
+- `src/commands/validate.ts` — validation
 - `src/executor/handlers/shell-recorder.ts` — CLI shell recording
 - `src/utils/spinner.ts` — CLI progress indicator
+
+**Note on pipe.ts**: The pipe command is CLI-only (reads stdin, auto-detects animation type, splits frames). It stays in dvd-cli but uses the lib's rendering functions. Currently it supports both filmstrip and SMIL paths via `--smil` flag.
 
 ### Phase 5: Wire Up Dependency
 
@@ -191,6 +208,7 @@ Similar thin wrappers for `render-cast.ts` and `pipe.ts`.
 2. **Shell spawning** — The lib spawns real shell processes when executing `Enter` commands. This is expected behavior. Document clearly.
 3. **Screenshot handler** — Writes files to disk. Keep as-is since it's an explicit user action.
 4. **`onProgress` callback** — Already in CDExecutorOptions, passes through naturally so CLI can still show its spinner.
+5. **SMIL vs filmstrip** — Both rendering methods live in the lib. The `smil` option controls which path. CLI maps `--smil` flag to this option for both `.cd` render and pipe commands.
 
 ---
 
@@ -198,9 +216,11 @@ Similar thin wrappers for `render-cast.ts` and `pipe.ts`.
 
 1. Run all existing `.cd` examples through dvd-cli — output SVGs must be identical
 2. Write a script that uses `dvd()` with programmatic steps — verify valid SVG output
-3. Verify `dvd render` still works for `.cast` files
-4. Both packages compile with no type errors
-5. Verify dvd-cli no longer contains duplicated source files
+3. Verify `dvd()` with `smil: true` produces larger but smooth-on-mobile SVGs
+4. Verify `dvd render` still works for `.cast` files
+5. Verify pipe commands work with both filmstrip and `--smil`
+6. Both packages compile with no type errors
+7. Verify dvd-cli no longer contains duplicated source files
 
 ---
 
@@ -209,7 +229,8 @@ Similar thin wrappers for `render-cast.ts` and `pipe.ts`.
 | File | Role |
 |---|---|
 | `/dvd/src/index.ts` | Update exports |
-| `/dvd/src/api.ts` | NEW — high-level `dvd()` function |
+| `/dvd/src/api.ts` | NEW — high-level `dvd()` function (handles smil vs filmstrip) |
 | `/dvd-cli/src/executor/cd-executor.ts` | Move to lib |
 | `/dvd-cli/src/commands/render.ts` | Template for `dvd()` logic; then refactor to call it |
+| `/dvd-cli/src/commands/pipe.ts` | Stays in CLI — stdin handling, uses lib for rendering |
 | `/dvd-cli/package.json` | Add dvd dependency |

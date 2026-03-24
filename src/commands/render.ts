@@ -1,17 +1,9 @@
 //#region Imports
 
 import { readFileSync, writeFileSync } from 'node:fs';
-import { parseCD } from '../parser/cd-parser';
-import { CDExecutor } from '../executor/cd-executor';
-import {
-  createAnimatedSVG,
-  createFilmstripSVG,
-  getAnimationMetadata,
-} from '../animator/svg-animator';
-import { optimizeSvg } from '../animator/svg-optimizer';
+import { dvd, parseCDScript } from 'dvd';
+import type { CDExecutorOptions } from 'dvd';
 import { createSpinner } from '../utils/spinner';
-import type { AnimationOptions } from '../animator/svg-animator';
-import type { CDExecutorOptions } from '../executor/types';
 
 
 //#region Types
@@ -65,33 +57,11 @@ interface RenderArgs {
 }
 
 
-//#region CD File Loader
-
-const loadCDFile = (filePath: string): ReturnType<typeof parseCD> => {
-  try {
-    const content = readFileSync(filePath, 'utf-8');
-    return parseCD(content);
-  } catch (err) {
-    if (err instanceof Error && 'code' in err && (err as NodeJS.ErrnoException).code === 'ENOENT') {
-      throw new Error(`CD file not found: ${filePath}`);
-    }
-    throw err;
-  }
-};
-
-
 //#region Executor Options Builder
 
-/**
- * Build executor options from CLI args.
- * Script settings are applied by CDExecutor.execute() via applySetting,
- * then CLI overrides are applied via applyCliOverrides.
- * This function extracts CLI args that should override script settings.
- */
 const buildExecutorOptions = (args: RenderArgs): Partial<CDExecutorOptions> => {
   const options: Partial<CDExecutorOptions> = {};
 
-  // Only include CLI args that were explicitly provided
   if (args.width !== undefined) options.width = args.width;
   if (args.height !== undefined) options.height = args.height;
   if (args['font-size'] !== undefined) options.fontSize = args['font-size'];
@@ -162,7 +132,18 @@ export const renderCommand = async (args: RenderArgs): Promise<void> => {
   }
 
   try {
-    const script = loadCDFile(args.file);
+    // Load and parse .cd file
+    let cdScript: string;
+    try {
+      cdScript = readFileSync(args.file, 'utf-8');
+    } catch (err) {
+      if (err instanceof Error && 'code' in err && (err as NodeJS.ErrnoException).code === 'ENOENT') {
+        throw new Error(`CD file not found: ${args.file}`);
+      }
+      throw err;
+    }
+
+    const script = parseCDScript(cdScript);
 
     const actionCommandCount = script.commands.filter(
       (cmd) => !['Output', 'Require', 'Set', 'Env', 'Comment'].includes(cmd.type)
@@ -173,7 +154,6 @@ export const renderCommand = async (args: RenderArgs): Promise<void> => {
     }
 
     let outputPath = args.output || script.output || args.file.replace(/\.cd$/, '.svg');
-    // Ensure .svg extension
     if (!outputPath.endsWith('.svg')) {
       outputPath += '.svg';
     }
@@ -184,8 +164,20 @@ export const renderCommand = async (args: RenderArgs): Promise<void> => {
 
     const executorOptions = buildExecutorOptions(args);
 
-    const executor = new CDExecutor({
+    // Call dvd lib's high-level API
+    const result = await dvd({
+      cdScript,
       ...executorOptions,
+      smil: args.legacy,
+      optimize: args.optimize,
+      customGlyphs: args['custom-glyphs'],
+      fps: args.fps,
+      loop: args.loop,
+      loopStyle: args['loop-style'],
+      loopPause: args['loop-pause'],
+      pauseAtEnd: args['pause-at-end'],
+      fadeDuration: args['fade-duration'],
+      rewindSpeed: args['rewind-speed'],
       onProgress: (current: number, total: number, description?: string) => {
         const colorCode = description ? getCommandColor(description) : '';
         const descText = description ? ` \x1b[1m${colorCode}${description}\x1b[0m` : '';
@@ -197,97 +189,10 @@ export const renderCommand = async (args: RenderArgs): Promise<void> => {
       },
     });
 
-    const frames = await executor.execute(script);
+    writeFileSync(outputPath, result.svg, 'utf-8');
 
-    // Yield to allow final spinner update
-    await new Promise(resolve => setImmediate(resolve));
+    const sizeKB = (Buffer.byteLength(result.svg, 'utf-8') / 1024).toFixed(2);
 
-    if (args.verbose) {
-      console.log(`Captured ${frames.length} frames`);
-    } else {
-      spinner.update('Generating animated SVG');
-    }
-
-    // Yield after spinner update
-    await new Promise(resolve => setImmediate(resolve));
-
-    // Use CLI options if provided, otherwise use script's settings
-    const loopStyle = args['loop-style'] || executor.getLoopStyle();
-    const loopPause = args['loop-pause'] ?? executor.getLoopPause();
-    const fadeDuration = args['fade-duration'] ?? executor.getFadeDuration();
-    const rewindSpeed = args['rewind-speed'] ?? executor.getRewindSpeed();
-
-    const animationOptions: AnimationOptions = {
-      fps: args.fps,
-      loop: args.loop !== false,
-      pauseAtEnd: args['pause-at-end'] ?? 1000,
-      loopStyle,
-      loopPause,
-      fadeDuration,
-      rewindSpeed,
-    };
-
-    let svg: string;
-
-    if (args.legacy) {
-      // Use legacy animated rendering (pre-filmstrip method)
-      svg = await createAnimatedSVG(frames, animationOptions);
-    } else {
-      // Default: filmstrip rendering for smaller file sizes with truecolor
-      const ctx = executor.getContext();
-      const frameData = executor.getFrameData();
-      svg = createFilmstripSVG({
-        frameData,
-        theme: ctx.theme,
-        width: ctx.width,
-        height: ctx.height,
-        fontSize: ctx.fontSize,
-        template: ctx.template,
-        title: ctx.title,
-        watermark: typeof ctx.watermark === 'string' ? ctx.watermark : ctx.watermark?.content,
-        lineHeight: ctx.fontSize * ctx.lineHeight,
-        charWidth: ctx.fontSize * ctx.charWidthRatio,
-        padding: ctx.padding,
-        borderRadius: ctx.borderRadius,
-        headerHeight: ctx.headerHeight,
-        footerHeight: ctx.footerHeight,
-        cursorStyle: ctx.cursorStyle,
-        cursorColor: ctx.cursorColor,
-        cursorBlink: ctx.cursorBlink,
-        fontFamily: ctx.fontFamily,
-        background: ctx.background,
-        backgroundPadding: ctx.backgroundPadding,
-        backgroundRadius: ctx.backgroundRadius,
-        headerBackground: ctx.headerBackground,
-        footerBackground: ctx.footerBackground,
-        customGlyphs: args['custom-glyphs'],
-      }, animationOptions);
-    }
-
-    if (args.optimize !== false) {
-      if (!args.verbose) {
-        spinner.update('Optimizing SVG');
-      }
-      // Yield after spinner update
-      await new Promise(resolve => setImmediate(resolve));
-      const originalSize = Buffer.byteLength(svg, 'utf-8');
-      svg = optimizeSvg(svg);
-      const optimizedSize = Buffer.byteLength(svg, 'utf-8');
-      if (args.verbose) {
-        const savings = ((1 - optimizedSize / originalSize) * 100).toFixed(1);
-        console.log(`Optimized: ${(originalSize / 1024).toFixed(0)}KB → ${(optimizedSize / 1024).toFixed(0)}KB (${savings}% reduction)`);
-      }
-    } else if (args.verbose) {
-      console.log('Skipping optimization (--no-optimize)');
-    }
-
-    const metadata = getAnimationMetadata(frames);
-
-    writeFileSync(outputPath, svg, 'utf-8');
-
-    const sizeKB = (Buffer.byteLength(svg, 'utf-8') / 1024).toFixed(2);
-
-    // ANSI color codes
     const green = '\x1b[32m';
     const white = '\x1b[37m';
     const lightBlue = '\x1b[94m';
@@ -297,23 +202,21 @@ export const renderCommand = async (args: RenderArgs): Promise<void> => {
     const dim = '\x1b[2m';
     const reset = '\x1b[0m';
 
-    const durationStr = (metadata.duration / 1000).toFixed(2) + 's';
+    const durationStr = (result.metadata.duration / 1000).toFixed(2) + 's';
 
     if (args.verbose) {
       console.log(`\n${green}✓${reset} ${white}Created${reset} ${lightBlue}${outputPath}${reset}`);
-      console.log(`  ${dim}├─${reset} ${lightPink}${metadata.frameCount}${reset}${dim} frames${reset}`);
+      console.log(`  ${dim}├─${reset} ${lightPink}${result.metadata.frameCount}${reset}${dim} frames${reset}`);
       console.log(`  ${dim}├─${reset} ${lightOrange}${durationStr}${reset}${dim} duration${reset}`);
       console.log(`  ${dim}└─${reset} ${limeGreen}${sizeKB}KB${reset}${dim} optimized${reset}`);
     } else {
       spinner.successMultiline([
         `${green}✓${reset} ${white}Created${reset} ${lightBlue}${outputPath}${reset}`,
-        `  ${dim}├─${reset} ${lightPink}${metadata.frameCount}${reset}${dim} frames${reset}`,
+        `  ${dim}├─${reset} ${lightPink}${result.metadata.frameCount}${reset}${dim} frames${reset}`,
         `  ${dim}├─${reset} ${lightOrange}${durationStr}${reset}${dim} duration${reset}`,
         `  ${dim}└─${reset} ${limeGreen}${sizeKB}KB${reset}${dim} optimized${reset}`,
       ]);
     }
-
-    await executor.cleanup();
   } catch (err) {
     if (!args.verbose) {
       spinner.fail('Failed to render CD');
@@ -321,4 +224,3 @@ export const renderCommand = async (args: RenderArgs): Promise<void> => {
     throw err;
   }
 };
-
