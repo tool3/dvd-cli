@@ -108,9 +108,7 @@ chartscii $(seq 1 5) -c "gradient(pink,cyan)" --animate | dvd -L reverse -P 1000
 ```
 
 <img src="examples/svgs/stdin/chartscii-sine.svg" ></br>
-<img src="examples/svgs/stdin/new-chartscii-sine.svg" ></br>
 <img src="examples/svgs/stdin/chartscii-stdin.svg" ></br>
-<img src="examples/svgs/stdin/new-chartscii-stdin.svg" >
 
 ---
 

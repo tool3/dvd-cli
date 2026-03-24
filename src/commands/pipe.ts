@@ -1,14 +1,16 @@
 //#region Imports
 
 import { writeFileSync } from 'node:fs';
-import { createFilmstripSVG } from '../animator/svg-animator';
+import { createAnimatedSVG, createFilmstripSVG } from '../animator/svg-animator';
 import { optimizeSvg } from '../animator/svg-optimizer';
 import { createSpinner } from '../utils/spinner';
 import { createGridState, processInput } from '../pipeline/vterminal';
 import { coalesce } from '../pipeline/coalescer';
+import { emit } from '../pipeline/svg-emitter';
 import { themes as pipelineThemes } from '../pipeline';
 import { parseGradient, themes as shellfieThemes } from 'shellfie';
 import type { FrameData } from '../pipeline/svg-emitter';
+import type { TerminalFrame } from '../executor/types';
 import type { AnimationOptions } from '../animator/svg-animator';
 import type { Gradient } from '../types';
 
@@ -71,6 +73,7 @@ interface PipeArgs {
   backgroundRadius?: number;
   playbackSpeed?: number;
   customGlyphs?: boolean;
+  smil?: boolean;
 }
 
 interface StdinResult {
@@ -446,34 +449,6 @@ export const pipeCommand = async (args: PipeArgs): Promise<void> => {
       console.log(`Rendering grid: ${gridWidth}x${gridHeight} (can hold rows 0-${gridHeight - 1})`);
     }
 
-    const frameData: FrameData[] = frameContents.map((content, i) => {
-      let timestamp = i * frameDuration;
-      if (speed !== 1 && speed > 0) {
-        timestamp = Math.round(timestamp / speed);
-      }
-
-      // Create grid and process content
-      let grid = createGridState(gridWidth, gridHeight);
-      grid = processInput(grid, content);
-      const rows = coalesce(grid, theme);
-
-      return {
-        rows,
-        cursor: { row: grid.cursor.row, col: grid.cursor.col },
-        cursorVisible: false,
-        timestamp,
-        activeCursor: false,
-      };
-    });
-
-    if (args.verbose) {
-      console.log(`Rendered ${frameData.length} frames`);
-    }
-
-    if (!args.verbose) {
-      spinner.update('Generating animated SVG');
-    }
-
     const animationOptions: AnimationOptions = {
       loop: args.loop !== false,
       pauseAtEnd: args['pause-at-end'] || 1000,
@@ -483,32 +458,141 @@ export const pipeCommand = async (args: PipeArgs): Promise<void> => {
       rewindSpeed: args['rewind-speed'] ?? 5,
     };
 
-    let svg = createFilmstripSVG({
-      frameData,
-      theme,
-      width,
-      height,
-      fontSize,
-      template,
-      title,
-      watermark: args.watermark,
-      lineHeight: lineHeightPx,
-      charWidth,
-      padding,
-      borderRadius,
-      headerHeight,
-      footerHeight: args.footerHeight ?? 0,
-      cursorStyle,
-      cursorColor: args.cursorColor,
-      fontFamily: args.fontFamily,
-      background: args.background ? parseGradient(args.background) : undefined,
-      backgroundPadding: args.backgroundPadding,
-      backgroundRadius: args.backgroundRadius,
-      headerBackground: args.headerBackground,
-      footerBackground: args.footerBackground,
-      cursorBlink: args.cursorBlink,
-      customGlyphs: args.customGlyphs,
-    }, animationOptions);
+    let svg: string;
+
+    if (args.smil) {
+      // SMIL mode: render each frame as a complete SVG, then combine with
+      // createAnimatedSVG (master's approach — smooth 60/120fps on mobile)
+      const fullRenderOptions: RenderFrameOptions = {
+        ...renderOptions as RenderFrameOptions,
+        width,
+        height,
+      };
+
+      const frames: TerminalFrame[] = frameContents.map((content, i) => {
+        let timestamp = i * frameDuration;
+        if (speed !== 1 && speed > 0) {
+          timestamp = Math.round(timestamp / speed);
+        }
+
+        let grid = createGridState(gridWidth, gridHeight);
+        grid = processInput(grid, content);
+        const rows = coalesce(grid, theme);
+
+        const { svg: frameSvg } = emit(rows, null, false, {
+          theme: fullRenderOptions.theme,
+          template: fullRenderOptions.template,
+          width: fullRenderOptions.width,
+          height: fullRenderOptions.height,
+          fontSize: fullRenderOptions.fontSize,
+          title: fullRenderOptions.title,
+          lineHeight: lineHeightPx,
+          charWidth,
+          padding: fullRenderOptions.padding,
+          borderRadius: fullRenderOptions.borderRadius,
+          borderColor: fullRenderOptions.borderColor,
+          borderWidth: fullRenderOptions.borderWidth,
+          fontFamily: fullRenderOptions.fontFamily,
+          watermark: fullRenderOptions.watermark,
+          cursorStyle: fullRenderOptions.cursorStyle,
+          cursorColor: fullRenderOptions.cursorColor,
+          headerBackground: fullRenderOptions.headerBackground,
+          headerHeight: fullRenderOptions.headerHeight,
+          headerBorder: fullRenderOptions.headerBorder,
+          headerBorderColor: fullRenderOptions.headerBorderColor,
+          headerBorderWidth: fullRenderOptions.headerBorderWidth,
+          footerBackground: fullRenderOptions.footerBackground,
+          footerHeight: fullRenderOptions.footerHeight,
+          footerBorder: fullRenderOptions.footerBorder,
+          footerBorderColor: fullRenderOptions.footerBorderColor,
+          footerBorderWidth: fullRenderOptions.footerBorderWidth,
+          letterSpacing: fullRenderOptions.letterSpacing,
+          background: fullRenderOptions.background,
+          backgroundPadding: fullRenderOptions.backgroundPadding,
+          backgroundRadius: fullRenderOptions.backgroundRadius,
+        });
+
+        return {
+          timestamp,
+          svg: frameSvg,
+          state: {
+            content,
+            cursorX: 0,
+            cursorY: 0,
+            width,
+            height,
+            fontSize,
+            showCursor: false,
+            activeCursor: false,
+          },
+        };
+      });
+
+      if (args.verbose) {
+        console.log(`Rendered ${frames.length} SMIL frames`);
+      }
+
+      if (!args.verbose) {
+        spinner.update('Generating animated SVG (SMIL)');
+      }
+
+      svg = await createAnimatedSVG(frames, animationOptions);
+    } else {
+      // Default: filmstrip mode (optimized file size)
+      const frameData: FrameData[] = frameContents.map((content, i) => {
+        let timestamp = i * frameDuration;
+        if (speed !== 1 && speed > 0) {
+          timestamp = Math.round(timestamp / speed);
+        }
+
+        let grid = createGridState(gridWidth, gridHeight);
+        grid = processInput(grid, content);
+        const rows = coalesce(grid, theme);
+
+        return {
+          rows,
+          cursor: { row: grid.cursor.row, col: grid.cursor.col },
+          cursorVisible: false,
+          timestamp,
+          activeCursor: false,
+        };
+      });
+
+      if (args.verbose) {
+        console.log(`Rendered ${frameData.length} frames`);
+      }
+
+      if (!args.verbose) {
+        spinner.update('Generating animated SVG');
+      }
+
+      svg = createFilmstripSVG({
+        frameData,
+        theme,
+        width,
+        height,
+        fontSize,
+        template,
+        title,
+        watermark: args.watermark,
+        lineHeight: lineHeightPx,
+        charWidth,
+        padding,
+        borderRadius,
+        headerHeight,
+        footerHeight: args.footerHeight ?? 0,
+        cursorStyle,
+        cursorColor: args.cursorColor,
+        fontFamily: args.fontFamily,
+        background: args.background ? parseGradient(args.background) : undefined,
+        backgroundPadding: args.backgroundPadding,
+        backgroundRadius: args.backgroundRadius,
+        headerBackground: args.headerBackground,
+        footerBackground: args.footerBackground,
+        cursorBlink: args.cursorBlink,
+        customGlyphs: args.customGlyphs,
+      }, animationOptions);
+    }
 
     if (!args.verbose) {
       spinner.update('Optimizing SVG');
@@ -531,9 +615,10 @@ export const pipeCommand = async (args: PipeArgs): Promise<void> => {
 
     writeFileSync(outputPath, svg, 'utf-8');
 
-    // Calculate metadata from frameData
-    const frameCount = frameData.length;
-    const duration = frameData.length > 0 ? frameData[frameData.length - 1].timestamp : 0;
+    // Calculate metadata
+    const frameCount = frameContents.length;
+    const lastTimestamp = (frameCount - 1) * (speed !== 1 && speed > 0 ? frameDuration / speed : frameDuration);
+    const duration = Math.round(lastTimestamp);
     const sizeKB = (Buffer.byteLength(svg, 'utf-8') / 1024).toFixed(2);
 
     // ANSI color codes

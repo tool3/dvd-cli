@@ -534,6 +534,7 @@ const run = async (): Promise<void> => {
         backgroundRadius: argv['background-radius'],
         playbackSpeed: argv['playback-speed'],
         customGlyphs: argv['custom-glyphs'],
+        smil: argv.legacy || argv.smil,
       });
     } catch (err) {
       console.error(err instanceof Error ? err.message : String(err));
