@@ -106,8 +106,11 @@ neofetch | dvd -o system-info.svg --title "System Info"
 # simple chartscii chart with gradient and animation - dvd reverses and pauses between cycles
 chartscii $(seq 1 5) -c "gradient(pink,cyan)" --animate | dvd -L reverse -P 1000 -w "made with dvd"
 ```
-<img src="examples/svgs/bbb.svg" ></br>
-<img src="examples/svgs/output.svg" >
+
+<img src="examples/svgs/stdin/chartscii-sine.svg" ></br>
+<img src="examples/svgs/stdin/new-chartscii-sine.svg" ></br>
+<img src="examples/svgs/stdin/chartscii-stdin.svg" ></br>
+<img src="examples/svgs/stdin/new-chartscii-stdin.svg" >
 
 ---
 
@@ -496,7 +499,6 @@ Set Theme {"background": "#0a0a0a", "foreground": "#00ff00", "cursor": "#00ff00"
 
 <img src="examples/svgs/themes/custom-theme.svg" /> </br>
 <img src="examples/svgs/themes/partial-theme-override.svg" /> </br>
-
 
 **Available theme properties:**
 
