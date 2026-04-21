@@ -13,9 +13,9 @@ export interface RecArgs {
   overwrite?: boolean;
 }
 
-type CastEvent = [number, 'o' | 'i', string];
+export type CastEvent = [number, 'o' | 'i', string];
 
-interface CastHeader {
+export interface CastHeader {
   version: 2;
   width: number;
   height: number;
@@ -30,14 +30,17 @@ interface CastHeader {
 
 //#region Helpers
 
-const resolveShell = (): string => {
-  if (process.platform === 'win32') {
-    return process.env.COMSPEC || 'cmd.exe';
+export const resolveShell = (
+  env: NodeJS.ProcessEnv = process.env,
+  platform: NodeJS.Platform = process.platform
+): string => {
+  if (platform === 'win32') {
+    return env.COMSPEC || 'cmd.exe';
   }
-  return process.env.SHELL || '/bin/bash';
+  return env.SHELL || '/bin/bash';
 };
 
-const resolveOutputPath = (provided: string | undefined): string => {
+export const resolveOutputPath = (provided: string | undefined): string => {
   if (!provided) return 'recording.cast';
   return provided.endsWith('.cast') ? provided : `${provided}.cast`;
 };
@@ -46,6 +49,39 @@ const getTerminalSize = (): { cols: number; rows: number } => ({
   cols: process.stdout.columns || 80,
   rows: process.stdout.rows || 24,
 });
+
+/**
+ * Serialize a cast recording into asciinema v2 NDJSON format.
+ * Header on line 1, one event per line after. Trailing newline.
+ */
+export const serializeCast = (header: CastHeader, events: CastEvent[]): string => {
+  const lines: string[] = [JSON.stringify(header)];
+  for (const event of events) {
+    lines.push(JSON.stringify(event));
+  }
+  return lines.join('\n') + '\n';
+};
+
+export const buildCastHeader = (opts: {
+  cols: number;
+  rows: number;
+  startTimeMs: number;
+  shell: string;
+  title?: string;
+}): CastHeader => {
+  const header: CastHeader = {
+    version: 2,
+    width: opts.cols,
+    height: opts.rows,
+    timestamp: Math.floor(opts.startTimeMs / 1000),
+    env: {
+      SHELL: opts.shell,
+      TERM: 'xterm-256color',
+    },
+  };
+  if (opts.title) header.title = opts.title;
+  return header;
+};
 
 
 //#region Rec Command
@@ -129,26 +165,19 @@ export const recCommand = async (args: RecArgs): Promise<void> => {
     });
   });
 
-  const header: CastHeader = {
-    version: 2,
-    width: cols,
-    height: rows,
-    timestamp: Math.floor(startTime / 1000),
-    env: {
-      SHELL: shell,
-      TERM: 'xterm-256color',
-    },
-  };
-  if (args.title) header.title = args.title;
+  const header = buildCastHeader({
+    cols,
+    rows,
+    startTimeMs: startTime,
+    shell,
+    title: args.title,
+  });
 
-  const lines: string[] = [JSON.stringify(header)];
-  for (const event of events) {
-    lines.push(JSON.stringify(event));
-  }
-  writeFileSync(outputPath, lines.join('\n') + '\n', 'utf-8');
+  const serialized = serializeCast(header, events);
+  writeFileSync(outputPath, serialized, 'utf-8');
 
   const duration = events.length > 0 ? events[events.length - 1][0] : 0;
-  const sizeKB = (Buffer.byteLength(lines.join('\n'), 'utf-8') / 1024).toFixed(2);
+  const sizeKB = (Buffer.byteLength(serialized, 'utf-8') / 1024).toFixed(2);
 
   const lightPink = '\x1b[95m';
   const lightOrange = '\x1b[38;5;215m';
