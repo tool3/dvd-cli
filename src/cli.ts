@@ -11,6 +11,7 @@ import { pipeCommand } from './commands/pipe';
 import { newCommand } from './commands/new';
 import { themesCommand } from './commands/themes';
 import { validateCommand } from './commands/validate';
+import { recCommand } from './commands/rec';
 
 // Generate theme choices from shellfie themes
 const themeChoices = Object.keys(themes) as string[];
@@ -361,6 +362,33 @@ const createParser = () =>
       }
     )
     .command(
+      'rec [file]',
+      'Record a terminal session to a .cast file',
+      (yargs) =>
+        yargs
+          .positional('file', {
+            type: 'string',
+            describe: 'Output .cast file path',
+            default: 'recording.cast',
+          })
+          .option('command', {
+            type: 'string',
+            describe: 'Command to run inside the recorded shell (default: interactive shell)',
+          })
+          .option('title', {
+            type: 'string',
+            describe: 'Title to embed in the cast file',
+          }),
+      async (args) => {
+        try {
+          await recCommand(args as any);
+        } catch (err) {
+          console.error(err instanceof Error ? err.message : String(err));
+          process.exit(1);
+        }
+      }
+    )
+    .command(
       'render <file>',
       'Render an asciinema .cast file to SVG',
       (yargs) =>
@@ -465,6 +493,7 @@ const createParser = () =>
     .example('$0 themes', 'List available themes')
     .example('$0 validate script.cd', 'Validate a script')
     .example('$0 render recording.cast -T dracula', 'Render asciinema cast with Dracula theme')
+    .example('$0 rec session.cast', 'Record a terminal session to session.cast')
     .demandCommand(0)
     .help()
     .alias('help', 'h')
@@ -480,7 +509,7 @@ const run = async (): Promise<void> => {
   const parser = createParser();
   const argv = await parser.parse();
 
-  const subcommands = ['new', 'themes', 'validate', 'render'];
+  const subcommands = ['new', 'themes', 'validate', 'render', 'rec'];
   const ranSubcommand = subcommands.some((cmd) => argv._.includes(cmd));
 
   if (ranSubcommand) {
