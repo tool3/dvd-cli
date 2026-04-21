@@ -29,6 +29,7 @@ Write what you want to happen, run `dvd`, and get a beautiful, infinitely-scalab
   - [Custom Themes](#custom-themes)
 - [Templates](#templates)
 - [Loop Styles](#loop-styles)
+- [Animation Engines](#animation-engines)
 - [CLI Reference](#cli-reference)
 - [Examples](#examples)
 - [Why DVD?](#why-dvd)
@@ -107,7 +108,7 @@ neofetch | dvd -o system-info.svg --title "System Info"
 chartscii $(seq 1 5) -c "gradient(pink,cyan)" --animate | dvd -L reverse -P 1000 -w "made with dvd"
 ```
 
-<img src="examples/svgs/stdin/chartscii-sine.svg" ></br>
+<!-- <img src="examples/svgs/stdin/chartscii-sine.svg" ></br> -->
 <img src="examples/svgs/stdin/chartscii-stdin.svg" ></br>
 
 ---
@@ -589,6 +590,50 @@ Set LoopPause 2000       # Pause 2 seconds before restarting
 
 ---
 
+## Animation Engines
+
+DVD ships with two animation engines. Filmstrip is the default and is the right choice for most recordings — SMIL is an opt-in alternative when you specifically need smoother playback on high-refresh-rate mobile displays.
+
+### Filmstrip (default)
+
+Each unique row in the recording is emitted once as an SVG `<symbol>` and referenced from every frame that uses it via `<use>`. Frame cadence is driven by CSS `@keyframes` with `step-end` visibility switching.
+
+- **Smaller files.** Size scales with the number of *unique rows*, not frames. Repetitive output (prompts, ASCII art, mostly-static screens) compresses dramatically.
+- **Great on desktop and modern browsers.** The CSS animation path is well-optimized where it matters for README/docs use.
+- **Can stutter at 120Hz on mobile Safari.** Each frame switch goes through the browser's CSS style-resolution pipeline, which adds per-tick overhead on some devices.
+
+No flag needed — this is what runs by default.
+
+```bash
+dvd script.cd
+```
+
+### SMIL
+
+Each frame is emitted as its own `<g>` group, and visibility is switched by a native SVG `<animate attributeName="visibility">` tag. The SVG engine pre-computes the schedule and only paints the active frame.
+
+- **Smoother on 120Hz / mobile Safari / iOS Chrome.** The native SVG animation path skips CSS style resolution entirely, so frame switches are cheaper per tick.
+- **Larger files.** Size scales with *total frame count* rather than unique rows. Expect typically **2–4× the filmstrip output**, more for long/highly-varied recordings.
+- **SMIL is less actively maintained in browser specs than CSS animations**, so this engine is a targeted tool rather than a future-proof default.
+
+Enable with the `--smil` flag:
+
+```bash
+dvd script.cd --smil
+```
+
+### Which one should I use?
+
+| You want…                                           | Use             |
+| --------------------------------------------------- | --------------- |
+| A README/docs embed on desktop                      | Filmstrip       |
+| The smallest possible file                          | Filmstrip       |
+| Buttery-smooth playback on iOS / 120Hz screens      | SMIL            |
+| Long recordings with lots of repeated prompt lines  | Filmstrip       |
+| Short, high-FPS animations where smoothness matters | SMIL            |
+
+---
+
 ## CLI Reference
 
 ### Basic Usage
@@ -646,6 +691,7 @@ dvd validate script.cd                 # Validate without rendering
 | `--output`              | `-o`  | Output file path                    | `<input>.svg` |
 | `--verbose`             | `-v`  | Show detailed output                | `false`       |
 | `--optimize`            | `-O`  | Optimize SVG output                 | `true`        |
+| `--smil`                |       | Use SMIL engine (see [Animation Engines](#animation-engines)) | `false` |
 | `--loop`                | `-l`  | Loop the animation                  | `true`        |
 | `--loop-style`          | `-L`  | `loop`, `reverse`, `rewind`, `fade` | `loop`        |
 | `--loop-pause`          | `-P`  | Pause before loop restarts (ms)     | `0`           |
