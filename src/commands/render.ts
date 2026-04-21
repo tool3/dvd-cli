@@ -1,8 +1,8 @@
 //#region Imports
 
 import { readFileSync, writeFileSync } from 'node:fs';
-import { dvd, parseCDScript } from 'dvd';
-import type { CDExecutorOptions } from 'dvd';
+import dvd, { parseCDScript } from 'dvd';
+import type { DVDOptions } from 'dvd';
 import { createSpinner } from '../utils/spinner';
 
 
@@ -59,8 +59,8 @@ interface RenderArgs {
 
 //#region Executor Options Builder
 
-const buildExecutorOptions = (args: RenderArgs): Partial<CDExecutorOptions> => {
-  const options: Partial<CDExecutorOptions> = {};
+const buildExecutorOptions = (args: RenderArgs): Partial<DVDOptions> => {
+  const options: Partial<DVDOptions> = {};
 
   if (args.width !== undefined) options.width = args.width;
   if (args.height !== undefined) options.height = args.height;
@@ -165,8 +165,7 @@ export const renderCommand = async (args: RenderArgs): Promise<void> => {
     const executorOptions = buildExecutorOptions(args);
 
     // Call dvd lib's high-level API
-    const result = await dvd({
-      cdScript,
+    const result = await dvd(cdScript, {
       ...executorOptions,
       smil: args.legacy,
       optimize: args.optimize,
