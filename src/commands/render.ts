@@ -52,7 +52,7 @@ interface RenderArgs {
   'footer-border-width'?: number;
   'letter-spacing'?: number;
   background?: string;
-  'background-padding'?: number;
+  'background-padding'?: number | string;
   'background-radius'?: number;
 }
 

@@ -16,6 +16,18 @@ import { recCommand } from './commands/rec';
 // Generate theme choices from shellfie themes
 const themeChoices = Object.keys(themes) as string[];
 
+// Coerce --background-padding: keep number for single values so existing
+// numeric paths stay numeric; preserve the raw string for CSS shorthand
+// like "100 50" or "10 20 30 40".
+const parseBackgroundPadding = (raw: unknown): number | string | undefined => {
+  if (raw === undefined || raw === null) return undefined;
+  const s = String(raw).trim();
+  if (s === '') return undefined;
+  if (/\s/.test(s)) return s;
+  const n = Number(s);
+  return Number.isFinite(n) ? n : s;
+};
+
 
 //#region CLI Override Detection
 
@@ -292,8 +304,9 @@ const createParser = () =>
     })
     .option('background-padding', {
       alias: 'n',
-      type: 'number',
-      describe: 'Padding around terminal window in pixels (default: 0)',
+      type: 'string',
+      describe: 'Padding around terminal window in px. Number or CSS-style shorthand: "16", "100 50", "10 20 30 40" (default: 0)',
+      coerce: parseBackgroundPadding,
     })
     .option('background-radius', {
       type: 'number',

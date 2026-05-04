@@ -61,7 +61,7 @@ interface PipeArgs {
   footerBorderWidth?: number;
   letterSpacing?: number;
   background?: string;
-  backgroundPadding?: number;
+  backgroundPadding?: number | string;
   backgroundRadius?: number;
   playbackSpeed?: number;
   customGlyphs?: boolean;
@@ -102,7 +102,7 @@ interface RenderFrameOptions {
   footerBorderWidth?: number;
   letterSpacing?: number;
   background?: string | Gradient;
-  backgroundPadding?: number;
+  backgroundPadding?: number | string;
   backgroundRadius?: number;
 }
 

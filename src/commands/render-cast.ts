@@ -43,7 +43,7 @@ export interface RenderCastArgs {
   'footer-background'?: string;
   'footer-height'?: number;
   background?: string;
-  'background-padding'?: number;
+  'background-padding'?: number | string;
   'background-radius'?: number;
   // Dimension overrides (if not provided, auto-calculated from content)
   width?: number;

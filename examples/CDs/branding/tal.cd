@@ -1,0 +1,37 @@
+# Intro Demo
+
+Output examples/svgs/branding/tal.svg
+
+Set FontSize 16
+Set Template macos
+Set Theme pandaSyntax
+Set LoopStyle fade
+Set Background "gradient(#E684AE, #77AAD1:horizontal:reverse)"
+Set Watermark "made with dvd"
+Set BackgroundPadding "50 400"
+Set CursorStyle bar
+Set CursorColor cyan
+Set PromptPrefix "\x1b[38;5;206m❯\x1b[0m "
+Set WorkingDirectory "examples/cds/branding"
+
+Type "cat hi.txt"
+Sleep 500ms
+Enter
+
+Type "A father, musician, software engineer." 
+Sleep 500ms
+Alt+Shift+Left 8
+Sleep 200ms
+Backspace
+Sleep 1s
+Type "Sometimes all at once." 
+Sleep 1s
+Backspace 52 
+Type "Welcome! ❤️" 
+Sleep 1s
+Alt+Shift+Left 3
+Sleep 500ms
+Backspace
+Type "See my repositories and projects below 👇"
+
+Sleep 1s
