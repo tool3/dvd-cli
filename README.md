@@ -42,13 +42,13 @@ Write what you want to happen, run `dvd`, and get a beautiful, infinitely-scalab
 ## Installation
 
 ```bash
-npm install -g dvdrw
+npm install -g dvdrw-cli
 ```
 
 Or use directly with npx:
 
 ```bash
-npx dvdrw demo.cd
+npx dvdrw-cli demo.cd
 ```
 
 ## Quick Start
