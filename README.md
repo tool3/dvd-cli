@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://github.com/tool3/dvd-cli/blob/feat/rec/examples/svgs/branding/intro_original.svg" alt="DVD - Terminal Recordings" >
+  <img src="https://github.com/tool3/dvd-cli/blob/master/examples/svgs/branding/intro_original.svg" alt="DVD - Terminal Recordings" >
 </p>
 
 <p align="center">
@@ -7,9 +7,9 @@
 </p>
 
 <p align="center">
-  <a href="https://www.npmjs.com/package/dvd-cli"><img src="https://img.shields.io/npm/v/dvd-cli.svg" alt="npm version"></a>
-  <a href="https://www.npmjs.com/package/dvd-cli"><img src="https://img.shields.io/npm/dm/dvd-cli.svg" alt="npm downloads"></a>
-  <a href="https://github.com/tool3/dvd/blob/master/LICENSE"><img src="https://img.shields.io/npm/l/dvd-cli.svg" alt="license"></a>
+  <a href="https://www.npmjs.com/package/dvd-cli"><img src="https://img.shields.io/badge/npm-v10-green" alt="npm version"></a>
+  <a href="https://www.npmjs.com/package/dvd-cli"><img src="https://img.shields.io/npm/dm/dvd-cli" alt="npm downloads"></a>
+  <a href="https://github.com/tool3/dvd/blob/master/LICENSE"><img src="https://img.shields.io/badge/license-MIT-orange" alt="license"></a>
 </p>
 
 DVD lets you create animated SVG terminal recordings from declarative `.cd` scripts.
@@ -41,15 +41,31 @@ Write what you want to happen, run `dvd`, and get a beautiful, infinitely-scalab
 
 ## Installation
 
-```bash
+### Homebrew (macOS/Linux)
+
+```sh
+brew install tool3/tap/dvd
+```
+
+### Shell script (macOS/Linux)
+
+```sh
+curl -fsSL https://raw.githubusercontent.com/tool3/dvd-cli/master/scripts/install.sh | bash
+```
+
+### npm
+
+```sh
+# Use directly with npx (no install needed)
+npx dvdrw-cli --help
+
+# Or install globally
 npm install -g dvdrw-cli
+
+# Or add to your project
+npm install dvdrw-cli -D
 ```
 
-Or use directly with npx:
-
-```bash
-npx dvdrw-cli demo.cd
-```
 
 ## Quick Start
 
@@ -103,15 +119,15 @@ lolcat -a -d 2 <<< "Hello World" | dvd -o rainbow.svg
 neofetch | dvd -o system-info.svg --title "System Info"
 ```
 
-<img src="https://github.com/tool3/dvd-cli/blob/feat/rec/examples/svgs/everyday/neofetch.svg" >
+<img src="https://github.com/tool3/dvd-cli/blob/master/examples/svgs/everyday/neofetch.svg" >
 
 ```bash
 # simple chartscii chart with gradient and animation - dvd reverses and pauses between cycles
 chartscii $(seq 1 5) -c "gradient(pink,cyan)" --animate | dvd -L reverse -P 1000 -w "made with dvd"
 ```
 
-<!-- <img src="https://github.com/tool3/dvd-cli/blob/feat/rec/examples/svgs/stdin/chartscii-sine.svg" ></br> -->
-<img src="https://github.com/tool3/dvd-cli/blob/feat/rec/examples/svgs/stdin/chartscii-stdin.svg" ></br>
+<!-- <img src="https://github.com/tool3/dvd-cli/blob/master/examples/svgs/stdin/chartscii-sine.svg" ></br> -->
+<img src="https://github.com/tool3/dvd-cli/blob/master/examples/svgs/stdin/chartscii-stdin.svg" ></br>
 
 ---
 
@@ -217,7 +233,7 @@ Backspace 4
 Type "orld!"
 ```
 
-<img src="https://github.com/tool3/dvd-cli/blob/feat/rec/examples/svgs/navigation/backspace.svg" >
+<img src="https://github.com/tool3/dvd-cli/blob/master/examples/svgs/navigation/backspace.svg" >
 
 #### Arrow Keys
 
@@ -246,7 +262,7 @@ Cmd+Right            # Move to line end
 Cmd+Backspace        # Delete word
 ```
 
-<img src="https://github.com/tool3/dvd-cli/blob/feat/rec/examples/svgs/navigation/keyboard-navigation-demo.svg" >
+<img src="https://github.com/tool3/dvd-cli/blob/master/examples/svgs/navigation/keyboard-navigation-demo.svg" >
 
 #### Screenshot
 
@@ -318,11 +334,11 @@ Set LineHeight 1.4
 Set EmbedFont path/to/font.woff2
 ```
 
-<img src="https://github.com/tool3/dvd-cli/blob/feat/rec/examples/svgs/fonts/embed-font-test.svg" />
+<img src="https://github.com/tool3/dvd-cli/blob/master/examples/svgs/fonts/embed-font-test.svg" />
 
-<img src="https://github.com/tool3/dvd-cli/blob/feat/rec/examples/svgs/fonts/font-size-10.svg" ><br/>
-<img src="https://github.com/tool3/dvd-cli/blob/feat/rec/examples/svgs/fonts/font-size-20.svg" > <br/>
-<img src="https://github.com/tool3/dvd-cli/blob/feat/rec/examples/svgs/fonts/font-size-40.svg" > <br/>
+<img src="https://github.com/tool3/dvd-cli/blob/master/examples/svgs/fonts/font-size-10.svg" ><br/>
+<img src="https://github.com/tool3/dvd-cli/blob/master/examples/svgs/fonts/font-size-20.svg" > <br/>
+<img src="https://github.com/tool3/dvd-cli/blob/master/examples/svgs/fonts/font-size-40.svg" > <br/>
 
 #### Cursor
 
@@ -332,7 +348,7 @@ Set CursorColor #ffffff
 Set CursorBlink true
 ```
 
-<img src="https://github.com/tool3/dvd-cli/blob/feat/rec/examples/svgs/cursor/cursor-style-test.svg" >
+<img src="https://github.com/tool3/dvd-cli/blob/master/examples/svgs/cursor/cursor-style-test.svg" >
 
 #### Typing Speed
 
@@ -352,7 +368,7 @@ Set PromptPrefix "❯ "
 Set PromptPrefix "\x1b[95m❯\x1b[0m "    # Colored prompt
 ```
 
-<img src="https://github.com/tool3/dvd-cli/blob/feat/rec/examples/svgs/prompt/custom-prompt.svg" >
+<img src="https://github.com/tool3/dvd-cli/blob/master/examples/svgs/prompt/custom-prompt.svg" >
 
 #### Border
 
@@ -362,7 +378,7 @@ Set BorderWidth 2
 Set BorderColor #ff0000
 ```
 
-<img src="https://github.com/tool3/dvd-cli/blob/feat/rec/examples/svgs/templates/border-test.svg" >
+<img src="https://github.com/tool3/dvd-cli/blob/master/examples/svgs/templates/border-test.svg" >
 
 #### Padding
 
@@ -384,7 +400,7 @@ Set FooterBackground #333333
 Set FooterBorder true
 ```
 
-<img src="https://github.com/tool3/dvd-cli/blob/feat/rec/examples/svgs/templates/header-footer-test.svg" >
+<img src="https://github.com/tool3/dvd-cli/blob/master/examples/svgs/templates/header-footer-test.svg" >
 
 #### Watermark
 
@@ -445,10 +461,10 @@ Set Background gradient(#ff6b6b, #feca57, #48dbfb, #ff9ff3)
 Set BackgroundPadding 60
 ```
 
-<img src="https://github.com/tool3/dvd-cli/blob/feat/rec/examples/svgs/backgrounds/solid-background.svg" /> </br>
-<img src="https://github.com/tool3/dvd-cli/blob/feat/rec/examples/svgs/backgrounds/vertical-gradient.svg" /> </br>
-<img src="https://github.com/tool3/dvd-cli/blob/feat/rec/examples/svgs/backgrounds/gradient-background.svg" /></br>
-<img src="https://github.com/tool3/dvd-cli/blob/feat/rec/examples/svgs/backgrounds/horizontal-gradient.svg" /> </br>
+<img src="https://github.com/tool3/dvd-cli/blob/master/examples/svgs/backgrounds/solid-background.svg" /> </br>
+<img src="https://github.com/tool3/dvd-cli/blob/master/examples/svgs/backgrounds/vertical-gradient.svg" /> </br>
+<img src="https://github.com/tool3/dvd-cli/blob/master/examples/svgs/backgrounds/gradient-background.svg" /></br>
+<img src="https://github.com/tool3/dvd-cli/blob/master/examples/svgs/backgrounds/horizontal-gradient.svg" /> </br>
 
 #### Playback Speed
 
@@ -459,9 +475,9 @@ Set PlaybackSpeed 2      # 2x faster
 Set PlaybackSpeed 0.5    # Half speed
 ```
 
-<img src="https://github.com/tool3/dvd-cli/blob/feat/rec/examples/svgs/speed/playback-speed-half.svg" /> </br>
-<img src="https://github.com/tool3/dvd-cli/blob/feat/rec/examples/svgs/speed/playback-speed-1x.svg" /> </br>
-<img src="https://github.com/tool3/dvd-cli/blob/feat/rec/examples/svgs/speed/playback-speed-2x.svg" /> </br>
+<img src="https://github.com/tool3/dvd-cli/blob/master/examples/svgs/speed/playback-speed-half.svg" /> </br>
+<img src="https://github.com/tool3/dvd-cli/blob/master/examples/svgs/speed/playback-speed-1x.svg" /> </br>
+<img src="https://github.com/tool3/dvd-cli/blob/master/examples/svgs/speed/playback-speed-2x.svg" /> </br>
 
 ---
 
@@ -475,67 +491,67 @@ Set Theme <theme-name>
 
 <table>
 <tr>
-<td align="center"><strong>a11yDark</strong><br><img src="https://github.com/tool3/dvd-cli/blob/feat/rec/examples/svgs/themes/a11yDark.svg" ></td>
-<td align="center"><strong>base16Dark</strong><br><img src="https://github.com/tool3/dvd-cli/blob/feat/rec/examples/svgs/themes/base16Dark.svg" ></td>
-<td align="center"><strong>base16Light</strong><br><img src="https://github.com/tool3/dvd-cli/blob/feat/rec/examples/svgs/themes/base16Light.svg" ></td>
+<td align="center"><strong>a11yDark</strong><br><img src="https://github.com/tool3/dvd-cli/blob/master/examples/svgs/themes/a11yDark.svg" ></td>
+<td align="center"><strong>base16Dark</strong><br><img src="https://github.com/tool3/dvd-cli/blob/master/examples/svgs/themes/base16Dark.svg" ></td>
+<td align="center"><strong>base16Light</strong><br><img src="https://github.com/tool3/dvd-cli/blob/master/examples/svgs/themes/base16Light.svg" ></td>
 </tr>
 <tr>
-<td align="center"><strong>blackboard</strong><br><img src="https://github.com/tool3/dvd-cli/blob/feat/rec/examples/svgs/themes/blackboard.svg" ></td>
-<td align="center"><strong>catppuccinMocha</strong><br><img src="https://github.com/tool3/dvd-cli/blob/feat/rec/examples/svgs/themes/catppuccinMocha.svg" ></td>
-<td align="center"><strong>cobalt</strong><br><img src="https://github.com/tool3/dvd-cli/blob/feat/rec/examples/svgs/themes/cobalt.svg" ></td>
+<td align="center"><strong>blackboard</strong><br><img src="https://github.com/tool3/dvd-cli/blob/master/examples/svgs/themes/blackboard.svg" ></td>
+<td align="center"><strong>catppuccinMocha</strong><br><img src="https://github.com/tool3/dvd-cli/blob/master/examples/svgs/themes/catppuccinMocha.svg" ></td>
+<td align="center"><strong>cobalt</strong><br><img src="https://github.com/tool3/dvd-cli/blob/master/examples/svgs/themes/cobalt.svg" ></td>
 </tr>
 <tr>
-<td align="center"><strong>dark</strong><br><img src="https://github.com/tool3/dvd-cli/blob/feat/rec/examples/svgs/themes/dark.svg" ></td>
-<td align="center"><strong>dracula</strong><br><img src="https://github.com/tool3/dvd-cli/blob/feat/rec/examples/svgs/themes/dracula.svg" ></td>
-<td align="center"><strong>draculaPro</strong><br><img src="https://github.com/tool3/dvd-cli/blob/feat/rec/examples/svgs/themes/draculaPro.svg" ></td>
+<td align="center"><strong>dark</strong><br><img src="https://github.com/tool3/dvd-cli/blob/master/examples/svgs/themes/dark.svg" ></td>
+<td align="center"><strong>dracula</strong><br><img src="https://github.com/tool3/dvd-cli/blob/master/examples/svgs/themes/dracula.svg" ></td>
+<td align="center"><strong>draculaPro</strong><br><img src="https://github.com/tool3/dvd-cli/blob/master/examples/svgs/themes/draculaPro.svg" ></td>
 </tr>
 <tr>
-<td align="center"><strong>duotoneDark</strong><br><img src="https://github.com/tool3/dvd-cli/blob/feat/rec/examples/svgs/themes/duotoneDark.svg" ></td>
-<td align="center"><strong>githubDark</strong><br><img src="https://github.com/tool3/dvd-cli/blob/feat/rec/examples/svgs/themes/githubDark.svg" ></td>
-<td align="center"><strong>githubLight</strong><br><img src="https://github.com/tool3/dvd-cli/blob/feat/rec/examples/svgs/themes/githubLight.svg" ></td>
+<td align="center"><strong>duotoneDark</strong><br><img src="https://github.com/tool3/dvd-cli/blob/master/examples/svgs/themes/duotoneDark.svg" ></td>
+<td align="center"><strong>githubDark</strong><br><img src="https://github.com/tool3/dvd-cli/blob/master/examples/svgs/themes/githubDark.svg" ></td>
+<td align="center"><strong>githubLight</strong><br><img src="https://github.com/tool3/dvd-cli/blob/master/examples/svgs/themes/githubLight.svg" ></td>
 </tr>
 <tr>
-<td align="center"><strong>gruvboxDark</strong><br><img src="https://github.com/tool3/dvd-cli/blob/feat/rec/examples/svgs/themes/gruvboxDark.svg" ></td>
-<td align="center"><strong>gruvboxLight</strong><br><img src="https://github.com/tool3/dvd-cli/blob/feat/rec/examples/svgs/themes/gruvboxLight.svg" ></td>
-<td align="center"><strong>hopscotch</strong><br><img src="https://github.com/tool3/dvd-cli/blob/feat/rec/examples/svgs/themes/hopscotch.svg" ></td>
+<td align="center"><strong>gruvboxDark</strong><br><img src="https://github.com/tool3/dvd-cli/blob/master/examples/svgs/themes/gruvboxDark.svg" ></td>
+<td align="center"><strong>gruvboxLight</strong><br><img src="https://github.com/tool3/dvd-cli/blob/master/examples/svgs/themes/gruvboxLight.svg" ></td>
+<td align="center"><strong>hopscotch</strong><br><img src="https://github.com/tool3/dvd-cli/blob/master/examples/svgs/themes/hopscotch.svg" ></td>
 </tr>
 <tr>
-<td align="center"><strong>lucario</strong><br><img src="https://github.com/tool3/dvd-cli/blob/feat/rec/examples/svgs/themes/lucario.svg" ></td>
-<td align="center"><strong>material</strong><br><img src="https://github.com/tool3/dvd-cli/blob/feat/rec/examples/svgs/themes/material.svg" ></td>
-<td align="center"><strong>monokai</strong><br><img src="https://github.com/tool3/dvd-cli/blob/feat/rec/examples/svgs/themes/monokai.svg" ></td>
+<td align="center"><strong>lucario</strong><br><img src="https://github.com/tool3/dvd-cli/blob/master/examples/svgs/themes/lucario.svg" ></td>
+<td align="center"><strong>material</strong><br><img src="https://github.com/tool3/dvd-cli/blob/master/examples/svgs/themes/material.svg" ></td>
+<td align="center"><strong>monokai</strong><br><img src="https://github.com/tool3/dvd-cli/blob/master/examples/svgs/themes/monokai.svg" ></td>
 </tr>
 <tr>
-<td align="center"><strong>night3024</strong><br><img src="https://github.com/tool3/dvd-cli/blob/feat/rec/examples/svgs/themes/night3024.svg" ></td>
-<td align="center"><strong>nord</strong><br><img src="https://github.com/tool3/dvd-cli/blob/feat/rec/examples/svgs/themes/nord.svg" ></td>
-<td align="center"><strong>oceanicNext</strong><br><img src="https://github.com/tool3/dvd-cli/blob/feat/rec/examples/svgs/themes/oceanicNext.svg" ></td>
+<td align="center"><strong>night3024</strong><br><img src="https://github.com/tool3/dvd-cli/blob/master/examples/svgs/themes/night3024.svg" ></td>
+<td align="center"><strong>nord</strong><br><img src="https://github.com/tool3/dvd-cli/blob/master/examples/svgs/themes/nord.svg" ></td>
+<td align="center"><strong>oceanicNext</strong><br><img src="https://github.com/tool3/dvd-cli/blob/master/examples/svgs/themes/oceanicNext.svg" ></td>
 </tr>
 <tr>
-<td align="center"><strong>oneDark</strong><br><img src="https://github.com/tool3/dvd-cli/blob/feat/rec/examples/svgs/themes/oneDark.svg" ></td>
-<td align="center"><strong>oneLight</strong><br><img src="https://github.com/tool3/dvd-cli/blob/feat/rec/examples/svgs/themes/oneLight.svg" ></td>
-<td align="center"><strong>pandaSyntax</strong><br><img src="https://github.com/tool3/dvd-cli/blob/feat/rec/examples/svgs/themes/pandaSyntax.svg" ></td>
+<td align="center"><strong>oneDark</strong><br><img src="https://github.com/tool3/dvd-cli/blob/master/examples/svgs/themes/oneDark.svg" ></td>
+<td align="center"><strong>oneLight</strong><br><img src="https://github.com/tool3/dvd-cli/blob/master/examples/svgs/themes/oneLight.svg" ></td>
+<td align="center"><strong>pandaSyntax</strong><br><img src="https://github.com/tool3/dvd-cli/blob/master/examples/svgs/themes/pandaSyntax.svg" ></td>
 </tr>
 <tr>
-<td align="center"><strong>paraisoDark</strong><br><img src="https://github.com/tool3/dvd-cli/blob/feat/rec/examples/svgs/themes/paraisoDark.svg" ></td>
-<td align="center"><strong>seti</strong><br><img src="https://github.com/tool3/dvd-cli/blob/feat/rec/examples/svgs/themes/seti.svg" ></td>
-<td align="center"><strong>shadesOfPurple</strong><br><img src="https://github.com/tool3/dvd-cli/blob/feat/rec/examples/svgs/themes/shadesOfPurple.svg" ></td>
+<td align="center"><strong>paraisoDark</strong><br><img src="https://github.com/tool3/dvd-cli/blob/master/examples/svgs/themes/paraisoDark.svg" ></td>
+<td align="center"><strong>seti</strong><br><img src="https://github.com/tool3/dvd-cli/blob/master/examples/svgs/themes/seti.svg" ></td>
+<td align="center"><strong>shadesOfPurple</strong><br><img src="https://github.com/tool3/dvd-cli/blob/master/examples/svgs/themes/shadesOfPurple.svg" ></td>
 </tr>
 <tr>
-<td align="center"><strong>solarizedDark</strong><br><img src="https://github.com/tool3/dvd-cli/blob/feat/rec/examples/svgs/themes/solarizedDark.svg" ></td>
-<td align="center"><strong>solarizedLight</strong><br><img src="https://github.com/tool3/dvd-cli/blob/feat/rec/examples/svgs/themes/solarizedLight.svg" ></td>
-<td align="center"><strong>synthwave84</strong><br><img src="https://github.com/tool3/dvd-cli/blob/feat/rec/examples/svgs/themes/synthwave84.svg" ></td>
+<td align="center"><strong>solarizedDark</strong><br><img src="https://github.com/tool3/dvd-cli/blob/master/examples/svgs/themes/solarizedDark.svg" ></td>
+<td align="center"><strong>solarizedLight</strong><br><img src="https://github.com/tool3/dvd-cli/blob/master/examples/svgs/themes/solarizedLight.svg" ></td>
+<td align="center"><strong>synthwave84</strong><br><img src="https://github.com/tool3/dvd-cli/blob/master/examples/svgs/themes/synthwave84.svg" ></td>
 </tr>
 <tr>
-<td align="center"><strong>terminal</strong><br><img src="https://github.com/tool3/dvd-cli/blob/feat/rec/examples/svgs/themes/terminal.svg" ></td>
-<td align="center"><strong>tokyoNight</strong><br><img src="https://github.com/tool3/dvd-cli/blob/feat/rec/examples/svgs/themes/tokyoNight.svg" ></td>
-<td align="center"><strong>twilight</strong><br><img src="https://github.com/tool3/dvd-cli/blob/feat/rec/examples/svgs/themes/twilight.svg" ></td>
+<td align="center"><strong>terminal</strong><br><img src="https://github.com/tool3/dvd-cli/blob/master/examples/svgs/themes/terminal.svg" ></td>
+<td align="center"><strong>tokyoNight</strong><br><img src="https://github.com/tool3/dvd-cli/blob/master/examples/svgs/themes/tokyoNight.svg" ></td>
+<td align="center"><strong>twilight</strong><br><img src="https://github.com/tool3/dvd-cli/blob/master/examples/svgs/themes/twilight.svg" ></td>
 </tr>
 <tr>
-<td align="center"><strong>verminal</strong><br><img src="https://github.com/tool3/dvd-cli/blob/feat/rec/examples/svgs/themes/verminal.svg" ></td>
-<td align="center"><strong>vscode</strong><br><img src="https://github.com/tool3/dvd-cli/blob/feat/rec/examples/svgs/themes/vscode.svg" ></td>
-<td align="center"><strong>yeti</strong><br><img src="https://github.com/tool3/dvd-cli/blob/feat/rec/examples/svgs/themes/yeti.svg" ></td>
+<td align="center"><strong>verminal</strong><br><img src="https://github.com/tool3/dvd-cli/blob/master/examples/svgs/themes/verminal.svg" ></td>
+<td align="center"><strong>vscode</strong><br><img src="https://github.com/tool3/dvd-cli/blob/master/examples/svgs/themes/vscode.svg" ></td>
+<td align="center"><strong>yeti</strong><br><img src="https://github.com/tool3/dvd-cli/blob/master/examples/svgs/themes/yeti.svg" ></td>
 </tr>
 <tr>
-<td align="center"><strong>zenburn</strong><br><img src="https://github.com/tool3/dvd-cli/blob/feat/rec/examples/svgs/themes/zenburn.svg" ></td>
+<td align="center"><strong>zenburn</strong><br><img src="https://github.com/tool3/dvd-cli/blob/master/examples/svgs/themes/zenburn.svg" ></td>
 <td></td>
 <td></td>
 </tr>
@@ -556,8 +572,8 @@ Set Theme {"background": "#0d1117", "foreground": "#c9d1d9"}
 Set Theme {"background": "#0a0a0a", "foreground": "#00ff00", "cursor": "#00ff00"}
 ```
 
-<img src="https://github.com/tool3/dvd-cli/blob/feat/rec/examples/svgs/themes/custom-theme.svg" /> </br>
-<img src="https://github.com/tool3/dvd-cli/blob/feat/rec/examples/svgs/themes/partial-theme-override.svg" /> </br>
+<img src="https://github.com/tool3/dvd-cli/blob/master/examples/svgs/themes/custom-theme.svg" /> </br>
+<img src="https://github.com/tool3/dvd-cli/blob/master/examples/svgs/themes/partial-theme-override.svg" /> </br>
 
 **Available theme properties:**
 
@@ -588,9 +604,9 @@ Set Template <template-name>
 <td align="center"><strong>minimal</strong><br>No window decorations</td>
 </tr>
 <tr>
-<td><img src="https://github.com/tool3/dvd-cli/blob/feat/rec/examples/svgs/templates/macos-style.svg" ></td>
-<td><img src="https://github.com/tool3/dvd-cli/blob/feat/rec/examples/svgs/templates/windows-style.svg" ></td>
-<td><img src="https://github.com/tool3/dvd-cli/blob/feat/rec/examples/svgs/templates/templates.svg" ></td>
+<td><img src="https://github.com/tool3/dvd-cli/blob/master/examples/svgs/templates/macos-style.svg" ></td>
+<td><img src="https://github.com/tool3/dvd-cli/blob/master/examples/svgs/templates/windows-style.svg" ></td>
+<td><img src="https://github.com/tool3/dvd-cli/blob/master/examples/svgs/templates/templates.svg" ></td>
 </tr>
 </table>
 
@@ -616,7 +632,7 @@ Animation plays forward, then backward at the same speed.
 Set LoopStyle reverse
 ```
 
-<img src="https://github.com/tool3/dvd-cli/blob/feat/rec/examples/svgs/loop-style/loop-style-reverse-pause.svg" >
+<img src="https://github.com/tool3/dvd-cli/blob/master/examples/svgs/loop-style/loop-style-reverse-pause.svg" >
 
 ### Rewind
 
@@ -627,7 +643,7 @@ Set LoopStyle rewind
 Set RewindSpeed 10       # Speed multiplier (default: 5)
 ```
 
-<img src="https://github.com/tool3/dvd-cli/blob/feat/rec/examples/svgs/loop-style/loop-style-rewind.svg" >
+<img src="https://github.com/tool3/dvd-cli/blob/master/examples/svgs/loop-style/loop-style-rewind.svg" >
 
 ### Fade
 
@@ -638,7 +654,7 @@ Set LoopStyle fade
 Set FadeDuration 1500    # Fade duration in ms (default: 1500)
 ```
 
-<img src="https://github.com/tool3/dvd-cli/blob/feat/rec/examples/svgs/loop-style/loop-style-fade.svg" >
+<img src="https://github.com/tool3/dvd-cli/blob/master/examples/svgs/loop-style/loop-style-fade.svg" >
 
 ### Loop Pause
 
@@ -798,7 +814,7 @@ dvd render session.cast -T dracula     # Render .cast file to SVG
 
 ### Hello World
 
-<img src="https://github.com/tool3/dvd-cli/blob/feat/rec/examples/svgs/everyday/demo.svg" >
+<img src="https://github.com/tool3/dvd-cli/blob/master/examples/svgs/everyday/demo.svg" >
 
 ```
 Output demo.svg
@@ -817,45 +833,45 @@ Sleep 1s
 
 Full 256-color and truecolor support.
 
-<img src="https://github.com/tool3/dvd-cli/blob/feat/rec/examples/svgs/ansi/ansi-colors.svg" >
+<img src="https://github.com/tool3/dvd-cli/blob/master/examples/svgs/ansi/ansi-colors.svg" >
 
 ### ASCII Art with Figlet
 
-<img src="https://github.com/tool3/dvd-cli/blob/feat/rec/examples/svgs/ascii/figlet.svg" >
+<img src="https://github.com/tool3/dvd-cli/blob/master/examples/svgs/ascii/figlet.svg" >
 
 ### Charts with Chartscii
 
-<img src="https://github.com/tool3/dvd-cli/blob/feat/rec/examples/svgs/everyday/chartscii.svg" >
+<img src="https://github.com/tool3/dvd-cli/blob/master/examples/svgs/everyday/chartscii.svg" >
 
 ### Rainbow Animation
 
 Animated command output is captured frame-by-frame.
 
-<img src="https://github.com/tool3/dvd-cli/blob/feat/rec/examples/svgs/animated/rainbow-lolcat.svg" >
+<img src="https://github.com/tool3/dvd-cli/blob/master/examples/svgs/animated/rainbow-lolcat.svg" >
 
 ### Git Log
 
-<img src="https://github.com/tool3/dvd-cli/blob/feat/rec/examples/svgs/everyday/git-log.svg" >
+<img src="https://github.com/tool3/dvd-cli/blob/master/examples/svgs/everyday/git-log.svg" >
 
 ### System Info
 
-<img src="https://github.com/tool3/dvd-cli/blob/feat/rec/examples/svgs/cursor/neofetch-theme-cursor.svg" >
+<img src="https://github.com/tool3/dvd-cli/blob/master/examples/svgs/cursor/neofetch-theme-cursor.svg" >
 
 ### Text Selection
 
-<img src="https://github.com/tool3/dvd-cli/blob/feat/rec/examples/svgs/selection/selection-test.svg" >
+<img src="https://github.com/tool3/dvd-cli/blob/master/examples/svgs/selection/selection-test.svg" >
 
 ### Word Navigation
 
-<img src="https://github.com/tool3/dvd-cli/blob/feat/rec/examples/svgs/navigation/word-navigation-test.svg" >
+<img src="https://github.com/tool3/dvd-cli/blob/master/examples/svgs/navigation/word-navigation-test.svg" >
 
 ### Color Tables
 
-<img src="https://github.com/tool3/dvd-cli/blob/feat/rec/examples/svgs/ansi/colors-table.svg" >
+<img src="https://github.com/tool3/dvd-cli/blob/master/examples/svgs/ansi/colors-table.svg" >
 
 ### Directory Listing
 
-<img src="https://github.com/tool3/dvd-cli/blob/feat/rec/examples/svgs/everyday/ls-colors.svg" >
+<img src="https://github.com/tool3/dvd-cli/blob/master/examples/svgs/everyday/ls-colors.svg" >
 
 See the [examples/](examples/) directory for all scripts and outputs.
 
