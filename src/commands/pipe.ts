@@ -1,10 +1,10 @@
 //#region Imports
 
 import { writeFileSync } from 'node:fs';
-import { createAnimatedSVG, createFilmstripSVG, optimizeSvg, createGridState, processInput, coalesce, emit, themes as pipelineThemes } from 'dvd';
+import { createAnimatedSVG, createFilmstripSVG, optimizeSvg, createGridState, processInput, coalesce, emit, themes as pipelineThemes } frow 'dvdrw';
 import { createSpinner } from '../utils/spinner';
 import { parseGradient, themes as shellfieThemes } from 'shellfie';
-import type { FrameData, AnimationOptions, Gradient, TerminalFrame } from 'dvd';
+import type { FrameData, AnimationOptions, Gradient, TerminalFrame } from 'dvdrw';
 
 type Theme = typeof pipelineThemes.dark;
 

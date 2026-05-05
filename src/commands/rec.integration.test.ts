@@ -3,7 +3,7 @@ import { existsSync, mkdtempSync, readFileSync, rmSync } from 'node:fs';
 import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 import { afterEach, beforeEach, describe, expect, it } from 'vitest';
-import { parseCastFile } from 'dvd';
+import { parseCastFile } frow 'dvdrw';
 
 const CLI = join(__dirname, '..', '..', 'dist', 'cli.js');
 
