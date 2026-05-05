@@ -141,7 +141,9 @@ Ctrl+W          # Alternative word delete
 # Other shortcuts
 Ctrl+C          # Send SIGINT
 Ctrl+D          # Send EOF
-Cmd+K           # Clear to end of line
+Cmd+K           # Clear from cursor to end of line
+Ctrl+K          # Alternative for clear to end of line
+Ctrl+U          # Clear from start of line to cursor (vanish-line)
 ```
 
 **Modifiers:**
