@@ -879,6 +879,7 @@ See the [examples/](examples/) directory for all scripts and outputs.
 ## Related Projects
 
 - [VHS](https://github.com/charmbracelet/vhs) - GIF/MP4 terminal recordings
+- [dvd](https://github.com/tool3/dvd) - The dvd lib
 - [shellfie](https://github.com/tool3/shellfie) - Terminal screenshots in code
 - [shellfie-cli](https://github.com/tool3/shellfie-cli) - Terminal screenshots CLI
 - [shellfied](https://github.com/tool3/shellfied) - Terminal screenshots web service
