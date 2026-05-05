@@ -40,6 +40,8 @@ Write what you want to happen, run `dvd`, and get a beautiful, infinitely-scalab
 ---
 
 ## Installation
+Note that bin is registered under `dvd` if installed.   
+If you are using npx you must use the prefix: `npx dvdrw-cli`
 
 ### Homebrew (macOS/Linux)
 
