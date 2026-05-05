@@ -22,6 +22,8 @@ Write what you want to happen, run `dvd`, and get a beautiful, infinitely-scalab
 - [Installation](#installation)
 - [Quick Start](#quick-start)
 - [Pipe Mode](#pipe-mode)
+- [Recording](#recording)
+- [Rendering Cast Files](#rendering-cast-files)
 - [Syntax](#syntax)
   - [Commands](#commands)
   - [Settings](#settings)
@@ -40,13 +42,13 @@ Write what you want to happen, run `dvd`, and get a beautiful, infinitely-scalab
 ## Installation
 
 ```bash
-npm install -g dvdr
+npm install -g dvdrw
 ```
 
 Or use directly with npx:
 
 ```bash
-npx dvdr demo.cd
+npx dvdrw demo.cd
 ```
 
 ## Quick Start
@@ -110,6 +112,64 @@ chartscii $(seq 1 5) -c "gradient(pink,cyan)" --animate | dvd -L reverse -P 1000
 
 <!-- <img src="examples/svgs/stdin/chartscii-sine.svg" ></br> -->
 <img src="examples/svgs/stdin/chartscii-stdin.svg" ></br>
+
+---
+
+## Recording
+
+Record an interactive terminal session to an asciinema-compatible `.cast` file. Every byte of output and input is captured with timing — exit the shell or press `Ctrl+D` to stop.
+
+```bash
+# Interactive recording (defaults to recording.cast)
+dvd rec
+
+# Custom output path
+dvd rec session.cast
+
+# One-shot, non-interactive: record a single command
+dvd rec session.cast --command "ls -la --color"
+
+# Embed a title in the cast metadata
+dvd rec session.cast --title "Demo session"
+```
+
+The output is asciinema v2 format and works with any asciinema-compatible tool. Render it with `dvd render` (below).
+
+---
+
+## Rendering Cast Files
+
+Convert a `.cast` recording into an animated SVG. Dimensions are auto-calculated from the recording's content.
+
+```bash
+# Render to <name>.svg
+dvd render recording.cast
+
+# Custom output and styling
+dvd render recording.cast -o demo.svg --theme dracula --template macos --title "Demo"
+
+# Disable the cursor entirely, bump the font, loop with reverse
+dvd render recording.cast --no-cursor --font-size 16 --loop-style reverse
+```
+
+### Render Options
+
+| Option            | Alias | Description                          | Default     |
+| ----------------- | ----- | ------------------------------------ | ----------- |
+| `--output`        | `-o`  | Output SVG path                      | `<file>.svg`|
+| `--theme`         | `-T`  | Color theme                          | `dark`      |
+| `--template`      | `-m`  | `macos`, `windows`, `minimal`        | `macos`     |
+| `--title`         | `-t`  | Window title                         |             |
+| `--font-size`     | `-s`  | Font size (px)                       | `14`        |
+| `--line-height`   | `-Y`  | Line height multiplier               | `1.4`       |
+| `--padding`       | `-d`  | Content padding (px)                 | `16`        |
+| `--border-radius` | `-R`  | Window border radius (px)            | `8`         |
+| `--cursor-blink`  |       | Enable cursor blink (off by default) | `false`     |
+| `--no-cursor`     |       | Hide cursor entirely                 |             |
+| `--custom-glyphs` | `-G`  | Render block elements as shapes      | `true`      |
+| `--loop-style`    | `-L`  | `loop`, `reverse`, `rewind`, `fade`  | `loop`      |
+| `--optimize`      | `-O`  | Optimize SVG output                  | `true`      |
+| `--verbose`       | `-v`  | Verbose output                       | `false`     |
 
 ---
 
@@ -682,6 +742,8 @@ dvd new my-demo                        # Create new script
 dvd new my-demo --template showcase    # Use template
 dvd themes                             # List themes
 dvd validate script.cd                 # Validate without rendering
+dvd rec session.cast                   # Record terminal session to .cast
+dvd render session.cast -T dracula     # Render .cast file to SVG
 ```
 
 ### All Options
