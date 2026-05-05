@@ -1,8 +1,8 @@
 //#region Imports
 
 import { readFileSync, writeFileSync } from 'node:fs';
-import dvd, { parseCDScript } frow 'dvdrw';
-import type { DVDOptions } frow 'dvdrw';
+import dvd, { parseCDScript } from 'dvdrw';
+import type { DVDOptions } from 'dvdrw';
 import { createSpinner } from '../utils/spinner';
 
 

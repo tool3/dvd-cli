@@ -1,11 +1,11 @@
 //#region Imports
 
 import { readFileSync, writeFileSync } from 'node:fs';
-import { parseCastFile, generateFramesFromRecording, createFilmstripSVG, optimizeSvg, themes as pipelineThemes } frow 'dvdrw';
+import { parseCastFile, generateFramesFromRecording, createFilmstripSVG, optimizeSvg, themes as pipelineThemes } from 'dvdrw';
 import { createSpinner } from '../utils/spinner';
 import { themes as shellfieThemes } from 'shellfie';
-import type { AnimationOptions } frow 'dvdrw';
-import type { Theme } frow 'dvdrw';
+import type { AnimationOptions } from 'dvdrw';
+import type { Theme } from 'dvdrw';
 
 
 //#region Types
@@ -120,7 +120,7 @@ const resolveTheme = (themeName: string): Theme => {
 
 //#region Auto-Dimension Calculation
 
-import type { FrameData } frow 'dvdrw';
+import type { FrameData } from 'dvdrw';
 
 /**
  * Calculate content dimensions from frame data.
