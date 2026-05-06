@@ -1,6 +1,7 @@
 //#region Imports
 
-import { writeFileSync } from 'node:fs';
+import { chmodSync, statSync, writeFileSync } from 'node:fs';
+import { dirname, resolve } from 'node:path';
 import * as pty from 'node-pty';
 
 
@@ -51,6 +52,49 @@ const getTerminalSize = (): { cols: number; rows: number } => ({
 });
 
 /**
+ * node-pty ships a `spawn-helper` binary that must be executable for
+ * posix_spawnp to fork a PTY. Some install paths (npm with --ignore-scripts,
+ * older bun versions, tarball mangling) strip the exec bit, causing a cryptic
+ * "posix_spawnp failed" on first use. Restore it ourselves rather than rely on
+ * postinstall hooks running.
+ */
+export const ensurePtyHelperExecutable = (): void => {
+  if (process.platform === 'win32') return;
+
+  let helperPath: string;
+  try {
+    const pkgPath = require.resolve('node-pty/package.json');
+    helperPath = resolve(
+      dirname(pkgPath),
+      'prebuilds',
+      `${process.platform}-${process.arch}`,
+      'spawn-helper'
+    );
+  } catch {
+    return;
+  }
+
+  let stats;
+  try {
+    stats = statSync(helperPath);
+  } catch {
+    return;
+  }
+
+  if ((stats.mode & 0o111) !== 0) return;
+
+  try {
+    chmodSync(helperPath, 0o755);
+  } catch (err) {
+    const code = (err as NodeJS.ErrnoException).code ?? (err as Error).message;
+    throw new Error(
+      `node-pty's spawn-helper at ${helperPath} is not executable and could not be chmod'd (${code}). ` +
+      `Try reinstalling node-pty: rm -rf node_modules/node-pty && npm install`
+    );
+  }
+};
+
+/**
  * Serialize a cast recording into asciinema v2 NDJSON format.
  * Header on line 1, one event per line after. Trailing newline.
  */
@@ -91,6 +135,8 @@ export const recCommand = async (args: RecArgs): Promise<void> => {
   if (interactive && !process.stdin.isTTY) {
     throw new Error('dvd rec requires an interactive TTY. Run it directly in a terminal, or pass --command for a one-shot recording.');
   }
+
+  ensurePtyHelperExecutable();
 
   const outputPath = resolveOutputPath(args.file);
   const shell = resolveShell();
