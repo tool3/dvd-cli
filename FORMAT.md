@@ -141,9 +141,9 @@ Ctrl+W          # Alternative word delete
 # Other shortcuts
 Ctrl+C          # Send SIGINT
 Ctrl+D          # Send EOF
-Cmd+K           # Clear the entire current line
-Ctrl+K          # Clear from cursor to end of line (readline kill-line)
-Ctrl+U          # Clear from start of line to cursor (readline unix-line-discard)
+Ctrl+K          # Clear the entire terminal
+Cmd+K           # Clear the entire terminal
+Ctrl+U          # Clear the entire current line
 ```
 
 **Modifiers:**

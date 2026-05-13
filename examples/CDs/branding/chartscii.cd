@@ -1,0 +1,41 @@
+# Chartscii Demo
+
+Output examples/svgs/branding/chartscii.svg
+
+Set Template minimal
+Set WorkingDirectory examples/cds/branding
+Set Theme githubDark
+Set LoopStyle fade
+Set Watermark "tool3/chartscii"
+Set Scroll true
+Set Height 400
+Set Background "gradient(cyan, hotpink:horizontal)"
+Set BackgroundPadding 50
+
+Type "npx chartscii-cli 1 2 3 4 5 -e -c 'gradient(cyan, pink)'"
+Sleep 500ms
+Enter
+
+Type "clear"
+Sleep 500ms
+Enter
+
+Type "npx chartscii-cli 3 1 4 6 5 -e -c green -Y step"
+Sleep 500ms
+Enter
+
+Type "clear"
+Sleep 500ms
+Enter
+
+Type "npx chartscii-cli stacked.json -I cyan purple pink -k beach -o vertical -b 2 -h 20"
+Sleep 500ms
+Enter
+
+Type "clear"
+Sleep 500ms
+Enter
+
+Type "npx chartscii-cli btc.json -e -c auto -Y candlestick"
+Sleep 500ms
+Enter
