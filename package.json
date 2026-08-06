@@ -52,5 +52,13 @@
     "url": "https://github.com/tool3/dvd-cli"
   },
   "author": "tool3",
-  "license": "MIT"
+  "license": "MIT",
+  "peerDependencies": {
+    "@resvg/resvg-js": "^2.6.2"
+  },
+  "peerDependenciesMeta": {
+    "@resvg/resvg-js": {
+      "optional": true
+    }
+  }
 }

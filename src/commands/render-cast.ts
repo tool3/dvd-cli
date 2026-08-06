@@ -1,8 +1,9 @@
 //#region Imports
 
-import { readFileSync, writeFileSync } from 'node:fs';
+import { readFileSync, statSync, writeFileSync } from 'node:fs';
 import { parseCastFile, generateFramesFromRecording, createFilmstripSVG, optimizeSvg, themes as pipelineThemes } from 'dvdrw';
 import { createSpinner } from '../utils/spinner';
+import { formatFromPath, writeVideo } from '../video';
 import { themes as shellfieThemes } from 'shellfie';
 import type { AnimationOptions } from 'dvdrw';
 import type { Theme } from 'dvdrw';
@@ -48,6 +49,10 @@ export interface RenderCastArgs {
   // Dimension overrides (if not provided, auto-calculated from content)
   width?: number;
   height?: number;
+  // Video output (used when --output has a .mp4/.webm/.gif extension)
+  fps?: number;
+  loops?: number;
+  'font-file'?: string;
 }
 
 
@@ -317,9 +322,72 @@ export const renderCastCommand = async (args: RenderCastArgs): Promise<void> => 
 
     // Determine output path
     let outputPath = args.output || args.file.replace(/\.cast$/, '.svg');
-    // Ensure .svg extension
-    if (!outputPath.endsWith('.svg')) {
+    const videoFormat = formatFromPath(outputPath);
+    // Ensure .svg extension (unless this is a video target)
+    if (!videoFormat && !outputPath.endsWith('.svg')) {
       outputPath += '.svg';
+    }
+
+    if (videoFormat) {
+      if (!args.verbose) {
+        spinner.update(`\x1b[37mEncoding\x1b[0m \x1b[2m${videoFormat}\x1b[0m`);
+      }
+      // Same emitter options the filmstrip above was built with, so every
+      // rasterized frame matches the SVG this command would have written.
+      const video = await writeVideo({
+        frameData,
+        emitter: {
+          theme,
+          template,
+          width: totalWidth,
+          height: totalHeight,
+          fontSize,
+          title: args.title || recording.header.title,
+          watermark: args.watermark,
+          lineHeight: lineHeightPx,
+          charWidth,
+          padding,
+          borderRadius: args['border-radius'] ?? 8,
+          headerHeight,
+          footerHeight,
+          cursorStyle: (args['cursor-style'] as 'block' | 'bar' | 'underline') || 'block',
+          cursorColor: args['cursor-color'],
+          cursorBlink: args['cursor-blink'] === true,
+          fontFamily: args['font-family'],
+          background: args.background,
+          backgroundPadding: args['background-padding'],
+          backgroundRadius: args['background-radius'],
+          headerBackground: args['header-background'],
+          footerBackground: args['footer-background'],
+        },
+        output: outputPath,
+        format: videoFormat,
+        fps: args.fps,
+        loops: args.loops,
+        pauseAtEnd: args['pause-at-end'] ?? 1000,
+        fontFile: args['font-file'],
+        onProgress: (done, total) => {
+          if (args.verbose) return;
+          spinner.update(
+            `\x1b[37mEncoding\x1b[0m \x1b[2m${videoFormat} (${done}/${total})\x1b[0m`,
+          );
+        },
+      });
+
+      const videoSizeKB = (statSync(outputPath).size / 1024).toFixed(2);
+      const lines = [
+        `\x1b[32m✓\x1b[0m \x1b[37mCreated\x1b[0m \x1b[94m${outputPath}\x1b[0m`,
+        `  \x1b[2m├─\x1b[0m \x1b[95m${video.frameCount}\x1b[0m\x1b[2m frames @ ${video.fps}fps\x1b[0m`,
+        `  \x1b[2m├─\x1b[0m \x1b[38;5;215m${(video.durationMs / 1000).toFixed(2)}s\x1b[0m\x1b[2m duration\x1b[0m`,
+        `  \x1b[2m├─\x1b[0m \x1b[37m${video.width}x${video.height}\x1b[0m`,
+        `  \x1b[2m└─\x1b[0m \x1b[92m${videoSizeKB}KB\x1b[0m`,
+      ];
+      if (args.verbose) {
+        console.log(`\n${lines.join('\n')}`);
+      } else {
+        spinner.successMultiline(lines);
+      }
+      return;
     }
 
     // Write output

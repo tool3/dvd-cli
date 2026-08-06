@@ -87,7 +87,8 @@ const createParser = () =>
     .option('output', {
       alias: 'o',
       type: 'string',
-      describe: 'Output SVG file path',
+      describe:
+        'Output file path. .svg renders an animated SVG; .mp4/.webm/.gif encode video (needs ffmpeg on PATH)',
     })
     .option('verbose', {
       alias: 'v',
@@ -154,7 +155,16 @@ const createParser = () =>
     .option('fps', {
       alias: 'f',
       type: 'number',
-      describe: 'Frames per second',
+      describe: 'Frames per second (also the frame rate for video output)',
+    })
+    .option('loops', {
+      type: 'number',
+      describe: 'Times the animation repeats in video output (default: 1)',
+    })
+    .option('font-file', {
+      type: 'string',
+      describe:
+        'Font file to rasterize video frames with (defaults to a system monospace)',
     })
     .option('width', {
       alias: 'W',
@@ -414,7 +424,22 @@ const createParser = () =>
           .option('output', {
             alias: 'o',
             type: 'string',
-            describe: 'Output SVG file path',
+            describe:
+              'Output file path. .svg renders an animated SVG; .mp4/.webm/.gif encode video (needs ffmpeg on PATH)',
+          })
+          .option('fps', {
+            alias: 'f',
+            type: 'number',
+            describe: 'Frame rate for video output (default: 30)',
+          })
+          .option('loops', {
+            type: 'number',
+            describe: 'Times the animation repeats in video output (default: 1)',
+          })
+          .option('font-file', {
+            type: 'string',
+            describe:
+              'Font file to rasterize video frames with (defaults to a system monospace)',
           })
           .option('theme', {
             alias: 'T',
@@ -577,6 +602,9 @@ const run = async (): Promise<void> => {
         playbackSpeed: argv['playback-speed'],
         customGlyphs: argv['custom-glyphs'],
         smil: argv.legacy || argv.smil,
+        fps: argv.fps,
+        loops: argv.loops,
+        fontFile: argv['font-file'],
       });
     } catch (err) {
       console.error(err instanceof Error ? err.message : String(err));
@@ -609,6 +637,8 @@ const run = async (): Promise<void> => {
       legacy: argv.legacy || argv.smil,
       'custom-glyphs': argv['custom-glyphs'],
       'playback-speed': argv['playback-speed'],
+      loops: argv.loops,
+      'font-file': argv['font-file'],
       // Pass through styling options only if explicitly provided by user
       // This allows .cd file settings to take precedence over CLI defaults
       width: ifExplicit(explicit, argv.width, 'width', 'W'),

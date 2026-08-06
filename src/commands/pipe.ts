@@ -1,8 +1,9 @@
 //#region Imports
 
-import { writeFileSync } from 'node:fs';
+import { statSync, writeFileSync } from 'node:fs';
 import { createAnimatedSVG, createFilmstripSVG, optimizeSvg, createGridState, processInput, coalesce, emit, themes as pipelineThemes } from 'dvdrw';
 import { createSpinner } from '../utils/spinner';
+import { formatFromPath, writeVideo } from '../video';
 import { parseGradient, themes as shellfieThemes } from 'shellfie';
 import type { FrameData, AnimationOptions, Gradient, TerminalFrame } from 'dvdrw';
 
@@ -66,6 +67,10 @@ interface PipeArgs {
   playbackSpeed?: number;
   customGlyphs?: boolean;
   smil?: boolean;
+  // Video output (used when --output has a .mp4/.webm/.gif extension)
+  fps?: number;
+  loops?: number;
+  fontFile?: string;
 }
 
 interface StdinResult {
@@ -450,6 +455,97 @@ export const pipeCommand = async (args: PipeArgs): Promise<void> => {
       rewindSpeed: args['rewind-speed'] ?? 5,
     };
 
+    // Frame grids are the common currency: the filmstrip renderer, the SMIL
+    // renderer and the video encoder all want them, so build them once here
+    // rather than once per branch.
+    const frameData: FrameData[] = frameContents.map((content, i) => {
+      let timestamp = i * frameDuration;
+      if (speed !== 1 && speed > 0) {
+        timestamp = Math.round(timestamp / speed);
+      }
+
+      let grid = createGridState(gridWidth, gridHeight);
+      grid = processInput(grid, content);
+      const rows = coalesce(grid, theme);
+
+      return {
+        rows,
+        cursor: { row: grid.cursor.row, col: grid.cursor.col },
+        cursorVisible: false,
+        timestamp,
+        activeCursor: false,
+      };
+    });
+
+    let outputPath = args.output || 'output.svg';
+    const videoFormat = formatFromPath(outputPath);
+    // Ensure .svg extension (unless this is a video target)
+    if (!videoFormat && !outputPath.endsWith('.svg')) {
+      outputPath += '.svg';
+    }
+
+    if (videoFormat) {
+      // Short-circuit before any SVG work — building a filmstrip we're about
+      // to throw away is the single most expensive thing in this command.
+      if (!args.verbose) {
+        spinner.update(`Encoding ${videoFormat}`);
+      }
+
+      const video = await writeVideo({
+        frameData,
+        emitter: {
+          theme,
+          template,
+          width,
+          height,
+          fontSize,
+          title,
+          watermark: args.watermark,
+          lineHeight: lineHeightPx,
+          charWidth,
+          padding,
+          borderRadius,
+          headerHeight,
+          footerHeight: args.footerHeight ?? 0,
+          cursorStyle: cursorStyle as 'block' | 'bar' | 'underline',
+          cursorColor: args.cursorColor,
+          fontFamily: args.fontFamily,
+          background: args.background ? parseGradient(args.background) : undefined,
+          backgroundPadding: args.backgroundPadding,
+          backgroundRadius: args.backgroundRadius,
+          headerBackground: args.headerBackground,
+          footerBackground: args.footerBackground,
+          cursorBlink: args.cursorBlink,
+          letterSpacing: args.letterSpacing,
+        },
+        output: outputPath,
+        format: videoFormat,
+        fps: args.fps,
+        loops: args.loops,
+        pauseAtEnd: args['pause-at-end'] ?? 1000,
+        fontFile: args.fontFile,
+        onProgress: (done, total) => {
+          if (args.verbose) return;
+          spinner.update(`Encoding ${videoFormat} (${done}/${total})`);
+        },
+      });
+
+      const videoSizeKB = (statSync(outputPath).size / 1024).toFixed(2);
+      const lines = [
+        `\x1b[32m✓\x1b[0m \x1b[37mCreated\x1b[0m \x1b[94m${outputPath}\x1b[0m`,
+        `  \x1b[2m├─\x1b[0m \x1b[95m${video.frameCount}\x1b[0m\x1b[2m frames @ ${video.fps}fps\x1b[0m`,
+        `  \x1b[2m├─\x1b[0m \x1b[38;5;215m${(video.durationMs / 1000).toFixed(2)}s\x1b[0m\x1b[2m duration\x1b[0m`,
+        `  \x1b[2m├─\x1b[0m \x1b[37m${video.width}x${video.height}\x1b[0m`,
+        `  \x1b[2m└─\x1b[0m \x1b[92m${videoSizeKB}KB\x1b[0m`,
+      ];
+      if (args.verbose) {
+        console.log(`\n${lines.join('\n')}`);
+      } else {
+        spinner.successMultiline(lines);
+      }
+      return;
+    }
+
     let svg: string;
 
     if (args.smil) {
@@ -461,15 +557,9 @@ export const pipeCommand = async (args: PipeArgs): Promise<void> => {
         height,
       };
 
-      const frames: TerminalFrame[] = frameContents.map((content, i) => {
-        let timestamp = i * frameDuration;
-        if (speed !== 1 && speed > 0) {
-          timestamp = Math.round(timestamp / speed);
-        }
-
-        let grid = createGridState(gridWidth, gridHeight);
-        grid = processInput(grid, content);
-        const rows = coalesce(grid, theme);
+      const frames: TerminalFrame[] = frameData.map((fd, i) => {
+        const { rows, timestamp } = fd;
+        const content = frameContents[i];
 
         const { svg: frameSvg } = emit(rows, null, false, {
           theme: fullRenderOptions.theme,
@@ -531,25 +621,6 @@ export const pipeCommand = async (args: PipeArgs): Promise<void> => {
       svg = await createAnimatedSVG(frames, animationOptions);
     } else {
       // Default: filmstrip mode (optimized file size)
-      const frameData: FrameData[] = frameContents.map((content, i) => {
-        let timestamp = i * frameDuration;
-        if (speed !== 1 && speed > 0) {
-          timestamp = Math.round(timestamp / speed);
-        }
-
-        let grid = createGridState(gridWidth, gridHeight);
-        grid = processInput(grid, content);
-        const rows = coalesce(grid, theme);
-
-        return {
-          rows,
-          cursor: { row: grid.cursor.row, col: grid.cursor.col },
-          cursorVisible: false,
-          timestamp,
-          activeCursor: false,
-        };
-      });
-
       if (args.verbose) {
         console.log(`Rendered ${frameData.length} frames`);
       }
@@ -597,12 +668,6 @@ export const pipeCommand = async (args: PipeArgs): Promise<void> => {
     if (args.verbose) {
       const savings = ((1 - optimizedSize / originalSize) * 100).toFixed(1);
       console.log(`Optimized: ${(originalSize / 1024).toFixed(0)}KB → ${(optimizedSize / 1024).toFixed(0)}KB (${savings}% reduction)`);
-    }
-
-    let outputPath = args.output || 'output.svg';
-    // Ensure .svg extension
-    if (!outputPath.endsWith('.svg')) {
-      outputPath += '.svg';
     }
 
     writeFileSync(outputPath, svg, 'utf-8');

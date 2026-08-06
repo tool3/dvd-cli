@@ -1,9 +1,10 @@
 //#region Imports
 
-import { readFileSync, writeFileSync } from 'node:fs';
+import { readFileSync, statSync, writeFileSync } from 'node:fs';
 import dvd, { parseCDScript } from 'dvdrw';
 import type { DVDOptions } from 'dvdrw';
 import { createSpinner } from '../utils/spinner';
+import { formatFromPath, writeVideo } from '../video';
 
 
 //#region Types
@@ -23,6 +24,8 @@ interface RenderArgs {
   legacy?: boolean;
   'custom-glyphs'?: boolean;
   'playback-speed'?: number;
+  loops?: number;
+  'font-file'?: string;
   // CLI overrides for executor options
   width?: number;
   height?: number;
@@ -154,7 +157,10 @@ export const renderCommand = async (args: RenderArgs): Promise<void> => {
     }
 
     let outputPath = args.output || script.output || args.file.replace(/\.cd$/, '.svg');
-    if (!outputPath.endsWith('.svg')) {
+    // A video extension picks the video pipeline; anything else is still
+    // coerced to .svg so `-o out` keeps working the way it always has.
+    const videoFormat = formatFromPath(outputPath);
+    if (!videoFormat && !outputPath.endsWith('.svg')) {
       outputPath += '.svg';
     }
 
@@ -188,10 +194,6 @@ export const renderCommand = async (args: RenderArgs): Promise<void> => {
       },
     });
 
-    writeFileSync(outputPath, result.svg, 'utf-8');
-
-    const sizeKB = (Buffer.byteLength(result.svg, 'utf-8') / 1024).toFixed(2);
-
     const green = '\x1b[32m';
     const white = '\x1b[37m';
     const lightBlue = '\x1b[94m';
@@ -201,6 +203,50 @@ export const renderCommand = async (args: RenderArgs): Promise<void> => {
     const dim = '\x1b[2m';
     const reset = '\x1b[0m';
 
+    if (videoFormat) {
+      if (!args.verbose) {
+        spinner.update(`\x1b[37mEncoding\x1b[0m \x1b[2m${videoFormat}\x1b[0m`);
+      }
+
+      const video = await writeVideo({
+        frameData: result.frameData,
+        emitter: result.emitter,
+        output: outputPath,
+        format: videoFormat,
+        fps: args.fps,
+        loops: args.loops,
+        // Mirrors the SVG default so a video ends on a readable final
+        // frame instead of cutting the instant the animation lands.
+        pauseAtEnd: args['pause-at-end'] ?? 1000,
+        fontFile: args['font-file'],
+        onProgress: (done, total) => {
+          if (args.verbose) return;
+          spinner.update(
+            `\x1b[37mEncoding\x1b[0m \x1b[2m${videoFormat} (${done}/${total})\x1b[0m`,
+          );
+        },
+      });
+
+      const videoSizeKB = (statSync(outputPath).size / 1024).toFixed(2);
+      const videoDuration = (video.durationMs / 1000).toFixed(2) + 's';
+      const lines = [
+        `${green}✓${reset} ${white}Created${reset} ${lightBlue}${outputPath}${reset}`,
+        `  ${dim}├─${reset} ${lightPink}${video.frameCount}${reset}${dim} frames @ ${video.fps}fps${reset}`,
+        `  ${dim}├─${reset} ${lightOrange}${videoDuration}${reset}${dim} duration${reset}`,
+        `  ${dim}├─${reset} ${white}${video.width}x${video.height}${reset}`,
+        `  ${dim}└─${reset} ${limeGreen}${videoSizeKB}KB${reset}`,
+      ];
+      if (args.verbose) {
+        console.log(`\n${lines.join('\n')}`);
+      } else {
+        spinner.successMultiline(lines);
+      }
+      return;
+    }
+
+    writeFileSync(outputPath, result.svg, 'utf-8');
+
+    const sizeKB = (Buffer.byteLength(result.svg, 'utf-8') / 1024).toFixed(2);
     const durationStr = (result.metadata.duration / 1000).toFixed(2) + 's';
 
     if (args.verbose) {
