@@ -26,6 +26,7 @@ interface RenderArgs {
   'playback-speed'?: number;
   loops?: number;
   'font-file'?: string;
+  quality?: 'low' | 'medium' | 'high';
   // CLI overrides for executor options
   width?: number;
   height?: number;
@@ -219,6 +220,7 @@ export const renderCommand = async (args: RenderArgs): Promise<void> => {
         // frame instead of cutting the instant the animation lands.
         pauseAtEnd: args['pause-at-end'] ?? 1000,
         fontFile: args['font-file'],
+        quality: args.quality,
         onProgress: (done, total) => {
           if (args.verbose) return;
           spinner.update(

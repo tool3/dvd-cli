@@ -41,7 +41,31 @@ export const formatFromPath = (path: string): VideoFormat | null =>
 /** Every extension that routes through the video encoder. */
 export const VIDEO_EXTENSIONS = Object.keys(EXTENSIONS);
 
-const encoderArgs = (format: VideoFormat): string[] => {
+/**
+ * Compose the filter chain. `pad` comes first so everything downstream —
+ * including the GIF palette pass — sees the final even-sized canvas.
+ * Padding rather than scaling keeps the text pixel-exact; the pad is at
+ * most one pixel and replicates nothing, so it only ever appears as a
+ * sliver of the encoder's background at the right/bottom edge.
+ */
+const buildFilter = (
+  format: VideoFormat,
+  pad: { width: number; height: number } | null,
+): string[] => {
+  const stages: string[] = [];
+  if (pad) stages.push(`pad=${pad.width}:${pad.height}:0:0`);
+  if (format === 'gif') {
+    // A global 256-colour palette wrecks anti-aliased text, so generate
+    // one from the actual frames. `stats_mode=diff` weights the pixels
+    // that change, which is what the eye tracks in a terminal animation.
+    stages.push(
+      'split[a][b];[a]palettegen=stats_mode=diff[p];[b][p]paletteuse=dither=bayer:bayer_scale=3',
+    );
+  }
+  return stages.length > 0 ? ['-vf', stages.join(',')] : [];
+};
+
+const encoderArgs = (format: VideoFormat, crf: number): string[] => {
   switch (format) {
     case 'mp4':
       return [
@@ -50,30 +74,25 @@ const encoderArgs = (format: VideoFormat): string[] => {
         // will actually decode. It's also why the plan rounds dimensions
         // to even numbers.
         '-pix_fmt', 'yuv420p',
-        '-preset', 'medium',
         // Terminal output is flat colour and hard edges, so it compresses
-        // extremely well; 18 is visually lossless here.
-        '-crf', '18',
+        // extremely well — a slower preset costs little and buys real
+        // detail at the high tier.
+        '-preset', crf <= 15 ? 'slow' : 'medium',
+        '-crf', String(crf),
         '-movflags', '+faststart',
       ];
     case 'webm':
       return [
         '-c:v', 'libvpx-vp9',
         '-pix_fmt', 'yuv420p',
-        '-crf', '30',
+        // VP9's CRF scale runs higher than x264's for equivalent quality.
+        '-crf', String(Math.min(63, crf + 12)),
         '-b:v', '0',
         '-row-mt', '1',
       ];
     case 'gif':
-      // A global 256-colour palette wrecks anti-aliased text, so generate
-      // a palette from the actual frames. `stats_mode=diff` weights the
-      // pixels that change, which is what the eye tracks in a terminal
-      // animation.
-      return [
-        '-vf',
-        'split[a][b];[a]palettegen=stats_mode=diff[p];[b][p]paletteuse=dither=bayer:bayer_scale=3',
-        '-loop', '0',
-      ];
+      // Palette handling lives in `buildFilter` alongside the pad stage.
+      return ['-loop', '0'];
   }
 };
 
@@ -86,25 +105,53 @@ export interface EncodeOptions {
   output: string;
   format: VideoFormat;
   rasterize: Rasterizer;
+  /** Constant-rate factor. Defaults to the plan's quality tier. */
+  crf?: number;
   /** ffmpeg executable. Defaults to `ffmpeg` on PATH. */
   ffmpegPath?: string;
   onProgress?: (done: number, total: number) => void;
 }
 
-export const encodeVideo = async (options: EncodeOptions): Promise<void> => {
+export interface EncodeResult {
+  /** Pixel dimensions actually written, measured from the frames. */
+  width: number;
+  height: number;
+}
+
+export const encodeVideo = async (
+  options: EncodeOptions,
+): Promise<EncodeResult> => {
   const { plan, output, format, rasterize, onProgress } = options;
   const ffmpegPath = options.ffmpegPath ?? process.env.FFMPEG_PATH ?? 'ffmpeg';
 
+  // Rasterize the first frame before spawning ffmpeg: rawvideo has no
+  // headers, so the exact pixel dimensions have to be declared up front,
+  // and the only authority on them is the rasterizer itself.
+  const firstFrames = plan.frames();
+  const first = firstFrames.next();
+  if (first.done) throw new Error('No frames to encode');
+  const firstRaster = rasterize(first.value.svg);
+  const { width: rasterWidth, height: rasterHeight } = firstRaster;
+
+  // Pad target is derived from the pixels we actually produced, not from
+  // the plan. The rasterizer is the only thing that knows the true frame
+  // size, and deriving it here means a stale or mismatched plan can never
+  // make ffmpeg crop the picture.
+  const evenUp = (n: number) => (n % 2 === 0 ? n : n + 1);
+  const padWidth = evenUp(rasterWidth);
+  const padHeight = evenUp(rasterHeight);
+  const needsPad = padWidth !== rasterWidth || padHeight !== rasterHeight;
   const args = [
     '-y',
     '-hide_banner',
     '-loglevel', 'error',
     '-f', 'rawvideo',
     '-pix_fmt', 'rgba',
-    '-s', `${plan.width}x${plan.height}`,
+    '-s', `${rasterWidth}x${rasterHeight}`,
     '-r', String(plan.fps),
     '-i', 'pipe:0',
-    ...encoderArgs(format),
+    ...buildFilter(format, needsPad ? { width: padWidth, height: padHeight } : null),
+    ...encoderArgs(format, options.crf ?? plan.encoding?.crf ?? 18),
     output,
   ];
 
@@ -174,19 +221,35 @@ export const encodeVideo = async (options: EncodeOptions): Promise<void> => {
     new Promise((resolve) => ffmpeg.stdin.once('drain', () => resolve()));
 
   try {
-    let pixels: Buffer | null = null;
-    for (const frame of plan.frames()) {
+    let pixels: Buffer = firstRaster.pixels;
+    let frame = first.value;
+    for (;;) {
       if (done) break;
       // `repeatsPrevious` frames are identical to the one before, so the
       // raster is reused. Most frames repeat — typing is 50ms/char against
       // a 33ms output grid — which is where most of the time is saved.
-      if (!frame.repeatsPrevious || pixels === null) {
-        pixels = rasterize(frame.svg);
+      if (frame.index > 0 && !frame.repeatsPrevious) {
+        const raster = rasterize(frame.svg);
+        if (raster.width !== rasterWidth || raster.height !== rasterHeight) {
+          // rawvideo has no per-frame size, so a mismatch here wouldn't
+          // error — ffmpeg would read the next frame at the wrong byte
+          // offset and the rest of the video would be garbage.
+          throw new Error(
+            `Frame ${frame.index} rasterized to ${raster.width}x${raster.height}, ` +
+              `but the stream was opened at ${rasterWidth}x${rasterHeight}. ` +
+              'Every frame must be the same size.',
+          );
+        }
+        pixels = raster.pixels;
       }
       if (!ffmpeg.stdin.write(pixels)) {
         await Promise.race([drain(), settled]);
       }
       onProgress?.(frame.index + 1, plan.frameCount);
+
+      const next = firstFrames.next();
+      if (next.done) break;
+      frame = next.value;
     }
   } finally {
     if (!done) ffmpeg.stdin.end();
@@ -194,4 +257,6 @@ export const encodeVideo = async (options: EncodeOptions): Promise<void> => {
 
   await settled;
   if (failure) throw failure;
+
+  return { width: padWidth, height: padHeight };
 };

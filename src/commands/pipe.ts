@@ -71,6 +71,7 @@ interface PipeArgs {
   fps?: number;
   loops?: number;
   fontFile?: string;
+  quality?: 'low' | 'medium' | 'high';
 }
 
 interface StdinResult {
@@ -524,6 +525,7 @@ export const pipeCommand = async (args: PipeArgs): Promise<void> => {
         loops: args.loops,
         pauseAtEnd: args['pause-at-end'] ?? 1000,
         fontFile: args.fontFile,
+        quality: args.quality,
         onProgress: (done, total) => {
           if (args.verbose) return;
           spinner.update(`Encoding ${videoFormat} (${done}/${total})`);

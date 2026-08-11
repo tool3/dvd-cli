@@ -1,7 +1,7 @@
 //#region Imports
 
 import { planVideo } from 'dvdrw';
-import type { EmitterOptions, FrameData } from 'dvdrw';
+import type { EmitterOptions, FrameData, VideoQuality } from 'dvdrw';
 import { createRasterizer } from './rasterize';
 import { encodeVideo, formatFromPath, VIDEO_EXTENSIONS, type VideoFormat } from './encode';
 
@@ -26,6 +26,8 @@ export interface WriteVideoOptions {
   loops?: number;
   /** Hold the last frame this long (ms) so the result stays readable. */
   pauseAtEnd?: number;
+  /** Quality tier: `low`, `medium` (default) or `high` (2x supersampled). */
+  quality?: VideoQuality;
   /** Font file to load so the video matches a specific face exactly. */
   fontFile?: string;
   monospaceFamily?: string;
@@ -53,16 +55,15 @@ export const writeVideo = async (
     fps: options.fps,
     loops: options.loops,
     pauseAtEnd: options.pauseAtEnd,
+    quality: options.quality,
   });
 
   const rasterize = createRasterizer({
-    width: plan.width,
-    height: plan.height,
     fontFiles: options.fontFile ? [options.fontFile] : undefined,
     monospaceFamily: options.monospaceFamily,
   });
 
-  await encodeVideo({
+  const encoded = await encodeVideo({
     plan,
     output: options.output,
     format: options.format,
@@ -72,8 +73,11 @@ export const writeVideo = async (
   });
 
   return {
-    width: plan.width,
-    height: plan.height,
+    // Report what was written, not what was planned — the encoder measures
+    // the real frames, so this stays accurate even if the plan's own
+    // dimensions came from an older lib.
+    width: encoded.width,
+    height: encoded.height,
     fps: plan.fps,
     frameCount: plan.frameCount,
     durationMs: plan.durationMs,

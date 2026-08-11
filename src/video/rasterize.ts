@@ -71,17 +71,20 @@ const platformMonospace = (): string => {
 };
 
 export interface RasterizerOptions {
-  /** Exact output width in pixels — must match the SVG's own width. */
-  width: number;
-  /** Exact output height in pixels. */
-  height: number;
   /** Extra font files to load (e.g. the exact face the SVG names). */
   fontFiles?: string[];
   /** Family to resolve generic `monospace` to. Defaults per platform. */
   monospaceFamily?: string;
 }
 
-export type Rasterizer = (svg: string) => Buffer;
+export interface RasterFrame {
+  /** Raw RGBA pixels. */
+  pixels: Buffer;
+  width: number;
+  height: number;
+}
+
+export type Rasterizer = (svg: string) => RasterFrame;
 
 
 //#region Rasterizer
@@ -93,15 +96,18 @@ export type Rasterizer = (svg: string) => Buffer;
  * `rawvideo` demuxer, so encoding a PNG here just to have ffmpeg decode it
  * again would be pure overhead on every single frame.
  */
-export const createRasterizer = (options: RasterizerOptions): Rasterizer => {
+export const createRasterizer = (
+  options: RasterizerOptions = {},
+): Rasterizer => {
   const { Resvg } = loadResvg();
   const monospaceFamily = options.monospaceFamily ?? platformMonospace();
 
   const resvgOptions: ResvgRenderOptions = {
-    // The SVG is already authored at the exact pixel size we want, so
-    // pinning width keeps the buffer dimensions predictable regardless of
-    // any rounding resvg might otherwise apply.
-    fitTo: { mode: 'width', value: options.width },
+    // Render at the SVG's own intrinsic size. Pinning a width here would
+    // rescale any frame whose real canvas differs from what the caller
+    // expected — and it routinely does, because background padding and
+    // watermarks grow the canvas beyond the requested terminal size.
+    fitTo: { mode: 'original' },
     font: {
       loadSystemFonts: true,
       fontFiles: options.fontFiles,
@@ -113,15 +119,12 @@ export const createRasterizer = (options: RasterizerOptions): Rasterizer => {
     logLevel: 'off',
   };
 
-  return (svg: string): Buffer => {
+  return (svg: string): RasterFrame => {
     const rendered = new Resvg(svg, resvgOptions).render();
-    if (rendered.width !== options.width || rendered.height !== options.height) {
-      throw new Error(
-        `Rasterized frame is ${rendered.width}x${rendered.height}, expected ` +
-          `${options.width}x${options.height}. Raw video frames must all be ` +
-          `the same size.`,
-      );
-    }
-    return rendered.pixels;
+    return {
+      pixels: rendered.pixels,
+      width: rendered.width,
+      height: rendered.height,
+    };
   };
 };

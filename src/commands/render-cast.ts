@@ -53,6 +53,7 @@ export interface RenderCastArgs {
   fps?: number;
   loops?: number;
   'font-file'?: string;
+  quality?: 'low' | 'medium' | 'high';
 }
 
 
@@ -366,6 +367,7 @@ export const renderCastCommand = async (args: RenderCastArgs): Promise<void> => 
         loops: args.loops,
         pauseAtEnd: args['pause-at-end'] ?? 1000,
         fontFile: args['font-file'],
+        quality: args.quality,
         onProgress: (done, total) => {
           if (args.verbose) return;
           spinner.update(

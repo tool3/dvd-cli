@@ -175,11 +175,36 @@ If either is missing, `dvd` tells you which one and how to get it.
 
 Why a second tool at all: the animated SVG is SMIL, and nothing outside a browser executes SMIL — so DVD does not convert the SVG into video. It re-renders each frame of the recording as a still image and streams those through ffmpeg, which means the video comes from the same frame data as the SVG rather than being a lossy copy of it. Turning those frames into pixels needs a rasterizer, and Node has no built-in one (ffmpeg only decodes SVG if it was compiled against librsvg, which most builds are not).
 
-| Flag          | Meaning                                                       |
-| ------------- | ------------------------------------------------------------- |
-| `--fps`       | Output frame rate (default 30)                                 |
-| `--loops`     | Times the animation repeats (default 1)                        |
-| `--font-file` | Font to rasterize with — otherwise a system monospace is used   |
+| Flag              | Meaning                                                       |
+| ----------------- | ------------------------------------------------------------- |
+| `--quality`, `-q` | `low`, `medium` (default) or `high`                            |
+| `--fps`           | Output frame rate (default 30)                                 |
+| `--loops`         | Times the animation repeats (default 1)                        |
+| `--font-file`     | Font to rasterize with — otherwise a system monospace is used   |
+
+### Quality
+
+```bash
+dvd demo.cd -o demo.mp4 -q high
+```
+
+| Tier     | Scale | Looks like                                        |
+| -------- | :---: | ------------------------------------------------- |
+| `low`    |  1x   | Fine in a chat window; visible softness on edges   |
+| `medium` |  1x   | Pixel-for-pixel with the SVG at 100%               |
+| `high`   |  3x   | Indistinguishable from the SVG, including zoomed   |
+
+The lever that matters is **supersampling**, not bitrate. Terminal output is thin, high-contrast glyph edges — the worst case for a block-based codec at 1:1. `high` renders the vector at triple size (real extra detail, not an upscaled bitmap) and lets the player downscale, which is what makes text read as crisply as the SVG at any zoom.
+
+Flat colour compresses almost for free, so the cost is far smaller than the pixel count suggests. A representative clip:
+
+| Tier     | Output    | Size   |
+| -------- | --------- | ------ |
+| `low`    | 700x260   | 4.1KB  |
+| `medium` | 700x260   | 5.9KB  |
+| `high`   | 2100x780  | 16.6KB |
+
+Encode time grows with pixel count, so `high` is roughly 9x the work of `medium`.
 
 Two things behave differently from the SVG, both unavoidable:
 

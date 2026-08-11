@@ -161,6 +161,13 @@ const createParser = () =>
       type: 'number',
       describe: 'Times the animation repeats in video output (default: 1)',
     })
+    .option('quality', {
+      alias: 'q',
+      type: 'string',
+      choices: ['low', 'medium', 'high'],
+      describe:
+        'Video detail: low, medium (default), or high (2x supersampled, crisp as the SVG)',
+    })
     .option('font-file', {
       type: 'string',
       describe:
@@ -436,6 +443,13 @@ const createParser = () =>
             type: 'number',
             describe: 'Times the animation repeats in video output (default: 1)',
           })
+          .option('quality', {
+            alias: 'q',
+            type: 'string',
+            choices: ['low', 'medium', 'high'],
+            describe:
+              'Video detail: low, medium (default), or high (2x supersampled)',
+          })
           .option('font-file', {
             type: 'string',
             describe:
@@ -605,6 +619,7 @@ const run = async (): Promise<void> => {
         fps: argv.fps,
         loops: argv.loops,
         fontFile: argv['font-file'],
+        quality: argv.quality as 'low' | 'medium' | 'high' | undefined,
       });
     } catch (err) {
       console.error(err instanceof Error ? err.message : String(err));
@@ -639,6 +654,7 @@ const run = async (): Promise<void> => {
       'playback-speed': argv['playback-speed'],
       loops: argv.loops,
       'font-file': argv['font-file'],
+      quality: argv.quality as 'low' | 'medium' | 'high' | undefined,
       // Pass through styling options only if explicitly provided by user
       // This allows .cd file settings to take precedence over CLI defaults
       width: ifExplicit(explicit, argv.width, 'width', 'W'),
