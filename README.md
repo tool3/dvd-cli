@@ -178,7 +178,7 @@ Why a second tool at all: the animated SVG is SMIL, and nothing outside a browse
 | Flag              | Meaning                                                       |
 | ----------------- | ------------------------------------------------------------- |
 | `--quality`, `-q` | `low`, `medium` (default) or `high`                            |
-| `--fps`           | Output frame rate (default 30)                                 |
+| `--fps`           | Output frame rate — overrides the tier's own (see below)       |
 | `--loops`         | Times the animation repeats (default 1)                        |
 | `--font-file`     | Font to rasterize with — otherwise a system monospace is used   |
 
@@ -188,23 +188,25 @@ Why a second tool at all: the animated SVG is SMIL, and nothing outside a browse
 dvd demo.cd -o demo.mp4 -q high
 ```
 
-| Tier     | Scale | Looks like                                        |
-| -------- | :---: | ------------------------------------------------- |
-| `low`    |  1x   | Fine in a chat window; visible softness on edges   |
-| `medium` |  1x   | Pixel-for-pixel with the SVG at 100%               |
-| `high`   |  3x   | Indistinguishable from the SVG, including zoomed   |
+| Tier     | Scale |   FPS   | Looks like                                        |
+| -------- | :---: | :-----: | ------------------------------------------------- |
+| `low`    |  1x   |   15    | Fine in a chat window; visible softness on edges   |
+| `medium` |  1x   |   30    | Pixel-for-pixel with the SVG at 100%               |
+| `high`   |  3x   | 30 / 60 | Indistinguishable from the SVG, including zoomed   |
+
+`high` picks its frame rate from the recording: it measures the tightest gap between frames and rounds up, so a slow typing demo stays at 30 while a fast in-place animation (`chartscii -e`, a spinner) gets 60. Sampling faster than the source ever changes would only duplicate frames. `--fps` overrides all of this.
 
 The lever that matters is **supersampling**, not bitrate. Terminal output is thin, high-contrast glyph edges — the worst case for a block-based codec at 1:1. `high` renders the vector at triple size (real extra detail, not an upscaled bitmap) and lets the player downscale, which is what makes text read as crisply as the SVG at any zoom.
 
 Flat colour compresses almost for free, so the cost is far smaller than the pixel count suggests. A representative clip:
 
-| Tier     | Output    | Size   |
-| -------- | --------- | ------ |
-| `low`    | 700x260   | 4.1KB  |
-| `medium` | 700x260   | 5.9KB  |
-| `high`   | 2100x780  | 16.6KB |
+| Tier     | Output    | FPS | Size   |
+| -------- | --------- | :-: | ------ |
+| `low`    | 700x240   | 15  | 4.0KB  |
+| `medium` | 700x240   | 30  | 6.3KB  |
+| `high`   | 2100x720  | 60  | 20.8KB |
 
-Encode time grows with pixel count, so `high` is roughly 9x the work of `medium`.
+Encode time grows with pixels and frames, so `high` is roughly 9x the pixel work of `medium` at up to twice the frame count.
 
 Two things behave differently from the SVG, both unavoidable:
 
